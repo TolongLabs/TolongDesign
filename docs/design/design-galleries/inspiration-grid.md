@@ -85,7 +85,7 @@ Verified on the official Inspiration Grid publication on 2026-10-07.
 
 ## Examples
 
-- [Inspiration Grid Branding](https://theinspirationgrid.com/category/branding/)
+- [Inspiration Grid Branding](https://theinspirationgrid.com/category/identity/)
   — In-depth case studies of brand identity systems and visual packaging.
 - [Inspiration Grid Typography](https://theinspirationgrid.com/category/typography/)
   — Features on custom typefaces, editorial lettering, and layout composition.

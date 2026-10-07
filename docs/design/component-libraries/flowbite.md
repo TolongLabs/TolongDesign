@@ -179,7 +179,7 @@ export function ConfirmActionModal() {
 
 - [Flowbite Official Site](https://flowbite.com/) — checked 2026-10-07
 - [Flowbite Documentation](https://flowbite.com/docs) — checked 2026-10-07
-- [Flowbite Pricing](https://flowbite.com/pricing) — checked 2026-10-07
+- [Flowbite Pricing](https://flowbite.com/pro/) — checked 2026-10-07
 - [Flowbite GitHub Repository](https://github.com/themesberg/flowbite) — checked
   2026-10-07
 - [Designeer listing](https://designeer.xyz/components)

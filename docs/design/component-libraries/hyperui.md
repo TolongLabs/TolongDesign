@@ -123,7 +123,7 @@ export function MetricCard() {
 
 - [Marketing Banners](https://www.hyperui.dev/components/marketing/banners) —
   Dismissible header banners and announcement bars.
-- [eCommerce Product Cards](https://www.hyperui.dev/components/ecommerce/cards)
+- [eCommerce Product Cards](https://www.hyperui.dev/components/marketing/product-cards)
   — Storefront cards with price tags, badge overlays, and hover image zooms.
 - [Application Stats](https://www.hyperui.dev/components/application/stats) —
   Metric KPI widgets with trending indicators and delta badges.

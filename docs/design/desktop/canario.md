@@ -109,8 +109,9 @@ Checked on the official Rio and Canario documentation on 2026-10-07.
 
 - [Canario Landing Page](https://rioterm.com/canario) — Visual showcase of live
   tab previews, dynamic splits, and Kitty graphics integration.
-- [Rio Terminal Documentation](https://rioterm.com/docs) — Upstream reference
-  for configuration options, keybindings, and terminal emulation features.
+- [Rio Terminal Documentation](https://rioterm.com/docs/install) — Upstream
+  reference for configuration options, keybindings, and terminal emulation
+  features.
 - [Rio GitHub Repository](https://github.com/raphamorim/rio) — Open-source Rust
   rendering engine powering Canario.
 

@@ -116,10 +116,10 @@ export function AIQueryBar() {
 
 ## Examples
 
-- [Chat Bubble Components](https://beautifului.dev/docs/components/chat) —
-  Message bubbles supporting user/assistant roles and streaming indicators.
-- [Collapsible Sidebar](https://beautifului.dev/docs/components/sidebar) —
-  Application navigation drawer for conversation history and prompt libraries.
+- [Chat Component](https://www.beautifului.dev/#chat-composer) — Tabbed chat
+  panel with reasoning replies and a composer.
+- [Sidebar Nav](https://www.beautifului.dev/#sidebar-nav) — Collapsible
+  workspace and chat navigation.
 - [Beautiful UI GitHub Repository](https://github.com/slev12397/beautiful-ui) —
   Source repository containing component source code and documentation.
 
@@ -138,7 +138,6 @@ export function AIQueryBar() {
 
 ## Agent notes
 
-- Official documentation URL: `https://beautifului.dev/docs`.
 - GitHub repository: `https://github.com/slev12397/beautiful-ui`.
 - Compatible with
   `bunx --bun shadcn@latest add "https://beautifului.dev/r/<component>"`.
@@ -155,8 +154,6 @@ export function AIQueryBar() {
 ## Sources
 
 - [Beautiful UI Official Site](https://beautifului.dev/) — checked 2026-10-07
-- [Beautiful UI Documentation](https://beautifului.dev/docs) — checked
-  2026-10-07
 - [Beautiful UI GitHub Repository](https://github.com/slev12397/beautiful-ui) —
   checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/components)

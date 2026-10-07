@@ -75,8 +75,9 @@ The access and pricing details above were checked on 2026-10-07.
 
 ## Examples
 
-- [Contra featured image post](https://x.com/fedir_live/status/1933515662045155455)
-  A design post about a featured image for Contra.
+- [Swami paper plane TOC post](https://x.com/SwamiMalode/status/2107442898413478309)
+  A design post demonstrating a table of contents with a paper plane following
+  scroll.
 - [Marcel From Mimic post](https://x.com/MarcelFromMimic/status/1933040194770362505)
   A creator post discussing a design comparison with Apple.
 - [Chrono website post](https://x.com/bittucreator/status/1933473548120830374) A
@@ -109,8 +110,8 @@ internal notes. Do not scrape or republish post media.
 ## Sources
 
 - [Official site](https://bestdesignsonx.com/) — checked 2026-10-07
-- [Contra post](https://x.com/fedir_live/status/1933515662045155455) — checked
-  2026-10-07
+- [Swami paper plane TOC post](https://x.com/SwamiMalode/status/2107442898413478309)
+  — checked 2026-10-07
 - [Marcel From Mimic post](https://x.com/MarcelFromMimic/status/1933040194770362505)
   — checked 2026-10-07
 - [Chrono website post](https://x.com/bittucreator/status/1933473548120830374) —

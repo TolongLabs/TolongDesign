@@ -6,93 +6,91 @@ section_slug: component-libraries
 source_url: 'https://www.rewampui.com/'
 designeer_url: 'https://designeer.xyz/components'
 designeer_blurb: 'Component showcase dashboard of ready-made UI.'
-paywall: unknown
+paywall: free
 pricing_summary:
-  'The official website is currently unreachable; pricing and availability
-  cannot be determined.'
+  'The public GitHub repository and documented CLI are available without a
+  stated charge; no paid plans are listed, and the repository has no license
+  file.'
 open_source: false
 license: unknown
-category_tags: [react, tailwind, components, animated, offline]
-best_for: [animated components, dashboard UI, visual backgrounds]
-stack: [react, tailwind]
-agent_friendly: false
+category_tags: [react, tailwind, components, animated, copy-paste]
+best_for: [animated components, interaction patterns, visual backgrounds]
+stack: [react, vite, tailwind]
+agent_friendly: true
 last_verified: 2026-10-07
 ---
 
 # RewampUI
 
-> Component showcase dashboard of ready-made UI. Originally conceived as a
-> dashboard of animated React components, RewampUI is currently offline and
-> unreachable.
+> Component showcase dashboard of ready-made UI. Its public repository describes
+> copy-paste React components and a CLI, although the hosted domain did not
+> resolve during this check.
 
 ## At a glance
 
-| Field          | Value                                                   |
-| -------------- | ------------------------------------------------------- |
-| Source         | [rewampui.com](https://www.rewampui.com/) (unreachable) |
-| Paywall        | **Unknown** — domain does not resolve                   |
-| Open source    | No — unknown / proprietary                              |
-| Type           | Animated React UI component library (offline)           |
-| Works with     | React, Tailwind CSS                                     |
-| Best for       | Historical reference for animated dashboard components  |
-| Agent-friendly | No — site and repository are unreachable                |
+| Field          | Value                                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Source         | [rewampui.com](https://www.rewampui.com/) (DNS did not resolve); [GitHub](https://github.com/palakonweb/Rewamp-UI) |
+| Paywall        | **Free** — public source and CLI instructions; no paid tier is listed.                                             |
+| Open source    | No — the public repository has no license file.                                                                    |
+| Type           | Copy-paste animated React component library and showcase                                                           |
+| Works with     | React 19, Vite 7, Tailwind CSS 4, Framer Motion, Three.js                                                          |
+| Best for       | Animated components, interaction patterns, visual backgrounds                                                      |
+| Agent-friendly | Yes — public component registry and documented CLI                                                                 |
 
 ## What it is
 
-RewampUI was a component showcase platform and dashboard directory offering
-ready-made, copy-paste animated React and Tailwind CSS components. When active,
-the catalog documented over 70 animated user interface elements, including
-kinetic buttons, gradient cards, dynamic dashboard widgets, and procedural
-visual backgrounds designed for modern web applications.
+In headless Chromium on 2026-10-07, the root, `/pricing`, `/components`, and
+`/dashboard` on `www.rewampui.com` failed before an HTTP response with
+`ERR_NAME_NOT_RESOLVED`. The creator's public
+[palakonweb/Rewamp-UI repository](https://github.com/palakonweb/Rewamp-UI) did
+load with HTTP 200. Its README describes a copy-paste React component library;
+the repository contains a component browser, showcase source, registry, and a
+`cli/` directory. The documented stack is React 19, Vite 7, Tailwind CSS 4,
+Framer Motion, and Three.js.
 
-As of October 2026, the primary domain (`www.rewampui.com`) is offline and fails
-to resolve DNS queries (`ENOTFOUND`). There is no active public GitHub
-organization or maintained alternative mirror under the RewampUI brand.
-
-Because the official site is inactive and its code repository is unavailable,
-developers and coding agents should avoid depending on RewampUI for new projects
-and instead use actively maintained alternatives in this repository.
+The repository root has no `LICENSE` file. Public visibility does not grant
+permission to reuse the source in a client project, so confirm terms with the
+author before adopting code.
 
 ## Paywall and pricing
 
-- **Free:** Previously offered free copy-paste snippets for select components.
-- **Paid:** Unknown. Due to domain unavailability, specific pro tiers or pricing
-  models cannot be verified.
-- **Sign-up required?** Unknown.
-- **Licence for client work:** Unknown. With no public license published or
-  accessible terms of service, do not incorporate unverified third-party code.
+- **Free:** The public repository and its documented CLI are accessible without
+  a stated charge.
+- **Paid:** No paid tier or price is listed in the repository materials checked.
+- **Sign-up required?** No sign-in is needed to view the public repository; the
+  hosted showcase could not be opened.
+- **Licence for client work:** No repository license file was found. Ask the
+  author for permission before using code in client work.
 
-Verified on 2026-10-07; DNS lookup for `www.rewampui.com` failed.
+Checked 2026-10-07. The `free` classification refers to access to the public
+repository and CLI; it does not establish reuse rights.
 
 ## How to use
 
-Because the official site is down, do not attempt to install or import packages
-from this tool. Instead, migrate requirements to an active equivalent library
-such as ForgeUI or Motion Primitives:
+The hosted showcase did not resolve, but the public repository documents this
+workflow:
 
-1. For animated React components and marketing blocks, use ForgeUI:
-
-```bash
-bun add motion lucide-react clsx tailwind-merge
-```
-
-2. For unstyled or customizable component primitives, install shadcn/ui:
+1. Read the repository README and check component dependencies and license
+   status before use.
 
 ```bash
-bunx --bun shadcn@latest init
+bunx rewampui add theme-toggle
 ```
 
-3. If the RewampUI domain is restored in the future, verify its ownership and
-   licensing before adopting any component source code.
+2. The README also documents adding `arch-card-carousel` or `--all` through the
+   CLI. The bundled CLI requires Node 18 or later.
+3. Inspect and adapt the copied source for the target app's React and Tailwind
+   versions. Do not use it in client work until the author confirms a license.
 
 ## Examples
 
-- [Official Domain (Unreachable)](https://www.rewampui.com/) — Former primary
-  domain for the component showcase dashboard.
-- [Historical Components Route](https://www.rewampui.com/components) — Former
-  catalog of copy-paste animated cards and buttons.
-- [Historical Dashboard Showcase](https://www.rewampui.com/dashboard) — Former
-  demonstration template of dashboard layout widgets.
+- [Component browser page source](https://github.com/palakonweb/Rewamp-UI/blob/main/src/pages/ComponentsPage.jsx)
+  — route implementation for browsing components.
+- [Background components](https://github.com/palakonweb/Rewamp-UI/tree/main/src/components/ui/backgrounds)
+  — a source category in the component showcase.
+- [Bundled CLI](https://github.com/palakonweb/Rewamp-UI/tree/main/cli) — the
+  repository's documented component-add command.
 
 ## When to use it
 
@@ -104,11 +102,12 @@ bunx --bun shadcn@latest init
 
 ## Agent notes
 
-- Do not attempt to query or scrape `rewampui.com`; HTTP connections will fail.
-- Coding agents should flag any existing codebase references to RewampUI and
-  suggest refactoring to maintained alternatives like shadcn/ui or Motion
-  Primitives.
-- No active npm package or GitHub repository is verified.
+- The hosted domain failed DNS resolution on 2026-10-07; the public creator
+  repository and component paths were accessible.
+- The repository lists `bunx rewampui add <component>` and says the CLI requires
+  Node 18 or later.
+- No `LICENSE` file was present at the repository root. Treat source as
+  unlicensed until the author states otherwise.
 
 ## Alternatives in this repo
 
@@ -121,6 +120,12 @@ bunx --bun shadcn@latest init
 
 ## Sources
 
-- [Official site (Offline)](https://www.rewampui.com/) — checked 2026-10-07 (DNS
-  resolution failed)
+- [Official site](https://www.rewampui.com/) — `ERR_NAME_NOT_RESOLVED` in
+  headless Chromium; checked 2026-10-07
+- [Official public repository](https://github.com/palakonweb/Rewamp-UI) —
+  checked 2026-10-07
+- [Repository README](https://github.com/palakonweb/Rewamp-UI/blob/main/README.md)
+  — checked 2026-10-07
+- [Components route source](https://github.com/palakonweb/Rewamp-UI/blob/main/src/pages/ComponentsPage.jsx)
+  — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/components)

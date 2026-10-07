@@ -87,12 +87,13 @@ Verified on the official SaaSFrame website on 2026-10-07.
 
 ## Examples
 
-- [SaaSFrame Product Flows](https://www.saasframe.io/flows) — Complete user
-  journeys covering signup, workspace setup, and account billing.
-- [SaaSFrame Email Flows](https://www.saasframe.io/emails) — Real-world SaaS
-  onboarding, trial conversion, and transactional email teardowns.
-- [SaaSFrame Pages Gallery](https://www.saasframe.io/pages) — Curated collection
-  of SaaS homepages, pricing tables, and product landing pages.
+- [SaaSFrame Product Flows](https://www.saasframe.io/search-flows) — Complete
+  user journeys covering signup, workspace setup, and account billing.
+- [SaaSFrame Email Flows](https://www.saasframe.io/email/flows) — Real-world
+  SaaS onboarding, trial conversion, and transactional email teardowns.
+- [SaaSFrame Screens Gallery](https://www.saasframe.io/search-screens) —
+  Searchable collection of SaaS website pages and product interfaces, including
+  landing and pricing pages.
 
 ## When to use it
 
@@ -123,5 +124,6 @@ Verified on the official SaaSFrame website on 2026-10-07.
 ## Sources
 
 - [Official site](https://www.saasframe.io/) — checked 2026-10-07
-- [Pages Gallery](https://www.saasframe.io/pages) — checked 2026-10-07
+- [Screens Gallery](https://www.saasframe.io/search-screens) — checked
+  2026-10-07
 - [Designeer listing](https://designeer.xyz/)

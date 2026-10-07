@@ -6,10 +6,10 @@ section_slug: reading
 source_url: 'https://aiforui.dev/'
 designeer_url: 'https://designeer.xyz/'
 designeer_blurb: 'Course teaching AI workflows for interfaces.'
-paywall: unknown
+paywall: paid
 pricing_summary:
-  'Course by Emil Kowalski currently in waitlist stage; pricing is not yet
-  published.'
+  'Recent official sales copy advertised $299 one-time early access; the live
+  homepage is waitlist-only and does not publish the next price.'
 open_source: false
 license: proprietary
 category_tags:
@@ -29,58 +29,42 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                |
-| -------------- | ---------------------------------------------------- |
-| Source         | [aiforui.dev](https://aiforui.dev/)                  |
-| Paywall        | **Unknown** — waitlist phase; pricing not published  |
-| Open source    | No — proprietary educational course                  |
-| Type           | Upcoming online course on AI-assisted UI design      |
-| Works with     | Modern web browsers, AI coding assistants            |
-| Best for       | AI-assisted interface design, prototyping workflows  |
-| Agent-friendly | No — waitlist landing page and course, no API or CLI |
+| Field          | Value                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------------------------------------- |
+| Source         | [aiforui.dev](https://aiforui.dev/)                                                                             |
+| Paywall        | **Paid** — recent official sales copy advertised $299 one-time early access; current homepage is waitlist-only. |
+| Open source    | No — proprietary educational course                                                                             |
+| Type           | Upcoming online course on AI-assisted UI design                                                                 |
+| Works with     | Modern web browsers, AI coding assistants                                                                       |
+| Best for       | AI-assisted interface design, prototyping workflows                                                             |
+| Agent-friendly | No — waitlist landing page and course, no API or CLI                                                            |
 
 ## What it is
 
-AI for UI (subtitled "AI for Designers and Engineers" at `aiforui.dev`) is an
-upcoming educational course created by Emil Kowalski, design engineer at Linear
-and creator of `animations.dev`, `ui.land`, Sonner, and Vaul.
+AI for UI, subtitled “AI for Designers and Engineers,” is a course by design
+engineer Emil Kowalski. In headless Chromium on 2026-10-07, the live homepage
+showed the course name, a one-sentence description, an email waitlist form, and
+a login link. The `/pricing` route returned HTTP 404; `/login` loaded an email
+one-time-password form.
 
-The course is built around the practical challenge facing modern interface
-creators: how to use artificial intelligence to augment, accelerate, and refine
-the interface design and development process without devolving into generic,
-low-quality "AI slop."
-
-Key areas covered by the course include:
-
-- **Human-in-the-Loop Craft:** Using AI as a high-agency design collaborator
-  rather than an uncritical code generator.
-- **Prompting for Visual & Motion Polish:** Constructing effective system
-  prompts, design rules, and context constraints that guide LLMs toward
-  high-craft frontend code.
-- **Prototyping Workflows:** Accelerating the exploratory phase of interface
-  design by quickly generating and testing variations of layouts,
-  micro-interactions, and color themes.
-- **Tooling Integration:** Leveraging AI tools (Cursor, Claude Code, custom
-  skills) within standard design engineering tech stacks.
-
-As of late 2026, early access cohorts have concluded and the course operates via
-an official waitlist.
+A recent indexed version of the official sales page, crawled about three weeks
+before this check, described 12 early-access lessons, 24 UI skills, and Lapse, a
+tool for reviewing animations. It advertised a one-time early-access price of
+$299. The live homepage now shows a waitlist, so that figure describes the
+recent early-access offer, not a confirmed price for the next enrollment period.
 
 ## Paywall and pricing
 
-- **Free:** Joining the waitlist at `aiforui.dev` to receive course updates,
-  announcements, and preview tips is free.
-- **Paid:** Pricing for the general enrollment cohort has not yet been published
-  on the homepage. Based on Emil Kowalski's companion course `animations.dev`,
-  it is expected to follow a one-time enrollment model (likely around $199 USD).
-- **Paywall status:** Classified as **Unknown** because general enrollment
-  pricing is currently unlisted while the landing page remains in a waitlist
-  state.
-- **Sign-up required?** Yes, an email address is required to join the waitlist.
-- **Licence for client work:** Techniques and workflows taught in the course can
-  be applied to client design and engineering deliverables.
+- **Free:** Joining the current email waitlist is free.
+- **Paid:** Recent official sales copy advertised early access for $299
+  one-time. The current homepage does not publish the next enrollment price.
+- **Sign-up required?** An email is required for the waitlist; the login page
+  requests an email one-time password for enrolled users.
+- **Licence for client work:** Course materials are proprietary. Apply the
+  taught techniques to client work, but do not redistribute course content.
 
-Verified on the live AI for UI landing page on 2026-10-07.
+The live site and `/pricing` route were checked 2026-10-07. The $299 offer came
+from recent indexed official sales copy and may not apply to the next cohort.
 
 ## How to use
 
@@ -94,12 +78,16 @@ Verified on the live AI for UI landing page on 2026-10-07.
 
 ## Examples
 
-- [AI for UI Landing Page](https://aiforui.dev/) — Course waitlist portal and
-  overview statement.
-- [Student Login Portal](https://aiforui.dev/login) — Authentication endpoint
-  for enrolled cohort participants.
-- [Creator Profile](https://x.com/emilkowalski) — Emil Kowalski's public feed
-  featuring design engineering demonstrations.
+The live course page does not expose sample lessons. These public skills by the
+same instructor illustrate related workflows; they are not previews of the paid
+course content:
+
+- [Emil design-engineering skill](https://github.com/emilkowalski/skills/tree/main/skills/emil-design-eng)
+  — interface and motion judgment for coding agents.
+- [Prototype skill](https://github.com/emilkowalski/skills/tree/main/skills/prototype)
+  — build and compare multiple UI variants.
+- [Animate skill](https://github.com/emilkowalski/skills/tree/main/skills/animate)
+  — create animations with deliberate easing and duration.
 
 ## When to use it
 
@@ -113,12 +101,12 @@ Verified on the live AI for UI landing page on 2026-10-07.
 
 ## Agent notes
 
-- Non-machine-readable: The landing page is a lightweight Next.js app with an
-  email capture form and no open API.
-- Pricing is currently not published on the official page; agents must
-  accurately state this fact rather than inventing a specific price.
-- Closely related conceptually to `ui-skills.com`, which already hosts agent
-  skills authored by Emil Kowalski.
+- The current homepage is a waitlist form; `/pricing` returned HTTP 404 on
+  2026-10-07.
+- Recent official sales copy advertised $299 one-time early access, but the live
+  page does not confirm the next cohort's price.
+- The public `emilkowalski/skills` repository is separate from the course and
+  has its own license; do not treat it as the full course curriculum.
 
 ## Alternatives in this repo
 
@@ -129,6 +117,13 @@ Verified on the live AI for UI landing page on 2026-10-07.
 
 ## Sources
 
-- [Official site](https://aiforui.dev/) — checked 2026-10-07
-- [Emil Kowalski Profile](https://x.com/emilkowalski) — checked 2026-10-07
+- [Official site](https://aiforui.dev/) — waitlist displayed; recent indexed
+  sales copy showed $299 early access; checked 2026-10-07
+- [Pricing path](https://aiforui.dev/pricing) — HTTP 404; checked 2026-10-07
+- [Login path](https://aiforui.dev/login) — email one-time-password form;
+  checked 2026-10-07
+- [Instructor's public skills repository](https://github.com/emilkowalski/skills)
+  — checked 2026-10-07
+- [Emil Kowalski profile](https://x.com/emilkowalski) — linked from the official
+  site; checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/)

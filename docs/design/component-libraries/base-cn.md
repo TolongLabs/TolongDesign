@@ -124,7 +124,7 @@ export function ActionSection() {
 
 ## Agent notes
 
-- Official documentation URL: `https://basecn.dev/docs`.
+- Official documentation URL: `https://basecn.dev/docs/components/accordion`.
 - GitHub repository: `https://github.com/akash3444/basecn`.
 - Compatible with
   `bunx --bun shadcn@latest add "https://basecn.dev/r/<component>"`.
@@ -142,7 +142,8 @@ export function ActionSection() {
 ## Sources
 
 - [Base CN Official Site](https://basecn.dev/) — checked 2026-10-07
-- [Base CN Documentation](https://basecn.dev/docs) — checked 2026-10-07
+- [Base CN Documentation](https://basecn.dev/docs/components/accordion) —
+  checked 2026-10-07
 - [Base CN GitHub Repository](https://github.com/akash3444/basecn) — checked
   2026-10-07
 - [Designeer listing](https://designeer.xyz/components)

@@ -126,12 +126,12 @@ export function DashboardMetric() {
 
 ## Examples
 
-- [Area Chart Component](https://www.tremor.so/docs/components/area-chart) —
+- [Area Chart Component](https://www.tremor.so/docs/visualizations/area-chart) —
   Interactive time-series area charts with smooth curves and hover tooltips.
-- [Bar Chart Component](https://www.tremor.so/docs/components/bar-chart) —
+- [Bar Chart Component](https://www.tremor.so/docs/visualizations/bar-chart) —
   Categorical bar and column charts supporting stacked and grouped layouts.
-- [Card Component](https://www.tremor.so/docs/components/card) — Structured
-  dashboard container card with padding, borders, and dark mode tokens.
+- [Card Component](https://www.tremor.so/docs/ui/card) — Structured dashboard
+  container card with padding, borders, and dark mode tokens.
 
 ## When to use it
 
@@ -148,7 +148,8 @@ export function DashboardMetric() {
 
 ## Agent notes
 
-- Official documentation URL: `https://www.tremor.so/docs`.
+- Official documentation URL:
+  `https://www.tremor.so/docs/getting-started/installation`.
 - GitHub repository: `https://github.com/tremorlabs/tremor`.
 - In Next.js App Router, Tremor components containing charts rely on Recharts
   and browser DOM dimensions, requiring the `'use client'` directive.
@@ -165,7 +166,8 @@ export function DashboardMetric() {
 ## Sources
 
 - [Tremor Official Site](https://tremor.so/) — checked 2026-10-07
-- [Tremor Documentation](https://www.tremor.so/docs) — checked 2026-10-07
+- [Tremor Documentation](https://www.tremor.so/docs/getting-started/installation)
+  — checked 2026-10-07
 - [Tremor GitHub Repository](https://github.com/tremorlabs/tremor) — checked
   2026-10-07
 - [Designeer listing](https://designeer.xyz/components)

@@ -8,76 +8,85 @@ designeer_url: 'https://designeer.xyz/'
 designeer_blurb: Showcase of dark-mode website interfaces.
 paywall: unknown
 pricing_summary:
-  'The official Sombra domain returned an internal error; pricing and current
-  access terms could not be determined.'
+  'The live domain serves a Gradient Composer, but the directory-listed gallery
+  identity and its pricing or access terms could not be verified.'
 open_source: false
 license: unknown
-category_tags: [dark-mode, website-gallery, visual-inspiration]
-best_for: [dark website research, dark interface references]
-stack: []
-agent_friendly: false
+category_tags: [gradients, backgrounds, visual-editor, react]
+best_for: [layered gradient backgrounds, React background prototypes]
+stack: [react]
+agent_friendly: true
 last_verified: 2026-10-07
 ---
 
 # Sombra
 
-> Showcase of dark-mode website interfaces. This is useful when a TolongLabs
-> project needs dark website research.
+> Showcase of dark-mode website interfaces. The current official domain instead
+> renders a gradient composition tool, so the listing and live product do not
+> presently match.
 
 ## At a glance
 
-| Field          | Value                                                                                                                          |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Source         | [sombra.design](https://sombra.design/)                                                                                        |
-| Paywall        | **Unknown** — The official Sombra domain returned an internal error; pricing and current access terms could not be determined. |
-| Open source    | No — unknown                                                                                                                   |
-| Type           | Designeer-listed showcase of dark-mode websites; current status unverified                                                     |
-| Works with     | Any web stack; research reference only                                                                                         |
-| Best for       | dark website research, dark interface references                                                                               |
-| Agent-friendly | No — no direct coding-agent interface was found.                                                                               |
+| Field          | Value                                                                                           |
+| -------------- | ----------------------------------------------------------------------------------------------- |
+| Source         | [sombra.design](https://sombra.design/)                                                         |
+| Paywall        | **Unknown** — the live product does not match the directory description, and no price is shown. |
+| Open source    | No — no public source repository was found in the pages searched.                               |
+| Type           | The listed product is a dark-site gallery; the live URL renders a gradient composer.            |
+| Works with     | The live page offers a React code export; other requirements are not published.                 |
+| Best for       | Experimenting with layered gradients if this is the intended product.                           |
+| Agent-friendly | Partial — the live page exposes a Copy React action; no CLI or API was found.                   |
 
 ## What it is
 
-Designeer describes Sombra as a showcase of dark-mode website interfaces. On
-2026-10-07, the official URL returned an internal error and searches did not
-surface a working official gallery.
+Designeer describes Sombra as a showcase of dark-mode website interfaces. In a
+headless Chromium browser on 2026-10-07, `https://sombra.design/` returned HTTP
+200 with the title “Sombra — Gradient Composer.” The rendered page showed
+palette presets (DIA, Ocean, Sunset, Aurora, Candy, Ember, Mono), a layered
+composition editor, controls for shape, finish, and motion, and an Export Code /
+Copy React action. It says a composition needs at least two layers and allows up
+to ten.
 
-No current entries, product owner, pricing, or license terms could be verified.
-Treat this as an unavailable listing until its official domain returns a usable
-page.
+The `/pricing` and `/about` paths returned the same composer page. No separate
+pricing, licensing, owner, or shareable example pages were exposed. Because the
+live product does not match the Designeer description, it is not possible to
+confirm that the current composer is the gallery listed here.
 
 ## Paywall and pricing
 
-- **Free** Not verifiable. The official page did not load on the verification
-  date.
-- **Paid** Not published on an accessible official page. Paywall status is
-  unknown because the gallery could not be inspected.
-- **Sign-up required?** Unknown. The official site did not load.
-- **Licence for client work** Unknown. No accessible official terms or license
-  page was found.
+- **Free:** The current composer controls rendered without a sign-in prompt, but
+  the listed gallery's access terms could not be confirmed.
+- **Paid:** Not published. The `/pricing` path returned the composer rather than
+  pricing information.
+- **Sign-up required?** No prompt appeared before the composer loaded; whether
+  export or other features are gated is unknown.
+- **Licence for client work:** Unknown. No current licence or terms page was
+  found.
 
-Pricing and availability checked 2026-10-07.
+Pricing and identity checked 2026-10-07. Paywall remains unknown because the
+live product and the directory listing do not match.
 
 ## How to use
 
-1. Open the official URL and confirm that it resolves before adding it to a
-   research workflow.
-
-2. If the gallery returns, browse its dark-mode examples and follow the links to
-   the live websites.
-
-3. For each reference, note surface color, contrast, text hierarchy, border
-   treatment, and accent usage rather than copying the screenshot.
-
-4. Until the service is restored, use
+1. Confirm that the current Gradient Composer is the intended Sombra product;
+   the page does not match the Designeer listing checked on 2026-10-07.
+2. If so, choose a palette preset and arrange between two and ten layers; the
+   top row is the front-most layer.
+3. Adjust style, color, shape, finish, and motion, then open Export Code and
+   choose Copy React.
+4. Confirm current ownership and reuse terms before shipping generated code. For
+   dark-site references, use
    [Dark Mode Design](../design-galleries/dark-mode-design.md) or
-   [Minimal Gallery](../design-galleries/minimal-gallery.md) for accessible
-   references.
+   [Minimal Gallery](../design-galleries/minimal-gallery.md).
 
 ## Examples
 
-No example pages could be verified because the official domain did not load on
-2026-10-07. The Designeer description is the only accessible product summary.
+No separate example URLs, shareable presets, or official launch post were found.
+The current page exposes presets inside one app, but they do not have individual
+links and the composer may not be the directory-listed product.
+
+- [Current Sombra page](https://sombra.design/) — the browser-rendered Gradient
+  Composer; not a verified example of the listed gallery.
 
 ## When to use it
 
@@ -89,10 +98,12 @@ No example pages could be verified because the official domain did not load on
 
 ## Agent notes
 
-- No official docs, API, MCP server, CLI, or verifiable example URLs were found
-  on the verification date.
-- Do not infer prices, licensing, or gallery contents from the Designeer
-  one-line description.
+- The current page exposes React code copying but no separate docs, API, MCP
+  server, or CLI.
+- On 2026-10-07, `/pricing` and `/about` returned the same HTTP 200 composer
+  page as the root.
+- Do not infer that the current composer is the dark-mode gallery in the
+  Designeer description.
 
 ## Alternatives in this repo
 
@@ -105,5 +116,10 @@ No example pages could be verified because the official domain did not load on
 
 ## Sources
 
-- [Official site, unavailable](https://sombra.design/) — checked 2026-10-07
+- [Official site](https://sombra.design/) — HTTP 200; Gradient Composer
+  rendered; checked 2026-10-07
+- [Pricing path](https://sombra.design/pricing) — same composer page; checked
+  2026-10-07
+- [About path](https://sombra.design/about) — same composer page; checked
+  2026-10-07
 - [Designeer listing](https://designeer.xyz/) — checked 2026-10-07

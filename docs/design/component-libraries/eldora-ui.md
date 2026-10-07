@@ -108,8 +108,8 @@ export function HeroCTA() {
 
 - [Eldora UI Components](https://www.eldoraui.site/components) — Interactive
   showcase of buttons, text effects, backgrounds, and layout widgets.
-- [Eldora UI Templates](https://www.eldoraui.site/templates) — Full landing page
-  starters for SaaS apps and portfolios.
+- [Eldora UI Portfolio Template](https://www.eldoraui.site/docs/templates/portfolio)
+  — Portfolio starter template showcasing integrated components and layout.
 - [Eldora UI GitHub Repository](https://github.com/karthikmudunuri/eldoraui) —
   Source code repository containing all component implementations.
 

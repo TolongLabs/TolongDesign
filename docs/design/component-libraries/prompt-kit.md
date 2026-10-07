@@ -116,9 +116,9 @@ export function AIChatComposer() {
 
 ## Examples
 
-- [Prompt Input Documentation](https://www.prompt-kit.com/prompt-input) —
+- [Prompt Input Documentation](https://www.prompt-kit.com/docs/prompt-input) —
   Interactive playground for testing input attachments and action slots.
-- [Chat Container Component](https://www.prompt-kit.com/chat-container) —
+- [Chat Container Component](https://www.prompt-kit.com/docs/chat-container) —
   Demonstrates sticky auto-scrolling and streaming state management.
 - [Prompt Kit GitHub](https://github.com/ibelick/prompt-kit) — Source code
   repository containing component implementations and AI SDK integration demos.
@@ -152,8 +152,8 @@ export function AIChatComposer() {
 
 - [Prompt Kit Official Website](https://www.prompt-kit.com/) — checked
   2026-10-07
-- [Prompt Kit Documentation](https://www.prompt-kit.com/prompt-input) — checked
-  2026-10-07
+- [Prompt Kit Documentation](https://www.prompt-kit.com/docs/prompt-input) —
+  checked 2026-10-07
 - [Prompt Kit GitHub Repository](https://github.com/ibelick/prompt-kit) —
   checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/components)

@@ -90,8 +90,8 @@ Verified on the official Designspiration Pro page on 2026-10-07.
 
 - [Designspiration Popular Feed](https://www.designspiration.com/popular/) —
   Real-time stream of top-saved creative work across all design disciplines.
-- [Designspiration Topics](https://www.designspiration.com/topics/) — Curated
-  directories spanning UI/UX, typography, illustration, and architecture.
+- [Designspiration Explore](https://www.designspiration.com/explore/) —
+  Discovery feed spanning UI/UX, typography, art, and architecture.
 - [Designspiration Pro Overview](https://www.designspiration.com/pro/) —
   Official membership details covering ad-free browsing and moodboarding tools.
 

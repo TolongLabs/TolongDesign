@@ -126,9 +126,9 @@ export function CallToAction() {
 
 - [TailGrids Components Directory](https://tailgrids.com/components) —
   Interactive catalog of over 600 components spanning forms, cards, and tables.
-- [TailGrids Hero Sections](https://tailgrids.com/components/hero) — Collection
-  of responsive hero headers featuring media embeds, split layouts, and
-  callouts.
+- [TailGrids Hero Area Blocks](https://tailgrids.com/blocks/hero-area) —
+  Collection of responsive hero headers featuring media embeds, split layouts,
+  and callouts.
 - [TailGrids Templates](https://tailgrids.com/templates) — Full multi-page
   templates for SaaS platforms, portfolios, and agency websites.
 

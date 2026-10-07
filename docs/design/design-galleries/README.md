@@ -4,7 +4,7 @@
 
 > Design galleries, interface patterns, and web inspiration.
 
-78 tools — 46 free, 26 freemium, 1 paid, 5 unknown. Source:
+78 tools — 49 free, 26 freemium, 1 paid, 2 unknown. Source:
 [Designeer](https://designeer.xyz/).
 
 | Tool                                                | Paywall  | Open source | Agent-friendly | Best for                                                                               | What it is                                                    |
@@ -18,12 +18,12 @@
 | [Mobbin](./mobbin.md)                               | Freemium | No          | Yes            | mobile product research, real-world interface flows                                    | Real mobile and web product flows.                            |
 | [Saaspo](./saaspo.md)                               | Freemium | No          | No             | SaaS marketing pages, conversion-focused layout research                               | Curated SaaS landing page designs.                            |
 | [SEESAW](./seesaw.md)                               | Free     | No          | No             | current product websites, daily web-design discovery                                   | Design inspiration organized by page section.                 |
-| [Supahero](./supahero.md)                           | Unknown  | No          | No             | hero-section research, marketing-site composition                                      | Curated collection of website hero sections.                  |
-| [Imageory](./imageory.md)                           | Unknown  | No          | No             | image-led moodboarding, prompt reference                                               | Visual gallery pairing images with prompts.                   |
+| [Supahero](./supahero.md)                           | Free     | No          | No             | hero-section research, marketing-site composition                                      | Curated collection of website hero sections.                  |
+| [Imageory](./imageory.md)                           | Free     | No          | No             | image-led moodboarding, prompt reference                                               | Visual gallery pairing images with prompts.                   |
 | [Backgrounds Supply](./backgrounds-supply.md)       | Freemium | No          | No             | website hero backgrounds, visual texture and gradients                                 | Handcrafted website backgrounds ready to use.                 |
 | [Venust Backgrounds](./venust-backgrounds.md)       | Free     | No          | No             | free commercial backgrounds, hero mockup exploration                                   | Free AI-generated backgrounds with original prompts.          |
 | [Details](./details.md)                             | Freemium | No          | Yes            | website interaction research, copy-ready web snippets                                  | Micro-interaction analysis of top digital products.           |
-| [Sombra](./sombra.md)                               | Unknown  | No          | No             | dark website research, dark interface references                                       | Showcase of dark-mode website interfaces.                     |
+| [Sombra](./sombra.md)                               | Unknown  | No          | Yes            | layered gradient backgrounds, React background prototypes                              | Showcase of dark-mode website interfaces.                     |
 | [Dribbble](./dribbble.md)                           | Freemium | No          | No             | visual concept discovery, designer portfolios                                          | Global community sharing design concepts.                     |
 | [Behance](./behance.md)                             | Freemium | No          | No             | long-form design case studies, cross-discipline portfolios                             | Adobe showcase for creative portfolios.                       |
 | [Recent Design](./recent-design.md)                 | Free     | No          | No             | current website discovery, digital product references                                  | Weekly selection of award-worthy websites.                    |
@@ -60,7 +60,7 @@
 | [bestdesignsonx.com](./bestdesignsonx-com.md)       | Free     | No          | No             | designer discovery, social design references                                           | Curated design-forward creators and posts on X.               |
 | [Design Bookmark](./design-bookmark.md)             | Free     | No          | No             | design-resource discovery, cross-category browsing                                     | Directory of design resources and links.                      |
 | [Rebrand Gallery](./rebrand-gallery.md)             | Freemium | No          | Yes            | brand refresh research, identity systems                                               | Brand redesigns compared before and after.                    |
-| [Curations](./curations.md)                         | Unknown  | No          | No             | finding curated resource lists                                                         | Library of curated digital design assets.                     |
+| [Curations](./curations.md)                         | Free     | No          | No             | finding curated resource lists                                                         | Library of curated digital design assets.                     |
 | [Landing Love](./landing-love.md)                   | Free     | No          | No             | landing-page research, motion and scroll references                                    | Delightful landing pages organized by animation.              |
 | [Motionimo](./motionimo.md)                         | Freemium | No          | No             | motion references, animation direction                                                 | Extensive library of motion design clips.                     |
 | [before.click](./before-click.md)                   | Free     | No          | Yes            | app-store screenshot research, onboarding and paywall patterns                         | Showcase of high-converting app screenshot concepts.          |

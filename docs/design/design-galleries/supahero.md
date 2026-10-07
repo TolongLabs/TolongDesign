@@ -6,10 +6,10 @@ section_slug: design-galleries
 source_url: 'https://supahero.io/'
 designeer_url: 'https://designeer.xyz/'
 designeer_blurb: Curated collection of website hero sections.
-paywall: unknown
+paywall: free
 pricing_summary:
-  'Supahero now says it is part of Screensdesign; user access terms are unclear,
-  while promotional placements are listed from $79 per 30 days.'
+  'The public gallery is free to browse; promotional placements cost $79, $149,
+  or $279 per 30 days.'
 open_source: false
 license: unknown
 category_tags: [hero-sections, web-inspiration, landing-pages]
@@ -26,35 +26,36 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                                                                                                                     |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Source         | [supahero.io](https://supahero.io/)                                                                                                                       |
-| Paywall        | **Unknown** — Supahero now says it is part of Screensdesign; user access terms are unclear, while promotional placements are listed from $79 per 30 days. |
-| Open source    | No — unknown                                                                                                                                              |
-| Type           | Legacy website hero-section gallery now marked as part of Screensdesign                                                                                   |
-| Works with     | Any web stack; research reference only                                                                                                                    |
-| Best for       | hero-section research, marketing-site composition                                                                                                         |
-| Agent-friendly | No — no direct coding-agent interface was found.                                                                                                          |
+| Field          | Value                                                                                              |
+| -------------- | -------------------------------------------------------------------------------------------------- |
+| Source         | [supahero.io](https://supahero.io/)                                                                |
+| Paywall        | **Free** — gallery records are public; paid placements are advertising slots, not a browsing plan. |
+| Open source    | No — no public source repository or reusable asset licence was found.                              |
+| Type           | Public website hero-section gallery now marked as part of Screensdesign                            |
+| Works with     | Any web stack; research reference only                                                             |
+| Best for       | hero-section research, marketing-site composition                                                  |
+| Agent-friendly | No — no direct coding-agent interface was found.                                                   |
 
 ## What it is
 
-Supahero’s homepage still presents a curated library of website hero sections
-and links to individual examples. Its current banner says Supahero is now part
-of Screensdesign, and its pricing page offers paid promotional placements.
+On 2026-10-07, a headless browser loaded the Supahero homepage and hero records
+with HTTP 200. The homepage presents a searchable public gallery and says
+Supahero is now part of Screensdesign. The Example, Shuka, and The Spark records
+each load without an account and link to their original websites.
 
-The legacy gallery pages remain accessible, but the official pages do not
-clearly explain current user access, ownership, or whether the original product
-is still maintained. Verify the current Screensdesign destination before relying
-on it for new work.
+The `/pricing` page lists paid promotional placements for advertisers. The
+public gallery itself remains free to browse; these prices are not a user
+subscription or a charge to view hero records. The page does not publish a
+licence for the displayed references, which remain links to work hosted by
+others.
 
 ## Paywall and pricing
 
-- **Free** Some hero records and legacy gallery pages are publicly readable. The
-  current access tier is not clearly stated.
-- **Paid** The pricing page lists advertising placements at $79, $149, and $279
-  per 30 days. These are promotional slots, not a clear user subscription price.
-- **Sign-up required?** The accessible hero pages can be opened without sign-in.
-  Current account and library access terms are unclear.
+- **Free:** The homepage and individual hero records are publicly readable
+  without sign-in.
+- **Paid:** No user access plan is published. Advertisers can buy placements at
+  $79, $149, or $279 per 30 days.
+- **Sign-up required?** No for browsing the pages checked.
 - **Licence for client work** No current asset license was published in the
   pages checked. Treat entries as references and verify rights with the original
   website owner.
@@ -63,18 +64,17 @@ Pricing and availability checked 2026-10-07.
 
 ## How to use
 
-1. Open a hero-section record and follow Visit Website to see the source page in
-   context.
+1. Search the public gallery for a brand, site, or category, then open a hero
+   record.
 
-2. Compare several examples for message hierarchy, text-to-image balance, proof,
-   and CTA placement. Note whether the visible concept is a real live page or a
-   template.
+2. Follow **Visit Website** to compare the source page with the gallery record.
 
-3. Write down the specific pattern that fits the client brief; do not copy the
-   exact composition, brand marks, or imagery.
+3. Compare examples for message hierarchy, text-to-image balance, proof, and CTA
+   placement. Record the source URL and whether the reference is a live site or
+   a template.
 
-4. Check Screensdesign for the current product and account terms before making
-   Supahero a dependency in a new research workflow.
+4. Use the observed pattern as research, and get permission before reusing any
+   original copy, imagery, or brand assets.
 
 ## Examples
 
@@ -111,8 +111,10 @@ Pricing and availability checked 2026-10-07.
 
 ## Sources
 
-- [Official Supahero site](https://supahero.io/) — checked 2026-10-07
-- [Pricing and placement page](https://supahero.io/pricing) — checked 2026-10-07
+- [Official Supahero gallery](https://supahero.io/) — checked 2026-10-07; public
+  records loaded in a headless browser
+- [Advertising placement pricing](https://supahero.io/pricing) — checked
+  2026-10-07
 - [Example hero](https://supahero.io/hero/example) — checked 2026-10-07
 - [Shuka](https://supahero.io/hero/shuka) — checked 2026-10-07
 - [The Spark](https://supahero.io/hero/the-spark) — checked 2026-10-07

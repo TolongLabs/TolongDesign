@@ -6,13 +6,12 @@ section_slug: component-libraries
 source_url: 'https://ninna-ui.dev/'
 designeer_url: 'https://designeer.xyz/components'
 designeer_blurb: 'Lightweight UI components for fast websites.'
-paywall: unknown
+paywall: free
 pricing_summary:
-  'The listed Ninja UI identity could not be confirmed; the current site at the
-  supplied domain serves Ninna UI, whose public components are presented as
-  free.'
-open_source: false
-license: 'unknown'
+  'The current Ninna UI site and MIT-licensed component packages are public and
+  free; no paid plan or price is published.'
+open_source: true
+license: MIT
 category_tags: [react, tailwind, components]
 best_for: [lightweight interfaces, react projects]
 stack: [react, tailwind]
@@ -22,56 +21,54 @@ last_verified: 2026-10-07
 
 # Ninja UI
 
-> Lightweight UI components for fast websites. Yes for the current Ninna UI site
-> — CLI and component docs are public.
+> Lightweight UI components for fast websites. The supplied domain now serves
+> Ninna UI, a public React component library.
 
 ## At a glance
 
-| Field          | Value                                                                                                                                                                      |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Source         | [ninna-ui.dev](https://ninna-ui.dev/)                                                                                                                                      |
-| Paywall        | **Unknown** — The listed Ninja UI identity could not be confirmed; the current site at the supplied domain serves Ninna UI, whose public components are presented as free. |
-| Open source    | Yes — MIT ([project source](<>)).                                                                                                                                          |
-| Type           | Component library listing with a current identity mismatch                                                                                                                 |
-| Works with     | The current Ninna UI site documents React 19 and Tailwind CSS v4.1                                                                                                         |
-| Best for       | lightweight interfaces, react projects                                                                                                                                     |
-| Agent-friendly | Yes — Yes for the current Ninna UI site — CLI and component docs are public                                                                                                |
+| Field          | Value                                                                            |
+| -------------- | -------------------------------------------------------------------------------- |
+| Source         | [ninna-ui.dev](https://ninna-ui.dev/)                                            |
+| Paywall        | **Free** — current Ninna UI docs and packages are public; no paid plan is shown. |
+| Open source    | Yes — MIT ([project source](https://github.com/ninna-ui/ninna-ui)).              |
+| Type           | React component library currently served as Ninna UI                             |
+| Works with     | React 19 and Tailwind CSS v4, per the current site                               |
+| Best for       | lightweight interfaces, react projects                                           |
+| Agent-friendly | Yes — Yes for the current Ninna UI site — CLI and component docs are public      |
 
 ## What it is
 
-The batch URL for Ninja UI is https://ninna-ui.dev/. On verification, that
-address served a product branded Ninna UI rather than a product named Ninja UI.
-I could not establish that this is the same resource Designeer originally
-listed, so the identity remains unverified.
+On 2026-10-07, the supplied `ninna-ui.dev` URL redirected to `www.ninna-ui.dev`,
+whose title and content identify Ninna UI. The live homepage describes 69
+production-ready React components, five theme presets, React 19, Tailwind CSS
+v4, and a public CLI.
 
-The current Ninna UI site describes a React component system with 67 of 69
-components available, 12 packages, five presets, React 19, and Tailwind CSS
-v4.1. It advertises zero-runtime CSS theming and a CLI.
-
-The current Ninna UI site is presented as MIT-licensed and free. Those facts
-apply to the product now served at the supplied URL, not necessarily to the
-original Designeer listing.
+The linked public GitHub repository describes Ninna UI as open source and
+identifies the MIT licence. Its docs and install guide are public. Designeer
+calls the tool “Ninja UI,” while the supplied source domain and current project
+say “Ninna UI”; this doc describes the project now served at that URL, and does
+not establish a separate product under the Ninja UI name.
 
 ## Paywall and pricing
 
-- **Listed product:** Pricing could not be determined because the supplied URL
-  now serves a differently named product.
-- **Current Ninna UI site:** Public component docs and MIT licensing are
-  visible; no paid plan was shown on the pages reviewed.
-- **Sign-up required?** The current Ninna UI installation guide is public; no
-  account requirement was shown.
-- **Licence for client work:** The current Ninna UI site identifies MIT. Verify
-  product identity before relying on that licence for the listed Ninja UI.
+- **Free:** The current Ninna UI components, docs, and CLI are publicly
+  accessible; the GitHub repository states that the project is free and open
+  source.
+- **Paid:** No paid plan or price is published.
+- **Sign-up required?** No for browsing the docs or using the public install
+  guide.
+- **Licence for client work:** MIT, as stated in the public repository. This
+  applies to Ninna UI, the product currently served at the supplied URL.
 
 Pricing and access were checked on 2026-10-07.
 
 ## How to use
 
-1. Treat the name mismatch as a stop point: confirm that Ninna UI is the
-   intended product before adopting it.
+1. Note the name mismatch in the listing and confirm that the current Ninna UI
+   project is the product you intend to evaluate.
 
-2. If Ninna UI is intended, follow its installation page and run its CLI
-   initializer in a React project.
+2. Follow the public installation guide and run its CLI initializer in a React
+   project.
 
 3. Browse the current primitives and feature pages; choose components that match
    the target site's interaction and styling needs.
@@ -97,12 +94,12 @@ export default function App() {
 
 ## Examples
 
-- [Current Ninna UI component index](https://www.ninna-ui.dev/components) —
-  Browse components documented under the current product name.
-- [Primitives](https://www.ninna-ui.dev/primitives) — Current primitive
-  component reference.
+- [Primitives](https://www.ninna-ui.dev/primitives) — 14 essential building
+  blocks in the current component reference.
 - [Features](https://www.ninna-ui.dev/features) — Current feature and styling
   notes.
+- [Use cases](https://www.ninna-ui.dev/use-cases) — documented interface
+  patterns, including auth flows, pricing pages, and data tables.
 - [Installation](https://www.ninna-ui.dev/getting-started/installation) —
   Current product setup steps.
 
@@ -116,14 +113,11 @@ export default function App() {
 
 ## Agent notes
 
-- The batch calls this product Ninja UI; the current website identifies itself
-  as Ninna UI.
-- The paywall is unknown because the product identity changed and cannot be
-  confidently mapped.
-- React 19, Tailwind v4.1, MIT, and free claims describe the current Ninna UI
-  pages.
-- Do not attribute the current site's licence or features to the original
-  listing without confirming identity.
+- The current URL redirects to Ninna UI. The “Ninja UI” name appears only in the
+  directory listing checked here.
+- Paywall is free and the public repository identifies MIT; apply those facts to
+  Ninna UI as currently served at this URL.
+- Use the verified `/primitives` route for the component reference.
 
 ## Alternatives in this repo
 
@@ -138,10 +132,12 @@ export default function App() {
 
 - [Supplied Ninja UI URL](https://ninna-ui.dev/) — checked 2026-10-07
 - [Current Ninna UI home](https://www.ninna-ui.dev/) — checked 2026-10-07
-- [Current component index](https://www.ninna-ui.dev/components) — checked
-  2026-10-07
+- [Primitives](https://www.ninna-ui.dev/primitives) — checked 2026-10-07
+- [Features](https://www.ninna-ui.dev/features) — checked 2026-10-07
+- [Use cases](https://www.ninna-ui.dev/use-cases) — checked 2026-10-07
 - [Installation](https://www.ninna-ui.dev/getting-started/installation) —
   checked 2026-10-07
 - [Current Ninna UI docs](https://www.ninna-ui.dev/docs) — checked 2026-10-07
-- [Primitives](https://www.ninna-ui.dev/primitives) — checked 2026-10-07
+- [Ninna UI GitHub repository and MIT licence](https://github.com/ninna-ui/ninna-ui)
+  — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/components) — checked 2026-10-07

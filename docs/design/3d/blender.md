@@ -120,7 +120,7 @@ npx gltfjsx public/models/product.glb
 - [Blender Download Page](https://www.blender.org/download/) — Official
   cross-platform installers for Windows, macOS (Apple Silicon / Intel), and
   Linux.
-- [Blender glTF 2.0 Export Manual](https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html)
+- [Blender glTF 2.0 Export Manual](https://docs.blender.org/manual/en/latest/addons/scene_gltf2.html)
   — Official documentation detailing PBR material mapping and export settings.
 
 ## When to use it

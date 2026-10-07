@@ -92,8 +92,8 @@ Verified on the official SiteInspire platform on 2026-10-07.
   indexing curated digital agencies, studios, and independent designers.
 - [SiteInspire Websites Archive](https://www.siteinspire.com/websites) — The
   central searchable and filterable repository of curated web experiences.
-- [SiteInspire Submission](https://www.siteinspire.com/submit) — Official
-  submission page detailing editorial standards for site inclusion.
+- [Boc.Studio Website Entry](https://www.siteinspire.com/website/13648-bocstudio)
+  — A curated site entry with category tags and studio credits.
 
 ## When to use it
 
@@ -126,6 +126,4 @@ Verified on the official SiteInspire platform on 2026-10-07.
 ## Sources
 
 - [Official site](https://www.siteinspire.com/) — checked 2026-10-07
-- [Submission Guidelines](https://www.siteinspire.com/submit) — checked
-  2026-10-07
 - [Designeer listing](https://designeer.xyz/)

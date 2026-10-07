@@ -39,49 +39,51 @@ last_verified: 2026-10-07
 
 ## What it is
 
-Uiuno presents itself as a workspace for people and AI agents to organize shadcn
-components. Public pages show a component preview, source files, and fork
-actions. It is a component discovery surface rather than a packaged runtime
-library.
+Uiuno is a browser workspace for browsing, previewing, editing, and installing
+shadcn components. On 2026-10-07, a headless browser rendered the root editor
+with file, editor, preview, explore, and generate views, plus an Animated
+Testimonials example and its source. Public Dither component pages show a Guest
+view, a Free label, install controls, and item-level metadata; the entries
+checked identify MIT as their license.
 
-The site is a JavaScript application, so its root page did not expose the full
-workspace or pricing details in the page reader. Public component results were
-accessible, including a Dither Identicon and a Logo Cloud. Individual component
-metadata can include a licence; the Dither Identicon page identifies that
-contribution as MIT.
-
-Do not treat one community item's licence as a blanket licence for all
-components or for the Uiuno service itself.
+The `/pricing` route returned HTTP 404. Public item pages are accessible without
+signing in, but that does not establish the workspace's full pricing or feature
+gates. A component's license applies to that item, not to the entire Uiuno
+service or every contribution.
 
 ## Paywall and pricing
 
-- **Free:** public component previews and some source details are accessible.
-- **Paid:** no complete pricing page or plan terms could be confirmed.
-- **Sign-up required?** Fork and workspace requirements were not clear from
-  public pages checked.
+- **Free:** Public components are marked Free and their pages can be viewed as a
+  Guest.
+- **Paid:** No plan or price is published; `/pricing` returned HTTP 404 on
+  2026-10-07.
+- **Sign-up required?** No account was needed to view public pages. Forking,
+  editing, and other workspace actions may have separate requirements.
 - **Licence for client work:** inspect each component's licence and author terms
   before copying it.
 - **Checked:** 2026-10-07.
 
 ## How to use
 
-1. Search or browse the public workspace for a component matching the needed
-   pattern.
-2. Open its Files or Code view and inspect the React implementation and
-   component metadata.
-3. Fork or copy the source if the page makes that action available, then adapt
-   it to the project's own shadcn conventions.
-4. Confirm licence, dependencies, accessibility, and responsive behavior before
-   placing it in a client project. No universal package command was found.
+1. Browse components through the root editor or the public
+   [component explorer](https://uiuno.com/explore/components).
+2. Open a component page and inspect its preview, source, install controls, and
+   metadata.
+3. Use the page's Install or copy-command control in the project, then adapt the
+   code to the app's conventions.
+4. Verify the specific item's license, dependencies, accessibility, and
+   responsive behavior before using it in client work.
 
 ## Examples
 
-- [Dither Identicon](https://uiuno.com/dither/dither-identicon) — public
-  component page with preview, code, fork count, and MIT metadata.
-- [Logo Cloud](https://uiuno.com/) — a public workspace result with example page
-  code for a logo section.
-- [Uiuno workspace](https://uiuno.com/) — browse the public component surface;
-  the root app's full search and filtering could not be inspected.
+- [Dither Avatar](https://uiuno.com/dither/dither-avatar) — public component
+  page with preview and MIT metadata.
+- [Dither Identicon](https://uiuno.com/dither/dither-identicon) — deterministic
+  dither avatar component with code and MIT metadata.
+- [PixelGrid Shader](https://uiuno.com/dither/pixel-grid-shader) — WebGL/shader
+  component page with MIT metadata.
+- [Animated Testimonials](https://uiuno.com/) — component shown in the root
+  editor with its React example source.
 
 ## When to use it
 
@@ -92,10 +94,10 @@ components or for the Uiuno service itself.
 
 ## Agent notes
 
-Uiuno does not expose a verified universal CLI, npm package, MCP endpoint, or
-llms.txt in the pages checked. The public source can still serve as agent
-context, but access to the workspace may require an account. Check each fork's
-code and licence rather than inferring terms from the platform.
+The public pages expose component source and install controls for coding agents.
+No universal CLI, MCP endpoint, or `llms.txt` was found. The pricing route
+returned HTTP 404; check each item's license rather than inferring terms from
+the workspace.
 
 ## Alternatives in this repo
 
@@ -107,7 +109,13 @@ code and licence rather than inferring terms from the platform.
 ## Sources
 
 - [Official workspace](https://uiuno.com/) — checked 2026-10-07
+- [Component explorer](https://uiuno.com/explore/components) — checked
+  2026-10-07
 - [Dither Identicon](https://uiuno.com/dither/dither-identicon) — checked
+- [Dither Avatar](https://uiuno.com/dither/dither-avatar) — checked 2026-10-07
+- [PixelGrid Shader](https://uiuno.com/dither/pixel-grid-shader) — checked
+  2026-10-07
+- [Pricing path](https://uiuno.com/pricing) — HTTP 404; checked 2026-10-07
   2026-10-07
 - [Uiuno search result](https://uiuno.com/) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/components) — checked 2026-10-07

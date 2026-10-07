@@ -109,7 +109,7 @@ export function WaitlistBanner() {
 
 - [Easy UI Templates Catalog](https://www.easyui.pro/templates) — Collection of
   full-page Next.js templates for SaaS and personal brands.
-- [Easy UI Components Library](https://www.easyui.pro/components) — Modular
+- [Easy UI Components Library](https://www.easyui.pro/component) — Modular
   sections including hero headers, pricing tiers, and testimonials.
 - [Easy UI GitHub Repository](https://github.com/DarkInventor/easy-ui) — Source
   code repository containing component definitions and setup guides.

@@ -8,8 +8,8 @@ designeer_url: 'https://designeer.xyz/components'
 designeer_blurb: 'Mega-menu featuring fluid layout morphing transitions.'
 paywall: unknown
 pricing_summary:
-  'Pricing could not be determined because the official site did not load on
-  2026-10-07.'
+  'The official Vercel deployment returned HTTP 402 with “Deployment Paused” on
+  2026-10-07; no pricing information was available.'
 open_source: false
 license: unknown
 category_tags: ['navigation', 'mega-menu', 'animation']
@@ -28,33 +28,34 @@ current examples are available for review.
 
 ## At a glance
 
-| Field          | Value                                                                                               |
-| -------------- | --------------------------------------------------------------------------------------------------- |
-| Source         | [butter-nav.vercel.app](https://butter-nav.vercel.app/)                                             |
-| Paywall        | **Unknown** — Pricing could not be determined because the official site did not load on 2026-10-07. |
-| Open source    | No — No current source repository or licence could be verified.                                     |
-| Type           | Designeer-listed mega-menu resource; current product status unverified                              |
-| Works with     | Not verified; Designeer describes a fluidly morphing mega-menu                                      |
-| Best for       | fluid mega-menus                                                                                    |
-| Agent-friendly | No — no directly usable package or agent workflow was verified                                      |
+| Field          | Value                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| Source         | [butter-nav.vercel.app](https://butter-nav.vercel.app/)                                      |
+| Paywall        | **Unknown** — the official deployment returned HTTP 402, “Deployment Paused,” on 2026-10-07. |
+| Open source    | No — No current source repository or licence could be verified.                              |
+| Type           | Designeer-listed mega-menu resource; current product status unverified                       |
+| Works with     | Not verified; Designeer describes a fluidly morphing mega-menu                               |
+| Best for       | fluid mega-menus                                                                             |
+| Agent-friendly | No — no directly usable package or agent workflow was verified                               |
 
 ## What it is
 
 The Designeer listing describes Butter Nav as a mega-menu with fluid layout
-morphing transitions. The official Vercel endpoint did not load during the
-2026-10-07 check.
+morphing transitions. On 2026-10-07, a real Chromium browser received HTTP 402
+from `https://butter-nav.vercel.app/`; the page title was “Deployment Paused”
+and its body said “This deployment is temporarily paused.” The `/pricing` and
+`/docs` paths returned the same paused-deployment response.
 
-No current documentation, code, package, examples, pricing, or licence could be
-confirmed from the official site. The resource may be unavailable or have moved.
-
-Treat the listing as an unverified reference until the publisher restores a
-working official page.
+No working demo, documentation, package, source repository, pricing, or license
+could be verified. The listing remains an unverified lead rather than a usable
+component reference.
 
 ## Paywall and pricing
 
-- **Free:** Not verified; the official endpoint did not load when checked.
-- **Paid:** Not verified; the official endpoint did not load when checked.
-- **Sign-up required?** Unknown — the official site was unavailable, so sign-up
+- **Free:** Not verifiable; the official deployment is paused.
+- **Paid:** No plan or price could be inspected because the official deployment
+  and its pricing route return HTTP 402.
+- **Sign-up required?** Unknown — the official site is paused, so access
   requirements could not be checked.
 - **Licence for client work:** Not verified. Confirm current licence and usage
   terms with the publisher before using any code.
@@ -73,9 +74,16 @@ site as a reference only until the publisher documents a current implementation.
 
 ## Examples
 
-No live example pages could be verified because the official endpoint was
-inaccessible. The Designeer listing is the only available description; no
-example URLs are included.
+No working component demos, launch post, GitHub repository, or archived preview
+was found. These links preserve the available descriptions and status checks;
+they are not playable component examples.
+
+- [Official Butter Nav deployment](https://butter-nav.vercel.app/) — currently
+  returns HTTP 402, “Deployment Paused.”
+- [Designeer components listing](https://designeer.xyz/components) — gives the
+  one-line description of the navigation example.
+- [Butter Nav index entry](https://index.chele.bi/r/butter-nav/) — repeats the
+  short description and records the destination as unavailable.
 
 ## When to use it
 
@@ -89,9 +97,10 @@ example URLs are included.
 
 ## Agent notes
 
-- The official URL did not load during verification.
-- No package name, install command, source repository, example URL, price, or
-  licence could be verified.
+- The official homepage, `/pricing`, and `/docs` returned HTTP 402 on
+  2026-10-07; the homepage displayed “This deployment is temporarily paused.”
+- No package name, install command, source repository, working example URL,
+  price, or license could be verified.
 - Do not assume that the Designeer summary reflects a currently available
   product.
 
@@ -106,6 +115,12 @@ example URLs are included.
 
 ## Sources
 
-- [Official endpoint (unavailable)](https://butter-nav.vercel.app/) — checked
-  2026-10-07
+- [Official endpoint](https://butter-nav.vercel.app/) — checked 2026-10-07; HTTP
+  402, “Deployment Paused”
+- [Official pricing route](https://butter-nav.vercel.app/pricing) — checked
+  2026-10-07; HTTP 402
+- [Official docs route](https://butter-nav.vercel.app/docs) — checked
+  2026-10-07; HTTP 402
 - [Designeer listing](https://designeer.xyz/components) — checked 2026-10-07
+- [Butter Nav index entry](https://index.chele.bi/r/butter-nav/) — checked
+  2026-10-07

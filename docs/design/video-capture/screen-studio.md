@@ -115,7 +115,7 @@ Checked on the official pricing documentation on 2026-10-07.
 
 - [Screen Studio Official Website](https://screen.studio/) — Interactive video
   samples demonstrating automatic zooms, webcam bubbles, and cursor smoothing.
-- [Screen Studio Pricing](https://screen.studio/pricing) — Plan details,
+- [Screen Studio Pricing](https://screen.studio/#pricing) — Plan details,
   multi-Mac seat terms, and educational discounts.
 - [Screen Studio Feature Gallery](https://screen.studio/) — Previews of vertical
   video framing (for TikTok/Reels) and automatic subtitle generation.
@@ -154,5 +154,5 @@ Checked on the official pricing documentation on 2026-10-07.
 ## Sources
 
 - [Official site](https://screen.studio/) — checked 2026-10-07
-- [Pricing page](https://screen.studio/pricing) — checked 2026-10-07
+- [Pricing section](https://screen.studio/#pricing) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/utilities)

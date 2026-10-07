@@ -84,8 +84,8 @@ export function NoteIcon() {
 
 ## Examples
 
-- [Live preview](https://ig-imanish.github.io/mx-icons) — Browse the catalog and
-  inspect component names.
+- [Live preview](https://mx-icons.vercel.app/) — Browse the catalog and inspect
+  component names.
 - [Project README](https://github.com/ig-imanish/mx-icons) — Shows
   NoteTextLinear imports and package details.
 - [Package listing](https://www.npmjs.com/package/mx-icons) — Distribution page
@@ -116,7 +116,7 @@ export function NoteIcon() {
 
 - [Official preview](https://mx-icons.vercel.app/) — checked 2026-10-07
 - [GitHub README](https://github.com/ig-imanish/mx-icons) — checked 2026-10-07
-- [Live preview](https://ig-imanish.github.io/mx-icons) — checked 2026-10-07
+- [Live preview](https://mx-icons.vercel.app/) — checked 2026-10-07
 - [Package listing](https://www.npmjs.com/package/mx-icons) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/visuals) — checked 2026-10-07; page
   fetch unavailable, blurb copied from batch metadata

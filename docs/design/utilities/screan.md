@@ -6,11 +6,12 @@ section_slug: utilities
 source_url: 'https://screan.app/'
 designeer_url: 'https://designeer.xyz/utilities'
 designeer_blurb: Create promotional App Store screenshot mockups.
-paywall: unknown
+paywall: free
 pricing_summary:
-  'Pricing could not be verified because the official app did not load.'
-open_source: false
-license: unknown
+  'The browser editor is free and requires no account; its public source uses
+  the MIT licence. No paid plan or price is published.'
+open_source: true
+license: MIT
 category_tags: [app-store, screenshots, mockups]
 best_for: [app-store listings, product launch graphics, localized screenshots]
 stack: []
@@ -25,72 +26,62 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                           |
-| -------------- | --------------------------------------------------------------- |
-| Source         | [screan.app](https://screan.app/)                               |
-| Paywall        | **Unknown** — the official app did not load during verification |
-| Open source    | No — public repository has no verified software licence         |
-| Type           | App store screenshot editor                                     |
-| Works with     | Browser; iPhone, iPad, Mac, and Android layouts are described   |
-| Best for       | Store listing screenshots and localization                      |
-| Agent-friendly | No — no public API or agent interface was verified              |
+| Field          | Value                                                                |
+| -------------- | -------------------------------------------------------------------- |
+| Source         | [screan.app](https://screan.app/)                                    |
+| Paywall        | **Free** — the editor works in the browser without an account.       |
+| Open source    | Yes — MIT ([GitHub repository](https://github.com/cassardp/Screan)). |
+| Type           | App store screenshot editor                                          |
+| Works with     | Browser; iPhone, iPad, Mac, and Android layouts are described        |
+| Best for       | Store listing screenshots and localization                           |
+| Agent-friendly | No — no public API or agent interface was verified                   |
 
 ## What it is
 
-Screan is presented as a browser-based editor for arranging app screenshots
-inside promotional device frames. Its public repository describes presets for
-iPhone, iPad, Mac, and Android, with controls for positioning, backgrounds,
-colors, fonts, gradients, shadows, and device frames.
+On 2026-10-07, a headless browser loaded the official editor with HTTP 200. The
+page displayed an interactive screenshot workspace with platform selection,
+image upload controls, layout and typography settings, and an Export action. The
+public repository describes iPhone, iPad, Mac, and Android formats, localised
+exports, and optional AI translation.
 
-The repository also describes multi-language output and ZIP export. An optional
-Claude API key is stored locally according to its README. The official web app
-did not return readable page content during this check, so these capabilities
-are based on the linked project repository rather than a live app walkthrough.
-
-No standalone gallery of finished examples was found. Treat the repository
-description as a feature summary, not as confirmation that every control is
-available in the current deployment.
+The README says no account or upload is required and that work stays in the
+browser. It identifies the project as MIT-licensed and describes all editing and
+export as client-side. The repository README is the available setup and feature
+guide.
 
 ## Paywall and pricing
 
-- **Free:** The repository describes a browser workflow without an account, but
-  the live site could not be inspected to confirm current access.
-- **Paid:** Not published in the pages available for this check.
-- **Sign-up required?** The repository says an account is not required; current
-  deployment behavior could not be verified.
-- **Licence for client work:** The repository has a licence file, but its terms
-  were not reliably retrieved. Do not assume that the source or exported output
-  has a particular licence.
+- **Free:** The editor is available without an account, and the README says the
+  work runs locally in the browser.
+- **Paid:** No paid tier or price is published.
+- **Sign-up required?** No, according to the README and the live editor.
+- **Licence for client work:** The source is MIT-licensed. The licence applies
+  to the code; use your own rights-cleared screenshots, fonts, and copy.
 
-Pricing is **unknown** because the official app was inaccessible and no official
-pricing page was found. Checked 2026-10-07.
+Pricing and access checked 2026-10-07.
 
 ## How to use
 
-1. Open the editor and choose the target platform and device preset.
-2. Add the app screenshots, then arrange them in the device frame.
-3. Set the background, headline, typography, gradient, and shadow to match the
-   product's launch visual system.
-4. Repeat the layout for the other required languages, checking that translated
-   copy still fits each frame.
-5. Export the selected images or a ZIP if the current deployment exposes the
-   repository-described export flow.
-
-The editor did not load during this research pass, so confirm its current
-controls before planning a production handoff around a particular export.
+1. Open the editor and choose a platform such as iPhone or Android.
+2. Add screenshots, choose a layout, and set the title, subtitle, colors, and
+   typography in the sidebar.
+3. Add any required languages and select the device sizes to export.
+4. Preview the composition, then use **Export** to download the generated images
+   or ZIP.
+5. For optional AI translation, follow the README's instructions for entering a
+   Claude API key; it says the key is stored locally and sent to Anthropic.
 
 ## Examples
 
-No published example gallery or shareable output pages could be verified. The
-following are product and source references, not independently hosted sample
-exports:
+The repository documents these concrete workflows; each link opens its README
+section:
 
-- [Screan editor](https://screan.app/) — intended entry point for creating a
-  store screenshot composition.
-- [Screan repository](https://github.com/cassardp/Screan) — README describes
-  platform presets and the browser workflow.
-- [Screan repository README](https://github.com/cassardp/Screan#readme) —
-  feature description for localization and export.
+- [Supported store formats](https://github.com/cassardp/Screan#supported-formats)
+  — export sizes for iPhone, iPad, Mac, and Google Play.
+- [Screenshot workflow](https://github.com/cassardp/Screan#usage) — choose a
+  platform, customize layouts, and export a ZIP.
+- [AI translation](https://github.com/cassardp/Screan#ai-translation) — optional
+  Claude-assisted localisation flow.
 
 ## When to use it
 
@@ -104,15 +95,16 @@ exports:
 
 ## Agent notes
 
-- Official app URL: [screan.app](https://screan.app/); it returned no readable
-  editor content in this verification pass.
+- Official app URL: [screan.app](https://screan.app/); the editor loaded in a
+  headless browser on 2026-10-07.
 - Repository: [cassardp/Screan](https://github.com/cassardp/Screan).
+- The repository reports an MIT licence; no npm package, CLI, API, or MCP
+  endpoint was verified.
 - No install command, npm package, CLI, MCP endpoint, or public API was
   verified.
 - The repository README describes a Claude key option stored locally; do not
   place a real key in a prompt or commit it to a project.
-- Verify current output sizes and licence terms in the running app before using
-  exports in a client deliverable.
+- Use the repository README for its documented formats and workflow.
 
 ## Alternatives in this repo
 
@@ -125,9 +117,10 @@ exports:
 
 ## Sources
 
-- [Official Screan app](https://screan.app/) — checked 2026-10-07
-- [Screan GitHub repository](https://github.com/cassardp/Screan) — checked
-  2026-10-07
+- [Official Screan app](https://screan.app/) — checked 2026-10-07; HTTP 200 and
+  interactive editor rendered
+- [Screan GitHub repository and MIT licence](https://github.com/cassardp/Screan)
+  — checked 2026-10-07
 - [Screan repository README](https://github.com/cassardp/Screan#readme) —
   checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/utilities) — checked 2026-10-07

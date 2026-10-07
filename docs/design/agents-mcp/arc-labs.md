@@ -93,8 +93,8 @@ Checked on 2026-10-07.
   dashboard, resume editor, and interview simulation steps.
 - [Arc labs Dashboard](https://www.arclabs.space/dashboard) — interactive app
   portal for managing resume projects and starting mock interviews.
-- [Vansh Nagar Portfolio](https://vanshnagar.me/) — creator's site showcasing
-  the design system, animations, and frontend stack behind Arc labs.
+- [Vansh Nagar Portfolio](https://www.vanshnagar.com/) — creator's site
+  showcasing the design system, animations, and frontend stack behind Arc labs.
 
 ## When to use it
 

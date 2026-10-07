@@ -6,9 +6,10 @@ section_slug: utilities
 source_url: 'https://corne.rs/'
 designeer_url: 'https://designeer.xyz/utilities'
 designeer_blurb: Documentation for the Corne split keyboard.
-paywall: unknown
+paywall: free
 pricing_summary:
-  'The source URL now hosts Lisse, and its pricing could not be determined.'
+  'The current Lisse library is public and MIT-licensed; no paid plan or price
+  is published.'
 open_source: true
 license: MIT
 category_tags: [css, corners, ui, effects]
@@ -25,50 +26,50 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                                    |
-| -------------- | ------------------------------------------------------------------------ |
-| Source         | [corne.rs](https://corne.rs/)                                            |
-| Paywall        | **Unknown** — the URL changed products and current pricing is not stated |
-| Open source    | Yes — current Lisse repository is MIT-licensed                           |
-| Type           | Smooth-corner rendering library                                          |
-| Works with     | JavaScript, React, Vue, Svelte, and other documented integrations        |
-| Best for       | Smooth corners and squircle-shaped UI surfaces                           |
-| Agent-friendly | Yes — package installation and framework docs are available              |
+| Field          | Value                                                                              |
+| -------------- | ---------------------------------------------------------------------------------- |
+| Source         | [corne.rs](https://corne.rs/)                                                      |
+| Paywall        | **Free** — the current Lisse library and source are public; no paid plan is shown. |
+| Open source    | Yes — MIT ([Lisse repository](https://github.com/JaceThings/Lisse)).               |
+| Type           | Smooth-corner rendering library                                                    |
+| Works with     | JavaScript, React, Vue, Svelte, and other documented integrations                  |
+| Best for       | Smooth corners and squircle-shaped UI surfaces                                     |
+| Agent-friendly | Yes — package installation and framework docs are available                        |
 
 ## What it is
 
-Designeer's entry describes Corne, the split keyboard. The batch's source URL
-`corne.rs` now serves Lisse, a JavaScript library for rendering smoothed or
-squircle-like corners. The live site links to the Lisse project and playground;
-it is not the keyboard documentation described by the directory entry.
+On 2026-10-07, a headless browser loaded `corne.rs` with HTTP 200 and the page
+identified itself as “lisse,” not Corne keyboard documentation. It described a
+JavaScript library for smooth, squircle-like corners, showed an interactive
+demo, and published install commands for React, Vue, Svelte, and framework-
+agnostic packages. The `/pricing` and `/docs` paths returned to the same
+homepage.
 
-Lisse exposes per-corner radius, smoothing, borders, and shadow styling. Its
-repository documents framework packages, including a React integration, as well
-as recipes and a playground. This doc describes the current site at the listed
-URL so readers can recognize the product change; it does not describe the Corne
-keyboard.
-
-The source change makes this a potentially stale catalogue record. Verify the
-directory entry before relying on it as a reference for a split keyboard.
+The linked public Lisse repository identifies the library as MIT-licensed and
+publishes framework bindings and usage documentation. This entry therefore
+describes Lisse at the listed URL; it does not describe the Corne keyboard
+hardware from the Designeer blurb.
 
 ## Paywall and pricing
 
-- **Free:** The public Lisse repository is MIT-licensed.
-- **Paid:** No current Lisse subscription or price was established.
-- **Sign-up required?** No sign-up is shown for the public playground or docs.
-- **Licence for client work:** The Lisse repository is MIT-licensed. This
-  applies to the library code, not to any unrelated keyboard assets.
+- **Free:** The public Lisse packages, source repository, playground, and docs
+  are available without a paid plan.
+- **Paid:** No paid tier or price is published; `/pricing` returns to the home
+  page.
+- **Sign-up required?** No for the playground, package installation, or public
+  docs.
+- **Licence for client work:** MIT for the Lisse library code. This does not
+  apply to unrelated Corne keyboard assets.
 
-Paywall is **unknown** because the listed source URL changed products and no
-current pricing terms were published in the sources reviewed. Checked
-2026-10-07.
+Pricing and access checked 2026-10-07.
 
 ## How to use
 
-For a React project, install the framework package:
+For a React project, install the framework package named in the official
+repository:
 
 ```bash
-bun add @lisse/react
+npm install @lisse/react
 ```
 
 The repository's React integration uses the `SmoothCorners` component:
@@ -78,8 +79,11 @@ import { SmoothCorners } from '@lisse/react'
 
 export function Panel() {
   return (
-    <SmoothCorners radius={24} smoothing={0.7}>
-      <div className="panel-content">Content</div>
+    <SmoothCorners
+      corners={{ radius: 20, smoothing: 0.6 }}
+      style={{ background: '#fff', padding: 24 }}
+    >
+      <h2>Content</h2>
     </SmoothCorners>
   )
 }
@@ -132,9 +136,15 @@ result at multiple sizes before making it a shared design token.
 ## Sources
 
 - [Listed source URL, now Lisse](https://corne.rs/) — checked 2026-10-07
+- [Pricing route](https://corne.rs/pricing) — checked 2026-10-07; returned to
+  the Lisse homepage
+- [Docs route](https://corne.rs/docs) — checked 2026-10-07; returned to the
+  Lisse homepage
 - [Lisse playground](https://corne.rs/playground) — checked 2026-10-07
 - [Lisse GitHub repository](https://github.com/JaceThings/Lisse) — checked
   2026-10-07
+- [Lisse repository README](https://github.com/JaceThings/Lisse#readme) —
+  checked 2026-10-07; package names and MIT licence
 - [Getting started guide](https://github.com/JaceThings/Lisse/wiki/Getting-Started)
   — checked 2026-10-07
 - [Recipes guide](https://github.com/JaceThings/Lisse/wiki/Recipes) — checked

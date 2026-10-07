@@ -8,8 +8,8 @@ designeer_url: https://designeer.xyz/components
 designeer_blurb: Clean component collection for shadcn projects.
 paywall: unknown
 pricing_summary:
-  'Not published; domain hexter-ui.com is unreachable and no pricing could be
-  determined.'
+  'The official domain failed DNS resolution; no attributable pricing,
+  repository, or current access terms could be verified.'
 open_source: false
 license: unknown
 category_tags: [shadcn, react, tailwind, components, unreachable]
@@ -27,74 +27,50 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                      |
-| -------------- | ---------------------------------------------------------- |
-| Source         | [hexter-ui.com](https://hexter-ui.com/)                    |
-| Paywall        | **Unknown** — domain unreachable; pricing not determinable |
-| Open source    | No — proprietary or unknown                                |
-| Type           | Component collection for shadcn/ui                         |
-| Works with     | React, Tailwind CSS, shadcn/ui                             |
-| Best for       | Historical reference, shadcn components                    |
-| Agent-friendly | No — site unreachable, no active CLI or repository         |
+| Field          | Value                                                                               |
+| -------------- | ----------------------------------------------------------------------------------- |
+| Source         | [hexter-ui.com](https://hexter-ui.com/) — DNS did not resolve                       |
+| Paywall        | **Unknown** — no pricing or access terms could be verified                          |
+| Open source    | No — no attributable public repository was found                                    |
+| Type           | Designeer-listed shadcn component collection; current product unverified            |
+| Works with     | Described as shadcn-compatible in the directory listing; not independently verified |
+| Best for       | Historical directory reference only                                                 |
+| Agent-friendly | No — no current docs, CLI, or repository was found                                  |
 
 ## What it is
 
-Hexter UI was cataloged by Designeer as a clean collection of UI components
-tailored for projects built on top of shadcn/ui and Tailwind CSS. The resource
-aimed to provide pre-styled, modern components that fit into the standard
-copy-paste component workflow.
-
-As of October 2026, the official website domain (`https://hexter-ui.com/`) is
-offline and fails DNS resolution (`ENOTFOUND`). No active public GitHub
-repository or developer redirect could be verified under the official name.
-
-Because the service is currently down or parked, developers and automated agents
-should not rely on Hexter UI for active web development. Active alternatives in
-this repository—such as Watermelon UI, Base CN, and Beautiful UI—provide fully
-operational component collections compatible with the shadcn/ui architecture.
+Designeer lists Hexter UI as a clean component collection for shadcn projects.
+On 2026-10-07, headless Chromium could not resolve `hexter-ui.com` at the root,
+`/pricing`, or `/components`; each navigation failed with
+`ERR_NAME_NOT_RESOLVED` before an HTTP response. Exact-name searches did not
+surface an attributable official repository, documentation, Product Hunt page,
+or archived example. The listing's description is the only product information
+that could be verified.
 
 ## Paywall and pricing
 
-- **Free:** Could not be verified due to domain downtime.
-- **Paid:** Could not be verified.
+- **Free:** Could not be verified; the official domain did not resolve.
+- **Paid:** No price or paid plan could be verified.
 - **Sign-up required?** Unknown.
 - **Licence for client work:** Unknown; no licence document or terms of service
   are accessible while the host is down.
 
-Checked on 2026-10-07. Pricing and paywall status are marked as unknown because
-the primary domain is unreachable and no alternate documentation could be
-located.
+Checked 2026-10-07. Pricing and paywall remain unknown because the primary
+domain failed DNS resolution and no attributable alternate source was found.
 
 ## How to use
 
-1. Because the official domain (`hexter-ui.com`) is offline, do not attempt to
-   install or fetch components from its registry.
-
-2. To achieve a similar clean component architecture in a shadcn/ui project, use
-   active sibling registries in this repo, such as Watermelon UI or Base CN:
-
-```bash
-bunx --bun shadcn@latest add "https://ui.watermelon.sh/r/button"
-```
-
-3. Render the active replacement component in your React application:
-
-```tsx
-import { Button } from '@/components/ui/button'
-
-export function FallbackCTA() {
-  return <Button variant="default">Continue with active tools</Button>
-}
-```
+1. No current Hexter UI installation or registry command could be verified.
+2. Do not use commands copied from old directory entries until the official
+   domain and registry are available again.
+3. For a similar shadcn workflow, choose a verified alternative such as
+   [Watermelon UI](../component-libraries/watermelon-ui.md) or
+   [Base CN](../component-libraries/base-cn.md), and check its current licence.
 
 ## Examples
 
-- [Designeer Component Listing](https://designeer.xyz/components) — Designeer
-  index entry preserving the original tool summary.
-- [Hexter UI Source URL](https://hexter-ui.com/) — Official recorded domain
-  (currently unreachable).
-- [Designeer Resource Index](https://designeer.xyz/) — Curated catalog of
-  contemporary web design and engineering resources.
+No verified product demos or examples were found. The official URL and directory
+entry are source references, not component examples.
 
 ## When to use it
 
@@ -104,7 +80,8 @@ export function FallbackCTA() {
 
 ## Agent notes
 
-- Official source URL `https://hexter-ui.com/` returns DNS failure `ENOTFOUND`.
+- The official root, `/pricing`, and `/components` failed DNS resolution on
+  2026-10-07; no HTTP status was returned.
 - Coding agents should bypass this tool and route requests for shadcn components
   to [Watermelon UI](../component-libraries/watermelon-ui.md) or
   [Base CN](../component-libraries/base-cn.md).
@@ -118,6 +95,10 @@ export function FallbackCTA() {
 
 ## Sources
 
-- [Hexter UI Source URL](https://hexter-ui.com/) — checked 2026-10-07 (offline)
-- [Designeer listing](https://designeer.xyz/components)
-- [Designeer Portal](https://designeer.xyz/) — checked 2026-10-07
+- [Official source URL](https://hexter-ui.com/) — `ERR_NAME_NOT_RESOLVED`;
+  checked 2026-10-07
+- [Pricing path](https://hexter-ui.com/pricing) — DNS resolution failed; checked
+  2026-10-07
+- [Component path](https://hexter-ui.com/components) — DNS resolution failed;
+  checked 2026-10-07
+- [Designeer listing](https://designeer.xyz/components) — checked 2026-10-07

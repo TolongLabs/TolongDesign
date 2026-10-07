@@ -8,8 +8,8 @@ designeer_url: 'https://designeer.xyz/utilities'
 designeer_blurb: Session replay and visitor recording for websites.
 paywall: unknown
 pricing_summary:
-  'The official site was inaccessible, so current access and pricing could not
-  be verified.'
+  'Unknown; the homepage returns HTTP 200 with an empty visible body, while
+  `/pricing` and `/docs` return HTTP 404. No price was found.'
 open_source: false
 license: unknown
 category_tags: [analytics, session-replay, user-research]
@@ -22,49 +22,49 @@ last_verified: 2026-10-07
 # Replay
 
 > Session replay and visitor recording for websites. The product could not be
-> verified because its official site did not load during this check.
+> verified because its official page title loaded but the visible page body was
+> empty during this check.
 
 ## At a glance
 
-| Field          | Value                                            |
-| -------------- | ------------------------------------------------ |
-| Source         | [letsreplay.co](https://letsreplay.co/)          |
-| Paywall        | **Unknown** — official site was inaccessible     |
-| Open source    | No public source repository was found            |
-| Type           | Session replay service, according to the listing |
-| Works with     | Not verified                                     |
-| Best for       | Not verified; listed for website session replay  |
-| Agent-friendly | No verified API, SDK, or agent interface         |
+| Field          | Value                                                                |
+| -------------- | -------------------------------------------------------------------- |
+| Source         | [letsreplay.co](https://letsreplay.co/)                              |
+| Paywall        | **Unknown** — no pricing or access details load on the current site. |
+| Open source    | No official public source repository was found.                      |
+| Type           | Session replay service, according to the page title and listing      |
+| Works with     | Not verified                                                         |
+| Best for       | Not verified; listed for website session replay                      |
+| Agent-friendly | No verified API, SDK, or agent interface                             |
 
 ## What it is
 
-Designeer describes Replay as session replay and visitor recording for websites.
-The official `letsreplay.co` destination could not be opened in this research
-pass, and searches did not surface a usable official product page, setup guide,
-or example gallery.
+On 2026-10-07, a headless browser opened `https://letsreplay.co/` with HTTP 200
+and the title “Replay – Session Replay & Visitor Recording.” The visible body
+text was empty and the page contained zero links.
 
-The listing alone does not establish whether the service is still operating, how
-it records sessions, what privacy controls it provides, or how it installs on a
-site. No implementation details are inferred here.
-
-Treat Replay as an unverified directory entry until its official site and
-current data-handling documentation are available.
+The page title and Designeer blurb identify the intended category as session
+replay and visitor recording, but the current deployment exposed no product
+interface, setup guide, or privacy information. Searches for an official GitHub
+repository, Product Hunt page, and X/Twitter announcement did not surface one.
+The current service and its paywall therefore remain unverified.
 
 ## Paywall and pricing
 
-- **Free:** Not verified. No product interface or free tier was accessible.
-- **Paid:** Not published in the accessible sources.
-- **Sign-up required?** Unknown.
-- **Licence for client work:** Unknown. No service terms or data-processing
-  terms could be reviewed.
+- **Free:** Unknown; no visible product interface or free tier was available.
+- **Paid:** Unknown; no price was found in other checked sources.
+- **Sign-up required?** Unknown; the root page exposed no account or workflow.
+- **Licence for client work:** Unknown; no service terms or data-processing
+  terms were available.
 
-Paywall is **unknown** because the official site did not load and no current
-pricing information was found on 2026-10-07.
+Paywall is **unknown** because the official site exposed no visible product
+content or pricing on 2026-10-07.
 
 ## How to use
 
-No installation or recording workflow could be verified. Before considering the
-service for a live site:
+No installation or recording workflow could be verified. The root returned HTTP
+200 but contained no visible text or links. Before considering the service for a
+live site:
 
 1. Confirm the vendor and product are still active at the official domain.
 2. Review the current browser SDK or script installation instructions and
@@ -79,17 +79,10 @@ instructions for Replay.
 
 ## Examples
 
-No recording examples or demos could be verified. These links document the
-available references rather than sample sessions:
-
-- [Replay official site](https://letsreplay.co/) — the listed product URL; it
-  was inaccessible during this check.
-- [Replay site availability](https://letsreplay.co/) — the same official
-  destination; no separate demo route was discoverable.
-- [Designeer utilities listing](https://designeer.xyz/utilities) — provides the
-  short session-replay description.
-
-No session behavior or privacy feature should be inferred from the links.
+No product example or demo could be verified. The official homepage exposed no
+visible content or links, and searches did not surface an official repository or
+launch page. No example links are included rather than presenting duplicate or
+unrelated pages as product demos.
 
 ## When to use it
 
@@ -102,8 +95,8 @@ No session behavior or privacy feature should be inferred from the links.
 
 ## Agent notes
 
-- Official URL: [letsreplay.co](https://letsreplay.co/); it was inaccessible on
-  2026-10-07.
+- Official URL: [letsreplay.co](https://letsreplay.co/); HTTP 200 and the page
+  title loaded on 2026-10-07, but the visible body was empty and had no links.
 - No package, script snippet, CLI, API, MCP endpoint, or `llms.txt` was
   verified.
 - No pricing, data-processing terms, privacy controls, or sample replays were

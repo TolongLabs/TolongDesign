@@ -120,7 +120,7 @@ export function HeroShowcase() {
 
 ## Examples
 
-- [Lightswind Components](https://lightswind.com/docs/components) — Catalog of
+- [Lightswind Components](https://lightswind.com/components) — Catalog of
   glowing borders, radiant cards, and kinetic buttons.
 - [Lightswind Pricing](https://lightswind.com/pricing) — Account portal for
   obtaining Pro licences and MCP API keys.

@@ -71,12 +71,12 @@ The access and pricing details above were checked on 2026-10-07.
 
 ## Examples
 
-- [Fibonacci Breather](https://loader-buttons.experiments.appllama.io/#loader-01)
-  Loading animation example identified as the first entry in the official list.
-- [Glass Tide Lens](https://loader-buttons.experiments.appllama.io/#loader-02)
-  Second listed example for inspecting a different visual treatment.
-- [Binary Metaball Mitosis](https://loader-buttons.experiments.appllama.io/#loader-03)
-  Third listed entry; compare its motion and state communication.
+- [Fibonacci Breather](https://loader-buttons.appllama.io/#loader-01) Loading
+  animation example identified as the first entry in the official list.
+- [Glass Tide Lens](https://loader-buttons.appllama.io/#loader-02) Second listed
+  example for inspecting a different visual treatment.
+- [Binary Metaball Mitosis](https://loader-buttons.appllama.io/#loader-03) Third
+  listed entry; compare its motion and state communication.
 
 ## When to use it
 
@@ -104,10 +104,10 @@ and validate the interaction for the project.
 ## Sources
 
 - [Official site](https://loader-buttons.appllama.io/) — checked 2026-10-07
-- [Fibonacci Breather](https://loader-buttons.experiments.appllama.io/#loader-01)
-  — checked 2026-10-07
-- [Glass Tide Lens](https://loader-buttons.experiments.appllama.io/#loader-02) —
+- [Fibonacci Breather](https://loader-buttons.appllama.io/#loader-01) — checked
+  2026-10-07
+- [Glass Tide Lens](https://loader-buttons.appllama.io/#loader-02) — checked
+  2026-10-07
+- [Binary Metaball Mitosis](https://loader-buttons.appllama.io/#loader-03) —
   checked 2026-10-07
-- [Binary Metaball Mitosis](https://loader-buttons.experiments.appllama.io/#loader-03)
-  — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/) — checked 2026-10-07

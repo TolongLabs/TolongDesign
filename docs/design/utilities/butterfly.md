@@ -8,7 +8,9 @@ designeer_url: 'https://designeer.xyz/utilities'
 designeer_blurb: Minimalist landing page builder for validation.
 paywall: unknown
 pricing_summary:
-  'The official site returned no readable product or pricing information.'
+  'The current root does not confirm the listed landing-page builder; /pricing
+  returns 404, and the linked Pond page is an early-preview operating-system
+  project with no listed price.'
 open_source: false
 license: unknown
 category_tags: [landing-pages, no-code, validation]
@@ -25,88 +27,73 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                    |
-| -------------- | -------------------------------------------------------- |
-| Source         | [butterfly.so](https://www.butterfly.so/)                |
-| Paywall        | **Unknown** — product and pricing could not be inspected |
-| Open source    | No public source repository was found                    |
-| Type           | Landing page builder, according to the listing           |
-| Works with     | Not verified                                             |
-| Best for       | Not verified; listed for landing page validation         |
-| Agent-friendly | No verified package, API, CLI, or agent integration      |
+| Field          | Value                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------ |
+| Source         | [butterfly.so](https://www.butterfly.so/)                                                        |
+| Paywall        | **Unknown** — the live page does not confirm the listed builder; `/pricing` returns 404          |
+| Open source    | No public source repository was found                                                            |
+| Type           | Designeer-listed landing-page builder; current site links to a separate early-preview OS project |
+| Works with     | Not verified                                                                                     |
+| Best for       | Historical listing only until product identity is confirmed                                      |
+| Agent-friendly | No verified package, API, CLI, or agent integration                                              |
 
 ## What it is
 
 Designeer describes Butterfly as a minimalist landing page builder for
-validating an idea. The official `butterfly.so` page redirected but returned no
-readable product content during this check. Current product status, features,
-ownership, and support could not be confirmed.
+validating an idea. On 2026-10-07, headless Chromium received HTTP 200 at the
+root, with title “Butterfly” and visible body text limited to the letters “B U T
+T E R F.” The page linked to X, Instagram, and `/pond`.
 
-No documentation, pricing page, public source repository, or sample landing
-pages were found in the accessible official material. The description below
-therefore preserves only the listing's one-line category and does not infer a
-current workflow from it.
-
-Treat Butterfly as an unverified directory entry until its official site
-provides usable product information.
+The `/pond` page also returned HTTP 200 and was titled “POND.” It describes an
+early-preview operating-system project, lists Arch Linux and Niri among its
+technical details, and is signed “Butterfly Interaction, Inc.” It does not
+describe a landing-page builder. The `/pricing` and `/login` paths returned
+HTTP 404. The current site therefore does not verify the product in the
+directory listing.
 
 ## Paywall and pricing
 
-- **Free:** Not verified; no product interface or free plan was accessible.
-- **Paid:** Not published in the pages available for this check.
-- **Sign-up required?** Unknown.
-- **Licence for client work:** Unknown; no output or template licence was found.
+- **Free:** Not verified for the landing-page builder in the directory listing.
+- **Paid:** No price or plan for that builder was published; `/pricing` returned
+  HTTP 404.
+- **Sign-up required?** Unknown for the listed builder. The email field on
+  `/pond` is for that separate early-preview project.
+- **Licence for client work:** Unknown; no builder terms or template license
+  were found.
 
-Paywall is **unknown** because the official page exposed no readable pricing or
-product information on 2026-10-07.
+Paywall remains **unknown** because the current site does not confirm the listed
+product and no price was published on 2026-10-07.
 
 ## How to use
 
-The current builder workflow could not be verified. If the official service
-becomes available, first confirm that it is still a landing page builder and
-then:
-
-1. Check the publishing target, custom-domain support, and whether a page can be
-   exported or only hosted by the service.
-2. Confirm the free and paid limits before creating a client page.
-3. Use a small validation page with one audience, one offer, and one primary
-   action rather than treating a template as a complete product strategy.
-4. Review mobile layout, analytics, privacy, and form handling before sharing
-   the page publicly.
-
-These are checks for a future evaluation, not verified Butterfly instructions.
+No landing-page builder workflow was verified. Do not follow `/pond` as a
+builder flow: that page describes a separate operating-system preview. Recheck
+the official product identity, publishing model, pricing, and template rights if
+the builder listing is restored.
 
 ## Examples
 
-No official sample pages or editor demos were discoverable. The available links
-are the product entry point and its directory listing, not working examples:
-
-- [Butterfly official site](https://www.butterfly.so/) — current product entry
-  point; no readable page content was returned.
-- [Butterfly URL with trailing slash](https://www.butterfly.so/) — same official
-  destination; no sample route was found.
-- [Designeer utilities listing](https://designeer.xyz/utilities) — provides the
-  original short description used for this entry.
-
-No feature or template should be inferred from these links.
+No landing-page builder demos or sample pages were found. The current homepage,
+`/pond` page, and linked social accounts are identity references only, not
+examples of the directory-listed builder.
 
 ## When to use it
 
-- Reevaluate it only after confirming that the official service is operating and
-  that its publishing model fits the project.
-- Compare its current limits and rights with the requirements for the validation
-  campaign before putting it in front of users.
-- Skip it when the project needs a dependable export path, accessible forms, or
-  reviewed terms until those are published.
+- Reevaluate it only after an official page confirms that the landing-page
+  builder is still operating.
+- Do not use the `/pond` email signup or operating-system details as evidence
+  about the listed builder.
+- Skip it for a landing-page project until features, pricing, and terms can be
+  verified.
 
 ## Agent notes
 
-- The official site returned no readable product content on 2026-10-07.
-- No installation command, package, CLI, API, MCP endpoint, or `llms.txt` was
-  verified.
-- No sample pages, current pricing, ownership, or licence terms were found.
-- Do not generate a project recommendation based solely on the directory
-  description; recheck the destination first.
+- On 2026-10-07, the root returned HTTP 200 but only rendered “B U T T E R F” as
+  body text; `/pricing` and `/login` returned HTTP 404.
+- `/pond` returned an early-preview operating-system page, not a landing-page
+  builder.
+- No builder installation command, docs, API, MCP endpoint, sample, pricing, or
+  license was found.
 
 ## Alternatives in this repo
 
@@ -119,5 +106,14 @@ No feature or template should be inferred from these links.
 
 ## Sources
 
-- [Official Butterfly site](https://www.butterfly.so/) — checked 2026-10-07
+- [Official Butterfly site](https://www.butterfly.so/) — HTTP 200 with partial
+  text; checked 2026-10-07
+- [Pond page](https://www.butterfly.so/pond) — early-preview OS project; checked
+  2026-10-07
+- [Pricing path](https://www.butterfly.so/pricing) — HTTP 404; checked
+  2026-10-07
+- [Butterfly on X](https://x.com/bflycomputer) — linked from the current site;
+  checked 2026-10-07
+- [Butterfly on Instagram](https://www.instagram.com/bflycomputer/) — linked
+  from the current site; checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/utilities) — checked 2026-10-07

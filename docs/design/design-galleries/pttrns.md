@@ -88,10 +88,10 @@ Verified on the official Pttrns website on 2026-10-07.
 
 - [Pttrns Homepage](https://www.pttrns.com/) — Chronological feed of newly
   curated mobile application screens and updates.
-- [Pttrns Categories](https://www.pttrns.com/categories/) — Full taxonomy of UI
-  patterns (navigation, authentication, content feeds, media).
-- [Pttrns Apps Index](https://www.pttrns.com/apps/) — Directory of indexed
-  mobile applications showcasing complete screen collections.
+- [Pttrns Articles](https://www.pttrns.com/articles/) — UX design articles and
+  case studies archive.
+- [Pttrns Design](https://www.pttrns.com/category/design/) — Editorial articles
+  on interface design and AI in UX.
 
 ## When to use it
 
@@ -123,5 +123,4 @@ Verified on the official Pttrns website on 2026-10-07.
 ## Sources
 
 - [Official site](https://pttrns.com/) — checked 2026-10-07
-- [Categories](https://www.pttrns.com/categories/) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/)

@@ -49,9 +49,8 @@ and higher-resolution output. This makes PostSpark useful for quick campaign
 graphics, while keeping final typography and layout review in the hands of the
 project designer.
 
-The `/pricing` route did not return usable pricing information during this
-check. The paid feature distinction is visible, but its exact subscription price
-is not published in the pages reviewed.
+The pages reviewed describe Pro features, but do not publish an exact
+subscription price.
 
 ## Paywall and pricing
 
@@ -110,8 +109,7 @@ canonical product screenshot and its source file in the project itself.
 - The pages are interactive browser tools; a coding agent can help prepare
   source screenshots and captions but cannot operate the editor through a
   documented interface.
-- `/pricing` was unavailable in this check. Do not quote a Pro price without
-  rechecking the official pricing page.
+- A Pro price was not published on the pages checked; do not quote one.
 - Keep source captures separate from PostSpark exports so a social crop does not
   become the only copy of a UI image.
 
@@ -131,5 +129,4 @@ canonical product screenshot and its source file in the project itself.
 - [Screenshot tool](https://postspark.app/screenshot) — checked 2026-10-07
 - [X post tool](https://postspark.app/x-post) — checked 2026-10-07
 - [Device mockup tool](https://postspark.app/device-mockup) — checked 2026-10-07
-- [Pricing route](https://postspark.app/pricing) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/utilities) — checked 2026-10-07

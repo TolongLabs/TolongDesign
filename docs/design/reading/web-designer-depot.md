@@ -92,8 +92,8 @@ Verified on the official Web Designer Depot website on 2026-10-07.
 
 - [Visual & UI Design Archive](https://www.webdesignerdepot.com/category/visual-ui-design/)
   — Curated articles on typography pairings, color systems, and modern branding.
-- [UX & Usability Category](https://www.webdesignerdepot.com/category/ux-and-usability/)
-  — Guidelines on conversion-focused UI, navigation menus, and accessibility.
+- [UX & Usability Category](https://www.webdesignerdepot.com/category/ux/) —
+  Guidelines on conversion-focused UI, navigation menus, and accessibility.
 - [Web Development Category](https://www.webdesignerdepot.com/category/web-development/)
   — Articles covering modern HTML/CSS standards, layout tools, and frameworks.
 

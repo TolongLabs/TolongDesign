@@ -69,7 +69,7 @@ terms.
 
 - Install Obsidian and create a local vault for the project or research area.
 - Write notes in Markdown and connect decisions with links such as [[Design
-    brief]].
+      brief]].
 - Open Graph view to inspect note relationships; use Local Graph when you only
   need a note's nearby connections.
 - Use Bases when properties need sortable table, card, or list views. Keep the

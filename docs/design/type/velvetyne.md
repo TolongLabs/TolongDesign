@@ -81,8 +81,8 @@ Access and license information checked 2026-10-07.
   — review a specimen book for an experimental typeface.
 - [Sligoil specimen](https://velvetyne.fr/site/assets/files/2379/sligoil-specimen-1.pdf)
   — compare another distinctive family and its glyph forms.
-- [Velvetyne download information](https://velvetyne.fr/download/?font=mess) —
-  review the foundry's license and download guidance.
+- [Velvetyne Mess font page](https://velvetyne.fr/fonts/mess/) — review the
+  font's license and download options.
 
 ## When to use it
 
@@ -113,8 +113,7 @@ Access and license information checked 2026-10-07.
 ## Sources
 
 - [Official Velvetyne site](https://velvetyne.fr/) — checked 2026-10-07
-- [Download and license information](https://velvetyne.fr/download/?font=mess) —
-  checked 2026-10-07
+- [Mess font page](https://velvetyne.fr/fonts/mess/) — checked 2026-10-07
 - [Typefesse specimen](https://velvetyne.fr/site/assets/files/2046/typefesse-specimen.pdf)
   — checked 2026-10-07
 - [Cirrus Cumulus specimen](https://velvetyne.fr/site/assets/files/2106/specimen_book.pdf)

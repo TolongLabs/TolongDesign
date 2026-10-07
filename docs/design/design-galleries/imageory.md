@@ -6,10 +6,10 @@ section_slug: design-galleries
 source_url: 'https://www.imageory.in/'
 designeer_url: 'https://designeer.xyz/'
 designeer_blurb: Visual gallery pairing images with prompts.
-paywall: unknown
+paywall: free
 pricing_summary:
-  'The official Imageory domain did not load and no current official pricing
-  information could be verified.'
+  'The public gallery and prompt pages are available without signing in; no paid
+  tier or price is published.'
 open_source: false
 license: unknown
 category_tags: [image-inspiration, ai-prompts, visual-gallery]
@@ -26,72 +26,77 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                                                                                  |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Source         | [www.imageory.in](https://www.imageory.in/)                                                                            |
-| Paywall        | **Unknown** — The official Imageory domain did not load and no current official pricing information could be verified. |
-| Open source    | No — unknown                                                                                                           |
-| Type           | Designeer-listed visual gallery pairing images with prompts; current status unverified                                 |
-| Works with     | Any web stack; research reference only                                                                                 |
-| Best for       | image-led moodboarding, prompt reference                                                                               |
-| Agent-friendly | No — no direct coding-agent interface was found.                                                                       |
+| Field          | Value                                                                                               |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| Source         | [www.imageory.in](https://www.imageory.in/)                                                         |
+| Paywall        | **Free** — the gallery and prompt pages can be opened without signing in; no paid tier is published |
+| Open source    | No — no public source repository or license was found                                               |
+| Type           | Public image-and-prompt gallery                                                                     |
+| Works with     | Browser research; no code stack                                                                     |
+| Best for       | image-led moodboarding, prompt reference                                                            |
+| Agent-friendly | No — no direct coding-agent interface was found.                                                    |
 
 ## What it is
 
-Designeer describes Imageory as a visual gallery pairing images with prompts. On
-2026-10-07, the official URL returned an internal error and searches did not
-surface a working official product page.
+Imageory is a browser gallery pairing images with their prompts. On 2026-10-07,
+the official homepage loaded with the title “Imageory | Get images & prompts”
+and linked to Explore and Sign up. Explore opened a public gallery with topic
+filters including Landscapes, Flowers, Abstract-landscape, and pixelbgs.
+Individual image pages display the prompt alongside the image.
 
-Because the current library, owner, and terms could not be inspected, treat the
-listing as unverified. No current feature count, prompt format, or downloadable
-asset license could be confirmed.
+The gallery and prompt pages are viewable without an account. The signup page
+offers “Continue without signing in”; the `/pricing` path redirected there
+rather than showing prices. No separate paid tier or public source repository
+was found. No license for the images or their prompts was published.
 
 ## Paywall and pricing
 
-- **Free** Not verifiable. The official site did not load on the verification
-  date.
-- **Paid** Not published on an accessible official page. Paywall status is
-  unknown because the current product could not be inspected.
-- **Sign-up required?** Unknown. The official site did not load.
-- **Licence for client work** Unknown. No current official license or
-  client-work terms could be verified.
+- **Free:** The public gallery and prompt pages opened without signing in.
+- **Paid:** No paid plan or price was published; `/pricing` redirected to the
+  signup page.
+- **Sign-up required?** No for browsing the gallery and opening prompt pages;
+  the signup page also offers “Continue without signing in.”
+- **Licence for client work:** Unknown. No current official license or
+  client-work terms for the displayed images or prompts could be verified.
 
 Pricing and availability checked 2026-10-07.
 
 ## How to use
 
-1. Open the official URL and check whether the Imageory gallery is available
-   before including it in a research plan.
-
-2. If the gallery is restored, search by image subject or visual style and
-   inspect whether each item exposes its prompt and source.
-
-3. Before using any image in a client build, find the asset’s current license
-   and confirm whether commercial use is allowed.
-
-4. For an available prompt-and-background workflow today, use
+1. Open [Explore](https://www.imageory.in/gallery) and browse the topic filters
+   or the visible image grid.
+2. Open an image page to read its paired prompt and compare the composition,
+   palette, or art direction with the project brief.
+3. Treat the images as references only until their reuse and client-work terms
+   are published; no download or asset license was verified.
+4. For a prompt-and-background workflow with published terms, use
    [Venust Backgrounds](../design-galleries/venust-backgrounds.md) and verify
    its CC0 terms.
 
 ## Examples
 
-No example pages could be verified because the official domain did not load on
-2026-10-07. The Designeer description is the only accessible product summary.
+- [Dark reflective lake](https://www.imageory.in/image/a-surreal-aerial-view-of-a1b241)
+  — a surreal aerial landscape with its prompt on the same page.
+- [Ivory dunes](https://www.imageory.in/image/an-enormous-minimalist-landscape-of-ffd1e1)
+  — a minimalist landscape prompt paired with a pale dune image.
+- [Floating desert forms](https://www.imageory.in/image/an-impossible-desert-landscape-where-43b8a4)
+  — a surreal desert composition with a visible prompt.
 
 ## When to use it
 
-- Use it only if the official gallery becomes available and its current terms
-  can be checked.
-- Skip it while the source is unavailable; use
+- Use it when public prompt-and-image references help with early moodboarding;
+  confirm terms before reusing any image.
+- Skip it when project work requires licensed downloadable images; use
   [Venust Backgrounds](../design-galleries/venust-backgrounds.md) for
   prompt-paired images.
 
 ## Agent notes
 
-- No official docs, API, MCP server, CLI, or accessible example links were found
-  on the verification date.
-- Do not infer a license, prompt format, or download method from the Designeer
-  one-line description.
+- The public gallery and prompt pages loaded in Chromium on 2026-10-07.
+- No official docs, API, MCP server, CLI, source repository, or image license
+  was found.
+- Prompt text is visible on each linked image page; do not infer image reuse
+  rights from public visibility.
 
 ## Alternatives in this repo
 
@@ -104,5 +109,14 @@ No example pages could be verified because the official domain did not load on
 
 ## Sources
 
-- [Official site, unavailable](https://www.imageory.in/) — checked 2026-10-07
+- [Official homepage](https://www.imageory.in/) — checked 2026-10-07
+- [Public gallery](https://www.imageory.in/gallery) — checked 2026-10-07
+- [Signup page](https://www.imageory.in/signup) — checked 2026-10-07; offers
+  “Continue without signing in”
+- [Dark reflective lake prompt](https://www.imageory.in/image/a-surreal-aerial-view-of-a1b241)
+  — checked 2026-10-07
+- [Ivory dunes prompt](https://www.imageory.in/image/an-enormous-minimalist-landscape-of-ffd1e1)
+  — checked 2026-10-07
+- [Floating desert forms prompt](https://www.imageory.in/image/an-impossible-desert-landscape-where-43b8a4)
+  — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/) — checked 2026-10-07

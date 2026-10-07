@@ -88,9 +88,8 @@ Verified on the official Lapa Ninja site on 2026-10-07.
 
 - [Lapa Ninja SaaS Category](https://www.lapa.ninja/category/saas/) — Curated
   gallery of modern software-as-a-service landing pages and marketing sites.
-- [Lapa Ninja Freebies Archive](https://www.lapa.ninja/category/freebies/) —
-  Free design assets including UI kits, vector illustrations, and design
-  templates.
+- [Lapa Ninja Freebies](https://www.lapa.ninja/freebies/) — Free design assets
+  including UI kits, vector illustrations, and design templates.
 - [Lapa Ninja Minimal Designs](https://www.lapa.ninja/category/minimal/) —
   Showcase of restrained, typography-focused landing pages with clean
   whitespace.
@@ -125,5 +124,5 @@ Verified on the official Lapa Ninja site on 2026-10-07.
 ## Sources
 
 - [Official site](https://www.lapa.ninja/) — checked 2026-10-07
-- [Freebies](https://www.lapa.ninja/category/freebies/) — checked 2026-10-07
+- [Freebies](https://www.lapa.ninja/freebies/) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/)

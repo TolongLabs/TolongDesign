@@ -10,11 +10,11 @@ paywall: unknown
 pricing_summary:
   'The editor is visible, but its pricing area contains placeholder content
   rather than usable terms.'
-open_source: false
-license: unknown
+open_source: true
+license: MIT
 category_tags: [ascii, video, image, export]
 best_for: [ASCII video treatments, text-based visual experiments]
-stack: [react]
+stack: [react, nextjs]
 agent_friendly: true
 last_verified: 2026-10-07
 ---
@@ -26,70 +26,67 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                        |
-| -------------- | ------------------------------------------------------------ |
-| Source         | [asciistudio.space](https://www.asciistudio.space/)          |
-| Paywall        | **Unknown** — visible pricing content was placeholder text   |
-| Open source    | No — public repository has no verified software licence      |
-| Type           | Image and video to ASCII art editor                          |
-| Works with     | Browser; exports a React component                           |
-| Best for       | Animated ASCII art and text-based visual treatments          |
-| Agent-friendly | Yes — generated React component can be copied into a project |
+| Field          | Value                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------- |
+| Source         | [asciistudio.space](https://www.asciistudio.space/)                                     |
+| Paywall        | **Unknown** — the pricing section has monthly/yearly controls but placeholder plan copy |
+| Open source    | Yes — MIT ([GitHub repository](https://github.com/vansh-nagar/ascii-studio))            |
+| Licence        | MIT for repository code                                                                 |
+| Type           | Image and video to ASCII art editor                                                     |
+| Works with     | Browser; exports a React component                                                      |
+| Best for       | Animated ASCII art and text-based visual treatments                                     |
+| Agent-friendly | Yes — generated React component can be copied into a project                            |
 
 ## What it is
 
-ASCII Studio is a browser editor for transforming images and videos into
-ASCII-style visual output. Its page demonstrates a video workflow with a sample
-clip, frame controls, character-set options, and appearance presets such as
-Standard, Pixel Blocks, and Glitch.
+ASCII Studio is a browser editor for turning images and videos into ASCII-style
+visuals and exporting a React component. On 2026-10-07, the homepage loaded with
+an interactive sample video, controls for frame conversion and character sets,
+and appearance presets including Standard, Pixel Blocks, and Glitch. The
+dedicated Studio route accepts video, image, or GIF input and offers a full
+React component export.
 
-The tool displays a React component export, which gives a developer a path from
-a visual experiment to an in-project effect. The official GitHub repository is
-public, but the repository did not expose a licence file during this check, so
-public availability should not be read as permission to reuse the source.
+The linked `vansh-nagar/ascii-studio` repository now includes an MIT license.
+That covers the repository code; it does not establish reuse rights for media
+uploaded to the tool or other third-party assets.
 
-The homepage has a pricing area with placeholder monthly/yearly text and an
-unrelated FAQ. Those elements do not establish a real plan or payment model.
+The homepage’s Pricing section shows monthly/yearly controls and a “Pay Monthly”
+card, but its feature list contains placeholder text and no numeric prices. It
+also includes an unrelated Rune Icons FAQ. The page therefore does not provide
+reliable plan or payment terms.
 
 ## Paywall and pricing
 
-- **Free:** The interactive editor is visible and includes a sample video
-  workflow; the page does not state whether all exports are free.
-- **Paid:** Not published. The displayed pricing section contains placeholder
-  content, not usable plan terms.
-- **Sign-up required?** No sign-up prompt was visible in the editor reviewed.
-- **Licence for client work:** Not published for the source or generated
-  component. Verify current terms before using generated output commercially.
+- **Free:** The homepage and Studio editor opened without a sign-in prompt.
+- **Paid:** The page shows monthly/yearly controls and “Pay Monthly,” but no
+  numeric price or valid plan details; placeholder copy prevents classifying a
+  paid tier.
+- **Sign-up required?** No sign-up prompt was visible on the editor routes
+  checked.
+- **Licence for client work:** The repository code is MIT licensed. No separate
+  terms for generated output or user media were found.
 
 Paywall is **unknown** because the pricing area does not provide valid terms.
 Checked 2026-10-07.
 
 ## How to use
 
-1. Open the editor and use its supplied sample clip or choose a local image or
-   video if the upload control is available.
-2. Adjust frame selection, character set, and appearance to find the density and
-   contrast that read at the target display size.
-3. Compare the Standard, Pixel Blocks, and Glitch presets against the page's
-   visual system; keep motion and detail restrained around content.
-4. Copy the generated React component when a code export is available, then
-   adapt its props and styling in the destination project.
-5. Check performance and reduced-motion behavior before using an animated output
-   in a production page.
+1. Open the [Studio](https://www.asciistudio.space/tool/studio) route and drop
+   or browse for a video, image, or GIF.
+2. Set conversion quality, columns, threshold, character set, and appearance
+   controls while checking the output at its target size.
+3. Choose the image, video, or component output, then copy or export the result.
+4. If using the React export, review the generated component in the project and
+   check performance and reduced-motion behavior before release.
 
 ## Examples
 
-The official editor is a single page, so these links open its demonstrated
-presets and sample-video workflow rather than separate result pages:
-
-- [Standard ASCII treatment](https://www.asciistudio.space/) — use the default
-  character rendering as a baseline.
-- [Pixel Blocks preset](https://www.asciistudio.space/) — compare a blockier
-  character treatment for small or abstract imagery.
-- [Glitch preset](https://www.asciistudio.space/) — inspect a more disrupted
-  treatment for a short motion accent.
-- [ASCII Studio repository](https://github.com/vansh-nagar/ascii-studio) —
-  inspect the public project source and README.
+- [Rocket Blast and Skull animations](https://www.asciistudio.space/showcase) —
+  the public showcase displays ASCII animation examples.
+- [Image/video conversion and React export](https://www.asciistudio.space/tool/studio)
+  — open the editor controls for media conversion and component output.
+- [ASCII Studio source and preview](https://github.com/vansh-nagar/ascii-studio)
+  — the README includes a project preview and links to the MIT-licensed source.
 
 ## When to use it
 
@@ -107,8 +104,10 @@ presets and sample-video workflow rather than separate result pages:
   [vansh-nagar/ascii-studio](https://github.com/vansh-nagar/ascii-studio).
 - The homepage displays a React component export, but no package install command
   or public API was verified.
-- The repository licence and real pricing terms were not established. Do not
-  treat a visible editor or public repository as a licence grant.
+- The repository is MIT licensed; see its
+  [license file](https://github.com/vansh-nagar/ascii-studio/blob/main/LICENSE).
+- The pricing section has placeholder plan text and no usable prices; paywall
+  status remains unknown.
 - Check animation behavior for reduced motion and ensure decorative ASCII output
   has an accessible text alternative where needed.
 
@@ -123,8 +122,16 @@ presets and sample-video workflow rather than separate result pages:
 
 ## Sources
 
-- [Official ASCII Studio editor](https://www.asciistudio.space/) — checked
-  2026-10-07
+- [Official ASCII Studio homepage](https://www.asciistudio.space/) — checked
+  2026-10-07; HTTP 200
+- [Studio editor](https://www.asciistudio.space/tool/studio) — checked
+  2026-10-07; HTTP 200
+- [Showcase](https://www.asciistudio.space/showcase) — checked 2026-10-07; HTTP
+  200
+- [Pricing route](https://www.asciistudio.space/pricing) — checked 2026-10-07;
+  HTTP 404; pricing content is on the homepage
 - [ASCII Studio GitHub repository](https://github.com/vansh-nagar/ascii-studio)
+  — checked 2026-10-07
+- [MIT license file](https://github.com/vansh-nagar/ascii-studio/blob/main/LICENSE)
   — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/utilities) — checked 2026-10-07

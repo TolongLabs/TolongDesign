@@ -121,8 +121,8 @@ export function InteractiveButton() {
 
 ## Examples
 
-- [Rive Community Showcase](https://rive.app/community) — thousands of public
-  interactive vector files, characters, and UI components.
+- [Rive Marketplace](https://rive.app/marketplace/) — browse public interactive
+  vector files, characters, and UI components shared by the community.
 - [Rive React Runtime Documentation](https://rive.app/community/doc/overview/doc54N8RkZ2K)
   — integration guide for React, Next.js, and state machine hooks.
 - [Rive Pricing Page](https://rive.app/pricing) — official seat tiers, annual

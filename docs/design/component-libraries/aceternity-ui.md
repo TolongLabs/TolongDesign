@@ -32,7 +32,7 @@ last_verified: 2026-10-07
 | -------------- | ------------------------------------------------------------- |
 | Source         | [ui.aceternity.com](https://ui.aceternity.com/)               |
 | Paywall        | **Freemium** — 200+ free components; Pro from $169/yr or $199 |
-| Open source    | Yes — MIT ([GitHub](https://github.com/aceternity/ui))        |
+| Open source    | Yes — MIT ([GitHub](https://github.com/aceternity))           |
 | Type           | Component library and visual effect kit                       |
 | Works with     | React, Next.js, Tailwind CSS, Framer Motion                   |
 | Best for       | Landing pages, marketing websites, hero sections              |

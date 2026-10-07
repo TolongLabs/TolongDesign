@@ -129,8 +129,8 @@ bunx @biomejs/biome check --write ./src
 
 - [Biome Getting Started Guide](https://biomejs.dev/guides/getting-started/) —
   Official walkthrough for project installation, CLI flags, and CI pipelines.
-- [Biome Linter Rule Catalog](https://biomejs.dev/linter/rules/) — Comprehensive
-  directory of lint rules categorized by style, security, and correctness.
+- [Biome JavaScript Linter Rule Catalog](https://biomejs.dev/linter/javascript/rules/)
+  — Directory of JavaScript and TypeScript lint rules grouped by category.
 - [Biome Prettier Migration](https://biomejs.dev/guides/migrate-eslint-prettier/)
   — Step-by-step guide for migrating existing ESLint and Prettier configs to
   Biome.

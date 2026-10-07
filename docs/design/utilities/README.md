@@ -4,7 +4,7 @@
 
 > Developer utilities that accelerate frontend workflows.
 
-34 tools — 21 free, 6 freemium, 0 paid, 7 unknown. Source:
+34 tools — 24 free, 6 freemium, 0 paid, 4 unknown. Source:
 [Designeer](https://designeer.xyz/utilities).
 
 | Tool                                              | Paywall  | Open source | Agent-friendly | Best for                                                                                    | What it is                                              |
@@ -28,16 +28,16 @@
 | [Dither Lab](./dither-lab.md)                     | Free     | No          | No             | vintage image treatments, pixel art, photo experiments                                      | Applies vintage dithering filters to photographs.       |
 | [Hallmark](./hallmark.md)                         | Free     | Yes         | Yes            | landing pages, design audits, visual redesigns                                              | Landing page builder producing handcrafted designs.     |
 | [Tooooools](./tooooools.md)                       | Free     | No          | No             | image treatments, halftone graphics, animated effects                                       | In-browser utilities to dither and pixelate images.     |
-| [Screan](./screan.md)                             | Unknown  | No          | No             | app-store listings, product launch graphics, localized screenshots                          | Create promotional App Store screenshot mockups.        |
+| [Screan](./screan.md)                             | Free     | Yes         | No             | app-store listings, product launch graphics, localized screenshots                          | Create promotional App Store screenshot mockups.        |
 | [PostSpark](./postspark.md)                       | Freemium | No          | No             | social launch posts, product screenshots, device mockups                                    | Format screenshots with clean social backgrounds.       |
 | [Drawably](./drawably.md)                         | Free     | Yes         | Yes            | hand-drawn accents, annotated mockups, playful interface details                            | Sketching tool generating hand-drawn UI shapes.         |
 | [Mesurer](./mesurer.md)                           | Free     | Yes         | Yes            | spacing audits, visual QA, design feedback                                                  | On-screen tool checking website pixel spacing.          |
-| [Render Labs](./render-labs.md)                   | Unknown  | No          | No             | rendered image experiments, motion previews                                                 | Image rendering tool from evlog team.                   |
+| [Render Labs](./render-labs.md)                   | Free     | Yes         | Yes            | rendered image experiments, motion previews                                                 | Image rendering tool from evlog team.                   |
 | [Butterfly](./butterfly.md)                       | Unknown  | No          | No             | landing page experiments                                                                    | Minimalist landing page builder for validation.         |
-| [Corne](./corne.md)                               | Unknown  | Yes         | Yes            | smooth corners, squircle treatments, border styling                                         | Documentation for the Corne split keyboard.             |
+| [Corne](./corne.md)                               | Free     | Yes         | Yes            | smooth corners, squircle treatments, border styling                                         | Documentation for the Corne split keyboard.             |
 | [Shiori](./shiori.md)                             | Freemium | No          | Yes            | design research, saved references, agent-accessible bookmarks                               | Bookmark manager with CLI and Raycast support.          |
 | [Open Source Together](./open-source-together.md) | Free     | No          | No             | finding open-source projects, contributor discovery                                         | Platform matching developers with open-source projects. |
-| [ASCII Studio](./ascii-studio.md)                 | Unknown  | No          | Yes            | ASCII video treatments, text-based visual experiments                                       | Transforms images and videos into ASCII art.            |
+| [ASCII Studio](./ascii-studio.md)                 | Unknown  | Yes         | Yes            | ASCII video treatments, text-based visual experiments                                       | Transforms images and videos into ASCII art.            |
 | [Tabbied](./tabbied.md)                           | Free     | Yes         | Yes            | generative backgrounds, geometric accents, agent-assisted pattern selection                 | Generative geometric pattern creator for SVG.           |
 | [Rynix Studio](./rynix-studio.md)                 | Unknown  | No          | No             | real-time visual effects on local media                                                     | Playground for real-time video visual effects.          |
 | [Mascofast](./mascofast.md)                       | Freemium | No          | Yes            | product mascots, onboarding art, app icon characters                                        | AI tool generating animated transparent 3D mascots.     |

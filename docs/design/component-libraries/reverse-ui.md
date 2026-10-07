@@ -136,8 +136,8 @@ export function NavigationDemo() {
   available components including tabs, modals, and spotlight cards.
 - [Reverse UI Pricing Page](https://reverseui.com/pricing) — Detailed plan
   breakdown for Essential and Team lifetime licenses.
-- [Reverse UI Templates](https://reverseui.com/templates) — Full landing page
-  templates designed for technology startups.
+- [Reverse UI Dock Component](https://reverseui.com/components/dock) —
+  macOS-style dock where icons magnify based on cursor proximity.
 
 ## When to use it
 

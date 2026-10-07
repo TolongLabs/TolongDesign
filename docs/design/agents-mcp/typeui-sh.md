@@ -112,7 +112,7 @@ global instructions.
 ## Sources
 
 - [Official site](https://www.typeui.sh/) — checked 2026-10-07
-- [Pricing](https://www.typeui.sh/pricing) — checked 2026-10-07
+- [Pricing](https://www.typeui.sh/#pricing) — checked 2026-10-07
 - [Changelog](https://www.typeui.sh/changelog) — checked 2026-10-07
 - [UI prompts](https://www.typeui.sh/docs/creative/ui-prompts) — checked
   2026-10-07

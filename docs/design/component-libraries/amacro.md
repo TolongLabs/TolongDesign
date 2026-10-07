@@ -6,12 +6,12 @@ section_slug: component-libraries
 source_url: https://amacro.vercel.app/
 designeer_url: https://designeer.xyz/components
 designeer_blurb: 'Drop-in page reveal animations for React.'
-paywall: unknown
+paywall: free
 pricing_summary:
-  'The official site could not be read, so pricing and access terms could not be
-  confirmed.'
-open_source: false
-license: unknown
+  'The playground and source are free and open source under MIT; no paid plan is
+  published.'
+open_source: true
+license: MIT
 category_tags: [react, animation, page-transitions]
 best_for: [page reveals, scene transitions]
 stack: [react]
@@ -21,78 +21,79 @@ last_verified: 2026-10-07
 
 # Amacro
 
-> Drop-in page reveal animations for React. The listed product purpose suggests
-> page transitions, but its current implementation could not be verified.
+> Drop-in page reveal animations for React. The live site is an open-source
+> playground for page transition effects.
 
 ## At a glance
 
-| Field          | Value                                              |
-| -------------- | -------------------------------------------------- |
-| Source         | [amacro.vercel.app](https://amacro.vercel.app/)    |
-| Paywall        | **Unknown** — official site could not be inspected |
-| Open source    | No public repository could be confirmed            |
-| Licence        | Unknown                                            |
-| Type           | Listed as a React animation resource               |
-| Works with     | React, according to the listing description        |
-| Best for       | Potential page-reveal and scene-transition effects |
-| Agent-friendly | No verified package, CLI, or usage docs            |
+| Field          | Value                                                                   |
+| -------------- | ----------------------------------------------------------------------- |
+| Source         | [amacro.vercel.app](https://amacro.vercel.app/)                         |
+| Paywall        | **Free** — the playground and source are public; no paid plan is shown. |
+| Open source    | Yes — MIT ([GitHub repository](https://github.com/Subhan-code/Amacro)). |
+| Licence        | MIT                                                                     |
+| Type           | Interactive page-transition and reveal playground                       |
+| Works with     | CSS, GSAP, and the browser View Transitions API                         |
+| Best for       | Previewing and copying page-reveal effects                              |
+| Agent-friendly | Yes — open-source code and copyable snippets                            |
 
 ## What it is
 
-The batch lists Amacro as a React resource for drop-in page reveal animations.
-The official URL did not return a readable product page during this check. No
-documentation, examples, repository, package metadata, or current product
-details could be confirmed from the official destination.
+On 2026-10-07, a headless browser loaded the official page with HTTP 200 and the
+title “Amacro Transitions.” The gallery presents page transition and reveal
+effects in Basic, Hard, and Crazy groups, with a Preview control for each
+effect. The page describes itself as an open-source playground.
 
-A third-party directory result describes Amacro as page-reveal animations and
-fluid scene-curtain transitions for React. That description matches the
-Designeer one-liner, but it is not enough to verify the actual API, current
-availability, implementation requirements, or licence.
-
-Until the official site or repository is available, treat this entry as an
-unverified lead rather than an integration recommendation.
+The linked public GitHub README says Amacro is 100% free and open source under
+the MIT licence. It describes a React, TypeScript, Vite, and Tailwind app using
+GSAP and the browser-native View Transitions API, with snippets that can be
+copied from an interactive code drawer. The `/pricing` and `/docs` paths
+returned the same gallery rather than separate pricing or documentation pages.
 
 ## Paywall and pricing
 
-- **Free:** not established.
-- **Paid:** not established.
-- **Sign-up required?** Unknown.
-- **Licence for client work:** unknown; no official licence text was available.
-- **Pricing status:** unknown because the official product page could not be
-  read.
-- **Checked:** 2026-10-07.
+- **Free:** The interactive playground and source repository are publicly
+  available.
+- **Paid:** No paid tier or price is published; `/pricing` displays the same
+  gallery.
+- **Sign-up required?** No account is shown for browsing, previewing, or using
+  the public repository.
+- **Licence for client work:** MIT, as stated in the repository README.
+
+Pricing and access checked 2026-10-07.
 
 ## How to use
 
-No official install command or usage snippet could be verified. Do not add a
-package or copy code based on a directory summary alone.
-
-If the product becomes available:
-
-1. Confirm the official project URL and whether the project is maintained.
-2. Read the install guide and supported React version.
-3. Check the licence and any attribution or redistribution terms.
-4. Test reduced-motion behavior, routing compatibility, and browser support.
-5. Only then evaluate it for a TolongLabs project.
+1. Open the playground and choose a group such as Basic, Hard, or Crazy.
+2. Use **Preview** on a transition to inspect its timing and appearance.
+3. Open the code drawer and copy the CSS/JavaScript snippet you want to adapt.
+4. Check the snippet against your routing setup and browser support; the project
+   is a source gallery, not a published npm package.
+5. For local development of the playground, clone the repository, run
+   `npm install`, then `npm run dev` as described in its README.
 
 ## Examples
 
-No official demo or component page could be verified because the official site
-did not render during this check. A directory description is not a runnable
-example, so concrete example links are withheld rather than guessed.
+The official playground does not publish per-effect URLs, so these entries link
+to the shared gallery where each effect can be previewed:
+
+- [Fade](https://amacro.vercel.app/) — a Basic transform reveal.
+- [Simple Circle](https://amacro.vercel.app/) — a Basic clip-path transition.
+- [Liquid Wipe](https://amacro.vercel.app/) — a Crazy-group clip-path effect.
 
 ## When to use it
 
-- Revisit it if the official site, package, or repository becomes available.
-- Consider a verified page-transition tool if a project needs a reveal effect.
-- Do not use it in a client build until API, licence, and maintenance status can
-  be confirmed.
+- Use it to compare page transition styles and inspect their source snippets.
+- Skip it when you need a versioned package with a supported React component
+  API; it is a playground and source repository.
 
 ## Agent notes
 
-There is no verified package name, install command, API, docs URL, MCP server,
-or llms.txt. A coding agent should not invent any of these details. Re-check the
-official destination before proposing an integration.
+The source repository is
+[Subhan-code/Amacro](https://github.com/Subhan-code/Amacro) and identifies the
+project as MIT-licensed. No npm package, MCP server, or `llms.txt` was found.
+Use the live copyable snippets as source examples and review the generated
+CSS/JavaScript before applying them to a project.
 
 ## Alternatives in this repo
 
@@ -103,7 +104,12 @@ official destination before proposing an integration.
 
 ## Sources
 
-- [Official URL](https://amacro.vercel.app/) — checked 2026-10-07; not readable
-- [Third-party Uicurio directory](https://uicurio.shinji.me/en/) — checked
-  2026-10-07; listing description only
+- [Official Amacro playground](https://amacro.vercel.app/) — checked 2026-10-07;
+  HTTP 200, transition groups and previews rendered
+- [Amacro GitHub repository and README](https://github.com/Subhan-code/Amacro) —
+  checked 2026-10-07; states free, open source, and MIT
+- [Pricing route](https://amacro.vercel.app/pricing) — checked 2026-10-07; same
+  gallery rendered
+- [Docs route](https://amacro.vercel.app/docs) — checked 2026-10-07; same
+  gallery rendered
 - [Designeer listing](https://designeer.xyz/components) — checked 2026-10-07

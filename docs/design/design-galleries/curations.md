@@ -6,10 +6,10 @@ section_slug: 'design-galleries'
 source_url: 'https://curations.supply/'
 designeer_url: 'https://designeer.xyz/'
 designeer_blurb: 'Library of curated digital design assets.'
-paywall: unknown
+paywall: free
 pricing_summary:
-  'Unknown; the official page exposed only a client shell, so access and pricing
-  could not be confirmed.'
+  'Public directory browsing is free; sign-in is required to save favorites. No
+  paid access plan or price is published; sponsored placements may appear.'
 open_source: false
 license: 'unknown'
 category_tags: ['curation', 'design-resources', 'directory']
@@ -26,88 +26,81 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                                                                               |
-| -------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Source         | [curations.supply](https://curations.supply/)                                                                       |
-| Paywall        | **Unknown** — Unknown; the official page exposed only a client shell, so access and pricing could not be confirmed. |
-| Open source    | No                                                                                                                  |
-| Type           | Design gallery or curated directory                                                                                 |
-| Works with     | Browser research; no code stack                                                                                     |
-| Best for       | finding curated resource lists                                                                                      |
-| Agent-friendly | No — human-facing reference browsing                                                                                |
+| Field          | Value                                                                                                             |
+| -------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Source         | [curations.supply](https://curations.supply/)                                                                     |
+| Paywall        | **Free** — Featured entries are public; the terms say sign-in is required to save favorites.                      |
+| Open source    | No — the terms say the service's branding, layout, and original content belong to Panda Network or its licensors. |
+| Type           | Directory of curated design tools, references, and resources                                                      |
+| Works with     | Browser research; no code stack                                                                                   |
+| Best for       | finding curated resource lists                                                                                    |
+| Agent-friendly | No — human-facing reference browsing                                                                              |
 
 ## What it is
 
-Curations is presented by its page title as a directory of collections curated
-by experts. At the verification date, the official host returned a client-side
-shell without readable collection entries or usable navigation in the page
-content checked.
+On 2026-10-07, a headless browser loaded the official homepage with HTTP 200 and
+the title “Curations Supply - Curated Directory of Curations Supplied by
+Experts.” The homepage's `document.body.innerText` was empty, although its DOM
+contained 365 links. The official `/featured` page loaded 17 named entries,
+including Mobbin, Navbar Gallery, Best Designs on X, and MaxiBestOf.
 
-A third-party directory describes the service as a place to find curated
-collections and resource lists. That description is not enough to verify the
-official catalogue, current access model or individual collection contents.
+The `/terms` page loaded and describes a public directory of curated tools and
+design inspiration. It says sign-in is required for saving favorites and that
+some placements may be sponsored. The `/pricing` route returned HTTP 200 but
+showed “No curations found,” not a pricing table. Public browsing works without
+sign-in; no paid membership or price was published in the pages checked.
 
 ## Paywall and pricing
 
-- Free: Could not confirm from the official page because its content did not
-  render in the page check.
-- Paid: Pricing and any paid tier were not published in the readable official
-  content checked.
-- Sign-up required? Unknown; the official page did not expose an account or
-  browsing workflow.
-- Licence for client work: Unknown. Check the terms and rights of each
-  collection and linked item if the service becomes accessible.
+- **Free:** The 17 entries on the public Featured page can be browsed without
+  signing in.
+- **Paid:** No paid access plan or price was published. The terms say some
+  placements may be sponsored but do not state a rate.
+- **Sign-up required?** No to browse; yes to save favorites, according to the
+  terms.
+- **Licence for client work:** The terms reserve rights in the service's own
+  branding, layout, and content. Follow the licence at each third-party source
+  before reusing its work.
 
 The access and pricing details above were checked on 2026-10-07.
 
 ## How to use
 
-1. Open the official site and check whether its client-side content is available
-   in your browser.
-2. If listings render, search or browse by collection topic and open the
-   curator’s original list.
-3. Verify every linked resource and its licence at its own source.
-4. For a project brief, record the collection name, curator and specific
-   reference URLs.
-5. Do not rely on the third-party summary as proof that a particular collection
-   is still available.
-
-**Capture in a TolongLabs design brief:**
-
-- Record the collection topic and its curator once verified on the official
-  service.
-- Separate the curator’s recommendation from the linked resource’s current
-  features or terms.
-- If the listing remains unavailable, choose an accessible directory in this
-  repo.
+1. Open the Featured page or choose a topic such as Design Inspiration,
+   Typography, or Tool Directories.
+2. Follow a listing to its own site; Curations Supply is a directory, not the
+   publisher of the linked resources.
+3. If you want to save items to Favorites, follow the terms' sign-in
+   requirement. The terms also describe an optional newsletter and contributor
+   submissions.
+4. Record each original resource URL and check its current licence and terms.
+5. Treat sponsored placements as disclosed recommendations, not an endorsement
+   by TolongLabs.
 
 ## Examples
 
-The official site did not expose three verifiable individual examples at check
-time; the links below identify the available source pages and are not fabricated
-collection entries.
+These entries appeared on the official Featured page when checked. They link to
+the original resource sites:
 
-- [Official Curations site](https://curations.supply/) The site title identifies
-  an expert-curated directory, but no individual collection page was exposed.
-- [Third-party directory description](https://cootab.com/explore/sites/curations-supply)
-  A third-party listing describes Curations Supply; it is not an official
-  collection entry.
+- [Mobbin](https://mobbin.com/discover/apps/web) — mobile and web UI/UX design
+  references.
+- [Navbar Gallery](https://navbar.gallery/) — website navigation inspiration.
+- [MaxiBestOf typefaces](https://maxibestof.one/typefaces) — a curated typeface
+  collection.
 
 ## When to use it
 
-- Use it only if the official directory is loading and its collection pages can
-  be verified.
-- Skip it while the catalogue is inaccessible; use a directory with visible
-  entries such as Design Bookmark.
+- Use it to find public design references and follow them to their original
+  sources.
+- Skip it when you need a verified licence for the resources themselves; use
+  each linked source's own terms before adopting assets.
 
 ## Agent notes
 
-No public API, CLI, llms.txt or agent integration could be verified because the
-official page exposed only a client shell.
-
-This entry could not meet the three-example requirement: no individual
-collection URLs were visible on the official site or in the search results
-checked. Do not infer or fabricate collection paths.
+The browser-rendered Featured page lists resources as outbound links; no public
+API, CLI, `llms.txt`, or agent integration was found. The homepage's visible
+text remained empty in the browser capture, but `/featured` exposed 17 entries.
+The `/docs` route showed the same “No curations found” state as `/pricing`.
 
 ## Alternatives in this repo
 
@@ -120,7 +113,14 @@ checked. Do not infer or fabricate collection paths.
 
 ## Sources
 
-- [Official site](https://curations.supply/) — checked 2026-10-07
+- [Official site](https://curations.supply/) — checked 2026-10-07; HTTP 200,
+  title loaded, empty `document.body.innerText`, and 365 DOM links
+- [Featured Curations](https://curations.supply/featured) — checked 2026-10-07;
+  17 entries rendered
+- [Terms of Service](https://curations.supply/terms) — checked 2026-10-07; last
+  updated 2026-08-31
+- [Pricing route](https://curations.supply/pricing) — checked 2026-10-07; HTTP
+  200 but showed “No curations found,” not pricing
 - [Third-party Cootab listing](https://cootab.com/explore/sites/curations-supply)
   — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/) — checked 2026-10-07

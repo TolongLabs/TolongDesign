@@ -29,7 +29,7 @@ last_verified: 2026-10-07
 | Field          | Value                                                     |
 | -------------- | --------------------------------------------------------- |
 | Source         | [bestwebsite.gallery](https://bestwebsite.gallery/)       |
-| Paywall        | **Free** — open browsing and submissions                  |
+| Paywall        | **Free** — open browsing                                  |
 | Open source    | No — proprietary                                          |
 | Type           | Curated web design bookmark archive                       |
 | Works with     | Modern web browsers                                       |
@@ -57,8 +57,8 @@ commercial bias.
 
 ## Paywall and pricing
 
-- **Free:** Browsing the entire archive, exploring category and tech tags, and
-  submitting websites for editorial consideration are 100% free.
+- **Free:** Browsing the entire archive and exploring category and tech tags are
+  100% free.
 - **Paid:** No paid subscription plans, listing fees, or expedited review
   charges.
 - **Sign-up required?** No. All archives and search filters are accessible
@@ -86,10 +86,10 @@ Verified on the official Best Website Gallery platform on 2026-10-07.
 
 - [BWG Sites Archive](https://bestwebsite.gallery/sites) — Filterable index of
   over 2,000+ curated websites with live links and responsive screenshots.
-- [BWG About](https://bestwebsite.gallery/about) — Information on curator David
-  Hellmann and the founding history of the project.
-- [BWG Submit](https://bestwebsite.gallery/submit) — Open submission portal for
-  creatives wishing to suggest new web projects.
+- [BWG About](https://bestwebsite.gallery/#about) — Information on curator David
+  Hellmann and the gallery's history.
+- [BWG Site of the Day: Mistral](https://bestwebsite.gallery/sites/sotd/2026/09/29/mistral)
+  — A current curated website entry in the BWG archive.
 
 ## When to use it
 

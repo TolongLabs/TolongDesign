@@ -4,7 +4,7 @@
 
 > Essential books, design engineering essays, and craft tutorials.
 
-33 tools — 20 free, 8 freemium, 3 paid, 2 unknown. Source:
+33 tools — 20 free, 8 freemium, 4 paid, 1 unknown. Source:
 [Designeer](https://designeer.xyz/).
 
 | Tool                                                    | Paywall  | Open source | Agent-friendly | Best for                                                                                           | What it is                                                   |
@@ -37,7 +37,7 @@
 | [SVG Guide](./svg-guide.md)                             | Freemium | No          | No             | mastering svg path syntax, vector micro-interactions, responsive svg scaling                       | Guide to mastering SVG markup and animations.                |
 | [Animations.dev](./animations-dev.md)                   | Paid     | No          | Yes            | mastering animation timing and easing, physics-based springs, fluid react ui                       | Course on creating web animations that feel right.           |
 | [UI Skills](./ui-skills.md)                             | Free     | Yes         | Yes            | equipping ai coding agents with ui design rules, mcp server integration, frontend audit checklists | Course teaching techniques for designing with AI.            |
-| [AI for UI](./ai-for-ui.md)                             | Unknown  | No          | No             | learning ai-assisted design engineering workflows, prototyping with ai                             | Course teaching AI workflows for interfaces.                 |
+| [AI for UI](./ai-for-ui.md)                             | Paid     | No          | No             | learning ai-assisted design engineering workflows, prototyping with ai                             | Course teaching AI workflows for interfaces.                 |
 | [UI Land](./ui-land.md)                                 | Free     | No          | No             | benchmarking design engineer workflows, tool stacks, software craft philosophies                   | Interviews with leading design engineers on craft.           |
 | [Laws of UX](./laws-of-ux.md)                           | Free     | No          | Yes            | grounding design decisions in cognitive psychology, usability audits, design reviews               | Psychological principles that influence interface usability. |
 | [User Interface Wiki](./user-interface-wiki.md)         | Free     | Yes         | Yes            | enforcing interface craft rules in ai coding agents, motion design guidelines, micro-interactions  | Knowledge base documenting interface guidelines and rules.   |

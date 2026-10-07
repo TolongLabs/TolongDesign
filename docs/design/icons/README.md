@@ -4,7 +4,7 @@
 
 > Crisp icon families and glyphs for modern interfaces.
 
-30 tools — 24 free, 5 freemium, 0 paid, 1 unknown. Source:
+30 tools — 25 free, 5 freemium, 0 paid, 0 unknown. Source:
 [Designeer](https://designeer.xyz/visuals).
 
 | Tool                                          | Paywall  | Open source | Agent-friendly | Best for                                                                         | What it is                                                        |
@@ -29,7 +29,7 @@
 | [MX Icons](./mx-icons.md)                     | Free     | Yes         | Yes            | react products, large icon collections, fine-grained customization               | Large collection of customizable React icons.                     |
 | [Eva Icons](./eva-icons.md)                   | Free     | Yes         | Yes            | outline and fill pairs, animated icons, mobile interfaces                        | Pack of 400 icons in outline and fill.                            |
 | [Devicon](./devicon.md)                       | Free     | Yes         | Yes            | technology stacks, developer portfolios, tool and language directories           | Developer-focused icon set for programming tools.                 |
-| [css.gg](./css-gg.md)                         | Unknown  | No          | Yes            | pure css experiments, small interface symbols, personal prototypes               | 700 lightweight icons rendered using pure CSS.                    |
+| [css.gg](./css-gg.md)                         | Free     | No          | Yes            | pure css experiments, small interface symbols, personal prototypes               | 700 lightweight icons rendered using pure CSS.                    |
 | [HugeIcons](./hugeicons.md)                   | Freemium | Yes         | Yes            | large React catalogs, multiple icon styles, agent-assisted implementation        | Comprehensive library of stroke and solid icons.                  |
 | [Reicon](./reicon.md)                         | Free     | Yes         | Yes            | react applications, outline and filled pairs, agent icon lookup                  | Tree-shakeable React icon library with dual weights.              |
 | [Iconsax](./iconsax.md)                       | Freemium | No          | Yes            | six rounded styles, design and code workflows, large free icon sets              | Versatile icon set with six visual styles.                        |

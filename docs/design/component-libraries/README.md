@@ -4,13 +4,13 @@
 
 > Production UI primitives and accessible component libraries.
 
-109 tools — 70 free, 30 freemium, 0 paid, 9 unknown. Source:
+109 tools — 76 free, 30 freemium, 0 paid, 3 unknown. Source:
 [Designeer](https://designeer.xyz/components).
 
 | Tool                                                | Paywall  | Open source | Agent-friendly | Best for                                                               | What it is                                                              |
 | --------------------------------------------------- | -------- | ----------- | -------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | [ForgeUI](./forgeui.md)                             | Freemium | Yes         | Yes            | saas landing pages, animated blocks, marketing websites                | Animated React and Tailwind components and templates.                   |
-| [RewampUI](./rewampui.md)                           | Unknown  | No          | No             | animated components, dashboard UI, visual backgrounds                  | Component showcase dashboard of ready-made UI.                          |
+| [RewampUI](./rewampui.md)                           | Free     | No          | Yes            | animated components, interaction patterns, visual backgrounds          | Component showcase dashboard of ready-made UI.                          |
 | [shadcn/ui](./shadcn-ui.md)                         | Free     | Yes         | Yes            | design systems, web applications, dashboards, landing pages            | Components you copy directly into codebases.                            |
 | [Base UI](./base-ui.md)                             | Free     | Yes         | Yes            | design systems, accessible primitives, headless UI, custom styling     | Unstyled component primitives from Radix and MUI.                       |
 | [Radix](./radix.md)                                 | Free     | Yes         | Yes            | accessible primitives, design systems, headless components             | Accessible unstyled UI primitives for React.                            |
@@ -23,7 +23,7 @@
 | [Opensource UI](./opensource-ui.md)                 | Free     | Yes         | Yes            | quick-start ui, device mockups                                         | Copy-paste React UI and device mockups.                                 |
 | [Spectrum UI](./spectrum-ui.md)                     | Free     | Yes         | Yes            | saas interfaces, agent-assisted component discovery                    | Polished components designed for SaaS websites.                         |
 | [Amicro](./amicro.md)                               | Free     | Yes         | Yes            | micro-interactions, transition effects                                 | Lightweight drop-in React micro-animation primitives.                   |
-| [Painterly](./painterly.md)                         | Unknown  | No          | No             | artistic loader effects                                                | Artistic canvas loader components for React.                            |
+| [Painterly](./painterly.md)                         | Free     | No          | No             | artistic loader effects                                                | Artistic canvas loader components for React.                            |
 | [Bencho](./bencho.md)                               | Free     | No          | No             | interaction inspiration, physics-driven ui                             | Interactive UI blocks with adjustable physics.                          |
 | [shadcnblocks](./shadcnblocks.md)                   | Freemium | No          | Yes            | marketing pages, saas websites                                         | Thousands of clean shadcn website blocks.                               |
 | [blocks.so](./blocks-so.md)                         | Free     | Yes         | Yes            | website sections, shadcn projects                                      | Open-source website blocks installable via CLI.                         |
@@ -63,7 +63,7 @@
 | [UI Layouts](./ui-layouts.md)                       | Freemium | No          | Yes            | landing pages, marketing sites                                         | Full-page layouts and heroes for Tailwind.                              |
 | [Kokonut UI](./kokonut-ui.md)                       | Freemium | Yes         | Yes            | interactive interfaces, landing pages                                  | Creative interactive components for shadcn format.                      |
 | [Nex UI](./nex-ui.md)                               | Free     | Yes         | Yes            | startup interfaces, dashboards                                         | Extensible component library for modern startups.                       |
-| [Ninja UI](./ninja-ui.md)                           | Unknown  | No          | Yes            | lightweight interfaces, react projects                                 | Lightweight UI components for fast websites.                            |
+| [Ninja UI](./ninja-ui.md)                           | Free     | Yes         | Yes            | lightweight interfaces, react projects                                 | Lightweight UI components for fast websites.                            |
 | [Sera UI](./sera-ui.md)                             | Free     | Yes         | Yes            | react interfaces, animated components                                  | React components designed for shadcn CLI.                               |
 | [Re UI](./re-ui.md)                                 | Freemium | Yes         | Yes            | accessible interfaces, application ui                                  | Accessible UI components using Base UI.                                 |
 | [Syntax UI](./syntax-ui.md)                         | Freemium | No          | Yes            | animated landing pages, marketing blocks                               | Animated copy-paste components for landing pages.                       |
@@ -102,21 +102,21 @@
 | [soundcn](./soundcn.md)                             | Free     | Yes         | Yes            | tactile button audio, app notification chimes, game-like ui            | Collection of copy-paste UI sound effects.                              |
 | [cuelume](./cuelume.md)                             | Free     | Yes         | Yes            | micro-interaction feedback, accessible sound cues                      | Micro interface sounds generated with Web Audio.                        |
 | [Canvas UI](./canvas-ui.md)                         | Free     | No          | Yes            | gpu effects, hero sections, liquid interactions                        | GPU-accelerated liquid physics and canvas shaders.                      |
-| [Odyssey UI](./odyssey-ui.md)                       | Unknown  | No          | Yes            | marketing pages, animated product interfaces                           | Animated React components built on shadcn.                              |
+| [Odyssey UI](./odyssey-ui.md)                       | Free     | No          | Yes            | marketing pages, animated product interfaces                           | Animated React components built on shadcn.                              |
 | [Spell UI](./spell-ui.md)                           | Free     | No          | Yes            | marketing pages, interactive blocks, agent-assisted UI                 | High-craft interactive components for modern apps.                      |
 | [Skiper UI](./skiper-ui.md)                         | Freemium | No          | Yes            | marketing pages, scroll interactions, animated navigation              | Animated UI primitives for Tailwind CSS.                                |
 | [devl](./devl.md)                                   | Free     | No          | Yes            | product-interface inspiration, app layout patterns                     | Minimalist experimental UI components for web.                          |
 | [Uiuno](./uiuno.md)                                 | Unknown  | No          | Yes            | discovering, forking, and organizing shadcn components                 | AI workspace for organizing shadcn components.                          |
 | [Vengeance UI](./vengeance-ui.md)                   | Free     | Yes         | Yes            | animated marketing pages, scroll effects, interactive buttons          | Animated React components with scroll interactions.                     |
 | [sensory-ui](./sensory-ui.md)                       | Free     | Yes         | Yes            | semantic sound cues, shadcn interaction feedback                       | Sound design system for shadcn/ui components.                           |
-| [Amacro](./amacro.md)                               | Unknown  | No          | No             | page reveals, scene transitions                                        | Drop-in page reveal animations for React.                               |
+| [Amacro](./amacro.md)                               | Free     | Yes         | No             | page reveals, scene transitions                                        | Drop-in page reveal animations for React.                               |
 | [Evil Buttons](./evil-buttons.md)                   | Free     | Yes         | Yes            | tactile buttons, destructive confirmations, playful interactions       | Interactive and tactile button components.                              |
 | [Componentry](./componentry.md)                     | Free     | No          | Yes            | animated backgrounds, scroll effects, card interactions                | Customizable React UI primitives and components.                        |
 | [Great UI](./great-ui.md)                           | Free     | No          | Yes            | landing pages, typography effects, page transitions                    | Copy-paste React and Tailwind CSS components.                           |
 | [Ruru UI](./ruru-ui.md)                             | Free     | Yes         | Yes            | forms, app primitives, accessible controls                             | Accessible customizable UI components for React.                        |
 | [Shadcn Studio](./shadcn-studio.md)                 | Freemium | No          | Yes            | marketing pages, app scaffolds, agent-assisted assembly                | shadcn/ui components, blocks, and templates.                            |
 | [Animated shadcn/ui](./animated-shadcn-ui.md)       | Free     | Yes         | Yes            | animated controls, navigation, lightweight motion                      | Motion-powered variants of shadcn/ui components.                        |
-| [Pin UI](./pin-ui.md)                               | Unknown  | No          | No             | distinctive commerce controls, tactile component ideas                 | Distinctive copy-paste React and Tailwind components.                   |
+| [Pin UI](./pin-ui.md)                               | Free     | Yes         | Yes            | distinctive commerce controls, tactile component ideas                 | Distinctive copy-paste React and Tailwind components.                   |
 | [loading.dev](./loading-dev.md)                     | Free     | Yes         | Yes            | async states, inline loading, page progress                            | Lightweight library of loading indicators for React.                    |
 
 [← All sections](../README.md)

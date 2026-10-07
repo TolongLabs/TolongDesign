@@ -8,8 +8,8 @@ designeer_url: 'https://designeer.xyz/'
 designeer_blurb: 'Brands using creative top-level domain names.'
 paywall: unknown
 pricing_summary:
-  'Unknown; the site says the full experience is coming soon and does not
-  publish subscription pricing.'
+  'The partial directory says the full site is coming soon and mentions a
+  monthly subscription without a price; /pricing and /subscribe return HTTP 404.'
 open_source: false
 license: 'unknown'
 category_tags: ['domains', 'branding', 'naming']
@@ -26,38 +26,39 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                                                                              |
-| -------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Source         | [curated.domains](https://curated.domains/)                                                                        |
-| Paywall        | **Unknown** — Unknown; the site says the full experience is coming soon and does not publish subscription pricing. |
-| Open source    | No                                                                                                                 |
-| Type           | Design gallery or curated directory                                                                                |
-| Works with     | Browser research; no code stack                                                                                    |
-| Best for       | domain-name inspiration, brand naming                                                                              |
-| Agent-friendly | No — human-facing reference browsing                                                                               |
+| Field          | Value                                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------- |
+| Source         | [curated.domains](https://curated.domains/)                                                             |
+| Paywall        | **Unknown** — the partial directory mentions a monthly subscription but gives no price or access terms. |
+| Open source    | No                                                                                                      |
+| Type           | Design gallery or curated directory                                                                     |
+| Works with     | Browser research; no code stack                                                                         |
+| Best for       | domain-name inspiration, brand naming                                                                   |
+| Agent-friendly | No — human-facing reference browsing                                                                    |
 
 ## What it is
 
-Curated Domains presents interesting domain extensions and examples of brands
-using them. The checked page says the full site is coming soon, while listing
-extensions such as .academy, .ai, .design, .dev, .studio, .wtf and .xyz.
+Curated Domains is a public directory of domain extensions and brands using
+them. On 2026-10-07, Chromium loaded the official homepage with the visible text
+“interesting domain extensions & examples,” “full site coming soon,” and
+“subscribe monthly.” The page lists extensions including .academy, .ai, .design,
+.dev, .studio, .wtf, and .xyz, followed by links to example domains.
 
-Because the full product is not available and its subscription wording does not
-explain whether access is paid, the current paywall could not be determined. The
-visible domain examples are useful for naming inspiration, not an endorsement of
-their operators.
+The `/pricing` and `/subscribe` routes returned HTTP 404. The homepage does not
+state the subscription price, what access it unlocks, or whether the partial
+directory will remain free, so the current paywall remains unknown. Listed
+domains are naming references, not endorsements or availability claims.
 
 ## Paywall and pricing
 
-- Free: A partial public page lists extensions and example domains.
-- Paid: The site mentions a monthly subscription but does not publish its price
-  or what it unlocks.
-- Sign-up required? A subscription signup is shown, but its terms and access
-  requirements are not clear.
+- Free: The partial public page lists extensions and example domains.
+- Paid: The homepage says “subscribe monthly,” but no price or subscription
+  details are published; `/pricing` and `/subscribe` return HTTP 404.
+- Sign-up required? Unknown. No working signup or checkout page was found.
 - Licence for client work: Domain availability and registration terms must be
   checked with a registrar; the gallery grants no rights to listed brands.
 
-The access and pricing details above were checked on 2026-10-07.
+Access and pricing were checked on 2026-10-07.
 
 ## How to use
 
@@ -109,7 +110,12 @@ registration and trademark details independently.
 
 ## Sources
 
-- [Official site](https://curated.domains/) — checked 2026-10-07
+- [Official site](https://curated.domains/) — checked 2026-10-07; homepage
+  returned HTTP 200
+- [Pricing route](https://curated.domains/pricing) — checked 2026-10-07; HTTP
+  404
+- [Subscribe route](https://curated.domains/subscribe) — checked 2026-10-07;
+  HTTP 404
 - [Visu Haus](https://visu.haus/) — checked 2026-10-07
 - [Doodles Toys](https://doodles.toys/) — checked 2026-10-07
 - [Robb.is](https://robb.is/) — checked 2026-10-07

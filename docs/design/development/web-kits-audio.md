@@ -26,15 +26,15 @@ last_verified: 2026-10-07
 
 ## At a glance
 
-| Field          | Value                                                           |
-| -------------- | --------------------------------------------------------------- |
-| Source         | [audio.raphaelsalaja.com](https://audio.raphaelsalaja.com/)     |
-| Paywall        | **Free** — 100% free and open source under MIT licence          |
-| Open source    | Yes — MIT ([GitHub](https://github.com/raphaelsalaja/web-kits)) |
-| Type           | Web Audio synthesis and declarative UI sound library            |
-| Works with     | Web Audio API, React, TypeScript, JavaScript, modern browsers   |
-| Best for       | UI sound effects, micro-interactions, procedural web audio      |
-| Agent-friendly | Yes — npm package, React hooks, llms.txt and agent skill docs   |
+| Field          | Value                                                         |
+| -------------- | ------------------------------------------------------------- |
+| Source         | [audio.raphaelsalaja.com](https://audio.raphaelsalaja.com/)   |
+| Paywall        | **Free** — 100% free and open source under MIT licence        |
+| Open source    | Yes — MIT ([GitHub](https://github.com/raphaelsalaja/audio))  |
+| Type           | Web Audio synthesis and declarative UI sound library          |
+| Works with     | Web Audio API, React, TypeScript, JavaScript, modern browsers |
+| Best for       | UI sound effects, micro-interactions, procedural web audio    |
+| Agent-friendly | Yes — npm package, React hooks, llms.txt and agent skill docs |
 
 ## What it is
 
@@ -122,8 +122,8 @@ export function ActionButton() {
 
 - [Documentation Overview](https://audio.raphaelsalaja.com/) — Interactive sound
   preview board demonstrating sine, square, and filtered noise synthesis.
-- [React Hooks Guide](https://audio.raphaelsalaja.com/docs/react) — Tutorial on
-  managing audio contexts and triggering sounds from React lifecycles.
+- [React usePatch Guide](https://audio.raphaelsalaja.com/integrations/react/use-patch)
+  — Guide to loading a patch and triggering sounds with the React hook.
 - [Sound Patches Library](https://audio.raphaelsalaja.com/library) — Searchable
   index of pre-configured UI sound patches ready to import.
 
@@ -157,5 +157,5 @@ export function ActionButton() {
 ## Sources
 
 - [Official site](https://audio.raphaelsalaja.com/) — checked 2026-10-07
-- [Documentation](https://audio.raphaelsalaja.com/docs) — checked 2026-10-07
+- [Documentation](https://audio.raphaelsalaja.com/) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/build)

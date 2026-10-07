@@ -147,5 +147,6 @@ Verified on the official Awwwards pricing and submission pages on 2026-10-07.
 - [Official site](https://www.awwwards.com/) — checked 2026-10-07
 - [Submission Guidelines and Pricing](https://www.awwwards.com/submit/) —
   checked 2026-10-07
-- [Pro Plans](https://www.awwwards.com/pro-plans/) — checked 2026-10-07
+- [Pro Plans](https://www.awwwards.com/plans/creative-pro-plans) — checked
+  2026-10-07
 - [Designeer listing](https://designeer.xyz/)

@@ -30,7 +30,7 @@ last_verified: 2026-10-07
 | -------------- | -------------------------------------------------------------- |
 | Source         | [evlog.dev](https://www.evlog.dev/)                            |
 | Paywall        | **Free** — 100% free and open source under MIT licence         |
-| Open source    | Yes — MIT ([GitHub](https://github.com/evlog/evlog))           |
+| Open source    | Yes — MIT ([GitHub](https://github.com/evloghq/evlog))         |
 | Type           | Structured logging framework and agent observability engine    |
 | Works with     | Nuxt, Nitro, Next.js, SvelteKit, TanStack Start, Hono, Express |
 | Best for       | Wide event logging, agent-driven debugging, full-stack tracing |

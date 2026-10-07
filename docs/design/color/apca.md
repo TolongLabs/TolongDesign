@@ -32,7 +32,7 @@ last_verified: 2026-10-07
 
 | Field          | Value                                                                 |
 | -------------- | --------------------------------------------------------------------- |
-| Source         | [myndex.com/APCA](https://www.myndex.com/APCA/)                       |
+| Source         | [apcacontrast.com](https://apcacontrast.com/)                         |
 | Paywall        | **Free** — 100% free for web use and W3C guideline evaluation         |
 | Open source    | Yes — Custom W3 license ([GitHub](https://github.com/Myndex/apca-w3)) |
 | Type           | Perceptual contrast algorithm and npm package                         |
@@ -142,7 +142,7 @@ console.log(darkModeScore) // ~ 92 (high contrast for dark mode)
 
 ## Sources
 
-- [Myndex APCA Home](https://www.myndex.com/APCA/) — checked 2026-10-07
+- [Myndex APCA Guide](https://git.myndex.com/) — checked 2026-10-07
 - [APCA Contrast Web Calculator](https://apcacontrast.com/) — checked 2026-10-07
 - [apca-w3 GitHub Repository](https://github.com/Myndex/apca-w3) — checked
   2026-10-07

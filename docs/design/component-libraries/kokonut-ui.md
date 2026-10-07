@@ -96,10 +96,10 @@ export default function Page() {
 
 - [Particle Button](https://kokonutui.com/docs/buttons/particle-button) — A
   button that releases animated particles on click.
-- [Profile](https://kokonutui.com/docs/components/profile) — A profile and
-  account presentation component.
-- [Input](https://kokonutui.com/docs/components/input) — A styled input example
-  from the component docs.
+- [Profile Dropdown](https://kokonutui.com/docs/navigation/profile-dropdown) — A
+  profile and account presentation component.
+- [AI Input Search](https://kokonutui.com/docs/ai/ai-input-search) — A styled
+  input and search example from the component docs.
 - [MCP setup](https://kokonutui.com/docs/mcp) — Agent-assisted registry
   browsing.
 
