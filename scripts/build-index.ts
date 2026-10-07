@@ -129,5 +129,8 @@ const peopleMd = [
 ].join('\n')
 writeFileSync(join(ROOT, 'docs/design/people.md'), peopleMd)
 
-writeFileSync(join(ROOT, 'data/index.json'), JSON.stringify({ generated_from: 'docs/design/**/*.md frontmatter', tools: entries }, null, 1) + '\n')
+writeFileSync(
+  join(ROOT, 'data/index.json'),
+  JSON.stringify({ generated_from: 'docs/design/**/*.md frontmatter', tools: entries }, null, 1) + '\n'
+)
 console.log(`indexed ${entries.length} tools, ${sections.length} sections, ${people.length} people`)

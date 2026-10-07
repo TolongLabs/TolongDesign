@@ -38,7 +38,7 @@ data/catalogue.json            Raw Designeer scrape (tools + people); source of 
 data/index.json                Generated: every doc's frontmatter, flat
 templates/tool-doc.md          The contract every tool doc follows
 templates/worker-brief.md      Work order used to fan out doc research to agents
-scripts/                       check-docs.ts, build-index.ts, find.ts (Bun + TypeScript)
+scripts/                       check-docs.ts, build-index.ts, find.ts, check-links.ts (Bun + TypeScript)
 graphify-out/                  Knowledge graph of this repo (graph.json, GRAPH_REPORT.md)
 ```
 
@@ -51,6 +51,7 @@ bun install                 # once
 bun run check               # validate every doc against the catalogue + template (must pass)
 bun run index               # regenerate all indexes and data/index.json from frontmatter
 bun run find -- <text> [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--agent] [--oss] [--json]
+bun run links [-- <section>] # HTTP-check external links in docs (403/429 = bot-blocked, ignore)
 bun run format              # prettier
 ```
 

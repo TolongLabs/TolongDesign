@@ -18,7 +18,8 @@ published". Update `last_verified` whenever you re-check a doc.
 
 1. `bun install`
 2. Edit or add docs (see `.claude/skills/add-tool-doc/SKILL.md`).
-3. `bun run index && bun run check && bun run format`
+3. `bun run index && bun run check && bun run format` (and `bun run links -- <section>`
+   for the sections you touched)
 4. Commit with a conventional message, scoped by section:
    - `docs(icons): add phosphor`
    - `docs(component-libraries): refresh shadcn pricing`

@@ -8,7 +8,8 @@
     "index": "bun scripts/build-index.ts && prettier --log-level warn --write docs/design/README.md 'docs/design/*/README.md' docs/design/people.md",
     "find": "bun scripts/find.ts",
     "format": "prettier --write \"**/*.{md,json,ts}\"",
-    "format:check": "prettier --check \"**/*.{md,json,ts}\""
+    "format:check": "prettier --check \"**/*.{md,json,ts}\"",
+    "links": "bun scripts/check-links.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.4.2",
