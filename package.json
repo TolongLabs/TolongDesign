@@ -1,0 +1,18 @@
+{
+  "name": "tolong-design",
+  "private": true,
+  "type": "module",
+  "description": "TolongLabs' private web-design starting point: one agent-friendly doc per curated design tool.",
+  "scripts": {
+    "check": "bun scripts/check-docs.ts",
+    "index": "bun scripts/build-index.ts",
+    "find": "bun scripts/find.ts",
+    "format": "prettier --write \"**/*.{md,json,ts}\"",
+    "format:check": "prettier --check \"**/*.{md,json,ts}\""
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "prettier": "^3.9.9",
+    "yaml": "^2.9.1"
+  }
+}
