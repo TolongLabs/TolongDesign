@@ -4,16 +4,17 @@
 
 > Curated web typefaces, pairings, and font optimization.
 
-7 tools — 0 free, 0 freemium, 0 paid, 7 unknown. Source: [Designeer](https://designeer.xyz/visuals).
+7 tools — 6 free, 0 freemium, 1 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/visuals).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Fontshare](./fontshare.md) | Unknown | — | — |  | High-quality professional fonts free for commercial use. |
-| [Klim](./klim.md) | Unknown | — | — |  | Type foundry creating contemporary web typefaces. |
-| [Fontsource](./fontsource.md) | Unknown | — | — |  | Self-host open-source fonts via npm packages. |
-| [Wakamai Fondue](./wakamai-fondue.md) | Unknown | — | — |  | Tool inspecting font files and features. |
-| [Utopia](./utopia.md) | Unknown | — | — |  | Fluid typography calculator generating CSS clamp. |
-| [Velvetyne](./velvetyne.md) | Unknown | — | — |  | Open-source foundry distributing experimental typefaces. |
-| [Departure Mono](./departure-mono.md) | Unknown | — | — |  | Pixel monospace typeface designed for terminals. |
+| Tool                                  | Paywall | Open source | Agent-friendly | Best for                                                            | What it is                                               |
+| ------------------------------------- | ------- | ----------- | -------------- | ------------------------------------------------------------------- | -------------------------------------------------------- |
+| [Fontshare](./fontshare.md)           | Free    | No          | No             | web typography, font discovery, pairing ideas                       | High-quality professional fonts free for commercial use. |
+| [Klim](./klim.md)                     | Paid    | No          | No             | brand typography, editorial web type, commercial font licensing     | Type foundry creating contemporary web typefaces.        |
+| [Fontsource](./fontsource.md)         | Free    | Yes         | Yes            | self-hosted web fonts, framework projects, controlled font delivery | Self-host open-source fonts via npm packages.            |
+| [Wakamai Fondue](./wakamai-fondue.md) | Free    | Yes         | No             | font feature inspection, variable axis review, specimen diagnostics | Tool inspecting font files and features.                 |
+| [Utopia](./utopia.md)                 | Free    | No          | No             | fluid type scales, responsive spacing, CSS clamp values             | Fluid typography calculator generating CSS clamp.        |
+| [Velvetyne](./velvetyne.md)           | Free    | Yes         | No             | expressive display type, experimental brand work                    | Open-source foundry distributing experimental typefaces. |
+| [Departure Mono](./departure-mono.md) | Free    | Yes         | Yes            | code blocks, terminal interfaces, retro ui, technical badges        | Pixel monospace typeface designed for terminals.         |
 
 [← All sections](../README.md)

@@ -4,43 +4,44 @@
 
 > Developer utilities that accelerate frontend workflows.
 
-34 tools — 0 free, 0 freemium, 0 paid, 34 unknown. Source: [Designeer](https://designeer.xyz/utilities).
+34 tools — 21 free, 6 freemium, 0 paid, 7 unknown. Source:
+[Designeer](https://designeer.xyz/utilities).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [SVGOMG](./svgomg.md) | Unknown | — | — |  | Web GUI to optimize and clean SVG files. |
-| [RegExr](./regexr.md) | Unknown | — | — |  | Interactive sandbox for testing regular expressions. |
-| [Squoosh](./squoosh.md) | Unknown | — | — |  | Browser image compression with visual comparisons. |
-| [Fffuel](./fffuel.md) | Unknown | — | — |  | Generative SVG textures, gradients, and patterns. |
-| [ui.camera](./ui-camera.md) | Unknown | — | — |  | 3D mockups and scene staging for software. |
-| [Ray.so](./ray-so.md) | Unknown | — | — |  | Turn code snippets into shareable screenshots. |
-| [Transform](./transform.md) | Unknown | — | — |  | Polyglot code converter for JSON and types. |
-| [Playgrnd](./playgrnd.md) | Unknown | — | — |  | Suite of browser-based offline creative tools. |
-| [Anim8](./anim8.md) | Unknown | — | — |  | Convert MP4 recordings into animated SVG graphics. |
-| [OGFolio](./ogfolio.md) | Unknown | — | — |  | Inspect and preview Open Graph social cards. |
-| [DotForge](./dotforge.md) | Unknown | — | — |  | Real-time dither effect generator for web. |
-| [ASCIInator](./asciinator.md) | Unknown | — | — |  | Browser utility converting images into ASCII art. |
-| [Vessa](./vessa.md) | Unknown | — | — |  | Publish brand guidelines as live pages. |
-| [Icoon](./icoon.md) | Unknown | — | — |  | AI tool generating custom 3D icons. |
-| [Design Minis](./design-minis.md) | Unknown | — | — |  | Suite of micro design tools and scales. |
-| [ASCII (Kracked Devs)](./ascii-kracked-devs.md) | Unknown | — | — |  | Fast tool converting text into ASCII art. |
-| [Dither Lab](./dither-lab.md) | Unknown | — | — |  | Applies vintage dithering filters to photographs. |
-| [Hallmark](./hallmark.md) | Unknown | — | — |  | Landing page builder producing handcrafted designs. |
-| [Tooooools](./tooooools.md) | Unknown | — | — |  | In-browser utilities to dither and pixelate images. |
-| [Screan](./screan.md) | Unknown | — | — |  | Create promotional App Store screenshot mockups. |
-| [PostSpark](./postspark.md) | Unknown | — | — |  | Format screenshots with clean social backgrounds. |
-| [Drawably](./drawably.md) | Unknown | — | — |  | Sketching tool generating hand-drawn UI shapes. |
-| [Mesurer](./mesurer.md) | Unknown | — | — |  | On-screen tool checking website pixel spacing. |
-| [Render Labs](./render-labs.md) | Unknown | — | — |  | Image rendering tool from evlog team. |
-| [Butterfly](./butterfly.md) | Unknown | — | — |  | Minimalist landing page builder for validation. |
-| [Corne](./corne.md) | Unknown | — | — |  | Documentation for the Corne split keyboard. |
-| [Shiori](./shiori.md) | Unknown | — | — |  | Bookmark manager with CLI and Raycast support. |
-| [Open Source Together](./open-source-together.md) | Unknown | — | — |  | Platform matching developers with open-source projects. |
-| [ASCII Studio](./ascii-studio.md) | Unknown | — | — |  | Transforms images and videos into ASCII art. |
-| [Tabbied](./tabbied.md) | Unknown | — | — |  | Generative geometric pattern creator for SVG. |
-| [Rynix Studio](./rynix-studio.md) | Unknown | — | — |  | Playground for real-time video visual effects. |
-| [Mascofast](./mascofast.md) | Unknown | — | — |  | AI tool generating animated transparent 3D mascots. |
-| [Screenshot Studio](./screenshot-studio.md) | Unknown | — | — |  | Frames screenshots inside realistic 3D mockups. |
-| [Replay](./replay.md) | Unknown | — | — |  | Session replay and visitor recording for websites. |
+| Tool                                              | Paywall  | Open source | Agent-friendly | Best for                                                                                    | What it is                                              |
+| ------------------------------------------------- | -------- | ----------- | -------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| [SVGOMG](./svgomg.md)                             | Free     | Yes         | No             | svg optimization, asset compression, web performance, svg cleaning                          | Web GUI to optimize and clean SVG files.                |
+| [RegExr](./regexr.md)                             | Free     | Yes         | No             | regular expressions, regex debugging, pattern testing, syntax reference                     | Interactive sandbox for testing regular expressions.    |
+| [Squoosh](./squoosh.md)                           | Free     | Yes         | Yes            | image compression, web performance, format conversion, visual comparison                    | Browser image compression with visual comparisons.      |
+| [Fffuel](./fffuel.md)                             | Free     | No          | No             | svg backgrounds, noise textures, decorative gradients, landing page graphics                | Generative SVG textures, gradients, and patterns.       |
+| [ui.camera](./ui-camera.md)                       | Free     | No          | No             | software mockups, product photography, landing page visuals, pitch decks                    | 3D mockups and scene staging for software.              |
+| [Ray.so](./ray-so.md)                             | Free     | Yes         | No             | code screenshots, social media cards, documentation snippets, presentation slides           | Turn code snippets into shareable screenshots.          |
+| [Transform](./transform.md)                       | Free     | Yes         | No             | code conversion, type generation, svg to jsx, json to typescript                            | Polyglot code converter for JSON and types.             |
+| [Playgrnd](./playgrnd.md)                         | Free     | No          | No             | generative backgrounds, abstract patterns, creative textures, poster graphics               | Suite of browser-based offline creative tools.          |
+| [Anim8](./anim8.md)                               | Freemium | No          | No             | video to svg, animated vectors, lottie export, ai clip vectorization                        | Convert MP4 recordings into animated SVG graphics.      |
+| [OGFolio](./ogfolio.md)                           | Free     | No          | No             | open graph inspiration, social share cards, meta tag verification, social preview debugging | Inspect and preview Open Graph social cards.            |
+| [DotForge](./dotforge.md)                         | Free     | No          | No             | dither effects, retro visuals, pixel art animation, video export                            | Real-time dither effect generator for web.              |
+| [ASCIInator](./asciinator.md)                     | Free     | No          | No             | ascii art, terminal graphics, retro aesthetic, text-mode visuals                            | Browser utility converting images into ASCII art.       |
+| [Vessa](./vessa.md)                               | Freemium | No          | Yes            | brand guidelines, client handoff, design systems, design tokens                             | Publish brand guidelines as live pages.                 |
+| [Icoon](./icoon.md)                               | Freemium | No          | No             | 3d icons, hero section illustrations, feature cards, app mockups                            | AI tool generating custom 3D icons.                     |
+| [Design Minis](./design-minis.md)                 | Free     | No          | No             | discovering micro-tools, design utilities, niche generators, workflow shortcuts             | Suite of micro design tools and scales.                 |
+| [ASCII (Kracked Devs)](./ascii-kracked-devs.md)   | Free     | No          | No             | ascii art, playful graphics, text experiments                                               | Fast tool converting text into ASCII art.               |
+| [Dither Lab](./dither-lab.md)                     | Free     | No          | No             | vintage image treatments, pixel art, photo experiments                                      | Applies vintage dithering filters to photographs.       |
+| [Hallmark](./hallmark.md)                         | Free     | Yes         | Yes            | landing pages, design audits, visual redesigns                                              | Landing page builder producing handcrafted designs.     |
+| [Tooooools](./tooooools.md)                       | Free     | No          | No             | image treatments, halftone graphics, animated effects                                       | In-browser utilities to dither and pixelate images.     |
+| [Screan](./screan.md)                             | Unknown  | No          | No             | app-store listings, product launch graphics, localized screenshots                          | Create promotional App Store screenshot mockups.        |
+| [PostSpark](./postspark.md)                       | Freemium | No          | No             | social launch posts, product screenshots, device mockups                                    | Format screenshots with clean social backgrounds.       |
+| [Drawably](./drawably.md)                         | Free     | Yes         | Yes            | hand-drawn accents, annotated mockups, playful interface details                            | Sketching tool generating hand-drawn UI shapes.         |
+| [Mesurer](./mesurer.md)                           | Free     | Yes         | Yes            | spacing audits, visual QA, design feedback                                                  | On-screen tool checking website pixel spacing.          |
+| [Render Labs](./render-labs.md)                   | Unknown  | No          | No             | rendered image experiments, motion previews                                                 | Image rendering tool from evlog team.                   |
+| [Butterfly](./butterfly.md)                       | Unknown  | No          | No             | landing page experiments                                                                    | Minimalist landing page builder for validation.         |
+| [Corne](./corne.md)                               | Unknown  | Yes         | Yes            | smooth corners, squircle treatments, border styling                                         | Documentation for the Corne split keyboard.             |
+| [Shiori](./shiori.md)                             | Freemium | No          | Yes            | design research, saved references, agent-accessible bookmarks                               | Bookmark manager with CLI and Raycast support.          |
+| [Open Source Together](./open-source-together.md) | Free     | No          | No             | finding open-source projects, contributor discovery                                         | Platform matching developers with open-source projects. |
+| [ASCII Studio](./ascii-studio.md)                 | Unknown  | No          | Yes            | ASCII video treatments, text-based visual experiments                                       | Transforms images and videos into ASCII art.            |
+| [Tabbied](./tabbied.md)                           | Free     | Yes         | Yes            | generative backgrounds, geometric accents, agent-assisted pattern selection                 | Generative geometric pattern creator for SVG.           |
+| [Rynix Studio](./rynix-studio.md)                 | Unknown  | No          | No             | real-time visual effects on local media                                                     | Playground for real-time video visual effects.          |
+| [Mascofast](./mascofast.md)                       | Freemium | No          | Yes            | product mascots, onboarding art, app icon characters                                        | AI tool generating animated transparent 3D mascots.     |
+| [Screenshot Studio](./screenshot-studio.md)       | Free     | Yes         | Yes            | product screenshots, store images, presentation mockups                                     | Frames screenshots inside realistic 3D mockups.         |
+| [Replay](./replay.md)                             | Unknown  | No          | No             | website session review                                                                      | Session replay and visitor recording for websites.      |
 
 [← All sections](../README.md)

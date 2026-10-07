@@ -4,39 +4,40 @@
 
 > Crisp icon families and glyphs for modern interfaces.
 
-30 tools — 0 free, 0 freemium, 0 paid, 30 unknown. Source: [Designeer](https://designeer.xyz/visuals).
+30 tools — 24 free, 5 freemium, 0 paid, 1 unknown. Source:
+[Designeer](https://designeer.xyz/visuals).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Lucide](./lucide.md) | Unknown | — | — |  | Community-maintained Feather Icons fork with thousands of glyphs. |
-| [Phosphor](./phosphor.md) | Unknown | — | — |  | Icon family providing six consistent weights. |
-| [Iconify](./iconify.md) | Unknown | — | — |  | Unified framework providing instant icon access. |
-| [Rune Icons](./rune-icons.md) | Unknown | — | — |  | Minimalist icon set offering five styles. |
-| [Icon Museum](./icon-museum.md) | Unknown | — | — |  | Archive celebrating mobile app icon craftsmanship. |
-| [Tabler Icons](./tabler-icons.md) | Unknown | — | — |  | Library of thousands of outline icons. |
-| [Heroicons](./heroicons.md) | Unknown | — | — |  | Handcrafted SVG icons from Tailwind creators. |
-| [Material Symbols](./material-symbols.md) | Unknown | — | — |  | Google variable icon font spanning three styles. |
-| [Bootstrap Icons](./bootstrap-icons.md) | Unknown | — | — |  | Official icon library designed for Bootstrap. |
-| [Remix Icon](./remix-icon.md) | Unknown | — | — |  | Neutral icon library in outline and fill. |
-| [Iconoir](./iconoir.md) | Unknown | — | — |  | Open-source SVG icons with consistent strokes. |
-| [Ionicons](./ionicons.md) | Unknown | — | — |  | Premium icon pack for web and mobile. |
-| [Simple Icons](./simple-icons.md) | Unknown | — | — |  | Over three thousand SVG brand logos. |
-| [theSVG](./thesvg.md) | Unknown | — | — |  | Curated collection of clean brand SVGs. |
-| [Feather](./feather.md) | Unknown | — | — |  | Minimalist open-source icon set on 24px grid. |
-| [Carbon Icons](./carbon-icons.md) | Unknown | — | — |  | IBM official icon library for enterprise design. |
-| [Boxicons](./boxicons.md) | Unknown | — | — |  | Vector icons crafted in three styles. |
-| [MX Icons](./mx-icons.md) | Unknown | — | — |  | Large collection of customizable React icons. |
-| [Eva Icons](./eva-icons.md) | Unknown | — | — |  | Pack of 400 icons in outline and fill. |
-| [Devicon](./devicon.md) | Unknown | — | — |  | Developer-focused icon set for programming tools. |
-| [css.gg](./css-gg.md) | Unknown | — | — |  | 700 lightweight icons rendered using pure CSS. |
-| [HugeIcons](./hugeicons.md) | Unknown | — | — |  | Comprehensive library of stroke and solid icons. |
-| [Reicon](./reicon.md) | Unknown | — | — |  | Tree-shakeable React icon library with dual weights. |
-| [Iconsax](./iconsax.md) | Unknown | — | — |  | Versatile icon set with six visual styles. |
-| [icons0](./icons0.md) | Unknown | — | — |  | Search engine covering over 200k icons. |
-| [Heroicons Animated](./heroicons-animated.md) | Unknown | — | — |  | Heroicons enhanced with reactive hover animations. |
-| [Icons.download](./icons-download.md) | Unknown | — | — |  | Curated icon library in sixteen aesthetic styles. |
-| [Lucide Animated](./lucide-animated.md) | Unknown | — | — |  | Lucide icons enhanced with micro-animations. |
-| [Icon Foundry](./icon-foundry.md) | Unknown | — | — |  | Searchable collection of icons from many families. |
-| [Inkword](./inkword.md) | Unknown | — | — |  | Turns a single word into a matching illustration. |
+| Tool                                          | Paywall  | Open source | Agent-friendly | Best for                                                                         | What it is                                                        |
+| --------------------------------------------- | -------- | ----------- | -------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [Lucide](./lucide.md)                         | Free     | Yes         | Yes            | web applications, shadcn ui, react projects, clean interface icons               | Community-maintained Feather Icons fork with thousands of glyphs. |
+| [Phosphor](./phosphor.md)                     | Free     | Yes         | Yes            | multi-weight icons, duotone styles, web applications, editorial design           | Icon family providing six consistent weights.                     |
+| [Iconify](./iconify.md)                       | Free     | Yes         | Yes            | large icon catalogs, mixed icon families, react interfaces                       | Unified framework providing instant icon access.                  |
+| [Rune Icons](./rune-icons.md)                 | Free     | Yes         | Yes            | multi-style interfaces, customized svg assets, early access to new icon systems  | Minimalist icon set offering five styles.                         |
+| [Icon Museum](./icon-museum.md)               | Free     | No          | No             | mobile app icon research, palette references, app store visual audits            | Archive celebrating mobile app icon craftsmanship.                |
+| [Tabler Icons](./tabler-icons.md)             | Freemium | Yes         | Yes            | product interfaces, large outline sets, static svg assets                        | Library of thousands of outline icons.                            |
+| [Heroicons](./heroicons.md)                   | Free     | Yes         | Yes            | tailwind projects, product interfaces, consistent outline and solid icons        | Handcrafted SVG icons from Tailwind creators.                     |
+| [Material Symbols](./material-symbols.md)     | Free     | Yes         | Yes            | web applications, dashboards, cross-platform apps                                | Google variable icon font spanning three styles.                  |
+| [Bootstrap Icons](./bootstrap-icons.md)       | Free     | Yes         | Yes            | bootstrap interfaces, svg and font use, general web UI                           | Official icon library designed for Bootstrap.                     |
+| [Remix Icon](./remix-icon.md)                 | Free     | No          | Yes            | neutral interface icons, line and fill pairs, commercial web projects            | Neutral icon library in outline and fill.                         |
+| [Iconoir](./iconoir.md)                       | Free     | Yes         | Yes            | consistent outline systems, react interfaces, custom svg assets                  | Open-source SVG icons with consistent strokes.                    |
+| [Ionicons](./ionicons.md)                     | Free     | Yes         | Yes            | ionic apps, platform-specific interfaces, mobile and web controls                | Premium icon pack for web and mobile.                             |
+| [Simple Icons](./simple-icons.md)             | Free     | Yes         | Yes            | software brand marks, technology directories, brand logo grids                   | Over three thousand SVG brand logos.                              |
+| [theSVG](./thesvg.md)                         | Free     | Yes         | Yes            | brand and service marks, cloud architecture diagrams, agent-assisted logo lookup | Curated collection of clean brand SVGs.                           |
+| [Feather](./feather.md)                       | Free     | Yes         | Yes            | minimal interfaces, lightweight outline symbols, customized svg                  | Minimalist open-source icon set on 24px grid.                     |
+| [Carbon Icons](./carbon-icons.md)             | Free     | Yes         | Yes            | enterprise applications, carbon design system projects, data-heavy interfaces    | IBM official icon library for enterprise design.                  |
+| [Boxicons](./boxicons.md)                     | Freemium | Yes         | Yes            | large icon catalogs, multiple visual weights, framework components               | Vector icons crafted in three styles.                             |
+| [MX Icons](./mx-icons.md)                     | Free     | Yes         | Yes            | react products, large icon collections, fine-grained customization               | Large collection of customizable React icons.                     |
+| [Eva Icons](./eva-icons.md)                   | Free     | Yes         | Yes            | outline and fill pairs, animated icons, mobile interfaces                        | Pack of 400 icons in outline and fill.                            |
+| [Devicon](./devicon.md)                       | Free     | Yes         | Yes            | technology stacks, developer portfolios, tool and language directories           | Developer-focused icon set for programming tools.                 |
+| [css.gg](./css-gg.md)                         | Unknown  | No          | Yes            | pure css experiments, small interface symbols, personal prototypes               | 700 lightweight icons rendered using pure CSS.                    |
+| [HugeIcons](./hugeicons.md)                   | Freemium | Yes         | Yes            | large React catalogs, multiple icon styles, agent-assisted implementation        | Comprehensive library of stroke and solid icons.                  |
+| [Reicon](./reicon.md)                         | Free     | Yes         | Yes            | react applications, outline and filled pairs, agent icon lookup                  | Tree-shakeable React icon library with dual weights.              |
+| [Iconsax](./iconsax.md)                       | Freemium | No          | Yes            | six rounded styles, design and code workflows, large free icon sets              | Versatile icon set with six visual styles.                        |
+| [icons0](./icons0.md)                         | Free     | Yes         | Yes            | icon search, ai agents, shadcn integration                                       | Search engine covering over 200k icons.                           |
+| [Heroicons Animated](./heroicons-animated.md) | Free     | Yes         | Yes            | micro-interactions, animated icons, landing pages, interactive ui                | Heroicons enhanced with reactive hover animations.                |
+| [Icons.download](./icons-download.md)         | Free     | No          | No             | landing pages, web applications, multi-style icon matching                       | Curated icon library in sixteen aesthetic styles.                 |
+| [Lucide Animated](./lucide-animated.md)       | Free     | Yes         | Yes            | micro-interactions, animated icons, web apps, shadcn-ui                          | Lucide icons enhanced with micro-animations.                      |
+| [Icon Foundry](./icon-foundry.md)             | Free     | No          | No             | icon search, cross-library comparison, svg copying, brand logos                  | Searchable collection of icons from many families.                |
+| [Inkword](./inkword.md)                       | Freemium | No          | No             | editorial illustrations, blog headers, newsletter graphics, empty states         | Turns a single word into a matching illustration.                 |
 
 [← All sections](../README.md)

@@ -4,14 +4,15 @@
 
 > Color palette generators, contrast checkers, and color math.
 
-5 tools — 0 free, 0 freemium, 0 paid, 5 unknown. Source: [Designeer](https://designeer.xyz/visuals).
+5 tools — 5 free, 0 freemium, 0 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/visuals).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [OKLCH](./oklch.md) | Unknown | — | — |  | Color picker using perceptually uniform space. |
-| [Color.review](./color-review.md) | Unknown | — | — |  | Contrast checker helping design accessible palettes. |
-| [Huetone](./huetone.md) | Unknown | — | — |  | Accessible palette generator balancing contrast ratios. |
-| [APCA](./apca.md) | Unknown | — | — |  | Modern contrast algorithm matching visual perception. |
-| [Ramps](./ramps.md) | Unknown | — | — |  | Design token tool generating OKLCH ramps. |
+| Tool                              | Paywall | Open source | Agent-friendly | Best for                                                                       | What it is                                              |
+| --------------------------------- | ------- | ----------- | -------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| [OKLCH](./oklch.md)               | Free    | Yes         | Yes            | accessible palettes, wide gamut colors, design systems, css styling            | Color picker using perceptually uniform space.          |
+| [Color.review](./color-review.md) | Free    | No          | No             | text readability, wcag audits, accessible color pairing, ui review             | Contrast checker helping design accessible palettes.    |
+| [Huetone](./huetone.md)           | Free    | Yes         | Yes            | multi-hue design systems, color tokens, accessible ramps, figma tokens         | Accessible palette generator balancing contrast ratios. |
+| [APCA](./apca.md)                 | Free    | Yes         | Yes            | typography contrast, wcag 3 readiness, dark mode readability, text sizing      | Modern contrast algorithm matching visual perception.   |
+| [Ramps](./ramps.md)               | Free    | No          | Yes            | design system handoff, tailwind v4 themes, dark mode palettes, agent workflows | Design token tool generating OKLCH ramps.               |
 
 [← All sections](../README.md)

@@ -4,44 +4,45 @@
 
 > Coding agents, local MCP servers, and machine specs.
 
-35 tools — 0 free, 0 freemium, 0 paid, 35 unknown. Source: [Designeer](https://designeer.xyz/build).
+35 tools — 16 free, 17 freemium, 2 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/build).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Dray](./dray.md) | Unknown | — | — |  | Unified desktop workspace managing coding agents. |
-| [Refero](./refero.md) | Unknown | — | — |  | Structured DESIGN.MD specifications for AI agents. |
-| [designmd.me](./designmd-me.md) | Unknown | — | — |  | Generator creating machine-readable design specifications. |
-| [Open Design](./open-design.md) | Unknown | — | — |  | Standardized design systems formatted for agents. |
-| [designmd.supply](./designmd-supply.md) | Unknown | — | — |  | DESIGN.MD templates to guide AI assistants. |
-| [getdesign.md](./getdesign-md.md) | Unknown | — | — |  | Interactive generator producing AI design rules. |
-| [Hyperbrowser Design.md](./hyperbrowser-design-md.md) | Unknown | — | — |  | DESIGN.MD generator extracting rules from websites. |
-| [Aura](./aura.md) | Unknown | — | — |  | Design system generator structuring AI guidelines. |
-| [Neuform](./neuform.md) | Unknown | — | — |  | AI-assisted interface design producing clean code. |
-| [typeui.sh](./typeui-sh.md) | Unknown | — | — |  | Command-line tool scaffolding typed UI components. |
-| [Webclaw](./webclaw.md) | Unknown | — | — |  | Converts any webpage into structured markdown. |
-| [Ghostex](./ghostex.md) | Unknown | — | — |  | Orchestrates multiple background coding agent sessions. |
-| [is-agentic.com](./is-agentic-com.md) | Unknown | — | — |  | Scores how effectively websites support crawlers. |
-| [Herdr](./herdr.md) | Unknown | — | — |  | Distributed runner managing coding agent jobs. |
-| [Soubi](./soubi.md) | Unknown | — | — |  | Compiler transforming agent skill definitions. |
-| [agentcn](./agentcn.md) | Unknown | — | — |  | Customizable and production-ready AI agent recipes for React. |
-| [skills](./skills.md) | Unknown | — | — |  | Agent skills for shadcn registries and developer workflows. |
-| [mcpcn](./mcpcn.md) | Unknown | — | — |  | ChatGPT, Claude, and MCP app UI components for React. |
-| [integrations.sh](./integrations-sh.md) | Unknown | — | — |  | Repository of API integration specifications for agents. |
-| [fx](./fx.md) | Unknown | — | — |  | High-performance coding agent CLI in Zig. |
-| [HyperFrames](./hyperframes.md) | Unknown | — | — |  | Headless HTML-to-MP4 video rendering engine. |
-| [Foglamp](./foglamp.md) | Unknown | — | — |  | Observability tool monitoring latency and costs. |
-| [Distill](./distill.md) | Unknown | — | — |  | Intelligent agent organizing scattered research notes. |
-| [Agentation](./agentation.md) | Unknown | — | — |  | Converts on-screen UI annotations into context. |
-| [OpenCode](./opencode.md) | Unknown | — | — |  | Open-source terminal AI coding agent. |
-| [Impeccable](./impeccable.md) | Unknown | — | — |  | Design intelligence skill for AI agents. |
-| [SkillSync](./skillsync.md) | Unknown | — | — |  | Synchronizes agent context across code editors. |
-| [bb](./bb.md) | Unknown | — | — |  | Open-source development environment for coding agents. |
-| [Capacity](./capacity.md) | Unknown | — | — |  | Natural language workspace generating full-stack apps. |
-| [Lafys](./lafys.md) | Unknown | — | — |  | Prompt-driven UI component generator for builders. |
-| [Efecto](./efecto.md) | Unknown | — | — |  | Agent-first visual web canvas with MCP. |
-| [Arc labs](./arc-labs.md) | Unknown | — | — |  | AI career suite simulating technical interviews. |
-| [Scira](./scira.md) | Unknown | — | — |  | Minimalist open-source AI search engine. |
-| [Kombai](./kombai.md) | Unknown | — | — |  | AI design engineer that codes UI from context. |
-| [Causal](./causal.md) | Unknown | — | — |  | AI canvas workspace for notes and plans. |
+| Tool                                                  | Paywall  | Open source | Agent-friendly | Best for                                                                               | What it is                                                    |
+| ----------------------------------------------------- | -------- | ----------- | -------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [Dray](./dray.md)                                     | Free     | Yes         | Yes            | managing parallel coding agents, git worktree orchestration, desktop agent supervision | Unified desktop workspace managing coding agents.             |
+| [Refero](./refero.md)                                 | Freemium | No          | Yes            | agent design context, visual research                                                  | Structured DESIGN.MD specifications for AI agents.            |
+| [designmd.me](./designmd-me.md)                       | Freemium | No          | Yes            | website to DESIGN.md, agent design context                                             | Generator creating machine-readable design specifications.    |
+| [Open Design](./open-design.md)                       | Freemium | Yes         | Yes            | local design-agent workflow, HTML prototypes                                           | Standardized design systems formatted for agents.             |
+| [designmd.supply](./designmd-supply.md)               | Free     | Yes         | Yes            | DESIGN.md from public sites, agent-ready references                                    | DESIGN.MD templates to guide AI assistants.                   |
+| [getdesign.md](./getdesign-md.md)                     | Freemium | No          | Yes            | known visual references, agent design rules                                            | Interactive generator producing AI design rules.              |
+| [Hyperbrowser Design.md](./hyperbrowser-design-md.md) | Freemium | No          | Yes            | website to DESIGN.md, agent research                                                   | DESIGN.MD generator extracting rules from websites.           |
+| [Aura](./aura.md)                                     | Paid     | No          | No             | prompt-driven pages, editable prototypes                                               | Design system generator structuring AI guidelines.            |
+| [Neuform](./neuform.md)                               | Freemium | No          | Yes            | remixing landing pages, agent-ready DESIGN.md                                          | AI-assisted interface design producing clean code.            |
+| [typeui.sh](./typeui-sh.md)                           | Freemium | No          | Yes            | agent design guidance, UI audits and prompts                                           | Command-line tool scaffolding typed UI components.            |
+| [Webclaw](./webclaw.md)                               | Freemium | Yes         | Yes            | web extraction for agents, structured page data                                        | Converts any webpage into structured markdown.                |
+| [Ghostex](./ghostex.md)                               | Free     | Yes         | Yes            | persistent agent sessions, concurrent coding work                                      | Orchestrates multiple background coding agent sessions.       |
+| [is-agentic.com](./is-agentic-com.md)                 | Free     | No          | Yes            | site discoverability checks, agent-facing SEO audits                                   | Scores how effectively websites support crawlers.             |
+| [Herdr](./herdr.md)                                   | Free     | Yes         | Yes            | persistent agent terminals, remote sessions                                            | Distributed runner managing coding agent jobs.                |
+| [Soubi](./soubi.md)                                   | Free     | Yes         | Yes            | cross-agent instructions, reusable agent plugins                                       | Compiler transforming agent skill definitions.                |
+| [agentcn](./agentcn.md)                               | Free     | Yes         | Yes            | agent capabilities for apps, workflow examples                                         | Customizable and production-ready AI agent recipes for React. |
+| [skills](./skills.md)                                 | Free     | Yes         | Yes            | registry authoring, agent maintenance tasks                                            | Agent skills for shadcn registries and developer workflows.   |
+| [mcpcn](./mcpcn.md)                                   | Free     | Yes         | Yes            | MCP app interfaces, ChatGPT and Claude UI blocks                                       | ChatGPT, Claude, and MCP app UI components for React.         |
+| [integrations.sh](./integrations-sh.md)               | Free     | Yes         | Yes            | agent API context, provider integration discovery                                      | Repository of API integration specifications for agents.      |
+| [fx](./fx.md)                                         | Free     | Yes         | Yes            | lightweight repository work, embeddable agent workflows                                | High-performance coding agent CLI in Zig.                     |
+| [HyperFrames](./hyperframes.md)                       | Free     | Yes         | Yes            | programmatic marketing videos, agent-generated motion                                  | Headless HTML-to-MP4 video rendering engine.                  |
+| [Foglamp](./foglamp.md)                               | Freemium | Yes         | Yes            | agent observability, llm cost tracking, latency debugging                              | Observability tool monitoring latency and costs.              |
+| [Distill](./distill.md)                               | Freemium | No          | Yes            | research synthesis, design notes, context vaults                                       | Intelligent agent organizing scattered research notes.        |
+| [Agentation](./agentation.md)                         | Free     | No          | Yes            | visual bug reports, ui feedback loops, agent context                                   | Converts on-screen UI annotations into context.               |
+| [OpenCode](./opencode.md)                             | Freemium | Yes         | Yes            | terminal coding, repo refactoring, interactive ai assistance                           | Open-source terminal AI coding agent.                         |
+| [Impeccable](./impeccable.md)                         | Free     | Yes         | Yes            | agent design taste, typography rules, layout guidance                                  | Design intelligence skill for AI agents.                      |
+| [SkillSync](./skillsync.md)                           | Freemium | Yes         | Yes            | cross-editor agent context, skill libraries, team prompt sharing                       | Synchronizes agent context across code editors.               |
+| [bb](./bb.md)                                         | Free     | Yes         | Yes            | agent workflows, visual diffing, isolated code execution                               | Open-source development environment for coding agents.        |
+| [Capacity](./capacity.md)                             | Paid     | No          | Yes            | rapid prototyping, internal tools, full-stack app scaffolding                          | Natural language workspace generating full-stack apps.        |
+| [Lafys](./lafys.md)                                   | Freemium | No          | Yes            | prompt engineering, landing page sections, ai web generation                           | Prompt-driven UI component generator for builders.            |
+| [Efecto](./efecto.md)                                 | Free     | No          | Yes            | agent web design, canvas prototyping, mcp ui generation                                | Agent-first visual web canvas with MCP.                       |
+| [Arc labs](./arc-labs.md)                             | Freemium | No          | No             | technical interview simulation, resume generation, candidate preparation               | AI career suite simulating technical interviews.              |
+| [Scira](./scira.md)                                   | Freemium | Yes         | Yes            | ad-free search, technical research, self-hosted ai engine                              | Minimalist open-source AI search engine.                      |
+| [Kombai](./kombai.md)                                 | Freemium | No          | Yes            | figma to code, ui component generation, design system compliance                       | AI design engineer that codes UI from context.                |
+| [Causal](./causal.md)                                 | Freemium | No          | Yes            | spatial ideation, design planning, visual project mapping                              | AI canvas workspace for notes and plans.                      |
 
 [← All sections](../README.md)

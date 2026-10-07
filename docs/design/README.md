@@ -2,30 +2,34 @@
 
 # Design catalogue
 
-422 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on 2026-10-07 and researched one by one. Each tool has its own doc with source URL, paywall, how to use, examples, and agent notes.
+422 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on
+2026-10-07 and researched one by one. Each tool has its own doc with source URL,
+paywall, how to use, examples, and agent notes.
 
-**Paywall overview:** 0 free · 0 freemium · 0 paid · 422 unknown.
+**Paywall overview:** 257 free · 122 freemium · 19 paid · 24 unknown.
 
-| Section | Tools | Free | Freemium | Paid | What it covers |
-| ------- | ----- | ---- | -------- | ---- | -------------- |
-| [Design Galleries](./design-galleries/README.md) | 78 | 0 | 0 | 0 | Design galleries, interface patterns, and web inspiration. |
-| [Component Libraries](./component-libraries/README.md) | 109 | 0 | 0 | 0 | Production UI primitives and accessible component libraries. |
-| [Development](./development/README.md) | 24 | 0 | 0 | 0 | Modern code editors, runtimes, and local tooling. |
-| [Agents & MCP](./agents-mcp/README.md) | 35 | 0 | 0 | 0 | Coding agents, local MCP servers, and machine specs. |
-| [Motion](./motion/README.md) | 11 | 0 | 0 | 0 | Animation timing, spring physics, and motion libraries. |
-| [Interface Design](./interface-design/README.md) | 11 | 0 | 0 | 0 | Interface design canvases, tokens, and layout systems. |
-| [Type](./type/README.md) | 7 | 0 | 0 | 0 | Curated web typefaces, pairings, and font optimization. |
-| [Color](./color/README.md) | 5 | 0 | 0 | 0 | Color palette generators, contrast checkers, and color math. |
-| [3D](./3d/README.md) | 6 | 0 | 0 | 0 | 3D modeling tools and WebGL rendering engines online. |
-| [Shaders](./shaders/README.md) | 7 | 0 | 0 | 0 | Interactive fragment shaders, procedural noise, and canvas effects. |
-| [Icons](./icons/README.md) | 30 | 0 | 0 | 0 | Crisp icon families and glyphs for modern interfaces. |
-| [Utilities](./utilities/README.md) | 34 | 0 | 0 | 0 | Developer utilities that accelerate frontend workflows. |
-| [Desktop](./desktop/README.md) | 12 | 0 | 0 | 0 | Native macOS and desktop utility apps for productivity. |
-| [Video & Capture](./video-capture/README.md) | 11 | 0 | 0 | 0 | Screen recording software, timeline editors, and demo tools. |
-| [Whiteboard](./whiteboard/README.md) | 4 | 0 | 0 | 0 | Infinite canvas workspaces for wireframing and systems architecture. |
-| [Deploy](./deploy/README.md) | 5 | 0 | 0 | 0 | Hosting platforms, edge runtimes, and deployment infrastructure. |
-| [Reading](./reading/README.md) | 33 | 0 | 0 | 0 | Essential books, design engineering essays, and craft tutorials. |
+| Section                                                | Tools | Free | Freemium | Paid | What it covers                                                       |
+| ------------------------------------------------------ | ----- | ---- | -------- | ---- | -------------------------------------------------------------------- |
+| [Design Galleries](./design-galleries/README.md)       | 78    | 46   | 26       | 1    | Design galleries, interface patterns, and web inspiration.           |
+| [Component Libraries](./component-libraries/README.md) | 109   | 70   | 30       | 0    | Production UI primitives and accessible component libraries.         |
+| [Development](./development/README.md)                 | 24    | 16   | 5        | 3    | Modern code editors, runtimes, and local tooling.                    |
+| [Agents & MCP](./agents-mcp/README.md)                 | 35    | 16   | 17       | 2    | Coding agents, local MCP servers, and machine specs.                 |
+| [Motion](./motion/README.md)                           | 11    | 7    | 3        | 1    | Animation timing, spring physics, and motion libraries.              |
+| [Interface Design](./interface-design/README.md)       | 11    | 5    | 4        | 2    | Interface design canvases, tokens, and layout systems.               |
+| [Type](./type/README.md)                               | 7     | 6    | 0        | 1    | Curated web typefaces, pairings, and font optimization.              |
+| [Color](./color/README.md)                             | 5     | 5    | 0        | 0    | Color palette generators, contrast checkers, and color math.         |
+| [3D](./3d/README.md)                                   | 6     | 6    | 0        | 0    | 3D modeling tools and WebGL rendering engines online.                |
+| [Shaders](./shaders/README.md)                         | 7     | 6    | 1        | 0    | Interactive fragment shaders, procedural noise, and canvas effects.  |
+| [Icons](./icons/README.md)                             | 30    | 24   | 5        | 0    | Crisp icon families and glyphs for modern interfaces.                |
+| [Utilities](./utilities/README.md)                     | 34    | 21   | 6        | 0    | Developer utilities that accelerate frontend workflows.              |
+| [Desktop](./desktop/README.md)                         | 12    | 4    | 4        | 4    | Native macOS and desktop utility apps for productivity.              |
+| [Video & Capture](./video-capture/README.md)           | 11    | 5    | 5        | 1    | Screen recording software, timeline editors, and demo tools.         |
+| [Whiteboard](./whiteboard/README.md)                   | 4     | 0    | 4        | 0    | Infinite canvas workspaces for wireframing and systems architecture. |
+| [Deploy](./deploy/README.md)                           | 5     | 0    | 4        | 1    | Hosting platforms, edge runtimes, and deployment infrastructure.     |
+| [Reading](./reading/README.md)                         | 33    | 20   | 8        | 3    | Essential books, design engineering essays, and craft tutorials.     |
 
 Also: [People worth following](./people.md) — 132 design engineers.
 
-Machine-readable: [`data/index.json`](../../data/index.json) (every doc’s frontmatter) and [`data/catalogue.json`](../../data/catalogue.json) (raw scrape).
+Machine-readable: [`data/index.json`](../../data/index.json) (every doc’s
+frontmatter) and [`data/catalogue.json`](../../data/catalogue.json) (raw
+scrape).

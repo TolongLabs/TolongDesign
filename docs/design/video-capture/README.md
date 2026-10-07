@@ -4,20 +4,21 @@
 
 > Screen recording software, timeline editors, and demo tools.
 
-11 tools — 0 free, 0 freemium, 0 paid, 11 unknown. Source: [Designeer](https://designeer.xyz/utilities).
+11 tools — 5 free, 5 freemium, 1 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/utilities).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Screen Studio](./screen-studio.md) | Unknown | — | — |  | Screen recorder adding camera zooms automatically. |
-| [Remotion](./remotion.md) | Unknown | — | — |  | Render high-definition videos programmatically with React. |
-| [DaVinci Resolve](./davinci-resolve.md) | Unknown | — | — |  | Professional video editing and color grading suite. |
-| [Descript](./descript.md) | Unknown | — | — |  | AI video editor where you edit text. |
-| [Gifski](./gifski.md) | Unknown | — | — |  | High-quality video-to-GIF converter preserving framerates. |
-| [Slant It](./slant-it.md) | Unknown | — | — |  | Transforms flat captures into 3D mockups. |
-| [Remocn](./remocn.md) | Unknown | — | — |  | Remotion animation components for video production. |
-| [BetterShot](./bettershot.md) | Unknown | — | — |  | Screen recorder featuring cursor zoom and captions. |
-| [Recordly](./recordly.md) | Unknown | — | — |  | Screen recording tool for polished developer demos. |
-| [Cursorful](./cursorful.md) | Unknown | — | — |  | Screen recorder that automatically tracks cursor. |
-| [Tokokino](./tokokino.md) | Unknown | — | — |  | In-browser editor for device framing and mockups. |
+| Tool                                    | Paywall  | Open source | Agent-friendly | Best for                                                                                                       | What it is                                                 |
+| --------------------------------------- | -------- | ----------- | -------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| [Screen Studio](./screen-studio.md)     | Paid     | No          | No             | promotional demo videos, product hunt launches, automatic cursor zooms, social video teasers                   | Screen recorder adding camera zooms automatically.         |
+| [Remotion](./remotion.md)               | Freemium | No          | Yes            | programmatic video generation, automated social clips, personalized customer videos, data-driven animations    | Render high-definition videos programmatically with React. |
+| [DaVinci Resolve](./davinci-resolve.md) | Freemium | No          | No             | broadcast video editing, cinema-grade color grading, Fairlight audio mixing, high-end client productions       | Professional video editing and color grading suite.        |
+| [Descript](./descript.md)               | Freemium | No          | No             | text-based video editing, podcast production, filler word removal, ai voice cloning                            | AI video editor where you edit text.                       |
+| [Gifski](./gifski.md)                   | Free     | Yes         | Yes            | high-quality gif generation, github readme demos, documentation embeds, pull request animations                | High-quality video-to-GIF converter preserving framerates. |
+| [Slant It](./slant-it.md)               | Freemium | No          | No             | 3d perspective product videos, slanted mockup animations, landing page video headers, social media reveals     | Transforms flat captures into 3D mockups.                  |
+| [Remocn](./remocn.md)                   | Free     | Yes         | Yes            | ai agent video generation, product demo animations, webgl background shaders, remotion component templates     | Remotion animation components for video production.        |
+| [BetterShot](./bettershot.md)           | Free     | Yes         | Yes            | open-source screen recording, cursor zooms, screenshot annotation, self-hosted sharing                         | Screen recorder featuring cursor zoom and captions.        |
+| [Recordly](./recordly.md)               | Free     | Yes         | Yes            | cross-platform developer demos, auto-zoom screen recordings, smooth cursor paths, webcam bubbles               | Screen recording tool for polished developer demos.        |
+| [Cursorful](./cursorful.md)             | Freemium | No          | No             | in-browser demo recording, zero-install screen captures, auto-zoom walkthroughs, redrawn vector cursors        | Screen recorder that automatically tracks cursor.          |
+| [Tokokino](./tokokino.md)               | Free     | Yes         | Yes            | in-browser device mockups, animated product reveals, high-resolution still exports, social media demo graphics | In-browser editor for device framing and mockups.          |
 
 [← All sections](../README.md)

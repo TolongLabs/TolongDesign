@@ -4,33 +4,34 @@
 
 > Modern code editors, runtimes, and local tooling.
 
-24 tools — 0 free, 0 freemium, 0 paid, 24 unknown. Source: [Designeer](https://designeer.xyz/build).
+24 tools — 16 free, 5 freemium, 3 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/build).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Claude Code](./claude-code.md) | Unknown | — | — |  | Agentic coding tool inside your terminal. |
-| [Cursor](./cursor.md) | Unknown | — | — |  | AI-first code editor for rapid development. |
-| [Zed](./zed.md) | Unknown | — | — |  | High-performance code editor built for low latency. |
-| [v0](./v0.md) | Unknown | — | — |  | Generative AI translating prompts into shadcn code. |
-| [Bolt.new](./bolt-new.md) | Unknown | — | — |  | In-browser development sandbox for full-stack applications. |
-| [Vite](./vite.md) | Unknown | — | — |  | Blazing fast frontend build and dev tool. |
-| [Biome](./biome.md) | Unknown | — | — |  | Fast Rust-based formatter and code linter. |
-| [Playwright](./playwright.md) | Unknown | — | — |  | Reliable browser automation and end-to-end testing. |
-| [BuilderTools](./buildertools.md) | Unknown | — | — |  | Focused developer tools for shipping software. |
-| [nuqs](./nuqs.md) | Unknown | — | — |  | Type-safe URL search params for React. |
-| [Better T Stack](./better-t-stack.md) | Unknown | — | — |  | CLI scaffolding modern full-stack TypeScript setups. |
-| [AI Stack](./ai-stack.md) | Unknown | — | — |  | Directory comparing modern AI tech stacks. |
-| [Alumnium](./alumnium.md) | Unknown | — | — |  | Natural-language end-to-end testing via MCP. |
-| [Vercel Doctor](./vercel-doctor.md) | Unknown | — | — |  | Diagnostic tool identifying Next.js performance bottlenecks. |
-| [OSS Perks](./oss-perks.md) | Unknown | — | — |  | Free cloud credits for open-source maintainers. |
-| [Vinext](./vinext.md) | Unknown | — | — |  | Vite plugin running Next.js on Cloudflare. |
-| [evlog](./evlog.md) | Unknown | — | — |  | Structured logging framework for web applications. |
-| [@web-kits/audio](./web-kits-audio.md) | Unknown | — | — |  | Declarative sound library for web apps. |
-| [Nue](./nue.md) | Unknown | — | — |  | Lightweight web framework alternative to React. |
-| [Umami](./umami.md) | Unknown | — | — |  | Privacy-focused web analytics without cookie banners. |
-| [Torph](./torph.md) | Unknown | — | — |  | Dependency-free text morphing animation library. |
-| [x.ai/bot](./x-ai-bot.md) | Unknown | — | — |  | Documentation detailing xAI web crawler specifications. |
-| [Tracwell](./tracwell.md) | Unknown | — | — |  | Focused analytics tracking visitors and conversions. |
-| [DialKit](./dialkit.md) | Unknown | — | — |  | Floating interface toolbar for parameter tuning. |
+| Tool                                   | Paywall  | Open source | Agent-friendly | Best for                                                                            | What it is                                                   |
+| -------------------------------------- | -------- | ----------- | -------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [Claude Code](./claude-code.md)        | Paid     | No          | Yes            | repository tasks, code changes, terminal workflows                                  | Agentic coding tool inside your terminal.                    |
+| [Cursor](./cursor.md)                  | Freemium | No          | Yes            | codebase exploration, agent edits, multi-file tasks                                 | AI-first code editor for rapid development.                  |
+| [Zed](./zed.md)                        | Freemium | Yes         | Yes            | low-latency editing, agent workflows, multiplayer coding                            | High-performance code editor built for low latency.          |
+| [v0](./v0.md)                          | Freemium | No          | Yes            | rapid prototyping, ui design, landing pages                                         | Generative AI translating prompts into shadcn code.          |
+| [Bolt.new](./bolt-new.md)              | Freemium | No          | Yes            | in-browser development, prototype deployment, full-stack apps                       | In-browser development sandbox for full-stack applications.  |
+| [Vite](./vite.md)                      | Free     | Yes         | Yes            | spa development, fast hmr, modern frontend builds                                   | Blazing fast frontend build and dev tool.                    |
+| [Biome](./biome.md)                    | Free     | Yes         | Yes            | code formatting, static analysis, fast linting                                      | Fast Rust-based formatter and code linter.                   |
+| [Playwright](./playwright.md)          | Free     | Yes         | Yes            | end-to-end testing, visual regression, automated browser workflows                  | Reliable browser automation and end-to-end testing.          |
+| [BuilderTools](./buildertools.md)      | Free     | No          | No             | tool discovery, independent software benchmarking, development resources            | Focused developer tools for shipping software.               |
+| [nuqs](./nuqs.md)                      | Free     | Yes         | Yes            | filtering interfaces, search state, shareable urls                                  | Type-safe URL search params for React.                       |
+| [Better T Stack](./better-t-stack.md)  | Free     | Yes         | Yes            | project initialization, full-stack typescript, agent scaffolding                    | CLI scaffolding modern full-stack TypeScript setups.         |
+| [AI Stack](./ai-stack.md)              | Free     | Yes         | Yes            | ai workflow benchmarking, config syncing, tech stack discovery                      | Directory comparing modern AI tech stacks.                   |
+| [Alumnium](./alumnium.md)              | Free     | Yes         | Yes            | natural-language e2e testing, agent-driven qa, multi-platform test automation       | Natural-language end-to-end testing via MCP.                 |
+| [Vercel Doctor](./vercel-doctor.md)    | Free     | Yes         | Yes            | vercel-hosted next.js, code review, agent-assisted fixes                            | Diagnostic tool identifying Next.js performance bottlenecks. |
+| [OSS Perks](./oss-perks.md)            | Free     | Yes         | Yes            | funding open source, infrastructure credits, developer grants                       | Free cloud credits for open-source maintainers.              |
+| [Vinext](./vinext.md)                  | Free     | Yes         | Yes            | running nextjs on cloudflare, fast vite builds, smaller bundles                     | Vite plugin running Next.js on Cloudflare.                   |
+| [evlog](./evlog.md)                    | Free     | Yes         | Yes            | wide event logging, agent-driven debugging, full-stack tracing                      | Structured logging framework for web applications.           |
+| [@web-kits/audio](./web-kits-audio.md) | Free     | Yes         | Yes            | ui sound effects, micro-interactions, web audio synthesis                           | Declarative sound library for web apps.                      |
+| [Nue](./nue.md)                        | Free     | Yes         | Yes            | content sites, lightweight web apps, minimal-dependency websites                    | Lightweight web framework alternative to React.              |
+| [Umami](./umami.md)                    | Freemium | Yes         | Yes            | privacy-friendly analytics, client traffic reporting, cookieless metrics            | Privacy-focused web analytics without cookie banners.        |
+| [Torph](./torph.md)                    | Free     | Yes         | Yes            | text transitions, counter animations, status transitions                            | Dependency-free text morphing animation library.             |
+| [x.ai/bot](./x-ai-bot.md)              | Paid     | No          | No             | automated browser routines, desktop task delegation, multi-agent workflows          | Documentation detailing xAI web crawler specifications.      |
+| [Tracwell](./tracwell.md)              | Paid     | No          | Yes            | funnel tracking, revenue attribution, conversion analysis                           | Focused analytics tracking visitors and conversions.         |
+| [DialKit](./dialkit.md)                | Free     | Yes         | Yes            | tuning spring animations, live design adjustment, interactive component prototyping | Floating interface toolbar for parameter tuning.             |
 
 [← All sections](../README.md)

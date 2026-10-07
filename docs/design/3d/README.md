@@ -4,15 +4,16 @@
 
 > 3D modeling tools and WebGL rendering engines online.
 
-6 tools — 0 free, 0 freemium, 0 paid, 6 unknown. Source: [Designeer](https://designeer.xyz/visuals).
+6 tools — 6 free, 0 freemium, 0 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/visuals).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Three.js](./three-js.md) | Unknown | — | — |  | JavaScript 3D library rendering WebGL scenes. |
-| [React Three Fiber](./react-three-fiber.md) | Unknown | — | — |  | Declarative React renderer for Three.js scenes. |
-| [Drei](./drei.md) | Unknown | — | — |  | Helper components for React Three Fiber. |
-| [Blender](./blender.md) | Unknown | — | — |  | Open-source 3D modeling and animation suite. |
-| [gltf.report](./gltf-report.md) | Unknown | — | — |  | Web-based optimizer for 3D glTF files. |
-| [Poly Haven](./poly-haven.md) | Unknown | — | — |  | Public asset library offering CC0 textures. |
+| Tool                                        | Paywall | Open source | Agent-friendly | Best for                                                                      | What it is                                      |
+| ------------------------------------------- | ------- | ----------- | -------------- | ----------------------------------------------------------------------------- | ----------------------------------------------- |
+| [Three.js](./three-js.md)                   | Free    | Yes         | Yes            | interactive 3d, canvas animations, product configurators, web games           | JavaScript 3D library rendering WebGL scenes.   |
+| [React Three Fiber](./react-three-fiber.md) | Free    | Yes         | Yes            | react 3d scenes, landing page animations, interactive models, ui integration  | Declarative React renderer for Three.js scenes. |
+| [Drei](./drei.md)                           | Free    | Yes         | Yes            | orbit controls, gltf loading, environment maps, 3d text, html overlays        | Helper components for React Three Fiber.        |
+| [Blender](./blender.md)                     | Free    | Yes         | No             | asset creation, gltf export, texture baking, 3d illustration, low-poly models | Open-source 3D modeling and animation suite.    |
+| [gltf.report](./gltf-report.md)             | Free    | Yes         | Yes            | model optimization, mesh compression, texture resizing, gltf validation       | Web-based optimizer for 3D glTF files.          |
+| [Poly Haven](./poly-haven.md)               | Free    | Yes         | Yes            | realistic lighting, pbr materials, background environments, 3d scenes         | Public asset library offering CC0 textures.     |
 
 [← All sections](../README.md)

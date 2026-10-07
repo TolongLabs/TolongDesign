@@ -4,14 +4,15 @@
 
 > Hosting platforms, edge runtimes, and deployment infrastructure.
 
-5 tools — 0 free, 0 freemium, 0 paid, 5 unknown. Source: [Designeer](https://designeer.xyz/build).
+5 tools — 0 free, 4 freemium, 1 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/build).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Vercel](./vercel.md) | Unknown | — | — |  | Cloud platform for deploying Next.js applications. |
-| [Cloudflare](./cloudflare.md) | Unknown | — | — |  | Global edge network running serverless Workers. |
-| [Netlify](./netlify.md) | Unknown | — | — |  | Web platform providing continuous deployment pipelines. |
-| [Railway](./railway.md) | Unknown | — | — |  | Simplified infrastructure platform for deploying databases. |
-| [Fly.io](./fly-io.md) | Unknown | — | — |  | Runs Docker containers close to users. |
+| Tool                          | Paywall  | Open source | Agent-friendly | Best for                                                 | What it is                                                  |
+| ----------------------------- | -------- | ----------- | -------------- | -------------------------------------------------------- | ----------------------------------------------------------- |
+| [Vercel](./vercel.md)         | Freemium | No          | Yes            | nextjs apps, preview deployments, frontend delivery      | Cloud platform for deploying Next.js applications.          |
+| [Cloudflare](./cloudflare.md) | Freemium | No          | Yes            | edge apps, full-stack websites, serverless apis          | Global edge network running serverless Workers.             |
+| [Netlify](./netlify.md)       | Freemium | No          | Yes            | static sites, framework apps, preview deployments        | Web platform providing continuous deployment pipelines.     |
+| [Railway](./railway.md)       | Freemium | No          | Yes            | full-stack apps, managed postgres, deployment prototypes | Simplified infrastructure platform for deploying databases. |
+| [Fly.io](./fly-io.md)         | Paid     | No          | Yes            | dockerized apps, runtime control, multi-region workloads | Runs Docker containers close to users.                      |
 
 [← All sections](../README.md)

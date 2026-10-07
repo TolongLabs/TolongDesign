@@ -4,20 +4,21 @@
 
 > Interface design canvases, tokens, and layout systems.
 
-11 tools — 0 free, 0 freemium, 0 paid, 11 unknown. Source: [Designeer](https://designeer.xyz/).
+11 tools — 5 free, 4 freemium, 2 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Figma](./figma.md) | Unknown | — | — |  | Collaborative interface design and prototyping platform. |
-| [Framer](./framer.md) | Unknown | — | — |  | Visual canvas designing and publishing websites. |
-| [make.design](./make-design.md) | Unknown | — | — |  | AI generator turning prompts into polished designs. |
-| [Penpot](./penpot.md) | Unknown | — | — |  | Open-source web design platform supporting SVG. |
-| [Spline](./spline.md) | Unknown | — | — |  | Browser-based 3D design software with physics. |
-| [Interface Craft](./interface-craft.md) | Unknown | — | — |  | Articles exploring modern digital interface craftsmanship. |
-| [UI Labs](./ui-labs.md) | Unknown | — | — |  | Laboratory deconstructing animated UI components. |
-| [UIWTF](./uiwtf.md) | Unknown | — | — |  | Showcase of experimental web interface patterns. |
-| [Lab01](./lab01.md) | Unknown | — | — |  | Refined UI experiments from a studio. |
-| [design.dev](./design-dev.md) | Unknown | — | — |  | AI-assisted design token and system editor. |
-| [UI Playbook](./ui-playbook.md) | Unknown | — | — |  | Guide to common UI component states. |
+| Tool                                    | Paywall  | Open source | Agent-friendly | Best for                                                     | What it is                                                 |
+| --------------------------------------- | -------- | ----------- | -------------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| [Figma](./figma.md)                     | Freemium | No          | Yes            | interface design, prototypes, developer handoff              | Collaborative interface design and prototyping platform.   |
+| [Framer](./framer.md)                   | Freemium | No          | No             | marketing sites, portfolios, visual publishing               | Visual canvas designing and publishing websites.           |
+| [make.design](./make-design.md)         | Paid     | No          | No             | prompt-generated marketing pages, design exploration         | AI generator turning prompts into polished designs.        |
+| [Penpot](./penpot.md)                   | Freemium | Yes         | Yes            | interface design, design systems, self-hosted workflows      | Open-source web design platform supporting SVG.            |
+| [Spline](./spline.md)                   | Freemium | No          | Yes            | interactive 3d scenes, web visuals, prototypes               | Browser-based 3D design software with physics.             |
+| [Interface Craft](./interface-craft.md) | Paid     | No          | No             | interface craft study, interaction references                | Articles exploring modern digital interface craftsmanship. |
+| [UI Labs](./ui-labs.md)                 | Free     | No          | No             | component behavior study, interaction inspiration            | Laboratory deconstructing animated UI components.          |
+| [UIWTF](./uiwtf.md)                     | Free     | No          | Yes            | interface inspiration, small interaction studies             | Showcase of experimental web interface patterns.           |
+| [Lab01](./lab01.md)                     | Free     | No          | No             | visual references, interface studies                         | Refined UI experiments from a studio.                      |
+| [design.dev](./design-dev.md)           | Free     | No          | Yes            | design-token drafts, design documentation, agent prompts     | AI-assisted design token and system editor.                |
+| [UI Playbook](./ui-playbook.md)         | Free     | No          | No             | component state checklists, frontend implementation guidance | Guide to common UI component states.                       |
 
 [← All sections](../README.md)

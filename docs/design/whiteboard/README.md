@@ -4,13 +4,14 @@
 
 > Infinite canvas workspaces for wireframing and systems architecture.
 
-4 tools — 0 free, 0 freemium, 0 paid, 4 unknown. Source: [Designeer](https://designeer.xyz/utilities).
+4 tools — 0 free, 4 freemium, 0 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/utilities).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [tldraw](./tldraw.md) | Unknown | — | — |  | Infinite whiteboard library offering React SDK. |
-| [Excalidraw](./excalidraw.md) | Unknown | — | — |  | Collaborative whiteboard with hand-drawn sketch aesthetic. |
-| [Obsidian](./obsidian.md) | Unknown | — | — |  | Local-first Markdown knowledge base with graphs. |
-| [Linear](./linear.md) | Unknown | — | — |  | Project management software setting speed standards. |
+| Tool                          | Paywall  | Open source | Agent-friendly | Best for                                                   | What it is                                                 |
+| ----------------------------- | -------- | ----------- | -------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| [tldraw](./tldraw.md)         | Freemium | No          | Yes            | custom canvas apps, diagrams, collaborative whiteboards    | Infinite whiteboard library offering React SDK.            |
+| [Excalidraw](./excalidraw.md) | Freemium | Yes         | Yes            | sketch diagrams, wireframes, canvas embedding              | Collaborative whiteboard with hand-drawn sketch aesthetic. |
+| [Obsidian](./obsidian.md)     | Freemium | No          | No             | design research, interconnected briefs, local project docs | Local-first Markdown knowledge base with graphs.           |
+| [Linear](./linear.md)         | Freemium | No          | Yes            | product roadmaps, issue triage, team planning              | Project management software setting speed standards.       |
 
 [← All sections](../README.md)

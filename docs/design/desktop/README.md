@@ -4,21 +4,22 @@
 
 > Native macOS and desktop utility apps for productivity.
 
-12 tools — 0 free, 0 freemium, 0 paid, 12 unknown. Source: [Designeer](https://designeer.xyz/utilities).
+12 tools — 4 free, 4 freemium, 4 paid, 0 unknown. Source:
+[Designeer](https://designeer.xyz/utilities).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Raycast](./raycast.md) | Unknown | — | — |  | Extendable desktop launcher replacing Spotlight. |
-| [Ghostty](./ghostty.md) | Unknown | — | — |  | Fast GPU-accelerated terminal emulator for developers. |
-| [Warp](./warp.md) | Unknown | — | — |  | Rust-based terminal with block outputs and AI. |
-| [CleanShot X](./cleanshot-x.md) | Unknown | — | — |  | Ultimate screen capture and recording utility. |
-| [Granola](./granola.md) | Unknown | — | — |  | AI notepad generating meeting summaries without bots. |
-| [LocalSend](./localsend.md) | Unknown | — | — |  | Share files securely across local Wi-Fi networks. |
-| [Canario](./canario.md) | Unknown | — | — |  | Terminal organizing CLI sessions into panes. |
-| [CoolDock](./cooldock.md) | Unknown | — | — |  | Secondary dock supporting desktop monitoring widgets. |
-| [Supaste](./supaste.md) | Unknown | — | — |  | Clipboard manager and screenshot history for Mac. |
-| [Runey](./runey.md) | Unknown | — | — |  | Invoicing and client tracking app for freelancers. |
-| [Revone](./revone.md) | Unknown | — | — |  | Unified revenue dashboard aggregating payment metrics. |
-| [Zen Browser](./zen-browser.md) | Unknown | — | — |  | Firefox fork with vertical tabs and focus. |
+| Tool                            | Paywall  | Open source | Agent-friendly | Best for                                                                                     | What it is                                             |
+| ------------------------------- | -------- | ----------- | -------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [Raycast](./raycast.md)         | Freemium | No          | No             | developer shortcuts, app search, desktop workflows                                           | Extendable desktop launcher replacing Spotlight.       |
+| [Ghostty](./ghostty.md)         | Free     | Yes         | No             | terminal workflows, shell-based development, configurable themes                             | Fast GPU-accelerated terminal emulator for developers. |
+| [Warp](./warp.md)               | Freemium | Yes         | Yes            | agentic workflows, terminal navigation, command history management                           | Rust-based terminal with block outputs and AI.         |
+| [CleanShot X](./cleanshot-x.md) | Paid     | No          | No             | scrolling capture, quick annotations, bug reports, visual documentation                      | Ultimate screen capture and recording utility.         |
+| [Granola](./granola.md)         | Freemium | No          | No             | client scoping, design discovery, sprint reviews, spec extraction                            | AI notepad generating meeting summaries without bots.  |
+| [LocalSend](./localsend.md)     | Free     | Yes         | Yes            | local file transfers, mobile testing, offline asset sharing, air-gapped environments         | Share files securely across local Wi-Fi networks.      |
+| [Canario](./canario.md)         | Free     | Yes         | Yes            | multi-pane development, live tab previews, command bar navigation, terminal image extraction | Terminal organizing CLI sessions into panes.           |
+| [CoolDock](./cooldock.md)       | Paid     | No          | No             | live desktop monitoring, temporary file shelves, quick actions, music controls               | Secondary dock supporting desktop monitoring widgets.  |
+| [Supaste](./supaste.md)         | Paid     | No          | No             | clipboard history, visual clip search, notch shelf storage, screenshot ocr                   | Clipboard manager and screenshot history for Mac.      |
+| [Runey](./runey.md)             | Freemium | No          | No             | client billing, project milestone tracking, freelance expense management, proposals          | Invoicing and client tracking app for freelancers.     |
+| [Revone](./revone.md)           | Paid     | No          | No             | multi-platform revenue monitoring, menu bar mrr, unified order tracking, live widgets        | Unified revenue dashboard aggregating payment metrics. |
+| [Zen Browser](./zen-browser.md) | Free     | Yes         | Yes            | vertical tabs, split-screen browsing, web development testing, distraction-free workflow     | Firefox fork with vertical tabs and focus.             |
 
 [← All sections](../README.md)

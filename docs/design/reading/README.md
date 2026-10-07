@@ -4,42 +4,43 @@
 
 > Essential books, design engineering essays, and craft tutorials.
 
-33 tools — 0 free, 0 freemium, 0 paid, 33 unknown. Source: [Designeer](https://designeer.xyz/).
+33 tools — 20 free, 8 freemium, 3 paid, 2 unknown. Source:
+[Designeer](https://designeer.xyz/).
 
-| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |
-| ---- | ------- | ----------- | -------------- | -------- | ---------- |
-| [Refactoring UI](./refactoring-ui.md) | Unknown | — | — |  | Practical design guide for building interfaces. |
-| [Practical Typography](./practical-typography.md) | Unknown | — | — |  | Essential book covering typographic rules and layout. |
-| [web.dev](./web-dev.md) | Unknown | — | — |  | Guidance on web performance and modern standards. |
-| [Inclusive Components](./inclusive-components.md) | Unknown | — | — |  | Pattern library teaching accessible component design. |
-| [Josh Comeau](./josh-comeau.md) | Unknown | — | — |  | Interactive tutorials breaking down CSS mechanics. |
-| [Design Books](./design-books.md) | Unknown | — | — |  | Directory of essential design literature by discipline. |
-| [Learn Kernels](./learn-kernels.md) | Unknown | — | — |  | Interactive guide exploring GPU kernel programming. |
-| [Design System Checklist](./design-system-checklist.md) | Unknown | — | — |  | Comprehensive checklist for production design systems. |
-| [Learn UI](./learn-ui.md) | Unknown | — | — |  | Video course teaching practical user interface design. |
-| [Design Spells](./design-spells.md) | Unknown | — | — |  | Dissecting subtle design details in software. |
-| [Good UI](./good-ui.md) | Unknown | — | — |  | Evidence-based UI design patterns and data. |
-| [Abduzeedo](./abduzeedo.md) | Unknown | — | — |  | Daily design blog sharing visual inspiration. |
-| [UX Collective](./ux-collective.md) | Unknown | — | — |  | Curated publication sharing critical UX essays. |
-| [Smashing Magazine](./smashing-magazine.md) | Unknown | — | — |  | Reliable resource for web designers and developers. |
-| [Codrops](./codrops.md) | Unknown | — | — |  | Blog publishing creative frontend experiments and tutorials. |
-| [Muzli](./muzli.md) | Unknown | — | — |  | Daily digest curating latest design trends. |
-| [Boxes and Arrows](./boxes-and-arrows.md) | Unknown | — | — |  | Journal dedicated to information architecture craft. |
-| [Designer News](./designer-news.md) | Unknown | — | — |  | Community-driven news feed highlighting design stories. |
-| [Web Designer Depot](./web-designer-depot.md) | Unknown | — | — |  | Design publication covering web standards and tools. |
-| [Designmodo](./designmodo.md) | Unknown | — | — |  | Articles and tools covering web design. |
-| [99designs Discover](./99designs-discover.md) | Unknown | — | — |  | Design blog exploring creative branding insights. |
-| [Interfaces](./interfaces.md) | Unknown | — | — |  | Monthly digital publication exploring digital interfaces. |
-| [Making Software](./making-software.md) | Unknown | — | — |  | Essays examining how tools shape design. |
-| [Visual Rambling](./visual-rambling.md) | Unknown | — | — |  | Personal visual essays exploring interface design. |
-| [Degreeless Design](./degreeless-design.md) | Unknown | — | — |  | Curated roadmap for mastering product design. |
-| [SVG Guide](./svg-guide.md) | Unknown | — | — |  | Guide to mastering SVG markup and animations. |
-| [Animations.dev](./animations-dev.md) | Unknown | — | — |  | Course on creating web animations that feel right. |
-| [UI Skills](./ui-skills.md) | Unknown | — | — |  | Course teaching techniques for designing with AI. |
-| [AI for UI](./ai-for-ui.md) | Unknown | — | — |  | Course teaching AI workflows for interfaces. |
-| [UI Land](./ui-land.md) | Unknown | — | — |  | Interviews with leading design engineers on craft. |
-| [Laws of UX](./laws-of-ux.md) | Unknown | — | — |  | Psychological principles that influence interface usability. |
-| [User Interface Wiki](./user-interface-wiki.md) | Unknown | — | — |  | Knowledge base documenting interface guidelines and rules. |
-| [The Shape of AI](./the-shape-of-ai.md) | Unknown | — | — |  | Pattern library highlighting AI interface design. |
+| Tool                                                    | Paywall  | Open source | Agent-friendly | Best for                                                                                           | What it is                                                   |
+| ------------------------------------------------------- | -------- | ----------- | -------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [Refactoring UI](./refactoring-ui.md)                   | Paid     | No          | No             | layout hierarchy, spacing decisions, visual polish                                                 | Practical design guide for building interfaces.              |
+| [Practical Typography](./practical-typography.md)       | Free     | No          | No             | text hierarchy, line length, font selection                                                        | Essential book covering typographic rules and layout.        |
+| [web.dev](./web-dev.md)                                 | Free     | No          | Yes            | browser standards, performance fixes, accessibility implementation                                 | Guidance on web performance and modern standards.            |
+| [Inclusive Components](./inclusive-components.md)       | Freemium | No          | Yes            | accessible interface patterns, semantic markup, interaction behavior                               | Pattern library teaching accessible component design.        |
+| [Josh Comeau](./josh-comeau.md)                         | Freemium | No          | Yes            | css mechanics, react learning, interactive demos                                                   | Interactive tutorials breaking down CSS mechanics.           |
+| [Design Books](./design-books.md)                       | Free     | No          | No             | reading lists, design-system foundations, ux references                                            | Directory of essential design literature by discipline.      |
+| [Learn Kernels](./learn-kernels.md)                     | Free     | No          | Yes            | gpu performance, kernel programming, technical study                                               | Interactive guide exploring GPU kernel programming.          |
+| [Design System Checklist](./design-system-checklist.md) | Free     | No          | No             | design-system planning, token review, component governance                                         | Comprehensive checklist for production design systems.       |
+| [Learn UI](./learn-ui.md)                               | Free     | No          | Yes            | micro-interactions, interface craft, motion decisions                                              | Video course teaching practical user interface design.       |
+| [Design Spells](./design-spells.md)                     | Free     | No          | No             | interaction research, micro-interaction inspiration, interface critique                            | Dissecting subtle design details in software.                |
+| [Good UI](./good-ui.md)                                 | Freemium | No          | No             | checkout experiments, landing-page testing, conversion review                                      | Evidence-based UI design patterns and data.                  |
+| [Abduzeedo](./abduzeedo.md)                             | Free     | No          | No             | visual research, brand inspiration, web design ideas                                               | Daily design blog sharing visual inspiration.                |
+| [UX Collective](./ux-collective.md)                     | Free     | No          | No             | critical design essays, industry trend analysis, design ethics                                     | Curated publication sharing critical UX essays.              |
+| [Smashing Magazine](./smashing-magazine.md)             | Freemium | No          | No             | in-depth frontend tutorials, css deep dives, web accessibility standards                           | Reliable resource for web designers and developers.          |
+| [Codrops](./codrops.md)                                 | Free     | Yes         | Yes            | cutting-edge ui interactions, experimental webgl, scroll animations                                | Blog publishing creative frontend experiments and tutorials. |
+| [Muzli](./muzli.md)                                     | Freemium | No          | No             | daily design pulse, discovering emerging web projects, visual trend tracking                       | Daily digest curating latest design trends.                  |
+| [Boxes and Arrows](./boxes-and-arrows.md)               | Free     | No          | No             | foundational information architecture, taxonomy design, mental models                              | Journal dedicated to information architecture craft.         |
+| [Designer News](./designer-news.md)                     | Unknown  | No          | No             | historical reference for community-curated design discussions                                      | Community-driven news feed highlighting design stories.      |
+| [Web Designer Depot](./web-designer-depot.md)           | Free     | No          | No             | web design news, design roundup lists, freelance agency advice                                     | Design publication covering web standards and tools.         |
+| [Designmodo](./designmodo.md)                           | Freemium | No          | No             | static website building, html email newsletter templates, web design articles                      | Articles and tools covering web design.                      |
+| [99designs Discover](./99designs-discover.md)           | Free     | No          | No             | brand identity exploration, logo style benchmarks, creative briefs                                 | Design blog exploring creative branding insights.            |
+| [Interfaces](./interfaces.md)                           | Freemium | No          | Yes            | high-craft design engineering, interactive motion breakdowns, subtle ui polish                     | Monthly digital publication exploring digital interfaces.    |
+| [Making Software](./making-software.md)                 | Paid     | No          | No             | understanding how digital tools work under the hood, rasterization, vector geometry                | Essays examining how tools shape design.                     |
+| [Visual Rambling](./visual-rambling.md)                 | Free     | No          | No             | visualizing 3D transformations, dithering algorithms, distance fields                              | Personal visual essays exploring interface design.           |
+| [Degreeless Design](./degreeless-design.md)             | Free     | No          | No             | self-guided product design education, book recommendations, UX process mastery                     | Curated roadmap for mastering product design.                |
+| [SVG Guide](./svg-guide.md)                             | Freemium | No          | No             | mastering svg path syntax, vector micro-interactions, responsive svg scaling                       | Guide to mastering SVG markup and animations.                |
+| [Animations.dev](./animations-dev.md)                   | Paid     | No          | Yes            | mastering animation timing and easing, physics-based springs, fluid react ui                       | Course on creating web animations that feel right.           |
+| [UI Skills](./ui-skills.md)                             | Free     | Yes         | Yes            | equipping ai coding agents with ui design rules, mcp server integration, frontend audit checklists | Course teaching techniques for designing with AI.            |
+| [AI for UI](./ai-for-ui.md)                             | Unknown  | No          | No             | learning ai-assisted design engineering workflows, prototyping with ai                             | Course teaching AI workflows for interfaces.                 |
+| [UI Land](./ui-land.md)                                 | Free     | No          | No             | benchmarking design engineer workflows, tool stacks, software craft philosophies                   | Interviews with leading design engineers on craft.           |
+| [Laws of UX](./laws-of-ux.md)                           | Free     | No          | Yes            | grounding design decisions in cognitive psychology, usability audits, design reviews               | Psychological principles that influence interface usability. |
+| [User Interface Wiki](./user-interface-wiki.md)         | Free     | Yes         | Yes            | enforcing interface craft rules in ai coding agents, motion design guidelines, micro-interactions  | Knowledge base documenting interface guidelines and rules.   |
+| [The Shape of AI](./the-shape-of-ai.md)                 | Free     | No          | No             | architecting generative ai user interfaces, prompting interactions, human-ai trust patterns        | Pattern library highlighting AI interface design.            |
 
 [← All sections](../README.md)
