@@ -1,7 +1,7 @@
 // Validates every tool doc against the catalogue and the template contract.
 // Usage: bun run check            (all docs)
 //        bun run check -- --quiet (errors only)
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { dirname, join, normalize } from 'node:path'
 import { FRONTMATTER_KEYS, HEADINGS, PAYWALLS, ROOT, loadCatalogue, readDoc } from './lib'
 
@@ -49,6 +49,15 @@ for (const tool of tools) {
   if (lines < 60) warnings.push(`${tool.doc}: only ${lines} lines`)
   const examples = body.split(/^## Examples$/m)[1]?.split(/^## /m)[0] ?? ''
   if ((examples.match(/\]\(https?:\/\//g) ?? []).length < 3) warnings.push(`${tool.doc}: fewer than 3 example links`)
+}
+
+// Hand-written guides must not link to docs that do not exist.
+for (const guide of ['README.md', 'AGENTS.md', 'docs/README.md', 'docs/PLAYBOOK.md']) {
+  const body = readFileSync(join(ROOT, guide), 'utf8')
+  for (const m of body.matchAll(/\]\((\.{0,2}\/?[^)#\s:]+\.md)\)/g)) {
+    const target = normalize(join(dirname(join(ROOT, guide)), m[1]))
+    if (!existsSync(target)) errors.push(`${guide}: broken link ${m[1]}`)
+  }
 }
 
 if (!quiet) for (const w of warnings) console.log(`warn  ${w}`)
