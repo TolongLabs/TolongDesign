@@ -6,16 +6,16 @@
     "semantic_hash": "1411a6b192b952e608a203c93a1d8121"
   },
   "data/catalogue.json": {
-    "mtime": 1791344180.3419003,
-    "seen": 1791348263.6189334,
-    "ast_hash": "85dc007c0d0f68cac4eacdbe554081f5",
-    "semantic_hash": "85dc007c0d0f68cac4eacdbe554081f5"
+    "mtime": 1791447991.7376807,
+    "seen": 1791448152.3520317,
+    "ast_hash": "f1576158d5dfc5174a1219950ba95538",
+    "semantic_hash": "f1576158d5dfc5174a1219950ba95538"
   },
   "data/index.json": {
-    "mtime": 1791349483.8935676,
-    "seen": 1791349933.3884714,
-    "ast_hash": "5ff1de72e397c3e5a2d98481fc6dfc03",
-    "semantic_hash": "5ff1de72e397c3e5a2d98481fc6dfc03"
+    "mtime": 1791448027.2825418,
+    "seen": 1791448152.3520355,
+    "ast_hash": "cf7948c91b556c940d672f576a82f4d7",
+    "semantic_hash": "cf7948c91b556c940d672f576a82f4d7"
   },
   "package.json": {
     "mtime": 1791347407.0216548,
@@ -156,10 +156,10 @@
     "semantic_hash": "9545cee49e5add40b4c2d979b18a6abd"
   },
   "docs/design/component-libraries/README.md": {
-    "mtime": 1791349484.4455674,
-    "seen": 1791349933.3885753,
-    "ast_hash": "1046479b446fd02403243d5fc2459f7a",
-    "semantic_hash": "1046479b446fd02403243d5fc2459f7a"
+    "mtime": 1791448027.8456068,
+    "seen": 1791448152.3520548,
+    "ast_hash": "7d7def83a2cc9bab29ae681a23b252f1",
+    "semantic_hash": "7d7def83a2cc9bab29ae681a23b252f1"
   },
   "docs/design/component-libraries/animate-ui.md": {
     "mtime": 1791345349.245819,
@@ -882,10 +882,10 @@
     "semantic_hash": "bf367d02dc0d0aed1a9ba4213e2e5a87"
   },
   "docs/design/README.md": {
-    "mtime": 1791349484.1415675,
-    "seen": 1791349933.3885138,
-    "ast_hash": "497cde7fbeb60fd8dfabda4036a784de",
-    "semantic_hash": "497cde7fbeb60fd8dfabda4036a784de"
+    "mtime": 1791448027.5801618,
+    "seen": 1791448152.3520525,
+    "ast_hash": "bfb8abbc15637c3ce9d91b3bbd4e6f98",
+    "semantic_hash": "bfb8abbc15637c3ce9d91b3bbd4e6f98"
   },
   "docs/design/agents-mcp/agentcn.md": {
     "mtime": 1791347225.5857387,
@@ -2752,5 +2752,11 @@
     "seen": 1791349933.38905,
     "ast_hash": "f80224157dc566bf7ca6870fba930449",
     "semantic_hash": "f80224157dc566bf7ca6870fba930449"
+  },
+  "docs/design/component-libraries/ascii-rest.md": {
+    "mtime": 1791448031.3756523,
+    "seen": 1791448152.3520567,
+    "ast_hash": "c75973e0755e14f350312747fc1e55d2",
+    "semantic_hash": "c75973e0755e14f350312747fc1e55d2"
   }
 }
