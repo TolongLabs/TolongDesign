@@ -12969,6 +12969,42 @@
    "agent_friendly": false,
    "last_verified": "2026-10-07",
    "doc": "docs/design/reading/the-shape-of-ai.md"
+  },
+  {
+   "name": "ascii.rest",
+   "slug": "ascii-rest",
+   "section": "Component Libraries",
+   "section_slug": "component-libraries",
+   "source_url": "https://ascii.rest/",
+   "designeer_url": "https://ascii.rest/",
+   "designeer_blurb": "196 animated ASCII art pieces for web pages, as dependency-free TypeScript modules for React, Next.js, Astro or one HTML tag.",
+   "paywall": "free",
+   "pricing_summary": "Free and open source under the MIT licence; optional sponsorship only.",
+   "open_source": true,
+   "license": "MIT",
+   "category_tags": [
+    "typescript",
+    "react",
+    "ascii-art",
+    "animation",
+    "retro",
+    "web-components"
+   ],
+   "best_for": [
+    "animated ascii hero visuals",
+    "retro loaders",
+    "terminal-style charts and logos"
+   ],
+   "stack": [
+    "typescript",
+    "react",
+    "nextjs",
+    "astro",
+    "html"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-08",
+   "doc": "docs/design/component-libraries/ascii-rest.md"
   }
  ]
 }

@@ -4221,6 +4221,16 @@
    "section_slug": "reading",
    "designeer_url": "https://designeer.xyz/",
    "doc": "docs/design/reading/the-shape-of-ai.md"
+  },
+  {
+   "name": "ascii.rest",
+   "url": "https://ascii.rest/",
+   "description": "196 animated ASCII art pieces for web pages, as dependency-free TypeScript modules for React, Next.js, Astro or one HTML tag.",
+   "section": "Component Libraries",
+   "slug": "ascii-rest",
+   "section_slug": "component-libraries",
+   "designeer_url": "https://ascii.rest/",
+   "doc": "docs/design/component-libraries/ascii-rest.md"
   }
  ],
  "people": [

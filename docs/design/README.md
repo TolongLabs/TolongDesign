@@ -2,16 +2,16 @@
 
 # Design catalogue
 
-422 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on
+423 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on
 2026-10-07 and researched one by one. Each tool has its own doc with source URL,
 paywall, how to use, examples, and agent notes.
 
-**Paywall overview:** 270 free · 122 freemium · 20 paid · 10 unknown.
+**Paywall overview:** 271 free · 122 freemium · 20 paid · 10 unknown.
 
 | Section                                                | Tools | Free | Freemium | Paid | What it covers                                                       |
 | ------------------------------------------------------ | ----- | ---- | -------- | ---- | -------------------------------------------------------------------- |
 | [Design Galleries](./design-galleries/README.md)       | 78    | 49   | 26       | 1    | Design galleries, interface patterns, and web inspiration.           |
-| [Component Libraries](./component-libraries/README.md) | 109   | 76   | 30       | 0    | Production UI primitives and accessible component libraries.         |
+| [Component Libraries](./component-libraries/README.md) | 110   | 77   | 30       | 0    | Production UI primitives and accessible component libraries.         |
 | [Development](./development/README.md)                 | 24    | 16   | 5        | 3    | Modern code editors, runtimes, and local tooling.                    |
 | [Agents & MCP](./agents-mcp/README.md)                 | 35    | 16   | 17       | 2    | Coding agents, local MCP servers, and machine specs.                 |
 | [Motion](./motion/README.md)                           | 11    | 7    | 3        | 1    | Animation timing, spring physics, and motion libraries.              |
