@@ -13138,6 +13138,37 @@
    "agent_friendly": false,
    "last_verified": "2026-10-11",
    "doc": "docs/design/3d/mixamo.md"
+  },
+  {
+   "name": "Image-to-code skill",
+   "slug": "image-to-code-skill",
+   "section": "Agents & MCP",
+   "section_slug": "agents-mcp",
+   "source_url": "https://github.com/Leonxlnx/taste-skill/tree/main/skills/image-to-code-skill",
+   "designeer_url": "https://github.com/Leonxlnx/taste-skill/tree/main/skills/image-to-code-skill",
+   "designeer_blurb": "Generate visual references, analyze them, and implement a matching frontend.",
+   "paywall": "free",
+   "pricing_summary": "Free, MIT-licensed skill; image-generation provider charges are separate and not published here.",
+   "open_source": true,
+   "license": "MIT",
+   "category_tags": [
+    "ai",
+    "agents",
+    "design",
+    "image-generation",
+    "skill",
+    "frontend"
+   ],
+   "best_for": [
+    "image-guided website design",
+    "marketing sites",
+    "landing pages",
+    "portfolio sites"
+   ],
+   "stack": [],
+   "agent_friendly": true,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/agents-mcp/image-to-code-skill.md"
   }
  ]
 }

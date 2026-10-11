@@ -22,7 +22,10 @@ Use it two ways:
 
 1. **As a reference** while building a TolongLabs website: start at
    [docs/README.md](docs/README.md), pick tools with the
-   [design playbook](docs/PLAYBOOK.md), filter with `bun run find`.
+   [design playbook](docs/PLAYBOOK.md), filter with `bun run find`. For a
+   use-case-aware design task, invoke `design-project` and follow
+   [the project design workflow](docs/WORKFLOW.md); retrieve complete source
+   context with `bun run design`.
 2. **As a repo to maintain**: add, refresh, or correct tool docs.
 
 ## Layout
@@ -58,22 +61,21 @@ bun run format              # prettier
 ## Rules
 
 - Think before editing, keep changes minimal and surgical, and verify before
-  claiming done: run `bun run check` and `bun run index` after touching any
-  doc, then `bun run format`.
+  claiming done: run `bun run check` and `bun run index` after touching any doc,
+  then `bun run format`.
 - **The template is the contract.** Every tool doc has the frontmatter keys and
   the nine H2 headings of [templates/tool-doc.md](templates/tool-doc.md), in
   order. `bun run check` enforces it.
 - **Never invent facts.** Prices, URLs, package names, install commands and
-  counts come from the official site, checked on the date in `last_verified`.
-  If something is not published, write "Not published". When you update a
-  fact, update `last_verified` and the "checked" date in Sources.
+  counts come from the official site, checked on the date in `last_verified`. If
+  something is not published, write "Not published". When you update a fact,
+  update `last_verified` and the "checked" date in Sources.
 - **Generated files are never hand-edited**: `docs/design/README.md`,
-  `docs/design/<section>/README.md`, `docs/design/people.md`,
-  `data/index.json`. Change the doc frontmatter (or `data/catalogue.json`) and
-  run `bun run index`.
-- **Adding a tool:** add an entry to `data/catalogue.json` `tools[]` (with
-  `doc` = `docs/design/<section_slug>/<slug>.md`), write the doc from the
-  template, then `bun run index && bun run check`.
+  `docs/design/<section>/README.md`, `docs/design/people.md`, `data/index.json`.
+  Change the doc frontmatter (or `data/catalogue.json`) and run `bun run index`.
+- **Adding a tool:** add an entry to `data/catalogue.json` `tools[]` (with `doc`
+  = `docs/design/<section_slug>/<slug>.md`), write the doc from the template,
+  then `bun run index && bun run check`.
 - **Paywall is about the tool, not the licence.** Open-source with a paid pro
   tier is `freemium`. Trial-only is `paid`. Check commercial / client-work
   licensing for paid assets (fonts, icon sets, templates) and note it.
@@ -87,13 +89,13 @@ bun run format              # prettier
 
 ## Documents
 
-| Read When                                                 | Document                                        |
-| --------------------------------------------------------- | ----------------------------------------------- |
-| Orienting in the repo, or using it on a project           | [docs/README.md](docs/README.md)                |
-| Starting a new website design / choosing a stack          | [Design playbook](docs/PLAYBOOK.md)             |
-| Browsing every section with counts                        | [Design catalogue](docs/design/README.md)       |
-| Writing or refreshing a tool doc                          | [Tool doc template](templates/tool-doc.md)      |
-| Fanning research out to worker agents                     | [Worker brief](templates/worker-brief.md)       |
-| Branching, committing, or opening a pull request          | [Contributing](.github/CONTRIBUTING.md)         |
-| Answering "which tools relate to X" across the repo       | `graphify-out/GRAPH_REPORT.md`, `/graphify query` |
-| Refreshing the knowledge graph after doc changes          | `/graphify . --update`                          |
+| Read When                                           | Document                                          |
+| --------------------------------------------------- | ------------------------------------------------- |
+| Orienting in the repo, or using it on a project     | [docs/README.md](docs/README.md)                  |
+| Starting a new website design / choosing a stack    | [Design playbook](docs/PLAYBOOK.md)               |
+| Browsing every section with counts                  | [Design catalogue](docs/design/README.md)         |
+| Writing or refreshing a tool doc                    | [Tool doc template](templates/tool-doc.md)        |
+| Fanning research out to worker agents               | [Worker brief](templates/worker-brief.md)         |
+| Branching, committing, or opening a pull request    | [Contributing](.github/CONTRIBUTING.md)           |
+| Answering "which tools relate to X" across the repo | `graphify-out/GRAPH_REPORT.md`, `/graphify query` |
+| Refreshing the knowledge graph after doc changes    | `/graphify . --update`                            |
