@@ -4,17 +4,18 @@
 
 > Interactive fragment shaders, procedural noise, and canvas effects.
 
-7 tools — 6 free, 1 freemium, 0 paid, 0 unknown. Source:
+8 tools — 6 free, 2 freemium, 0 paid, 0 unknown. Source:
 [Designeer](https://designeer.xyz/visuals).
 
-| Tool                                    | Paywall  | Open source | Agent-friendly | Best for                                                                                | What it is                                              |
-| --------------------------------------- | -------- | ----------- | -------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| [Book of Shaders](./book-of-shaders.md) | Free     | Yes         | No             | learning shaders, procedural textures, math visualization, creative coding              | Interactive guide to mastering fragment shaders.        |
-| [compute.toys](./compute-toys.md)       | Free     | Yes         | Yes            | webgpu experimentation, wgsl compute shaders, particle systems, simulations             | Sandbox for authoring WGSL compute shaders.             |
-| [Shaderfrog](./shaderfrog.md)           | Freemium | No          | No             | visual shader composition, three-js materials, procedural textures, material blending   | Visual node-based editor for composing shaders.         |
-| [shadercn](./shadercn.md)               | Free     | Yes         | Yes            | webgpu react components, modern landing pages, interactive hero backgrounds             | Shader components for React, built on vgpu and TypeGPU. |
-| [Paper Shaders](./paper-shaders.md)     | Free     | Yes         | Yes            | mesh gradients, liquid metal, noise textures, landing page backgrounds, zero-dependency | Zero-dependency shaders ready to import.                |
-| [OpenShaders](./openshaders.md)         | Free     | Yes         | No             | shader inspiration, unique web graphics, generative art, community showcase             | Open-source shader collection for web projects.         |
-| [Orbkit](./orbkit.md)                   | Free     | Yes         | Yes            | orb animations, raymarching effects, volumetric spheres, interactive heroes             | WebGL shader renderer for orb animations.               |
+| Tool                                    | Paywall  | Open source | Agent-friendly | Best for                                                                                | What it is                                                      |
+| --------------------------------------- | -------- | ----------- | -------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| [Book of Shaders](./book-of-shaders.md) | Free     | Yes         | No             | learning shaders, procedural textures, math visualization, creative coding              | Interactive guide to mastering fragment shaders.                |
+| [compute.toys](./compute-toys.md)       | Free     | Yes         | Yes            | webgpu experimentation, wgsl compute shaders, particle systems, simulations             | Sandbox for authoring WGSL compute shaders.                     |
+| [Shaderfrog](./shaderfrog.md)           | Freemium | No          | No             | visual shader composition, three-js materials, procedural textures, material blending   | Visual node-based editor for composing shaders.                 |
+| [shadercn](./shadercn.md)               | Free     | Yes         | Yes            | webgpu react components, modern landing pages, interactive hero backgrounds             | Shader components for React, built on vgpu and TypeGPU.         |
+| [Paper Shaders](./paper-shaders.md)     | Free     | Yes         | Yes            | mesh gradients, liquid metal, noise textures, landing page backgrounds, zero-dependency | Zero-dependency shaders ready to import.                        |
+| [OpenShaders](./openshaders.md)         | Free     | Yes         | No             | shader inspiration, unique web graphics, generative art, community showcase             | Open-source shader collection for web projects.                 |
+| [Orbkit](./orbkit.md)                   | Free     | Yes         | Yes            | orb animations, raymarching effects, volumetric spheres, interactive heroes             | WebGL shader renderer for orb animations.                       |
+| [Shaders](./shaders.md)                 | Freemium | Yes         | Yes            | webgpu effects, shader backgrounds, interactive graphics                                | WebGPU components for React, Vue, Svelte, Solid, JS and Framer. |
 
 [← All sections](../README.md)

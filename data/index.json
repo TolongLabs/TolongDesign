@@ -13234,6 +13234,137 @@
    "agent_friendly": false,
    "last_verified": "2026-10-11",
    "doc": "docs/design/design-galleries/icqr-magic-tree.md"
+  },
+  {
+   "name": "Shaders",
+   "slug": "shaders",
+   "section": "Shaders",
+   "section_slug": "shaders",
+   "source_url": "https://github.com/shader-effects-inc/shaders",
+   "designeer_url": "https://github.com/shader-effects-inc/shaders",
+   "designeer_blurb": "WebGPU components for React, Vue, Svelte, Solid, JS and Framer.",
+   "paywall": "freemium",
+   "pricing_summary": "The MIT package and scratch-built or free-designated exports are free for commercial use; Pro content requires a plan ($199/year; Lifetime price not published).",
+   "open_source": true,
+   "license": "MIT",
+   "category_tags": [
+    "webgpu",
+    "shaders",
+    "components",
+    "graphics",
+    "canvas"
+   ],
+   "best_for": [
+    "webgpu effects",
+    "shader backgrounds",
+    "interactive graphics"
+   ],
+   "stack": [
+    "react",
+    "vue",
+    "svelte",
+    "solid",
+    "javascript",
+    "framer"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/shaders/shaders.md"
+  },
+  {
+   "name": "Lenis",
+   "slug": "lenis",
+   "section": "Motion",
+   "section_slug": "motion",
+   "source_url": "https://github.com/darkroomengineering/lenis",
+   "designeer_url": "https://github.com/darkroomengineering/lenis",
+   "designeer_blurb": "Smooth scroll as it should be.",
+   "paywall": "free",
+   "pricing_summary": "Free, MIT-licensed core package; no paid tier or sign-up is listed for the core.",
+   "open_source": true,
+   "license": "MIT",
+   "category_tags": [
+    "smooth-scroll",
+    "scroll-linked-animation",
+    "gsap",
+    "react",
+    "javascript"
+   ],
+   "best_for": [
+    "scroll-linked animation",
+    "WebGL scroll sync",
+    "smooth anchor navigation"
+   ],
+   "stack": [
+    "javascript",
+    "typescript",
+    "react",
+    "vue",
+    "gsap"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/motion/lenis.md"
+  },
+  {
+   "name": "Lenis Templates",
+   "slug": "lenis-templates",
+   "section": "Interface Design",
+   "section_slug": "interface-design",
+   "source_url": "https://lenis.dev/templates",
+   "designeer_url": "https://lenis.dev/templates",
+   "designeer_blurb": "Templates published on the Lenis website.",
+   "paywall": "free",
+   "pricing_summary": "Free to browse; linked templates include free and paid items. Sample Framer Marketplace prices are $89–$129; currency code and billing cadence are not stated.",
+   "open_source": false,
+   "license": "unknown",
+   "category_tags": [
+    "templates",
+    "framer",
+    "motion"
+   ],
+   "best_for": [
+    "framer template discovery",
+    "scroll-motion references"
+   ],
+   "stack": [],
+   "agent_friendly": false,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/interface-design/lenis-templates.md"
+  },
+  {
+   "name": "Anatomy",
+   "slug": "anatomy",
+   "section": "Agents & MCP",
+   "section_slug": "agents-mcp",
+   "source_url": "https://github.com/wheresryan22/anatomy",
+   "designeer_url": "https://github.com/wheresryan22/anatomy",
+   "designeer_blurb": "A skill for interactive isometric technical figures.",
+   "paywall": "free",
+   "pricing_summary": "MIT-licensed public source; no paid tier is listed. Claude Code and model costs are not published.",
+   "open_source": true,
+   "license": "MIT",
+   "category_tags": [
+    "agent-skill",
+    "illustration",
+    "isometric",
+    "svg",
+    "webgl"
+   ],
+   "best_for": [
+    "technical explainers",
+    "interactive figures",
+    "docs illustrations"
+   ],
+   "stack": [
+    "claude-code",
+    "nodejs",
+    "react",
+    "nextjs"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/agents-mcp/anatomy.md"
   }
  ]
 }

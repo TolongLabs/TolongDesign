@@ -90,7 +90,7 @@ implementation in the target project, not this collection.
 
 ## Catalogue
 
-**430 resources · 17 sections · 132 design engineers.** Each resource records
+**434 resources · 17 sections · 132 design engineers.** Each resource records
 usage, examples, pricing, licensing, agent notes, and sources.
 
 | Need                     | Start here                                                                                                        |
