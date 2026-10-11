@@ -4,7 +4,7 @@
 
 > Coding agents, local MCP servers, and machine specs.
 
-37 tools — 18 free, 17 freemium, 2 paid, 0 unknown. Source:
+38 tools — 19 free, 17 freemium, 2 paid, 0 unknown. Source:
 [Designeer](https://designeer.xyz/build).
 
 | Tool                                                  | Paywall  | Open source | Agent-friendly | Best for                                                                               | What it is                                                                        |
@@ -46,5 +46,6 @@
 | [Causal](./causal.md)                                 | Freemium | No          | Yes            | spatial ideation, design planning, visual project mapping                              | AI canvas workspace for notes and plans.                                          |
 | [Image-to-code skill](./image-to-code-skill.md)       | Free     | Yes         | Yes            | image-guided website design, marketing sites, landing pages, portfolio sites           | Generate visual references, analyze them, and implement a matching frontend.      |
 | [REA](./rea.md)                                       | Free     | Yes         | Yes            | public web reference analysis, authorized app analysis, evidence-led reconstruction    | Reverse engineer anything with agents, from app behavior down to native binaries. |
+| [Anatomy](./anatomy.md)                               | Free     | Yes         | Yes            | technical explainers, interactive figures, docs illustrations                          | A skill for interactive isometric technical figures.                              |
 
 [← All sections](../README.md)

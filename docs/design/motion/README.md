@@ -4,7 +4,7 @@
 
 > Animation timing, spring physics, and motion libraries.
 
-12 tools — 8 free, 3 freemium, 1 paid, 0 unknown. Source:
+13 tools — 9 free, 3 freemium, 1 paid, 0 unknown. Source:
 [Designeer](https://designeer.xyz/components).
 
 | Tool                                        | Paywall  | Open source | Agent-friendly | Best for                                                                 | What it is                                                                                   |
@@ -21,5 +21,6 @@
 | [Devouring Details](./devouring-details.md) | Paid     | No          | Yes            | micro-interactions, motion critique, component study                     | Interactive book teaching micro-interaction design.                                          |
 | [textmotion](./textmotion.md)               | Free     | Yes         | Yes            | status labels, counters, button feedback                                 | Zero-dependency text roll animation primitive.                                               |
 | [Prompt Motion](./prompt-motion.md)         | Free     | No          | Yes            | launch videos, product promos, explainers, kinetic type                  | Gallery of motion videos made with Claude Opus 5.5, each with the prompt or skill behind it. |
+| [Lenis](./lenis.md)                         | Free     | Yes         | Yes            | scroll-linked animation, WebGL scroll sync, smooth anchor navigation     | Smooth scroll as it should be.                                                               |
 
 [← All sections](../README.md)

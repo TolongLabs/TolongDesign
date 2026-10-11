@@ -4,7 +4,7 @@
 
 > Interface design canvases, tokens, and layout systems.
 
-11 tools — 5 free, 4 freemium, 2 paid, 0 unknown. Source:
+12 tools — 6 free, 4 freemium, 2 paid, 0 unknown. Source:
 [Designeer](https://designeer.xyz/).
 
 | Tool                                    | Paywall  | Open source | Agent-friendly | Best for                                                     | What it is                                                 |
@@ -20,5 +20,6 @@
 | [Lab01](./lab01.md)                     | Free     | No          | No             | visual references, interface studies                         | Refined UI experiments from a studio.                      |
 | [design.dev](./design-dev.md)           | Free     | No          | Yes            | design-token drafts, design documentation, agent prompts     | AI-assisted design token and system editor.                |
 | [UI Playbook](./ui-playbook.md)         | Free     | No          | No             | component state checklists, frontend implementation guidance | Guide to common UI component states.                       |
+| [Lenis Templates](./lenis-templates.md) | Free     | No          | No             | framer template discovery, scroll-motion references          | Templates published on the Lenis website.                  |
 
 [← All sections](../README.md)

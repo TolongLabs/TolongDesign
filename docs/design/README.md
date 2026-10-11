@@ -2,24 +2,24 @@
 
 # Design catalogue
 
-430 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on
+434 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on
 2026-10-07 and researched one by one. Each tool has its own doc with source URL,
 paywall, how to use, examples, and agent notes.
 
-**Paywall overview:** 277 free · 122 freemium · 20 paid · 11 unknown.
+**Paywall overview:** 280 free · 123 freemium · 20 paid · 11 unknown.
 
 | Section                                                | Tools | Free | Freemium | Paid | What it covers                                                       |
 | ------------------------------------------------------ | ----- | ---- | -------- | ---- | -------------------------------------------------------------------- |
 | [Design Galleries](./design-galleries/README.md)       | 79    | 49   | 26       | 1    | Design galleries, interface patterns, and web inspiration.           |
 | [Component Libraries](./component-libraries/README.md) | 110   | 77   | 30       | 0    | Production UI primitives and accessible component libraries.         |
 | [Development](./development/README.md)                 | 24    | 16   | 5        | 3    | Modern code editors, runtimes, and local tooling.                    |
-| [Agents & MCP](./agents-mcp/README.md)                 | 37    | 18   | 17       | 2    | Coding agents, local MCP servers, and machine specs.                 |
-| [Motion](./motion/README.md)                           | 12    | 8    | 3        | 1    | Animation timing, spring physics, and motion libraries.              |
-| [Interface Design](./interface-design/README.md)       | 11    | 5    | 4        | 2    | Interface design canvases, tokens, and layout systems.               |
+| [Agents & MCP](./agents-mcp/README.md)                 | 38    | 19   | 17       | 2    | Coding agents, local MCP servers, and machine specs.                 |
+| [Motion](./motion/README.md)                           | 13    | 9    | 3        | 1    | Animation timing, spring physics, and motion libraries.              |
+| [Interface Design](./interface-design/README.md)       | 12    | 6    | 4        | 2    | Interface design canvases, tokens, and layout systems.               |
 | [Type](./type/README.md)                               | 7     | 6    | 0        | 1    | Curated web typefaces, pairings, and font optimization.              |
 | [Color](./color/README.md)                             | 5     | 5    | 0        | 0    | Color palette generators, contrast checkers, and color math.         |
 | [3D](./3d/README.md)                                   | 9     | 9    | 0        | 0    | 3D modeling tools and WebGL rendering engines online.                |
-| [Shaders](./shaders/README.md)                         | 7     | 6    | 1        | 0    | Interactive fragment shaders, procedural noise, and canvas effects.  |
+| [Shaders](./shaders/README.md)                         | 8     | 6    | 2        | 0    | Interactive fragment shaders, procedural noise, and canvas effects.  |
 | [Icons](./icons/README.md)                             | 30    | 25   | 5        | 0    | Crisp icon families and glyphs for modern interfaces.                |
 | [Utilities](./utilities/README.md)                     | 34    | 24   | 6        | 0    | Developer utilities that accelerate frontend workflows.              |
 | [Desktop](./desktop/README.md)                         | 12    | 4    | 4        | 4    | Native macOS and desktop utility apps for productivity.              |

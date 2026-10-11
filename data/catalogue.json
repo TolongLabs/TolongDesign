@@ -4301,6 +4301,46 @@
    "section_slug": "design-galleries",
    "designeer_url": "https://tree.icqr.com/",
    "doc": "docs/design/design-galleries/icqr-magic-tree.md"
+  },
+  {
+   "name": "Shaders",
+   "url": "https://github.com/shader-effects-inc/shaders",
+   "description": "WebGPU components for React, Vue, Svelte, Solid, JS and Framer.",
+   "section": "Shaders",
+   "slug": "shaders",
+   "section_slug": "shaders",
+   "designeer_url": "https://github.com/shader-effects-inc/shaders",
+   "doc": "docs/design/shaders/shaders.md"
+  },
+  {
+   "name": "Lenis",
+   "url": "https://github.com/darkroomengineering/lenis",
+   "description": "Smooth scroll as it should be.",
+   "section": "Motion",
+   "slug": "lenis",
+   "section_slug": "motion",
+   "designeer_url": "https://github.com/darkroomengineering/lenis",
+   "doc": "docs/design/motion/lenis.md"
+  },
+  {
+   "name": "Lenis Templates",
+   "url": "https://lenis.dev/templates",
+   "description": "Templates published on the Lenis website.",
+   "section": "Interface Design",
+   "slug": "lenis-templates",
+   "section_slug": "interface-design",
+   "designeer_url": "https://lenis.dev/templates",
+   "doc": "docs/design/interface-design/lenis-templates.md"
+  },
+  {
+   "name": "Anatomy",
+   "url": "https://github.com/wheresryan22/anatomy",
+   "description": "A skill for interactive isometric technical figures.",
+   "section": "Agents & MCP",
+   "slug": "anatomy",
+   "section_slug": "agents-mcp",
+   "designeer_url": "https://github.com/wheresryan22/anatomy",
+   "doc": "docs/design/agents-mcp/anatomy.md"
   }
  ],
  "people": [
