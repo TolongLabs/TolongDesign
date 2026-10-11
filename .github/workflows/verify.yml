@@ -32,3 +32,11 @@ jobs:
         run: bun test
       - name: Validate documentation
         run: bun run check
+      - name: Verify agent skill mirrors
+        run: cmp .agents/skills/design-project/SKILL.md .claude/skills/design-project/SKILL.md
+      - name: Build private release package
+        run: bun run build:release
+      - name: Verify a clean release installation
+        run: |
+          version=$(bun -e 'process.stdout.write(require("./package.json").version)')
+          bun run smoke:release "release/tolong-design-${version}.tgz"

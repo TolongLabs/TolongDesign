@@ -40,6 +40,11 @@ proven tools fast, know what they cost, and get them running.
 
 ## Designing a project
 
+For cross-project use, follow [private CLI installation](./CLI.md). Verify the
+installed release with `tolongdesign doctor --json`; its output identifies the
+version, resource root, integrity status, and agent skill paths. The checkout
+commands below remain available to maintainers.
+
 For a use-case-aware brief, use [the project design workflow](./WORKFLOW.md) and
 the `design-project` skill. It connects visual references, source-backed tool
 choices, complete context, and rendered verification in the target project.

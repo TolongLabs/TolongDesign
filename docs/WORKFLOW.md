@@ -7,28 +7,28 @@ The CLI does not generate a website or judge whether it looks good.
 
 ## Start from the target project
 
-Keep an authenticated private TolongDesign checkout available. From that
-checkout, set its path for the current shell:
+Install an authenticated private release with [CLI installation](./CLI.md). From
+the target project, verify the selected source before retrieving context:
 
 ```bash
-export TOLONG_DESIGN="$(git rev-parse --show-toplevel)"
-bun install --frozen-lockfile
-bun run design -- --help
+tolongdesign --version
+tolongdesign doctor --json
+tolongdesign search scroll --section motion --json
+tolongdesign show gsap
+tolongdesign context gsap react-three-fiber saaspo --brief "Dictation landing page" --json
 ```
 
-From a different project, run the absolute entrypoint:
+Use the diagnostic root and skill paths to point the coding agent at
+`.agents/skills/design-project/SKILL.md` and this workflow in the installed
+package. The `.claude/skills/` mirror contains identical instructions. This
+feature does not silently install skills into another project or change global
+agent settings.
 
-```bash
-bun "$TOLONG_DESIGN/scripts/design.ts" search scroll --section motion --json
-bun "$TOLONG_DESIGN/scripts/design.ts" show gsap
-bun "$TOLONG_DESIGN/scripts/design.ts" context gsap react-three-fiber saaspo --brief "Dictation landing page" --json
-```
-
-Tell the coding agent the source checkout path and ask it to read
-`.agents/skills/design-project/SKILL.md` there. Agents that discover project
-skills can invoke `/design-project` directly inside TolongDesign. The mirrored
-`.claude/skills/` entry contains identical instructions. This feature does not
-silently install skills into other projects or change global agent settings.
+For checkout mode, install locked dependencies and set `TOLONG_DESIGN` to the
+private checkout. Replace `tolongdesign` in the examples with
+`bun "$TOLONG_DESIGN/scripts/design.ts"`. Checkout diagnostics identify that
+mode and do not claim release integrity. Preserve an explicit source/version
+instead of mixing a checkout with a different globally installed binary.
 
 ## 1. Brief and constraints
 
@@ -52,9 +52,9 @@ full registered docs and metadata, not semantic ranking; a whole paragraph will
 usually match nothing. Keep references separate from implementation tools.
 
 ```bash
-bun "$TOLONG_DESIGN/scripts/design.ts" search landing --section design-galleries
-bun "$TOLONG_DESIGN/scripts/design.ts" search scroll --section motion
-bun "$TOLONG_DESIGN/scripts/design.ts" search 3d --stack react
+tolongdesign search landing --section design-galleries
+tolongdesign search scroll --section motion
+tolongdesign search 3d --stack react
 ```
 
 Include galleries even when `agent_friendly` is false: that field describes a
@@ -138,6 +138,17 @@ mobile widths. Compare typography, composition, spacing, and imagery with the
 approved direction. Test key scroll positions, interactions, reduced motion, and
 mobile fallback. Measure loading behavior and inspect SEO metadata instead of
 asserting performance or rankings from source code alone.
+
+Check the first mobile screen for product meaning, content order, a readable
+result, and a clear primary action; an overflow-free page can still hide its
+most useful visual below a long copy block. Keep readable output available in
+static and reduced-motion states.
+
+Preserve a baseline before refinement. Use at most two deliberate critique →
+revise → browser review → test passes unless additional work is authorized.
+Compare matching viewport/state captures and mark each criterion verified,
+failed, or unverified. Report remaining gaps rather than treating a clean score
+as an aesthetic verdict.
 
 Revise observed mismatches, then rerun affected checks. Record commands/results,
 viewport and scroll states, visual evidence, decisions, and unresolved failures
