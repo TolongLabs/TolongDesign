@@ -4,6 +4,7 @@ node_modules/
 !.env.example
 .claude/worktrees/
 .superpowers/
+.archify/
 # graphify build cache (graph.json, GRAPH_REPORT.md and graph.html are committed)
 graphify-out/cache/
 graphify-out/.graphify_*
