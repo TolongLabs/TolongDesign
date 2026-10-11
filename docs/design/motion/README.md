@@ -4,21 +4,22 @@
 
 > Animation timing, spring physics, and motion libraries.
 
-11 tools — 7 free, 3 freemium, 1 paid, 0 unknown. Source:
+12 tools — 8 free, 3 freemium, 1 paid, 0 unknown. Source:
 [Designeer](https://designeer.xyz/components).
 
-| Tool                                        | Paywall  | Open source | Agent-friendly | Best for                                                                 | What it is                                                 |
-| ------------------------------------------- | -------- | ----------- | -------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| [Motion](./motion.md)                       | Freemium | Yes         | Yes            | react animations, layout transitions, exit animations, gestures          | Production-ready animation library for React applications. |
-| [GSAP](./gsap.md)                           | Free     | No          | Yes            | complex timelines, scroll-driven storytelling, svg morphing              | Industry-standard JavaScript timeline animation engine.    |
-| [Rive](./rive.md)                           | Freemium | No          | Yes            | interactive vector graphics, state machines, game UI, micro-interactions | Interactive state-machine vector animation tool.           |
-| [Lottie](./lottie.md)                       | Freemium | No          | Yes            | vector animations, micro-interactions, after effects exports, dotlottie  | Lightweight JSON-based vector animation format.            |
-| [Easing Wizard](./easing-wizard.md)         | Free     | Yes         | Yes            | css springs, custom cubic-bezier curves, linear easing generator         | Visual generator for custom CSS springs.                   |
-| [Morphrig](./morphrig.md)                   | Free     | No          | Yes            | icon morphing mechanics, svg path interpolation, animation theory        | Interactive manual on how icon morphing works.             |
-| [Theatre.js](./theatre-js.md)               | Free     | Yes         | Yes            | visual animation sequencing, 3d web experiences, complex choreographies  | Visual motion design sequencer for DOM.                    |
-| [morphicons](./morphicons.md)               | Free     | Yes         | Yes            | icon state changes, navigation controls, status feedback                 | Spring-physics icon morphing animation library.            |
-| [glimm](./glimm.md)                         | Free     | Yes         | Yes            | route transitions, focused mode changes, confirmed actions               | Shader-driven page transitions for Next.js.                |
-| [Devouring Details](./devouring-details.md) | Paid     | No          | Yes            | micro-interactions, motion critique, component study                     | Interactive book teaching micro-interaction design.        |
-| [textmotion](./textmotion.md)               | Free     | Yes         | Yes            | status labels, counters, button feedback                                 | Zero-dependency text roll animation primitive.             |
+| Tool                                        | Paywall  | Open source | Agent-friendly | Best for                                                                 | What it is                                                                                   |
+| ------------------------------------------- | -------- | ----------- | -------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| [Motion](./motion.md)                       | Freemium | Yes         | Yes            | react animations, layout transitions, exit animations, gestures          | Production-ready animation library for React applications.                                   |
+| [GSAP](./gsap.md)                           | Free     | No          | Yes            | complex timelines, scroll-driven storytelling, svg morphing              | Industry-standard JavaScript timeline animation engine.                                      |
+| [Rive](./rive.md)                           | Freemium | No          | Yes            | interactive vector graphics, state machines, game UI, micro-interactions | Interactive state-machine vector animation tool.                                             |
+| [Lottie](./lottie.md)                       | Freemium | No          | Yes            | vector animations, micro-interactions, after effects exports, dotlottie  | Lightweight JSON-based vector animation format.                                              |
+| [Easing Wizard](./easing-wizard.md)         | Free     | Yes         | Yes            | css springs, custom cubic-bezier curves, linear easing generator         | Visual generator for custom CSS springs.                                                     |
+| [Morphrig](./morphrig.md)                   | Free     | No          | Yes            | icon morphing mechanics, svg path interpolation, animation theory        | Interactive manual on how icon morphing works.                                               |
+| [Theatre.js](./theatre-js.md)               | Free     | Yes         | Yes            | visual animation sequencing, 3d web experiences, complex choreographies  | Visual motion design sequencer for DOM.                                                      |
+| [morphicons](./morphicons.md)               | Free     | Yes         | Yes            | icon state changes, navigation controls, status feedback                 | Spring-physics icon morphing animation library.                                              |
+| [glimm](./glimm.md)                         | Free     | Yes         | Yes            | route transitions, focused mode changes, confirmed actions               | Shader-driven page transitions for Next.js.                                                  |
+| [Devouring Details](./devouring-details.md) | Paid     | No          | Yes            | micro-interactions, motion critique, component study                     | Interactive book teaching micro-interaction design.                                          |
+| [textmotion](./textmotion.md)               | Free     | Yes         | Yes            | status labels, counters, button feedback                                 | Zero-dependency text roll animation primitive.                                               |
+| [Prompt Motion](./prompt-motion.md)         | Free     | No          | Yes            | launch videos, product promos, explainers, kinetic type                  | Gallery of motion videos made with Claude Opus 5.5, each with the prompt or skill behind it. |
 
 [← All sections](../README.md)

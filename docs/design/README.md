@@ -2,11 +2,11 @@
 
 # Design catalogue
 
-423 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on
+427 tools across 17 sections, scraped from [Designeer](https://designeer.xyz) on
 2026-10-07 and researched one by one. Each tool has its own doc with source URL,
 paywall, how to use, examples, and agent notes.
 
-**Paywall overview:** 271 free · 122 freemium · 20 paid · 10 unknown.
+**Paywall overview:** 275 free · 122 freemium · 20 paid · 10 unknown.
 
 | Section                                                | Tools | Free | Freemium | Paid | What it covers                                                       |
 | ------------------------------------------------------ | ----- | ---- | -------- | ---- | -------------------------------------------------------------------- |
@@ -14,11 +14,11 @@ paywall, how to use, examples, and agent notes.
 | [Component Libraries](./component-libraries/README.md) | 110   | 77   | 30       | 0    | Production UI primitives and accessible component libraries.         |
 | [Development](./development/README.md)                 | 24    | 16   | 5        | 3    | Modern code editors, runtimes, and local tooling.                    |
 | [Agents & MCP](./agents-mcp/README.md)                 | 35    | 16   | 17       | 2    | Coding agents, local MCP servers, and machine specs.                 |
-| [Motion](./motion/README.md)                           | 11    | 7    | 3        | 1    | Animation timing, spring physics, and motion libraries.              |
+| [Motion](./motion/README.md)                           | 12    | 8    | 3        | 1    | Animation timing, spring physics, and motion libraries.              |
 | [Interface Design](./interface-design/README.md)       | 11    | 5    | 4        | 2    | Interface design canvases, tokens, and layout systems.               |
 | [Type](./type/README.md)                               | 7     | 6    | 0        | 1    | Curated web typefaces, pairings, and font optimization.              |
 | [Color](./color/README.md)                             | 5     | 5    | 0        | 0    | Color palette generators, contrast checkers, and color math.         |
-| [3D](./3d/README.md)                                   | 6     | 6    | 0        | 0    | 3D modeling tools and WebGL rendering engines online.                |
+| [3D](./3d/README.md)                                   | 9     | 9    | 0        | 0    | 3D modeling tools and WebGL rendering engines online.                |
 | [Shaders](./shaders/README.md)                         | 7     | 6    | 1        | 0    | Interactive fragment shaders, procedural noise, and canvas effects.  |
 | [Icons](./icons/README.md)                             | 30    | 25   | 5        | 0    | Crisp icon families and glyphs for modern interfaces.                |
 | [Utilities](./utilities/README.md)                     | 34    | 24   | 6        | 0    | Developer utilities that accelerate frontend workflows.              |

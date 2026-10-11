@@ -4231,6 +4231,46 @@
    "section_slug": "component-libraries",
    "designeer_url": "https://ascii.rest/",
    "doc": "docs/design/component-libraries/ascii-rest.md"
+  },
+  {
+   "name": "Prompt Motion",
+   "url": "https://prompt-motion.com/",
+   "description": "Gallery of motion videos made with Claude Opus 5.5, each with the prompt or skill behind it.",
+   "section": "Motion",
+   "slug": "prompt-motion",
+   "section_slug": "motion",
+   "designeer_url": "https://prompt-motion.com/",
+   "doc": "docs/design/motion/prompt-motion.md"
+  },
+  {
+   "name": "three-vrm",
+   "url": "https://github.com/pixiv/three-vrm",
+   "description": "Loads VRM avatar models into three.js, with expressions, spring-bone hair and humanoid animation.",
+   "section": "3D",
+   "slug": "three-vrm",
+   "section_slug": "3d",
+   "designeer_url": "https://github.com/pixiv/three-vrm",
+   "doc": "docs/design/3d/three-vrm.md"
+  },
+  {
+   "name": "VRoid Studio",
+   "url": "https://vroid.com/en/studio",
+   "description": "Free anime-style 3D character maker that exports VRM models.",
+   "section": "3D",
+   "slug": "vroid-studio",
+   "section_slug": "3d",
+   "designeer_url": "https://vroid.com/en/studio",
+   "doc": "docs/design/3d/vroid-studio.md"
+  },
+  {
+   "name": "Mixamo",
+   "url": "https://www.mixamo.com/",
+   "description": "Free Adobe library of auto-rigging and motion-capture character animations.",
+   "section": "3D",
+   "slug": "mixamo",
+   "section_slug": "3d",
+   "designeer_url": "https://www.mixamo.com/",
+   "doc": "docs/design/3d/mixamo.md"
   }
  ],
  "people": [

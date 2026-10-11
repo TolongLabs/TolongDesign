@@ -1,23 +1,23 @@
 # Design playbook
 
-How a TolongLabs developer (or their coding agent) goes from a client brief to
-a design stack and a first page, using this repo. Every tool named here has a
-doc with its paywall, licence, install steps and examples — open the doc before
+How a TolongLabs developer (or their coding agent) goes from a client brief to a
+design stack and a first page, using this repo. Every tool named here has a doc
+with its paywall, licence, install steps and examples — open the doc before
 committing to it.
 
 ## 0. Defaults
 
 Unless the brief says otherwise:
 
-| Decision   | Default                                                              |
-| ---------- | -------------------------------------------------------------------- |
-| Framework  | Next.js (App Router) + React + TypeScript                            |
-| Styling    | Tailwind CSS                                                         |
-| Budget     | **Free or freemium only**; any `paid` pick needs the client's OK     |
+| Decision   | Default                                                                                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Framework  | Next.js (App Router) + React + TypeScript                                                                                                                      |
+| Styling    | Tailwind CSS                                                                                                                                                   |
+| Budget     | **Free or freemium only**; any `paid` pick needs the client's OK                                                                                               |
 | Primitives | [shadcn/ui](./design/component-libraries/shadcn-ui.md) on [Radix](./design/component-libraries/radix.md) or [Base UI](./design/component-libraries/base-ui.md) |
-| Icons      | [Lucide](./design/icons/lucide.md)                                   |
-| Motion     | [Motion](./design/motion/motion.md)                                  |
-| Deploy     | [Vercel](./design/deploy/vercel.md) or [Cloudflare](./design/deploy/cloudflare.md) |
+| Icons      | [Lucide](./design/icons/lucide.md)                                                                                                                             |
+| Motion     | [Motion](./design/motion/motion.md)                                                                                                                            |
+| Deploy     | [Vercel](./design/deploy/vercel.md) or [Cloudflare](./design/deploy/cloudflare.md)                                                                             |
 
 Shortlist anything else with `bun run find` (see [README](./README.md)).
 
@@ -25,14 +25,15 @@ Shortlist anything else with `bun run find` (see [README](./README.md)).
 
 Goal: 8–15 reference screenshots/links that agree on a direction.
 
-1. Start broad in one or two whole-site galleries: [Land-book](./design/design-galleries/land-book.md),
+1. Start broad in one or two whole-site galleries:
+   [Land-book](./design/design-galleries/land-book.md),
    [SiteInspire](./design/design-galleries/siteinspire.md),
    [Minimal Gallery](./design/design-galleries/minimal-gallery.md),
    [Awwwards](./design/design-galleries/awwwards.md) (for ambitious brand work).
 2. Narrow by product type: SaaS → [Saaspo](./design/design-galleries/saaspo.md),
-   [SaaS Landing Page](./design/design-galleries/saas-landing-page.md);
-   app flows → [Mobbin](./design/design-galleries/mobbin.md);
-   portfolios → [Folios Gallery](./design/design-galleries/folios-gallery.md).
+   [SaaS Landing Page](./design/design-galleries/saas-landing-page.md); app
+   flows → [Mobbin](./design/design-galleries/mobbin.md); portfolios →
+   [Folios Gallery](./design/design-galleries/folios-gallery.md).
 3. Narrow by section when one part is the problem: heroes →
    [Supahero](./design/design-galleries/supahero.md); nav →
    [Navbar Gallery](./design/design-galleries/navbar-gallery.md); footers →
@@ -40,16 +41,16 @@ Goal: 8–15 reference screenshots/links that agree on a direction.
    [CTA Gallery](./design/design-galleries/cta-gallery.md); by section type →
    [SEESAW](./design/design-galleries/seesaw.md).
 4. Motion references: [60fps](./design/design-galleries/60fps.md).
-5. Write a one-page brief: audience, tone (3 adjectives), 3 reference sites
-   with what to borrow from each, and what to avoid.
+5. Write a one-page brief: audience, tone (3 adjectives), 3 reference sites with
+   what to borrow from each, and what to avoid.
 
 ## 2. Lock the visual system (tokens before components)
 
 1. **Type** — pick one display + one text face. Free, licence-clear sources:
-   [Fontshare](./design/type/fontshare.md), [Fontsource](./design/type/fontsource.md)
-   (self-host Google/open fonts via npm). Fluid scale: [Utopia](./design/type/utopia.md).
-   Commercial foundries such as [Klim](./design/type/klim.md) need a paid
-   licence — check the doc.
+   [Fontshare](./design/type/fontshare.md),
+   [Fontsource](./design/type/fontsource.md) (self-host Google/open fonts via
+   npm). Fluid scale: [Utopia](./design/type/utopia.md). Commercial foundries
+   such as [Klim](./design/type/klim.md) need a paid licence — check the doc.
 2. **Color** — build the palette in OKLCH: [OKLCH](./design/color/oklch.md),
    [Huetone](./design/color/huetone.md); check contrast with
    [APCA](./design/color/apca.md).
@@ -57,41 +58,47 @@ Goal: 8–15 reference screenshots/links that agree on a direction.
    variables once. [Refactoring UI](./design/reading/refactoring-ui.md) and
    [Practical Typography](./design/reading/practical-typography.md) are the
    reference reads.
-4. Optionally capture the system in a `DESIGN.md` for agents —
-   see [Agents & MCP](./design/agents-mcp/README.md) for DESIGN.md tooling
-   (e.g. [getdesign.md](./design/agents-mcp/getdesign-md.md)).
+4. Optionally capture the system in a `DESIGN.md` for agents — see
+   [Agents & MCP](./design/agents-mcp/README.md) for DESIGN.md tooling (e.g.
+   [getdesign.md](./design/agents-mcp/getdesign-md.md)).
 
 ## 3. Pick components
 
-1. Primitives: [shadcn/ui](./design/component-libraries/shadcn-ui.md) (copy-paste
-   source, CLI) — the default. Need unstyled-only? [Radix](./design/component-libraries/radix.md),
+1. Primitives: [shadcn/ui](./design/component-libraries/shadcn-ui.md)
+   (copy-paste source, CLI) — the default. Need unstyled-only?
+   [Radix](./design/component-libraries/radix.md),
    [Base UI](./design/component-libraries/base-ui.md),
    [Headless UI](./design/component-libraries/headless-ui.md).
-2. Marketing blocks (heroes, pricing, features): [shadcnblocks](./design/component-libraries/shadcnblocks.md),
+2. Marketing blocks (heroes, pricing, features):
+   [shadcnblocks](./design/component-libraries/shadcnblocks.md),
    [Tailark](./design/component-libraries/tailark.md),
    [HyperUI](./design/component-libraries/hyperui.md),
    [Preline UI](./design/component-libraries/preline-ui.md).
-3. Animated / showpiece components: [Magic UI](./design/component-libraries/magic-ui.md),
+3. Animated / showpiece components:
+   [Magic UI](./design/component-libraries/magic-ui.md),
    [Aceternity UI](./design/component-libraries/aceternity-ui.md),
    [Motion Primitives](./design/component-libraries/motion-primitives.md),
-   [React Bits](./design/component-libraries/react-bits.md). Use sparingly —
-   one or two per page.
+   [React Bits](./design/component-libraries/react-bits.md). Use sparingly — one
+   or two per page.
 4. Dashboards and charts: [Tremor](./design/component-libraries/tremor.md),
    [Evil Charts](./design/component-libraries/evil-charts.md).
 5. Not on React? [daisyUI](./design/component-libraries/daisyui.md) and
    [Flowbite](./design/component-libraries/flowbite.md) work with plain
    Tailwind.
 
-Check every pick's "Paywall and pricing": several of these are freemium with
-pro blocks behind a licence.
+Check every pick's "Paywall and pricing": several of these are freemium with pro
+blocks behind a licence.
 
 ## 4. Icons, imagery, motion, 3D
 
 - Icons: one family per project. [Lucide](./design/icons/lucide.md),
-  [Phosphor](./design/icons/phosphor.md), [Tabler](./design/icons/tabler-icons.md),
+  [Phosphor](./design/icons/phosphor.md),
+  [Tabler](./design/icons/tabler-icons.md),
   [Hugeicons](./design/icons/hugeicons.md); search everything at once with
-  [Iconify](./design/icons/iconify.md). Brand logos: [Simple Icons](./design/icons/simple-icons.md).
-- Backgrounds and textures: [backgrounds.supply](./design/design-galleries/backgrounds-supply.md),
+  [Iconify](./design/icons/iconify.md). Brand logos:
+  [Simple Icons](./design/icons/simple-icons.md).
+- Backgrounds and textures:
+  [backgrounds.supply](./design/design-galleries/backgrounds-supply.md),
   [fffuel](./design/utilities/fffuel.md); shader backgrounds:
   [Paper Shaders](./design/shaders/paper-shaders.md).
 - Motion: [Motion](./design/motion/motion.md) for React UI,
@@ -100,15 +107,48 @@ pro blocks behind a licence.
   designer-made animations. Respect `prefers-reduced-motion`.
 - 3D: [React Three Fiber](./design/3d/react-three-fiber.md) +
   [drei](./design/3d/drei.md) on [three.js](./design/3d/three-js.md).
+- 3D characters: [VRoid Studio](./design/3d/vroid-studio.md) model, loaded with
+  [three-vrm](./design/3d/three-vrm.md), animated with
+  [Mixamo](./design/3d/mixamo.md) clips. See the recipe below.
+
+### Recipe: an atmospheric 3D character scene
+
+For example, a girl with an umbrella walks through a rainy street into a
+convenience store. The character comes from existing tools. The agent writes the
+scene, the effects and the controls in three.js. It takes many prompt rounds,
+not one.
+
+1. **Character:** make or pick a character in
+   [VRoid Studio](./design/3d/vroid-studio.md) and export it as `.vrm`. Check
+   its licence.
+2. **Motion:** download idle, walk and run clips from
+   [Mixamo](./design/3d/mixamo.md) as FBX.
+3. **Load and animate:** load the model with
+   [three-vrm](./design/3d/three-vrm.md). Retarget the clips with the
+   `loadMixamoAnimation.js` helper from its humanoidAnimation example. Blend the
+   clips by movement speed.
+4. **Scene:** have the agent build the street and the shop from boxes and
+   planes. Give the shelves canvas-drawn product textures. Add props from
+   [Poly Haven](./design/3d/poly-haven.md) where boxes look too plain.
+5. **Look:** use a dark blue night palette with warm shop light. Make rain from
+   an `InstancedMesh` of thin streaks with ripple decals. Make wet ground with a
+   reflector material ([drei](./design/3d/drei.md) `MeshReflectorMaterial`, or
+   the three.js `Reflector`). Add bloom on signs and windows.
+6. **Play:** add a third-person follow camera and WASD or tap-to-move controls.
+   Trigger small events by position, such as closing the umbrella at the door.
+7. **Prompt:** start from a three.js prompt on
+   [Prompt Motion](./design/motion/prompt-motion.md). Then fix one thing per
+   round: character, then motion, then lighting, then details.
 
 ## 5. Build with an agent
 
-1. Give the agent the brief, the tokens, and the doc paths of every chosen
-   tool. The docs' "How to use" and "Agent notes" sections are written for
-   this.
-2. Agent tooling worth knowing: [Claude Code](./design/development/claude-code.md),
+1. Give the agent the brief, the tokens, and the doc paths of every chosen tool.
+   The docs' "How to use" and "Agent notes" sections are written for this.
+2. Agent tooling worth knowing:
+   [Claude Code](./design/development/claude-code.md),
    [Cursor](./design/development/cursor.md), [v0](./design/development/v0.md),
-   design-quality skills such as [Impeccable](./design/agents-mcp/impeccable.md).
+   design-quality skills such as
+   [Impeccable](./design/agents-mcp/impeccable.md).
 3. Polish pass: [Laws of UX](./design/reading/laws-of-ux.md),
    [Inclusive Components](./design/reading/inclusive-components.md) for
    accessibility, [Josh Comeau](./design/reading/josh-comeau.md) for CSS craft.

@@ -13005,6 +13005,139 @@
    "agent_friendly": true,
    "last_verified": "2026-10-08",
    "doc": "docs/design/component-libraries/ascii-rest.md"
+  },
+  {
+   "name": "Prompt Motion",
+   "slug": "prompt-motion",
+   "section": "Motion",
+   "section_slug": "motion",
+   "source_url": "https://prompt-motion.com/",
+   "designeer_url": "https://prompt-motion.com/",
+   "designeer_blurb": "Gallery of motion videos made with Claude Opus 5.5, each with the prompt or skill behind it.",
+   "paywall": "free",
+   "pricing_summary": "Free to browse, copy prompts and customize them; no paid plan is published.",
+   "open_source": false,
+   "license": "unknown",
+   "category_tags": [
+    "motion-graphics",
+    "prompts",
+    "ai-video",
+    "claude",
+    "inspiration"
+   ],
+   "best_for": [
+    "launch videos",
+    "product promos",
+    "explainers",
+    "kinetic type"
+   ],
+   "stack": [
+    "html",
+    "remotion",
+    "threejs"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/motion/prompt-motion.md"
+  },
+  {
+   "name": "three-vrm",
+   "slug": "three-vrm",
+   "section": "3D",
+   "section_slug": "3d",
+   "source_url": "https://github.com/pixiv/three-vrm",
+   "designeer_url": "https://github.com/pixiv/three-vrm",
+   "designeer_blurb": "Loads VRM avatar models into three.js, with expressions, spring-bone hair and humanoid animation.",
+   "paywall": "free",
+   "pricing_summary": "Free and open source under the MIT licence.",
+   "open_source": true,
+   "license": "MIT",
+   "category_tags": [
+    "3d",
+    "threejs",
+    "vrm",
+    "avatars",
+    "characters",
+    "animation"
+   ],
+   "best_for": [
+    "3d characters",
+    "avatar scenes",
+    "web games",
+    "anime-style characters"
+   ],
+   "stack": [
+    "javascript",
+    "typescript",
+    "threejs"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/3d/three-vrm.md"
+  },
+  {
+   "name": "VRoid Studio",
+   "slug": "vroid-studio",
+   "section": "3D",
+   "section_slug": "3d",
+   "source_url": "https://vroid.com/en/studio",
+   "designeer_url": "https://vroid.com/en/studio",
+   "designeer_blurb": "Free anime-style 3D character maker that exports VRM models.",
+   "paywall": "free",
+   "pricing_summary": "Free to download and use on Windows, macOS and iPad.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "3d",
+    "characters",
+    "avatars",
+    "vrm",
+    "anime"
+   ],
+   "best_for": [
+    "anime-style characters",
+    "avatars",
+    "game characters"
+   ],
+   "stack": [
+    "desktop",
+    "vrm"
+   ],
+   "agent_friendly": false,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/3d/vroid-studio.md"
+  },
+  {
+   "name": "Mixamo",
+   "slug": "mixamo",
+   "section": "3D",
+   "section_slug": "3d",
+   "source_url": "https://www.mixamo.com/",
+   "designeer_url": "https://www.mixamo.com/",
+   "designeer_blurb": "Free Adobe library of auto-rigging and motion-capture character animations.",
+   "paywall": "free",
+   "pricing_summary": "Free with an Adobe ID; no Creative Cloud subscription needed.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "3d",
+    "animation",
+    "motion-capture",
+    "characters",
+    "rigging"
+   ],
+   "best_for": [
+    "character animation",
+    "walk and run cycles",
+    "web games"
+   ],
+   "stack": [
+    "fbx",
+    "threejs"
+   ],
+   "agent_friendly": false,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/3d/mixamo.md"
   }
  ]
 }
