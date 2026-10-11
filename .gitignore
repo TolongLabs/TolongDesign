@@ -9,3 +9,6 @@ graphify-out/cache/
 graphify-out/.graphify_*
 graphify-out/**/__pycache__/
 .dkm/
+release/
+.worker_tmp/
+.playwright-mcp/

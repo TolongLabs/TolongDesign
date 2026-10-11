@@ -1,6 +1,10 @@
 {
   "name": "tolong-design",
+  "version": "0.1.0",
   "private": true,
+  "engines": {
+    "bun": ">=1.4.0"
+  },
   "type": "module",
   "description": "TolongLabs' private web-design starting point: one agent-friendly doc per curated design tool.",
   "scripts": {
@@ -8,6 +12,8 @@
     "index": "bun scripts/build-index.ts && prettier --log-level warn --write docs/design/README.md 'docs/design/*/README.md' docs/design/people.md",
     "find": "bun scripts/find.ts",
     "design": "bun scripts/design.ts",
+    "build:release": "bun scripts/prepare-release.ts",
+    "smoke:release": "bun scripts/smoke-release.ts",
     "test": "bun test",
     "format": "prettier --write \"**/*.{md,json,ts}\"",
     "format:check": "prettier --check \"**/*.{md,json,ts}\"",

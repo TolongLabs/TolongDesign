@@ -16,6 +16,35 @@ const run = (args: string[], cwd = root) => {
 afterAll(() => rmSync(target, { recursive: true, force: true }))
 
 describe('private design CLI contract', () => {
+  test('reports the installed package version from another project', () => {
+    const result = run(['--version'], target)
+    expect(result.code).toBe(0)
+    expect(result.stdout).toBe('tolongdesign 0.1.0\n')
+    expect(result.stderr).toBe('')
+  })
+
+  test('diagnoses checkout resources and skill paths from another project', () => {
+    const result = run(['doctor', '--json'], target)
+    expect(result.code).toBe(0)
+    const output = JSON.parse(result.stdout)
+    expect(output.schema_version).toBe(1)
+    expect(output.version).toBe('0.1.0')
+    expect(output.runtime).toBe('bun')
+    expect(output.mode).toBe('checkout')
+    expect(output.resources).toBe(JSON.parse(readFileSync(join(root, 'data/catalogue.json'), 'utf8')).tools.length)
+    expect(output.manifest_verified).toBe(false)
+    expect(readFileSync(output.skill_paths.agents, 'utf8')).toBe(readFileSync(output.skill_paths.claude, 'utf8'))
+    expect(output.warnings.length).toBeGreaterThan(0)
+    expect(result.stderr).toBe('')
+  })
+
+  test('rejects doctor positional arguments without JSON stdout', () => {
+    const result = run(['doctor', 'unexpected', '--json'], target)
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('doctor')
+  })
+
   test('help succeeds without requiring a project brief', () => {
     const result = run(['--help'])
     expect(result.code).toBe(0)

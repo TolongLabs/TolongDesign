@@ -1,4 +1,6 @@
+#!/usr/bin/env bun
 import { join } from 'node:path'
+import { inspectInstallation, readVersion } from './release-info'
 import {
   buildContext,
   DataError,
@@ -20,11 +22,20 @@ type ParsedFlags = {
 
 type Command =
   | { kind: 'help' }
+  | { kind: 'version' }
+  | { kind: 'doctor'; json: boolean }
   | { kind: 'search'; query: string; options: SearchOptions; json: boolean }
   | { kind: 'show'; id: string; json: boolean }
   | { kind: 'context'; ids: string[]; brief?: string; json: boolean }
 
 const HELP = `Usage:
+  tolongdesign --version
+  tolongdesign doctor [--json]
+  tolongdesign search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--json]
+  tolongdesign show <slug-or-section/slug> [--json]
+  tolongdesign context <id>... [--brief <text>] [--json]
+
+Checkout equivalents:
   bun run design -- search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--json]
   bun run design -- show <slug-or-section/slug> [--json]
   bun run design -- context <id>... [--brief <text>] [--json]
@@ -138,10 +149,16 @@ function parseContext(args: string[]): Command {
 }
 
 function parseCommand(args: string[]): Command {
+  if (args.length === 1 && args[0] === '--version') return { kind: 'version' }
   if (args.length === 1 && args[0] === '--help') return { kind: 'help' }
   if (args.length === 0) throw new UsageError('expected a command')
 
   const [command, ...rest] = args
+  if (command === 'doctor') {
+    const flags = parseFlags(rest, ['json'], [])
+    if (flags.positionals.length > 0) throw new UsageError('doctor does not take positional arguments')
+    return { kind: 'doctor', json: hasFlag(flags, 'json') }
+  }
   if (command === 'search') return parseSearch(rest)
   if (command === 'show') return parseShow(rest)
   if (command === 'context') return parseContext(rest)
@@ -194,6 +211,21 @@ function run(args: string[]): number {
   }
 
   try {
+    if (command.kind === 'version') {
+      process.stdout.write(`tolongdesign ${readVersion(ROOT)}\n`)
+      return 0
+    }
+    if (command.kind === 'doctor') {
+      const info = inspectInstallation(ROOT)
+      if (command.json) writeJson(info)
+      else {
+        process.stdout.write(
+          `tolongdesign ${info.version}\n${info.resources} registered resources\nRoot: ${info.root}\nMode: ${info.mode}\nManifest verified: ${info.manifest_verified}\nAgent skill: ${info.skill_paths.agents}\n`
+        )
+        for (const warning of info.warnings) process.stdout.write(`Warning: ${warning}\n`)
+      }
+      return 0
+    }
     const resources = loadResources(ROOT)
     if (command.kind === 'search') {
       writeSearch(searchResources(resources, command.query, command.options), command.json)
