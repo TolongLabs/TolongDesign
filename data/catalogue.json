@@ -4271,6 +4271,16 @@
    "section_slug": "3d",
    "designeer_url": "https://www.mixamo.com/",
    "doc": "docs/design/3d/mixamo.md"
+  },
+  {
+   "name": "Image-to-code skill",
+   "url": "https://github.com/Leonxlnx/taste-skill/tree/main/skills/image-to-code-skill",
+   "description": "Generate visual references, analyze them, and implement a matching frontend.",
+   "section": "Agents & MCP",
+   "slug": "image-to-code-skill",
+   "section_slug": "agents-mcp",
+   "designeer_url": "https://github.com/Leonxlnx/taste-skill/tree/main/skills/image-to-code-skill",
+   "doc": "docs/design/agents-mcp/image-to-code-skill.md"
   }
  ],
  "people": [

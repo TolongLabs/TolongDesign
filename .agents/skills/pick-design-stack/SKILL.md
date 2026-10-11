@@ -1,12 +1,21 @@
 ---
 name: pick-design-stack
-description: Use when starting a new TolongLabs website or landing page and you need to choose component libraries, icons, type, color, motion and inspiration sources from the TolongDesign catalogue, respecting the project's budget (free vs paid).
+description:
+  Use when starting a new TolongLabs website or landing page and you need to
+  choose component libraries, icons, type, color, motion and inspiration sources
+  from the TolongDesign catalogue, respecting the project's budget (free vs
+  paid).
 ---
 
 # Pick A Design Stack
 
 TolongDesign holds one researched doc per design tool. This skill turns a
 project brief into a short, justified stack.
+
+When the task also includes visual references, 3D/parallax/storytelling, full
+source context, or implementation review, use `design-project` and follow
+`docs/WORKFLOW.md` in the source checkout. This skill's stack table alone is not
+rendered-design verification.
 
 ## Steps
 
@@ -23,10 +32,10 @@ project brief into a short, justified stack.
    ```
 
 4. Open each shortlisted doc in `docs/design/<section>/<slug>.md`. Check
-   "Paywall and pricing" (licence for client work!), "How to use" and
-   "Agent notes" (framework requirements, gotchas).
-5. Output a stack table: layer, tool, paywall, why, doc link. One pick per
-   layer plus one fallback. Flag anything paid or licence-restricted.
+   "Paywall and pricing" (licence for client work!), "How to use" and "Agent
+   notes" (framework requirements, gotchas).
+5. Output a stack table: layer, tool, paywall, why, doc link. One pick per layer
+   plus one fallback. Flag anything paid or licence-restricted.
 
 ## Rules
 
