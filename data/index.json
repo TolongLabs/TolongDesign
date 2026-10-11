@@ -13169,6 +13169,71 @@
    "agent_friendly": true,
    "last_verified": "2026-10-11",
    "doc": "docs/design/agents-mcp/image-to-code-skill.md"
+  },
+  {
+   "name": "REA",
+   "slug": "rea",
+   "section": "Agents & MCP",
+   "section_slug": "agents-mcp",
+   "source_url": "https://github.com/morluto/rea",
+   "designeer_url": "https://github.com/morluto/rea",
+   "designeer_blurb": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+   "paywall": "free",
+   "pricing_summary": "REA's CLI and MCP server are free and MIT licensed; no REA price is published. Model/provider charges and third-party analysis-engine licences are separate.",
+   "open_source": true,
+   "license": "MIT",
+   "category_tags": [
+    "ai",
+    "agent",
+    "browser",
+    "cli",
+    "mcp",
+    "reverse-engineering",
+    "software-analysis"
+   ],
+   "best_for": [
+    "public web reference analysis",
+    "authorized app analysis",
+    "evidence-led reconstruction"
+   ],
+   "stack": [
+    "nodejs",
+    "npm",
+    "mcp",
+    "chrome"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/agents-mcp/rea.md"
+  },
+  {
+   "name": "ICQR Magic Tree",
+   "slug": "icqr-magic-tree",
+   "section": "Design Galleries",
+   "section_slug": "design-galleries",
+   "source_url": "https://tree.icqr.com/",
+   "designeer_url": "https://tree.icqr.com/",
+   "designeer_blurb": "A 3D QR-code tree generator and interactive design reference.",
+   "paywall": "unknown",
+   "pricing_summary": "No pricing was published in the inspected page. Public reference UI is reachable without login; broader product pricing is not verified.",
+   "open_source": false,
+   "license": "Not published",
+   "category_tags": [
+    "reference",
+    "3d",
+    "qr-codes",
+    "interactive",
+    "responsive"
+   ],
+   "best_for": [
+    "interactive product references",
+    "responsive control layouts",
+    "spatial product metaphors"
+   ],
+   "stack": [],
+   "agent_friendly": false,
+   "last_verified": "2026-10-11",
+   "doc": "docs/design/design-galleries/icqr-magic-tree.md"
   }
  ]
 }

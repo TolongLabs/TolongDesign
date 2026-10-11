@@ -4281,6 +4281,26 @@
    "section_slug": "agents-mcp",
    "designeer_url": "https://github.com/Leonxlnx/taste-skill/tree/main/skills/image-to-code-skill",
    "doc": "docs/design/agents-mcp/image-to-code-skill.md"
+  },
+  {
+   "name": "REA",
+   "url": "https://github.com/morluto/rea",
+   "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+   "section": "Agents & MCP",
+   "slug": "rea",
+   "section_slug": "agents-mcp",
+   "designeer_url": "https://github.com/morluto/rea",
+   "doc": "docs/design/agents-mcp/rea.md"
+  },
+  {
+   "name": "ICQR Magic Tree",
+   "url": "https://tree.icqr.com/",
+   "description": "A 3D QR-code tree generator and interactive design reference.",
+   "section": "Design Galleries",
+   "slug": "icqr-magic-tree",
+   "section_slug": "design-galleries",
+   "designeer_url": "https://tree.icqr.com/",
+   "doc": "docs/design/design-galleries/icqr-magic-tree.md"
   }
  ],
  "people": [
