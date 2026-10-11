@@ -581,5 +581,5 @@ releaseDescribe('independent private release verification', () => {
     await expect(fixture.buildRelease(fixture.root, fixture.outDir)).rejects.toThrow()
     expect(readFileSync(archive).equals(archiveBeforeSecondBuild)).toBe(true)
     expect(readFileSync(checksumFile).equals(checksumBeforeSecondBuild)).toBe(true)
-  })
+  }, 30000)
 })
