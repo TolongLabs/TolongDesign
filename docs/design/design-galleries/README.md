@@ -4,7 +4,7 @@
 
 > Design galleries, interface patterns, and web inspiration.
 
-78 tools — 49 free, 26 freemium, 1 paid, 2 unknown. Source:
+79 tools — 49 free, 26 freemium, 1 paid, 3 unknown. Source:
 [Designeer](https://designeer.xyz/).
 
 | Tool                                                | Paywall  | Open source | Agent-friendly | Best for                                                                               | What it is                                                    |
@@ -87,5 +87,6 @@
 | [SaaS Landing Page](./saas-landing-page.md)         | Free     | No          | No             | SaaS landing pages, conversion funnels, full-page inspiration                          | Showcase of top SaaS landing pages.                           |
 | [Best SaaS Web Designs](./best-saas-web-designs.md) | Free     | No          | No             | SaaS web design, tech stack research, color palette discovery, sections                | Curated inspiration gallery of SaaS website design.           |
 | [A1](./a1.md)                                       | Freemium | No          | Yes            | web design inspiration, agent search, font pairing, section references                 | Website design inspiration gallery.                           |
+| [ICQR Magic Tree](./icqr-magic-tree.md)             | Unknown  | No          | No             | interactive product references, responsive control layouts, spatial product metaphors  | A 3D QR-code tree generator and interactive design reference. |
 
 [← All sections](../README.md)

@@ -62,7 +62,10 @@ direct integration, not whether visual evidence can help. Open candidate docs,
 follow official references, and inspect visible screenshots and live behavior
 with available browser/image tools. Text descriptions alone are not visual
 inspection. If access is blocked, ask for supplied references or mark that stage
-incomplete; do not invent observations.
+incomplete; do not invent observations. For a 3D reference, check that its scene
+actually rendered: a successful screenshot can contain controls around a blank
+canvas when graphics support is unavailable. See the
+[REA/ICQR study](./research/tree-icqr-study.md) for an observed example.
 
 For each selected reference, record URL, observed layout/type/color/motion
 principles, evidence, and what to avoid. Combine principles into original work.
