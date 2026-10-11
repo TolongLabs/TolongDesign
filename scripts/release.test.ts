@@ -36,6 +36,7 @@ type ReleaseFixture = {
 }
 
 const root = resolve(import.meta.dir, '..')
+const packageVersion = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version
 const entrypoint = join(root, 'scripts', 'design.ts')
 const smokeEntrypoint = join(root, 'scripts', 'smoke-release.ts')
 const scratchParent = tmpdir()
@@ -227,7 +228,7 @@ describe('checkout release diagnostics', () => {
   test('prints the declared package version', () => {
     const result = runCommand([process.execPath, entrypoint, '--version'], foreignCwd)
     expect(result.code).toBe(0)
-    expect(result.stdout).toBe('tolongdesign 0.1.0\n')
+    expect(result.stdout).toBe(`tolongdesign ${packageVersion}\n`)
     expect(result.stderr).toBe('')
   })
 
@@ -282,7 +283,7 @@ releaseDescribe('independent private release verification', () => {
     ) as RecordValue
     expect(packageMetadata.name).toBe('tolong-design')
     expect(packageMetadata.private).toBe(true)
-    expect(packageMetadata.version).toBe('0.1.0')
+    expect(packageMetadata.version).toBe(packageVersion)
     expect(packageMetadata.dependencies).toBeUndefined()
     expect(packageMetadata.devDependencies).toBeUndefined()
     expect(packageMetadata.optionalDependencies).toBeUndefined()
@@ -376,7 +377,7 @@ releaseDescribe('independent private release verification', () => {
     const runInstalled = (args: string[]) => runCommand([binary, ...args], foreignCwd, installEnvironment)
     const version = runInstalled(['--version'])
     expect(version.code).toBe(0)
-    expect(version.stdout).toBe('tolongdesign 0.1.0\n')
+    expect(version.stdout).toBe(`tolongdesign ${packageVersion}\n`)
     expect(version.stderr).toBe('')
 
     const doctorCommand = runInstalled(['doctor', '--json'])
@@ -387,7 +388,7 @@ releaseDescribe('independent private release verification', () => {
     expect(installedRoot).not.toBe(realpathSync(root))
     assertWithin(globalDir, installedRoot)
     expect(installedRoot).toBe(realpathSync(join(binaryTarget, '..', '..')))
-    expect(doctor.version).toBe('0.1.0')
+    expect(doctor.version).toBe(packageVersion)
     expect(doctor.resources).toBe((sourceCatalogue.tools as unknown[]).length)
 
     const agentSkill = readFileSync(join(installedRoot, '.agents', 'skills', 'design-project', 'SKILL.md'))
@@ -439,7 +440,7 @@ releaseDescribe('independent private release verification', () => {
     expect(smoke.stderr).toBe('')
     const smokeSummary = JSON.parse(smoke.stdout) as RecordValue
     expect(smokeSummary.ok).toBe(true)
-    expect(smokeSummary.version).toBe('0.1.0')
+    expect(smokeSummary.version).toBe(packageVersion)
     expect(smokeSummary.resources).toBe((sourceCatalogue.tools as unknown[]).length)
     expect(smokeSummary.context).toEqual(['gsap', 'saaspo'])
 

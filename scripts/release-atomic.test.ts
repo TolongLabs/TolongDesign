@@ -6,6 +6,7 @@ import { join } from 'node:path'
 import { buildRelease } from './release-lib'
 
 const root = join(import.meta.dir, '..')
+const packageVersion = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version
 const out = mkdtempSync(join(tmpdir(), 'td-release-race-'))
 afterAll(() => rmSync(out, { recursive: true, force: true }))
 
@@ -18,5 +19,5 @@ test('a concurrent release attempt cannot delete or replace the winning archive'
   expect(existsSync(winner.value.tarball)).toBe(true)
   expect(existsSync(winner.value.checksumFile)).toBe(true)
   const hash = createHash('sha256').update(readFileSync(winner.value.tarball)).digest('hex')
-  expect(readFileSync(winner.value.checksumFile, 'utf8')).toBe(`${hash}  tolong-design-0.1.0.tgz\n`)
+  expect(readFileSync(winner.value.checksumFile, 'utf8')).toBe(`${hash}  tolong-design-${packageVersion}.tgz\n`)
 }, 30000)

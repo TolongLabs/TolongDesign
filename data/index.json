@@ -8592,7 +8592,7 @@
    "designeer_url": "https://designeer.xyz/visuals",
    "designeer_blurb": "Declarative React renderer for Three.js scenes.",
    "paywall": "free",
-   "pricing_summary": "Completely free and open source under the MIT license.",
+   "pricing_summary": "Free MIT-licensed software; optional sponsorship. Paid support prices are not published in the checked sources.",
    "open_source": true,
    "license": "MIT",
    "category_tags": [
@@ -8605,16 +8605,16 @@
    ],
    "best_for": [
     "react 3d scenes",
-    "landing page animations",
+    "product configurators",
     "interactive models",
-    "ui integration"
+    "narrative 3d"
    ],
    "stack": [
     "react",
     "typescript"
    ],
    "agent_friendly": true,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-11",
    "doc": "docs/design/3d/react-three-fiber.md"
   },
   {

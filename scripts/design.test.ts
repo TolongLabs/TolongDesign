@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
 const root = join(import.meta.dir, '..')
+const packageVersion = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version
 const entrypoint = join(root, 'scripts/design.ts')
 const target = mkdtempSync(join(tmpdir(), 'tolong-design-target-'))
 const decode = (bytes: Uint8Array) => new TextDecoder().decode(bytes)
@@ -19,7 +20,7 @@ describe('private design CLI contract', () => {
   test('reports the installed package version from another project', () => {
     const result = run(['--version'], target)
     expect(result.code).toBe(0)
-    expect(result.stdout).toBe('tolongdesign 0.1.0\n')
+    expect(result.stdout).toBe(`tolongdesign ${packageVersion}\n`)
     expect(result.stderr).toBe('')
   })
 
@@ -28,7 +29,7 @@ describe('private design CLI contract', () => {
     expect(result.code).toBe(0)
     const output = JSON.parse(result.stdout)
     expect(output.schema_version).toBe(1)
-    expect(output.version).toBe('0.1.0')
+    expect(output.version).toBe(packageVersion)
     expect(output.runtime).toBe('bun')
     expect(output.mode).toBe('checkout')
     expect(output.resources).toBe(JSON.parse(readFileSync(join(root, 'data/catalogue.json'), 'utf8')).tools.length)

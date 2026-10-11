@@ -3,3 +3,4 @@ data/catalogue.json
 data/index.json
 bun.lock
 release/
+.archify/
