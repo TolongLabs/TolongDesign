@@ -1,63 +1,63 @@
 {
   ".prettierrc.json": {
-    "mtime": 1791696868.9135606,
-    "seen": 1791703219.66996,
+    "mtime": 1791344234.1082232,
+    "seen": 1791993631.0028884,
     "ast_hash": "1411a6b192b952e608a203c93a1d8121",
     "semantic_hash": "1411a6b192b952e608a203c93a1d8121"
   },
   "data/catalogue.json": {
-    "mtime": 1791702779.0368595,
-    "seen": 1791703219.669964,
-    "ast_hash": "4cb1acd09fa8e48b8cf4922863cd86c2",
-    "semantic_hash": ""
+    "mtime": 1791992934.0761085,
+    "seen": 1791993631.0028956,
+    "ast_hash": "a5786d155aa87763a17d695b063bf8d8",
+    "semantic_hash": "a5786d155aa87763a17d695b063bf8d8"
   },
   "data/index.json": {
-    "mtime": 1791702966.5643618,
-    "seen": 1791703219.669966,
-    "ast_hash": "0979d92f18e0bf02814156fbd7391baa",
-    "semantic_hash": ""
+    "mtime": 1791992934.0797086,
+    "seen": 1791993631.002899,
+    "ast_hash": "2df62c32b0c935b2f80c4440ca891483",
+    "semantic_hash": "2df62c32b0c935b2f80c4440ca891483"
   },
   "package.json": {
-    "mtime": 1791702503.185179,
-    "seen": 1791703219.6699672,
-    "ast_hash": "22efad224cb28e2d245df5bdc4475968",
-    "semantic_hash": ""
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029008,
+    "ast_hash": "912708a11020ddeda8f8525331cc780a",
+    "semantic_hash": "912708a11020ddeda8f8525331cc780a"
   },
   "scripts/build-index.ts": {
-    "mtime": 1791696868.9313562,
-    "seen": 1791703219.6699686,
-    "ast_hash": "935815a51141781861f6831d1617b7f6",
-    "semantic_hash": "935815a51141781861f6831d1617b7f6"
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029023,
+    "ast_hash": "43494128472a9b275886b7ba6ab741d3",
+    "semantic_hash": "43494128472a9b275886b7ba6ab741d3"
   },
   "scripts/check-docs.ts": {
-    "mtime": 1791696868.9325912,
-    "seen": 1791703219.6699696,
+    "mtime": 1791344597.6060233,
+    "seen": 1791993631.0029035,
     "ast_hash": "158a33f156136ca9a1e16fcd9193ee10",
     "semantic_hash": "158a33f156136ca9a1e16fcd9193ee10"
   },
   "scripts/check-links.ts": {
-    "mtime": 1791696868.9325912,
-    "seen": 1791703219.6699708,
+    "mtime": 1791347407.5897136,
+    "seen": 1791993631.0029051,
     "ast_hash": "3e2883c1b3c25994ee6b433a4da443f8",
     "semantic_hash": "3e2883c1b3c25994ee6b433a4da443f8"
   },
   "scripts/find.ts": {
-    "mtime": 1791696868.9325912,
-    "seen": 1791703219.6699755,
+    "mtime": 1791344283.5898702,
+    "seen": 1791993631.0029173,
     "ast_hash": "f689d7d7f5a8d19a1f227d83ef09e189",
     "semantic_hash": "f689d7d7f5a8d19a1f227d83ef09e189"
   },
   "scripts/lib.ts": {
-    "mtime": 1791696868.9325912,
-    "seen": 1791703219.6699762,
+    "mtime": 1791344242.4258792,
+    "seen": 1791993631.0029187,
     "ast_hash": "60783ad294766c43655a927bf7ce9f02",
     "semantic_hash": "60783ad294766c43655a927bf7ce9f02"
   },
   "AGENTS.md": {
-    "mtime": 1791702503.561184,
-    "seen": 1791703219.6699784,
-    "ast_hash": "682bc16dfe4dfd528b84587765b02faa",
-    "semantic_hash": ""
+    "mtime": 1791992934.0761085,
+    "seen": 1791993631.0029314,
+    "ast_hash": "6254e78eb57baed8456fca5e7642d95c",
+    "semantic_hash": "6254e78eb57baed8456fca5e7642d95c"
   },
   "docs/PLAYBOOK.md": {
     "mtime": 1791699823.0875423,
@@ -66,16 +66,16 @@
     "semantic_hash": "8135f98fde90225a5e715672cf74ee3f"
   },
   "docs/README.md": {
-    "mtime": 1791703005.3608794,
-    "seen": 1791703219.6699827,
-    "ast_hash": "32d731ce01a1ae5d3e53ccf84c58a336",
-    "semantic_hash": ""
+    "mtime": 1791992934.0797086,
+    "seen": 1791993631.0029361,
+    "ast_hash": "db0251ef9f20f0aeef12956d4a034d6c",
+    "semantic_hash": "db0251ef9f20f0aeef12956d4a034d6c"
   },
   "docs/design/3d/README.md": {
-    "mtime": 1791702966.6603632,
-    "seen": 1791703219.6699843,
-    "ast_hash": "cd8ae05a14278b0af7b04e438c2c3109",
-    "semantic_hash": "cd8ae05a14278b0af7b04e438c2c3109"
+    "mtime": 1791992423.5452309,
+    "seen": 1791993631.00294,
+    "ast_hash": "3aa67cd80631df673ca6c21091d82827",
+    "semantic_hash": "3aa67cd80631df673ca6c21091d82827"
   },
   "docs/design/3d/blender.md": {
     "mtime": 1791696868.9150198,
@@ -96,10 +96,10 @@
     "semantic_hash": "ac225650d30f38313621e86197156859"
   },
   "docs/design/3d/react-three-fiber.md": {
-    "mtime": 1791696868.9150198,
-    "seen": 1791703219.6699893,
-    "ast_hash": "044add03dc58b0d549b8185fabf20a9f",
-    "semantic_hash": "044add03dc58b0d549b8185fabf20a9f"
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.0029414,
+    "ast_hash": "b9f65a8db9ae54f28332ba971b57814a",
+    "semantic_hash": "b9f65a8db9ae54f28332ba971b57814a"
   },
   "docs/design/3d/three-js.md": {
     "mtime": 1791696868.9150198,
@@ -108,10 +108,10 @@
     "semantic_hash": "bac15e389b3704345279e47ece775fcf"
   },
   "docs/design/agents-mcp/README.md": {
-    "mtime": 1791702966.6793635,
-    "seen": 1791703219.6699924,
-    "ast_hash": "a17d6a97e547180b119974f3830bbe2c",
-    "semantic_hash": ""
+    "mtime": 1791992423.635231,
+    "seen": 1791993631.0029442,
+    "ast_hash": "2aec3d9e76df9edc98c16486ca2728fa",
+    "semantic_hash": "2aec3d9e76df9edc98c16486ca2728fa"
   },
   "docs/design/agents-mcp/agentation.md": {
     "mtime": 1791696868.9152546,
@@ -870,10 +870,10 @@
     "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
   },
   "README.md": {
-    "mtime": 1791696868.9135606,
-    "seen": 1791703219.6699812,
-    "ast_hash": "c11c9bde512666bc5151609320ddb3d1",
-    "semantic_hash": "c11c9bde512666bc5151609320ddb3d1"
+    "mtime": 1791992934.0761085,
+    "seen": 1791993631.0029335,
+    "ast_hash": "50506c0cb56a1c5609e2c76432c6bcb4",
+    "semantic_hash": "50506c0cb56a1c5609e2c76432c6bcb4"
   },
   "docs/design/3d/poly-haven.md": {
     "mtime": 1791696868.9150198,
@@ -882,10 +882,10 @@
     "semantic_hash": "bf367d02dc0d0aed1a9ba4213e2e5a87"
   },
   "docs/design/README.md": {
-    "mtime": 1791702966.644363,
-    "seen": 1791703219.6699917,
-    "ast_hash": "355b266727829fd82b1a0b9b4f443358",
-    "semantic_hash": ""
+    "mtime": 1791992934.0797086,
+    "seen": 1791993631.002943,
+    "ast_hash": "111703892e9e36cbd81c6ba6f9c95c07",
+    "semantic_hash": "111703892e9e36cbd81c6ba6f9c95c07"
   },
   "docs/design/agents-mcp/agentcn.md": {
     "mtime": 1791696868.9152546,
@@ -1626,10 +1626,10 @@
     "semantic_hash": "a373e1a65e28bb100c10db4d5098a629"
   },
   "docs/design/design-galleries/README.md": {
-    "mtime": 1791702966.7513642,
-    "seen": 1791703219.6700885,
-    "ast_hash": "1502ed8cb5a5db73916617f45c6322b9",
-    "semantic_hash": "1502ed8cb5a5db73916617f45c6322b9"
+    "mtime": 1791992423.944831,
+    "seen": 1791993631.0029593,
+    "ast_hash": "cbe811ec588270221defefdafa0ebd70",
+    "semantic_hash": "cbe811ec588270221defefdafa0ebd70"
   },
   "docs/design/design-galleries/a1.md": {
     "mtime": 1791696868.9201446,
@@ -2208,10 +2208,10 @@
     "semantic_hash": "3998001ee4eb7a307b30c3f2ad966e3d"
   },
   "docs/design/interface-design/README.md": {
-    "mtime": 1791702966.7823648,
-    "seen": 1791703219.670164,
-    "ast_hash": "c522a1b718e1e7a16b04fca546bf140c",
-    "semantic_hash": "c522a1b718e1e7a16b04fca546bf140c"
+    "mtime": 1791992424.0852308,
+    "seen": 1791993631.0029626,
+    "ast_hash": "1dd0cf37d04ea23facfacdf6942a603c",
+    "semantic_hash": "1dd0cf37d04ea23facfacdf6942a603c"
   },
   "docs/design/interface-design/design-dev.md": {
     "mtime": 1791696868.9247527,
@@ -2256,10 +2256,10 @@
     "semantic_hash": "84c8c75167e5367d69fb8d774ff95108"
   },
   "docs/design/motion/README.md": {
-    "mtime": 1791702966.788365,
-    "seen": 1791703219.6701703,
-    "ast_hash": "4dfa7f331e96821fb6706b0d1d1a5fce",
-    "semantic_hash": "4dfa7f331e96821fb6706b0d1d1a5fce"
+    "mtime": 1791992424.110431,
+    "seen": 1791993631.0029657,
+    "ast_hash": "c378b89906c26f1deb7fddf95f4cd596",
+    "semantic_hash": "c378b89906c26f1deb7fddf95f4cd596"
   },
   "docs/design/motion/devouring-details.md": {
     "mtime": 1791696868.9250472,
@@ -2496,10 +2496,10 @@
     "semantic_hash": "1103a24b73318e32b2984b2877f99b60"
   },
   "docs/design/shaders/README.md": {
-    "mtime": 1791702966.803365,
-    "seen": 1791703219.6701965,
-    "ast_hash": "d743cc76ed733346270fad688c25b983",
-    "semantic_hash": "d743cc76ed733346270fad688c25b983"
+    "mtime": 1791992424.1644309,
+    "seen": 1791993631.002969,
+    "ast_hash": "30fc520740802cb76f4e40f53a9f8ca9",
+    "semantic_hash": "30fc520740802cb76f4e40f53a9f8ca9"
   },
   "docs/design/shaders/book-of-shaders.md": {
     "mtime": 1791696868.926687,
@@ -2742,16 +2742,16 @@
     "semantic_hash": "bca54b8456948f300b14e69f39e80edd"
   },
   "templates/tool-doc.md": {
-    "mtime": 1791703118.9783955,
-    "seen": 1791703219.6702328,
-    "ast_hash": "abe637d391cc3747146ee644b5103a82",
-    "semantic_hash": "abe637d391cc3747146ee644b5103a82"
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029826,
+    "ast_hash": "6fd689507a3fdd8d392e9bed84c498fc",
+    "semantic_hash": "6fd689507a3fdd8d392e9bed84c498fc"
   },
   "templates/worker-brief.md": {
-    "mtime": 1791703118.9783955,
-    "seen": 1791703219.6702332,
-    "ast_hash": "f80224157dc566bf7ca6870fba930449",
-    "semantic_hash": "f80224157dc566bf7ca6870fba930449"
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029845,
+    "ast_hash": "f0ea137f775055c0c5cd9ddab7ff67f0",
+    "semantic_hash": "f0ea137f775055c0c5cd9ddab7ff67f0"
   },
   "docs/design/component-libraries/ascii-rest.md": {
     "mtime": 1791696868.9164557,
@@ -2784,63 +2784,243 @@
     "semantic_hash": "87a94a7f3e398a32ec275d9e5e49fc4c"
   },
   "scripts/design-cli.test.ts": {
-    "mtime": 1791702883.700256,
-    "seen": 1791703219.6699717,
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.0029082,
     "ast_hash": "026589194e34659991661140ab0bba7a",
-    "semantic_hash": ""
+    "semantic_hash": "026589194e34659991661140ab0bba7a"
   },
   "scripts/design-lib.test.ts": {
-    "mtime": 1791703005.4848812,
-    "seen": 1791703219.6699724,
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.0029094,
     "ast_hash": "8cecf1948511bf688909778f139b3516",
-    "semantic_hash": ""
+    "semantic_hash": "8cecf1948511bf688909778f139b3516"
   },
   "scripts/design-lib.ts": {
-    "mtime": 1791702912.4086392,
-    "seen": 1791703219.669973,
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.0029106,
     "ast_hash": "e9608bcf77e589da145ad23b4faff70a",
-    "semantic_hash": ""
+    "semantic_hash": "e9608bcf77e589da145ad23b4faff70a"
   },
   "scripts/design.test.ts": {
-    "mtime": 1791701890.7270098,
-    "seen": 1791703219.669974,
-    "ast_hash": "ae0c97b00237f7cf92329bd6bc24bb1d",
-    "semantic_hash": ""
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.002913,
+    "ast_hash": "7ffbd332cff34d343cddda7d44f84fa5",
+    "semantic_hash": "7ffbd332cff34d343cddda7d44f84fa5"
   },
   "scripts/design.ts": {
-    "mtime": 1791702912.6036417,
-    "seen": 1791703219.6699748,
-    "ast_hash": "261c65f871618979d4078e56c47c84df",
-    "semantic_hash": ""
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.0029154,
+    "ast_hash": "085e4b29af2a0813f97be04d97c70843",
+    "semantic_hash": "085e4b29af2a0813f97be04d97c70843"
   },
   "docs/WORKFLOW.md": {
-    "mtime": 1791703005.41088,
-    "seen": 1791703219.6699831,
-    "ast_hash": "7d34b3668509c84cff61569bc2885c55",
-    "semantic_hash": ""
+    "mtime": 1791992176.8009243,
+    "seen": 1791993631.0029373,
+    "ast_hash": "573f4eabfc3a78d15eb64f8b5ddc84f7",
+    "semantic_hash": "573f4eabfc3a78d15eb64f8b5ddc84f7"
   },
   "docs/design/agents-mcp/image-to-code-skill.md": {
-    "mtime": 1791702764.306663,
-    "seen": 1791703219.6700058,
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.0029469,
     "ast_hash": "d8ae027992bc6b73f94564b4bc64e6da",
-    "semantic_hash": ""
+    "semantic_hash": "d8ae027992bc6b73f94564b4bc64e6da"
   },
   "docs/scenarios/dictation-landing.md": {
-    "mtime": 1791703005.3748796,
-    "seen": 1791703219.6702316,
+    "mtime": 1791992176.8266177,
+    "seen": 1791993631.0029755,
     "ast_hash": "1286ba76052f55c63004d7891a611086",
-    "semantic_hash": ""
+    "semantic_hash": "1286ba76052f55c63004d7891a611086"
   },
   "docs/superpowers/plans/2026-10-11-project-design-workflow.md": {
-    "mtime": 1791701890.677009,
-    "seen": 1791703219.670232,
+    "mtime": 1791992176.8292859,
+    "seen": 1791993631.002978,
     "ast_hash": "97a4c012aa4ed57427a1e882196394dd",
-    "semantic_hash": ""
+    "semantic_hash": "97a4c012aa4ed57427a1e882196394dd"
   },
   "docs/superpowers/specs/2026-10-11-project-design-workflow-design.md": {
-    "mtime": 1791701890.6860092,
-    "seen": 1791703219.6702323,
+    "mtime": 1791992176.8300986,
+    "seen": 1791993631.002981,
     "ast_hash": "1e54dbecfe8c7584c7201fdd700cdf67",
-    "semantic_hash": ""
+    "semantic_hash": "1e54dbecfe8c7584c7201fdd700cdf67"
+  },
+  "scripts/prepare-release.ts": {
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.0029206,
+    "ast_hash": "f039e1d0138b43915924ef87d2bf002d",
+    "semantic_hash": "f039e1d0138b43915924ef87d2bf002d"
+  },
+  "scripts/release-atomic.test.ts": {
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.0029223,
+    "ast_hash": "a03597120709ec9c2410f1a5fbb89acd",
+    "semantic_hash": "a03597120709ec9c2410f1a5fbb89acd"
+  },
+  "scripts/release-info.test.ts": {
+    "mtime": 1791992176.8373923,
+    "seen": 1791993631.0029235,
+    "ast_hash": "50a9bea3d3427cd7113f9c7ebe6126c2",
+    "semantic_hash": "50a9bea3d3427cd7113f9c7ebe6126c2"
+  },
+  "scripts/release-info.ts": {
+    "mtime": 1791992176.841039,
+    "seen": 1791993631.002925,
+    "ast_hash": "ca74fd98a0c3645e31f238a044946dea",
+    "semantic_hash": "ca74fd98a0c3645e31f238a044946dea"
+  },
+  "scripts/release-lib.ts": {
+    "mtime": 1791992176.841039,
+    "seen": 1791993631.0029259,
+    "ast_hash": "4c04198da94641cbedcaf196a30447c4",
+    "semantic_hash": "4c04198da94641cbedcaf196a30447c4"
+  },
+  "scripts/release.test.ts": {
+    "mtime": 1791992176.841039,
+    "seen": 1791993631.0029266,
+    "ast_hash": "d8ff7a9457c54882cebbc3f53741c4ae",
+    "semantic_hash": "d8ff7a9457c54882cebbc3f53741c4ae"
+  },
+  "scripts/smoke-release.ts": {
+    "mtime": 1791992176.841039,
+    "seen": 1791993631.0029275,
+    "ast_hash": "f9229b50d510c0400a4168964360cb9c",
+    "semantic_hash": "f9229b50d510c0400a4168964360cb9c"
+  },
+  ".github/workflows/release.yml": {
+    "mtime": 1791992176.7936306,
+    "seen": 1791993631.0029287,
+    "ast_hash": "998d8a49dc2f9e45e0e26879078c9993",
+    "semantic_hash": "998d8a49dc2f9e45e0e26879078c9993"
+  },
+  ".github/workflows/verify.yml": {
+    "mtime": 1791992176.7966425,
+    "seen": 1791993631.0029302,
+    "ast_hash": "1529d6c67bba42de946af768e0112c96",
+    "semantic_hash": "1529d6c67bba42de946af768e0112c96"
+  },
+  "docs/CLI.md": {
+    "mtime": 1791992934.0797086,
+    "seen": 1791993631.0029347,
+    "ast_hash": "16749822944d708168e72fab4bad9c9e",
+    "semantic_hash": "16749822944d708168e72fab4bad9c9e"
+  },
+  "docs/assets/README.md": {
+    "mtime": 1791992176.8009243,
+    "seen": 1791993631.0029385,
+    "ast_hash": "96eb4a4165ec5d5e0f069a49c2df10c3",
+    "semantic_hash": "96eb4a4165ec5d5e0f069a49c2df10c3"
+  },
+  "docs/design/agents-mcp/anatomy.md": {
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.0029452,
+    "ast_hash": "25e4eb9801a89c25033cca567489df36",
+    "semantic_hash": "25e4eb9801a89c25033cca567489df36"
+  },
+  "docs/design/agents-mcp/rea.md": {
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.0029478,
+    "ast_hash": "f4a779f5b4bc4a11bb7c78324f061005",
+    "semantic_hash": "f4a779f5b4bc4a11bb7c78324f061005"
+  },
+  "docs/design/comics/README.md": {
+    "mtime": 1791992934.0797086,
+    "seen": 1791993631.0029492,
+    "ast_hash": "de9a8e883b7334d6972ea57f4039c086",
+    "semantic_hash": "de9a8e883b7334d6972ea57f4039c086"
+  },
+  "docs/design/comics/comicalizer.md": {
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029504,
+    "ast_hash": "f7a2c70cfbbbcba8e18f637bdcb5fe18",
+    "semantic_hash": "f7a2c70cfbbbcba8e18f637bdcb5fe18"
+  },
+  "docs/design/comics/fukidashi.md": {
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029519,
+    "ast_hash": "1889a3d13fd0c75d19cb2c95fe1d160e",
+    "semantic_hash": "1889a3d13fd0c75d19cb2c95fe1d160e"
+  },
+  "docs/design/comics/haikeigacha.md": {
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.002953,
+    "ast_hash": "dce308b3d49a26007b6106f9a7608269",
+    "semantic_hash": "dce308b3d49a26007b6106f9a7608269"
+  },
+  "docs/design/comics/komawari.md": {
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.002954,
+    "ast_hash": "a08dbe2e2930db8822ed7a7ecd2fccb2",
+    "semantic_hash": "a08dbe2e2930db8822ed7a7ecd2fccb2"
+  },
+  "docs/design/comics/koukasen.md": {
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.002955,
+    "ast_hash": "07d346987bb339ebf19db18ed1447f6d",
+    "semantic_hash": "07d346987bb339ebf19db18ed1447f6d"
+  },
+  "docs/design/comics/namegacha.md": {
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029564,
+    "ast_hash": "5da003b47ea54abf02807b721f6a0330",
+    "semantic_hash": "5da003b47ea54abf02807b721f6a0330"
+  },
+  "docs/design/comics/rokehan.md": {
+    "mtime": 1791992934.0845768,
+    "seen": 1791993631.0029573,
+    "ast_hash": "187cc41ff28c1919e2eea3f012fd9234",
+    "semantic_hash": "187cc41ff28c1919e2eea3f012fd9234"
+  },
+  "docs/design/design-galleries/icqr-magic-tree.md": {
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.0029607,
+    "ast_hash": "94de85d9dbb0b8859568436b9994c1e8",
+    "semantic_hash": "94de85d9dbb0b8859568436b9994c1e8"
+  },
+  "docs/design/interface-design/lenis-templates.md": {
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.002964,
+    "ast_hash": "cb940ae536a77a7354a88f88821eebce",
+    "semantic_hash": "cb940ae536a77a7354a88f88821eebce"
+  },
+  "docs/design/motion/lenis.md": {
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.0029671,
+    "ast_hash": "a315a253418b8290c46c7d92e55ebc22",
+    "semantic_hash": "a315a253418b8290c46c7d92e55ebc22"
+  },
+  "docs/design/shaders/shaders.md": {
+    "mtime": 1791992176.8191583,
+    "seen": 1791993631.0029702,
+    "ast_hash": "dd88dd4e03eaed4876b92369596ecc61",
+    "semantic_hash": "dd88dd4e03eaed4876b92369596ecc61"
+  },
+  "docs/research/react-three-fiber-assessment.md": {
+    "mtime": 1791992176.822805,
+    "seen": 1791993631.0029714,
+    "ast_hash": "2c2439fe686179443a7e45326083f85b",
+    "semantic_hash": "2c2439fe686179443a7e45326083f85b"
+  },
+  "docs/research/tree-icqr-reference.md": {
+    "mtime": 1791992176.8266177,
+    "seen": 1791993631.0029724,
+    "ast_hash": "630dd6359bb439ed9a2b2567cd1f0007",
+    "semantic_hash": "630dd6359bb439ed9a2b2567cd1f0007"
+  },
+  "docs/research/tree-icqr-study.md": {
+    "mtime": 1791992176.8266177,
+    "seen": 1791993631.0029738,
+    "ast_hash": "87f18ec5e4fef85f8fb4b57941c6cabc",
+    "semantic_hash": "87f18ec5e4fef85f8fb4b57941c6cabc"
+  },
+  "docs/superpowers/plans/2026-10-11-private-cli-release.md": {
+    "mtime": 1791992176.8286178,
+    "seen": 1791993631.0029764,
+    "ast_hash": "0dd18e2fb55160df9a0308a97f70dc9b",
+    "semantic_hash": "0dd18e2fb55160df9a0308a97f70dc9b"
+  },
+  "docs/superpowers/specs/2026-10-11-private-cli-release-design.md": {
+    "mtime": 1791992176.8292859,
+    "seen": 1791993631.0029793,
+    "ast_hash": "cb1c4b257e230be395412d2285987375",
+    "semantic_hash": "cb1c4b257e230be395412d2285987375"
   }
 }
