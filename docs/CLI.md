@@ -2,7 +2,7 @@
 
 Use the installed CLI from a target project when you need design-resource
 search, complete usage guidance, or an agent context pack. The tool is private
-and read-only; the target agent still designs, builds, and reviews the website.
+and read-only; the target agent still designs, builds, and reviews the work.
 
 ## Requirements
 

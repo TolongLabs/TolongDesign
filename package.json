@@ -6,7 +6,7 @@
     "bun": ">=1.4.0"
   },
   "type": "module",
-  "description": "TolongLabs' private web-design starting point: one agent-friendly doc per curated design tool.",
+  "description": "TolongLabs' private design starting point: one agent-friendly doc per curated design tool.",
   "scripts": {
     "check": "bun scripts/check-docs.ts",
     "index": "bun scripts/build-index.ts && prettier --log-level warn --write docs/design/README.md 'docs/design/*/README.md' docs/design/people.md",
