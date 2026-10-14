@@ -15,9 +15,24 @@ export type CatalogueTool = {
   doc: string
 }
 
-export type Person = { name: string; url: string; description: string; sameAs: string[] }
+export type CreatorEvidence = {
+  source_url: string
+  checked: string
+  quote: string
+}
+
+export type Person = {
+  name: string
+  url: string
+  description: string
+  sameAs: string[]
+  created_tools?: string[]
+  created_tools_evidence?: Record<string, CreatorEvidence>
+}
 
 export type Catalogue = { source: string; scraped: string; tools: CatalogueTool[]; people: Person[] }
+
+export * from './catalogue-schema'
 
 export const PAYWALLS = ['free', 'freemium', 'paid', 'unknown'] as const
 
@@ -36,6 +51,9 @@ export const FRONTMATTER_KEYS = [
   'category_tags',
   'best_for',
   'stack',
+  'execution_mode',
+  'surface',
+  'status',
   'agent_friendly',
   'last_verified'
 ] as const

@@ -1,49 +1,73 @@
-// HTTP-checks every external link in the tool docs and lists the broken ones.
-// 403/429 usually mean bot protection, not a dead page, so they are reported separately.
-// Usage: bun run links                  (all docs)
-//        bun run links -- icons         (one section)
+// HTTP-check external doc links; --status reports lifecycle suggestions for primary resource URLs only.
+// Suggestions require content review and never edit source docs.
 import { readFileSync } from 'node:fs'
 import { Glob } from 'bun'
-import { ROOT } from './lib'
+import { ROOT, loadCatalogue, readDoc } from './lib'
+import { buildResourceStatusReport, checkLinksBatch, parseLinkOptions } from './link-check-lib'
 
-const section = process.argv[2]
-const files = [...new Glob(`docs/design/${section ?? '*'}/*.md`).scanSync(ROOT)].filter((f) => !f.endsWith('README.md'))
+let options: ReturnType<typeof parseLinkOptions>
+try {
+  options = parseLinkOptions(process.argv.slice(2))
+} catch (error) {
+  console.error(`Usage error: ${error instanceof Error ? error.message : String(error)}`)
+  process.exit(2)
+}
+const { section, status: showStatus, json: jsonOutput } = options
+const { tools } = loadCatalogue()
+const selected = tools.filter((tool) => section === undefined || tool.section_slug === section)
+const files = [...new Glob(`docs/design/${section ?? '*'}/*.md`).scanSync(ROOT)].filter(
+  (file) => !file.endsWith('README.md')
+)
 const where = new Map<string, Set<string>>()
-for (const file of files)
-  for (const m of readFileSync(`${ROOT}/${file}`, 'utf8').matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)) {
-    if (!where.has(m[1])) where.set(m[1], new Set())
-    where.get(m[1])!.add(file)
+const record = (url: string, doc: string) => {
+  if (!where.has(url)) where.set(url, new Set())
+  where.get(url)!.add(doc)
+}
+
+const resources = selected.map((tool) => {
+  const meta = readDoc(tool.doc)?.meta ?? {}
+  const source_url = typeof meta.source_url === 'string' ? meta.source_url : tool.url
+  record(source_url, tool.doc)
+  return {
+    id: `${tool.section_slug}/${tool.slug}`,
+    doc: tool.doc,
+    source_url,
+    current_status: typeof meta.status === 'string' ? meta.status : null
   }
+})
+for (const file of files) {
+  const body = readDoc(file)?.body ?? readFileSync(`${ROOT}/${file}`, 'utf8')
+  for (const match of body.matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)) record(match[1], file)
+}
 
 const urls = [...where.keys()]
-const status = new Map<string, number>()
-const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
-async function check(url: string) {
-  try {
-    const res = await fetch(url, {
-      redirect: 'follow',
-      headers: { 'user-agent': UA },
-      signal: AbortSignal.timeout(20_000)
-    })
-    status.set(url, res.status)
-  } catch {
-    status.set(url, 0)
+const observations = await checkLinksBatch(urls, { concurrency: 24, timeoutMs: 20_000 })
+const broken = urls.filter((url) => {
+  const observation = observations.get(url)!
+  const code = observation.http_status
+  return code === null || code === 404 || code === 410 || code >= 500 || observation.paused === true
+})
+const blocked = urls.filter((url) => [401, 403, 429].includes(observations.get(url)!.http_status ?? 0))
+const statusReport = showStatus ? buildResourceStatusReport(resources, observations) : []
+
+if (jsonOutput) {
+  const report = showStatus
+    ? statusReport
+    : urls.map((url) => ({ ...observations.get(url)!, docs: [...where.get(url)!] }))
+  console.log(JSON.stringify(report, null, 2))
+} else {
+  for (const url of broken)
+    console.log(`broken  ${observations.get(url)!.http_status ?? 'ERR'}  ${url}  <- ${[...where.get(url)!].join(', ')}`)
+  console.log(
+    `\n${urls.length} links checked: ${broken.length} broken, ${blocked.length} bot-blocked (401/403/429, not checked further)`
+  )
+  if (showStatus) {
+    console.log('\nStatus suggestions:')
+    for (const observation of statusReport) {
+      console.log(
+        `${(observation.suggested_status ?? 'undetermined').padEnd(12)} ${observation.id}  ${observation.url}  (${observation.reason}; content review required)`
+      )
+    }
   }
 }
-const queue = [...urls]
-await Promise.all(
-  Array.from({ length: 24 }, async () => {
-    while (queue.length) await check(queue.shift()!)
-  })
-)
-
-const broken = urls.filter((u) => {
-  const s = status.get(u)!
-  return s === 0 || s === 404 || s === 410 || s >= 500
-})
-const blocked = urls.filter((u) => [401, 403, 429].includes(status.get(u)!))
-for (const u of broken) console.log(`broken  ${status.get(u) || 'ERR'}  ${u}  <- ${[...where.get(u)!].join(', ')}`)
-console.log(
-  `\n${urls.length} links checked: ${broken.length} broken, ${blocked.length} bot-blocked (401/403/429, not checked further)`
-)
 process.exit(broken.length ? 1 : 0)

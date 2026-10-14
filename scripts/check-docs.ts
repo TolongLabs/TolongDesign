@@ -3,12 +3,23 @@
 //        bun run check -- --quiet (errors only)
 import { existsSync, readFileSync } from 'node:fs'
 import { dirname, join, normalize } from 'node:path'
-import { FRONTMATTER_KEYS, HEADINGS, PAYWALLS, ROOT, loadCatalogue, readDoc } from './lib'
+import {
+  FRONTMATTER_KEYS,
+  HEADINGS,
+  PAYWALLS,
+  ROOT,
+  loadCatalogue,
+  readDoc,
+  validatePeople,
+  validateResourceMeta
+} from './lib'
 
 const quiet = process.argv.includes('--quiet')
-const { tools } = loadCatalogue()
+const { tools, people } = loadCatalogue()
 const errors: string[] = []
 const warnings: string[] = []
+
+errors.push(...validatePeople(people, tools))
 
 for (const tool of tools) {
   const doc = readDoc(tool.doc)
@@ -28,6 +39,8 @@ for (const tool of tools) {
     if (key in meta && !Array.isArray(meta[key])) errors.push(`${tool.doc}: "${key}" must be a list`)
   for (const key of ['open_source', 'agent_friendly'])
     if (key in meta && typeof meta[key] !== 'boolean') errors.push(`${tool.doc}: "${key}" must be true/false`)
+
+  errors.push(...validateResourceMeta(meta, tool.doc))
 
   if (!body.match(new RegExp(`^# .+`, 'm'))) errors.push(`${tool.doc}: missing H1`)
   const h2 = [...body.matchAll(/^## (.+)$/gm)].map((m) => m[1].trim())

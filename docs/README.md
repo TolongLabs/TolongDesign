@@ -10,6 +10,7 @@ what they cost, and get them producing real output.
 | Path                                               | What it is                                                                    |
 | -------------------------------------------------- | ----------------------------------------------------------------------------- |
 | [PLAYBOOK.md](./PLAYBOOK.md)                       | How to go from a brief to a design stack and a first page                     |
+| [METADATA.md](./METADATA.md)                       | Execution modes, output surfaces, availability and creator evidence           |
 | [design/README.md](./design/README.md)             | The catalogue: 18 sections, counts, paywall breakdown                         |
 | `design/<section>/README.md`                       | One table per section: every tool with paywall, open source, best for         |
 | `design/<section>/<tool>.md`                       | One doc per tool: source, paywall, pricing, how to use, examples, agent notes |
