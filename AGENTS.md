@@ -6,21 +6,24 @@ detail and are read when the task calls for them.
 
 ## Project
 
-TolongDesign is TolongLabs' private **web-design starting point**. It is a
-documentation repository, not an app: one Markdown doc per curated design tool
-or resource (component libraries, galleries, icons, type, color, motion,
-shaders, agents & MCP, deploy, reading, and more), scraped from
-[Designeer](https://designeer.xyz) and researched individually.
+TolongDesign is TolongLabs' private **design starting point**: tools and
+resources for designing anything beautifully and professionally — websites and
+product UI, 3D, motion, type, comics and more. It is a documentation repository,
+not an app: one Markdown doc per curated design tool or resource (component
+libraries, galleries, icons, type, color, motion, shaders, 3D, comics, agents &
+MCP, deploy, reading, and more), mostly scraped from
+[Designeer](https://designeer.xyz), plus hand-picked additions, each researched
+individually.
 
 Every tool doc records the **source URL**, **paywall** (`free`, `freemium`,
 `paid`, `unknown`), pricing, licence, **how to use** it (install commands and
-snippets for code libraries), **examples**, when to use it, agent notes, and
-alternatives. Indexes and `data/index.json` are generated from the docs'
-frontmatter.
+snippets for code libraries, the tested workflow for apps), **examples**, when
+to use it, agent notes, and alternatives. Indexes and `data/index.json` are
+generated from the docs' frontmatter.
 
 Use it two ways:
 
-1. **As a reference** while building a TolongLabs website: start at
+1. **As a reference** for any TolongLabs design work: start at
    [docs/README.md](docs/README.md), pick tools with the
    [design playbook](docs/PLAYBOOK.md), filter with `bun run find`. For a
    use-case-aware design task, invoke `design-project` and follow
@@ -32,12 +35,12 @@ Use it two ways:
 
 ```
 docs/README.md                 Start here: what is in the repo and how to use it
-docs/PLAYBOOK.md               How to pick a stack and start a new web design
+docs/PLAYBOOK.md               How to pick a stack and start a new website
 docs/design/README.md          Generated: every section with counts
 docs/design/<section>/README.md Generated: one row per tool in the section
 docs/design/<section>/<slug>.md One doc per tool (hand-written / researched)
 docs/design/people.md          Generated: design engineers worth following
-data/catalogue.json            Raw Designeer scrape (tools + people); source of truth for what exists
+data/catalogue.json            Designeer scrape plus hand-added tools (tools + people); source of truth for what exists
 data/index.json                Generated: every doc's frontmatter, flat
 templates/tool-doc.md          The contract every tool doc follows
 templates/worker-brief.md      Work order used to fan out doc research to agents
@@ -66,6 +69,10 @@ bun run format              # prettier
 - **The template is the contract.** Every tool doc has the frontmatter keys and
   the nine H2 headings of [templates/tool-doc.md](templates/tool-doc.md), in
   order. `bun run check` enforces it.
+- **Every doc must let an agent produce what the tool advertises.** "How to use"
+  and "Agent notes" carry the concrete steps, inputs, formats, export hand-off
+  and gotchas. For apps, run the core workflow yourself (a headless browser for
+  web apps) and document the steps that worked.
 - **Never invent facts.** Prices, URLs, package names, install commands and
   counts come from the official site, checked on the date in `last_verified`. If
   something is not published, write "Not published". When you update a fact,

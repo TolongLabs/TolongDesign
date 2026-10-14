@@ -53,7 +53,8 @@ const blurbs: Record<string, string> = {
   'video-capture': 'Screen recording software, timeline editors, and demo tools.',
   whiteboard: 'Infinite canvas workspaces for wireframing and systems architecture.',
   deploy: 'Hosting platforms, edge runtimes, and deployment infrastructure.',
-  reading: 'Essential books, design engineering essays, and craft tutorials.'
+  reading: 'Essential books, design engineering essays, and craft tutorials.',
+  comics: 'Manga and comic tools: panels, balloons, tones, poses, backgrounds, and storyboards.'
 }
 for (const [slug] of sections) sectionBlurb.set(slug, blurbs[slug] ?? '')
 
@@ -62,6 +63,8 @@ const count = (xs: Entry[], p: string) => xs.filter((e) => e.paywall === p).leng
 // Per-section READMEs
 for (const [slug, name] of sections) {
   const rows = entries.filter((e) => e.section_slug === slug)
+  const designeer = rows.find((e) => String(e.designeer_url).includes('designeer.xyz'))
+  const source = designeer ? `Source: [Designeer](${designeer.designeer_url}).` : 'Source: hand-picked; see each doc.'
   const md = [
     GENERATED,
     '',
@@ -69,7 +72,7 @@ for (const [slug, name] of sections) {
     '',
     `> ${sectionBlurb.get(slug)}`,
     '',
-    `${rows.length} tools — ${count(rows, 'free')} free, ${count(rows, 'freemium')} freemium, ${count(rows, 'paid')} paid, ${count(rows, 'unknown')} unknown. Source: [Designeer](${rows[0].designeer_url}).`,
+    `${rows.length} tools — ${count(rows, 'free')} free, ${count(rows, 'freemium')} freemium, ${count(rows, 'paid')} paid, ${count(rows, 'unknown')} unknown. ${source}`,
     '',
     '| Tool | Paywall | Open source | Agent-friendly | Best for | What it is |',
     '| ---- | ------- | ----------- | -------------- | -------- | ---------- |',
@@ -91,7 +94,7 @@ const overview = [
   '',
   '# Design catalogue',
   '',
-  `${entries.length} tools across ${sections.length} sections, scraped from [Designeer](https://designeer.xyz) on ${scraped} and researched one by one. Each tool has its own doc with source URL, paywall, how to use, examples, and agent notes.`,
+  `${entries.length} tools across ${sections.length} sections, scraped from [Designeer](https://designeer.xyz) on ${scraped} plus hand-picked additions, researched one by one. Each tool has its own doc with source URL, paywall, how to use, examples, and agent notes.`,
   '',
   `**Paywall overview:** ${count(entries, 'free')} free · ${count(entries, 'freemium')} freemium · ${count(entries, 'paid')} paid · ${count(entries, 'unknown')} unknown.`,
   '',

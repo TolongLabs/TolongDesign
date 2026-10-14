@@ -1,20 +1,21 @@
 # TolongDesign docs
 
-The private web-design starting point for TolongLabs developers and their coding
-agents. Use it at the start of every website, landing page or product UI to pick
-proven tools fast, know what they cost, and get them running.
+The private design starting point for TolongLabs developers and their coding
+agents. Use it at the start of any design work — a website, landing page,
+product UI, 3D scene, motion piece or comic — to pick proven tools fast, know
+what they cost, and get them producing real output.
 
 ## What is here
 
 | Path                                               | What it is                                                                    |
 | -------------------------------------------------- | ----------------------------------------------------------------------------- |
 | [PLAYBOOK.md](./PLAYBOOK.md)                       | How to go from a brief to a design stack and a first page                     |
-| [design/README.md](./design/README.md)             | The catalogue: 17 sections, counts, paywall breakdown                         |
+| [design/README.md](./design/README.md)             | The catalogue: 18 sections, counts, paywall breakdown                         |
 | `design/<section>/README.md`                       | One table per section: every tool with paywall, open source, best for         |
 | `design/<section>/<tool>.md`                       | One doc per tool: source, paywall, pricing, how to use, examples, agent notes |
 | [design/people.md](./design/people.md)             | 132 design engineers worth following                                          |
 | [`../data/index.json`](../data/index.json)         | Every doc's frontmatter as JSON, for scripts and agents                       |
-| [`../data/catalogue.json`](../data/catalogue.json) | The raw Designeer scrape (what exists)                                        |
+| [`../data/catalogue.json`](../data/catalogue.json) | Designeer scrape plus hand-added tools (what exists)                          |
 
 ## Sections
 
@@ -29,6 +30,7 @@ proven tools fast, know what they cost, and get them running.
 | [Icons](./design/icons/README.md)                             | Icon families                                           |
 | [3D](./design/3d/README.md)                                   | 3D modeling and WebGL engines                           |
 | [Shaders](./design/shaders/README.md)                         | Fragment shaders, noise, canvas effects                 |
+| [Comics](./design/comics/README.md)                           | Manga panels, balloons, tones, poses, backgrounds       |
 | [Development](./design/development/README.md)                 | Editors, runtimes, local tooling                        |
 | [Agents & MCP](./design/agents-mcp/README.md)                 | Coding agents, MCP servers, agent specs                 |
 | [Utilities](./design/utilities/README.md)                     | Frontend developer utilities                            |

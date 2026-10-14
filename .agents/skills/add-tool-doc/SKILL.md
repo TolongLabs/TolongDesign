@@ -15,6 +15,9 @@ description: Use when adding a new design tool to TolongDesign, refreshing an ex
 2. Copy [templates/tool-doc.md](../../../templates/tool-doc.md) to the `doc`
    path and fill every section from the **official site** — pricing page,
    docs, GitHub, showcase. Never invent URLs, prices or install commands.
+   "How to use" and "Agent notes" must let an agent produce what the tool
+   advertises: for apps, run the core workflow yourself (a headless browser
+   for web apps) and document the steps, inputs and exports that worked.
 3. `bun run index && bun run check && bun run format`.
 
 ## Refresh

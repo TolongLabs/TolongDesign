@@ -1,10 +1,12 @@
 # Work order: write TolongDesign tool docs
 
-You are writing reference docs for **TolongDesign**, the private web-design
-starting point for TolongLabs developers and their coding agents. Every doc
-covers one tool/resource listed on Designeer (https://designeer.xyz). Readers
-are web developers and AI coding agents choosing what to use on a client or
-product website, so the docs must be accurate, concrete and scannable.
+You are writing reference docs for **TolongDesign**, the private design starting
+point for TolongLabs developers and their coding agents. Every doc covers one
+tool/resource, usually one listed on Designeer (https://designeer.xyz). Readers
+are developers, designers and AI coding agents choosing what to use on a
+website, product UI, 3D scene, comic or other design work, so the docs must be
+accurate, concrete and scannable. An agent reading a doc must be able to produce
+what the tool advertises.
 
 ## Your assignment
 
@@ -45,8 +47,8 @@ Read the template at `TEMPLATE_FILE` and mirror it: same YAML frontmatter keys
 in the same order, same H2 headings in the same order:
 
 `## At a glance`, `## What it is`, `## Paywall and pricing`, `## How to use`,
-`## Examples`, `## When to use it`, `## Agent notes`, `## Alternatives in this
-repo`, `## Sources`.
+`## Examples`, `## When to use it`, `## Agent notes`,
+`## Alternatives in this repo`, `## Sources`.
 
 Frontmatter rules:
 
@@ -69,7 +71,9 @@ Body rules:
 - "How to use" must be specific to this tool. For code libraries include the
   real install command (prefer `bun add` / `bunx` equivalents of npm commands)
   and a minimal snippet from the official docs. For galleries: how to browse,
-  filter and turn findings into a design brief for a TolongLabs project.
+  filter and turn findings into a design brief for a TolongLabs project. For
+  apps: the core workflow you ran yourself, inputs, export formats and how an
+  agent drives it.
 - "Alternatives in this repo": link 1–3 sibling tools using relative paths of
   the form `../<section_slug>/<slug>.md`. Pick siblings from the full catalogue
   at `CATALOGUE_FILE` (its `tools[].doc` field gives every valid path; strip the
