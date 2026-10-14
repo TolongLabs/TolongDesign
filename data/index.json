@@ -13365,6 +13365,255 @@
    "agent_friendly": true,
    "last_verified": "2026-10-11",
    "doc": "docs/design/agents-mcp/anatomy.md"
+  },
+  {
+   "name": "Manga Panel Layout Generator",
+   "slug": "komawari",
+   "section": "Comics",
+   "section_slug": "comics",
+   "source_url": "https://tools.oyasumi-gamedev.com/komawari/",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/komawari/",
+   "designeer_blurb": "Free tool that makes batches of manga panel-layout options.",
+   "paywall": "free",
+   "pricing_summary": "Free, no sign-up, no paid tier, no export limit. Exports carry no credit requirement.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "comics",
+    "manga",
+    "layout",
+    "svg",
+    "generative",
+    "browser-tool"
+   ],
+   "best_for": [
+    "manga page layouts",
+    "storyboard grids",
+    "panel guides for CLIP Studio Paint",
+    "comic-style page mockups",
+    "poster grids"
+   ],
+   "stack": [
+    "browser"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-14",
+   "doc": "docs/design/comics/komawari.md"
+  },
+  {
+   "name": "Speech Bubble Generator",
+   "slug": "fukidashi",
+   "section": "Comics",
+   "section_slug": "comics",
+   "source_url": "https://tools.oyasumi-gamedev.com/fukidashi/",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/fukidashi/",
+   "designeer_blurb": "Free tool that makes manga speech balloons sized to their text.",
+   "paywall": "free",
+   "pricing_summary": "Free in the browser, no account. Output is free for commercial use, no credit required.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "manga",
+    "speech-bubbles",
+    "svg",
+    "png",
+    "typography",
+    "procedural",
+    "batch"
+   ],
+   "best_for": [
+    "manga dialogue",
+    "webtoon balloons",
+    "comic page layouts",
+    "social art"
+   ],
+   "stack": [
+    "browser"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-14",
+   "doc": "docs/design/comics/fukidashi.md"
+  },
+  {
+   "name": "Effect Lines & Screentone Generator",
+   "slug": "koukasen",
+   "section": "Comics",
+   "section_slug": "comics",
+   "source_url": "https://tools.oyasumi-gamedev.com/koukasen/",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/koukasen/",
+   "designeer_blurb": "Free tool that makes manga focus lines, kakeami hatching and screentones.",
+   "paywall": "free",
+   "pricing_summary": "Free, no account. No paid tier. Output is free for commercial use, no credit.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "manga",
+    "comics",
+    "screentone",
+    "halftone",
+    "effect-lines",
+    "svg",
+    "browser",
+    "generator"
+   ],
+   "best_for": [
+    "manga backgrounds",
+    "focus lines",
+    "screentones",
+    "cross-hatching",
+    "web page backgrounds",
+    "posters"
+   ],
+   "stack": [
+    "browser"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-14",
+   "doc": "docs/design/comics/koukasen.md"
+  },
+  {
+   "name": "Name Gacha",
+   "slug": "namegacha",
+   "section": "Comics",
+   "section_slug": "comics",
+   "source_url": "https://tools.oyasumi-gamedev.com/namegacha/",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/namegacha/",
+   "designeer_blurb": "Free tool that auto-places character roughs into manga panel layouts.",
+   "paywall": "free",
+   "pricing_summary": "Free with no account. Exports may be used commercially with no credit; a VRM you load keeps its own licence.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "manga",
+    "storyboard",
+    "panel-layouts",
+    "pose",
+    "vrm",
+    "threejs"
+   ],
+   "best_for": [
+    "manga name drafts",
+    "panel blocking",
+    "dialogue blocking",
+    "pose reference",
+    "shot planning"
+   ],
+   "stack": [
+    "javascript",
+    "svg",
+    "canvas",
+    "threejs",
+    "browser"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-14",
+   "doc": "docs/design/comics/namegacha.md"
+  },
+  {
+   "name": "Background Gacha",
+   "slug": "haikeigacha",
+   "section": "Comics",
+   "section_slug": "comics",
+   "source_url": "https://tools.oyasumi-gamedev.com/haikeigacha/",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/haikeigacha/",
+   "designeer_blurb": "Free tool that rolls 3D rooms to use as manga backgrounds.",
+   "paywall": "free",
+   "pricing_summary": "Free, no sign-up. Every room type, render mode and export is free.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "manga",
+    "comics",
+    "backgrounds",
+    "3d",
+    "browser",
+    "threejs",
+    "screentone",
+    "line-art"
+   ],
+   "best_for": [
+    "manga backgrounds",
+    "storyboard backdrops",
+    "panel staging",
+    "room reference"
+   ],
+   "stack": [
+    "browser",
+    "threejs"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-14",
+   "doc": "docs/design/comics/haikeigacha.md"
+  },
+  {
+   "name": "Comicalizer",
+   "slug": "comicalizer",
+   "section": "Comics",
+   "section_slug": "comics",
+   "source_url": "https://tools.oyasumi-gamedev.com/comicalizer/",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/comicalizer/",
+   "designeer_blurb": "Free tool that turns a plot into one chapter of manga storyboard (name).",
+   "paywall": "free",
+   "pricing_summary": "Free, no sign-up, no paid tier; everything runs in the browser.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "comics",
+    "manga",
+    "storyboard",
+    "plotting",
+    "threejs"
+   ],
+   "best_for": [
+    "manga storyboards",
+    "plot to panel layouts",
+    "comics pre-production",
+    "panel layout studies",
+    "story beats for social posts"
+   ],
+   "stack": [
+    "browser",
+    "threejs"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-14",
+   "doc": "docs/design/comics/comicalizer.md"
+  },
+  {
+   "name": "Location Scout",
+   "slug": "rokehan",
+   "section": "Comics",
+   "section_slug": "comics",
+   "source_url": "https://tools.oyasumi-gamedev.com/rokehan/",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/rokehan/",
+   "designeer_blurb": "Free tool that draws real-world streets as manga line art and tone.",
+   "paywall": "free",
+   "pricing_summary": "Free, no sign-up, no paid tier. Output is free for commercial and non-commercial use with a map credit.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "comics",
+    "manga",
+    "backgrounds",
+    "3d",
+    "maps",
+    "line-art",
+    "screentone",
+    "threejs"
+   ],
+   "best_for": [
+    "manga backgrounds",
+    "webtoon backdrops",
+    "storyboards",
+    "3d city scenes for art"
+   ],
+   "stack": [
+    "browser",
+    "threejs"
+   ],
+   "agent_friendly": true,
+   "last_verified": "2026-10-14",
+   "doc": "docs/design/comics/rokehan.md"
   }
  ]
 }

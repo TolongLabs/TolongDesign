@@ -90,7 +90,7 @@ implementation in the target project, not this collection.
 
 ## Catalogue
 
-**434 resources · 17 sections · 132 design engineers.** Each resource records
+**441 resources · 18 sections · 132 design engineers.** Each resource records
 usage, examples, pricing, licensing, agent notes, and sources.
 
 | Need                     | Start here                                                                                                        |
@@ -99,6 +99,7 @@ usage, examples, pricing, licensing, agent notes, and sources.
 | UI and motion            | [Components](docs/design/component-libraries/README.md) · [Motion](docs/design/motion/README.md)                  |
 | Type, colour, and icons  | [Type](docs/design/type/README.md) · [Colour](docs/design/color/README.md) · [Icons](docs/design/icons/README.md) |
 | 3D and shaders           | [3D](docs/design/3d/README.md) · [Shaders](docs/design/shaders/README.md)                                         |
+| Comics and manga         | [Comics](docs/design/comics/README.md)                                                                            |
 | Agent and delivery tools | [Agents & MCP](docs/design/agents-mcp/README.md) · [Deploy](docs/design/deploy/README.md)                         |
 
 **Considering React Three Fiber?** Read

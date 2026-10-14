@@ -4341,6 +4341,76 @@
    "section_slug": "agents-mcp",
    "designeer_url": "https://github.com/wheresryan22/anatomy",
    "doc": "docs/design/agents-mcp/anatomy.md"
+  },
+  {
+   "name": "Manga Panel Layout Generator",
+   "url": "https://tools.oyasumi-gamedev.com/komawari/",
+   "description": "Free tool that makes batches of manga panel-layout options.",
+   "section": "Comics",
+   "slug": "komawari",
+   "section_slug": "comics",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/komawari/",
+   "doc": "docs/design/comics/komawari.md"
+  },
+  {
+   "name": "Speech Bubble Generator",
+   "url": "https://tools.oyasumi-gamedev.com/fukidashi/",
+   "description": "Free tool that makes manga speech balloons sized to their text.",
+   "section": "Comics",
+   "slug": "fukidashi",
+   "section_slug": "comics",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/fukidashi/",
+   "doc": "docs/design/comics/fukidashi.md"
+  },
+  {
+   "name": "Effect Lines & Screentone Generator",
+   "url": "https://tools.oyasumi-gamedev.com/koukasen/",
+   "description": "Free tool that makes manga focus lines, kakeami hatching and screentones.",
+   "section": "Comics",
+   "slug": "koukasen",
+   "section_slug": "comics",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/koukasen/",
+   "doc": "docs/design/comics/koukasen.md"
+  },
+  {
+   "name": "Name Gacha",
+   "url": "https://tools.oyasumi-gamedev.com/namegacha/",
+   "description": "Free tool that auto-places character roughs into manga panel layouts.",
+   "section": "Comics",
+   "slug": "namegacha",
+   "section_slug": "comics",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/namegacha/",
+   "doc": "docs/design/comics/namegacha.md"
+  },
+  {
+   "name": "Background Gacha",
+   "url": "https://tools.oyasumi-gamedev.com/haikeigacha/",
+   "description": "Free tool that rolls 3D rooms to use as manga backgrounds.",
+   "section": "Comics",
+   "slug": "haikeigacha",
+   "section_slug": "comics",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/haikeigacha/",
+   "doc": "docs/design/comics/haikeigacha.md"
+  },
+  {
+   "name": "Comicalizer",
+   "url": "https://tools.oyasumi-gamedev.com/comicalizer/",
+   "description": "Free tool that turns a plot into one chapter of manga storyboard (name).",
+   "section": "Comics",
+   "slug": "comicalizer",
+   "section_slug": "comics",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/comicalizer/",
+   "doc": "docs/design/comics/comicalizer.md"
+  },
+  {
+   "name": "Location Scout",
+   "url": "https://tools.oyasumi-gamedev.com/rokehan/",
+   "description": "Free tool that draws real-world streets as manga line art and tone.",
+   "section": "Comics",
+   "slug": "rokehan",
+   "section_slug": "comics",
+   "designeer_url": "https://oyasumi-gamedev.com/tools/rokehan/",
+   "doc": "docs/design/comics/rokehan.md"
   }
  ],
  "people": [
