@@ -497,7 +497,7 @@
     "web-asset",
     "web-ui"
    ],
-   "status": "degraded",
+   "status": "unreachable",
    "agent_friendly": true,
    "last_verified": "2026-10-15",
    "install": null,
@@ -4748,7 +4748,6 @@
    "category_tags": [
     "react",
     "tailwind",
-    "shadcn",
     "components"
    ],
    "best_for": [

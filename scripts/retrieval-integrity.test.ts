@@ -1,5 +1,5 @@
 import { afterAll, describe, expect, test } from 'bun:test'
-import { cpSync, mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
+import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { loadResources, searchResources } from './design-lib'
@@ -31,6 +31,23 @@ writeFileSync(
 )
 
 describe('retrieval source integrity', () => {
+  test('website stack selection explicitly filters the output surface in both skill copies', () => {
+    const first = readFileSync(join(root, '.agents/skills/pick-design-stack/SKILL.md'), 'utf8')
+    const second = readFileSync(join(root, '.claude/skills/pick-design-stack/SKILL.md'), 'utf8')
+    expect(first).toBe(second)
+    expect(first).toContain('--section component-libraries --surface web-ui')
+  })
+
+  test('shadcn category tags are consistent with the canonical stack classification', () => {
+    const missing = loadResources(root).filter(
+      (resource) =>
+        Array.isArray(resource.meta.category_tags) &&
+        resource.meta.category_tags.includes('shadcn') &&
+        (!Array.isArray(resource.meta.stack) || !resource.meta.stack.includes('shadcn'))
+    )
+    expect(missing.map((resource) => resource.id)).toEqual([])
+  })
+
   test('install metadata is always derived from the body, not a hand-written header override', () => {
     expect(loadResources(fixture)[0].meta.install).toBeNull()
   })

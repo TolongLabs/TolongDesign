@@ -17,7 +17,7 @@ best_for: [layered gradient backgrounds, React background prototypes]
 stack: ['react']
 execution_mode: browser-app
 surface: ['web-asset', 'web-ui']
-status: degraded
+status: unreachable
 agent_friendly: true
 last_verified: 2026-10-15
 ---
