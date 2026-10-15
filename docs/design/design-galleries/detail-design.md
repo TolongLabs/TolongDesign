@@ -21,6 +21,9 @@ category_tags:
   ]
 best_for: [micro-interactions, UX details, polish, animation craft]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [creative-portfolio, case-studies, visual-inspiration]
 best_for: [long-form design case studies, cross-discipline portfolios]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

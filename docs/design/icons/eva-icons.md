@@ -15,6 +15,9 @@ category_tags:
   ['icon-library', 'svg', 'javascript', 'outline', 'filled', 'animation']
 best_for: ['outline and fill pairs', 'animated icons', 'mobile interfaces']
 stack: ['javascript', 'svg']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [ai, chat, prompt-input, shadcn, vercel-ai-sdk]
 best_for: [ai chat interfaces, copilot prompts, generative reasoning ui]
-stack: [react, nextjs, tailwind, motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

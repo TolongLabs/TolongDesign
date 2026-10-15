@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [audio, sound-effects, synthesis, web-audio, react]
 best_for: [ui sound effects, micro-interactions, web audio synthesis]
-stack: [typescript, javascript, react]
+stack: ['typescript', 'javascript', 'react']
+execution_mode: package
+surface: ['audio']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

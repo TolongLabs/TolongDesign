@@ -15,6 +15,9 @@ license: MIT
 category_tags: ['whiteboard', 'diagrams', 'wireframes', 'react']
 best_for: ['sketch diagrams', 'wireframes', 'canvas embedding']
 stack: ['react', 'typescript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

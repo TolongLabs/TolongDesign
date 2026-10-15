@@ -13,7 +13,10 @@ license: Apache-2.0
 category_tags: [image-compression, webp, avif, webassembly, performance]
 best_for:
   [image compression, web performance, format conversion, visual comparison]
-stack: [webassembly, javascript, nodejs]
+stack: ['webassembly', 'javascript', 'nodejs']
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -21,6 +21,9 @@ best_for:
     proposals
   ]
 stack: []
+execution_mode: browser-app
+surface: ['pdf']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

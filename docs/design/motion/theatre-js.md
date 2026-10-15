@@ -16,7 +16,10 @@ category_tags:
   [motion, animation, sequencer, timeline, visual-editor, 3d, threejs, dom]
 best_for:
   [visual animation sequencing, 3d web experiences, complex choreographies]
-stack: [javascript, typescript, react, threejs]
+stack: ['javascript', 'typescript', 'react', 'threejs']
+execution_mode: package
+surface: ['web-ui', 'web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

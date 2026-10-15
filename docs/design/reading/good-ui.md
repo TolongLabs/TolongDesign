@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['conversion', 'ab-testing', 'ui-patterns', 'research']
 best_for: ['checkout experiments', 'landing-page testing', 'conversion review']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

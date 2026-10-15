@@ -14,7 +14,10 @@ open_source: true
 license: AGPL-3.0
 category_tags: [ai, search, open-source, vercel-ai-sdk, mcp, research]
 best_for: [ad-free search, technical research, self-hosted ai engine]
-stack: [nextjs, typescript, tailwind]
+stack: ['nextjs', 'typescript', 'tailwind']
+execution_mode: browser-app
+surface: ['reference', 'development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

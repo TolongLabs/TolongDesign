@@ -13,6 +13,9 @@ license: proprietary
 category_tags: [inspiration, tactile, creative, interaction, typography]
 best_for: [tactile feel, creative direction, motion design]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

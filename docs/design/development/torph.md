@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [animation, text-morphing, typography, react, svelte]
 best_for: [text transitions, counter animations, status transitions]
-stack: [react, vue, svelte, javascript, typescript]
+stack: ['react', 'vue', 'svelte', 'javascript', 'typescript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

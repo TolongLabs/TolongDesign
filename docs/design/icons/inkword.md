@@ -16,6 +16,9 @@ category_tags: [illustrations, vector, generative, editorial, svg]
 best_for:
   [editorial illustrations, blog headers, newsletter graphics, empty states]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset', 'video']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -36,7 +36,16 @@ function fixture(released = false) {
   write(root, doc, '---\nname: Fixture\npaywall: free\n---\n# Fixture\n\nComplete original documentation.\n')
   write(root, '.agents/skills/design-project/SKILL.md', '# Fixture skill\n')
   write(root, '.claude/skills/design-project/SKILL.md', '# Fixture skill\n')
-  for (const file of ['design.ts', 'design-lib.ts', 'release-info.ts']) {
+  for (const file of [
+    'design.ts',
+    'design-lib.ts',
+    'release-info.ts',
+    'cli-lib.ts',
+    'catalogue-schema.ts',
+    'index-fields.ts',
+    'search-lib.ts',
+    'resource-card.ts'
+  ]) {
     const path = join(source, 'scripts', file)
     if (existsSync(path)) write(root, `scripts/${file}`, readFileSync(path, 'utf8'))
   }

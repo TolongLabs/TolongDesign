@@ -13,7 +13,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [design-systems, agent-workflows, desktop]
 best_for: ['local design-agent workflow', 'HTML prototypes']
-stack: [nodejs, pnpm]
+stack: ['nodejs', 'pnpm']
+execution_mode: mcp-skill
+surface: ['web-ui', 'pdf']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

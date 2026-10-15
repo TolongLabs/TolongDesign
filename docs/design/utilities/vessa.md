@@ -16,6 +16,9 @@ category_tags:
   [brand-guidelines, design-tokens, client-handoff, mcp, animated-branding]
 best_for: [brand guidelines, client handoff, design systems, design tokens]
 stack: []
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

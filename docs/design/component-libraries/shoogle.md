@@ -12,7 +12,10 @@ open_source: false
 license: proprietary
 category_tags: [search-engine, shadcn, registries, mcp, directory]
 best_for: [discovering shadcn blocks, mcp agent lookup, registry search]
-stack: []
+stack: ['shadcn']
+execution_mode: reference
+surface: ['web-ui', 'reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

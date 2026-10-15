@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [tailwind, react, nextjs, motion, components, colorlib]
 best_for: [landing pages, marketing sites, modern web applications]
-stack: [react, nextjs, tailwind, motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

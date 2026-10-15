@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [mascots, illustration, ai, animation]
 best_for: [product mascots, onboarding art, app icon characters]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: unknown
 category_tags: ['react', 'animation', 'components']
 best_for: ['animated interfaces', 'landing pages']
 stack: ['react', 'nextjs', 'tailwind']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [react, webgl, shaders, ai-agents, visual-effects]
 best_for: [ai applications, hero sections, interactive visual effects]
-stack: [react, webgl]
+stack: ['react', 'webgl']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

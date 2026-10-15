@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [navigation, ui-patterns, web-inspiration]
 best_for: [navbar pattern research, navigation behavior references]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

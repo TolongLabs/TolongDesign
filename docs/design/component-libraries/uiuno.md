@@ -14,7 +14,10 @@ open_source: false
 license: unknown
 category_tags: [shadcn, react, ai-workspace, community]
 best_for: [discovering, forking, and organizing shadcn components]
-stack: [react, tailwind, shadcn]
+stack: ['react', 'tailwind', 'shadcn']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

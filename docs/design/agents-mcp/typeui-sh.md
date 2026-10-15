@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [design-skills, ui-prompts, mcp]
 best_for: ['agent design guidance', 'UI audits and prompts']
 stack: []
+execution_mode: mcp-skill
+surface: ['development', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

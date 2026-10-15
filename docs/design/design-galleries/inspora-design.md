@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['web-design', 'visual-inspiration', 'branding']
 best_for: ['visual direction', 'web design references']
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

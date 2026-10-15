@@ -16,6 +16,9 @@ category_tags: ['web-platform', 'performance', 'accessibility', 'css']
 best_for:
   ['browser standards', 'performance fixes', 'accessibility implementation']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

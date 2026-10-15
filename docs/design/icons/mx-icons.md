@@ -16,6 +16,9 @@ category_tags: ['icon-library', 'react', 'svg', 'tree-shaking']
 best_for:
   ['react products', 'large icon collections', 'fine-grained customization']
 stack: ['react']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

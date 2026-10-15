@@ -15,8 +15,11 @@ license: unknown
 category_tags: [analytics, session-replay, user-research]
 best_for: [website session review]
 stack: []
+execution_mode: reference
+surface: ['web-ui']
+status: degraded
 agent_friendly: false
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Replay
@@ -95,6 +98,12 @@ unrelated pages as product demos.
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The primary URL returns HTTP 200
+with the Replay session-recording title, but a fresh headless browser still
+exposes no visible body, links or recording controls. This does not establish a
+verified SDK or an operable recording workflow. Other pricing, licensing and
+feature statements retain their separately dated source checks.
+
 - Official URL: [letsreplay.co](https://letsreplay.co/); HTTP 200 and the page
   title loaded on 2026-10-07, but the visible body was empty and had no links.
 - No package, script snippet, CLI, API, MCP endpoint, or `llms.txt` was
@@ -114,5 +123,7 @@ unrelated pages as product demos.
 
 ## Sources
 
+- [Primary URL availability recheck](https://letsreplay.co/) — checked
+  2026-10-15; availability and product identity only.
 - [Official Replay site](https://letsreplay.co/) — checked 2026-10-07
 - [Designeer listing](https://designeer.xyz/utilities) — checked 2026-10-07

@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, unstyled, primitives, accessibility, headless, mui]
 best_for: [design systems, accessible primitives, headless UI, custom styling]
-stack: [react]
+stack: ['react']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [shadcn, registry-ecosystem, devtools, react]
 best_for: [shadcn discovery, specialized registries, modern web apps]
-stack: [astro, react, tailwind]
+stack: ['astro', 'react', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui', 'cli-tui', 'video', 'email', 'pdf', 'og-image']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

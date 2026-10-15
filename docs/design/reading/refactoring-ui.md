@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['ui-design', 'visual-design', 'book', 'interface-design']
 best_for: ['layout hierarchy', 'spacing decisions', 'visual polish']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

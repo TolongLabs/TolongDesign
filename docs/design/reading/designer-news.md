@@ -15,8 +15,11 @@ license: unknown
 category_tags: [community, news-feed, discussion, legacy, discontinued]
 best_for: [historical reference for community-curated design discussions]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: unreachable
 agent_friendly: false
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Designer News
@@ -92,6 +95,11 @@ The current status and available shutdown references were checked on 2026-10-07.
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The primary URL still returns
+HTTP 402 with a verified paused-deployment response. Current stories and the
+original discussion archive were not recovered. Other pricing, licensing and
+feature statements retain their separately dated source checks.
+
 - On 2026-10-07, the official homepage, `/about`, and `/pricing` returned HTTP
   402 with a Vercel “Deployment Paused” page.
 - Agents should not attempt to crawl or query this domain for fresh design links
@@ -108,6 +116,8 @@ The current status and available shutdown references were checked on 2026-10-07.
 
 ## Sources
 
+- [Primary URL availability recheck](https://www.designernews.co/) — checked
+  2026-10-15; availability and product identity only.
 - [Official site](https://www.designernews.co/) — checked 2026-10-07; HTTP 402,
   “Deployment Paused”
 - [Official about route](https://www.designernews.co/about) — checked

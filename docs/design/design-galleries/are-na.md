@@ -21,6 +21,9 @@ best_for:
     design team knowledge organization
   ]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -23,6 +23,9 @@ category_tags:
 best_for:
   [foundational information architecture, taxonomy design, mental models]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

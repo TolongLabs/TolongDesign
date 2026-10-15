@@ -14,7 +14,10 @@ license: unknown
 category_tags: [shaders, webgl, raymarching, glsl, orbs, sphere-shaders]
 best_for:
   [orb animations, raymarching effects, volumetric spheres, interactive heroes]
-stack: [javascript, glsl]
+stack: ['javascript', 'glsl']
+execution_mode: reference
+surface: ['web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

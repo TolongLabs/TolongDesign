@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [type-foundry, fonts, typography, licensing]
 best_for: [brand typography, editorial web type, commercial font licensing]
 stack: []
+execution_mode: reference
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [creative-coding, css-animation, webgl, threejs, gsap, tutorials]
 best_for: [cutting-edge ui interactions, experimental webgl, scroll animations]
-stack: [javascript, css, threejs, gsap]
+stack: ['javascript', 'css', 'threejs', 'gsap']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

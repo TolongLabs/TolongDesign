@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [ai, notes, research, mcp, desktop]
 best_for: [research synthesis, design notes, context vaults]
 stack: []
+execution_mode: reference
+surface: ['reference', 'desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

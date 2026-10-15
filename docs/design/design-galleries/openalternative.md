@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [open-source, saas, alternatives, self-hosted, directory]
 best_for: [finding open-source tools, self-hosted stacks, SaaS alternatives]
 stack: []
+execution_mode: reference
+surface: ['reference', 'development']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

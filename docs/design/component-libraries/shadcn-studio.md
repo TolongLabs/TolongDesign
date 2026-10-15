@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [shadcn, react, blocks, mcp, templates]
 best_for: [marketing pages, app scaffolds, agent-assisted assembly]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

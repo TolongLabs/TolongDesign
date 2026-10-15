@@ -15,6 +15,9 @@ license: 'unknown'
 category_tags: ['design-resources', 'directory', 'bookmarks']
 best_for: ['design-resource discovery', 'cross-category browsing']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

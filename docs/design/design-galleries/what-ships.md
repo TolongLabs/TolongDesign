@@ -15,6 +15,9 @@ license: 'unknown'
 category_tags: ['product-launch', 'video', 'x']
 best_for: ['startup demos', 'product walkthrough references']
 stack: []
+execution_mode: reference
+surface: ['reference', 'video']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

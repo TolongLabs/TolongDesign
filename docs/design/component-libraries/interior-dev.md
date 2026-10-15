@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [micro-interactions, react, animations, tactile-ui, llms-txt]
 best_for: [tactile web interactions, polished form feedback, async states]
-stack: [react, typescript]
+stack: ['react', 'typescript']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [icons, svg, figma, vector, design-system]
 best_for: [landing pages, web applications, multi-style icon matching]
 stack: []
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

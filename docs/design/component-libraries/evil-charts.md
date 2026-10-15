@@ -13,6 +13,9 @@ license: MIT
 category_tags: ['react', 'charts', 'svg', 'shadcn']
 best_for: ['animated data charts', 'dashboard visualizations']
 stack: ['react', 'tailwind', 'recharts', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

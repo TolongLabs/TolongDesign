@@ -14,6 +14,9 @@ license: proprietary
 category_tags: [image-effects, dithering, pixel-art]
 best_for: [image treatments, halftone graphics, animated effects]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

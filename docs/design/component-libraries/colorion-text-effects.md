@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [css, text-effects, typography, animation, pure-css]
 best_for: [hero typography, marketing headlines, glitch and neon effects]
-stack: [css, html]
+stack: ['css', 'html']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

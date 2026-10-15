@@ -15,6 +15,9 @@ category_tags:
 best_for:
   [product design portfolios, design engineer portfolios, UX case studies]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

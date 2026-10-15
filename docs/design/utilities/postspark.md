@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [social, screenshots, mockups]
 best_for: [social launch posts, product screenshots, device mockups]
 stack: []
+execution_mode: browser-app
+surface: ['og-image']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

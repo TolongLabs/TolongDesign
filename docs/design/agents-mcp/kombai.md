@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [ai, figma, design-to-code, react, tailwind, vue]
 best_for: [figma to code, ui component generation, design system compliance]
-stack: [react, vue, html, css, tailwind]
+stack: ['react', 'vue', 'html', 'css', 'tailwind']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

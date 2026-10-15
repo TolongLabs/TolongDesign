@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [manga, speech-bubbles, svg, png, typography, procedural, batch]
 best_for: [manga dialogue, webtoon balloons, comic page layouts, social art]
-stack: [browser]
+stack: ['browser']
+execution_mode: browser-app
+surface: ['comics', 'web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-14
 ---

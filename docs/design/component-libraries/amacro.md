@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [react, animation, page-transitions]
 best_for: [page reveals, scene transitions]
-stack: [react]
+stack: ['react']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

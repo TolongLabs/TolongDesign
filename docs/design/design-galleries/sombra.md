@@ -14,9 +14,12 @@ open_source: false
 license: unknown
 category_tags: [gradients, backgrounds, visual-editor, react]
 best_for: [layered gradient backgrounds, React background prototypes]
-stack: [react]
+stack: ['react']
+execution_mode: browser-app
+surface: ['web-asset', 'web-ui']
+status: unreachable
 agent_friendly: true
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Sombra
@@ -98,6 +101,13 @@ links and the composer may not be the directory-listed product.
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The homepage returns HTTP 200 and
+renders Sombra — Gradient Composer, including layers and a Copy React control.
+The listed dark-mode gallery remains unverified. The domain is not dead; keep
+the identity mismatch visible rather than treating the composer as the original
+gallery. Other pricing, licensing and feature statements retain their separately
+dated source checks.
+
 - The current page exposes React code copying but no separate docs, API, MCP
   server, or CLI.
 - On 2026-10-07, `/pricing` and `/about` returned the same HTTP 200 composer
@@ -116,6 +126,8 @@ links and the composer may not be the directory-listed product.
 
 ## Sources
 
+- [Primary URL availability recheck](https://sombra.design/) — checked
+  2026-10-15; availability and product identity only.
 - [Official site](https://sombra.design/) — HTTP 200; Gradient Composer
   rendered; checked 2026-10-07
 - [Pricing path](https://sombra.design/pricing) — same composer page; checked

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['hosting', 'containers', 'regions', 'deployment']
 best_for: ['dockerized apps', 'runtime control', 'multi-region workloads']
 stack: ['docker', 'nodejs', 'go']
+execution_mode: mcp-skill
+surface: ['hosting']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

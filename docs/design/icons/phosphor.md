@@ -13,7 +13,10 @@ license: MIT
 category_tags: [icons, svg, duotone, multi-weight, react-icons, design-system]
 best_for:
   [multi-weight icons, duotone styles, web applications, editorial design]
-stack: [react, vue, web-components]
+stack: ['react', 'vue', 'web-components']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

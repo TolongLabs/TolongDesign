@@ -14,9 +14,12 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, components]
 best_for: [lightweight interfaces, react projects]
-stack: [react, tailwind]
+stack: ['react', 'tailwind']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Ninja UI
@@ -113,6 +116,12 @@ export default function App() {
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The primary URL redirects
+successfully to Ninna UI with public component and installation documentation.
+The existing doc already describes that current project. A catalogue spelling
+mismatch is not evidence of an outage. Other pricing, licensing and feature
+statements retain their separately dated source checks.
+
 - The current URL redirects to Ninna UI. The “Ninja UI” name appears only in the
   directory listing checked here.
 - Paywall is free and the public repository identifies MIT; apply those facts to
@@ -130,6 +139,8 @@ export default function App() {
 
 ## Sources
 
+- [Primary URL availability recheck](https://ninna-ui.dev/) — checked
+  2026-10-15; availability and product identity only.
 - [Supplied Ninja UI URL](https://ninna-ui.dev/) — checked 2026-10-07
 - [Current Ninna UI home](https://www.ninna-ui.dev/) — checked 2026-10-07
 - [Primitives](https://www.ninna-ui.dev/primitives) — checked 2026-10-07

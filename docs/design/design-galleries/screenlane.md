@@ -17,6 +17,9 @@ category_tags:
 best_for:
   [user flow analysis, onboarding benchmarking, checkout sequence research]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui', 'mobile-ui', 'video']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

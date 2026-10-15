@@ -15,7 +15,10 @@ license: proprietary
 category_tags: [web-design, css, frontend, accessibility, typography, ux]
 best_for:
   [in-depth frontend tutorials, css deep dives, web accessibility standards]
-stack: [html, css, javascript]
+stack: ['html', 'css', 'javascript']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

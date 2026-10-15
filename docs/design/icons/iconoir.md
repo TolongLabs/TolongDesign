@@ -16,6 +16,9 @@ category_tags: ['icon-library', 'svg', 'react', 'outline']
 best_for:
   ['consistent outline systems', 'react interfaces', 'custom svg assets']
 stack: ['react', 'svg']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

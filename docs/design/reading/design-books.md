@@ -15,6 +15,9 @@ license: unknown
 category_tags: ['books', 'design-research', 'directory', 'typography']
 best_for: ['reading lists', 'design-system foundations', 'ux references']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [react, tailwind, framer-motion, components, animations, premium]
 best_for: [landing pages, marketing sites, interactive web applications]
-stack: [react, tailwind, framer-motion]
+stack: ['react', 'tailwind', 'motion']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

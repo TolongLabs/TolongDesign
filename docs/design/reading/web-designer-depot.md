@@ -16,6 +16,9 @@ category_tags:
   [web-design, industry-trends, freelancing, visual-design, newsletters]
 best_for: [web design news, design roundup lists, freelance agency advice]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

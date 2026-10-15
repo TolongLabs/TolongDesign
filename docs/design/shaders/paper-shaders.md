@@ -19,7 +19,10 @@ best_for:
     landing page backgrounds,
     zero-dependency
   ]
-stack: [react, javascript, typescript]
+stack: ['react', 'javascript', 'typescript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

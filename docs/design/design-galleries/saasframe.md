@@ -16,6 +16,9 @@ category_tags: [saas, landing-pages, email-flows, product-ui, screenshots]
 best_for:
   [b2b saas marketing, onboarding email sequences, conversion page structure]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui', 'email']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -31,7 +31,13 @@ const PACKAGE_NAME = 'tolong-design'
 const BINARY_NAME = 'tolongdesign'
 const RUNTIME_REQUIREMENT = '>=1.4.0'
 const CHECKSUM_FILE = 'SHA256SUMS'
-const TOP_LEVEL_DOCS = ['docs/README.md', 'docs/PLAYBOOK.md', 'docs/WORKFLOW.md', 'docs/CLI.md'] as const
+const TOP_LEVEL_DOCS = [
+  'docs/README.md',
+  'docs/PLAYBOOK.md',
+  'docs/WORKFLOW.md',
+  'docs/CLI.md',
+  'docs/METADATA.md'
+] as const
 const SKILL_FILES = ['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'] as const
 const MARKDOWN_ROOTS = ['docs/design', 'docs/scenarios', 'docs/research'] as const
 

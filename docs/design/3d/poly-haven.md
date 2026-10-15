@@ -15,6 +15,9 @@ category_tags: [3d-assets, textures, pbr, hdri, 3d-models, public-domain]
 best_for:
   [realistic lighting, pbr materials, background environments, 3d scenes]
 stack: []
+execution_mode: reference
+surface: ['web-asset', 'web-3d', 'reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: unknown
 category_tags: ['design-systems', 'checklist', 'governance', 'accessibility']
 best_for: ['design-system planning', 'token review', 'component governance']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: degraded
 agent_friendly: false
 last_verified: 2026-10-07
 ---

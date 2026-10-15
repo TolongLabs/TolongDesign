@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [ai-stack, directory, config-sync, cli, benchmarking]
 best_for: [ai workflow benchmarking, config syncing, tech stack discovery]
-stack: [typescript, nodejs]
+stack: ['typescript', 'nodejs']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

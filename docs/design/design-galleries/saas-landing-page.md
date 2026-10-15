@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [saas, landing-pages, inspiration, marketing, templates]
 best_for: [SaaS landing pages, conversion funnels, full-page inspiration]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -16,7 +16,10 @@ category_tags:
   [visual-essays, 3d-math, creative-coding, dithering, canvas-experiments]
 best_for:
   [visualizing 3D transformations, dithering algorithms, distance fields]
-stack: [canvas, webgl, javascript]
+stack: ['canvas', 'webgl', 'javascript']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

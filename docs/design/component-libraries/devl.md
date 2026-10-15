@@ -15,6 +15,9 @@ license: unknown
 category_tags: [gallery, ui-experiments, react, coss-ui]
 best_for: [product-interface inspiration, app layout patterns]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

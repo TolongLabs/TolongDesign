@@ -14,7 +14,10 @@ license: MIT
 category_tags: [gltf, 3d-optimizer, webgl, meshopt, draco, gltf-transform]
 best_for:
   [model optimization, mesh compression, texture resizing, gltf validation]
-stack: [javascript, node]
+stack: ['javascript', 'nodejs']
+execution_mode: browser-app
+surface: ['web-3d', 'web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

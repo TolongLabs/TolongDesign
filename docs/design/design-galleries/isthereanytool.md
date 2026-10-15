@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['design-tools', 'directory', 'research']
 best_for: ['tool discovery', 'shortlisting design software']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

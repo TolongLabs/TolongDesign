@@ -14,7 +14,10 @@ open_source: true
 license: 'MIT'
 category_tags: [react, tailwind, shadcn, motion]
 best_for: [react interfaces, animated components]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -20,6 +20,9 @@ best_for:
     'agent-assisted implementation'
   ]
 stack: ['react', 'svg']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

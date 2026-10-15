@@ -16,6 +16,9 @@ category_tags: ['icon-library', 'svg', 'react', 'figma', 'mcp', 'multi-style']
 best_for:
   ['six rounded styles', 'design and code workflows', 'large free icon sets']
 stack: ['svg', 'react']
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

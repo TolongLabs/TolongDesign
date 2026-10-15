@@ -15,6 +15,9 @@ license: 'CC0-1.0'
 category_tags: ['brand-icons', 'svg', 'javascript', 'logos']
 best_for: ['software brand marks', 'technology directories', 'brand logo grids']
 stack: ['javascript', 'svg']
+execution_mode: package
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

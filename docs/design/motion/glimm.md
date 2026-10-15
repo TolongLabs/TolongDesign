@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [page-transitions, webgl, animation]
 best_for: [route transitions, focused mode changes, confirmed actions]
-stack: [react, nextjs, webgl]
+stack: ['react', 'nextjs', 'webgl']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

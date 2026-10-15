@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [ai, sandbox, webcontainers, full-stack, rapid-prototyping]
 best_for: [in-browser development, prototype deployment, full-stack apps]
-stack: [react, nodejs, vite, nextjs]
+stack: ['react', 'nodejs', 'vite', 'nextjs']
+execution_mode: browser-app
+surface: ['development', 'hosting']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

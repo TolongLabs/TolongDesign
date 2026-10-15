@@ -17,7 +17,10 @@ category_tags:
   [comics, manga, backgrounds, 3d, maps, line-art, screentone, threejs]
 best_for:
   [manga backgrounds, webtoon backdrops, storyboards, 3d city scenes for art]
-stack: [browser, threejs]
+stack: ['browser', 'threejs']
+execution_mode: browser-app
+surface: ['comics', 'web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-14
 ---

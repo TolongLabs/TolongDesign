@@ -13,6 +13,9 @@ license: MIT
 category_tags: ['react', 'animation', 'physics', 'tailwind']
 best_for: ['playful interactions', 'distinctive landing pages']
 stack: ['react', 'typescript', 'tailwind', 'motion']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

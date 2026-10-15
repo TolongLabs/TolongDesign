@@ -15,6 +15,9 @@ license: unknown
 category_tags: [image-inspiration, ai-prompts, visual-gallery]
 best_for: [image-led moodboarding, prompt reference]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

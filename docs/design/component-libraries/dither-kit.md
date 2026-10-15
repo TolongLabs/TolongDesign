@@ -13,7 +13,10 @@ open_source: false
 license: 'unknown'
 category_tags: [react, charts, canvas, shadcn]
 best_for: [retro data visualizations, dashboard charts]
-stack: [react, tailwind, shadcn, canvas]
+stack: ['react', 'tailwind', 'shadcn', 'canvas']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

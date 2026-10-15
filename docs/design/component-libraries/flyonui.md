@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [tailwind, semantic-classes, components, headless-js, ui-kit]
 best_for: [web applications, dashboards, rapid prototyping]
-stack: [tailwind, javascript, html]
+stack: ['tailwind', 'javascript', 'html']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['design-engineering', 'tools', 'directory']
 best_for: ['web-focused design engineering tools', 'resource discovery']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

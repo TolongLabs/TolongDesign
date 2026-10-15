@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['conversion', 'cta', 'web-design']
 best_for: ['call-to-action patterns', 'button and banner review']
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

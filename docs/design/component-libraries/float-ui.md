@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [tailwind, marketing, templates, components, react, vue, svelte]
 best_for: [marketing websites, landing pages, responsive ui]
-stack: [tailwind, react, vue, svelte, html]
+stack: ['tailwind', 'react', 'vue', 'svelte', 'html']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

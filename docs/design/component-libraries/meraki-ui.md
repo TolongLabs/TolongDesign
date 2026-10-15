@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [tailwind, rtl, components, internationalization, responsive]
 best_for: [multilingual websites, rtl interfaces, marketing sites]
-stack: [tailwind, html, react, vue]
+stack: ['tailwind', 'html', 'react', 'vue']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

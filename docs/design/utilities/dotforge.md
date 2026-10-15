@@ -14,6 +14,9 @@ license: proprietary
 category_tags: [dithering, retro, canvas, animation, video-export]
 best_for: [dither effects, retro visuals, pixel art animation, video export]
 stack: []
+execution_mode: browser-app
+surface: ['video', 'web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

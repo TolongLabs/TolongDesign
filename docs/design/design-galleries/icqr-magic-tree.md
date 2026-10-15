@@ -20,6 +20,9 @@ best_for:
     spatial product metaphors
   ]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui', 'web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-11
 ---

@@ -15,6 +15,9 @@ license: unknown
 category_tags: [ui, experiments, patterns, web-design]
 best_for: [interface inspiration, small interaction studies]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -14,7 +14,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [coding-agents, process-supervisor, cli]
 best_for: ['persistent agent terminals', 'remote sessions']
-stack: [rust, cli]
+stack: ['rust', 'cli']
+execution_mode: mcp-skill
+surface: ['development', 'cli-tui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

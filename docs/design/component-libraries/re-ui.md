@@ -14,7 +14,10 @@ open_source: true
 license: 'MIT'
 category_tags: [react, base-ui, tailwind, shadcn]
 best_for: [accessible interfaces, application ui]
-stack: [react, tailwind, shadcn]
+stack: ['react', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -21,6 +21,9 @@ best_for:
     editorial mobile web craft
   ]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui', 'mobile-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

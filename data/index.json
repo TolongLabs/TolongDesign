@@ -25,8 +25,16 @@
     "motion references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/60fps.md"
   },
   {
@@ -54,8 +62,15 @@
     "design benchmarks"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/awwwards.md"
   },
   {
@@ -80,8 +95,14 @@
     "collecting visual references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/cosmos.md"
   },
   {
@@ -106,8 +127,15 @@
     "studying visual styles"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/curated-design.md"
   },
   {
@@ -132,8 +160,15 @@
     "product UI exploration"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/layers.md"
   },
   {
@@ -158,8 +193,14 @@
     "restrained visual direction"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/minimal-gallery.md"
   },
   {
@@ -184,8 +225,16 @@
     "real-world interface flows"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/mobbin.md"
   },
   {
@@ -210,8 +259,15 @@
     "conversion-focused layout research"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/saaspo.md"
   },
   {
@@ -236,8 +292,14 @@
     "daily web-design discovery"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/seesaw.md"
   },
   {
@@ -262,8 +324,15 @@
     "marketing-site composition"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/supahero.md"
   },
   {
@@ -288,8 +357,15 @@
     "prompt reference"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/imageory.md"
   },
   {
@@ -314,8 +390,15 @@
     "visual texture and gradients"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-asset",
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/backgrounds-supply.md"
   },
   {
@@ -340,8 +423,15 @@
     "hero mockup exploration"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/venust-backgrounds.md"
   },
   {
@@ -366,8 +456,15 @@
     "copy-ready web snippets"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/details.md"
   },
   {
@@ -395,8 +492,15 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset",
+    "web-ui"
+   ],
+   "status": "unreachable",
    "agent_friendly": true,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": null,
    "doc": "docs/design/design-galleries/sombra.md"
   },
   {
@@ -421,8 +525,14 @@
     "designer portfolios"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/dribbble.md"
   },
   {
@@ -447,8 +557,14 @@
     "cross-discipline portfolios"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/behance.md"
   },
   {
@@ -473,8 +589,15 @@
     "digital product references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/recent-design.md"
   },
   {
@@ -499,8 +622,15 @@
     "navigation behavior references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/navbar-design.md"
   },
   {
@@ -525,8 +655,15 @@
     "site-end navigation"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/footer-design.md"
   },
   {
@@ -551,8 +688,15 @@
     "filtering by visual traits"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/land-book.md"
   },
   {
@@ -577,8 +721,15 @@
     "UI challenge research"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/collect-ui.md"
   },
   {
@@ -606,8 +757,14 @@
     "agency websites"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/siteinspire.md"
   },
   {
@@ -635,8 +792,15 @@
     "startup homepages"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/lapa-ninja.md"
   },
   {
@@ -664,8 +828,15 @@
     "task-flow analysis"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/ux-archive.md"
   },
   {
@@ -693,8 +864,17 @@
     "checkout sequence research"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui",
+    "mobile-ui",
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/screenlane.md"
   },
   {
@@ -726,8 +906,15 @@
     "figma",
     "framer"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/flowbase.md"
   },
   {
@@ -755,8 +942,15 @@
     "animated layout references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/hover-states.md"
   },
   {
@@ -784,8 +978,16 @@
     "conversion page structure"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui",
+    "email"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/saasframe.md"
   },
   {
@@ -817,8 +1019,15 @@
     "figma",
     "webflow"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/landingfolio.md"
   },
   {
@@ -846,8 +1055,15 @@
     "mobile checkout flows"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/pttrns.md"
   },
   {
@@ -875,8 +1091,15 @@
     "developer portfolio layouts"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# Query One Page Love API for SaaS single-page inspiration\ncurl -s \"https://onepagelove.com/api/v1/websites?category=saas\" \\\n  -H \"Authorization: Bearer YOUR_API_KEY\"",
    "doc": "docs/design/design-galleries/one-page-love.md"
   },
   {
@@ -904,8 +1127,14 @@
     "brand art direction"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/designspiration.md"
   },
   {
@@ -933,8 +1162,15 @@
     "responsive layout ideas"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/best-website-gallery.md"
   },
   {
@@ -962,8 +1198,14 @@
     "typography ideas"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/inspiration-grid.md"
   },
   {
@@ -991,8 +1233,15 @@
     "conversion benchmarking"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/scrnshts.md"
   },
   {
@@ -1020,8 +1269,14 @@
     "design team knowledge organization"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# Fetch channel blocks using the official Are.na API\ncurl -s \"https://api.are.na/v2/channels/useful-design-tools/contents\" \\\n  -H \"Authorization: Bearer YOUR_ARENA_TOKEN\"",
    "doc": "docs/design/design-galleries/are-na.md"
   },
   {
@@ -1049,8 +1304,15 @@
     "visual interface trends"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/appinspo.md"
   },
   {
@@ -1078,8 +1340,15 @@
     "developer-tool marketing sites"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/dark-mode-design.md"
   },
   {
@@ -1107,8 +1376,14 @@
     "typography and color exploration"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/pinterest.md"
   },
   {
@@ -1136,8 +1411,15 @@
     "responsive mobile nav patterns"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/navbar-gallery.md"
   },
   {
@@ -1165,8 +1447,15 @@
     "b2b social graphic benchmarking"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "og-image"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/posts-design.md"
   },
   {
@@ -1194,8 +1483,16 @@
     "editorial mobile web craft"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/loadmo-re.md"
   },
   {
@@ -1220,8 +1517,15 @@
     "web design references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/inspora-design.md"
   },
   {
@@ -1246,8 +1550,15 @@
     "button and banner review"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/cta-gallery.md"
   },
   {
@@ -1272,8 +1583,14 @@
     "cross-disciplinary resources"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/desengs-com.md"
   },
   {
@@ -1298,8 +1615,14 @@
     "shortlisting design software"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/isthereanytool.md"
   },
   {
@@ -1324,8 +1647,14 @@
     "resource filtering"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/designeng-tools.md"
   },
   {
@@ -1350,8 +1679,14 @@
     "social design references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/bestdesignsonx-com.md"
   },
   {
@@ -1376,8 +1711,14 @@
     "cross-category browsing"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/design-bookmark.md"
   },
   {
@@ -1402,8 +1743,14 @@
     "identity systems"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/rebrand-gallery.md"
   },
   {
@@ -1427,8 +1774,14 @@
     "finding curated resource lists"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "degraded",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/curations.md"
   },
   {
@@ -1453,8 +1806,15 @@
     "motion and scroll references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/landing-love.md"
   },
   {
@@ -1479,8 +1839,15 @@
     "animation direction"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/motionimo.md"
   },
   {
@@ -1505,8 +1872,15 @@
     "onboarding and paywall patterns"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/before-click.md"
   },
   {
@@ -1531,8 +1905,14 @@
     "social content research"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/swiped.md"
   },
   {
@@ -1557,8 +1937,15 @@
     "page and template research"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/landdding.md"
   },
   {
@@ -1583,8 +1970,14 @@
     "resource discovery"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/designengineer-tools.md"
   },
   {
@@ -1609,8 +2002,15 @@
     "design references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/insposite.md"
   },
   {
@@ -1635,8 +2035,15 @@
     "microinteraction studies"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/loader-buttons.md"
   },
   {
@@ -1661,8 +2068,15 @@
     "product walkthrough references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/what-ships.md"
   },
   {
@@ -1687,8 +2101,14 @@
     "design resources"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/greatstuff.md"
   },
   {
@@ -1713,8 +2133,15 @@
     "mobile product references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/great-apps.md"
   },
   {
@@ -1739,8 +2166,14 @@
     "brand naming"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": null,
    "doc": "docs/design/design-galleries/curated-domains.md"
   },
   {
@@ -1768,8 +2201,15 @@
     "section layouts"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/sections-wtf.md"
   },
   {
@@ -1797,8 +2237,15 @@
     "motion design"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/browse-cool.md"
   },
   {
@@ -1826,8 +2273,15 @@
     "personal branding"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/folios-gallery.md"
   },
   {
@@ -1855,8 +2309,14 @@
     "interactive easter eggs"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/wwwtf-site.md"
   },
   {
@@ -1884,8 +2344,14 @@
     "startup inspiration"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/early.md"
   },
   {
@@ -1913,8 +2379,15 @@
     "SaaS alternatives"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/openalternative.md"
   },
   {
@@ -1942,8 +2415,14 @@
     "typography utilities"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/everywhere-tools.md"
   },
   {
@@ -1971,8 +2450,15 @@
     "collaborative curation"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/jessy-in-s-gallery.md"
   },
   {
@@ -2000,8 +2486,14 @@
     "UX case studies"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/wall-of-portfolios.md"
   },
   {
@@ -2030,8 +2522,15 @@
     "animation craft"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/detail-design.md"
   },
   {
@@ -2060,8 +2559,15 @@
     "high-conversion landing pages"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/betwn-studios.md"
   },
   {
@@ -2089,8 +2595,15 @@
     "full-page inspiration"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/saas-landing-page.md"
   },
   {
@@ -2119,8 +2632,15 @@
     "sections"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/design-galleries/best-saas-web-designs.md"
   },
   {
@@ -2150,8 +2670,15 @@
     "section references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# Example configuration for Claude Code / MCP clients\n# Follow official setup at https://www.a1.gallery/mcp",
    "doc": "docs/design/design-galleries/a1.md"
   },
   {
@@ -2182,10 +2709,17 @@
     "react",
     "nextjs",
     "tailwind",
-    "motion"
+    "motion",
+    "shadcn"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add motion lucide-react clsx tailwind-merge",
    "doc": "docs/design/component-libraries/forgeui.md"
   },
   {
@@ -2217,8 +2751,14 @@
     "vite",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": "bunx rewampui add theme-toggle",
    "doc": "docs/design/component-libraries/rewampui.md"
   },
   {
@@ -2251,8 +2791,14 @@
     "nextjs",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest init",
    "doc": "docs/design/component-libraries/shadcn-ui.md"
   },
   {
@@ -2284,8 +2830,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @base-ui/react",
    "doc": "docs/design/component-libraries/base-ui.md"
   },
   {
@@ -2316,8 +2868,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @radix-ui/react-dialog",
    "doc": "docs/design/component-libraries/radix.md"
   },
   {
@@ -2349,10 +2907,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx 21st@latest add animated-hero",
    "doc": "docs/design/component-libraries/21st-dev.md"
   },
   {
@@ -2387,8 +2952,14 @@
     "tailwind",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add motion lucide-react clsx tailwind-merge",
    "doc": "docs/design/component-libraries/motion-primitives.md"
   },
   {
@@ -2417,8 +2988,14 @@
     "nextjs",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add @react-bits/BlurText-TS-TW",
    "doc": "docs/design/component-libraries/react-bits.md"
   },
   {
@@ -2443,8 +3020,15 @@
     "design-system research"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/component-gallery.md"
   },
   {
@@ -2471,8 +3055,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @number-flow/react",
    "doc": "docs/design/component-libraries/numberflow.md"
   },
   {
@@ -2503,8 +3093,14 @@
     "tailwind",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx shadcn add @fancy/box-carousel",
    "doc": "docs/design/component-libraries/fancy-components.md"
   },
   {
@@ -2534,8 +3130,14 @@
     "nextjs",
     "tailwind"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add clsx tailwind-merge lucide-react",
    "doc": "docs/design/component-libraries/opensource-ui.md"
   },
   {
@@ -2567,8 +3169,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add @spectrumui/accordion",
    "doc": "docs/design/component-libraries/spectrum-ui.md"
   },
   {
@@ -2597,8 +3205,14 @@
     "motion",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx @subhanhq/amicro@latest init",
    "doc": "docs/design/component-libraries/amicro.md"
   },
   {
@@ -2624,8 +3238,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/painterly.md"
   },
   {
@@ -2650,8 +3270,15 @@
     "physics-driven ui"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui",
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/bencho.md"
   },
   {
@@ -2683,8 +3310,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add @shadcnblocks/hero1",
    "doc": "docs/design/component-libraries/shadcnblocks.md"
   },
   {
@@ -2715,8 +3348,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add @blocks-so/login-01",
    "doc": "docs/design/component-libraries/blocks-so.md"
   },
   {
@@ -2747,8 +3386,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx shadcn@latest add @8bitcn/button",
    "doc": "docs/design/component-libraries/8bitcn.md"
   },
   {
@@ -2779,8 +3424,14 @@
     "recharts",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add @evilcharts/recharts-composed-chart",
    "doc": "docs/design/component-libraries/evil-charts.md"
   },
   {
@@ -2808,10 +3459,17 @@
    "stack": [
     "react",
     "tailwind",
-    "base-ui"
+    "base-ui",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx shadcn@latest init @coss/style",
    "doc": "docs/design/component-libraries/coss-ui.md"
   },
   {
@@ -2842,8 +3500,14 @@
     "shadcn",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add swamimalode07/rare-ui/fluid-orb",
    "doc": "docs/design/component-libraries/rare-ui.md"
   },
   {
@@ -2876,8 +3540,14 @@
     "shadcn",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn add @beui/button-metallic",
    "doc": "docs/design/component-libraries/beui.md"
   },
   {
@@ -2901,8 +3571,14 @@
     "fluid mega-menus"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "unreachable",
    "agent_friendly": false,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": null,
    "doc": "docs/design/component-libraries/butter-nav.md"
   },
   {
@@ -2934,8 +3610,14 @@
     "shadcn",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx shadcn@latest add https://cult-ui.com/r/animated-number.json",
    "doc": "docs/design/component-libraries/cult-ui.md"
   },
   {
@@ -2963,8 +3645,14 @@
    "stack": [
     "tailwind"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add -D daisyui@latest",
    "doc": "docs/design/component-libraries/daisyui.md"
   },
   {
@@ -2994,8 +3682,14 @@
     "tailwind",
     "react-aria"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @heroui/react @heroui/styles",
    "doc": "docs/design/component-libraries/heroui.md"
   },
   {
@@ -3026,8 +3720,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx kibo-ui add color-picker",
    "doc": "docs/design/component-libraries/kibo-ui.md"
   },
   {
@@ -3058,10 +3758,16 @@
     "react",
     "nextjs",
     "tailwind",
-    "framer-motion"
+    "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add motion clsx tailwind-merge",
    "doc": "docs/design/component-libraries/magic-ui.md"
   },
   {
@@ -3093,10 +3799,16 @@
     "react",
     "nextjs",
     "tailwind",
-    "framer-motion"
+    "motion"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add framer-motion clsx tailwind-merge",
    "doc": "docs/design/component-libraries/aceternity-ui.md"
   },
   {
@@ -3128,10 +3840,17 @@
     "react",
     "nextjs",
     "tailwind",
-    "framer-motion"
+    "motion",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add motion lucide-react",
    "doc": "docs/design/component-libraries/animate-ui.md"
   },
   {
@@ -3163,8 +3882,14 @@
     "javascript",
     "html"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add -d flyonui",
    "doc": "docs/design/component-libraries/flyonui.md"
   },
   {
@@ -3198,8 +3923,14 @@
     "vue",
     "html"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add tailgrids",
    "doc": "docs/design/component-libraries/tailgrids.md"
   },
   {
@@ -3234,8 +3965,14 @@
     "svelte",
     "vue"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add flowbite",
    "doc": "docs/design/component-libraries/flowbite.md"
   },
   {
@@ -3269,8 +4006,14 @@
     "react",
     "vue"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/hyperui.md"
   },
   {
@@ -3305,8 +4048,14 @@
     "vue",
     "figma"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add preline",
    "doc": "docs/design/component-libraries/preline-ui.md"
   },
   {
@@ -3342,8 +4091,14 @@
     "svelte",
     "html"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/float-ui.md"
   },
   {
@@ -3376,8 +4131,14 @@
     "react",
     "vue"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/meraki-ui.md"
   },
   {
@@ -3410,8 +4171,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @tremor/react",
    "doc": "docs/design/component-libraries/tremor.md"
   },
   {
@@ -3444,8 +4211,14 @@
     "vue",
     "tailwind"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @headlessui/react",
    "doc": "docs/design/component-libraries/headless-ui.md"
   },
   {
@@ -3476,10 +4249,17 @@
    "stack": [
     "react",
     "tailwind",
-    "base-ui"
+    "base-ui",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @base-ui-components/react",
    "doc": "docs/design/component-libraries/base-cn.md"
   },
   {
@@ -3510,10 +4290,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun create next-app my-project --typescript --tailwind --app",
    "doc": "docs/design/component-libraries/easy-ui.md"
   },
   {
@@ -3545,10 +4332,16 @@
     "react",
     "nextjs",
     "tailwind",
-    "framer-motion"
+    "motion"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add motion clsx tailwind-merge",
    "doc": "docs/design/component-libraries/eldora-ui.md"
   },
   {
@@ -3582,8 +4375,14 @@
     "tailwind",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add motion clsx tailwind-merge",
    "doc": "docs/design/component-libraries/velora-ui.md"
   },
   {
@@ -3617,8 +4416,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add \"https://ui.watermelon.sh/r/button\"",
    "doc": "docs/design/component-libraries/watermelon-ui.md"
   },
   {
@@ -3652,8 +4457,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add lucide-react clsx tailwind-merge",
    "doc": "docs/design/component-libraries/beautiful-ui.md"
   },
   {
@@ -3684,8 +4495,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "unreachable",
    "agent_friendly": false,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": null,
    "doc": "docs/design/component-libraries/hexter-ui.md"
   },
   {
@@ -3717,8 +4534,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add lightswind-ui",
    "doc": "docs/design/component-libraries/lightswind.md"
   },
   {
@@ -3749,10 +4572,16 @@
    "stack": [
     "react",
     "tailwind",
-    "framer-motion"
+    "motion"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add framer-motion clsx tailwind-merge",
    "doc": "docs/design/component-libraries/reverse-ui.md"
   },
   {
@@ -3781,8 +4610,14 @@
     "tailwind",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx smoothui-cli@latest add smooth-button",
    "doc": "docs/design/component-libraries/smooth-ui.md"
   },
   {
@@ -3813,8 +4648,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest init",
    "doc": "docs/design/component-libraries/tailark.md"
   },
   {
@@ -3844,8 +4685,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn add @ui-layouts/hero-ai-infrastructure\nnpx uilayouts@latest add shiki-code",
    "doc": "docs/design/component-libraries/ui-layouts.md"
   },
   {
@@ -3873,10 +4720,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add @kokonutui/particle-button",
    "doc": "docs/design/component-libraries/kokonut-ui.md"
   },
   {
@@ -3894,7 +4748,6 @@
    "category_tags": [
     "react",
     "tailwind",
-    "shadcn",
     "components"
    ],
    "best_for": [
@@ -3905,8 +4758,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx @jessin/nexui@latest init\npnpm dlx @jessin/nexui@latest add button card badge",
    "doc": "docs/design/component-libraries/nex-ui.md"
   },
   {
@@ -3934,8 +4793,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": "npx @ninna-ui/cli init my-app",
    "doc": "docs/design/component-libraries/ninja-ui.md"
   },
   {
@@ -3963,10 +4828,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add \"https://seraui.com/registry/button.json\"",
    "doc": "docs/design/component-libraries/sera-ui.md"
   },
   {
@@ -3996,8 +4868,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx shadcn@latest add @reui/c-alert-1",
    "doc": "docs/design/component-libraries/re-ui.md"
   },
   {
@@ -4025,10 +4903,16 @@
    "stack": [
     "react",
     "tailwind",
-    "framer-motion"
+    "motion"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npm install framer-motion",
    "doc": "docs/design/component-libraries/syntax-ui.md"
   },
   {
@@ -4058,8 +4942,14 @@
     "stylex",
     "base-ui"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm add @stylexjs/stylex @base-ui/react\npnpm add -D @stylexjs/babel-plugin @stylexjs/postcss-plugin @babel/preset-typescript\npnpm dlx shadcn@latest add https://shadcn-cssinjs.com/r/button.json",
    "doc": "docs/design/component-libraries/shadcn-cssinjs.md"
   },
   {
@@ -4089,8 +4979,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx transitions-dev add --free",
    "doc": "docs/design/component-libraries/transitions.md"
   },
   {
@@ -4121,8 +5017,15 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx shadcn@latest add @23rd/shader-gradient",
    "doc": "docs/design/component-libraries/23rd.md"
   },
   {
@@ -4152,8 +5055,14 @@
     "nextjs",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add https://oneko.dhrv.pw/r/oneko.json",
    "doc": "docs/design/component-libraries/oneko.md"
   },
   {
@@ -4183,8 +5092,14 @@
     "solid",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @kitlangton/rolling-number",
    "doc": "docs/design/component-libraries/rolling-number.md"
   },
   {
@@ -4214,8 +5129,14 @@
     "vue",
     "gsap"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add gsap @gsap/react",
    "doc": "docs/design/component-libraries/annnimate.md"
   },
   {
@@ -4241,8 +5162,16 @@
     "cinematic sections"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/getlayers.md"
   },
   {
@@ -4273,8 +5202,14 @@
     "svelte",
     "solid"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @scritto/react",
    "doc": "docs/design/component-libraries/scritto.md"
   },
   {
@@ -4304,8 +5239,14 @@
     "nextjs",
     "satori"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "og-image"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "pnpm dlx shadcn@latest add @ogimagecn/simple",
    "doc": "docs/design/component-libraries/ogimagecn.md"
   },
   {
@@ -4336,8 +5277,14 @@
     "shadcn",
     "canvas"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx @dither-kit/cli add area-chart",
    "doc": "docs/design/component-libraries/dither-kit.md"
   },
   {
@@ -4363,8 +5310,14 @@
     "repository status"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/shieldcn.md"
   },
   {
@@ -4395,8 +5348,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun x --bun shadcn@latest add @unlumen-ui/ai-chat",
    "doc": "docs/design/component-libraries/unlumen-ui.md"
   },
   {
@@ -4425,8 +5384,14 @@
     "astro",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx bearnie init",
    "doc": "docs/design/component-libraries/bearnie.md"
   },
   {
@@ -4457,10 +5422,17 @@
     "react",
     "nextjs",
     "tailwind",
-    "motion"
+    "motion",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add @fluid/dialog",
    "doc": "docs/design/component-libraries/fluid-functionalism.md"
   },
   {
@@ -4492,8 +5464,14 @@
     "ink",
     "opentui"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "cli-tui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add @termcn/ink/spinner",
    "doc": "docs/design/component-libraries/termcn.md"
   },
   {
@@ -4523,10 +5501,17 @@
    "stack": [
     "react",
     "editframe",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @editframe/react",
    "doc": "docs/design/component-libraries/framecn.md"
   },
   {
@@ -4556,10 +5541,17 @@
    "stack": [
     "react",
     "react-email",
-    "mjml"
+    "mjml",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "email"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add react-email @react-email/components",
    "doc": "docs/design/component-libraries/emailcn.md"
   },
   {
@@ -4589,10 +5581,18 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "development",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "git clone https://github.com/shadcn-labs/startercn.git my-registry\ncd my-registry\nbun install",
    "doc": "docs/design/component-libraries/startercn.md"
   },
   {
@@ -4622,10 +5622,17 @@
    "stack": [
     "react",
     "takumi",
-    "forme"
+    "forme",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "pdf"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add takumi-pdf",
    "doc": "docs/design/component-libraries/pdfcn.md"
   },
   {
@@ -4655,10 +5662,17 @@
    "stack": [
     "react",
     "tiptap",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add @editorcn/editor",
    "doc": "docs/design/component-libraries/editorcn.md"
   },
   {
@@ -4687,10 +5701,22 @@
    "stack": [
     "astro",
     "react",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui",
+    "cli-tui",
+    "video",
+    "email",
+    "pdf",
+    "og-image"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# Terminal components\nbunx --bun shadcn@latest add @termcn/ink/spinner\n\n# Rich text editor\nbunx --bun shadcn@latest add @editorcn/editor\n\n# Responsive email block\nbunx --bun shadcn@latest add @emailcn/react-email/block-onboarding-default",
    "doc": "docs/design/component-libraries/shadcn-labs.md"
   },
   {
@@ -4717,8 +5743,14 @@
     "marketing landing pages"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/frameblox.md"
   },
   {
@@ -4749,10 +5781,17 @@
     "react",
     "nextjs",
     "tailwind",
-    "motion"
+    "motion",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add https://ui.nexvyn.dev/r/bounce-sidebar.json",
    "doc": "docs/design/component-libraries/nexvyn-ui.md"
   },
   {
@@ -4782,8 +5821,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add gradient-spin",
    "doc": "docs/design/component-libraries/gradient-spin.md"
   },
   {
@@ -4814,8 +5859,14 @@
     "react",
     "webgl"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @libraries/beam",
    "doc": "docs/design/component-libraries/libraries-dev.md"
   },
   {
@@ -4845,10 +5896,17 @@
    "stack": [
     "react",
     "tailwind",
-    "motion"
+    "motion",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add @sona-ui/fluid-tabs",
    "doc": "docs/design/component-libraries/sona-ui.md"
   },
   {
@@ -4879,8 +5937,14 @@
     "css",
     "html"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/colorion-text-effects.md"
   },
   {
@@ -4911,10 +5975,17 @@
     "react",
     "nextjs",
     "tailwind",
-    "motion"
+    "motion",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add https://dotmatrix.zzzzshawn.cloud/r/dotm-square-1.json",
    "doc": "docs/design/component-libraries/dot-matrix.md"
   },
   {
@@ -4945,8 +6016,15 @@
     "react",
     "nextjs"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add srcl",
    "doc": "docs/design/component-libraries/srcl.md"
   },
   {
@@ -4977,10 +6055,17 @@
     "react",
     "nextjs",
     "tailwind",
-    "motion"
+    "motion",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add prompt-kit/prompt-input",
    "doc": "docs/design/component-libraries/prompt-kit.md"
   },
   {
@@ -5007,9 +6092,18 @@
     "mcp agent lookup",
     "registry search"
    ],
-   "stack": [],
+   "stack": [
+    "shadcn"
+   ],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui",
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add https://registry-url.com/r/pricing-block.json",
    "doc": "docs/design/component-libraries/shoogle.md"
   },
   {
@@ -5040,8 +6134,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -s https://www.interior.dev/reference/floating-label",
    "doc": "docs/design/component-libraries/interior-dev.md"
   },
   {
@@ -5070,10 +6170,17 @@
    ],
    "stack": [
     "react",
-    "typescript"
+    "typescript",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "audio"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn add @soundcn/click-soft",
    "doc": "docs/design/component-libraries/soundcn.md"
   },
   {
@@ -5102,8 +6209,14 @@
     "javascript",
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "audio"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add cuelume",
    "doc": "docs/design/component-libraries/cuelume.md"
   },
   {
@@ -5138,8 +6251,14 @@
     "svelte",
     "typescript"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add @canvas-ui/particle-reveal-react",
    "doc": "docs/design/component-libraries/canvas-ui.md"
   },
   {
@@ -5167,10 +6286,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add @odysseyui/components-animate-code-tabs",
    "doc": "docs/design/component-libraries/odyssey-ui.md"
   },
   {
@@ -5198,10 +6324,17 @@
    ],
    "stack": [
     "react",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add @spell/badge",
    "doc": "docs/design/component-libraries/spell-ui.md"
   },
   {
@@ -5230,10 +6363,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn add @skiper-ui/skiper40",
    "doc": "docs/design/component-libraries/skiper-ui.md"
   },
   {
@@ -5259,8 +6399,15 @@
     "app layout patterns"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/devl.md"
   },
   {
@@ -5291,8 +6438,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/uiuno.md"
   },
   {
@@ -5322,10 +6475,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add https://raw.githubusercontent.com/Ashutoshx7/VengeanceUI/main/public/r/animated-button.json",
    "doc": "docs/design/component-libraries/vengeance-ui.md"
   },
   {
@@ -5356,8 +6516,14 @@
     "nextjs",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "audio"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add SatyamVyas04/sensory-ui/sensory-ui",
    "doc": "docs/design/component-libraries/sensory-ui.md"
   },
   {
@@ -5384,8 +6550,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/amacro.md"
   },
   {
@@ -5416,8 +6588,14 @@
     "tailwind",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add @evilbuttons/hold-button",
    "doc": "docs/design/component-libraries/evil-buttons.md"
   },
   {
@@ -5446,10 +6624,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add @componentry/aurora-flow",
    "doc": "docs/design/component-libraries/componentry.md"
   },
   {
@@ -5479,8 +6664,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add https://www.great-ui.com/r/multilingual-quote.json",
    "doc": "docs/design/component-libraries/great-ui.md"
   },
   {
@@ -5510,8 +6701,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx ruru-ui-cli@latest init",
    "doc": "docs/design/component-libraries/ruru-ui.md"
   },
   {
@@ -5541,10 +6738,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/component-libraries/shadcn-studio.md"
   },
   {
@@ -5574,8 +6778,14 @@
     "react",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add shadcn-animated",
    "doc": "docs/design/component-libraries/animated-shadcn-ui.md"
   },
   {
@@ -5606,8 +6816,14 @@
     "tailwind",
     "motion"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx shadcn@latest add \"https://pinui.xyz/r/<slug>.json\"",
    "doc": "docs/design/component-libraries/pin-ui.md"
   },
   {
@@ -5636,8 +6852,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add loading-dev",
    "doc": "docs/design/component-libraries/loading-dev.md"
   },
   {
@@ -5664,8 +6886,14 @@
     "terminal workflows"
    ],
    "stack": [],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -fsSL https://claude.ai/install.sh | bash",
    "doc": "docs/design/development/claude-code.md"
   },
   {
@@ -5692,8 +6920,14 @@
     "multi-file tasks"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/development/cursor.md"
   },
   {
@@ -5720,8 +6954,14 @@
     "multiplayer coding"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/development/zed.md"
   },
   {
@@ -5751,10 +6991,17 @@
    "stack": [
     "react",
     "nextjs",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add \"https://v0.app/t/YOUR_SHARE_ID\"",
    "doc": "docs/design/development/v0.md"
   },
   {
@@ -5787,8 +7034,15 @@
     "vite",
     "nextjs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "development",
+    "hosting"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# Clone the repository exported from Bolt.new\ngit clone https://github.com/your-org/bolt-project.git\ncd bolt-project\n\n# Install dependencies and start local dev server\nbun install\nbun run dev",
    "doc": "docs/design/development/bolt-new.md"
   },
   {
@@ -5822,8 +7076,14 @@
     "vue",
     "svelte"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun create vite my-app --template react-ts\ncd my-app\nbun install",
    "doc": "docs/design/development/vite.md"
   },
   {
@@ -5857,8 +7117,14 @@
     "json",
     "css"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add -d --exact @biomejs/biome",
    "doc": "docs/design/development/biome.md"
   },
   {
@@ -5891,8 +7157,14 @@
     "nodejs",
     "python"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun create playwright",
    "doc": "docs/design/development/playwright.md"
   },
   {
@@ -5920,8 +7192,14 @@
     "development resources"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/development/buildertools.md"
   },
   {
@@ -5954,8 +7232,14 @@
     "remix",
     "vite"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add nuqs",
    "doc": "docs/design/development/nuqs.md"
   },
   {
@@ -5989,8 +7273,14 @@
     "drizzle",
     "tailwind"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx create-better-t-stack@latest",
    "doc": "docs/design/development/better-t-stack.md"
   },
   {
@@ -6021,8 +7311,14 @@
     "typescript",
     "nodejs"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# Authenticate with your AI Stack account\nbunx @use-aistack/cli login",
    "doc": "docs/design/development/ai-stack.md"
   },
   {
@@ -6054,8 +7350,15 @@
     "python",
     "java"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -LsSf https://alumnium.ai/install.sh | sh",
    "doc": "docs/design/development/alumnium.md"
   },
   {
@@ -6087,8 +7390,14 @@
     "nodejs",
     "vercel"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   npx -y vercel-doctor@latest .",
    "doc": "docs/design/development/vercel-doctor.md"
   },
   {
@@ -6116,8 +7425,14 @@
     "developer grants"
    ],
    "stack": [],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# Run directly without global installation\nbunx ossperks",
    "doc": "docs/design/development/oss-perks.md"
   },
   {
@@ -6150,8 +7465,14 @@
     "vite",
     "cloudflare-workers"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add -d vinext @vinext/cloudflare",
    "doc": "docs/design/development/vinext.md"
   },
   {
@@ -6185,8 +7506,14 @@
     "nuxt",
     "hono"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add evlog",
    "doc": "docs/design/development/evlog.md"
   },
   {
@@ -6218,8 +7545,14 @@
     "javascript",
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "audio"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @web-kits/audio",
    "doc": "docs/design/development/web-kits-audio.md"
   },
   {
@@ -6251,8 +7584,14 @@
     "css",
     "javascript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add -g nuekit",
    "doc": "docs/design/development/nue.md"
   },
   {
@@ -6285,8 +7624,14 @@
     "nodejs",
     "postgresql"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/development/umami.md"
   },
   {
@@ -6320,8 +7665,14 @@
     "javascript",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add torph",
    "doc": "docs/design/development/torph.md"
   },
   {
@@ -6349,8 +7700,14 @@
     "multi-agent workflows"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/development/x-ai-bot.md"
   },
   {
@@ -6380,8 +7737,14 @@
    "stack": [
     "javascript"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/development/tracwell.md"
   },
   {
@@ -6412,8 +7775,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add dialkit",
    "doc": "docs/design/development/dialkit.md"
   },
   {
@@ -6441,8 +7810,15 @@
     "desktop agent supervision"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "development",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/dray.md"
   },
   {
@@ -6467,8 +7843,15 @@
     "visual research"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/refero.md"
   },
   {
@@ -6493,8 +7876,15 @@
     "agent design context"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx designmdme --website stripe.com",
    "doc": "docs/design/agents-mcp/designmd-me.md"
   },
   {
@@ -6522,8 +7912,15 @@
     "nodejs",
     "pnpm"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-ui",
+    "pdf"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "git clone https://github.com/nexu-io/open-design\ncd open-design\npnpm install\npnpm tools-dev",
    "doc": "docs/design/agents-mcp/open-design.md"
   },
   {
@@ -6548,8 +7945,15 @@
     "agent-ready references"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/designmd-supply.md"
   },
   {
@@ -6574,8 +7978,15 @@
     "agent design rules"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/getdesign-md.md"
   },
   {
@@ -6600,8 +8011,15 @@
     "agent research"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/hyperbrowser-design-md.md"
   },
   {
@@ -6630,8 +8048,14 @@
     "css",
     "javascript"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/aura.md"
   },
   {
@@ -6660,8 +8084,15 @@
     "css",
     "javascript"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui",
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/neuform.md"
   },
   {
@@ -6686,8 +8117,15 @@
     "UI audits and prompts"
    ],
    "stack": [],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx typeui.sh pull creative",
    "doc": "docs/design/agents-mcp/typeui-sh.md"
   },
   {
@@ -6716,8 +8154,14 @@
     "cli",
     "mcp"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx create-webclaw",
    "doc": "docs/design/agents-mcp/webclaw.md"
   },
   {
@@ -6745,8 +8189,15 @@
     "rust",
     "gpui"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "development",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "brew install ghostex",
    "doc": "docs/design/agents-mcp/ghostex.md"
   },
   {
@@ -6775,8 +8226,14 @@
     "mcp",
     "rest"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx is-agentic example.com\nnpx is-agentic example.com --json",
    "doc": "docs/design/agents-mcp/is-agentic-com.md"
   },
   {
@@ -6804,8 +8261,15 @@
     "rust",
     "cli"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development",
+    "cli-tui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -fsSL https://herdr.dev/install.sh | sh",
    "doc": "docs/design/agents-mcp/herdr.md"
   },
   {
@@ -6833,8 +8297,14 @@
     "typescript",
     "nodejs"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx soubi@latest init my-plugin",
    "doc": "docs/design/agents-mcp/soubi.md"
   },
   {
@@ -6864,8 +8334,14 @@
     "eve",
     "mastra"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add @agentcn/eve/extract-design-md",
    "doc": "docs/design/agents-mcp/agentcn.md"
   },
   {
@@ -6889,9 +8365,17 @@
     "registry authoring",
     "agent maintenance tasks"
    ],
-   "stack": [],
+   "stack": [
+    "shadcn"
+   ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx skills add shadcn-labs/skills\nbunx skills add shadcn-labs/skills --skill launch-shadcn-registry",
    "doc": "docs/design/agents-mcp/skills.md"
   },
   {
@@ -6921,8 +8405,14 @@
     "base-ui",
     "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx shadcn@latest add @mcpcn/contact-form",
    "doc": "docs/design/agents-mcp/mcpcn.md"
   },
   {
@@ -6952,8 +8442,15 @@
     "openapi",
     "graphql"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "development",
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -s https://integrations.sh/api/stripe.com/detect",
    "doc": "docs/design/agents-mcp/integrations-sh.md"
   },
   {
@@ -6981,8 +8478,15 @@
     "zig",
     "cli"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development",
+    "cli-tui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -fsSL https://fx.sh/setup.sh | bash\ncd path/to/project\nfx\nfx ask \"explain this repository\"",
    "doc": "docs/design/agents-mcp/fx.md"
   },
   {
@@ -7011,8 +8515,14 @@
     "javascript",
     "gsap"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx hyperframes init my-video\nnpx skills add heygen-com/hyperframes",
    "doc": "docs/design/agents-mcp/hyperframes.md"
   },
   {
@@ -7044,8 +8554,14 @@
     "nodejs",
     "python"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add foglamp",
    "doc": "docs/design/agents-mcp/foglamp.md"
   },
   {
@@ -7073,8 +8589,15 @@
     "context vaults"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/distill.md"
   },
   {
@@ -7107,8 +8630,15 @@
     "nextjs",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add -d agentation",
    "doc": "docs/design/agents-mcp/agentation.md"
   },
   {
@@ -7141,8 +8671,15 @@
     "nodejs",
     "bun"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "cli-tui",
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -fsSL https://opencode.ai/v2/install | bash",
    "doc": "docs/design/agents-mcp/opencode.md"
   },
   {
@@ -7171,8 +8708,15 @@
     "layout guidance"
    ],
    "stack": [],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-ui",
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx impeccable install",
    "doc": "docs/design/agents-mcp/impeccable.md"
   },
   {
@@ -7204,8 +8748,14 @@
     "typescript",
     "nodejs"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add -g skillsync",
    "doc": "docs/design/agents-mcp/skillsync.md"
   },
   {
@@ -7238,8 +8788,15 @@
     "electron",
     "nodejs"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "development",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx bb-app@latest",
    "doc": "docs/design/agents-mcp/bb.md"
   },
   {
@@ -7272,8 +8829,16 @@
     "nodejs",
     "postgresql"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui",
+    "development",
+    "hosting"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/capacity.md"
   },
   {
@@ -7302,8 +8867,15 @@
     "ai web generation"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/lafys.md"
   },
   {
@@ -7335,8 +8907,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npx skills add pablostanley/efecto-plugin",
    "doc": "docs/design/agents-mcp/efecto.md"
   },
   {
@@ -7368,8 +8946,14 @@
     "nextjs",
     "tailwind"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "pdf"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/arc-labs.md"
   },
   {
@@ -7402,8 +8986,15 @@
     "typescript",
     "tailwind"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "reference",
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "git clone https://github.com/zaidmukaddam/scira.git\ncd scira\nbun install",
    "doc": "docs/design/agents-mcp/scira.md"
   },
   {
@@ -7438,8 +9029,14 @@
     "css",
     "tailwind"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/kombai.md"
   },
   {
@@ -7468,8 +9065,15 @@
     "visual project mapping"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/agents-mcp/causal.md"
   },
   {
@@ -7504,8 +9108,14 @@
     "typescript",
     "javascript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add motion",
    "doc": "docs/design/motion/motion.md"
   },
   {
@@ -7541,8 +9151,14 @@
     "vue",
     "svelte"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add gsap",
    "doc": "docs/design/motion/gsap.md"
   },
   {
@@ -7581,8 +9197,14 @@
     "ios",
     "android"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @rive-app/react-canvas",
    "doc": "docs/design/motion/rive.md"
   },
   {
@@ -7620,8 +9242,14 @@
     "ios",
     "android"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @lottiefiles/dotlottie-react",
    "doc": "docs/design/motion/lottie.md"
   },
   {
@@ -7654,8 +9282,14 @@
     "css",
     "tailwind"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/motion/easing-wizard.md"
   },
   {
@@ -7690,8 +9324,14 @@
     "canvas",
     "javascript"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/motion/morphrig.md"
   },
   {
@@ -7727,8 +9367,15 @@
     "react",
     "threejs"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @theatre/core\nbun add -d @theatre/studio",
    "doc": "docs/design/motion/theatre-js.md"
   },
   {
@@ -7760,8 +9407,14 @@
     "react-native",
     "astro"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   bun add morphicons lucide",
    "doc": "docs/design/motion/morphicons.md"
   },
   {
@@ -7791,8 +9444,14 @@
     "nextjs",
     "webgl"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   bun add glimm",
    "doc": "docs/design/motion/glimm.md"
   },
   {
@@ -7820,8 +9479,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/motion/devouring-details.md"
   },
   {
@@ -7852,8 +9517,14 @@
     "solid",
     "svelte"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   bun add slot-text",
    "doc": "docs/design/motion/textmotion.md"
   },
   {
@@ -7880,8 +9551,14 @@
     "developer handoff"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/figma.md"
   },
   {
@@ -7908,8 +9585,14 @@
     "visual publishing"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/framer.md"
   },
   {
@@ -7935,8 +9618,14 @@
     "design exploration"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/make-design.md"
   },
   {
@@ -7964,8 +9653,14 @@
     "self-hosted workflows"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/penpot.md"
   },
   {
@@ -7993,8 +9688,14 @@
     "prototypes"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/spline.md"
   },
   {
@@ -8020,8 +9721,14 @@
     "interaction references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/interface-craft.md"
   },
   {
@@ -8050,11 +9757,17 @@
    "stack": [
     "react",
     "tailwind",
-    "framer-motion",
-    "radix-ui"
+    "motion",
+    "radix"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/ui-labs.md"
   },
   {
@@ -8080,8 +9793,14 @@
     "small interaction studies"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/uiwtf.md"
   },
   {
@@ -8107,8 +9826,14 @@
     "interface studies"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/lab01.md"
   },
   {
@@ -8138,8 +9863,14 @@
    "stack": [
     "css"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/design-dev.md"
   },
   {
@@ -8169,8 +9900,14 @@
     "html",
     "react"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/interface-design/ui-playbook.md"
   },
   {
@@ -8197,8 +9934,14 @@
     "pairing ideas"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/type/fontshare.md"
   },
   {
@@ -8225,8 +9968,14 @@
     "commercial font licensing"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/type/klim.md"
   },
   {
@@ -8259,8 +10008,14 @@
     "react",
     "css"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   bun add @fontsource-variable/open-sans",
    "doc": "docs/design/type/fontsource.md"
   },
   {
@@ -8288,8 +10043,14 @@
     "specimen diagnostics"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/type/wakamai-fondue.md"
   },
   {
@@ -8319,8 +10080,14 @@
    "stack": [
     "css"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/type/utopia.md"
   },
   {
@@ -8347,8 +10114,14 @@
     "experimental brand work"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/type/velvetyne.md"
   },
   {
@@ -8379,8 +10152,14 @@
    "stack": [
     "css"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "brew install font-departure-mono",
    "doc": "docs/design/type/departure-mono.md"
   },
   {
@@ -8412,8 +10191,14 @@
    "stack": [
     "css"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/color/oklch.md"
   },
   {
@@ -8444,8 +10229,14 @@
    "stack": [
     "css"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/color/color-review.md"
   },
   {
@@ -8477,8 +10268,14 @@
    "stack": [
     "css"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/color/huetone.md"
   },
   {
@@ -8509,10 +10306,16 @@
    ],
    "stack": [
     "javascript",
-    "node"
+    "nodejs"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add apca-w3",
    "doc": "docs/design/color/apca.md"
   },
   {
@@ -8545,8 +10348,14 @@
     "css",
     "tailwind"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -s \"https://www.ramps.studio/api/palette?b=2563eb\"",
    "doc": "docs/design/color/ramps.md"
   },
   {
@@ -8579,8 +10388,14 @@
     "javascript",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add three @types/three",
    "doc": "docs/design/3d/three-js.md"
   },
   {
@@ -8613,8 +10428,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": "   bun add @react-three/fiber@9 three\n   bun add -d @types/three",
    "doc": "docs/design/3d/react-three-fiber.md"
   },
   {
@@ -8648,8 +10469,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @react-three/drei @react-three/fiber three @types/three",
    "doc": "docs/design/3d/drei.md"
   },
   {
@@ -8680,8 +10507,15 @@
     "low-poly models"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-asset",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": "# macOS\nbrew install --cask blender\n\n# Linux (Ubuntu/Debian)\nsudo snap install blender --classic",
    "doc": "docs/design/3d/blender.md"
   },
   {
@@ -8712,10 +10546,17 @@
    ],
    "stack": [
     "javascript",
-    "node"
+    "nodejs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-3d",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx @gltf-transform/cli optimize input.glb output.glb --compress meshopt",
    "doc": "docs/design/3d/gltf-report.md"
   },
   {
@@ -8745,8 +10586,16 @@
     "3d scenes"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-asset",
+    "web-3d",
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/3d/poly-haven.md"
   },
   {
@@ -8778,8 +10627,14 @@
    "stack": [
     "glsl"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/shaders/book-of-shaders.md"
   },
   {
@@ -8812,8 +10667,14 @@
     "wgsl",
     "webgpu"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/shaders/compute-toys.md"
   },
   {
@@ -8846,8 +10707,14 @@
     "glsl",
     "threejs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/shaders/shaderfrog.md"
   },
   {
@@ -8879,10 +10746,17 @@
    "stack": [
     "react",
     "typescript",
-    "webgpu"
+    "webgpu",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add \"https://shadercn.run/r/aurora-shader\"",
    "doc": "docs/design/shaders/shadercn.md"
   },
   {
@@ -8917,8 +10791,14 @@
     "javascript",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @paper-design/shaders-react",
    "doc": "docs/design/shaders/paper-shaders.md"
   },
   {
@@ -8949,8 +10829,14 @@
    "stack": [
     "javascript"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/shaders/openshaders.md"
   },
   {
@@ -8983,8 +10869,14 @@
     "javascript",
     "glsl"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/shaders/orbkit.md"
   },
   {
@@ -9019,8 +10911,14 @@
     "svelte",
     "web-components"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# For React / Next.js\nbun add lucide-react\n\n# For Vue 3\nbun add lucide-vue-next\n\n# For Svelte\nbun add lucide-svelte",
    "doc": "docs/design/icons/lucide.md"
   },
   {
@@ -9054,8 +10952,14 @@
     "vue",
     "web-components"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "# For React\nbun add @phosphor-icons/react\n\n# For Vue 3\nbun add @phosphor-icons/vue",
    "doc": "docs/design/icons/phosphor.md"
   },
   {
@@ -9085,8 +10989,14 @@
     "react",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @iconify/react",
    "doc": "docs/design/icons/iconify.md"
   },
   {
@@ -9116,8 +11026,14 @@
     "svg",
     "react"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/icons/rune-icons.md"
   },
   {
@@ -9144,8 +11060,14 @@
     "app store visual audits"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/icons/icon-museum.md"
   },
   {
@@ -9176,8 +11098,15 @@
     "svg",
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @tabler/icons",
    "doc": "docs/design/icons/tabler-icons.md"
   },
   {
@@ -9210,8 +11139,14 @@
     "vue",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @heroicons/react",
    "doc": "docs/design/icons/heroicons.md"
   },
   {
@@ -9244,8 +11179,14 @@
     "vue",
     "web-components"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add material-symbols",
    "doc": "docs/design/icons/material-symbols.md"
   },
   {
@@ -9276,8 +11217,14 @@
     "css",
     "javascript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add bootstrap-icons",
    "doc": "docs/design/icons/bootstrap-icons.md"
   },
   {
@@ -9309,8 +11256,14 @@
     "css",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @remixicon/react",
    "doc": "docs/design/icons/remix-icon.md"
   },
   {
@@ -9340,8 +11293,14 @@
     "react",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add iconoir-react",
    "doc": "docs/design/icons/iconoir.md"
   },
   {
@@ -9373,8 +11332,15 @@
     "ionic",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui",
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add ionicons",
    "doc": "docs/design/icons/ionicons.md"
   },
   {
@@ -9404,8 +11370,14 @@
     "javascript",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add simple-icons",
    "doc": "docs/design/icons/simple-icons.md"
   },
   {
@@ -9438,8 +11410,14 @@
     "svelte",
     "javascript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @thesvg/react",
    "doc": "docs/design/icons/thesvg.md"
   },
   {
@@ -9469,8 +11447,14 @@
     "javascript",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add feather-icons",
    "doc": "docs/design/icons/feather.md"
   },
   {
@@ -9499,8 +11483,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @carbon/icons-react",
    "doc": "docs/design/icons/carbon-icons.md"
   },
   {
@@ -9534,8 +11524,14 @@
     "svelte",
     "javascript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @boxicons/react",
    "doc": "docs/design/icons/boxicons.md"
   },
   {
@@ -9564,8 +11560,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add mx-icons",
    "doc": "docs/design/icons/mx-icons.md"
   },
   {
@@ -9597,8 +11599,14 @@
     "javascript",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add eva-icons",
    "doc": "docs/design/icons/eva-icons.md"
   },
   {
@@ -9629,8 +11637,14 @@
     "svg",
     "html"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add devicon",
    "doc": "docs/design/icons/devicon.md"
   },
   {
@@ -9660,8 +11674,14 @@
     "css",
     "svg"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/icons/css-gg.md"
   },
   {
@@ -9692,8 +11712,14 @@
     "react",
     "svg"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @hugeicons/react @hugeicons/core-free-icons",
    "doc": "docs/design/icons/hugeicons.md"
   },
   {
@@ -9723,8 +11749,14 @@
    "stack": [
     "react"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add reicon-react",
    "doc": "docs/design/icons/reicon.md"
   },
   {
@@ -9756,8 +11788,14 @@
     "svg",
     "react"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/icons/iconsax.md"
   },
   {
@@ -9788,10 +11826,17 @@
     "react",
     "nextjs",
     "tailwind",
-    "typescript"
+    "typescript",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add https://icons0.dev/r/lucide:home.json",
    "doc": "docs/design/icons/icons0.md"
   },
   {
@@ -9825,8 +11870,14 @@
     "svelte",
     "motion"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add @heroicons-animated/react motion",
    "doc": "docs/design/icons/heroicons-animated.md"
   },
   {
@@ -9854,8 +11905,14 @@
     "multi-style icon matching"
    ],
    "stack": [],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/icons/icons-download.md"
   },
   {
@@ -9886,10 +11943,17 @@
    "stack": [
     "react",
     "motion",
-    "tailwind"
+    "tailwind",
+    "shadcn"
    ],
+   "execution_mode": "registry",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx --bun shadcn@latest add https://lucide-animated.com/r/bell.json",
    "doc": "docs/design/icons/lucide-animated.md"
   },
   {
@@ -9918,8 +11982,14 @@
     "brand logos"
    ],
    "stack": [],
+   "execution_mode": "snippet",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/icons/icon-foundry.md"
   },
   {
@@ -9948,8 +12018,15 @@
     "empty states"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset",
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/icons/inkword.md"
   },
   {
@@ -9980,10 +12057,16 @@
    "stack": [
     "javascript",
     "svgo",
-    "web"
+    "browser"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": "# In automated agent pipelines, use the underlying SVGO engine directly:\nbunx svgo input.svg -o output.svg --multipass",
    "doc": "docs/design/utilities/svgomg.md"
   },
   {
@@ -10015,8 +12098,14 @@
     "javascript",
     "regex"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/regexr.md"
   },
   {
@@ -10049,8 +12138,14 @@
     "javascript",
     "nodejs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx @squoosh/cli --webp auto --avif auto public/images/*.png",
    "doc": "docs/design/utilities/squoosh.md"
   },
   {
@@ -10079,8 +12174,14 @@
     "landing page graphics"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/fffuel.md"
   },
   {
@@ -10109,8 +12210,15 @@
     "pitch decks"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset",
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/ui-camera.md"
   },
   {
@@ -10143,8 +12251,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "og-image"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/ray-so.md"
   },
   {
@@ -10178,8 +12292,14 @@
     "rust",
     "webassembly"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/transform.md"
   },
   {
@@ -10208,8 +12328,14 @@
     "poster graphics"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/playgrnd.md"
   },
   {
@@ -10238,8 +12364,14 @@
     "ai clip vectorization"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/anim8.md"
   },
   {
@@ -10268,8 +12400,14 @@
     "social preview debugging"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "og-image"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/ogfolio.md"
   },
   {
@@ -10298,8 +12436,15 @@
     "video export"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "video",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/dotforge.md"
   },
   {
@@ -10328,8 +12473,14 @@
     "text-mode visuals"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/asciinator.md"
   },
   {
@@ -10358,8 +12509,14 @@
     "design tokens"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/vessa.md"
   },
   {
@@ -10388,8 +12545,14 @@
     "app mockups"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/icoon.md"
   },
   {
@@ -10418,8 +12581,14 @@
     "workflow shortcuts"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/design-minis.md"
   },
   {
@@ -10445,8 +12614,14 @@
     "text experiments"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/ascii-kracked-devs.md"
   },
   {
@@ -10472,8 +12647,14 @@
     "photo experiments"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/dither-lab.md"
   },
   {
@@ -10502,8 +12683,14 @@
     "react",
     "tailwind"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   bunx skills add nutlope/hallmark",
    "doc": "docs/design/utilities/hallmark.md"
   },
   {
@@ -10529,8 +12716,14 @@
     "animated effects"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/tooooools.md"
   },
   {
@@ -10556,8 +12749,14 @@
     "localized screenshots"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/screan.md"
   },
   {
@@ -10583,8 +12782,14 @@
     "device mockups"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "og-image"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/postspark.md"
   },
   {
@@ -10614,8 +12819,14 @@
     "react",
     "javascript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   bun add drawably",
    "doc": "docs/design/utilities/drawably.md"
   },
   {
@@ -10645,8 +12856,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add mesurer",
    "doc": "docs/design/utilities/mesurer.md"
   },
   {
@@ -10674,8 +12891,14 @@
     "nuxt",
     "vue"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "video"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/render-labs.md"
   },
   {
@@ -10699,8 +12922,14 @@
     "landing page experiments"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "unreachable",
    "agent_friendly": false,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": null,
    "doc": "docs/design/utilities/butterfly.md"
   },
   {
@@ -10732,8 +12961,14 @@
     "vue",
     "svelte"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npm install @lisse/react",
    "doc": "docs/design/utilities/corne.md"
   },
   {
@@ -10760,8 +12995,14 @@
     "agent-accessible bookmarks"
    ],
    "stack": [],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   codex mcp add shiori --url https://www.shiori.sh/mcp",
    "doc": "docs/design/utilities/shiori.md"
   },
   {
@@ -10787,8 +13028,14 @@
     "contributor discovery"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/open-source-together.md"
   },
   {
@@ -10817,8 +13064,14 @@
     "react",
     "nextjs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/ascii-studio.md"
   },
   {
@@ -10850,8 +13103,14 @@
     "vue",
     "svelte"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add tabbied",
    "doc": "docs/design/utilities/tabbied.md"
   },
   {
@@ -10876,8 +13135,14 @@
     "real-time visual effects on local media"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/rynix-studio.md"
   },
   {
@@ -10904,8 +13169,14 @@
     "app icon characters"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/utilities/mascofast.md"
   },
   {
@@ -10932,8 +13203,14 @@
     "presentation mockups"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "mobile-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -X POST https://www.screenshot-studio.com/api/screenshot -H 'Content-Type: application/json' -d '{\"url\":\"https://example.com\"}'",
    "doc": "docs/design/utilities/screenshot-studio.md"
   },
   {
@@ -10957,8 +13234,14 @@
     "website session review"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "degraded",
    "agent_friendly": false,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": null,
    "doc": "docs/design/utilities/replay.md"
   },
   {
@@ -10985,8 +13268,14 @@
     "desktop workflows"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/desktop/raycast.md"
   },
   {
@@ -11013,8 +13302,15 @@
     "configurable themes"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "cli-tui",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/desktop/ghostty.md"
   },
   {
@@ -11047,8 +13343,15 @@
     "zsh",
     "fish"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "cli-tui",
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "brew install --cask warp",
    "doc": "docs/design/desktop/warp.md"
   },
   {
@@ -11077,8 +13380,15 @@
     "visual documentation"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop",
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": "brew install --cask cleanshot",
    "doc": "docs/design/desktop/cleanshot-x.md"
   },
   {
@@ -11107,8 +13417,14 @@
     "spec extraction"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": "brew install --cask granola",
    "doc": "docs/design/desktop/granola.md"
   },
   {
@@ -11140,8 +13456,14 @@
     "flutter",
     "dart"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "brew install --cask localsend",
    "doc": "docs/design/desktop/localsend.md"
   },
   {
@@ -11175,8 +13497,15 @@
     "zsh",
     "fish"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "cli-tui",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/desktop/canario.md"
   },
   {
@@ -11205,8 +13534,14 @@
     "music controls"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/desktop/cooldock.md"
   },
   {
@@ -11235,8 +13570,14 @@
     "screenshot ocr"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/desktop/supaste.md"
   },
   {
@@ -11265,8 +13606,14 @@
     "proposals"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "pdf"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/desktop/runey.md"
   },
   {
@@ -11295,8 +13642,14 @@
     "live widgets"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/desktop/revone.md"
   },
   {
@@ -11329,8 +13682,16 @@
     "rust",
     "javascript"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop",
+    "development",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "brew install --cask zen-browser",
    "doc": "docs/design/desktop/zen-browser.md"
   },
   {
@@ -11359,8 +13720,15 @@
     "social video teasers"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "video",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/video-capture/screen-studio.md"
   },
   {
@@ -11394,8 +13762,14 @@
     "nodejs",
     "bun"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx create-video@latest",
    "doc": "docs/design/video-capture/remotion.md"
   },
   {
@@ -11424,8 +13798,16 @@
     "high-end client productions"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "video",
+    "audio",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/video-capture/davinci-resolve.md"
   },
   {
@@ -11454,8 +13836,15 @@
     "ai voice cloning"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "video",
+    "audio"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/video-capture/descript.md"
   },
   {
@@ -11488,8 +13877,14 @@
     "c",
     "cli"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "brew install gifski",
    "doc": "docs/design/video-capture/gifski.md"
   },
   {
@@ -11518,8 +13913,15 @@
     "social media reveals"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "video",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/video-capture/slant-it.md"
   },
   {
@@ -11553,8 +13955,14 @@
     "remotion",
     "typescript"
    ],
+   "execution_mode": "snippet",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bunx create-video@latest",
    "doc": "docs/design/video-capture/remocn.md"
   },
   {
@@ -11586,8 +13994,14 @@
     "swift",
     "swiftui"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -LO https://github.com/KartikLabhshetwar/better-shot/releases/latest/download/BetterShot-arm64.dmg",
    "doc": "docs/design/video-capture/bettershot.md"
   },
   {
@@ -11621,8 +14035,15 @@
     "react",
     "vite"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "video",
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/video-capture/recordly.md"
   },
   {
@@ -11651,8 +14072,14 @@
     "redrawn vector cursors"
    ],
    "stack": [],
+   "execution_mode": "browser-app",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/video-capture/cursorful.md"
   },
   {
@@ -11686,8 +14113,15 @@
     "typescript",
     "tailwind"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "video",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/video-capture/tokokino.md"
   },
   {
@@ -11717,8 +14151,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npm create tldraw@latest",
    "doc": "docs/design/whiteboard/tldraw.md"
   },
   {
@@ -11748,8 +14188,14 @@
     "react",
     "typescript"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "bun add react react-dom @excalidraw/excalidraw",
    "doc": "docs/design/whiteboard/excalidraw.md"
   },
   {
@@ -11776,8 +14222,14 @@
     "local project docs"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "desktop"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/whiteboard/obsidian.md"
   },
   {
@@ -11804,8 +14256,14 @@
     "team planning"
    ],
    "stack": [],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "codex mcp add linear --url https://mcp.linear.app/mcp",
    "doc": "docs/design/whiteboard/linear.md"
   },
   {
@@ -11836,8 +14294,14 @@
     "react",
     "nodejs"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "hosting"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npm i -g vercel\nvercel login\nvercel",
    "doc": "docs/design/deploy/vercel.md"
   },
   {
@@ -11864,12 +14328,18 @@
     "serverless apis"
    ],
    "stack": [
-    "workers",
+    "cloudflare-workers",
     "javascript",
     "typescript"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "hosting"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npm create cloudflare@latest -- my-astro-app --framework=astro",
    "doc": "docs/design/deploy/cloudflare.md"
   },
   {
@@ -11900,8 +14370,14 @@
     "astro",
     "react"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "hosting"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npm install -g netlify-cli\nnetlify init\nnetlify deploy --prod",
    "doc": "docs/design/deploy/netlify.md"
   },
   {
@@ -11930,10 +14406,16 @@
    "stack": [
     "docker",
     "nodejs",
-    "postgres"
+    "postgresql"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "hosting"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "npm i -g @railway/cli\nrailway login\nrailway init\nrailway up",
    "doc": "docs/design/deploy/railway.md"
   },
   {
@@ -11964,8 +14446,14 @@
     "nodejs",
     "go"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "hosting"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl -L https://fly.io/install.sh | sh\nfly auth signup\nfly launch\nfly deploy",
    "doc": "docs/design/deploy/fly-io.md"
   },
   {
@@ -11992,8 +14480,14 @@
     "visual polish"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/refactoring-ui.md"
   },
   {
@@ -12020,8 +14514,14 @@
     "font selection"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/practical-typography.md"
   },
   {
@@ -12048,8 +14548,14 @@
     "accessibility implementation"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/web-dev.md"
   },
   {
@@ -12080,8 +14586,14 @@
     "css",
     "javascript"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/inclusive-components.md"
   },
   {
@@ -12112,8 +14624,14 @@
     "javascript",
     "react"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/josh-comeau.md"
   },
   {
@@ -12140,8 +14658,14 @@
     "ux references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/design-books.md"
   },
   {
@@ -12172,8 +14696,14 @@
     "triton",
     "gpu"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "curl https://learn-kernels.com/api/v1/chapters\ncurl https://learn-kernels.com/api/v1/chapters/introduction",
    "doc": "docs/design/reading/learn-kernels.md"
   },
   {
@@ -12200,8 +14730,14 @@
     "component governance"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "degraded",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/design-system-checklist.md"
   },
   {
@@ -12232,8 +14768,14 @@
     "javascript",
     "react"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/learn-ui.md"
   },
   {
@@ -12260,8 +14802,14 @@
     "interface critique"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/design-spells.md"
   },
   {
@@ -12288,8 +14836,14 @@
     "conversion review"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/good-ui.md"
   },
   {
@@ -12316,8 +14870,14 @@
     "web design ideas"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/abduzeedo.md"
   },
   {
@@ -12345,8 +14905,14 @@
     "design ethics"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "degraded",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/ux-collective.md"
   },
   {
@@ -12379,8 +14945,14 @@
     "css",
     "javascript"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/smashing-magazine.md"
   },
   {
@@ -12414,8 +14986,14 @@
     "threejs",
     "gsap"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/codrops.md"
   },
   {
@@ -12443,8 +15021,14 @@
     "visual trend tracking"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/muzli.md"
   },
   {
@@ -12472,8 +15056,14 @@
     "mental models"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/boxes-and-arrows.md"
   },
   {
@@ -12499,8 +15089,14 @@
     "historical reference for community-curated design discussions"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "unreachable",
    "agent_friendly": false,
-   "last_verified": "2026-10-07",
+   "last_verified": "2026-10-15",
+   "install": null,
    "doc": "docs/design/reading/designer-news.md"
   },
   {
@@ -12528,8 +15124,14 @@
     "freelance agency advice"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/web-designer-depot.md"
   },
   {
@@ -12561,8 +15163,15 @@
     "css",
     "bootstrap"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "email",
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/designmodo.md"
   },
   {
@@ -12590,8 +15199,14 @@
     "creative briefs"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/99designs-discover.md"
   },
   {
@@ -12622,10 +15237,16 @@
    "stack": [
     "react",
     "css",
-    "framer-motion"
+    "motion"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/interfaces.md"
   },
   {
@@ -12653,8 +15274,14 @@
     "vector geometry"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/making-software.md"
   },
   {
@@ -12686,8 +15313,14 @@
     "webgl",
     "javascript"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/visual-rambling.md"
   },
   {
@@ -12715,8 +15348,14 @@
     "UX process mastery"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/degreeless-design.md"
   },
   {
@@ -12749,8 +15388,14 @@
     "css",
     "javascript"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/svg-guide.md"
   },
   {
@@ -12782,8 +15427,14 @@
     "css",
     "motion"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/animations-dev.md"
   },
   {
@@ -12816,8 +15467,14 @@
     "nodejs",
     "mcp"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   bunx ui-skills add frontend-design",
    "doc": "docs/design/reading/ui-skills.md"
   },
   {
@@ -12844,8 +15501,14 @@
     "prototyping with ai"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "degraded",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/ai-for-ui.md"
   },
   {
@@ -12873,8 +15536,14 @@
     "software craft philosophies"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/ui-land.md"
   },
   {
@@ -12902,8 +15571,14 @@
     "design reviews"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/laws-of-ux.md"
   },
   {
@@ -12936,8 +15611,14 @@
     "nextjs",
     "motion"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-07",
+   "install": "   npx skills add raphaelsalaja/userinterface-wiki",
    "doc": "docs/design/reading/user-interface-wiki.md"
   },
   {
@@ -12966,8 +15647,14 @@
     "human-ai trust patterns"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-07",
+   "install": null,
    "doc": "docs/design/reading/the-shape-of-ai.md"
   },
   {
@@ -13002,8 +15689,14 @@
     "astro",
     "html"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-08",
+   "install": "   npm install github:bas3line/ascii",
    "doc": "docs/design/component-libraries/ascii-rest.md"
   },
   {
@@ -13036,8 +15729,14 @@
     "remotion",
     "threejs"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": null,
    "doc": "docs/design/motion/prompt-motion.md"
   },
   {
@@ -13071,8 +15770,15 @@
     "typescript",
     "threejs"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-3d",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": "   bun add three @pixiv/three-vrm",
    "doc": "docs/design/3d/three-vrm.md"
   },
   {
@@ -13103,8 +15809,15 @@
     "desktop",
     "vrm"
    ],
+   "execution_mode": "reference",
+   "surface": [
+    "web-asset",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-11",
+   "install": null,
    "doc": "docs/design/3d/vroid-studio.md"
   },
   {
@@ -13135,8 +15848,15 @@
     "fbx",
     "threejs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "web-3d",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-11",
+   "install": null,
    "doc": "docs/design/3d/mixamo.md"
   },
   {
@@ -13166,8 +15886,14 @@
     "portfolio sites"
    ],
    "stack": [],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": "npx skills add https://github.com/Leonxlnx/taste-skill --skill \"image-to-code\"",
    "doc": "docs/design/agents-mcp/image-to-code-skill.md"
   },
   {
@@ -13202,8 +15928,15 @@
     "mcp",
     "chrome"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "development",
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": "   npx rea-agents setup",
    "doc": "docs/design/agents-mcp/rea.md"
   },
   {
@@ -13231,8 +15964,16 @@
     "spatial product metaphors"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference",
+    "web-ui",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-11",
+   "install": null,
    "doc": "docs/design/design-galleries/icqr-magic-tree.md"
   },
   {
@@ -13267,8 +16008,14 @@
     "javascript",
     "framer"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": null,
    "doc": "docs/design/shaders/shaders.md"
   },
   {
@@ -13302,8 +16049,14 @@
     "vue",
     "gsap"
    ],
+   "execution_mode": "package",
+   "surface": [
+    "web-ui"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": null,
    "doc": "docs/design/motion/lenis.md"
   },
   {
@@ -13328,8 +16081,14 @@
     "scroll-motion references"
    ],
    "stack": [],
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
    "agent_friendly": false,
    "last_verified": "2026-10-11",
+   "install": null,
    "doc": "docs/design/interface-design/lenis-templates.md"
   },
   {
@@ -13362,8 +16121,14 @@
     "react",
     "nextjs"
    ],
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-11",
+   "install": "   npx skills add wheresryan22/anatomy -g -a claude-code",
    "doc": "docs/design/agents-mcp/anatomy.md"
   },
   {
@@ -13396,8 +16161,15 @@
    "stack": [
     "browser"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "comics",
+    "print"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-14",
+   "install": null,
    "doc": "docs/design/comics/komawari.md"
   },
   {
@@ -13430,8 +16202,15 @@
    "stack": [
     "browser"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "comics",
+    "web-asset"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-14",
+   "install": null,
    "doc": "docs/design/comics/fukidashi.md"
   },
   {
@@ -13467,8 +16246,16 @@
    "stack": [
     "browser"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "comics",
+    "web-asset",
+    "print"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-14",
+   "install": null,
    "doc": "docs/design/comics/koukasen.md"
   },
   {
@@ -13505,8 +16292,14 @@
     "threejs",
     "browser"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "comics"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-14",
+   "install": null,
    "doc": "docs/design/comics/namegacha.md"
   },
   {
@@ -13541,8 +16334,14 @@
     "browser",
     "threejs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "comics"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-14",
+   "install": null,
    "doc": "docs/design/comics/haikeigacha.md"
   },
   {
@@ -13575,8 +16374,14 @@
     "browser",
     "threejs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "comics"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-14",
+   "install": null,
    "doc": "docs/design/comics/comicalizer.md"
   },
   {
@@ -13611,8 +16416,15 @@
     "browser",
     "threejs"
    ],
+   "execution_mode": "browser-app",
+   "surface": [
+    "comics",
+    "web-3d"
+   ],
+   "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-10-14",
+   "install": null,
    "doc": "docs/design/comics/rokehan.md"
   }
  ]

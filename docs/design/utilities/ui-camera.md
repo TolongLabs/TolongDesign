@@ -15,6 +15,9 @@ category_tags: [mockups, 3d, screenshots, product-photography, staging]
 best_for:
   [software mockups, product photography, landing page visuals, pitch decks]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset', 'video']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

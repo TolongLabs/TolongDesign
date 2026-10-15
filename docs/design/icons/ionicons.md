@@ -16,6 +16,9 @@ category_tags: ['icon-library', 'web-components', 'ionic', 'mobile', 'svg']
 best_for:
   ['ionic apps', 'platform-specific interfaces', 'mobile and web controls']
 stack: ['web-components', 'ionic', 'svg']
+execution_mode: package
+surface: ['web-ui', 'mobile-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

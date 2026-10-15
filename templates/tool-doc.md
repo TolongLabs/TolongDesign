@@ -14,6 +14,9 @@ license: MIT
 category_tags: [react, tailwind, components]
 best_for: [landing pages, dashboards]
 stack: [react, nextjs, tailwind]
+execution_mode: registry
+surface: [web-ui]
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---
@@ -54,6 +57,11 @@ State the date you checked. If pricing is not published, say "Not published" and
 do not guess.
 
 ## How to use
+
+Set `execution_mode`, `surface` and `status` from the workflow and evidence in
+this doc; use the definitions in [resource metadata](../docs/METADATA.md). Use
+canonical `stack` values from the schema, not aliases. Keep `agent_friendly` for
+existing callers.
 
 Concrete, numbered steps a TolongLabs developer (or their coding agent) follows
 to produce what the tool advertises on a real project. An agent must be able to

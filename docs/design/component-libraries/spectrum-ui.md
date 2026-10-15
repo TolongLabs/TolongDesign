@@ -14,6 +14,9 @@ license: Apache-2.0
 category_tags: ['react', 'nextjs', 'tailwind', 'animation', 'mcp']
 best_for: ['saas interfaces', 'agent-assisted component discovery']
 stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

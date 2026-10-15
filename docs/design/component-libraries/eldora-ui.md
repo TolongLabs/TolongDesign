@@ -13,7 +13,10 @@ license: MIT
 category_tags:
   [react, tailwind, framer-motion, animations, landing-pages, components]
 best_for: [landing pages, marketing websites, interactive portfolios]
-stack: [react, nextjs, tailwind, framer-motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

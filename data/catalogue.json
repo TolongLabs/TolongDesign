@@ -4415,10 +4415,20 @@
  ],
  "people": [
   {
-   "name": "Emil Kowalski",
-   "url": "https://emilkowal.ski/",
-   "description": "Creator of Sonner, Vaul, and animations.",
-   "sameAs": []
+    "name": "Emil Kowalski",
+    "url": "https://emilkowal.ski/",
+    "description": "Creator of Sonner, Vaul, and animations.",
+    "sameAs": [],
+    "created_tools": [
+      "reading/animations-dev"
+    ],
+    "created_tools_evidence": {
+      "reading/animations-dev": {
+        "source_url": "https://www.animations.dev/",
+        "checked": "2026-10-15",
+        "quote": "Taught by Emil Kowalski"
+      }
+    }
   },
   {
    "name": "Rauno Freiberg",
@@ -4471,10 +4481,26 @@
    "sameAs": []
   },
   {
-   "name": "shadcn",
-   "url": "https://shadcn.com/",
-   "description": "Creator of shadcn/ui and component registries.",
-   "sameAs": []
+    "name": "shadcn",
+    "url": "https://shadcn.com/",
+    "description": "Creator of shadcn/ui and component registries.",
+    "sameAs": [],
+    "created_tools": [
+      "component-libraries/shadcn-ui",
+      "development/v0"
+    ],
+    "created_tools_evidence": {
+      "component-libraries/shadcn-ui": {
+        "source_url": "https://shadcn.com/",
+        "checked": "2026-10-15",
+        "quote": "I created shadcn/ui and shadcn/registry."
+      },
+      "development/v0": {
+        "source_url": "https://shadcn.com/",
+        "checked": "2026-10-15",
+        "quote": "I co-created v0 with Jared, Shu and Max."
+      }
+    }
   },
   {
    "name": "Äli",
@@ -4609,10 +4635,20 @@
    "sameAs": []
   },
   {
-   "name": "Benji Taylor",
-   "url": "https://benji.org/",
-   "description": "Creator of Agentation and Honk.",
-   "sameAs": []
+    "name": "Benji Taylor",
+    "url": "https://benji.org/",
+    "description": "Creator of Agentation and Honk.",
+    "sameAs": [],
+    "created_tools": [
+      "agents-mcp/agentation"
+    ],
+    "created_tools_evidence": {
+      "agents-mcp/agentation": {
+        "source_url": "https://www.agentation.com/",
+        "checked": "2026-10-15",
+        "quote": "Made by Benji Taylor, Dennis Jin, and Alex Vanderzon"
+      }
+    }
   },
   {
    "name": "Aniket Pawar",
@@ -5123,12 +5159,22 @@
    ]
   },
   {
-   "name": "Josh Puckett",
-   "url": "https://joshpuckett.me/",
-   "description": "Founder of Iteration and DialKit.",
-   "sameAs": [
-    "https://x.com/joshpuckett"
-   ]
+    "name": "Josh Puckett",
+    "url": "https://joshpuckett.me/",
+    "description": "Founder of Iteration and DialKit.",
+    "sameAs": [
+      "https://x.com/joshpuckett"
+    ],
+    "created_tools": [
+      "development/dialkit"
+    ],
+    "created_tools_evidence": {
+      "development/dialkit": {
+        "source_url": "https://www.dialkit.dev/",
+        "checked": "2026-10-15",
+        "quote": "Created with care by Josh Puckett"
+      }
+    }
   },
   {
    "name": "Mery Kaftar",

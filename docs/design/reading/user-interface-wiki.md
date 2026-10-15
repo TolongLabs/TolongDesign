@@ -19,7 +19,10 @@ best_for:
     motion design guidelines,
     micro-interactions
   ]
-stack: [react, nextjs, motion]
+stack: ['react', 'nextjs', 'motion']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

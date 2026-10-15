@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [framework, lightweight, static-sites, html-first, web-standards]
 best_for: [content sites, lightweight web apps, minimal-dependency websites]
-stack: [html, css, javascript]
+stack: ['html', 'css', 'javascript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

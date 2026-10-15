@@ -14,7 +14,10 @@ open_source: true
 license: unknown
 category_tags: [fonts, npm, self-hosted, open-source, typography]
 best_for: [self-hosted web fonts, framework projects, controlled font delivery]
-stack: [javascript, typescript, react, css]
+stack: ['javascript', 'typescript', 'react', 'css']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

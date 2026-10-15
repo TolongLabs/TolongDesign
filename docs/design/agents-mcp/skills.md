@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [agent-skills, shadcn, developer-workflows]
 best_for: ['registry authoring', 'agent maintenance tasks']
-stack: []
+stack: ['shadcn']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

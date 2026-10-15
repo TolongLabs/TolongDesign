@@ -12,7 +12,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [testing, e2e, browser-automation, chromium, webkit]
 best_for: [end-to-end testing, visual regression, automated browser workflows]
-stack: [typescript, javascript, nodejs, python]
+stack: ['typescript', 'javascript', 'nodejs', 'python']
+execution_mode: package
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

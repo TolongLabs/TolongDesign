@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['app-store', 'screenshots', 'onboarding']
 best_for: ['app-store screenshot research', 'onboarding and paywall patterns']
 stack: []
+execution_mode: reference
+surface: ['reference', 'mobile-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

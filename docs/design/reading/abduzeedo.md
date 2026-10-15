@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['design-inspiration', 'web-design', 'branding', 'editorial']
 best_for: ['visual research', 'brand inspiration', 'web design ideas']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

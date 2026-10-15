@@ -15,6 +15,9 @@ license: unknown
 category_tags: [video, effects, image, playground]
 best_for: [real-time visual effects on local media]
 stack: []
+execution_mode: browser-app
+surface: ['video']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

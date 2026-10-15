@@ -22,7 +22,10 @@ best_for:
     authorized app analysis,
     evidence-led reconstruction
   ]
-stack: [nodejs, npm, mcp, chrome]
+stack: ['nodejs', 'npm', 'mcp', 'chrome']
+execution_mode: mcp-skill
+surface: ['development', 'reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

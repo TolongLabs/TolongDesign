@@ -14,6 +14,9 @@ license: proprietary
 category_tags: [moodboard, visual-finds, interactive, collaborative, 3d-globe]
 best_for: [visual moodboarding, creative inspiration, collaborative curation]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

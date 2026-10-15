@@ -15,6 +15,9 @@ license: 'unknown'
 category_tags: ['curation', 'design-resources', 'directory']
 best_for: ['finding curated resource lists']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: degraded
 agent_friendly: false
 last_verified: 2026-10-07
 ---

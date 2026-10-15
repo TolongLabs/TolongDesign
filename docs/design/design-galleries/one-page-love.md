@@ -16,6 +16,9 @@ category_tags: [single-page, landing-pages, templates, portfolios, web-design]
 best_for:
   [single-page sites, lead-capture landing pages, developer portfolio layouts]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

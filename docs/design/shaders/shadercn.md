@@ -13,7 +13,10 @@ license: MIT
 category_tags: [shaders, webgpu, react, shadcn, typegpu, vgpu, components]
 best_for:
   [webgpu react components, modern landing pages, interactive hero backgrounds]
-stack: [react, typescript, webgpu]
+stack: ['react', 'typescript', 'webgpu', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

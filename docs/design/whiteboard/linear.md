@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['project-management', 'issues', 'roadmap', 'mcp']
 best_for: ['product roadmaps', 'issue triage', 'team planning']
 stack: []
+execution_mode: mcp-skill
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ category_tags:
   [open-source, creative-tools, design-craft, typography, generative]
 best_for: [creative tooling, generative design, typography utilities]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

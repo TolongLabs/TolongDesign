@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [web-inspiration, live-sites, page-sections]
 best_for: [landing-page research, studying visual styles]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

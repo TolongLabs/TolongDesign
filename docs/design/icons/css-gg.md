@@ -17,6 +17,9 @@ category_tags: ['icon-library', 'css', 'svg', 'figma']
 best_for:
   ['pure css experiments', 'small interface symbols', 'personal prototypes']
 stack: ['css', 'svg']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

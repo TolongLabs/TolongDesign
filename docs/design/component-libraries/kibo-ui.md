@@ -13,6 +13,9 @@ license: unknown
 category_tags: ['react', 'tailwind', 'shadcn', 'ai']
 best_for: ['ai interfaces', 'rich application components']
 stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

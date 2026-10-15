@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [tailwind, components, framework-wrappers, react, svelte, vue]
 best_for: [web applications, enterprise dashboards, marketing sites]
-stack: [tailwind, javascript, react, svelte, vue]
+stack: ['tailwind', 'javascript', 'react', 'svelte', 'vue']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

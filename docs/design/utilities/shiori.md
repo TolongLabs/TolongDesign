@@ -13,6 +13,9 @@ license: proprietary
 category_tags: [bookmarks, research, mcp, cli]
 best_for: [design research, saved references, agent-accessible bookmarks]
 stack: []
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

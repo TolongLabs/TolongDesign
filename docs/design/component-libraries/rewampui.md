@@ -15,9 +15,12 @@ open_source: false
 license: unknown
 category_tags: [react, tailwind, components, animated, copy-paste]
 best_for: [animated components, interaction patterns, visual backgrounds]
-stack: [react, vite, tailwind]
+stack: ['react', 'vite', 'tailwind']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # RewampUI
@@ -68,8 +71,8 @@ repository and CLI; it does not establish reuse rights.
 
 ## How to use
 
-The hosted showcase did not resolve, but the public repository documents this
-workflow:
+The primary showcase has recovered as of the availability recheck above. The
+public repository documents this workflow:
 
 1. Read the repository README and check component dependencies and license
    status before use.
@@ -102,6 +105,13 @@ bunx rewampui add theme-toggle
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The previously failing primary
+domain now returns HTTP 200 and renders the RewampUI component showcase,
+including Browse Components and the palakonweb/Rewamp-UI repository link. The
+earlier DNS failure below is historical. Public visibility still does not
+establish client-work licensing. Other pricing, licensing and feature statements
+retain their separately dated source checks.
+
 - The hosted domain failed DNS resolution on 2026-10-07; the public creator
   repository and component paths were accessible.
 - The repository lists `bunx rewampui add <component>` and says the CLI requires
@@ -120,6 +130,8 @@ bunx rewampui add theme-toggle
 
 ## Sources
 
+- [Primary URL availability recheck](https://www.rewampui.com/) — checked
+  2026-10-15; availability and product identity only.
 - [Official site](https://www.rewampui.com/) — `ERR_NAME_NOT_RESOLVED` in
   headless Chromium; checked 2026-10-07
 - [Official public repository](https://github.com/palakonweb/Rewamp-UI) —

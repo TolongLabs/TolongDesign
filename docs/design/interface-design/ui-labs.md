@@ -14,7 +14,10 @@ open_source: false
 license: unknown
 category_tags: [ui, interaction, experiments, react, animation]
 best_for: [component behavior study, interaction inspiration]
-stack: [react, tailwind, framer-motion, radix-ui]
+stack: ['react', 'tailwind', 'motion', 'radix']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -14,7 +14,10 @@ open_source: false
 license: 'unknown'
 category_tags: [react, pixel-art, decorative, shadcn]
 best_for: [playful brand details, portfolio easter eggs]
-stack: [react, nextjs, shadcn]
+stack: ['react', 'nextjs', 'shadcn']
+execution_mode: registry
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

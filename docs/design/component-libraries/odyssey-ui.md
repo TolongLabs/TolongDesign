@@ -14,7 +14,10 @@ open_source: false
 license: unknown
 category_tags: [react, shadcn, tailwind, motion]
 best_for: [marketing pages, animated product interfaces]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

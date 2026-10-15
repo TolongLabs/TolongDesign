@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['hosting', 'deploy-previews', 'ci-cd', 'frontend']
 best_for: ['static sites', 'framework apps', 'preview deployments']
 stack: ['nextjs', 'astro', 'react']
+execution_mode: mcp-skill
+surface: ['hosting']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

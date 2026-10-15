@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, radix, components, design-system]
 best_for: [design systems, web applications, dashboards, landing pages]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,7 +15,10 @@ license: MIT
 category_tags: [react, 3d, three-js, webgl, pmndrs, declarative]
 best_for:
   [react 3d scenes, product configurators, interactive models, narrative 3d]
-stack: [react, typescript]
+stack: ['react', 'typescript']
+execution_mode: package
+surface: ['web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

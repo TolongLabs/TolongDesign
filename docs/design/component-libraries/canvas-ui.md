@@ -13,7 +13,10 @@ open_source: false
 license: unknown
 category_tags: [canvas, webgl, webgpu, shaders, react]
 best_for: [gpu effects, hero sections, liquid interactions]
-stack: [react, solid, preact, vue, svelte, typescript]
+stack: ['react', 'solid', 'preact', 'vue', 'svelte', 'typescript']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

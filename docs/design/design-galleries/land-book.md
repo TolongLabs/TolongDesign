@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [web-design, landing-pages, website-gallery]
 best_for: [landing-page research, filtering by visual traits]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

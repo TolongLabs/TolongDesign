@@ -16,8 +16,11 @@ license: unknown
 category_tags: [landing-pages, no-code, validation]
 best_for: [landing page experiments]
 stack: []
+execution_mode: reference
+surface: ['web-ui']
+status: unreachable
 agent_friendly: false
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Butterfly
@@ -88,6 +91,12 @@ examples of the directory-listed builder.
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The primary URL responds, but no
+usable landing-page builder was verified. A fresh browser could not obtain a
+visible body before its wait timeout. The original builder workflow remains
+unavailable; an HTTP success alone does not restore it. Other pricing, licensing
+and feature statements retain their separately dated source checks.
+
 - On 2026-10-07, the root returned HTTP 200 but only rendered “B U T T E R F” as
   body text; `/pricing` and `/login` returned HTTP 404.
 - `/pond` returned an early-preview operating-system page, not a landing-page
@@ -106,6 +115,8 @@ examples of the directory-listed builder.
 
 ## Sources
 
+- [Primary URL availability recheck](https://www.butterfly.so/) — checked
+  2026-10-15; availability and product identity only.
 - [Official Butterfly site](https://www.butterfly.so/) — HTTP 200 with partial
   text; checked 2026-10-07
 - [Pond page](https://www.butterfly.so/pond) — early-preview OS project; checked

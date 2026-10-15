@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [startups, early-stage, products, beta, waitlists]
 best_for: [product discovery, pre-launch research, startup inspiration]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

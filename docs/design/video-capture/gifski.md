@@ -20,7 +20,10 @@ best_for:
     documentation embeds,
     pull request animations
   ]
-stack: [rust, c, cli]
+stack: ['rust', 'c', 'cli']
+execution_mode: mcp-skill
+surface: ['video']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -13,7 +13,10 @@ open_source: true
 license: ISC
 category_tags: [icons, svg, react-icons, feather, ui-icons, vector-graphics]
 best_for: [web applications, shadcn ui, react projects, clean interface icons]
-stack: [react, vue, svelte, web-components]
+stack: ['react', 'vue', 'svelte', 'web-components']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

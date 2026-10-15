@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [react, mcp-apps, components]
 best_for: ['MCP app interfaces', 'ChatGPT and Claude UI blocks']
-stack: [react, typescript, base-ui, shadcn]
+stack: ['react', 'typescript', 'base-ui', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

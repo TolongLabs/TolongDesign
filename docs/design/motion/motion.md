@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [motion, animation, react, vue, javascript, springs]
 best_for: [react animations, layout transitions, exit animations, gestures]
-stack: [react, vue, typescript, javascript]
+stack: ['react', 'vue', 'typescript', 'javascript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

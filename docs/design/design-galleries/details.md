@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [web-inspiration, interaction-design, mcp]
 best_for: [website interaction research, copy-ready web snippets]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

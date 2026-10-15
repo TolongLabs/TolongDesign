@@ -19,7 +19,10 @@ best_for:
     html email newsletter templates,
     web design articles
   ]
-stack: [html, css, bootstrap]
+stack: ['html', 'css', 'bootstrap']
+execution_mode: browser-app
+surface: ['email', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

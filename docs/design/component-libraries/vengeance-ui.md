@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [react, nextjs, tailwind, motion, shadcn]
 best_for: [animated marketing pages, scroll effects, interactive buttons]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -1,0 +1,141 @@
+{
+  "calibration": [
+    {
+      "domain": "animation",
+      "query": "smooth hero animation",
+      "relevant": [
+        "motion/gsap",
+        "component-libraries/motion-primitives",
+        "component-libraries/magic-ui",
+        "motion/theatre-js"
+      ]
+    },
+    {
+      "domain": "dashboard",
+      "query": "tailwind dashboard components",
+      "relevant": [
+        "component-libraries/tremor",
+        "component-libraries/preline-ui",
+        "component-libraries/flowbite",
+        "component-libraries/tailgrids"
+      ]
+    },
+    {
+      "domain": "comics",
+      "query": "manga panel layout generator",
+      "relevant": ["comics/komawari", "comics/namegacha", "comics/comicalizer"]
+    },
+    {
+      "domain": "email",
+      "query": "react email templates",
+      "relevant": ["component-libraries/emailcn"]
+    },
+    {
+      "domain": "PDF",
+      "query": "react pdf generation",
+      "relevant": ["component-libraries/pdfcn"]
+    },
+    {
+      "domain": "terminal",
+      "query": "terminal ui components",
+      "relevant": ["component-libraries/termcn", "component-libraries/srcl"]
+    },
+    {
+      "domain": "type",
+      "query": "open source fonts",
+      "relevant": ["type/fontshare", "type/fontsource", "type/velvetyne"]
+    },
+    {
+      "domain": "icons",
+      "query": "react icon library",
+      "relevant": ["icons/lucide", "icons/phosphor", "icons/heroicons", "icons/tabler-icons"]
+    },
+    {
+      "domain": "3D",
+      "query": "webgl 3d scenes",
+      "relevant": ["3d/three-js", "3d/react-three-fiber", "3d/drei"]
+    },
+    {
+      "domain": "color",
+      "query": "accessible color palette contrast",
+      "relevant": ["color/color-review", "color/huetone", "color/apca", "color/oklch"]
+    },
+    {
+      "domain": "source-code exact names",
+      "query": "lucide",
+      "relevant": ["icons/lucide"]
+    },
+    {
+      "domain": "source-code exact names",
+      "query": "lenis",
+      "relevant": ["motion/lenis"]
+    }
+  ],
+  "evaluation": [
+    {
+      "domain": "animation",
+      "query": "motion timeline sequencer",
+      "relevant": ["motion/gsap", "motion/theatre-js", "motion/motion"]
+    },
+    {
+      "domain": "dashboard",
+      "query": "shadcn charts dashboard",
+      "relevant": [
+        "component-libraries/evil-charts",
+        "component-libraries/rewampui",
+        "component-libraries/watermelon-ui",
+        "component-libraries/shadcn-ui"
+      ]
+    },
+    {
+      "domain": "comics",
+      "query": "manga speech bubble generator",
+      "relevant": ["comics/fukidashi"]
+    },
+    {
+      "domain": "email",
+      "query": "email components",
+      "relevant": ["component-libraries/emailcn"]
+    },
+    {
+      "domain": "PDF",
+      "query": "pdf components",
+      "relevant": ["component-libraries/pdfcn"]
+    },
+    {
+      "domain": "terminal",
+      "query": "terminal emulator",
+      "relevant": ["desktop/ghostty", "desktop/warp", "desktop/canario"]
+    },
+    {
+      "domain": "type",
+      "query": "pixel monospace font",
+      "relevant": ["type/departure-mono"]
+    },
+    {
+      "domain": "icons",
+      "query": "animated icons",
+      "relevant": ["motion/morphicons", "icons/lucide"]
+    },
+    {
+      "domain": "3D",
+      "query": "gltf model optimizer",
+      "relevant": ["3d/gltf-report", "3d/blender"]
+    },
+    {
+      "domain": "color",
+      "query": "oklch color picker",
+      "relevant": ["color/oklch", "color/ramps"]
+    },
+    {
+      "domain": "source-code exact names",
+      "query": "three.js",
+      "relevant": ["3d/three-js"]
+    },
+    {
+      "domain": "source-code exact names",
+      "query": "ghostty",
+      "relevant": ["desktop/ghostty"]
+    }
+  ]
+}

@@ -13,6 +13,9 @@ license: proprietary
 category_tags: [experimental, creative-coding, interactive, web-art, weird-web]
 best_for: [experimental web, creative coding, interactive easter eggs]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

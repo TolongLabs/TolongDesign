@@ -16,6 +16,9 @@ category_tags:
   [landing-pages, inspiration, ui-kits, responsive-design, freebies]
 best_for: [saas landing pages, marketing sites, startup homepages]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

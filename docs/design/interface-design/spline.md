@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [3d, interaction, physics, mcp, web-design]
 best_for: [interactive 3d scenes, web visuals, prototypes]
 stack: []
+execution_mode: browser-app
+surface: ['web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

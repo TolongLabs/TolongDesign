@@ -15,7 +15,10 @@ license: proprietary
 category_tags: [react, tailwind, shadcn, registry, mcp, marketplace]
 best_for:
   [copy-paste components, shadcn registry, AI code retrieval, animated UI]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

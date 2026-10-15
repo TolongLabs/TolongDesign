@@ -12,9 +12,12 @@ pricing_summary:
   source.'
 open_source: true
 license: 'MIT'
-category_tags: [react, tailwind, shadcn, components]
+category_tags: [react, tailwind, components]
 best_for: [startup interfaces, dashboards]
-stack: [react, tailwind]
+stack: ['react', 'tailwind']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

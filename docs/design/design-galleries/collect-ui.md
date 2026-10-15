@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [daily-ui, interface-patterns, design-inspiration]
 best_for: [component-level inspiration, UI challenge research]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -16,7 +16,10 @@ category_tags:
   [accessibility, a11y, contrast-algorithm, wcag-3, typography, color-science]
 best_for:
   [typography contrast, wcag 3 readiness, dark mode readability, text sizing]
-stack: [javascript, node]
+stack: ['javascript', 'nodejs']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

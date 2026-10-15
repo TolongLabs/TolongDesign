@@ -20,7 +20,10 @@ best_for:
     webgl background shaders,
     remotion component templates
   ]
-stack: [react, tailwind, remotion, typescript]
+stack: ['react', 'tailwind', 'remotion', 'typescript']
+execution_mode: snippet
+surface: ['video']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

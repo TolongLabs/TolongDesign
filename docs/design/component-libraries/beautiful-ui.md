@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, shadcn, ai-native, components, copy-paste]
 best_for: [ai-native applications, chat interfaces, web applications]
-stack: [react, nextjs, tailwind, shadcn]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

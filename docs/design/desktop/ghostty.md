@@ -14,6 +14,9 @@ license: MIT
 category_tags: [terminal, developer-tools, themes, configuration]
 best_for: [terminal workflows, shell-based development, configurable themes]
 stack: []
+execution_mode: reference
+surface: ['cli-tui', 'desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

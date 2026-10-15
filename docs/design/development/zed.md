@@ -15,6 +15,9 @@ license: GPL-3.0-or-later
 category_tags: [editor, ai, coding-agent, collaboration]
 best_for: [low-latency editing, agent workflows, multiplayer coding]
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

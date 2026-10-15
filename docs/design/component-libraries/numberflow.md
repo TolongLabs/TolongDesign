@@ -13,6 +13,9 @@ license: MIT
 category_tags: ['react', 'animation', 'numbers']
 best_for: ['animated counters', 'live metrics']
 stack: ['react']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

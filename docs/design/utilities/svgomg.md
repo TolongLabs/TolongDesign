@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [svg, optimization, svgo, compression, performance]
 best_for: [svg optimization, asset compression, web performance, svg cleaning]
-stack: [javascript, svgo, web]
+stack: ['javascript', 'svgo', 'browser']
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -20,7 +20,10 @@ best_for:
     web development testing,
     distraction-free workflow
   ]
-stack: [c++, rust, javascript]
+stack: ['c++', 'rust', 'javascript']
+execution_mode: reference
+surface: ['desktop', 'development', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

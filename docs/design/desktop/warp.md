@@ -14,7 +14,10 @@ open_source: true
 license: AGPL-3.0
 category_tags: [terminal, cli, rust, ai, developer-tools]
 best_for: [agentic workflows, terminal navigation, command history management]
-stack: [rust, bash, zsh, fish]
+stack: ['rust', 'bash', 'zsh', 'fish']
+execution_mode: reference
+surface: ['cli-tui', 'development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

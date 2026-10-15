@@ -17,6 +17,9 @@ category_tags: [ai, agents, design, image-generation, skill, frontend]
 best_for:
   [image-guided website design, marketing sites, landing pages, portfolio sites]
 stack: []
+execution_mode: mcp-skill
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

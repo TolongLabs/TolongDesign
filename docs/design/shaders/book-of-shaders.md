@@ -15,7 +15,10 @@ category_tags:
   [shaders, glsl, webgl, creative-coding, education, fragment-shaders]
 best_for:
   [learning shaders, procedural textures, math visualization, creative coding]
-stack: [glsl]
+stack: ['glsl']
+execution_mode: reference
+surface: ['web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

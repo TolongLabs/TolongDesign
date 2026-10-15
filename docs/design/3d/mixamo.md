@@ -13,7 +13,10 @@ open_source: false
 license: proprietary
 category_tags: [3d, animation, motion-capture, characters, rigging]
 best_for: [character animation, walk and run cycles, web games]
-stack: [fbx, threejs]
+stack: ['fbx', 'threejs']
+execution_mode: browser-app
+surface: ['web-3d', 'web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-11
 ---

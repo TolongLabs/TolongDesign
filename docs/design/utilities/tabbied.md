@@ -15,7 +15,10 @@ license: MIT
 category_tags: [patterns, svg, templates, mcp]
 best_for:
   [generative backgrounds, geometric accents, agent-assisted pattern selection]
-stack: [javascript, react, vue, svelte]
+stack: ['javascript', 'react', 'vue', 'svelte']
+execution_mode: package
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

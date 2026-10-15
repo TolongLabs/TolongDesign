@@ -26,7 +26,7 @@ rendered-design verification.
    `data/index.json` is stale), for example:
 
    ```sh
-   bun run find -- --section component-libraries --stack react --paywall free
+   bun run find -- --section component-libraries --surface web-ui --stack react --paywall free
    bun run find -- --section icons --paywall free
    bun run find -- --section design-galleries landing
    ```

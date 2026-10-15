@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['knowledge-base', 'markdown', 'graph', 'notes']
 best_for: ['design research', 'interconnected briefs', 'local project docs']
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---
@@ -68,8 +71,8 @@ terms.
 ## How to use
 
 - Install Obsidian and create a local vault for the project or research area.
-- Write notes in Markdown and connect decisions with links such as [[Design
-      brief]].
+- Write notes in Markdown and connect decisions with links such as
+  `[[Design brief]]`.
 - Open Graph view to inspect note relationships; use Local Graph when you only
   need a note's nearby connections.
 - Use Bases when properties need sortable table, card, or list views. Keep the

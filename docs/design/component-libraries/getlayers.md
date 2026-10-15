@@ -16,6 +16,9 @@ license: 'proprietary'
 category_tags: [ai, design-prompts, 3d, inspiration]
 best_for: [ai-directed landing pages, cinematic sections]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui', 'web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

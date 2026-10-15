@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [saas, landing-pages, page-sections]
 best_for: [SaaS marketing pages, conversion-focused layout research]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

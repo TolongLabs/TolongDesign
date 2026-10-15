@@ -14,7 +14,10 @@ open_source: true
 license: 'MIT'
 category_tags: [react, vue, svelte, text-animation]
 best_for: [changing labels, formatted counters]
-stack: [react, vue, svelte, solid]
+stack: ['react', 'vue', 'svelte', 'solid']
+execution_mode: package
+surface: ['web-ui']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

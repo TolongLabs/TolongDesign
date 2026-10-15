@@ -16,6 +16,9 @@ category_tags:
   [portfolios, inspiration, designers, creative-studios, personal-sites]
 best_for: [designer portfolios, creative direction, personal branding]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

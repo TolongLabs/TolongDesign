@@ -22,6 +22,9 @@ best_for:
     high-end client productions
   ]
 stack: []
+execution_mode: reference
+surface: ['video', 'audio', 'desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

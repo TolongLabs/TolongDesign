@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [audio, shadcn, react, web-audio, accessibility]
 best_for: [semantic sound cues, shadcn interaction feedback]
-stack: [react, nextjs, shadcn]
+stack: ['react', 'nextjs', 'shadcn']
+execution_mode: registry
+surface: ['audio']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

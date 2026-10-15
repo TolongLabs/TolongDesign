@@ -21,6 +21,9 @@ best_for:
     b2b social graphic benchmarking
   ]
 stack: []
+execution_mode: reference
+surface: ['reference', 'og-image']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

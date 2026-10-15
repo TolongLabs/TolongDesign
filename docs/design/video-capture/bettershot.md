@@ -20,7 +20,10 @@ best_for:
     screenshot annotation,
     self-hosted sharing
   ]
-stack: [swift, swiftui]
+stack: ['swift', 'swiftui']
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

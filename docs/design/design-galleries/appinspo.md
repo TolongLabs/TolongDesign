@@ -20,6 +20,9 @@ best_for:
     visual interface trends
   ]
 stack: []
+execution_mode: reference
+surface: ['reference', 'mobile-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

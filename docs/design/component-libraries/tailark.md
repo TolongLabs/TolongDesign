@@ -14,7 +14,10 @@ open_source: true
 license: 'unknown'
 category_tags: [react, tailwind, blocks, marketing]
 best_for: [marketing pages, landing pages]
-stack: [react, nextjs, tailwind, shadcn]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

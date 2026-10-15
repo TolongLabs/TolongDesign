@@ -15,6 +15,9 @@ license: 'MIT'
 category_tags: [badges, svg, readme, github]
 best_for: [project documentation, repository status]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [ai, coding-agent, terminal, cli]
 best_for: [repository tasks, code changes, terminal workflows]
 stack: []
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

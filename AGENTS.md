@@ -56,8 +56,9 @@ Bun is the package manager and runtime.
 bun install                 # once
 bun run check               # validate every doc against the catalogue + template (must pass)
 bun run index               # regenerate all indexes and data/index.json from frontmatter
-bun run find -- <text> [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--agent] [--oss] [--json]
+bun run find -- <text> [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--mode registry,package] [--surface web-ui] [--include-unreachable] [--format card] [--agent] [--oss] [--json]
 bun run links [-- <section>] # HTTP-check external links in docs (403/429 = bot-blocked, ignore)
+bun run links -- --status --json # suggest resource status from primary URLs; never edits docs
 bun run format              # prettier
 ```
 
@@ -68,7 +69,8 @@ bun run format              # prettier
   then `bun run format`.
 - **The template is the contract.** Every tool doc has the frontmatter keys and
   the nine H2 headings of [templates/tool-doc.md](templates/tool-doc.md), in
-  order. `bun run check` enforces it.
+  order. `bun run check` enforces it. Read [resource metadata](docs/METADATA.md)
+  before assigning execution modes, surfaces, status, stack or creator links.
 - **Every doc must let an agent produce what the tool advertises.** "How to use"
   and "Agent notes" carry the concrete steps, inputs, formats, export hand-off
   and gotchas. For apps, run the core workflow yourself (a headless browser for

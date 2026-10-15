@@ -22,7 +22,10 @@ best_for:
     pose reference,
     shot planning
   ]
-stack: [javascript, svg, canvas, threejs, browser]
+stack: ['javascript', 'svg', 'canvas', 'threejs', 'browser']
+execution_mode: browser-app
+surface: ['comics']
+status: active
 agent_friendly: true
 last_verified: 2026-10-14
 ---

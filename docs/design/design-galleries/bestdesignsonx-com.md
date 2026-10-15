@@ -14,6 +14,9 @@ license: 'unknown'
 category_tags: ['x', 'design-inspiration', 'social']
 best_for: ['designer discovery', 'social design references']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

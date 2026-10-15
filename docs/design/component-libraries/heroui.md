@@ -15,6 +15,9 @@ license: Apache-2.0
 category_tags: ['react', 'tailwind', 'accessibility', 'react-aria']
 best_for: ['accessible product interfaces', 'react applications']
 stack: ['react', 'tailwind', 'react-aria']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

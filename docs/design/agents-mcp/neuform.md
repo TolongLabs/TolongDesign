@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [ai-builder, html-templates, design-systems]
 best_for: ['remixing landing pages', 'agent-ready DESIGN.md']
-stack: [html, css, javascript]
+stack: ['html', 'css', 'javascript']
+execution_mode: browser-app
+surface: ['web-ui', 'reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

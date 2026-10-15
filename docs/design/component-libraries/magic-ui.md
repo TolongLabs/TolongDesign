@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, animations, framer-motion, landing-pages]
 best_for: [marketing sites, landing pages, hero sections]
-stack: [react, nextjs, tailwind, framer-motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

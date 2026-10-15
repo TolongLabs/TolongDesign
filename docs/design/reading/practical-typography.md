@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['typography', 'book', 'editorial', 'web-design']
 best_for: ['text hierarchy', 'line length', 'font selection']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

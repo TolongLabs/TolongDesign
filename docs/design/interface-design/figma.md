@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [design, prototyping, collaboration, handoff]
 best_for: [interface design, prototypes, developer handoff]
 stack: []
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -21,6 +21,9 @@ best_for:
     social media reveals
   ]
 stack: []
+execution_mode: browser-app
+surface: ['video', 'web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

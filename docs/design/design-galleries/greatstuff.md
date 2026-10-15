@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['creative-tools', 'resources', 'curation']
 best_for: ['creative tool discovery', 'design resources']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

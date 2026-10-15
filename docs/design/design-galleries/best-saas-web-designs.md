@@ -15,6 +15,9 @@ category_tags: [saas, web-design, inspiration, tech-stack, color-palette]
 best_for:
   [SaaS web design, tech stack research, color palette discovery, sections]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

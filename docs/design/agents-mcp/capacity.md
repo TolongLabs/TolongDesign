@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [ai, fullstack, app-generator, no-code, workspace]
 best_for: [rapid prototyping, internal tools, full-stack app scaffolding]
-stack: [react, nextjs, nodejs, postgresql]
+stack: ['react', 'nextjs', 'nodejs', 'postgresql']
+execution_mode: browser-app
+surface: ['web-ui', 'development', 'hosting']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

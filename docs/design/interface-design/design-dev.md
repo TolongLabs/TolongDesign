@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [design-systems, tokens, ai, css, prompts]
 best_for: [design-token drafts, design documentation, agent prompts]
-stack: [css]
+stack: ['css']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

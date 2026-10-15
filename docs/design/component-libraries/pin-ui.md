@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, components, animation]
 best_for: [distinctive commerce controls, tactile component ideas]
-stack: [react, nextjs, tailwind, motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion']
+execution_mode: registry
+surface: ['web-ui']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

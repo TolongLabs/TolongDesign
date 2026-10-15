@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [ai, ide, desktop, agent, electron, environment]
 best_for: [agent workflows, visual diffing, isolated code execution]
-stack: [typescript, electron, nodejs]
+stack: ['typescript', 'electron', 'nodejs']
+execution_mode: reference
+surface: ['development', 'desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

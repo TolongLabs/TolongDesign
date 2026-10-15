@@ -20,6 +20,9 @@ best_for:
     'early access to new icon systems'
   ]
 stack: ['svg', 'react']
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

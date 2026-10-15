@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [bundler, dev-server, hmr, build-tool, frontend]
 best_for: [spa development, fast hmr, modern frontend builds]
-stack: [javascript, typescript, react, vue, svelte]
+stack: ['javascript', 'typescript', 'react', 'vue', 'svelte']
+execution_mode: package
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

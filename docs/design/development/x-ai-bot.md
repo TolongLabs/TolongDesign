@@ -16,6 +16,9 @@ category_tags: [ai-agents, automation, grok, desktop-agents, workflows]
 best_for:
   [automated browser routines, desktop task delegation, multi-agent workflows]
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

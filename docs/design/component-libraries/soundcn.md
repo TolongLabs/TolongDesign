@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [audio, sound-effects, web-audio-api, shadcn, react]
 best_for: [tactile button audio, app notification chimes, game-like ui]
-stack: [react, typescript]
+stack: ['react', 'typescript', 'shadcn']
+execution_mode: registry
+surface: ['audio']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

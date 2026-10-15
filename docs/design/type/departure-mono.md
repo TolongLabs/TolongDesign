@@ -13,7 +13,10 @@ open_source: true
 license: OFL-1.1
 category_tags: [typography, monospace, pixel-font, retro, coding-fonts]
 best_for: [code blocks, terminal interfaces, retro ui, technical badges]
-stack: [css]
+stack: ['css']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

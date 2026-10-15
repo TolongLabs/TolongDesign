@@ -17,6 +17,9 @@ category_tags:
 best_for:
   [learning ai-assisted design engineering workflows, prototyping with ai]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: degraded
 agent_friendly: false
 last_verified: 2026-10-07
 ---

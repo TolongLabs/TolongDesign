@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, search-params, url-state, type-safe, routing]
 best_for: [filtering interfaces, search state, shareable urls]
-stack: [react, nextjs, remix, vite]
+stack: ['react', 'nextjs', 'remix', 'vite']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

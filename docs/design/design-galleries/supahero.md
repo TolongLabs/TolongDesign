@@ -15,6 +15,9 @@ license: unknown
 category_tags: [hero-sections, web-inspiration, landing-pages]
 best_for: [hero-section research, marketing-site composition]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

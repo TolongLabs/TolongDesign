@@ -15,8 +15,11 @@ license: unknown
 category_tags: ['navigation', 'mega-menu', 'animation']
 best_for: ['fluid mega-menus']
 stack: []
+execution_mode: reference
+surface: ['web-ui']
+status: unreachable
 agent_friendly: false
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Butter Nav
@@ -97,6 +100,11 @@ they are not playable component examples.
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The primary URL still returns
+HTTP 402 with a verified Vercel paused-deployment response. This is not a
+generic payment-page classification. Other pricing, licensing and feature
+statements retain their separately dated source checks.
+
 - The official homepage, `/pricing`, and `/docs` returned HTTP 402 on
   2026-10-07; the homepage displayed “This deployment is temporarily paused.”
 - No package name, install command, source repository, working example URL,
@@ -115,6 +123,8 @@ they are not playable component examples.
 
 ## Sources
 
+- [Primary URL availability recheck](https://butter-nav.vercel.app/) — checked
+  2026-10-15; availability and product identity only.
 - [Official endpoint](https://butter-nav.vercel.app/) — checked 2026-10-07; HTTP
   402, “Deployment Paused”
 - [Official pricing route](https://butter-nav.vercel.app/pricing) — checked

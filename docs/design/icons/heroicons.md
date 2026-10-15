@@ -20,6 +20,9 @@ best_for:
     'consistent outline and solid icons'
   ]
 stack: ['react', 'vue', 'svg']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

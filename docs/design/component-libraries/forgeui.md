@@ -14,7 +14,10 @@ open_source: true
 license: proprietary
 category_tags: [react, tailwind, motion, shadcn, components]
 best_for: [saas landing pages, animated blocks, marketing websites]
-stack: [react, nextjs, tailwind, motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion', 'shadcn']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

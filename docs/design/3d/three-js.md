@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [3d, webgl, webgpu, graphics, rendering, animation]
 best_for: [interactive 3d, canvas animations, product configurators, web games]
-stack: [javascript, typescript]
+stack: ['javascript', 'typescript']
+execution_mode: package
+surface: ['web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

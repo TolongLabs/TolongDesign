@@ -15,7 +15,10 @@ license: proprietary
 category_tags: [landing-pages, components, tailwind, figma, webflow]
 best_for:
   [landing page inspiration, tailwind component blocks, hero section patterns]
-stack: [tailwind, figma, webflow]
+stack: ['tailwind', 'figma', 'webflow']
+execution_mode: snippet
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

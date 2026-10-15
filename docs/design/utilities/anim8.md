@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [video-to-svg, vector-animation, lottie, mp4-converter, motion]
 best_for: [video to svg, animated vectors, lottie export, ai clip vectorization]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

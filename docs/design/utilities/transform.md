@@ -13,7 +13,10 @@ license: MIT
 category_tags:
   [converter, code-generation, typescript, svg-to-jsx, json-to-types]
 best_for: [code conversion, type generation, svg to jsx, json to typescript]
-stack: [typescript, react, rust, webassembly]
+stack: ['typescript', 'react', 'rust', 'webassembly']
+execution_mode: browser-app
+surface: ['development']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

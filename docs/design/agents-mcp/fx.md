@@ -14,7 +14,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [coding-agent, cli, zig]
 best_for: ['lightweight repository work', 'embeddable agent workflows']
-stack: [zig, cli]
+stack: ['zig', 'cli']
+execution_mode: mcp-skill
+surface: ['development', 'cli-tui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

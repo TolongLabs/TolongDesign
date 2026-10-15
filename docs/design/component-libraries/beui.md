@@ -15,6 +15,9 @@ license: unknown
 category_tags: ['react', 'animation', 'tailwind', 'shadcn', 'mcp']
 best_for: ['animated product ui', 'agent-assisted implementation']
 stack: ['react', 'nextjs', 'tailwind', 'shadcn', 'motion']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

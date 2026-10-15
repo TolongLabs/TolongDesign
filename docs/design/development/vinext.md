@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [vite, nextjs, cloudflare, edge, rsc]
 best_for: [running nextjs on cloudflare, fast vite builds, smaller bundles]
-stack: [react, nextjs, vite, cloudflare-workers]
+stack: ['react', 'nextjs', 'vite', 'cloudflare-workers']
+execution_mode: package
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

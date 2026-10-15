@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['social', 'design-writing', 'swipe-file']
 best_for: ['design communication examples', 'social content research']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

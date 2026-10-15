@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [inspiration, showcase, web-design, typography, minimal]
 best_for: [editorial sites, portfolio inspiration, agency websites]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

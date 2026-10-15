@@ -14,9 +14,12 @@ open_source: false
 license: unknown
 category_tags: [shadcn, react, tailwind, components, unreachable]
 best_for: [historical reference, shadcn components]
-stack: [react, tailwind, shadcn]
+stack: ['react', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: unreachable
 agent_friendly: false
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Hexter UI
@@ -80,6 +83,11 @@ entry are source references, not component examples.
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The primary domain still fails
+DNS resolution (ENOTFOUND). No working primary-site workflow was verified; keep
+this resource out of default search. Other pricing, licensing and feature
+statements retain their separately dated source checks.
+
 - The official root, `/pricing`, and `/components` failed DNS resolution on
   2026-10-07; no HTTP status was returned.
 - Coding agents should bypass this tool and route requests for shadcn components
@@ -95,6 +103,8 @@ entry are source references, not component examples.
 
 ## Sources
 
+- [Primary URL availability recheck](https://hexter-ui.com/) — checked
+  2026-10-15; availability and product identity only.
 - [Official source URL](https://hexter-ui.com/) — `ERR_NAME_NOT_RESOLVED`;
   checked 2026-10-07
 - [Pricing path](https://hexter-ui.com/pricing) — DNS resolution failed; checked

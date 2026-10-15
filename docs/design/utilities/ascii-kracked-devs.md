@@ -15,6 +15,9 @@ license: unknown
 category_tags: [ascii, typography, generator]
 best_for: [ascii art, playful graphics, text experiments]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

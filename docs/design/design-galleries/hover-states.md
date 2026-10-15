@@ -27,6 +27,9 @@ best_for:
     animated layout references
   ]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

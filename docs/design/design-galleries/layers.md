@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [design-community, ui-inspiration, community-work]
 best_for: [community design work, product UI exploration]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---
