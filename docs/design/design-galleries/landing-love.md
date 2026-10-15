@@ -14,6 +14,9 @@ license: 'unknown'
 category_tags: ['landing-pages', 'web-design', 'motion']
 best_for: ['landing-page research', 'motion and scroll references']
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

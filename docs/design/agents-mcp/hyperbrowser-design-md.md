@@ -15,6 +15,9 @@ license: unknown
 category_tags: [design-systems, web-extraction, api]
 best_for: ['website to DESIGN.md', 'agent research']
 stack: []
+execution_mode: browser-app
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

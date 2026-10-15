@@ -14,6 +14,9 @@ license: MIT
 category_tags: [design-systems, generator, open-source]
 best_for: ['DESIGN.md from public sites', 'agent-ready references']
 stack: []
+execution_mode: browser-app
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

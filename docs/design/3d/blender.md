@@ -21,6 +21,9 @@ best_for:
     low-poly models
   ]
 stack: []
+execution_mode: reference
+surface: ['web-asset', 'web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

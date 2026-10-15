@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [interaction-design, learning, react]
 best_for: [micro-interactions, motion critique, component study]
-stack: [react]
+stack: ['react']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

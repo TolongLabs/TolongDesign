@@ -16,6 +16,9 @@ category_tags: [screenshot, screen-recording, macos, utilities, capture]
 best_for:
   [scrolling capture, quick annotations, bug reports, visual documentation]
 stack: []
+execution_mode: reference
+surface: ['desktop', 'video']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

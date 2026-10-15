@@ -12,7 +12,10 @@ open_source: false
 license: proprietary
 category_tags: [3d, characters, avatars, vrm, anime]
 best_for: [anime-style characters, avatars, game characters]
-stack: [desktop, vrm]
+stack: ['desktop', 'vrm']
+execution_mode: reference
+surface: ['web-asset', 'web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-11
 ---

@@ -3,6 +3,10 @@ import { readFileSync, realpathSync } from 'node:fs'
 import { isAbsolute, relative, resolve, sep } from 'node:path'
 import { parse } from 'yaml'
 
+import { EXECUTION_MODES, SURFACES, normalizeStack } from './catalogue-schema'
+import { extractInstall } from './index-fields'
+import { rankDocuments } from './search-lib'
+
 const PAYWALLS = ['free', 'freemium', 'paid', 'unknown'] as const
 const DEFAULT_LIMIT = 10
 const EXCERPT_LIMIT = 240
@@ -15,6 +19,10 @@ export type SearchOptions = {
   agent?: boolean
   oss?: boolean
   limit?: number
+  mode?: string
+  surface?: string
+  includeUnreachable?: boolean
+  tag?: string
 }
 
 export type Resource = {
@@ -81,6 +89,7 @@ type CatalogueEntry = {
   section_slug: string
   slug: string
   doc: string
+  designeer_url?: string
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -121,7 +130,8 @@ function parseCatalogue(value: unknown): CatalogueEntry[] {
       section: requiredString(tool, 'section', location),
       section_slug: requiredString(tool, 'section_slug', location),
       slug: requiredString(tool, 'slug', location),
-      doc: requiredString(tool, 'doc', location)
+      doc: requiredString(tool, 'doc', location),
+      designeer_url: typeof tool.designeer_url === 'string' ? tool.designeer_url : undefined
     }
   })
 }
@@ -199,6 +209,7 @@ function makeResource(entry: CatalogueEntry, markdown: string, bytes: Uint8Array
   const lastVerified = stringValue(meta.last_verified)
   const agentFriendly = typeof meta.agent_friendly === 'boolean' ? meta.agent_friendly : null
   const openSource = typeof meta.open_source === 'boolean' ? meta.open_source : null
+  const install = extractInstall(markdown)
 
   return {
     id: `${entry.section_slug}/${entry.slug}`,
@@ -215,7 +226,9 @@ function makeResource(entry: CatalogueEntry, markdown: string, bytes: Uint8Array
     open_source: openSource,
     meta: {
       ...meta,
+      install,
       section: typeof meta.section === 'string' ? meta.section : entry.section,
+      designeer_url: meta.designeer_url ?? entry.designeer_url,
       designeer_blurb: meta.designeer_blurb ?? entry.description
     }
   }
@@ -297,7 +310,7 @@ function compareText(left: string, right: string): number {
 function validateSearchOptions(options: SearchOptions): Required<Pick<SearchOptions, 'limit'>> & SearchOptions {
   if (!isRecord(options)) throw new UsageError('search options must be an object')
 
-  for (const key of ['section', 'stack'] as const) {
+  for (const key of ['section', 'stack', 'tag'] as const) {
     const value = options[key]
     if (value !== undefined && (typeof value !== 'string' || value.trim() === '')) {
       throw new UsageError(`--${key} requires a non-empty value`)
@@ -318,6 +331,10 @@ function validateSearchOptions(options: SearchOptions): Required<Pick<SearchOpti
     }
   }
 
+  if (options.includeUnreachable !== undefined && typeof options.includeUnreachable !== 'boolean') {
+    throw new UsageError('--include-unreachable is a boolean flag')
+  }
+
   if (options.limit !== undefined && typeof options.limit !== 'number') {
     throw new UsageError('--limit must be a positive integer')
   }
@@ -326,7 +343,45 @@ function validateSearchOptions(options: SearchOptions): Required<Pick<SearchOpti
     throw new UsageError('--limit must be a positive integer')
   }
 
-  return { ...options, paywall, limit }
+  let mode = options.mode
+  if (mode !== undefined) {
+    if (typeof mode !== 'string') throw new UsageError('--mode requires a non-empty value')
+    const rawModes = mode.split(',')
+    const seen = new Set<string>()
+    for (const raw of rawModes) {
+      const trimmed = raw.trim()
+      if (trimmed === '') throw new UsageError('--mode contains an empty entry')
+      if (!EXECUTION_MODES.includes(trimmed as ExecutionMode)) {
+        throw new UsageError(`--mode must be one of: ${EXECUTION_MODES.join(', ')}`)
+      }
+      if (seen.has(trimmed)) {
+        throw new UsageError(`--mode contains duplicate value: "${trimmed}"`)
+      }
+      seen.add(trimmed)
+    }
+    mode = Array.from(seen).join(',')
+  }
+
+  let surface = options.surface
+  if (surface !== undefined) {
+    if (typeof surface !== 'string') throw new UsageError('--surface requires a non-empty value')
+    const rawSurfaces = surface.split(',')
+    const seen = new Set<string>()
+    for (const raw of rawSurfaces) {
+      const trimmed = raw.trim()
+      if (trimmed === '') throw new UsageError('--surface contains an empty entry')
+      if (!SURFACES.includes(trimmed as Surface)) {
+        throw new UsageError(`--surface must be one of: ${SURFACES.join(', ')}`)
+      }
+      if (seen.has(trimmed)) {
+        throw new UsageError(`--surface contains duplicate value: "${trimmed}"`)
+      }
+      seen.add(trimmed)
+    }
+    surface = Array.from(seen).join(',')
+  }
+
+  return { ...options, paywall, limit, mode, surface }
 }
 
 function excerptFor(resource: Resource, terms: string[]): string {
@@ -345,57 +400,138 @@ function excerptFor(resource: Resource, terms: string[]): string {
   return `${start > 0 ? '…' : ''}${snippet}${end < text.length ? '…' : ''}`
 }
 
-/** Search full Markdown and metadata using AND semantics for whitespace-separated terms. */
+/** Search full Markdown and metadata using rankDocuments. */
 export function searchResources(resources: Resource[], query: string, options: SearchOptions = {}): SearchResult {
   if (typeof query !== 'string') throw new UsageError('search query must be text')
   const validated = validateSearchOptions(options)
-  const terms = query.trim() === '' ? [] : query.trim().split(/\s+/)
-  const lowerTerms = terms.map((term) => term.toLowerCase())
 
-  const hits = resources.filter((resource) => {
-    const searchable =
-      `${resource.name} ${resource.section_slug} ${resource.slug} ${resource.doc} ${resource.source_url ?? ''} ${searchableText(resource.meta, new WeakSet())} ${resource.markdown}`.toLowerCase()
-    if (!lowerTerms.every((term) => searchable.includes(term))) return false
+  const selectedModes = validated.mode !== undefined ? new Set(validated.mode.split(',')) : undefined
+  const selectedSurfaces = validated.surface !== undefined ? validated.surface.split(',') : undefined
+  const canonicalStack = validated.stack !== undefined ? normalizeStack(validated.stack) : undefined
+  const targetTag = validated.tag !== undefined ? validated.tag.trim().toLowerCase() : undefined
 
+  // 1. Filter BEFORE ranking
+  const filtered = resources.filter((resource) => {
+    const meta = resource.meta ?? {}
+
+    // Unreachable filter
+    const status = typeof meta.status === 'string' ? meta.status.trim().toLowerCase() : 'active'
+    if (!validated.includeUnreachable && status === 'unreachable') {
+      return false
+    }
+
+    // Mode filter (comma OR)
+    if (selectedModes !== undefined) {
+      const rawMode = meta.execution_mode
+      const resourceMode = typeof rawMode === 'string' ? rawMode.trim().toLowerCase() : undefined
+      if (resourceMode === undefined || !selectedModes.has(resourceMode)) {
+        return false
+      }
+    }
+
+    // Surface filter (comma OR)
+    if (selectedSurfaces !== undefined) {
+      const rawSurface = meta.surface
+      const resourceSurfaces = Array.isArray(rawSurface)
+        ? rawSurface.filter((s): s is string => typeof s === 'string').map((s) => s.trim().toLowerCase())
+        : typeof rawSurface === 'string'
+          ? [rawSurface.trim().toLowerCase()]
+          : []
+      if (resourceSurfaces.length === 0 || !selectedSurfaces.some((s) => resourceSurfaces.includes(s))) {
+        return false
+      }
+    }
+
+    // Section filter
     if (
       validated.section !== undefined &&
       resource.section_slug.toLowerCase() !== validated.section.trim().toLowerCase() &&
-      String(resource.meta.section ?? '').toLowerCase() !== validated.section.trim().toLowerCase()
+      String(meta.section ?? '').toLowerCase() !== validated.section.trim().toLowerCase()
     ) {
       return false
     }
 
-    const stackFilter = validated.stack?.trim().toLowerCase()
-    if (stackFilter !== undefined) {
-      const stackValue = resource.meta.stack
-      const stacks = Array.isArray(stackValue) ? stackValue : [stackValue]
-      if (!stacks.some((value) => typeof value === 'string' && value.toLowerCase() === stackFilter)) return false
+    // Stack filter (canonicalized via normalizeStack)
+    if (canonicalStack !== undefined) {
+      const stackValue = meta.stack
+      const stacks = Array.isArray(stackValue) ? stackValue : typeof stackValue === 'string' ? [stackValue] : []
+      if (!stacks.some((val) => typeof val === 'string' && normalizeStack(val) === canonicalStack)) {
+        return false
+      }
     }
 
-    if (validated.paywall !== undefined && resource.paywall !== validated.paywall) return false
-    if (validated.agent === true && resource.agent_friendly !== true) return false
-    if (validated.oss === true && resource.open_source !== true) return false
+    // Tag filter (exact match on category_tags or tags)
+    if (targetTag !== undefined) {
+      const categoryTags = Array.isArray(meta.category_tags)
+        ? meta.category_tags
+        : typeof meta.category_tags === 'string'
+          ? [meta.category_tags]
+          : []
+      const tags = Array.isArray(meta.tags) ? meta.tags : typeof meta.tags === 'string' ? [meta.tags] : []
+      const allTags = [...categoryTags, ...tags]
+      if (!allTags.some((t) => typeof t === 'string' && t.trim().toLowerCase() === targetTag)) {
+        return false
+      }
+    }
+
+    // Paywall filter
+    if (validated.paywall !== undefined && resource.paywall !== validated.paywall) {
+      return false
+    }
+
+    // Agent filter
+    if (validated.agent === true && resource.agent_friendly !== true) {
+      return false
+    }
+
+    // OSS filter
+    if (validated.oss === true && resource.open_source !== true) {
+      return false
+    }
+
     return true
   })
 
-  hits.sort((left, right) => compareText(left.name, right.name) || compareText(left.id, right.id))
+  // 2. Feed ranker Resource records with body=markdown and custom metadata
+  const docsForRanker = filtered.map((resource) => {
+    const extraMeta = searchableText(
+      {
+        doc: resource.doc,
+        source_url: resource.source_url,
+        ...resource.meta
+      },
+      new WeakSet()
+    )
+    const body = `${resource.markdown}\n${extraMeta}`
+    return {
+      ...resource,
+      body
+    }
+  })
+
+  const ranked = rankDocuments(docsForRanker, query)
+  const terms = query.trim() === '' ? [] : query.trim().split(/\s+/)
 
   return {
     query,
-    total: hits.length,
-    results: hits.slice(0, validated.limit).map((resource) => ({
-      id: resource.id,
-      name: resource.name,
-      section_slug: resource.section_slug,
-      slug: resource.slug,
-      paywall: resource.paywall,
-      agent_friendly: resource.agent_friendly,
-      source_url: resource.source_url,
-      last_verified: resource.last_verified,
-      doc: resource.doc,
-      matched_terms: [...terms],
-      excerpt: excerptFor(resource, terms)
-    }))
+    total: ranked.length,
+    results: ranked.slice(0, validated.limit).map((r) => {
+      const resource = r.document
+      const matchedTerms = r.matched_terms.length > 0 ? r.matched_terms : query.trim() === '' ? [] : terms
+      return {
+        id: resource.id,
+        name: resource.name,
+        section_slug: resource.section_slug,
+        slug: resource.slug,
+        paywall: resource.paywall,
+        agent_friendly: resource.agent_friendly,
+        source_url: resource.source_url,
+        last_verified: resource.last_verified,
+        doc: resource.doc,
+        matched_terms: [...r.matched_terms],
+        excerpt: excerptFor(resource, matchedTerms)
+      }
+    })
   }
 }
 

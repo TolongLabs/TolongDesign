@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [audio, react, web-audio, interaction]
 best_for: [micro-interaction feedback, accessible sound cues]
-stack: [javascript, react]
+stack: ['javascript', 'react']
+execution_mode: package
+surface: ['audio']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

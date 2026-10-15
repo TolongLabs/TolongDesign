@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [linter, formatter, rust, code-quality, toolchain]
 best_for: [code formatting, static analysis, fast linting]
-stack: [javascript, typescript, jsx, json, css]
+stack: ['javascript', 'typescript', 'jsx', 'json', 'css']
+execution_mode: package
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

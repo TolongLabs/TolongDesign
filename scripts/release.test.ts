@@ -63,7 +63,8 @@ function isRecord(value: unknown): value is RecordValue {
 function isAllowedFile(path: string): boolean {
   if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
   if (['data/catalogue.json', 'data/index.json'].includes(path)) return true
-  if (['docs/README.md', 'docs/PLAYBOOK.md', 'docs/WORKFLOW.md', 'docs/CLI.md'].includes(path)) return true
+  if (['docs/README.md', 'docs/PLAYBOOK.md', 'docs/WORKFLOW.md', 'docs/CLI.md', 'docs/METADATA.md'].includes(path))
+    return true
   if (path.startsWith('docs/design/') && path.endsWith('.md')) return true
   if (path.startsWith('docs/scenarios/') && path.endsWith('.md')) return true
   if (path.startsWith('docs/research/') && path.endsWith('.md')) return true
@@ -112,6 +113,7 @@ function inspectArchive(archivePath: string): ArchiveEntry[] {
   expect(files).toContain('package.json')
   expect(files).toContain('release-manifest.json')
   expect(files).toContain('data/catalogue.json')
+  expect(files).toContain('docs/METADATA.md')
   expect(files.some((path) => path.startsWith('licenses/'))).toBe(true)
   for (const entry of entries) {
     if (entry.kind === 'directory' && entry.filePath !== '') {

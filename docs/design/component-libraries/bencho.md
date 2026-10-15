@@ -13,6 +13,9 @@ license: unknown
 category_tags: ['interactive', 'physics', 'prototyping']
 best_for: ['interaction inspiration', 'physics-driven ui']
 stack: []
+execution_mode: reference
+surface: ['web-ui', 'reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

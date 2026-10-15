@@ -12,7 +12,10 @@ open_source: true
 license: 'MIT'
 category_tags: [react, nextjs, satori, open-graph]
 best_for: [social preview images, dynamic og routes]
-stack: [react, nextjs, satori]
+stack: ['react', 'nextjs', 'satori']
+execution_mode: registry
+surface: ['og-image']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

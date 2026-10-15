@@ -21,7 +21,10 @@ best_for:
     offline asset sharing,
     air-gapped environments
   ]
-stack: [flutter, dart]
+stack: ['flutter', 'dart']
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

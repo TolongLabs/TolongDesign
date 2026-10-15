@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [web-inspiration, product-design, curated-feed]
 best_for: [current website discovery, digital product references]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

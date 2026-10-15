@@ -17,6 +17,9 @@ category_tags:
 best_for:
   [mobile onboarding flows, user experience benchmarking, task-flow analysis]
 stack: []
+execution_mode: reference
+surface: ['reference', 'mobile-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

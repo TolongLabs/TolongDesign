@@ -21,7 +21,10 @@ best_for:
     smooth cursor paths,
     webcam bubbles
   ]
-stack: [electron, typescript, react, vite]
+stack: ['electron', 'typescript', 'react', 'vite']
+execution_mode: reference
+surface: ['video', 'desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

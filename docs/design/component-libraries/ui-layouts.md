@@ -14,7 +14,10 @@ open_source: false
 license: 'unknown'
 category_tags: [react, tailwind, shadcn, blocks]
 best_for: [landing pages, marketing sites]
-stack: [react, tailwind, shadcn]
+stack: ['react', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

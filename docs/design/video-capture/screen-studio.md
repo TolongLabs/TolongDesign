@@ -22,6 +22,9 @@ best_for:
     social video teasers
   ]
 stack: []
+execution_mode: reference
+surface: ['video', 'desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

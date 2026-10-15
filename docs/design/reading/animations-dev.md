@@ -16,7 +16,10 @@ category_tags:
   [motion-design, web-animation, framer-motion, css-animation, spring-physics]
 best_for:
   [mastering animation timing and easing, physics-based springs, fluid react ui]
-stack: [react, css, motion]
+stack: ['react', 'css', 'motion']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

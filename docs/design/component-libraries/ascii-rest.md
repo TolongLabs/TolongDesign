@@ -16,7 +16,10 @@ license: MIT
 category_tags: [typescript, react, ascii-art, animation, retro, web-components]
 best_for:
   [animated ascii hero visuals, retro loaders, terminal-style charts and logos]
-stack: [typescript, react, nextjs, astro, html]
+stack: ['typescript', 'react', 'nextjs', 'astro', 'html']
+execution_mode: package
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-08
 ---

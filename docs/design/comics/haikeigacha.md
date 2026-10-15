@@ -15,7 +15,10 @@ category_tags:
   [manga, comics, backgrounds, 3d, browser, threejs, screentone, line-art]
 best_for:
   [manga backgrounds, storyboard backdrops, panel staging, room reference]
-stack: [browser, threejs]
+stack: ['browser', 'threejs']
+execution_mode: browser-app
+surface: ['comics']
+status: active
 agent_friendly: true
 last_verified: 2026-10-14
 ---

@@ -21,7 +21,10 @@ best_for:
     comic-style page mockups,
     poster grids
   ]
-stack: [browser]
+stack: ['browser']
+execution_mode: browser-app
+surface: ['comics', 'print']
+status: active
 agent_friendly: true
 last_verified: 2026-10-14
 ---

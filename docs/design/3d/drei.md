@@ -13,7 +13,10 @@ license: MIT
 category_tags: [react, 3d, three-js, helpers, r3f, pmndrs]
 best_for:
   [orbit controls, gltf loading, environment maps, 3d text, html overlays]
-stack: [react, typescript]
+stack: ['react', 'typescript']
+execution_mode: package
+surface: ['web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

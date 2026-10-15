@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [smooth-scroll, scroll-linked-animation, gsap, react, javascript]
 best_for: [scroll-linked animation, WebGL scroll sync, smooth anchor navigation]
-stack: [javascript, typescript, react, vue, gsap]
+stack: ['javascript', 'typescript', 'react', 'vue', 'gsap']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

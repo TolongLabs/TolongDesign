@@ -27,6 +27,9 @@ best_for:
     design reviews
   ]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

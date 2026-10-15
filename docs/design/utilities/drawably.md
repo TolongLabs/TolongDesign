@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [react, svg, sketch, components]
 best_for: [hand-drawn accents, annotated mockups, playful interface details]
-stack: [react, javascript]
+stack: ['react', 'javascript']
+execution_mode: package
+surface: ['web-ui']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

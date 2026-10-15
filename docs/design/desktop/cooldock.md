@@ -21,6 +21,9 @@ best_for:
     music controls
   ]
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

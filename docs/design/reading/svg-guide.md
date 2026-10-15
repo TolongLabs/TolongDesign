@@ -15,7 +15,10 @@ license: proprietary
 category_tags: [svg, animation, vector-graphics, path-math, interactive-course]
 best_for:
   [mastering svg path syntax, vector micro-interactions, responsive svg scaling]
-stack: [svg, html, css, javascript]
+stack: ['svg', 'html', 'css', 'javascript']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

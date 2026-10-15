@@ -14,6 +14,9 @@ license: 'MIT'
 category_tags: ['icon-library', 'svg', 'bootstrap', 'webfont']
 best_for: ['bootstrap interfaces', 'svg and font use', 'general web UI']
 stack: ['svg', 'css', 'javascript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

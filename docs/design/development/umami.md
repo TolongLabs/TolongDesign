@@ -15,7 +15,10 @@ license: MIT
 category_tags: [analytics, privacy, gdpr, self-hosted, web-traffic]
 best_for:
   [privacy-friendly analytics, client traffic reporting, cookieless metrics]
-stack: [react, nextjs, nodejs, postgresql]
+stack: ['react', 'nextjs', 'nodejs', 'postgresql']
+execution_mode: snippet
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

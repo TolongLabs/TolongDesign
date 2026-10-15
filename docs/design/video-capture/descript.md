@@ -23,6 +23,9 @@ best_for:
     ai voice cloning
   ]
 stack: []
+execution_mode: reference
+surface: ['video', 'audio']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

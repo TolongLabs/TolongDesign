@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: ['edge', 'serverless', 'hosting', 'cdn']
 best_for: ['edge apps', 'full-stack websites', 'serverless apis']
-stack: ['workers', 'javascript', 'typescript']
+stack: ['cloudflare-workers', 'javascript', 'typescript']
+execution_mode: mcp-skill
+surface: ['hosting']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

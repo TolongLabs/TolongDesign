@@ -118,7 +118,16 @@ describe('design CLI argument errors', () => {
     ['invalid paywall', ['search', 'scroll', '--paywall', 'unlimited']],
     ['zero limit', ['search', 'scroll', '--limit', '0']],
     ['non-integer limit', ['search', 'scroll', '--limit', '1.5']],
-    ['unexpected show argument', ['show', 'gsap', 'extra']]
+    ['unexpected show argument', ['show', 'gsap', 'extra']],
+    ['invalid format value', ['search', 'scroll', '--format', 'table']],
+    ['format card with json', ['search', 'scroll', '--format', 'card', '--json']],
+    ['json with format card', ['search', 'scroll', '--json', '--format', 'card']],
+    ['duplicate mode flag', ['search', 'scroll', '--mode', 'registry', '--mode', 'package']],
+    ['invalid mode enum', ['search', 'scroll', '--mode', 'unknown-mode']],
+    ['empty mode entry', ['search', 'scroll', '--mode', 'registry,']],
+    ['duplicate surface flag', ['search', 'scroll', '--surface', 'web-ui', '--surface', 'comics']],
+    ['invalid surface enum', ['search', 'scroll', '--surface', 'unknown-surface']],
+    ['boolean flag with value', ['search', 'scroll', '--include-unreachable=true']]
   ]
 
   for (const [label, args] of invalidInvocations) {
@@ -137,5 +146,42 @@ describe('design CLI argument errors', () => {
     expect(result.code).toBe(2)
     expect(result.stdout).toBe('')
     expect(result.stderr.length).toBeGreaterThan(0)
+  })
+})
+
+describe('design search cards and query behavior', () => {
+  test('renders cards bounded to 320 characters per result', () => {
+    const result = runCli(['search', 'lucide', '--section', 'icons', '--format', 'card'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toContain('name:')
+    expect(result.stdout).toContain('id: icons/lucide')
+    expect(result.stdout).toContain('mode:')
+    expect(result.stdout).toContain('doc: docs/design/icons/lucide.md')
+
+    const cards = result.stdout.trim().split('\n\n')
+    for (const card of cards) {
+      expect(card.length).toBeLessThanOrEqual(320)
+    }
+  })
+
+  test('unknown search query returns exit code 0 and empty stdout for card format', () => {
+    const result = runCli(['search', 'never_present_query_83hf93b', '--format', 'card'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toBe('')
+  })
+
+  test('repeated query terms produce stable search results', () => {
+    const single = runCli(['search', 'scroll', '--section', 'motion', '--json'])
+    const repeated = runCli(['search', 'scroll scroll', '--section', 'motion', '--json'])
+
+    expect(single.code).toBe(0)
+    expect(repeated.code).toBe(0)
+    const singleResults = JSON.parse(single.stdout).results
+    const repeatedResults = JSON.parse(repeated.stdout).results
+    expect(repeatedResults.map((r: { id: string }) => r.id)).toEqual(singleResults.map((r: { id: string }) => r.id))
   })
 })

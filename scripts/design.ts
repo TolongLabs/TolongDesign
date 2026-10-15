@@ -9,34 +9,32 @@ import {
   resolveResource,
   searchResources,
   UsageError,
+  type Resource,
   type SearchOptions
 } from './design-lib'
 
 const ROOT = join(import.meta.dir, '..')
 const PAYWALLS = ['free', 'freemium', 'paid', 'unknown'] as const
 
-type ParsedFlags = {
-  positionals: string[]
-  values: Map<string, string | true>
-}
+import { hasFlag, parseFlags, readValue } from './cli-lib'
 
 type Command =
   | { kind: 'help' }
   | { kind: 'version' }
   | { kind: 'doctor'; json: boolean }
-  | { kind: 'search'; query: string; options: SearchOptions; json: boolean }
+  | { kind: 'search'; query: string; options: SearchOptions; json: boolean; format?: 'card' }
   | { kind: 'show'; id: string; json: boolean }
   | { kind: 'context'; ids: string[]; brief?: string; json: boolean }
 
 const HELP = `Usage:
   tolongdesign --version
   tolongdesign doctor [--json]
-  tolongdesign search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--json]
+  tolongdesign search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
   tolongdesign show <slug-or-section/slug> [--json]
   tolongdesign context <id>... [--brief <text>] [--json]
 
 Checkout equivalents:
-  bun run design -- search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--json]
+  bun run design -- search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
   bun run design -- show <slug-or-section/slug> [--json]
   bun run design -- context <id>... [--brief <text>] [--json]
 
@@ -46,65 +44,30 @@ Commands:
   context  Assemble complete documents with provenance and freshness warnings.
 `
 
-function parseFlags(args: string[], booleanNames: string[], valueNames: string[]): ParsedFlags {
-  const booleans = new Set(booleanNames)
-  const valuesAllowed = new Set(valueNames)
-  const positionals: string[] = []
-  const values = new Map<string, string | true>()
-
-  for (let index = 0; index < args.length; index += 1) {
-    const argument = args[index]
-    if (!argument.startsWith('-')) {
-      positionals.push(argument)
-      continue
-    }
-    if (!argument.startsWith('--')) throw new UsageError(`unknown flag: ${argument}`)
-
-    const equals = argument.indexOf('=')
-    const flag = equals === -1 ? argument.slice(2) : argument.slice(2, equals)
-    const inlineValue = equals === -1 ? undefined : argument.slice(equals + 1)
-    if (!booleans.has(flag) && !valuesAllowed.has(flag)) throw new UsageError(`unknown flag: --${flag}`)
-    if (values.has(flag)) throw new UsageError(`--${flag} was provided more than once`)
-
-    if (booleans.has(flag)) {
-      if (inlineValue !== undefined) throw new UsageError(`--${flag} does not take a value`)
-      values.set(flag, true)
-      continue
-    }
-
-    let value = inlineValue
-    if (value === undefined) {
-      const next = args[index + 1]
-      if (next === undefined || next.startsWith('-')) throw new UsageError(`--${flag} requires a value`)
-      value = next
-      index += 1
-    }
-    if (value.trim() === '') throw new UsageError(`--${flag} requires a non-empty value`)
-    values.set(flag, value)
-  }
-
-  return { positionals, values }
-}
-
-function readValue(flags: ParsedFlags, name: string): string | undefined {
-  const value = flags.values.get(name)
-  return typeof value === 'string' ? value : undefined
-}
-
-function hasFlag(flags: ParsedFlags, name: string): boolean {
-  return flags.values.get(name) === true
-}
-
 function parseSearch(args: string[]): Command {
-  const flags = parseFlags(args, ['agent', 'oss', 'json'], ['section', 'stack', 'paywall', 'limit'])
+  const flags = parseFlags(
+    args,
+    ['agent', 'oss', 'json', 'include-unreachable'],
+    ['section', 'stack', 'paywall', 'limit', 'mode', 'surface', 'format']
+  )
   const query = flags.positionals.join(' ').trim()
   if (query === '') throw new UsageError('search requires text to search for')
+
+  const format = readValue(flags, 'format')
+  const json = hasFlag(flags, 'json')
+  if (format !== undefined) {
+    if (format !== 'card') throw new UsageError('--format must be "card"')
+    if (json) throw new UsageError('cannot combine --json and --format card')
+  }
 
   const options: SearchOptions = {}
   const section = readValue(flags, 'section')
   const stack = readValue(flags, 'stack')
   const paywall = readValue(flags, 'paywall')
   const limit = readValue(flags, 'limit')
+  const mode = readValue(flags, 'mode')
+  const surface = readValue(flags, 'surface')
+
   if (section !== undefined) options.section = section
   if (stack !== undefined) options.stack = stack
   if (paywall !== undefined) {
@@ -121,9 +84,19 @@ function parseSearch(args: string[]): Command {
       throw new UsageError('--limit must be a positive integer')
     options.limit = parsedLimit
   }
+  if (mode !== undefined) options.mode = mode
+  if (surface !== undefined) options.surface = surface
+  if (hasFlag(flags, 'include-unreachable')) options.includeUnreachable = true
   if (hasFlag(flags, 'agent')) options.agent = true
   if (hasFlag(flags, 'oss')) options.oss = true
-  return { kind: 'search', query, options, json: hasFlag(flags, 'json') }
+
+  return {
+    kind: 'search',
+    query,
+    options,
+    json,
+    ...(format === 'card' ? { format: 'card' as const } : {})
+  }
 }
 
 function parseShow(args: string[]): Command {
@@ -169,9 +142,32 @@ function writeJson(value: unknown): void {
   process.stdout.write(`${JSON.stringify(value, null, 2)}\n`)
 }
 
-function writeSearch(result: ReturnType<typeof searchResources>, json: boolean): void {
+async function writeSearch(
+  resources: Resource[],
+  result: ReturnType<typeof searchResources>,
+  json: boolean,
+  format?: 'card'
+): Promise<void> {
   if (json) {
     writeJson(result)
+    return
+  }
+  if (format === 'card') {
+    const { renderResourceCard } = await import('./resource-card')
+    const resourceMap = new Map(resources.map((r) => [r.id, r]))
+    const cards = result.results.map((r) => {
+      const full = resourceMap.get(r.id)!
+      return renderResourceCard({
+        id: full.id,
+        name: full.name,
+        doc: full.doc,
+        source_url: full.source_url,
+        meta: full.meta
+      })
+    })
+    if (cards.length > 0) {
+      process.stdout.write(`${cards.join('\n\n')}\n`)
+    }
     return
   }
 
@@ -197,7 +193,7 @@ function reportError(error: unknown): number {
   return 1
 }
 
-function run(args: string[]): number {
+async function run(args: string[]): Promise<number> {
   let command: Command
   try {
     command = parseCommand(args)
@@ -228,7 +224,12 @@ function run(args: string[]): number {
     }
     const resources = loadResources(ROOT)
     if (command.kind === 'search') {
-      writeSearch(searchResources(resources, command.query, command.options), command.json)
+      await writeSearch(
+        resources,
+        searchResources(resources, command.query, command.options),
+        command.json,
+        command.format
+      )
       return 0
     }
     if (command.kind === 'show') {
@@ -247,4 +248,4 @@ function run(args: string[]): number {
   }
 }
 
-if (import.meta.main) process.exitCode = run(process.argv.slice(2))
+if (import.meta.main) process.exitCode = await run(process.argv.slice(2))

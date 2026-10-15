@@ -15,6 +15,9 @@ license: unknown
 category_tags: [fonts, open-source, experimental, typography, foundry]
 best_for: [expressive display type, experimental brand work]
 stack: []
+execution_mode: reference
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

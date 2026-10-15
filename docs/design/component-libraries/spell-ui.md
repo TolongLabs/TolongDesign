@@ -14,7 +14,10 @@ open_source: false
 license: unknown
 category_tags: [react, shadcn, tailwind, mcp]
 best_for: [marketing pages, interactive blocks, agent-assisted UI]
-stack: [react, tailwind]
+stack: ['react', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

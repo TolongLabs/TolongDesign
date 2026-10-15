@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [framer, no-code, templates, sections]
 best_for: [framer websites, portfolio sites, marketing landing pages]
 stack: []
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

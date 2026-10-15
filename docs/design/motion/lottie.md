@@ -17,7 +17,10 @@ category_tags:
   [motion, animation, vector, lottie, json, dotlottie, illustrations]
 best_for:
   [vector animations, micro-interactions, after effects exports, dotlottie]
-stack: [react, vue, webgl, canvas, ios, android]
+stack: ['react', 'vue', 'webgl', 'canvas', 'ios', 'android']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

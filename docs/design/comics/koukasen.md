@@ -23,7 +23,10 @@ best_for:
     web page backgrounds,
     posters
   ]
-stack: [browser]
+stack: ['browser']
+execution_mode: browser-app
+surface: ['comics', 'web-asset', 'print']
+status: active
 agent_friendly: true
 last_verified: 2026-10-14
 ---

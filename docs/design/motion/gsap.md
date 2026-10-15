@@ -15,7 +15,10 @@ license: proprietary
 category_tags:
   [motion, animation, gsap, timelines, scrolltrigger, svg, javascript]
 best_for: [complex timelines, scroll-driven storytelling, svg morphing]
-stack: [javascript, typescript, react, vue, svelte]
+stack: ['javascript', 'typescript', 'react', 'vue', 'svelte']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

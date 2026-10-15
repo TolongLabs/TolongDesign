@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['react', 'nextjs', 'tailwind', 'shadcn', 'blocks']
 best_for: ['marketing pages', 'saas websites']
 stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

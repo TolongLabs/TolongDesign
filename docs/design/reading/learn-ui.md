@@ -16,6 +16,9 @@ category_tags:
   ['design-engineering', 'interface-design', 'motion', 'typography']
 best_for: ['micro-interactions', 'interface craft', 'motion decisions']
 stack: ['css', 'javascript', 'react']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

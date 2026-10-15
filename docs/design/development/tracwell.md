@@ -15,7 +15,10 @@ license: proprietary
 category_tags:
   [analytics, conversion-tracking, attribution, revenue-metrics, cookieless]
 best_for: [funnel tracking, revenue attribution, conversion analysis]
-stack: [javascript]
+stack: ['javascript']
+execution_mode: snippet
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

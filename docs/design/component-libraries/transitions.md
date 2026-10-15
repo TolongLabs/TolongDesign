@@ -14,7 +14,10 @@ open_source: true
 license: 'MIT'
 category_tags: [css, motion, transitions, react]
 best_for: [interface motion, micro-interactions]
-stack: [css, react, typescript]
+stack: ['css', 'react', 'typescript']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

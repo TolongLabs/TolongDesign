@@ -13,6 +13,9 @@ license: 'MIT'
 category_tags: ['design-inspiration', 'portfolios', 'tools']
 best_for: ['portfolio discovery', 'design references']
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

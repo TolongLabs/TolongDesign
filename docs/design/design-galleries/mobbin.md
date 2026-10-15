@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [mobile-ui, product-design, design-flows]
 best_for: [mobile product research, real-world interface flows]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui', 'mobile-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

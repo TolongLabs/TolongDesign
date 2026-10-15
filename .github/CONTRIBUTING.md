@@ -11,15 +11,15 @@ counts come from the official site. If it is not published, write "Not
 published". Update `last_verified` whenever you re-check a doc.
 
 **Never hand-edit generated files.** `docs/design/README.md`, every
-`docs/design/<section>/README.md`, `docs/design/people.md` and
-`data/index.json` come from `bun run index`.
+`docs/design/<section>/README.md`, `docs/design/people.md` and `data/index.json`
+come from `bun run index`.
 
 ## Workflow
 
 1. `bun install`
 2. Edit or add docs (see `.claude/skills/add-tool-doc/SKILL.md`).
-3. `bun run index && bun run check && bun run format` (and `bun run links -- <section>`
-   for the sections you touched)
+3. `bun run index && bun run check && bun run format` (and
+   `bun run links -- <section>` for the sections you touched)
 4. Commit with a conventional message, scoped by section:
    - `docs(icons): add phosphor`
    - `docs(component-libraries): refresh shadcn pricing`
@@ -38,8 +38,8 @@ pricing page. A quarterly sweep re-runs the research fan-out with
 
 Agents read [AGENTS.md](../AGENTS.md) (Claude Code and Gemini via `CLAUDE.md` /
 `GEMINI.md` imports). For bulk research, split `data/catalogue.json` into
-batches and give each worker the worker brief plus its batch file; workers
-write only the doc paths in their batch. Review with `bun run check` before
+batches and give each worker the worker brief plus its batch file; workers write
+only the doc paths in their batch. Review with `bun run check` before
 committing.
 
 ## Never Do These

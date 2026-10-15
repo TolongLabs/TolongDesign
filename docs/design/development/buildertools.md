@@ -16,6 +16,9 @@ category_tags:
 best_for:
   [tool discovery, independent software benchmarking, development resources]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

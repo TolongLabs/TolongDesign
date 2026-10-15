@@ -13,6 +13,9 @@ license: MIT
 category_tags: ['react', 'nextjs', 'tailwind', 'copy-paste']
 best_for: ['quick-start ui', 'device mockups']
 stack: ['react', 'nextjs', 'tailwind']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

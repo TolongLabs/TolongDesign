@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [react, shadcn, motion, components]
 best_for: [animated controls, navigation, lightweight motion]
-stack: [react, shadcn]
+stack: ['react', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

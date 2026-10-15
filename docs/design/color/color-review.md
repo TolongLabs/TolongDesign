@@ -12,7 +12,10 @@ open_source: false
 license: proprietary
 category_tags: [color-contrast, accessibility, a11y, wcag, color-picker]
 best_for: [text readability, wcag audits, accessible color pairing, ui review]
-stack: [css]
+stack: ['css']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [inspiration, showcase, awards, web-design, animations]
 best_for: [creative direction, interactive websites, design benchmarks]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

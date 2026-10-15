@@ -13,7 +13,10 @@ open_source: false
 license: unknown
 category_tags: [agent-readiness, crawler-audit, mcp]
 best_for: ['site discoverability checks', 'agent-facing SEO audits']
-stack: [cli, mcp, rest]
+stack: ['cli', 'mcp', 'rest']
+execution_mode: browser-app
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

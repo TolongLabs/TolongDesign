@@ -14,6 +14,9 @@ license: MIT
 category_tags: [open-source, credits, infrastructure, maintainers, cli]
 best_for: [funding open source, infrastructure credits, developer grants]
 stack: []
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

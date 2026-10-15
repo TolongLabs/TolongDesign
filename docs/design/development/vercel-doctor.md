@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [nextjs, diagnostics, performance, cost-optimization, cli]
 best_for: [vercel-hosted next.js, code review, agent-assisted fixes]
-stack: [nextjs, nodejs, vercel]
+stack: ['nextjs', 'nodejs', 'vercel']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

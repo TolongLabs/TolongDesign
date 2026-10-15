@@ -15,6 +15,9 @@ license: 'unknown'
 category_tags: ['motion-design', 'video', 'inspiration']
 best_for: ['motion references', 'animation direction']
 stack: []
+execution_mode: reference
+surface: ['reference', 'video']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

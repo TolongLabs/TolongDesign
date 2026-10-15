@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: ['hosting', 'databases', 'deployment', 'containers']
 best_for: ['full-stack apps', 'managed postgres', 'deployment prototypes']
-stack: ['docker', 'nodejs', 'postgres']
+stack: ['docker', 'nodejs', 'postgresql']
+execution_mode: mcp-skill
+surface: ['hosting']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

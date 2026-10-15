@@ -21,7 +21,10 @@ best_for:
     personalized customer videos,
     data-driven animations
   ]
-stack: [react, typescript, nodejs, bun]
+stack: ['react', 'typescript', 'nodejs', 'bun']
+execution_mode: package
+surface: ['video']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

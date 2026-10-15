@@ -143,7 +143,7 @@ function qualifiedId(resource: { section_slug: string; slug: string }) {
 }
 
 describe('design resource loading and search', () => {
-  test('finds body-only terms and requires every query term', () => {
+  test('finds body-only terms and ranks documents matching multiple query terms ahead', () => {
     const fixture = createFixtureRoot([
       {
         name: 'Parallax Guide',
@@ -165,8 +165,9 @@ describe('design resource loading and search', () => {
 
     expect(bodyOnly.results.map((resource) => resource.slug)).toEqual(['parallax-guide'])
     expect(result.query).toBe('NARRATIVE PARALLAX')
-    expect(result.total).toBe(1)
-    expect(result.results.map((resource) => resource.slug)).toEqual(['parallax-guide'])
+    expect(result.total).toBe(2)
+    expect(result.results[0]?.slug).toBe('parallax-guide')
+    expect(result.results[0]?.matched_terms.sort()).toEqual(['narrative', 'parallax'])
     for (const field of [
       'id',
       'name',
@@ -184,7 +185,7 @@ describe('design resource loading and search', () => {
     }
   })
 
-  test('sorts matches by name and qualified id before applying the result limit', () => {
+  test('sorts score-tied matches by qualified ID before applying the result limit', () => {
     const fixture = createFixtureRoot([
       { name: 'Zulu', slug: 'zulu', sectionSlug: 'motion', body: 'shared token' },
       { name: 'Alpha', slug: 'alpha', sectionSlug: 'motion', body: 'shared token' },
@@ -198,14 +199,14 @@ describe('design resource loading and search', () => {
     const limited = searchResources(resources, 'shared token', { limit: 2 })
 
     expect(all.results.map(qualifiedId)).toEqual([
+      'colors/same',
       'motion/alpha',
       'motion/mica',
-      'colors/same',
       'motion/same',
       'motion/zulu'
     ])
     expect(limited.total).toBe(5)
-    expect(limited.results.map((resource) => resource.slug)).toEqual(['alpha', 'mica'])
+    expect(limited.results.map((resource) => resource.slug)).toEqual(['same', 'alpha'])
   })
 
   test('matches section, stack, and paywall filters without regard to case', () => {
@@ -567,5 +568,299 @@ describe('registered document path safety', () => {
     symlinkSync(externalDoc, registeredPath)
 
     expect(() => loadResources(fixture.root)).toThrow(DataError)
+  })
+})
+
+describe('extended SearchOptions validation and filtering (#6, #8-#11)', () => {
+  test('validates mode against EXECUTION_MODES and rejects empty/unknown/duplicate values', () => {
+    const fixture = createFixtureRoot([
+      { name: 'Tool A', slug: 'tool-a', sectionSlug: 'motion', body: 'content token' }
+    ])
+    const resources = loadResources(fixture.root)
+
+    // Valid modes
+    expect(() => searchResources(resources, 'content', { mode: 'registry' })).not.toThrow()
+    expect(() => searchResources(resources, 'content', { mode: 'registry,package' })).not.toThrow()
+    expect(() => searchResources(resources, 'content', { mode: 'browser-app' })).not.toThrow()
+
+    // Invalid modes: empty entries
+    expect(() => searchResources(resources, 'content', { mode: '' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { mode: 'registry,' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { mode: ',package' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { mode: 'registry, ,package' })).toThrow(UsageError)
+
+    // Invalid modes: unknown value
+    expect(() => searchResources(resources, 'content', { mode: 'unknown-mode' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { mode: 'registry,unknown-mode' })).toThrow(UsageError)
+
+    // Invalid modes: duplicate values
+    expect(() => searchResources(resources, 'content', { mode: 'package,package' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { mode: 'registry,package,registry' })).toThrow(UsageError)
+  })
+
+  test('validates surface against SURFACES and rejects empty/unknown/duplicate values', () => {
+    const fixture = createFixtureRoot([
+      { name: 'Tool A', slug: 'tool-a', sectionSlug: 'motion', body: 'content token' }
+    ])
+    const resources = loadResources(fixture.root)
+
+    // Valid surfaces
+    expect(() => searchResources(resources, 'content', { surface: 'web-ui' })).not.toThrow()
+    expect(() => searchResources(resources, 'content', { surface: 'web-ui,mobile-ui' })).not.toThrow()
+    expect(() => searchResources(resources, 'content', { surface: 'comics' })).not.toThrow()
+
+    // Invalid surfaces: empty entries
+    expect(() => searchResources(resources, 'content', { surface: '' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { surface: 'web-ui,' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { surface: ',comics' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { surface: 'web-ui, ,comics' })).toThrow(UsageError)
+
+    // Invalid surfaces: unknown value
+    expect(() => searchResources(resources, 'content', { surface: 'spatial-vr' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { surface: 'web-ui,spatial-vr' })).toThrow(UsageError)
+
+    // Invalid surfaces: duplicate values
+    expect(() => searchResources(resources, 'content', { surface: 'web-ui,web-ui' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { surface: 'web-ui,comics,web-ui' })).toThrow(UsageError)
+  })
+
+  test('validates includeUnreachable and tag option types', () => {
+    const fixture = createFixtureRoot([
+      { name: 'Tool A', slug: 'tool-a', sectionSlug: 'motion', body: 'content token' }
+    ])
+    const resources = loadResources(fixture.root)
+
+    // @ts-expect-error testing runtime validation
+    expect(() => searchResources(resources, 'content', { includeUnreachable: 'true' })).toThrow(UsageError)
+    // @ts-expect-error testing runtime validation
+    expect(() => searchResources(resources, 'content', { includeUnreachable: 1 })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { tag: '' })).toThrow(UsageError)
+    expect(() => searchResources(resources, 'content', { tag: '   ' })).toThrow(UsageError)
+  })
+
+  test('hides unreachable resources by default and restores them with includeUnreachable: true', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Active Tool',
+        slug: 'active-tool',
+        sectionSlug: 'motion',
+        body: 'status token',
+        frontmatter: { status: 'active' }
+      },
+      {
+        name: 'Degraded Tool',
+        slug: 'degraded-tool',
+        sectionSlug: 'motion',
+        body: 'status token',
+        frontmatter: { status: 'degraded' }
+      },
+      {
+        name: 'Unreachable Tool',
+        slug: 'unreachable-tool',
+        sectionSlug: 'motion',
+        body: 'status token',
+        frontmatter: { status: 'unreachable' }
+      },
+      {
+        name: 'Legacy Tool',
+        slug: 'legacy-tool',
+        sectionSlug: 'motion',
+        body: 'status token'
+        // Missing status: acts as active
+      }
+    ])
+    const resources = loadResources(fixture.root)
+
+    const defaultResults = searchResources(resources, 'status token', {})
+    const defaultSlugs = defaultResults.results.map((r) => r.slug).sort()
+    expect(defaultSlugs).toEqual(['active-tool', 'degraded-tool', 'legacy-tool'])
+
+    const includedResults = searchResources(resources, 'status token', { includeUnreachable: true })
+    const includedSlugs = includedResults.results.map((r) => r.slug).sort()
+    expect(includedSlugs).toEqual(['active-tool', 'degraded-tool', 'legacy-tool', 'unreachable-tool'])
+  })
+
+  test('filters by mode using comma-separated OR and does not invent classification for legacy fixtures', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Registry Tool',
+        slug: 'reg-tool',
+        sectionSlug: 'component-libraries',
+        body: 'mode token',
+        frontmatter: { execution_mode: 'registry' }
+      },
+      {
+        name: 'Package Tool',
+        slug: 'pkg-tool',
+        sectionSlug: 'component-libraries',
+        body: 'mode token',
+        frontmatter: { execution_mode: 'package' }
+      },
+      {
+        name: 'Snippet Tool',
+        slug: 'snp-tool',
+        sectionSlug: 'component-libraries',
+        body: 'mode token',
+        frontmatter: { execution_mode: 'snippet' }
+      },
+      {
+        name: 'Legacy Unclassified',
+        slug: 'legacy-tool',
+        sectionSlug: 'component-libraries',
+        body: 'mode token'
+      }
+    ])
+    const resources = loadResources(fixture.root)
+
+    const singleMode = searchResources(resources, 'mode token', { mode: 'registry' })
+    expect(singleMode.results.map((r) => r.slug)).toEqual(['reg-tool'])
+
+    const commaOrModes = searchResources(resources, 'mode token', { mode: 'registry,package' })
+    expect(commaOrModes.results.map((r) => r.slug).sort()).toEqual(['pkg-tool', 'reg-tool'])
+
+    const snippetMode = searchResources(resources, 'mode token', { mode: 'snippet' })
+    expect(snippetMode.results.map((r) => r.slug)).toEqual(['snp-tool'])
+  })
+
+  test('filters by surface using comma-separated OR and excludes other domains', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Web UI Tool',
+        slug: 'web-ui-tool',
+        sectionSlug: 'component-libraries',
+        body: 'surface token',
+        frontmatter: { surface: ['web-ui'] }
+      },
+      {
+        name: 'Comics App',
+        slug: 'comics-app',
+        sectionSlug: 'comics',
+        body: 'surface token',
+        frontmatter: { surface: ['comics'] }
+      },
+      {
+        name: 'Dual Surface Tool',
+        slug: 'dual-tool',
+        sectionSlug: 'component-libraries',
+        body: 'surface token',
+        frontmatter: { surface: ['web-ui', 'mobile-ui'] }
+      },
+      {
+        name: 'Legacy Unclassified',
+        slug: 'legacy-surface',
+        sectionSlug: 'component-libraries',
+        body: 'surface token'
+      }
+    ])
+    const resources = loadResources(fixture.root)
+
+    const webUi = searchResources(resources, 'surface token', { surface: 'web-ui' })
+    expect(webUi.results.map((r) => r.slug).sort()).toEqual(['dual-tool', 'web-ui-tool'])
+
+    const comics = searchResources(resources, 'surface token', { surface: 'comics' })
+    expect(comics.results.map((r) => r.slug)).toEqual(['comics-app'])
+
+    const multi = searchResources(resources, 'surface token', { surface: 'comics,mobile-ui' })
+    expect(multi.results.map((r) => r.slug).sort()).toEqual(['comics-app', 'dual-tool'])
+  })
+
+  test('normalizes stack aliases in search query', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Motion Tool',
+        slug: 'motion-tool',
+        sectionSlug: 'motion',
+        body: 'stack token',
+        frontmatter: { stack: ['motion'] }
+      },
+      {
+        name: 'React Tool',
+        slug: 'react-tool',
+        sectionSlug: 'component-libraries',
+        body: 'stack token',
+        frontmatter: { stack: ['react'] }
+      }
+    ])
+    const resources = loadResources(fixture.root)
+
+    const queryWithAlias = searchResources(resources, 'stack token', { stack: 'framer-motion' })
+    expect(queryWithAlias.results.map((r) => r.slug)).toEqual(['motion-tool'])
+
+    const queryCanonical = searchResources(resources, 'stack token', { stack: 'motion' })
+    expect(queryCanonical.results.map((r) => r.slug)).toEqual(['motion-tool'])
+  })
+
+  test('filters by exact tag against category_tags and tags', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Cat Tagged',
+        slug: 'cat-tagged',
+        sectionSlug: 'motion',
+        body: 'tag token',
+        frontmatter: { category_tags: ['animation', 'physics'] }
+      },
+      {
+        name: 'Other Tagged',
+        slug: 'other-tagged',
+        sectionSlug: 'motion',
+        body: 'tag token',
+        frontmatter: { category_tags: ['layout'] }
+      }
+    ])
+    const resources = loadResources(fixture.root)
+
+    const result = searchResources(resources, 'tag token', { tag: 'animation' })
+    expect(result.results.map((r) => r.slug)).toEqual(['cat-tagged'])
+
+    const noMatch = searchResources(resources, 'tag token', { tag: 'missing-tag' })
+    expect(noMatch.results).toEqual([])
+  })
+
+  test('derives meta.install via extractInstall in makeResource', () => {
+    const markdown = [
+      '---',
+      'name: "Install Tool"',
+      'slug: "install-tool"',
+      'section: "Icons"',
+      'section_slug: "icons"',
+      'source_url: "https://example.test/icons/install-tool"',
+      'designeer_url: "https://designeer.xyz/"',
+      'designeer_blurb: "Icon library."',
+      'paywall: "free"',
+      'pricing_summary: "Not published."',
+      'open_source: true',
+      'license: "MIT"',
+      'category_tags: ["icons"]',
+      'best_for: ["icon sets"]',
+      'stack: ["react"]',
+      'execution_mode: "package"',
+      'surface: ["web-ui"]',
+      'status: "active"',
+      'agent_friendly: true',
+      'last_verified: "2026-10-10"',
+      '---',
+      '',
+      '# Install Tool',
+      '',
+      '## How to use',
+      '',
+      '```bash',
+      'bun add install-tool-icons',
+      '```',
+      '',
+      '## Examples',
+      ''
+    ].join('\n')
+
+    const fixture = createFixtureRoot([
+      {
+        name: 'Install Tool',
+        slug: 'install-tool',
+        sectionSlug: 'icons',
+        markdown
+      }
+    ])
+    const resources = loadResources(fixture.root)
+    expect(resources[0]?.meta?.install).toBe('bun add install-tool-icons')
   })
 })

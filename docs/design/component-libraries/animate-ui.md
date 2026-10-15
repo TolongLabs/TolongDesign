@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, motion, shadcn, accessible, components]
 best_for: [web applications, accessible interfaces, micro-interactions]
-stack: [react, nextjs, tailwind, framer-motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

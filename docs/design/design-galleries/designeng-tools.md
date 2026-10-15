@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['design-engineering', 'tools', 'directory']
 best_for: ['design engineering stack discovery', 'resource filtering']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

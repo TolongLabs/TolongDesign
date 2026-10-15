@@ -14,6 +14,9 @@ license: proprietary
 category_tags: [ai, coding-agent, editor, ide]
 best_for: [codebase exploration, agent edits, multi-file tasks]
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

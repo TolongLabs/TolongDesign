@@ -18,7 +18,10 @@ best_for:
     live design adjustment,
     interactive component prototyping
   ]
-stack: [react, typescript]
+stack: ['react', 'typescript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

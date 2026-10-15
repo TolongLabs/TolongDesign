@@ -16,6 +16,9 @@ category_tags:
 best_for:
   ['technology stacks', 'developer portfolios', 'tool and language directories']
 stack: ['css', 'svg', 'html']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

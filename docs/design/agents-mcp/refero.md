@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [design-systems, reference, mcp]
 best_for: ['agent design context', 'visual research']
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

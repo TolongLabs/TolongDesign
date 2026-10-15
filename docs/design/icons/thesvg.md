@@ -20,6 +20,9 @@ best_for:
     'agent-assisted logo lookup'
   ]
 stack: ['react', 'vue', 'svelte', 'javascript']
+execution_mode: package
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

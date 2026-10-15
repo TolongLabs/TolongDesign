@@ -14,7 +14,10 @@ open_source: false
 license: unknown
 category_tags: [react, tailwind, components, animation]
 best_for: [landing pages, typography effects, page transitions]
-stack: [react, tailwind]
+stack: ['react', 'tailwind']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

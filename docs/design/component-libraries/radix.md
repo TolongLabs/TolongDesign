@@ -13,7 +13,10 @@ license: MIT
 category_tags:
   [react, primitives, accessibility, headless, radix-themes, unstyled]
 best_for: [accessible primitives, design systems, headless components]
-stack: [react]
+stack: ['react']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [3d, threejs, vrm, avatars, characters, animation]
 best_for: [3d characters, avatar scenes, web games, anime-style characters]
-stack: [javascript, typescript, threejs]
+stack: ['javascript', 'typescript', 'threejs']
+execution_mode: package
+surface: ['web-3d', 'web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

@@ -14,7 +14,10 @@ open_source: false
 license: unknown
 category_tags: [react, animation, webgl, shadcn]
 best_for: [animated backgrounds, scroll effects, card interactions]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

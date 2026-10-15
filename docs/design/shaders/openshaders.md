@@ -13,7 +13,10 @@ license: unknown
 category_tags: [shaders, webgl, creative-coding, generative-art, community]
 best_for:
   [shader inspiration, unique web graphics, generative art, community showcase]
-stack: [javascript]
+stack: ['javascript']
+execution_mode: reference
+surface: ['web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

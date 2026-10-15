@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [ai-builder, prototyping, design-systems]
 best_for: ['prompt-driven pages', 'editable prototypes']
-stack: [html, css, javascript]
+stack: ['html', 'css', 'javascript']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

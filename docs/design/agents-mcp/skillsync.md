@@ -14,7 +14,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [ai, skills, agents, context, ide, cli]
 best_for: [cross-editor agent context, skill libraries, team prompt sharing]
-stack: [typescript, nodejs]
+stack: ['typescript', 'nodejs']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

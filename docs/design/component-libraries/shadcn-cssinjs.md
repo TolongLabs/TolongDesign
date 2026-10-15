@@ -14,7 +14,10 @@ open_source: true
 license: 'MIT'
 category_tags: [react, stylex, css-in-js, base-ui]
 best_for: [stylex projects, shadcn-style systems]
-stack: [react, stylex, base-ui]
+stack: ['react', 'stylex', 'base-ui']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

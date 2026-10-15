@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, nextjs, shadcn, templates, copy-paste]
 best_for: [landing pages, saas websites, portfolio starters]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -20,7 +20,10 @@ best_for:
     command bar navigation,
     terminal image extraction
   ]
-stack: [rust, bash, zsh, fish]
+stack: ['rust', 'bash', 'zsh', 'fish']
+execution_mode: reference
+surface: ['cli-tui', 'desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

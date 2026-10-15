@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [backgrounds, gradients, visual-assets]
 best_for: [website hero backgrounds, visual texture and gradients]
 stack: []
+execution_mode: reference
+surface: ['web-asset', 'video']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [ascii-art, text-art, retro, terminal-graphics, svg-export]
 best_for: [ascii art, terminal graphics, retro aesthetic, text-mode visuals]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

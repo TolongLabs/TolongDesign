@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [agent-skill, illustration, isometric, svg, webgl]
 best_for: [technical explainers, interactive figures, docs illustrations]
-stack: [claude-code, nodejs, react, nextjs]
+stack: ['claude-code', 'nodejs', 'react', 'nextjs']
+execution_mode: mcp-skill
+surface: ['web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

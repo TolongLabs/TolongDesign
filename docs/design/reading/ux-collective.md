@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [ux-design, essays, product-design, case-studies, newsletter]
 best_for: [critical design essays, industry trend analysis, design ethics]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: degraded
 agent_friendly: false
 last_verified: 2026-10-07
 ---

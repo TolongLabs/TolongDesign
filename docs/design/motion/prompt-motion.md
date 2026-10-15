@@ -15,7 +15,10 @@ open_source: false
 license: unknown
 category_tags: [motion-graphics, prompts, ai-video, claude, inspiration]
 best_for: [launch videos, product promos, explainers, kinetic type]
-stack: [html, remotion, threejs]
+stack: ['html', 'remotion', 'threejs']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

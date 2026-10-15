@@ -20,7 +20,10 @@ best_for:
     mcp server integration,
     frontend audit checklists
   ]
-stack: [typescript, nodejs, mcp]
+stack: ['typescript', 'nodejs', 'mcp']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

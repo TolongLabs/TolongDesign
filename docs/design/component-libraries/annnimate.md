@@ -14,7 +14,10 @@ open_source: false
 license: 'proprietary'
 category_tags: [react, vue, gsap, motion]
 best_for: [production motion, interactive marketing]
-stack: [react, vue, gsap]
+stack: ['react', 'vue', 'gsap']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

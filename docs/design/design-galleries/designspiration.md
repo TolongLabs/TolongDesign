@@ -16,6 +16,9 @@ category_tags:
   [visual-search, color-search, moodboards, creative-direction, inspiration]
 best_for: [color palette inspiration, visual moodboarding, brand art direction]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

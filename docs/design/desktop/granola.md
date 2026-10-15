@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [notes, ai, transcription, meetings, macos]
 best_for: [client scoping, design discovery, sprint reviews, spec extraction]
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

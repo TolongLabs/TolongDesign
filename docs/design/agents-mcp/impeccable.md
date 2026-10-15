@@ -13,6 +13,9 @@ license: Apache-2.0
 category_tags: [ai, design, skill, rules, agents, prompt-engineering]
 best_for: [agent design taste, typography rules, layout guidance]
 stack: []
+execution_mode: mcp-skill
+surface: ['web-ui', 'reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

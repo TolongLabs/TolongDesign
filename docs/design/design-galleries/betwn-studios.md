@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [agency, studio, saas-design, framer, webflow, landing-pages]
 best_for: [SaaS web design, agency benchmarks, high-conversion landing pages]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

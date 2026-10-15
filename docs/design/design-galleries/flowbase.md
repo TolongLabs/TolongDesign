@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [components, webflow, figma, framer, interaction-patterns]
 best_for: [webflow layouts, figma wireframing, framer components]
-stack: [webflow, figma, framer]
+stack: ['webflow', 'figma', 'framer']
+execution_mode: snippet
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

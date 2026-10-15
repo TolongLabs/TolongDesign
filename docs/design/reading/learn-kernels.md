@@ -15,6 +15,9 @@ license: unknown
 category_tags: ['gpu', 'kernels', 'performance', 'programming']
 best_for: ['gpu performance', 'kernel programming', 'technical study']
 stack: ['cuda', 'triton', 'gpu']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

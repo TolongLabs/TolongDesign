@@ -14,7 +14,10 @@ category_tags:
   [color-palette, design-system, design-tokens, lch, a11y, contrast]
 best_for:
   [multi-hue design systems, color tokens, accessible ramps, figma tokens]
-stack: [css]
+stack: ['css']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: MIT
 category_tags: ['react', 'animation', 'tailwind', 'shadcn', 'motion']
 best_for: ['animated interfaces', 'marketing pages']
 stack: ['react', 'tailwind', 'shadcn', 'motion']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

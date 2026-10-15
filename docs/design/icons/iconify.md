@@ -15,6 +15,9 @@ license: 'Apache-2.0'
 category_tags: ['icon-library', 'svg', 'icon-search', 'react']
 best_for: ['large icon catalogs', 'mixed icon families', 'react interfaces']
 stack: ['react', 'svg']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

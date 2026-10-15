@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [motion, interaction, inspiration, gallery]
 best_for: [micro-interactions, onboarding, motion references]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui', 'mobile-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

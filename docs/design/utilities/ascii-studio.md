@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [ascii, video, image, export]
 best_for: [ASCII video treatments, text-based visual experiments]
-stack: [react, nextjs]
+stack: ['react', 'nextjs']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

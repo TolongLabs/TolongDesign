@@ -13,6 +13,9 @@ license: 'unknown'
 category_tags: ['ios', 'apps', 'inspiration']
 best_for: ['iOS app discovery', 'mobile product references']
 stack: []
+execution_mode: reference
+surface: ['reference', 'mobile-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

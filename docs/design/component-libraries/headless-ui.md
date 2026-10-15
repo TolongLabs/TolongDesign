@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [headless, accessible, unstyled, tailwind, react, vue]
 best_for: [accessible web apps, design systems, custom component styling]
-stack: [react, vue, tailwind]
+stack: ['react', 'vue', 'tailwind']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

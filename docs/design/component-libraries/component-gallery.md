@@ -13,6 +13,9 @@ license: unknown
 category_tags: ['design-systems', 'research', 'components']
 best_for: ['component comparison', 'design-system research']
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

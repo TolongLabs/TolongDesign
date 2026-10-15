@@ -15,6 +15,9 @@ license: 'MIT'
 category_tags: ['icon-library', 'svg', 'outline', 'filled', 'react']
 best_for: ['product interfaces', 'large outline sets', 'static svg assets']
 stack: ['svg', 'react']
+execution_mode: package
+surface: ['web-ui', 'web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

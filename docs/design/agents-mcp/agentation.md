@@ -14,7 +14,10 @@ open_source: false
 license: PolyForm-Shield-1.0.0
 category_tags: [ai, mcp, annotations, ui, feedback, react]
 best_for: [visual bug reports, ui feedback loops, agent context]
-stack: [react, nextjs, typescript]
+stack: ['react', 'nextjs', 'typescript']
+execution_mode: package
+surface: ['development', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

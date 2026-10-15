@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [design-community, web-design, visual-inspiration]
 best_for: [visual concept discovery, designer portfolios]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

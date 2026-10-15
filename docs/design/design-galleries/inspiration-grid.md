@@ -16,6 +16,9 @@ category_tags: [editorial, graphic-design, typography, branding, visual-art]
 best_for:
   [editorial visual direction, brand identity inspiration, typography ideas]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [api-specifications, mcp, integrations]
 best_for: ['agent API context', 'provider integration discovery']
-stack: [rest, mcp, openapi, graphql]
+stack: ['rest', 'mcp', 'openapi', 'graphql']
+execution_mode: reference
+surface: ['development', 'reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

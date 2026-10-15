@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [terminal, cli, ink, opentui, react]
 best_for: [cli tools, devtools, terminal dashboards]
-stack: [react, ink, opentui]
+stack: ['react', 'ink', 'opentui']
+execution_mode: registry
+surface: ['cli-tui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

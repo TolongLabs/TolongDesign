@@ -14,7 +14,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [ai, observability, telemetry, mcp, monitoring]
 best_for: [agent observability, llm cost tracking, latency debugging]
-stack: [typescript, nodejs, python]
+stack: ['typescript', 'nodejs', 'python']
+execution_mode: package
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

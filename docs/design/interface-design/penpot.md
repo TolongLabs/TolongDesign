@@ -15,6 +15,9 @@ license: MPL-2.0
 category_tags: [design, prototyping, open-source, svg, mcp]
 best_for: [interface design, design systems, self-hosted workflows]
 stack: []
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

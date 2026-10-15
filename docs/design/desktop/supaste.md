@@ -16,6 +16,9 @@ category_tags: [clipboard, macos, screenshots, ocr, utilities]
 best_for:
   [clipboard history, visual clip search, notch shelf storage, screenshot ocr]
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

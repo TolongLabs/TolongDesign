@@ -16,6 +16,9 @@ category_tags: ['icon-library', 'react', 'svg', 'tree-shaking', 'mcp']
 best_for:
   ['react applications', 'outline and filled pairs', 'agent icon lookup']
 stack: ['react']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [launcher, productivity, extensions, desktop]
 best_for: [developer shortcuts, app search, desktop workflows]
 stack: []
+execution_mode: reference
+surface: ['desktop']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

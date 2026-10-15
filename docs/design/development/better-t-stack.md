@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [cli, scaffolding, typescript, full-stack, mcp]
 best_for: [project initialization, full-stack typescript, agent scaffolding]
-stack: [typescript, nextjs, hono, drizzle, tailwind]
+stack: ['typescript', 'nextjs', 'hono', 'drizzle', 'tailwind']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -13,7 +13,10 @@ license: Apache-2.0
 category_tags:
   [react, tailwind, dashboards, charts, analytics, data-visualization]
 best_for: [dashboards, internal tools, analytics, data visualization]
-stack: [react, tailwind]
+stack: ['react', 'tailwind']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

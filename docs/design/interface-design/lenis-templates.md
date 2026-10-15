@@ -16,6 +16,9 @@ license: unknown
 category_tags: [templates, framer, motion]
 best_for: [framer template discovery, scroll-motion references]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-11
 ---

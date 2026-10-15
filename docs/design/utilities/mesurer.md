@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [measurement, annotation, browser-extension, react]
 best_for: [spacing audits, visual QA, design feedback]
-stack: [react, typescript]
+stack: ['react', 'typescript']
+execution_mode: package
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

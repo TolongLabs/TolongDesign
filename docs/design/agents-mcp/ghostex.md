@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [coding-agents, orchestration, desktop]
 best_for: ['persistent agent sessions', 'concurrent coding work']
-stack: [rust, gpui]
+stack: ['rust', 'gpui']
+execution_mode: reference
+surface: ['development', 'desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

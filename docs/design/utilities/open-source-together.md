@@ -15,6 +15,9 @@ license: unknown
 category_tags: [open-source, projects, contributors, discovery]
 best_for: [finding open-source projects, contributor discovery]
 stack: []
+execution_mode: reference
+surface: ['development']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

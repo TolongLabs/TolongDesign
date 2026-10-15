@@ -14,7 +14,10 @@ open_source: true
 license: custom
 category_tags: [motion, easing, css, springs, bezier, transitions, generator]
 best_for: [css springs, custom cubic-bezier curves, linear easing generator]
-stack: [css, tailwind]
+stack: ['css', 'tailwind']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

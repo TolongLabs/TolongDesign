@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [image, rendering, motion]
 best_for: [rendered image experiments, motion previews]
-stack: [nuxt, vue]
+stack: ['nuxt', 'vue']
+execution_mode: browser-app
+surface: ['video']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

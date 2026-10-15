@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['hosting', 'deployment', 'ci-cd', 'frontend']
 best_for: ['nextjs apps', 'preview deployments', 'frontend delivery']
 stack: ['nextjs', 'react', 'nodejs']
+execution_mode: mcp-skill
+surface: ['hosting']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

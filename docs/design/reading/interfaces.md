@@ -20,7 +20,10 @@ best_for:
     interactive motion breakdowns,
     subtle ui polish
   ]
-stack: [react, css, framer-motion]
+stack: ['react', 'css', 'motion']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

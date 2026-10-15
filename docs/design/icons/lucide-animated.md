@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [icons, animation, lucide, motion, shadcn]
 best_for: [micro-interactions, animated icons, web apps, shadcn-ui]
-stack: [react, motion, tailwind]
+stack: ['react', 'motion', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

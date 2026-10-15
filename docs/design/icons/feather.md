@@ -15,6 +15,9 @@ category_tags: ['icon-library', 'svg', 'javascript', 'outline']
 best_for:
   ['minimal interfaces', 'lightweight outline symbols', 'customized svg']
 stack: ['javascript', 'svg']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

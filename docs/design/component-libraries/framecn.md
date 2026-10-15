@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [video, editframe, react, shadcn, motion]
 best_for: [programmatic video, motion graphics, video exports]
-stack: [react, editframe, tailwind]
+stack: ['react', 'editframe', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['video']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

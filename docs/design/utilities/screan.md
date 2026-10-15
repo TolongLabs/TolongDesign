@@ -15,6 +15,9 @@ license: MIT
 category_tags: [app-store, screenshots, mockups]
 best_for: [app-store listings, product launch graphics, localized screenshots]
 stack: []
+execution_mode: browser-app
+surface: ['mobile-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

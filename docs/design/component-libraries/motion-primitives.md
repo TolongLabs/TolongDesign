@@ -13,7 +13,10 @@ license: MIT
 category_tags:
   [react, motion, animation, tailwind, micro-interactions, components]
 best_for: [micro-interactions, text effects, animated UI, spring physics]
-stack: [react, nextjs, tailwind, motion]
+stack: ['react', 'nextjs', 'tailwind', 'motion']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -20,7 +20,10 @@ best_for:
     high-resolution still exports,
     social media demo graphics
   ]
-stack: [react, nextjs, typescript, tailwind]
+stack: ['react', 'nextjs', 'typescript', 'tailwind']
+execution_mode: browser-app
+surface: ['video', 'web-asset']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['css', 'javascript', 'react', 'tutorials']
 best_for: ['css mechanics', 'react learning', 'interactive demos']
 stack: ['css', 'javascript', 'react']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

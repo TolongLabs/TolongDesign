@@ -14,7 +14,10 @@ open_source: false
 license: proprietary
 category_tags: [motion, animation, svg, morphing, math, icons, guide]
 best_for: [icon morphing mechanics, svg path interpolation, animation theory]
-stack: [svg, webgl, canvas, javascript]
+stack: ['svg', 'webgl', 'canvas', 'javascript']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -13,7 +13,10 @@ license: MIT
 category_tags:
   [logging, observability, structured-errors, typescript, ai-agents]
 best_for: [wide event logging, agent-driven debugging, full-stack tracing]
-stack: [typescript, nodejs, nextjs, nuxt, hono]
+stack: ['typescript', 'nodejs', 'nextjs', 'nuxt', 'hono']
+execution_mode: package
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

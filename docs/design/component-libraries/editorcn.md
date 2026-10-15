@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [editor, tiptap, rich-text, shadcn, react]
 best_for: [cms editors, note taking, comments and composers]
-stack: [react, tiptap, tailwind]
+stack: ['react', 'tiptap', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

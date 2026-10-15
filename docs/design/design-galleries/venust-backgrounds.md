@@ -15,6 +15,9 @@ license: CC0-1.0
 category_tags: [backgrounds, ai-generated, cc0]
 best_for: [free commercial backgrounds, hero mockup exploration]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

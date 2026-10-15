@@ -15,6 +15,9 @@ category_tags: ['accessibility', 'components', 'patterns', 'html']
 best_for:
   ['accessible interface patterns', 'semantic markup', 'interaction behavior']
 stack: ['html', 'css', 'javascript']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

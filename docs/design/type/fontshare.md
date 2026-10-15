@@ -15,6 +15,9 @@ license: unknown
 category_tags: [fonts, typography, commercial-use, font-pairing]
 best_for: [web typography, font discovery, pairing ideas]
 stack: []
+execution_mode: reference
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, loader, spinner, oklab, css-animation]
 best_for: [loading indicators, chat feeds, async ui status]
-stack: [react]
+stack: ['react']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

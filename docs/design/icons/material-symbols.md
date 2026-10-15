@@ -12,7 +12,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [icons, variable-fonts, google, ui-icons, design-system]
 best_for: [web applications, dashboards, cross-platform apps]
-stack: [css, react, vue, web-components]
+stack: ['css', 'react', 'vue', 'web-components']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

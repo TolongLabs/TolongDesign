@@ -25,7 +25,10 @@ best_for:
     documentation snippets,
     presentation slides
   ]
-stack: [nextjs, react, tailwind]
+stack: ['nextjs', 'react', 'tailwind']
+execution_mode: browser-app
+surface: ['og-image']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

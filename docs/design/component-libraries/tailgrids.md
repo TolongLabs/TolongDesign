@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [tailwind, components, blocks, responsive, ui-kit, figma]
 best_for: [landing pages, marketing websites, application dashboards]
-stack: [tailwind, react, vue, html]
+stack: ['tailwind', 'react', 'vue', 'html']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

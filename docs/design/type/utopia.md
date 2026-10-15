@@ -14,7 +14,10 @@ open_source: false
 license: unknown
 category_tags: [fluid-design, typography, css, responsive, calculator]
 best_for: [fluid type scales, responsive spacing, CSS clamp values]
-stack: [css]
+stack: ['css']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [color-picker, oklch, oklab, color-spaces, css, evil-martians]
 best_for: [accessible palettes, wide gamut colors, design systems, css styling]
-stack: [css]
+stack: ['css']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

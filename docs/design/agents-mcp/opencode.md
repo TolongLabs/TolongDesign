@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [ai, terminal, cli, agent, coding, mcp]
 best_for: [terminal coding, repo refactoring, interactive ai assistance]
-stack: [typescript, nodejs, bun]
+stack: ['typescript', 'nodejs', 'bun']
+execution_mode: mcp-skill
+surface: ['cli-tui', 'development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

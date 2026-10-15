@@ -13,7 +13,10 @@ license: MIT
 category_tags: [shaders, webgpu, wgsl, compute-shaders, playground, gpgpu]
 best_for:
   [webgpu experimentation, wgsl compute shaders, particle systems, simulations]
-stack: [wgsl, webgpu]
+stack: ['wgsl', 'webgpu']
+execution_mode: browser-app
+surface: ['web-3d']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

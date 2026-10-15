@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [education, interface-design, interaction, articles]
 best_for: [interface craft study, interaction references]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

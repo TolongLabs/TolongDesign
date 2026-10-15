@@ -13,7 +13,10 @@ open_source: false
 license: unknown
 category_tags: [ui, accessibility, components, interaction, guides]
 best_for: [component state checklists, frontend implementation guidance]
-stack: [html, react]
+stack: ['html', 'react']
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

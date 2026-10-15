@@ -15,6 +15,9 @@ license: proprietary
 category_tags: ['whiteboard', 'canvas', 'react', 'sdk']
 best_for: ['custom canvas apps', 'diagrams', 'collaborative whiteboards']
 stack: ['react', 'typescript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

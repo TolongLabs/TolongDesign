@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [mobile-ui, ios, android, interface-patterns, ux-design]
 best_for: [mobile interface patterns, ios app navigation, mobile checkout flows]
 stack: []
+execution_mode: reference
+surface: ['reference', 'mobile-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

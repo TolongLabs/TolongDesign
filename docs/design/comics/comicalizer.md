@@ -20,7 +20,10 @@ best_for:
     panel layout studies,
     story beats for social posts
   ]
-stack: [browser, threejs]
+stack: ['browser', 'threejs']
+execution_mode: browser-app
+surface: ['comics']
+status: active
 agent_friendly: true
 last_verified: 2026-10-14
 ---

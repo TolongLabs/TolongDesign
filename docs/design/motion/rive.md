@@ -16,7 +16,10 @@ category_tags:
   [motion, animation, vector, state-machine, runtime, interactive, 2d]
 best_for:
   [interactive vector graphics, state machines, game UI, micro-interactions]
-stack: [react, vue, webgl, canvas, flutter, ios, android]
+stack: ['react', 'vue', 'webgl', 'canvas', 'flutter', 'ios', 'android']
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

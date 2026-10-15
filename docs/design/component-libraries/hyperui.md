@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [tailwind, components, open-source, copy-paste, alpinejs]
 best_for: [marketing sites, ecommerce, multi-framework projects]
-stack: [tailwind, html, alpinejs, react, vue]
+stack: ['tailwind', 'html', 'alpinejs', 'react', 'vue']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

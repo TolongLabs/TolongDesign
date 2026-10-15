@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [website-builder, visual-design, publishing, prototypes]
 best_for: [marketing sites, portfolios, visual publishing]
 stack: []
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

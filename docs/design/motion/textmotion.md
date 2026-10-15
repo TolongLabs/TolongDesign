@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [text-animation, micro-interactions, accessibility]
 best_for: [status labels, counters, button feedback]
-stack: [react, vue, solid, svelte]
+stack: ['react', 'vue', 'solid', 'svelte']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

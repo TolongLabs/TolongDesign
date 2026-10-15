@@ -15,6 +15,9 @@ license: MIT
 category_tags: ['tailwind', 'components', 'themes', 'mcp']
 best_for: ['fast tailwind ui', 'themeable websites']
 stack: ['tailwind']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

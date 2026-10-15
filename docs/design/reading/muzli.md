@@ -17,6 +17,9 @@ category_tags:
 best_for:
   [daily design pulse, discovering emerging web projects, visual trend tracking]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

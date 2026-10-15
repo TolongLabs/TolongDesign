@@ -14,7 +14,10 @@ open_source: false
 license: 'unknown'
 category_tags: [react, tailwind, motion, landing-pages]
 best_for: [animated landing pages, marketing blocks]
-stack: [react, tailwind, framer-motion]
+stack: ['react', 'tailwind', 'motion']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

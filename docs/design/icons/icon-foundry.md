@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [icons, search-engine, svg, figma-plugin, aggregation]
 best_for: [icon search, cross-library comparison, svg copying, brand logos]
 stack: []
+execution_mode: snippet
+surface: ['web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

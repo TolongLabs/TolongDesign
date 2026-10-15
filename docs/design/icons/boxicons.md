@@ -16,6 +16,9 @@ category_tags: ['icon-library', 'svg', 'react', 'vue', 'svelte', 'brands']
 best_for:
   ['large icon catalogs', 'multiple visual weights', 'framework components']
 stack: ['react', 'vue', 'svelte', 'javascript']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

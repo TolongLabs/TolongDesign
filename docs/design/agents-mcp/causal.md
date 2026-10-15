@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [ai, canvas, notes, planning, mcp, desktop]
 best_for: [spatial ideation, design planning, visual project mapping]
 stack: []
+execution_mode: reference
+surface: ['reference', 'desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

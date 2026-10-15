@@ -14,7 +14,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [react, shadcn, buttons, motion]
 best_for: [tactile buttons, destructive confirmations, playful interactions]
-stack: [react, tailwind, shadcn]
+stack: ['react', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

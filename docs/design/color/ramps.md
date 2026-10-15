@@ -19,7 +19,10 @@ best_for:
     dark mode palettes,
     agent workflows
   ]
-stack: [css, tailwind]
+stack: ['css', 'tailwind']
+execution_mode: mcp-skill
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

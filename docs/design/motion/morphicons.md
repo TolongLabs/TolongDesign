@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [icons, svg, animation]
 best_for: [icon state changes, navigation controls, status feedback]
-stack: [react, vue, svelte, react-native, astro]
+stack: ['react', 'vue', 'svelte', 'react-native', 'astro']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

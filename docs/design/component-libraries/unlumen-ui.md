@@ -14,7 +14,10 @@ open_source: false
 license: 'proprietary'
 category_tags: [react, motion, shadcn, components]
 best_for: [polished react interfaces, interactive components]
-stack: [react, nextjs, tailwind, shadcn]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

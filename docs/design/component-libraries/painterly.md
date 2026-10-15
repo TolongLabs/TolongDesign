@@ -15,6 +15,9 @@ license: unknown
 category_tags: ['react', 'canvas', 'loaders']
 best_for: ['artistic loader effects']
 stack: ['react']
+execution_mode: snippet
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

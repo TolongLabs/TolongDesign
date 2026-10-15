@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [agent-skill, web-design, audit]
 best_for: [landing pages, design audits, visual redesigns]
-stack: [react, tailwind]
+stack: ['react', 'tailwind']
+execution_mode: mcp-skill
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

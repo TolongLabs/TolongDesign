@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, tailwind, shadcn, components, dashboards, templates]
 best_for: [web applications, dashboards, shadcn projects]
-stack: [react, nextjs, tailwind, shadcn]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: registry
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

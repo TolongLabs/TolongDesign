@@ -19,7 +19,10 @@ best_for:
     procedural textures,
     material blending
   ]
-stack: [glsl, threejs]
+stack: ['glsl', 'threejs']
+execution_mode: browser-app
+surface: ['web-3d']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: Apache-2.0
 category_tags: [screenshots, mockups, device-frames, browser]
 best_for: [product screenshots, store images, presentation mockups]
 stack: []
+execution_mode: browser-app
+surface: ['mobile-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

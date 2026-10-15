@@ -14,7 +14,10 @@ open_source: true
 license: AGPL-3.0
 category_tags: [web-scraping, markdown, mcp]
 best_for: ['web extraction for agents', 'structured page data']
-stack: [rust, cli, mcp]
+stack: ['rust', 'cli', 'mcp']
+execution_mode: mcp-skill
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [design-systems, catalog, agent-context]
 best_for: ['known visual references', 'agent design rules']
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

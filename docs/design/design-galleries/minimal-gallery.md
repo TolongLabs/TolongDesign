@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [minimalism, web-inspiration, curated-sites]
 best_for: [minimal website research, restrained visual direction]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

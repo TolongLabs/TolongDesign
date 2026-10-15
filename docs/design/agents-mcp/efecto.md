@@ -13,7 +13,10 @@ open_source: false
 license: proprietary
 category_tags: [ai, canvas, design-tool, mcp, tailwind, ui]
 best_for: [agent web design, canvas prototyping, mcp ui generation]
-stack: [react, tailwind]
+stack: ['react', 'tailwind']
+execution_mode: mcp-skill
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

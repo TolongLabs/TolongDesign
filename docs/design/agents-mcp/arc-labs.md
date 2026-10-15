@@ -15,7 +15,10 @@ license: proprietary
 category_tags: [ai, careers, resume-builder, interview-prep, dashboard]
 best_for:
   [technical interview simulation, resume generation, candidate preparation]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind']
+execution_mode: browser-app
+surface: ['pdf']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

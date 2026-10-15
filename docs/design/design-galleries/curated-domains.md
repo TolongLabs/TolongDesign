@@ -15,8 +15,11 @@ license: 'unknown'
 category_tags: ['domains', 'branding', 'naming']
 best_for: ['domain-name inspiration', 'brand naming']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
-last_verified: 2026-10-07
+last_verified: 2026-10-15
 ---
 
 # Curated Domains
@@ -93,6 +96,12 @@ Access and pricing were checked on 2026-10-07.
 
 ## Agent notes
 
+**Availability recheck — 2026-10-15 (GMT+8):** The homepage returns HTTP 200 and
+its domain extensions and linked naming examples are browsable. It still says
+"full site coming soon" and "subscribe monthly". Active refers only to this
+partial public directory, not a verified subscription flow. Other pricing,
+licensing and feature statements retain their separately dated source checks.
+
 No API, CLI or agent integration was found. The official page indicates the full
 site is still forthcoming.
 
@@ -110,6 +119,8 @@ registration and trademark details independently.
 
 ## Sources
 
+- [Primary URL availability recheck](https://curated.domains/) — checked
+  2026-10-15; availability and product identity only.
 - [Official site](https://curated.domains/) — checked 2026-10-07; homepage
   returned HTTP 200
 - [Pricing route](https://curated.domains/pricing) — checked 2026-10-07; HTTP

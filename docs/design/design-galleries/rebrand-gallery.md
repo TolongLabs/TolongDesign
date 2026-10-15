@@ -15,6 +15,9 @@ license: 'unknown'
 category_tags: ['branding', 'brand-identity', 'visual-inspiration']
 best_for: ['brand refresh research', 'identity systems']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

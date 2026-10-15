@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [email, react-email, mjml, jsx-email, shadcn]
 best_for: [transactional emails, onboarding emails, newsletter templates]
-stack: [react, react-email, mjml]
+stack: ['react', 'react-email', 'mjml', 'shadcn']
+execution_mode: registry
+surface: ['email']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

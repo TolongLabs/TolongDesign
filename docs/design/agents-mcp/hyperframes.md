@@ -14,7 +14,10 @@ open_source: true
 license: Apache-2.0
 category_tags: [video, html, agent-skills]
 best_for: ['programmatic marketing videos', 'agent-generated motion']
-stack: [html, javascript, gsap]
+stack: ['html', 'javascript', 'gsap']
+execution_mode: mcp-skill
+surface: ['video']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

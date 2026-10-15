@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [pdf, takumi, forme, react, shadcn]
 best_for: [invoices, reports, document generation]
-stack: [react, takumi, forme]
+stack: ['react', 'takumi', 'forme', 'shadcn']
+execution_mode: registry
+surface: ['pdf']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

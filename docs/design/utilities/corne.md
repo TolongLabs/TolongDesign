@@ -14,7 +14,10 @@ open_source: true
 license: MIT
 category_tags: [css, corners, ui, effects]
 best_for: [smooth corners, squircle treatments, border styling]
-stack: [javascript, react, vue, svelte]
+stack: ['javascript', 'react', 'vue', 'svelte']
+execution_mode: package
+surface: ['web-ui']
+status: degraded
 agent_friendly: true
 last_verified: 2026-10-07
 ---

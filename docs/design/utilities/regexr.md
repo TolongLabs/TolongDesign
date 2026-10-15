@@ -13,7 +13,10 @@ license: GPL-3.0
 category_tags: [regex, testing, developer-tools, parsing, utilities]
 best_for:
   [regular expressions, regex debugging, pattern testing, syntax reference]
-stack: [javascript, regex]
+stack: ['javascript', 'regex']
+execution_mode: browser-app
+surface: ['development']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

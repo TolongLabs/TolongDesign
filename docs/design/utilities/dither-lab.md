@@ -15,6 +15,9 @@ license: unknown
 category_tags: [dithering, image, effects]
 best_for: [vintage image treatments, pixel art, photo experiments]
 stack: []
+execution_mode: browser-app
+surface: ['web-asset']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

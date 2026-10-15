@@ -16,6 +16,9 @@ category_tags: ['gallery', 'app-icons', 'inspiration', 'mobile']
 best_for:
   ['mobile app icon research', 'palette references', 'app store visual audits']
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

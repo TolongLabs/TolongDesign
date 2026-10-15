@@ -17,7 +17,10 @@ best_for:
     agent-driven qa,
     multi-platform test automation
   ]
-stack: [typescript, python, java]
+stack: ['typescript', 'python', 'java']
+execution_mode: mcp-skill
+surface: ['development', 'mobile-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

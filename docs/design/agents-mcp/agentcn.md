@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [agent-recipes, react, registry]
 best_for: ['agent capabilities for apps', 'workflow examples']
-stack: [typescript, react, eve, mastra]
+stack: ['typescript', 'react', 'eve', 'mastra']
+execution_mode: registry
+surface: ['development']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

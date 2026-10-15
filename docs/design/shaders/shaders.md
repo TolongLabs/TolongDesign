@@ -15,7 +15,10 @@ open_source: true
 license: MIT
 category_tags: [webgpu, shaders, components, graphics, canvas]
 best_for: [webgpu effects, shader backgrounds, interactive graphics]
-stack: [react, vue, svelte, solid, javascript, framer]
+stack: ['react', 'vue', 'svelte', 'solid', 'javascript', 'framer']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-11
 ---

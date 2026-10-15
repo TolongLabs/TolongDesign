@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [ai, website-design, landing-pages, image-generation]
 best_for: [prompt-generated marketing pages, design exploration]
 stack: []
+execution_mode: browser-app
+surface: ['web-ui']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [web-inspiration, daily-curation, startup-sites]
 best_for: [current product websites, daily web-design discovery]
 stack: []
+execution_mode: reference
+surface: ['reference']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

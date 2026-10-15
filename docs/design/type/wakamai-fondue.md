@@ -15,6 +15,9 @@ license: Apache-2.0
 category_tags: [fonts, typography, variable-fonts, open-type, inspection]
 best_for: [font feature inspection, variable axis review, specimen diagnostics]
 stack: []
+execution_mode: browser-app
+surface: ['development']
+status: active
 agent_friendly: false
 last_verified: 2026-10-07
 ---

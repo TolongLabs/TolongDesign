@@ -13,7 +13,10 @@ open_source: true
 license: MIT
 category_tags: [shadcn, registry-template, fumadocs, nextjs, llms-txt]
 best_for: [custom component registries, design systems, open source kits]
-stack: [react, nextjs, tailwind]
+stack: ['react', 'nextjs', 'tailwind', 'shadcn']
+execution_mode: snippet
+surface: ['development', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

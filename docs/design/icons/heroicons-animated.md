@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [icons, animation, heroicons, motion, react]
 best_for: [micro-interactions, animated icons, landing pages, interactive ui]
-stack: [react, vue, svelte, motion]
+stack: ['react', 'vue', 'svelte', 'motion']
+execution_mode: package
+surface: ['web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

@@ -15,6 +15,9 @@ license: proprietary
 category_tags: [ai, prompts, ui, landing-pages, components, webgl]
 best_for: [prompt engineering, landing page sections, ai web generation]
 stack: []
+execution_mode: reference
+surface: ['reference', 'web-ui']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---

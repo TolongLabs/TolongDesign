@@ -12,7 +12,10 @@ open_source: true
 license: MIT
 category_tags: [react, terminal, retro, dos, tui]
 best_for: [retro terminal web apps, developer portals, cli tools]
-stack: [react, nextjs]
+stack: ['react', 'nextjs']
+execution_mode: package
+surface: ['web-ui', 'desktop']
+status: active
 agent_friendly: true
 last_verified: 2026-10-07
 ---
