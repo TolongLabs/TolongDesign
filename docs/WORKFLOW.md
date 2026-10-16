@@ -47,9 +47,12 @@ recorded, and assumptions that could change the design have an explicit owner.
 
 ## 2. Reference evidence
 
-Decompose the brief into targeted searches. Search is literal AND matching over
-full registered docs and metadata, not semantic ranking; a whole paragraph will
-usually match nothing. Keep references separate from implementation tools.
+Decompose the brief into targeted searches. Search uses local, field-weighted
+keyword ranking over registered docs and metadata. Partial multiword matches are
+eligible; it is not vector or LLM-based semantic search. Narrow a shortlist with
+execution mode, output surface, stack and paywall filters. Keep references
+separate from implementation tools. The [TRD](./TRD.md#search-and-ranking)
+defines the exact scoring and filter behavior.
 
 ```bash
 tolongdesign search landing --section design-galleries

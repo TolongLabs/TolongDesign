@@ -36,8 +36,17 @@ const TOP_LEVEL_DOCS = [
   'docs/PLAYBOOK.md',
   'docs/WORKFLOW.md',
   'docs/CLI.md',
-  'docs/METADATA.md'
+  'docs/METADATA.md',
+  'docs/PRD.md',
+  'docs/TRD.md'
 ] as const
+const DIAGRAM_FILES = [
+  'docs/diagrams/README.md',
+  'docs/diagrams/verification.json',
+  ...['overview', 'system-architecture', 'retrieval-sequence', 'maintenance-workflow', 'release-workflow'].flatMap(
+    (name) => ['json', 'svg', 'html'].map((extension) => `docs/diagrams/${name}.${extension}`)
+  )
+]
 const SKILL_FILES = ['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'] as const
 const MARKDOWN_ROOTS = ['docs/design', 'docs/scenarios', 'docs/research'] as const
 
@@ -450,7 +459,7 @@ function writeStagedPackageJson(packageDir: string, version: string): void {
     version,
     private: true,
     type: 'module',
-    description: "TolongLabs' private web-design reference CLI and curated documentation.",
+    description: "TolongLabs' private design reference CLI and curated documentation.",
     scripts: { design: 'bun dist/design.js' },
     bin: { [BINARY_NAME]: 'dist/design.js' },
     engines: { bun: RUNTIME_REQUIREMENT }
@@ -499,7 +508,7 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
   for (const path of ['scripts/design.ts', 'scripts/design-lib.ts', 'data/catalogue.json', 'data/index.json']) {
     inspectSourcePath(sourceRoot, path, 'file')
   }
-  for (const path of TOP_LEVEL_DOCS) inspectSourcePath(sourceRoot, path, 'file')
+  for (const path of [...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) inspectSourcePath(sourceRoot, path, 'file')
   for (const path of MARKDOWN_ROOTS) inspectSourcePath(sourceRoot, path, 'directory')
   for (const path of SKILL_FILES) inspectSourcePath(sourceRoot, path, 'file')
   validateYamlLicense(sourceRoot)
@@ -532,7 +541,7 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
     packageDir = mkdtempSync(join(outputDirectory, `.tolong-design-${releaseMetadata.version}-stage-`))
     writeStagedPackageJson(packageDir, releaseMetadata.version)
     copySourceFile(sourceRoot, packageDir, 'docs/CLI.md', 'README.md')
-    for (const file of ['data/catalogue.json', 'data/index.json', ...TOP_LEVEL_DOCS]) {
+    for (const file of ['data/catalogue.json', 'data/index.json', ...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) {
       copySourceFile(sourceRoot, packageDir, file)
     }
     copyMarkdownTree(sourceRoot, packageDir, markdownFiles)

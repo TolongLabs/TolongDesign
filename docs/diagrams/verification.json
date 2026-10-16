@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "diagrams": [
+    {
+      "name": "overview",
+      "type": "workflow",
+      "source_revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "generator": "Archify 3.0.1",
+      "specification_sha256": "30e35fb6ad07f1ac2ebe82fd903ca69a879376c67a6beaa3458c14bc76e10681",
+      "html_sha256": "7f253d32c66cc11cfc04d24684168c629945fb3893f27d73cc9b9fe89215347f",
+      "svg_sha256": "6de2227449ccb658f80f3eed57091b463f3542ec5a9ada91963f082b30521f5d",
+      "validation": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "visual_review": "passed",
+      "visual_review_scope": "Selected 1440x900 and 2048x1320 captures covering light and dark themes"
+    },
+    {
+      "name": "system-architecture",
+      "type": "architecture",
+      "source_revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "generator": "Archify 3.0.1",
+      "specification_sha256": "0aad245514e6dbfbd9165b9349878263c6224eb6c4885e675accf6686f64aec4",
+      "html_sha256": "39526f6dcee33b62b713beb306066c7cc3c08a76acede51fc5783e4db028cc23",
+      "svg_sha256": "62ad0f353b95f4d7f8c0b16f7107ccd516f1ffced8d9ad8999e9225359c405ac",
+      "validation": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "visual_review": "passed",
+      "visual_review_scope": "Selected 1440x900 and 2048x1320 captures covering light and dark themes"
+    },
+    {
+      "name": "retrieval-sequence",
+      "type": "sequence",
+      "source_revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "generator": "Archify 3.0.1",
+      "specification_sha256": "acfbfeadc6c60595da7eb75ebf44af3c6ed402c4a805d0f811ca4adf63994a8a",
+      "html_sha256": "8126af8f7ee7500bb7fe6f715385a8d3ebf5a833de15bbddaf4d40d17c44c994",
+      "svg_sha256": "8d0038b22f1b8747d93d863e2b9199bb878d2f4c410ee407285a2de1af063577",
+      "validation": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "visual_review": "passed",
+      "visual_review_scope": "Selected 1440x900 and 2048x1320 captures covering light and dark themes"
+    },
+    {
+      "name": "maintenance-workflow",
+      "type": "workflow",
+      "source_revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "generator": "Archify 3.0.1",
+      "specification_sha256": "134cf8c0a4dda6bdee209c2c2f64b4d2615f55a59d0a85979568c783581cb160",
+      "html_sha256": "a2051c7b8d31a615fcf5b9a02a13e673b7f12ccd94a0109aef76bc837ed9fa3d",
+      "svg_sha256": "e684059fc2cc2a83dd8537042f4a76a6fa8d3922eb82f26bc8abbafadeb82cc1",
+      "validation": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "visual_review": "passed",
+      "visual_review_scope": "Selected 1440x900 and 2048x1320 captures covering light and dark themes"
+    },
+    {
+      "name": "release-workflow",
+      "type": "workflow",
+      "source_revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "generator": "Archify 3.0.1",
+      "specification_sha256": "751388a11338c149411265370d81dc2268740ab0eb597f6de2797d606d26bbba",
+      "html_sha256": "700080b4287d9faa16c8e68db6253fd9c3de2b4d36b9f94b7bc876b66e56f0d2",
+      "svg_sha256": "c0ea9e2a0c9eece891c91d5c563eafebffaa4fd012c1fd27de66a7cae754f20b",
+      "validation": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "visual_review": "passed",
+      "visual_review_scope": "Selected 1440x900 and 2048x1320 captures covering light and dark themes"
+    }
+  ]
+}

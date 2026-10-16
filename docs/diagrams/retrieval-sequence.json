@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Search request: successful retrieval",
+    "output": ".archify/sequence-retrieval-20261015-212501/retrieval-sequence.html",
+    "quality_profile": "showcase",
+    "column_fit": "spread",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/TolongLabs/TolongDesign.git",
+      "revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "provider": "github",
+      "link_mode": "web"
+    }
+  },
+  "participants": [
+    {
+      "id": "caller",
+      "type": "external",
+      "label": "Caller",
+      "sublabel": "Human / agent",
+      "sources": [{ "path": "scripts/design.ts", "line": 29, "end_line": 44 }]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "CLI",
+      "sublabel": "Parse + output",
+      "sources": [
+        { "path": "scripts/design.ts", "line": 47, "end_line": 99 },
+        { "path": "scripts/design.ts", "line": 196, "end_line": 233 }
+      ]
+    },
+    {
+      "id": "loader",
+      "type": "backend",
+      "label": "Loader",
+      "sublabel": "Read + hash",
+      "sources": [{ "path": "scripts/design-lib.ts", "line": 205, "end_line": 282 }]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "Files",
+      "sublabel": "Local sources",
+      "sources": [{ "path": "scripts/design-lib.ts", "line": 238, "end_line": 282 }]
+    },
+    {
+      "id": "ranker",
+      "type": "backend",
+      "label": "Ranker",
+      "sublabel": "In memory",
+      "sources": [{ "path": "scripts/design-lib.ts", "line": 403, "end_line": 523 }]
+    }
+  ],
+  "segments": [
+    { "from": 150, "to": 185, "label": "Request" },
+    { "from": 186, "to": 390, "label": "Registered source docs" },
+    { "from": 391, "to": 455, "label": "Filter + rank" },
+    { "from": 456, "to": 505, "label": "Output" }
+  ],
+  "messages": [
+    { "id": "query", "from": "caller", "to": "cli", "y": 160, "label": "query + flags", "variant": "emphasis" },
+    { "id": "load", "from": "cli", "to": "loader", "y": 195, "label": "load docs" },
+    { "id": "catalogue", "from": "loader", "to": "files", "y": 230, "label": "catalogue" },
+    { "id": "entries", "from": "files", "to": "loader", "y": 265, "label": "entries", "variant": "return" },
+    { "id": "read-docs", "from": "loader", "to": "files", "y": 300, "label": "in-root docs" },
+    { "id": "bytes", "from": "files", "to": "loader", "y": 335, "label": "UTF-8 bytes", "variant": "return" },
+    { "id": "resources", "from": "loader", "to": "cli", "y": 370, "label": "docs + SHA", "variant": "return" },
+    { "id": "score", "from": "cli", "to": "ranker", "y": 405, "label": "filter, rank, limit" },
+    { "id": "matches", "from": "ranker", "to": "cli", "y": 440, "label": "matches", "variant": "return" },
+    { "id": "output", "from": "cli", "to": "caller", "y": 475, "label": "results", "variant": "return" }
+  ],
+  "activations": [
+    { "participant": "cli", "from": 160, "to": 485, "type": "backend" },
+    { "participant": "loader", "from": 195, "to": 377, "type": "backend" },
+    { "participant": "ranker", "from": 405, "to": 447, "type": "backend" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Source authority",
+      "items": [
+        "Catalogue registration selects Markdown files; data/index.json is not the runtime search index.",
+        "Filters run before scoring, and the ranker performs no filesystem I/O."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Failure paths",
+      "items": [
+        "Invalid command arguments exit 2; bad catalogue data or unsafe paths exit 1.",
+        "No match is a successful empty result, not a data failure."
+      ]
+    }
+  ]
+}

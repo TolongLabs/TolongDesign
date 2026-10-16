@@ -1,136 +1,85 @@
-<a id="top"></a>
-
 <div align="center">
-  <img src="docs/assets/tolongdesign-hero.png" alt="An original design-reference atelier with interface frames, material swatches, and sculptural geometry" width="100%" />
+  <img src="docs/assets/tolongdesign-hero.png" alt="An original design atelier with interface frames, material swatches and sculptural geometry" width="100%" />
   <h1>TolongDesign</h1>
-  <p><strong>Find the right design resource. Give your agent the full context.</strong><br />TolongLabs' private catalogue, CLI, and project design workflow.</p>
-  <p>
-    <img src="https://img.shields.io/badge/Bun-1.4%2B-14151A?style=for-the-badge&logo=bun&logoColor=white" alt="Bun 1.4 or newer" />
-    <img src="https://img.shields.io/badge/TypeScript-CLI-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript CLI" />
-    <img src="https://img.shields.io/badge/Markdown-source_docs-475569?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown source documents" />
-    <img src="https://img.shields.io/badge/GitHub_Actions-release-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions release pipeline" />
-    <img src="https://img.shields.io/badge/Distribution-private-9F4561?style=for-the-badge&logo=github&logoColor=white" alt="Private distribution" />
-  </p>
-  <p><a href="docs/CLI.md"><strong>Install</strong></a> · <a href="docs/WORKFLOW.md"><strong>Design workflow</strong></a> · <a href="docs/design/README.md"><strong>Browse resources</strong></a> · <a href="https://github.com/TolongLabs/TolongDesign/releases"><strong>Private releases</strong></a></p>
+  <p><strong>Find the right resource. Give your design agent the full context.</strong><br />TolongLabs’ private starting point for designing anything beautifully and professionally.</p>
+  <p><a href="docs/design/README.md">Browse</a> · <a href="docs/CLI.md">CLI guide</a> · <a href="docs/PRD.md">Product requirements</a> · <a href="docs/TRD.md">Technical reference</a></p>
 </div>
 
-<details>
-<summary><strong>Table of contents</strong></summary>
-<ol>
-  <li><a href="#quickstart">Quickstart</a></li>
-  <li><a href="#cli">CLI</a></li>
-  <li><a href="#agent-workflow">Agent workflow</a></li>
-  <li><a href="#catalogue">Catalogue</a></li>
-  <li><a href="#maintaining">Maintaining</a></li>
-</ol>
-</details>
+**441 resources · 18 sections · 132 creators.** Researched Markdown guides,
+local search, complete context packs and an evidence-led project workflow.
 
-## Quickstart
+## Start here
 
-**Requires:** Bun 1.4+ and GitHub access to this private repository. Follow
-[private installation](docs/CLI.md), then run from your project:
+**Requires:** Bun 1.4+ and GitHub access to this private repository.
 
 ```bash
-tolongdesign --version
-tolongdesign doctor --json
-tolongdesign search scroll --section motion --json
-tolongdesign context gsap saaspo --brief "Product landing page" --json
-```
-
-> Retrieval is local and read-only. Your coding agent designs the site;
-> TolongDesign supplies resources, complete docs, sources, and hashes.
-
-<details>
-<summary><strong>Using a checkout instead?</strong></summary>
-
-```bash
+gh repo clone TolongLabs/TolongDesign
+cd TolongDesign
 bun install --frozen-lockfile
 bun run design -- doctor --json
-bun run design -- search icons --paywall free --json
+bun run design -- search "smooth hero animation" --surface web-ui --format card
+bun run design -- context motion/gsap --brief "Product landing page" --json
 ```
 
-Use the absolute `scripts/design.ts` entrypoint from another project.
-[CLI guide](docs/CLI.md) covers installation, source selection, updates, and
-rollback.
+1. **Find** a shortlist with ranked search and filters.
+2. **Read** complete selected docs with `show` or `context`.
+3. **Make and verify** the work in your target project—not in this collection.
 
-</details>
+Prefer an installed CLI? Follow [private installation](docs/CLI.md). Releases
+are snapshots: published `v0.1.2` predates the newer retrieval features shown
+here. Use current `main` until a release includes them.
 
-## CLI
+## Choose your starting point
 
-| Command     | Result                                                                   |
-| ----------- | ------------------------------------------------------------------------ |
-| `search`    | Filter complete docs by words, section, stack, paywall, or agent support |
-| `show`      | Read one complete resource doc                                           |
-| `context`   | Export selected docs with source URLs, dates, and SHA-256 hashes         |
-| `doctor`    | Check installed version, resource root, integrity, and skill paths       |
-| `--version` | Print the package version                                                |
+| Need                  | Resources                                                                                                                                                                                                                              |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Interfaces            | [Components](docs/design/component-libraries/README.md) · [Interface design](docs/design/interface-design/README.md) · [Icons](docs/design/icons/README.md)                                                                            |
+| Visual craft          | [Type](docs/design/type/README.md) · [Colour](docs/design/color/README.md) · [Motion](docs/design/motion/README.md) · [3D](docs/design/3d/README.md) · [Shaders](docs/design/shaders/README.md)                                        |
+| Stories and media     | [Comics](docs/design/comics/README.md) · [Video and capture](docs/design/video-capture/README.md)                                                                                                                                      |
+| Research and planning | [Galleries](docs/design/design-galleries/README.md) · [Reading](docs/design/reading/README.md) · [Whiteboards](docs/design/whiteboard/README.md)                                                                                       |
+| Tools and delivery    | [Development](docs/design/development/README.md) · [Agents & MCP](docs/design/agents-mcp/README.md) · [Utilities](docs/design/utilities/README.md) · [Desktop](docs/design/desktop/README.md) · [Deploy](docs/design/deploy/README.md) |
 
-**Search is literal AND matching**, not semantic ranking. Split a rich brief
-into short queries. Use qualified IDs such as `motion/gsap` when needed.
+## From resource to finished work
 
-## Agent workflow
+[![Find resources, read full docs, agree a direction, make the work, inspect it, then deliver with evidence. Observed gaps return to implementation.](docs/diagrams/overview.svg)](docs/diagrams/overview.html)
 
-Point your agent at `design-project` using the paths from `doctor --json`. Keep
-implementation in the target project, not this collection.
+TolongDesign supplies knowledge. Your human or agent supplies judgment,
+implementation and rendered verification. Start with the
+[project workflow](docs/WORKFLOW.md); use the [playbook](docs/PLAYBOOK.md) for
+website-specific stack choices.
+[Diagram files and local viewing](docs/diagrams/README.md).
 
-[![Design workflow: the agent uses private source context, builds in the target project, and verifies the result](docs/assets/design-workflow.svg)](docs/assets/design-workflow.svg)
+## Need to know
 
-1. **Brief and references** — capture the use case, constraints, and real visual
-   evidence.
-2. **Direction and context** — agree on the narrative, then read complete
-   chosen-tool docs.
-3. **Build and review** — inspect desktop/mobile renders, motion, fallbacks, and
-   actual checks.
+| Question                   | Answer                                                                                                                                                         |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| What does search do?       | Local, field-weighted keyword ranking over registered docs. It is not vector search, an AI recommendation engine or a design generator.                        |
+| How do I narrow results?   | Use `--mode`, `--surface`, `--stack` and `--paywall`. Unreachable resources are hidden by default. [Metadata definitions](docs/METADATA.md).                   |
+| What does context include? | Complete selected Markdown, source URLs, verification dates and SHA-256 hashes. Search cards are only a shortlist.                                             |
+| What still needs checking? | Current APIs, prices, access, asset rights and actual output quality. Metadata and green tests are not guarantees.                                             |
+| Is it private?             | Yes. Retrieval is local and read-only. Installation uses authenticated private GitHub assets; resource tools and external agent services have their own terms. |
 
-> Check the first mobile screen, not only overflow. Preserve a baseline; use two
-> deliberate refinement passes before reporting unresolved gaps.
+## Keep the collection useful
 
-[Full workflow](docs/WORKFLOW.md) · [Design playbook](docs/PLAYBOOK.md) ·
-[Dictation acceptance brief](docs/scenarios/dictation-landing.md)
-
-## Catalogue
-
-**441 resources · 18 sections · 132 design engineers.** Each resource records
-usage, examples, pricing, licensing, agent notes, and sources.
-
-| Need                     | Start here                                                                                                        |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| Visual references        | [Design galleries](docs/design/design-galleries/README.md)                                                        |
-| UI and motion            | [Components](docs/design/component-libraries/README.md) · [Motion](docs/design/motion/README.md)                  |
-| Type, colour, and icons  | [Type](docs/design/type/README.md) · [Colour](docs/design/color/README.md) · [Icons](docs/design/icons/README.md) |
-| 3D and shaders           | [3D](docs/design/3d/README.md) · [Shaders](docs/design/shaders/README.md)                                         |
-| Comics and manga         | [Comics](docs/design/comics/README.md)                                                                            |
-| Agent and delivery tools | [Agents & MCP](docs/design/agents-mcp/README.md) · [Deploy](docs/design/deploy/README.md)                         |
-
-**Considering React Three Fiber?** Read
-[the guide](docs/design/3d/react-three-fiber.md). It composes Three.js scenes in
-React; it is not a shortcut to good art direction.
-
-[Full index](docs/design/README.md) · [People](docs/design/people.md) ·
-[Source catalogue](data/catalogue.json) · [Generated metadata](data/index.json)
-
-> Check current APIs, prices, and asset rights before client work. A
-> verification date or green test suite does not guarantee design quality.
-
-## Maintaining
+Edit source docs and catalogue records; never hand-edit generated indexes.
 
 ```bash
-bun test
-bun run check
 bun run index
+bun run check
 bun run format
+bun test
 ```
 
-- Edit source docs; regenerate indexes rather than hand-editing them.
-- Link third-party assets. Commit only original project artwork or permitted
-  code/docs.
-- Keep credentials, private source packs, and customer material out of public
-  distribution.
-- Read [AGENTS.md](AGENTS.md), the [tool template](templates/tool-doc.md), and
-  [contributing](.github/CONTRIBUTING.md).
+Read [AGENTS.md](AGENTS.md) and [contributing](.github/CONTRIBUTING.md) before
+maintenance. Link third-party assets; do not copy them into this repo or include
+credentials or customer material in releases.
 
-[Documentation map](docs/README.md) ·
-[Original asset provenance](docs/assets/README.md) ·
-[Designeer source](https://designeer.xyz)
+| Read next                           | Purpose                                                                    |
+| ----------------------------------- | -------------------------------------------------------------------------- |
+| [PRD](docs/PRD.md)                  | Users, scope, product requirements, quality bar and acceptance.            |
+| [TRD](docs/TRD.md)                  | Architecture, contracts, security, operations, testing and release design. |
+| [Documentation map](docs/README.md) | Usage guides, resource docs, research and maintenance references.          |
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+[People worth following](docs/design/people.md) ·
+[Original artwork provenance](docs/assets/README.md) ·
+[Catalogue source: Designeer](https://designeer.xyz)

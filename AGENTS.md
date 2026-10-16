@@ -98,13 +98,15 @@ bun run format              # prettier
 
 ## Documents
 
-| Read When                                           | Document                                          |
-| --------------------------------------------------- | ------------------------------------------------- |
-| Orienting in the repo, or using it on a project     | [docs/README.md](docs/README.md)                  |
-| Starting a new website design / choosing a stack    | [Design playbook](docs/PLAYBOOK.md)               |
-| Browsing every section with counts                  | [Design catalogue](docs/design/README.md)         |
-| Writing or refreshing a tool doc                    | [Tool doc template](templates/tool-doc.md)        |
-| Fanning research out to worker agents               | [Worker brief](templates/worker-brief.md)         |
-| Branching, committing, or opening a pull request    | [Contributing](.github/CONTRIBUTING.md)           |
-| Answering "which tools relate to X" across the repo | `graphify-out/GRAPH_REPORT.md`, `/graphify query` |
-| Refreshing the knowledge graph after doc changes    | `/graphify . --update`                            |
+| Read When                                                  | Document                                          |
+| ---------------------------------------------------------- | ------------------------------------------------- |
+| Orienting in the repo, or using it on a project            | [docs/README.md](docs/README.md)                  |
+| Changing product scope, requirements or acceptance         | [Product requirements](docs/PRD.md)               |
+| Changing retrieval, schemas, trust boundaries or packaging | [Technical reference](docs/TRD.md)                |
+| Starting a new website design / choosing a stack           | [Design playbook](docs/PLAYBOOK.md)               |
+| Browsing every section with counts                         | [Design catalogue](docs/design/README.md)         |
+| Writing or refreshing a tool doc                           | [Tool doc template](templates/tool-doc.md)        |
+| Fanning research out to worker agents                      | [Worker brief](templates/worker-brief.md)         |
+| Branching, committing, or opening a pull request           | [Contributing](.github/CONTRIBUTING.md)           |
+| Answering "which tools relate to X" across the repo        | `graphify-out/GRAPH_REPORT.md`, `/graphify query` |
+| Refreshing the knowledge graph after doc changes           | `/graphify . --update`                            |

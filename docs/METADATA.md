@@ -3,7 +3,7 @@
 Use these fields to shortlist resources. Open the full tool doc before using a
 result: these fields do not certify licensing, compatibility, unattended
 automation or current pricing. The source schema lives in
-[`scripts/catalogue-schema.ts`](../scripts/catalogue-schema.ts).
+[`scripts/catalogue-schema.ts`](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/catalogue-schema.ts).
 
 ## Execution mode
 
