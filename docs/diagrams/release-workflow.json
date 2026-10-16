@@ -1,0 +1,197 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Private release and installation trust",
+    "output": ".archify/workflow-release-20261015-212501/release-workflow.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/TolongLabs/TolongDesign.git",
+      "revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "provider": "github",
+      "link_mode": "web"
+    }
+  },
+  "lanes": [
+    { "id": "build", "label": "Private repository CI" },
+    { "id": "failed-build", "label": "Build failure", "variant": "exception" },
+    { "id": "user", "label": "Authenticated consumer" },
+    { "id": "failed-use", "label": "Integrity failure", "variant": "exception" }
+  ],
+  "mainPath": ["tag", "gates", "prepare", "hash", "smoke", "publish"],
+  "nodes": [
+    {
+      "id": "tag",
+      "lane": "build",
+      "col": 0,
+      "type": "external",
+      "label": "Version tag",
+      "sublabel": "v + package version",
+      "width": 148,
+      "sources": [
+        { "path": ".github/workflows/release.yml", "line": 3, "end_line": 5 },
+        { "path": ".github/workflows/release.yml", "line": 35, "end_line": 39 }
+      ]
+    },
+    {
+      "id": "gates",
+      "lane": "build",
+      "col": 1,
+      "type": "security",
+      "label": "CI gates",
+      "sublabel": "Private + test + check",
+      "width": 164,
+      "sources": [{ "path": ".github/workflows/release.yml", "line": 15, "end_line": 47 }]
+    },
+    {
+      "id": "prepare",
+      "lane": "build",
+      "col": 2,
+      "type": "backend",
+      "label": "Prepare package",
+      "sublabel": "Allowlist + bundle",
+      "width": 148,
+      "sources": [{ "path": "scripts/release-lib.ts", "line": 495, "end_line": 542 }]
+    },
+    {
+      "id": "hash",
+      "lane": "build",
+      "col": 3,
+      "type": "security",
+      "label": "Hash + archive",
+      "sublabel": "Manifest + SHA256SUMS",
+      "width": 164,
+      "sources": [{ "path": "scripts/release-lib.ts", "line": 542, "end_line": 565 }]
+    },
+    {
+      "id": "smoke",
+      "lane": "build",
+      "col": 4,
+      "type": "security",
+      "label": "Install smoke",
+      "sublabel": "Clean isolated root",
+      "width": 148,
+      "sources": [
+        { "path": ".github/workflows/release.yml", "line": 50, "end_line": 54 },
+        { "path": "scripts/smoke-release.ts" }
+      ]
+    },
+    {
+      "id": "publish",
+      "lane": "build",
+      "col": 5,
+      "type": "cloud",
+      "label": "Private release",
+      "sublabel": "Draft → verified assets",
+      "width": 164,
+      "sources": [{ "path": ".github/workflows/release.yml", "line": 55, "end_line": 67 }]
+    },
+    {
+      "id": "download",
+      "lane": "user",
+      "col": 5,
+      "type": "external",
+      "label": "Download + check",
+      "sublabel": "GitHub auth + SHA",
+      "width": 164,
+      "sources": [{ "path": "docs/CLI.md", "line": 7, "end_line": 38 }]
+    },
+    {
+      "id": "install",
+      "lane": "user",
+      "col": 4,
+      "type": "backend",
+      "label": "Bun install",
+      "sublabel": "Local archive",
+      "width": 148,
+      "sources": [{ "path": "docs/CLI.md", "line": 7, "end_line": 38 }]
+    },
+    {
+      "id": "doctor",
+      "lane": "user",
+      "col": 3,
+      "type": "security",
+      "label": "Run doctor",
+      "sublabel": "Verify payload hashes",
+      "width": 164,
+      "sources": [{ "path": "scripts/release-info.ts" }]
+    },
+    {
+      "id": "use",
+      "lane": "user",
+      "col": 2,
+      "type": "external",
+      "label": "Use CLI",
+      "sublabel": "Read local resources",
+      "width": 148,
+      "sources": [{ "path": "docs/CLI.md", "line": 40, "end_line": 83 }]
+    },
+    {
+      "id": "no-release",
+      "lane": "failed-build",
+      "col": 1,
+      "type": "security",
+      "label": "No publication",
+      "sublabel": "Gate / smoke failure",
+      "width": 164,
+      "sources": [{ "path": ".github/workflows/release.yml", "line": 35, "end_line": 55 }]
+    },
+    {
+      "id": "reject",
+      "lane": "failed-use",
+      "col": 3,
+      "type": "security",
+      "label": "Stop + reinstall",
+      "sublabel": "Mismatch / missing file",
+      "width": 164,
+      "sources": [{ "path": "scripts/release-info.ts" }, { "path": "docs/CLI.md", "line": 92, "end_line": 108 }]
+    }
+  ],
+  "edges": [
+    { "id": "tag-gates", "from": "tag", "to": "gates", "role": "main" },
+    { "id": "gates-prepare", "from": "gates", "to": "prepare", "label": "pass", "role": "main" },
+    { "id": "prepare-hash", "from": "prepare", "to": "hash", "role": "main" },
+    { "id": "hash-smoke", "from": "hash", "to": "smoke", "role": "main" },
+    { "id": "smoke-publish", "from": "smoke", "to": "publish", "label": "pass", "role": "main", "variant": "security" },
+    { "id": "release-download", "from": "publish", "to": "download", "role": "main" },
+    {
+      "id": "checked-install",
+      "from": "download",
+      "to": "install",
+      "label": "SHA matches",
+      "role": "main",
+      "variant": "security"
+    },
+    { "id": "installed-doctor", "from": "install", "to": "doctor", "role": "main" },
+    { "id": "verified-use", "from": "doctor", "to": "use", "label": "valid", "role": "main", "variant": "security" },
+    { "id": "failed-gate", "from": "gates", "to": "no-release", "label": "fail", "role": "error" },
+    {
+      "id": "failed-smoke",
+      "from": "smoke",
+      "to": "no-release",
+      "label": "fail",
+      "role": "error",
+      "variant": "dashed"
+    },
+    { "id": "failed-integrity", "from": "doctor", "to": "reject", "label": "fail", "role": "error" }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Hashes are integrity evidence",
+      "items": [
+        "Payload hashes do not certify a resource's licensing, current APIs or design quality.",
+        "Checksums are not a digital signature and do not defend against an authorized publisher rewriting both files."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Checkout mode is different",
+      "items": [
+        "A checkout has no release manifest; doctor reports that limitation.",
+        "Installing this CLI does not register global agent skills or modify the target project."
+      ]
+    }
+  ]
+}

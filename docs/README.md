@@ -5,6 +5,16 @@ agents. Use it at the start of any design work — a website, landing page,
 product UI, 3D scene, motion piece or comic — to pick proven tools fast, know
 what they cost, and get them producing real output.
 
+## Documentation map
+
+| Read when                                                                 | Start here                                                      |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| You need the two-minute overview and quickstart.                          | [Repository README](https://github.com/TolongLabs/TolongDesign) |
+| You are changing product scope, requirements or acceptance criteria.      | [PRD](./PRD.md)                                                 |
+| You are changing code, schemas, retrieval, trust boundaries or packaging. | [TRD](./TRD.md)                                                 |
+| You are installing, updating or diagnosing the CLI.                       | [CLI guide](./CLI.md)                                           |
+| You want the checked system diagrams or their source JSON.                | [Diagrams](./diagrams/README.md)                                |
+
 ## What is here
 
 | Path                                               | What it is                                                                    |
@@ -80,7 +90,8 @@ Agents can also read `data/index.json` directly or query the knowledge graph in
 
 ## Reading a tool doc
 
-Every tool doc follows [the template](../templates/tool-doc.md):
+Every tool doc follows
+[the template](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/templates/tool-doc.md):
 
 - **Frontmatter** — `paywall` (`free` | `freemium` | `paid` | `unknown`),
   `pricing_summary`, `open_source`, `license`, `stack`, `best_for`,
@@ -109,5 +120,8 @@ committing a client to a paid tool.
 
 ## Maintaining
 
-See [AGENTS.md](../AGENTS.md) and [CONTRIBUTING](../.github/CONTRIBUTING.md). In
-short: edit docs, then `bun run index && bun run check && bun run format`.
+See
+[AGENTS.md](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/AGENTS.md)
+and
+[CONTRIBUTING](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/.github/CONTRIBUTING.md).
+In short: edit docs, then `bun run index && bun run check && bun run format`.

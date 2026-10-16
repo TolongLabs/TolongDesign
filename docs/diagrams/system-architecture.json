@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Local CLI: ownership and data",
+    "output": ".archify/architecture-system-20261015-212501/system-architecture.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/TolongLabs/TolongDesign.git",
+      "revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "provider": "github",
+      "link_mode": "web"
+    }
+  },
+  "components": [
+    {
+      "id": "caller",
+      "type": "external",
+      "label": "Human / agent",
+      "sublabel": "Target project",
+      "pos": [40, 300],
+      "size": [160, 76],
+      "sources": [{ "path": "docs/WORKFLOW.md", "line": 8, "end_line": 31 }]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "Command handler",
+      "sublabel": "design.ts / find.ts",
+      "pos": [330, 300],
+      "size": [180, 76],
+      "sources": [
+        { "path": "scripts/design.ts", "line": 196, "end_line": 245 },
+        { "path": "scripts/find.ts", "line": 78, "end_line": 112 }
+      ]
+    },
+    {
+      "id": "loader",
+      "type": "backend",
+      "label": "Resource loader",
+      "sublabel": "Read + SHA-256",
+      "pos": [330, 60],
+      "size": [180, 76],
+      "sources": [{ "path": "scripts/design-lib.ts", "line": 205, "end_line": 282 }]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "Local source files",
+      "sublabel": "Catalogue + Markdown",
+      "pos": [650, 60],
+      "size": [180, 76],
+      "sources": [{ "path": "scripts/design-lib.ts", "line": 238, "end_line": 282 }]
+    },
+    {
+      "id": "ranker",
+      "type": "backend",
+      "label": "Filter + rank",
+      "sublabel": "Pure local helpers",
+      "pos": [650, 300],
+      "size": [180, 76],
+      "sources": [
+        { "path": "scripts/design-lib.ts", "line": 403, "end_line": 523 },
+        { "path": "scripts/search-lib.ts", "line": 130, "end_line": 235 }
+      ]
+    },
+    {
+      "id": "context",
+      "type": "backend",
+      "label": "Context builder",
+      "sublabel": "Full docs + provenance",
+      "pos": [650, 560],
+      "size": [180, 76],
+      "sources": [{ "path": "scripts/design-lib.ts", "line": 588, "end_line": 625 }]
+    },
+    {
+      "id": "output",
+      "type": "frontend",
+      "label": "stdout",
+      "sublabel": "Text / cards / JSON",
+      "pos": [970, 430],
+      "size": [180, 76],
+      "sources": [
+        { "path": "scripts/design.ts", "line": 141, "end_line": 179 },
+        { "path": "scripts/design.ts", "line": 225, "end_line": 245 }
+      ]
+    }
+  ],
+  "connections": [
+    { "id": "request", "from": "caller", "to": "cli", "label": "command", "variant": "emphasis" },
+    { "id": "load", "from": "cli", "to": "loader", "label": "load docs" },
+    { "id": "read", "from": "loader", "to": "files", "label": "read" },
+    { "id": "rank", "from": "cli", "to": "ranker", "label": "search" },
+    { "id": "full-context", "from": "cli", "to": "context", "label": "show / context" },
+    { "id": "results", "from": "ranker", "to": "output", "label": "matches" },
+    { "id": "pack", "from": "context", "to": "output", "label": "full docs", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "No retrieval service",
+      "items": [
+        "No network request or target-project write on the retrieval path.",
+        "Ranker and context builder receive in-memory resources; the loader owns file reads."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Separate maintenance paths",
+      "items": [
+        "The generated index and knowledge graph are derived views, not runtime search authorities.",
+        "Link checks, indexing, doctor and release operations have separate documented paths."
+      ]
+    }
+  ]
+}

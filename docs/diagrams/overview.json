@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "From resource to finished work",
+    "output": ".archify/workflow-overview-20261015-212501/overview.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/TolongLabs/TolongDesign.git",
+      "revision": "2e10faa846d775c0e1abdcb518c4931d79f1d288",
+      "provider": "github",
+      "link_mode": "web"
+    }
+  },
+  "lanes": [
+    { "id": "collection", "label": "TolongDesign" },
+    { "id": "project", "label": "Target project" }
+  ],
+  "mainPath": ["find", "read", "choose", "build", "verify", "deliver"],
+  "nodes": [
+    {
+      "id": "find",
+      "lane": "collection",
+      "col": 0,
+      "type": "backend",
+      "label": "Find resources",
+      "sublabel": "Rank + filter",
+      "width": 148,
+      "sources": [{ "path": "scripts/design.ts", "line": 225, "end_line": 233 }]
+    },
+    {
+      "id": "read",
+      "lane": "collection",
+      "col": 1,
+      "type": "database",
+      "label": "Read full docs",
+      "sublabel": "Usage + provenance",
+      "width": 148,
+      "sources": [{ "path": "scripts/design-lib.ts", "line": 588, "end_line": 625 }]
+    },
+    {
+      "id": "choose",
+      "lane": "project",
+      "col": 2,
+      "type": "security",
+      "label": "Agree direction",
+      "sublabel": "Budget + rights",
+      "width": 148,
+      "sources": [{ "path": "docs/WORKFLOW.md", "line": 77, "end_line": 100 }]
+    },
+    {
+      "id": "build",
+      "lane": "project",
+      "col": 3,
+      "type": "backend",
+      "label": "Make the work",
+      "sublabel": "Your agent + tools",
+      "width": 148,
+      "sources": [{ "path": "docs/WORKFLOW.md", "line": 129, "end_line": 139 }]
+    },
+    {
+      "id": "verify",
+      "lane": "project",
+      "col": 4,
+      "type": "security",
+      "label": "Inspect + test",
+      "sublabel": "Actual output",
+      "width": 148,
+      "sources": [{ "path": "docs/WORKFLOW.md", "line": 136, "end_line": 161 }]
+    },
+    {
+      "id": "deliver",
+      "lane": "project",
+      "col": 5,
+      "type": "external",
+      "label": "Deliver",
+      "sublabel": "Evidence + limits",
+      "width": 132,
+      "sources": [{ "path": "docs/WORKFLOW.md", "line": 153, "end_line": 161 }]
+    }
+  ],
+  "edges": [
+    { "id": "find-read", "from": "find", "to": "read", "role": "main" },
+    { "id": "read-choose", "from": "read", "to": "choose", "label": "context", "role": "main" },
+    {
+      "id": "choose-build",
+      "from": "choose",
+      "to": "build",
+      "label": "approved",
+      "variant": "security",
+      "role": "main"
+    },
+    { "id": "build-verify", "from": "build", "to": "verify", "role": "main" },
+    {
+      "id": "verify-deliver",
+      "from": "verify",
+      "to": "deliver",
+      "label": "criteria met",
+      "role": "main",
+      "variant": "emphasis"
+    },
+    {
+      "id": "revise-work",
+      "from": "verify",
+      "to": "build",
+      "label": "gaps",
+      "role": "return",
+      "variant": "dashed",
+      "route": "bottom-channel"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Useful context, not automatic design",
+      "items": [
+        "TolongDesign retrieves documented resources.",
+        "The target project's agent makes and verifies the result."
+      ]
+    }
+  ]
+}

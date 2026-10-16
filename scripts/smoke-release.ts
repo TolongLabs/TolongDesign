@@ -54,7 +54,24 @@ function runRequired(cmd: string[], cwd?: string, env?: Record<string, string>) 
 function isAllowedFile(path: string): boolean {
   if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
   if (['data/catalogue.json', 'data/index.json'].includes(path)) return true
-  if (['docs/README.md', 'docs/PLAYBOOK.md', 'docs/WORKFLOW.md', 'docs/CLI.md', 'docs/METADATA.md'].includes(path))
+  if (
+    [
+      'docs/README.md',
+      'docs/PLAYBOOK.md',
+      'docs/WORKFLOW.md',
+      'docs/CLI.md',
+      'docs/METADATA.md',
+      'docs/PRD.md',
+      'docs/TRD.md'
+    ].includes(path)
+  )
+    return true
+  if (['docs/diagrams/README.md', 'docs/diagrams/verification.json'].includes(path)) return true
+  if (
+    /^docs\/diagrams\/(overview|system-architecture|retrieval-sequence|maintenance-workflow|release-workflow)\.(json|svg|html)$/.test(
+      path
+    )
+  )
     return true
   if (path.startsWith('docs/design/') && path.endsWith('.md')) return true
   if (path.startsWith('docs/scenarios/') && path.endsWith('.md')) return true

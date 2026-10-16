@@ -4,6 +4,11 @@ Use the installed CLI from a target project when you need design-resource
 search, complete usage guidance, or an agent context pack. The tool is private
 and read-only; the target agent still designs, builds, and reviews the work.
 
+> **Snapshot warning:** this guide describes current source. Published `v0.1.2`
+> predates newer ranked-search filters and cards. Use checkout mode for those
+> features until a newer release includes them; a version string alone does not
+> prove that a working checkout matches the published archive.
+
 ## Requirements
 
 Use Bun 1.4 or newer and an authenticated `gh` account with read access to
@@ -17,7 +22,7 @@ Download into a new temporary directory and verify the actual archive before
 installing. No public npm registry publication is involved.
 
 ```bash
-version=v0.1.0
+version=v0.1.2
 install_dir=$(mktemp -d)
 gh release download "$version" --repo TolongLabs/TolongDesign \
   --pattern 'tolong-design-*.tgz' --pattern SHA256SUMS --dir "$install_dir"

@@ -63,7 +63,24 @@ function isRecord(value: unknown): value is RecordValue {
 function isAllowedFile(path: string): boolean {
   if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
   if (['data/catalogue.json', 'data/index.json'].includes(path)) return true
-  if (['docs/README.md', 'docs/PLAYBOOK.md', 'docs/WORKFLOW.md', 'docs/CLI.md', 'docs/METADATA.md'].includes(path))
+  if (
+    [
+      'docs/README.md',
+      'docs/PLAYBOOK.md',
+      'docs/WORKFLOW.md',
+      'docs/CLI.md',
+      'docs/METADATA.md',
+      'docs/PRD.md',
+      'docs/TRD.md'
+    ].includes(path)
+  )
+    return true
+  if (['docs/diagrams/README.md', 'docs/diagrams/verification.json'].includes(path)) return true
+  if (
+    /^docs\/diagrams\/(overview|system-architecture|retrieval-sequence|maintenance-workflow|release-workflow)\.(json|svg|html)$/.test(
+      path
+    )
+  )
     return true
   if (path.startsWith('docs/design/') && path.endsWith('.md')) return true
   if (path.startsWith('docs/scenarios/') && path.endsWith('.md')) return true
@@ -249,6 +266,31 @@ describe('checkout release diagnostics', () => {
 
 releaseDescribe('independent private release verification', () => {
   const fixture = buildState.fixture!
+
+  test('ships the linked product and technical guides with every diagram asset', () => {
+    const listing = runCommand(['tar', '-tzf', fixture.result.tarball])
+    expect(listing.code).toBe(0)
+    const files = listing.stdout.split(/\r?\n/)
+    const required = ['docs/PRD.md', 'docs/TRD.md', 'docs/diagrams/README.md', 'docs/diagrams/verification.json']
+    for (const name of [
+      'overview',
+      'system-architecture',
+      'retrieval-sequence',
+      'maintenance-workflow',
+      'release-workflow'
+    ]) {
+      for (const extension of ['json', 'svg', 'html']) required.push(`docs/diagrams/${name}.${extension}`)
+    }
+    const manifest = JSON.parse(readFileSync(join(fixture.result.packageDir, 'release-manifest.json'), 'utf8')) as {
+      files: Record<string, string>
+    }
+    for (const path of required) {
+      expect(files).toContain(`package/${path}`)
+      const bytes = readFileSync(join(fixture.result.packageDir, path))
+      expect(bytes.equals(readFileSync(join(fixture.root, path)))).toBe(true)
+      expect(manifest.files[path]).toBe(sha256(bytes))
+    }
+  })
 
   test('validates the actual tarball, installs the actual binary, and rejects integrity failures', async () => {
     const archive = resolve(fixture.result.tarball)
