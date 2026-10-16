@@ -1,57 +1,61 @@
-# Graph Report - integration  (2026-10-15)
+# Graph Report - overview-prd-trd  (2026-10-16)
 
 ## Corpus Check
-- 527 files · ~454,046 words
+- 16 files · ~18,969 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1996 nodes · 6911 edges · 99 communities (87 shown, 12 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 204 edges (avg confidence: 0.83)
-- Token cost: 70,387 input · 12,855 output
+- 2201 nodes · 7029 edges · 102 communities (92 shown, 10 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 153 edges (avg confidence: 0.82)
+- Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
+- Component Libraries Resources
 - Design Galleries Resources
 - Component Libraries Resources
-- 3D Resources
-- Retrieval Metadata
-- Retrieval Metadata
 - Design Galleries Resources
-- REA Reverse Engineering
-- Development Resources
+- Retrieval Metadata
+- Retrieval Metadata
+- Documentation and Diagrams
 - Comics Resources
+- REA Reverse Engineering
+- CLI Integration Tests
 - Reading Resources
-- Release Packaging Script
-- Utilities Resources
-- Retrieval Metadata
-- CLI Integration Tests
-- Icons Resources
 - Video Capture Resources
+- Release Packaging Script
+- Retrieval Metadata
+- Documentation and Diagrams
+- Icons Resources
+- Utilities Resources
 - Design CLI Core
+- Documentation and Diagrams
 - CLI Integration Tests
-- Component Libraries Resources
-- Component Libraries Resources
+- Agents Mcp Resources
 - Catalogue Tooling
-- Component Libraries Resources
-- Component Libraries Resources
-- Private Release Pipeline
+- Link Checker Script
 - Package Manifest
-- Component Libraries Resources
+- 3D Resources
+- 3D Resources
 - Type Resources
-- Design Galleries Resources
+- Development Resources
 - Release Info Tests
 - Release Tests
 - Retrieval Metadata
+- Documentation and Diagrams
 - Catalogue Tooling
-- Catalogue Tooling
-- Private Release Pipeline
 - 3D Resources
-- Agents Mcp Resources
-- Agents Mcp Resources
+- Documentation and Diagrams
+- Catalogue Tooling
+- 3D Resources
 - Comics Resources
 - Tool Doc Template
-- Link Checker Script
 - Catalogue Tooling
-- Catalogue Tooling
+- Agents Mcp Resources
+- Documentation and Diagrams
+- Private Release Pipeline
+- Agents Mcp Resources
+- Development Resources
+- Documentation and Diagrams
 - Agents Mcp Resources
 - Comics Resources
 - Retrieval Metadata
@@ -59,37 +63,38 @@
 - Design Workflow Plan
 - Catalogue Tooling
 - Catalogue Tooling
-- Agents Mcp Resources
+- 3D Resources
 - Design Galleries Resources
-- Private Release Pipeline
+- Type Resources
+- Documentation and Diagrams
 - Interface Design Resources
 - Retrieval Metadata
 - Deploy Resources
-- Color Resources
+- 3D Resources
+- REA Reverse Engineering
 - Retrieval Metadata
 - Release Architecture Spec
 - Agents Mcp Resources
 - Retrieval Metadata
-- Private Release Pipeline
 - Design Galleries Resources
 - Deploy Resources
-- Agents Mcp Resources
+- Documentation and Diagrams
 - Design CLI Spec
+- Documentation and Diagrams
+- REA Reverse Engineering
 - Interface Design Resources
-- Component Libraries Resources
+- Documentation and Diagrams
 - Design Galleries Resources
 - Workflow Spec Docs
 - Retrieval Metadata
 - Prettier Config
-- Catalogue Tooling
-- Whiteboard Resources
-- Component Libraries Resources
-- Private Release Pipeline
+- CLI Integration Tests
+- Documentation and Diagrams
+- Documentation and Diagrams
 - Interface Design Resources
 - Component Libraries Resources
 - Retrieval Metadata
 - Development Resources
-- Component Libraries Resources
 - Comics Resources
 - Retrieval Metadata
 - Comics Resources
@@ -103,10 +108,8 @@
 - Design Galleries Resources
 - Reading Resources
 - Radix
-- Catalogue Tooling
-- Catalogue Tooling
-- Catalogue Tooling
-- Catalogue Tooling
+- Private Release Pipeline
+- Private Release Pipeline
 
 ## God Nodes (most connected - your core abstractions)
 1. `Generated resource index` - 441 edges
@@ -117,19 +120,19 @@
 6. `reference mode` - 167 edges
 7. `reference surface` - 138 edges
 8. `Tailwind CSS` - 120 edges
-9. `Component Libraries Section Index` - 112 edges
-10. `shadcn/ui` - 91 edges
+9. `Component Libraries Section Index` - 111 edges
+10. `tailwind stack` - 91 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `One-Doc-Per-Entry File Boundary Rule` --semantically_similar_to--> `Payload Allowlist and Exclusions for the Release Tarball`  [INFERRED] [semantically similar]
   templates/worker-brief.md → docs/superpowers/specs/2026-10-11-private-cli-release-design.md
 - `Task 2: Implement deterministic retrieval and context` --references--> `UsageError`  [INFERRED]
   docs/superpowers/plans/2026-10-11-project-design-workflow.md → scripts/design-lib.ts
+- `CLI contract` --references--> `UsageError`  [INFERRED]
+  docs/superpowers/specs/2026-10-11-project-design-workflow-design.md → scripts/design-lib.ts
 - `CLI contract` --references--> `buildContext()`  [INFERRED]
   docs/superpowers/specs/2026-10-11-project-design-workflow-design.md → scripts/design-lib.ts
 - `CLI contract` --references--> `searchResources()`  [INFERRED]
-  docs/superpowers/specs/2026-10-11-project-design-workflow-design.md → scripts/design-lib.ts
-- `CLI contract` --references--> `UsageError`  [INFERRED]
   docs/superpowers/specs/2026-10-11-project-design-workflow-design.md → scripts/design-lib.ts
 
 ## Import Cycles
@@ -144,10 +147,8 @@
 - **Web design workflow stages** — concept_collect_references, concept_lock_visual_system, concept_pick_components, concept_icons_imagery_motion_3d, concept_build_with_agent, concept_ship_website [EXTRACTED 1.00]
 - **Privacy analytics and logging tools** — docs_design_development_umami_umami, docs_design_development_tracwell_tracwell, docs_design_development_evlog_evlog [EXTRACTED 1.00]
 - **Private Release Packaging, Independent Verification and Deployment Flow** — docs_superpowers_plans_2026_10_11_private_cli_release_task1_diagnostics, docs_superpowers_plans_2026_10_11_private_cli_release_task2_archive, docs_superpowers_plans_2026_10_11_private_cli_release_task3_clean_install_checks, docs_superpowers_plans_2026_10_11_private_cli_release_task5_deploy [EXTRACTED 1.00]
-- **Five-stage project design workflow** — docs_workflow_brief_and_constraints, docs_workflow_reference_evidence, docs_workflow_visual_direction_and_behavior, docs_workflow_implementation_context, docs_workflow_build_and_rendered_verification, docs_workflow_agent_owns_design_decisions [EXTRACTED 1.00]
 - **Declarative R3F Scene Runtime** — docs_design_3d_react_three_fiber_react_three_fiber, docs_design_3d_react_three_fiber_canvas, docs_design_3d_react_three_fiber_useframe, docs_design_3d_react_three_fiber_usethree, docs_design_3d_react_three_fiber_demand_frameloop [EXTRACTED 1.00]
 - **Tool Doc Authoring Contract (worker brief plus template)** — templates_worker_brief_worker_brief_template, templates_worker_brief_batch_file_contract, templates_worker_brief_research_requirements, templates_worker_brief_output_format_rules, templates_tool_doc_tool_doc_template, templates_tool_doc_frontmatter_keys, templates_tool_doc_required_h2_sections [EXTRACTED 1.00]
-- **Tool Doc Contract Flow (rule to template to worker)** — integration_agents_tool_doc_contract, integration_templates_tool_doc_contract_template, integration_templates_worker_brief_work_order, integration_github_contributing_two_rules [EXTRACTED 1.00]
 - **ICQR Magic Tree evidence chain (method to limits)** — docs_research_tree_icqr_study, docs_research_tree_icqr_reference, docs_research_tree_icqr_study_rea_browser_inspection, docs_research_tree_icqr_study_evidence_manifest, docs_research_tree_icqr_study_observed_runtime_states, docs_research_tree_icqr_study_gpu_unavailable_limit, docs_research_tree_icqr_study_capture_coverage_limits [EXTRACTED 1.00]
 - **Multi-agent coding orchestrators** — docs_design_agents_mcp_ghostex_ghostex, docs_design_agents_mcp_herdr_herdr, docs_design_agents_mcp_fx_fx, docs_design_agents_mcp_dray_dray [INFERRED 0.75]
 - **Deterministic seeded procedural generation shared across the suite** — docs_design_comics_komawari_seeded_prng_mulberry32_fnv1a, docs_design_comics_fukidashi_seeded_prng_outline, docs_design_comics_haikeigacha_procedural_room_grid, docs_design_comics_koukasen_five_generator_groups [INFERRED 0.75]
@@ -172,7 +173,6 @@
 - **Mobile UI pattern libraries** — docs_design_design_galleries_mobbin_mobbin, docs_design_design_galleries_pttrns_pttrns, docs_design_design_galleries_ux_archive_ux_archive, docs_design_design_galleries_screenlane_screenlane, docs_design_design_galleries_scrnshts_scrnshts [INFERRED 0.85]
 - **OKLCH-based palette and ramp tooling** — docs_design_color_oklch_oklch, docs_design_color_ramps_ramps, docs_design_color_huetone_huetone [INFERRED 0.85]
 - **Oyasumi manga tool suite (seven free browser tools by MIYADAIKU)** — docs_design_comics_komawari, docs_design_comics_fukidashi, docs_design_comics_koukasen, docs_design_comics_haikeigacha, docs_design_comics_comicalizer, docs_design_comics_readme_manga_tool_suite [INFERRED 0.85]
-- **Private release trust chain: private guard, checksum, smoke install, doctor, draft publish** — _github_workflows_release_private_repo_guard, _github_workflows_release_checksum_verification, _github_workflows_release_smoke_release, _github_workflows_release_draft_release_publish, docs_cli_trust_boundary, docs_cli_doctor_command [INFERRED 0.85]
 - **Reference-not-implementation-source discipline across design reference docs** — docs_design_design_galleries_icqr_magic_tree_icqr_magic_tree, docs_design_design_galleries_icqr_magic_tree_reference_not_implementation_source, docs_design_design_galleries_icqr_magic_tree_unverified_3d_rendering, docs_design_interface_design_lenis_templates_lenis_templates, docs_design_interface_design_lenis_templates_discovery_not_source, docs_design_interface_design_lenis_templates_third_party_pricing [INFERRED 0.85]
 - **Rendered-design acceptance gate set** — docs_scenarios_dictation_landing_rendered_design_rubric, docs_scenarios_dictation_landing_honest_completion, docs_scenarios_dictation_landing_retrieval_and_handoff_check, docs_research_react_three_fiber_assessment_visual_evidence_gate, docs_research_react_three_fiber_assessment_performance_claim_correction [INFERRED 0.85]
 - **SaaS landing page galleries** — docs_design_design_galleries_saas_landing_page_saas_landing_page, docs_design_design_galleries_saasframe_saasframe, docs_design_design_galleries_saaspo_saaspo, docs_design_design_galleries_sections_wtf_sections_wtf, docs_design_design_galleries_supahero_supahero [INFERRED 0.85]
@@ -183,119 +183,119 @@
 - **Frontmatter-Generated Catalogue Indexes** — docs_design_readme_bun_run_index_generator, docs_design_readme_design_catalogue, docs_design_3d_readme_3d_section_index, docs_design_agents_mcp_readme_agents_mcp_section_index [INFERRED 0.95]
 - **Typed Resource Metadata Vocabulary** — integration_docs_superpowers_specs_2026_10_15_agent_retrieval_issues_design_execution_mode_vocabulary, integration_docs_superpowers_specs_2026_10_15_agent_retrieval_issues_design_surface_vocabulary, integration_docs_superpowers_specs_2026_10_15_agent_retrieval_issues_design_status_vocabulary, integration_templates_tool_doc_frontmatter_schema, integration_docs_superpowers_plans_2026_10_15_agent_retrieval_issues_task1_vocabulary [INFERRED 0.95]
 
-## Communities (99 total, 12 thin omitted)
+## Communities (102 total, 10 thin omitted)
 
-### Community 0 - "Design Galleries Resources"
+### Community 0 - "Component Libraries Resources"
+Cohesion: 0.06
+Nodes (168): Alpine.js, Angular, Astro, Base UI, Canvas API, Cloudflare Workers, CSS-in-JS, CSS Modules (+160 more)
+
+### Community 1 - "Design Galleries Resources"
 Cohesion: 0.06
 Nodes (126): reference mode, active status, reference surface, Generated resource index, Blender · 3d/blender, Poly Haven · 3d/poly-haven, designmd.me · agents-mcp/designmd-me, designmd.supply · agents-mcp/designmd-supply (+118 more)
 
-### Community 1 - "Component Libraries Resources"
+### Community 2 - "Component Libraries Resources"
 Cohesion: 0.07
 Nodes (117): shadcn, registry mode, og-image surface, web-ui surface, base-ui stack, editframe stack, motion stack, nextjs stack (+109 more)
 
-### Community 2 - "3D Resources"
-Cohesion: 0.05
-Nodes (86): AI motion-graphics visual tells, Android, THREE.AnimationAction, THREE.AnimationClip, THREE.AnimationMixer, Automatic character rigging, Canvas, cubic-bezier easing (+78 more)
-
-### Community 3 - "Retrieval Metadata"
-Cohesion: 0.06
-Nodes (82): Benji Taylor, Josh Puckett, package mode, degraded status, audio surface, web-3d surface, astro stack, ionic stack (+74 more)
+### Community 3 - "Design Galleries Resources"
+Cohesion: 0.07
+Nodes (82): AI-generated imagery, App Store Optimization, Framer, REST API, Webflow, 60fps, Appinspo, Are.na (+74 more)
 
 ### Community 4 - "Retrieval Metadata"
 Cohesion: 0.06
+Nodes (82): Benji Taylor, Josh Puckett, package mode, degraded status, audio surface, web-3d surface, astro stack, ionic stack (+74 more)
+
+### Community 5 - "Retrieval Metadata"
+Cohesion: 0.06
 Nodes (64): browser-app mode, comics surface, print surface, video surface, web-asset surface, browser stack, desktop stack, fbx stack (+56 more)
 
-### Community 5 - "Design Galleries Resources"
-Cohesion: 0.09
-Nodes (60): AI-generated imagery, Flutter, Framer, REST API, Webflow, Appinspo, Are.na, Awwwards (+52 more)
+### Community 6 - "Documentation and Diagrams"
+Cohesion: 0.03
+Nodes (60): docs/TRD.md · document, scripts/fixtures/search-queries.json · referenced by docs/TRD.md, templates/tool-doc.md · referenced by docs/TRD.md, scripts/design-lib.ts · referenced by docs/TRD.md, scripts/check-docs.ts · referenced by docs/TRD.md, scripts/smoke-release.ts · referenced by docs/TRD.md, docs/diagrams/maintenance-workflow.html · referenced by docs/TRD.md, docs/CLI.md · referenced by docs/TRD.md (+52 more)
 
-### Community 6 - "REA Reverse Engineering"
-Cohesion: 0.06
-Nodes (55): React Three Fiber (design doc entry), REA, rea-agents setup writes MCP registration and workflow instructions, backing up existing config, Chrome-family browser capture over a local debugging port, Evidence-led reconstruction: public access is not permission to copy assets, Local reverse-engineering MCP server and CLI, Native analysis engines (Hopper, Ghidra, IDA), Three kinds of evidence: static source, browser observation window, runtime interaction (+47 more)
-
-### Community 7 - "Development Resources"
-Cohesion: 0.08
-Nodes (49): Bun, Cloudflare Workers, Drizzle ORM, ESLint, GDPR, Hono, Node.js, Nuxt (+41 more)
-
-### Community 8 - "Comics Resources"
+### Community 7 - "Comics Resources"
 Cohesion: 0.05
 Nodes (49): Comicalizer (design doc), Comicalizer detail specs (Camera, per-character pos/pose/face, Balloon, Effect, same=, standing=), Comicalizer headless driving: stable #id selectors and textarea #plot, Comicalizer local-first: plot, storyboard and exports stay in the browser, Comicalizer runs on the Name Gacha engine, Comicalizer page hand-off hash (ng: z+raw-deflate base64 or j+base64), Comicalizer line-based plot markup (scenes, pages, panels, voices), Comicalizer JSON project file (format comicalizer-project, version 4) (+41 more)
 
-### Community 9 - "Reading Resources"
+### Community 8 - "REA Reverse Engineering"
+Cohesion: 0.07
+Nodes (43): React Three Fiber (design doc entry), REA, rea-agents setup writes MCP registration and workflow instructions, backing up existing config, Chrome-family browser capture over a local debugging port, Evidence-led reconstruction: public access is not permission to copy assets, Local reverse-engineering MCP server and CLI, Native analysis engines (Hopper, Ghidra, IDA), Three kinds of evidence: static source, browser observation window, runtime interaction (+35 more)
+
+### Community 9 - "CLI Integration Tests"
+Cohesion: 0.07
+Nodes (36): blurbs, count(), entries, Entry, overview, PAYWALL_LABEL, peopleMd, sectionBlurb (+28 more)
+
+### Community 10 - "Reading Resources"
 Cohesion: 0.16
 Nodes (44): Accessibility (a11y), ARIA, Bootstrap, Core Web Vitals, CSS, CUDA, Framer Motion / Motion, HTML (+36 more)
 
-### Community 10 - "Release Packaging Script"
+### Community 11 - "Video Capture Resources"
 Cohesion: 0.12
-Nodes (40): main(), outputDirectory(), ROOT, UsageError, assertOutputPathIsSeparate(), assertPathDoesNotExist(), assertPortablePath(), buildRelease() (+32 more)
+Nodes (44): C, CLI, Electron, FFmpeg, Firefox / Gecko, GPU acceleration, HTML Canvas, macOS (+36 more)
 
-### Community 11 - "Utilities Resources"
-Cohesion: 0.17
-Nodes (42): ASCII Art, AVIF, Dithering, Lottie, Open Graph, Regular Expressions, SVG, SVGO (+34 more)
+### Community 12 - "Release Packaging Script"
+Cohesion: 0.11
+Nodes (41): main(), outputDirectory(), ROOT, UsageError, assertOutputPathIsSeparate(), assertPathDoesNotExist(), assertPortablePath(), buildRelease() (+33 more)
 
-### Community 12 - "Retrieval Metadata"
+### Community 13 - "Retrieval Metadata"
 Cohesion: 0.06
 Nodes (42): snippet mode, email surface, alpinejs stack, bootstrap stack, css stack, figma stack, framer stack, gsap stack (+34 more)
 
-### Community 13 - "CLI Integration Tests"
-Cohesion: 0.07
-Nodes (36): ref_node_fs, blurbs, count(), entries, Entry, overview, PAYWALL_LABEL, peopleMd (+28 more)
+### Community 14 - "Documentation and Diagrams"
+Cohesion: 0.05
+Nodes (41): docs/README.md · document, docs/design/shaders/README.md · referenced by docs/README.md, docs/design/color/README.md · referenced by docs/README.md, docs/design/desktop/README.md · referenced by docs/README.md, templates/tool-doc.md · referenced by docs/README.md, docs/design/design-galleries/README.md · referenced by docs/README.md, docs/scenarios/dictation-landing.md · referenced by docs/README.md, .github/CONTRIBUTING.md · referenced by docs/README.md (+33 more)
 
-### Community 14 - "Icons Resources"
-Cohesion: 0.20
-Nodes (41): Figma, Icon font / webfont, Ionic, JavaScript, Svelte, Tree-shaking, Variable Fonts, Web Components (+33 more)
+### Community 15 - "Icons Resources"
+Cohesion: 0.21
+Nodes (40): Figma, Icon font / webfont, Ionic, Svelte, SVG, Tree-shaking, Variable Fonts, Web Components (+32 more)
 
-### Community 15 - "Video Capture Resources"
-Cohesion: 0.15
-Nodes (37): C, CLI, Electron, FFmpeg, Firefox / Gecko, GPU acceleration, HTML Canvas, macOS (+29 more)
+### Community 16 - "Utilities Resources"
+Cohesion: 0.16
+Nodes (39): ASCII Art, AVIF, Dithering, Lottie, Open Graph, Regular Expressions, SVGO, WebAssembly (+31 more)
 
-### Community 16 - "Design CLI Core"
+### Community 17 - "Design CLI Core"
 Cohesion: 0.11
-Nodes (34): Task 2: Implement deterministic retrieval and context, CLI contract, CatalogueEntry, compareText(), ContextPack, ContextResource, DataError, getPaywall() (+26 more)
+Nodes (35): Task 2: Implement deterministic retrieval and context, CLI contract, CatalogueEntry, compareText(), ContextPack, ContextResource, DataError, getPaywall() (+27 more)
 
-### Community 17 - "CLI Integration Tests"
+### Community 18 - "Documentation and Diagrams"
+Cohesion: 0.05
+Nodes (37): README.md · document, docs/design/agents-mcp/README.md · referenced by README.md, docs/assets/README.md · referenced by README.md, docs/design/component-libraries/README.md · referenced by README.md, docs/diagrams/README.md · referenced by README.md, docs/design/icons/README.md · referenced by README.md, docs/design/shaders/README.md · referenced by README.md, docs/design/reading/README.md · referenced by README.md (+29 more)
+
+### Community 19 - "CLI Integration Tests"
 Cohesion: 0.08
-Nodes (28): ref_node_crypto, ref_node_os, ref_node_path, decode(), entrypoint, root, run(), target (+20 more)
+Nodes (28): ref_node_crypto, ref_node_fs, ref_node_os, ref_node_path, decode(), entrypoint, runCli(), sourceRoot (+20 more)
 
-### Community 18 - "Component Libraries Resources"
-Cohesion: 0.14
-Nodes (32): Base UI, CSS-in-JS, CSS Modules, GSAP, Motion (Framer Motion), MUI, Recharts, shadcn/ui (+24 more)
+### Community 20 - "Agents Mcp Resources"
+Cohesion: 0.08
+Nodes (31): Archify 3.0.1 Renderer, Design Workflow Diagram (design-workflow.svg), Hero Banner (tolongdesign-hero.png), Original README Assets Manifest, No Third-Party Asset Reuse, Three.js Doc, Anatomy Skill, anatomy-figures npm Package (+23 more)
 
-### Community 19 - "Component Libraries Resources"
-Cohesion: 0.22
-Nodes (31): React Aria, SolidJS, 8bitcn, Amicro, Bencho, beUI, blocks.so, Butter Nav (+23 more)
-
-### Community 20 - "Catalogue Tooling"
+### Community 21 - "Catalogue Tooling"
 Cohesion: 0.17
 Nodes (25): hasFlag(), ParsedFlags, parseFlags(), readValue(), Command, buildContext(), excerptFor(), resolveResource() (+17 more)
 
-### Community 21 - "Component Libraries Resources"
-Cohesion: 0.19
-Nodes (29): Canvas API, Preact, React, React Native, shadcn/ui registry, Solid, View Transitions API, Amacro (+21 more)
+### Community 22 - "Link Checker Script"
+Cohesion: 0.12
+Nodes (22): ref_bun, blocked, broken, files, record(), resources, selected, { tools } (+14 more)
 
-### Community 22 - "Component Libraries Resources"
-Cohesion: 0.33
-Nodes (27): Alpine.js, Angular, Radix UI, Tailwind CSS, Vue, Aceternity UI, Animate UI, Base CN (+19 more)
-
-### Community 23 - "Private Release Pipeline"
-Cohesion: 0.13
-Nodes (26): Agent skill mirror cmp check, Agent skill mirror cmp check, context command source-backed export with SHA-256, Search is literal AND matching, not semantic ranking, 1. Brief and constraints, 2. Reference evidence, 3. Visual direction and behavior, 4. Implementation context (+18 more)
-
-### Community 24 - "Package Manifest"
+### Community 23 - "Package Manifest"
 Cohesion: 0.08
 Nodes (25): description, devDependencies, prettier, @types/bun, yaml, engines, bun, name (+17 more)
 
-### Community 25 - "Component Libraries Resources"
-Cohesion: 0.19
-Nodes (25): Astro, Editframe, Fumadocs, Ink, llms.txt, Next.js, OpenTUI, Tiptap (+17 more)
+### Community 24 - "3D Resources"
+Cohesion: 0.16
+Nodes (25): AI motion-graphics visual tells, Android, cubic-bezier easing, Flutter, iOS, JavaScript, Motion prompt iteration, Motion render-stack comparison (+17 more)
+
+### Community 25 - "3D Resources"
+Cohesion: 0.10
+Nodes (25): Blender Doc, Drei Doc, gltf.report Doc, Asset Rights Check plus Instancing and Geometry Reuse, Canvas Component, Demand Frameloop and Parent-Owned Motion Preference, Device and Frame-Time Budget Discipline, HTML-Owned Copy and Canvas Fallback (+17 more)
 
 ### Community 26 - "Type Resources"
-Cohesion: 0.16
-Nodes (25): Atmospheric 3D character scene, Build with an agent, Collect references, Default design stack, Fluid Typography / clamp(), Choose icons, imagery, motion, and 3D, Lock the visual system, npm (+17 more)
+Cohesion: 0.13
+Nodes (24): Atmospheric 3D character scene, Build with an agent, CIELAB / LCH, Collect references, CSS Custom Properties, Default design stack, Choose icons, imagery, motion, and 3D, Lock the visual system (+16 more)
 
-### Community 27 - "Design Galleries Resources"
-Cohesion: 0.19
-Nodes (23): App Store Optimization, 60fps, before.click, bestdesignsonx.com, cta.gallery, Curated Domains, Curations, desengs.com (+15 more)
+### Community 27 - "Development Resources"
+Cohesion: 0.16
+Nodes (23): Drizzle ORM, ESLint, GDPR, Hono, Nuxt, PostgreSQL, Prettier, Web Audio API (+15 more)
 
 ### Community 28 - "Release Info Tests"
 Cohesion: 0.14
@@ -309,29 +309,29 @@ Nodes (21): ref_node_url, ArchiveEntry, assertDoctorSkills(), assertWithin(), bu
 Cohesion: 0.09
 Nodes (22): desktop surface, gpui stack, swift stack, swiftui stack, Causal · agents-mcp/causal, Distill · agents-mcp/distill, Dray · agents-mcp/dray, Ghostex · agents-mcp/ghostex (+14 more)
 
-### Community 31 - "Catalogue Tooling"
+### Community 31 - "Documentation and Diagrams"
+Cohesion: 0.10
+Nodes (21): docs/diagrams/README.md · document, docs/diagrams/release-workflow.svg · referenced by docs/diagrams/README.md, docs/diagrams/overview.svg · referenced by docs/diagrams/README.md, docs/diagrams/retrieval-sequence.json · referenced by docs/diagrams/README.md, docs/diagrams/overview.json · referenced by docs/diagrams/README.md, docs/diagrams/system-architecture.json · referenced by docs/diagrams/README.md, docs/diagrams/overview.html · referenced by docs/diagrams/README.md, docs/diagrams/maintenance-workflow.html · referenced by docs/diagrams/README.md (+13 more)
+
+### Community 32 - "Catalogue Tooling"
 Cohesion: 0.28
 Nodes (19): ArchiveEntry, assertWithin(), collectFiles(), decode(), doctorResult(), fail(), inspectArchive(), installArchive() (+11 more)
 
-### Community 32 - "Catalogue Tooling"
+### Community 33 - "3D Resources"
+Cohesion: 0.18
+Nodes (18): THREE.AnimationAction, THREE.AnimationClip, THREE.AnimationMixer, Automatic character rigging, Avatar facial expressions, FBX, GLTFLoader plugin, Humanoid skeleton (+10 more)
+
+### Community 34 - "Documentation and Diagrams"
 Cohesion: 0.11
-Nodes (20): TolongDesign Design Starting Point, Tool Doc Contract, Created Tools and Credit Sources Column, Project Design Workflow, tolongdesign CLI, Task 1: Vocabulary and Validation, Task 2: Shared Ranking and Eval, Task 4: Index Extraction, Cards and People Renderer (+12 more)
+Nodes (18): docs/PRD.md · document, docs/METADATA.md · referenced by docs/PRD.md, docs/README.md · referenced by docs/PRD.md, docs/TRD.md · referenced by docs/PRD.md, AGENTS.md · referenced by docs/PRD.md, templates/tool-doc.md · referenced by docs/PRD.md, 6. Resource quality bar · docs/PRD.md, 7. Retrieval and context experience · docs/PRD.md (+10 more)
 
-### Community 33 - "Private Release Pipeline"
-Cohesion: 0.19
-Nodes (18): Verify workflow, Tests and docs job, Repository command vocabulary (check, index, find, links, format), graphify-out knowledge graph, Never invent facts rule, No third-party assets in the repo, Paywall is about the tool, not the licence, The tool-doc template is the contract (+10 more)
-
-### Community 34 - "3D Resources"
+### Community 35 - "Catalogue Tooling"
 Cohesion: 0.12
-Nodes (19): Canvas Component, Demand Frameloop and Parent-Owned Motion Preference, Device and Frame-Time Budget Discipline, HTML-Owned Copy and Canvas Fallback, Model Example Component, pmndrs A11y Scene Helpers, ProductScene Example Component, React State vs Frame Hook API Separation (+11 more)
+Nodes (18): Created Tools and Credit Sources Column, People Worth Following (132 design engineers), Task 1: Vocabulary and Validation, Task 2: Shared Ranking and Eval, Task 4: Index Extraction, Cards and People Renderer, Task 6: CLI Integration, Creator Links (#12), execution_mode Vocabulary (+10 more)
 
-### Community 35 - "Agents Mcp Resources"
-Cohesion: 0.31
-Nodes (18): Agent Skills (SKILL.md), DESIGN.md, HTML-to-video rendering, Mastra, agentcn, Aura, designmd.me, designmd.supply (+10 more)
-
-### Community 36 - "Agents Mcp Resources"
-Cohesion: 0.31
-Nodes (16): Cursor, Agentation, Anatomy (index entry), Causal, Distill, Dray, Efecto, Impeccable (+8 more)
+### Community 36 - "3D Resources"
+Cohesion: 0.44
+Nodes (17): Canvas, GLSL, Mesh Gradients, Node-based Shader Editor, Procedural Noise, Raymarching, TypeGPU, WebGPU (+9 more)
 
 ### Community 37 - "Comics Resources"
 Cohesion: 0.17
@@ -341,195 +341,215 @@ Nodes (17): iOS Canvas Area Ceiling (16.78 MP cap makes toBlob return null; repo
 Cohesion: 0.16
 Nodes (17): Task 5: Register the image-to-code Companion Resource, Agent Notes Section (machine-oriented hints), Alternatives in This Repo Section, At a Glance Summary Table, Examples Section (three concrete links), Tool Doc Frontmatter Key Set, How to Use Section (real install command and minimal snippet), Paywall and Pricing Section Rules (+9 more)
 
-### Community 39 - "Link Checker Script"
-Cohesion: 0.19
-Nodes (13): ref_bun, buildResourceStatusReport(), checkLinksBatch(), isDnsError(), isKnownPausedResponse(), isTimeoutError(), LinkObservation, observeLink() (+5 more)
-
-### Community 40 - "Catalogue Tooling"
+### Community 39 - "Catalogue Tooling"
 Cohesion: 0.20
 Nodes (14): EXECUTION_MODES, ExecutionMode, isValidDate(), isValidUrl(), normalizeStack(), Stack, STACK_ALIASES, STACKS (+6 more)
 
-### Community 41 - "Catalogue Tooling"
-Cohesion: 0.26
-Nodes (11): cell(), hostLink(), PersonCredits, renderMadeCell(), renderPeopleRows(), SHELL_LANGUAGES, siteCell(), socialCell() (+3 more)
+### Community 40 - "Agents Mcp Resources"
+Cohesion: 0.35
+Nodes (15): Cursor, Agentation, Anatomy (index entry), Causal, Distill, Dray, Efecto, Impeccable (+7 more)
 
-### Community 42 - "Agents Mcp Resources"
-Cohesion: 0.14
-Nodes (14): Physical-Machine Metaphor for Technical Ideas, Agent notes, Alternatives in this repo, At a glance, ChatGPT Images (suggested generator), Examples, How to use, Image-to-code skill (+6 more)
+### Community 41 - "Documentation and Diagrams"
+Cohesion: 0.12
+Nodes (16): AGENTS.md · document, docs/PRD.md · referenced by AGENTS.md, docs/README.md · referenced by AGENTS.md, docs/PLAYBOOK.md · referenced by AGENTS.md, docs/METADATA.md · referenced by AGENTS.md, .github/CONTRIBUTING.md · referenced by AGENTS.md, templates/worker-brief.md · referenced by AGENTS.md, docs/design/README.md · referenced by AGENTS.md (+8 more)
 
-### Community 43 - "Comics Resources"
+### Community 42 - "Private Release Pipeline"
+Cohesion: 0.18
+Nodes (15): Bun 1.4.3 pin, SHA256SUMS verification of release archive, Draft-first release publish that refuses to overwrite a published release, SHA-pinned checkout and setup-bun actions, Private release workflow, Private repository guard, Build and publish private CLI job, Agent skill mirror cmp check (+7 more)
+
+### Community 43 - "Agents Mcp Resources"
+Cohesion: 0.36
+Nodes (15): DESIGN.md, HTML-to-video rendering, Mastra, agentcn, Aura, designmd.me, designmd.supply, getdesign.md (+7 more)
+
+### Community 44 - "Development Resources"
+Cohesion: 0.23
+Nodes (15): Node.js, OpenTelemetry, Python, Selenium, Vercel, Vercel AI SDK, Arc labs, bb (+7 more)
+
+### Community 45 - "Documentation and Diagrams"
+Cohesion: 0.13
+Nodes (15): docs/WORKFLOW.md · document, docs/CLI.md · referenced by docs/WORKFLOW.md, docs/PLAYBOOK.md · referenced by docs/WORKFLOW.md, docs/research/tree-icqr-study.md · referenced by docs/WORKFLOW.md, docs/scenarios/dictation-landing.md · referenced by docs/WORKFLOW.md, docs/TRD.md · referenced by docs/WORKFLOW.md, docs/design/agents-mcp/image-to-code-skill.md · referenced by docs/WORKFLOW.md, 5. Build and rendered verification · docs/WORKFLOW.md (+7 more)
+
+### Community 46 - "Agents Mcp Resources"
+Cohesion: 0.22
+Nodes (14): Agent Skills (SKILL.md), Bun, GPUI, GraphQL, OpenAPI, fx, Ghostex, Herdr (+6 more)
+
+### Community 47 - "Comics Resources"
 Cohesion: 0.22
 Nodes (14): Agent-Drivable Selector Contract (static page, stable #id selectors, so the advertised job runs headlessly), CLIP STUDIO PAINT Hand-off (PSD open, then File > Import > Vector for the line ZIP), Directing-Rules Panel Scoring (12 terms, candidate scored /100 so options differ in shot, camera height, lens and gaze), SVG Layer Stack Export (Paper, Eye level, Figures, Balloons, Names, Frame borders, Panel notes, Reading-flow, Numbers, Scores), Headless Software-WebGL Run (swiftshader flags, long VRM parse wait, 600 s download timeout), Joint-Angle Mannequin Figures (3D mannequins from joint angles, not image generation; swap for VRM), Lock-and-Reroll Workflow (freeze liked panels, reroll camera or pose only), Manga Name Page (ネーム) (+6 more)
 
-### Community 44 - "Retrieval Metadata"
+### Community 48 - "Retrieval Metadata"
 Cohesion: 0.22
 Nodes (14): mcp-skill mode, development surface, java stack, vercel stack, Image-to-code skill · agents-mcp/image-to-code-skill, skills · agents-mcp/skills, typeui.sh · agents-mcp/typeui-sh, Alumnium · development/alumnium (+6 more)
 
-### Community 45 - "CLI Release Plan"
+### Community 49 - "CLI Release Plan"
 Cohesion: 0.24
 Nodes (14): Bounded File Ownership Split (Main / Packager Worker / Test Worker), Global Constraints (v0.1.0, private, no network, AFK authority), Goal: Installable Private TolongDesign v0.1.0 Release, Private CLI Release Implementation Plan, Review Focus: Five Release Risks, Task 1: Version and Installation Diagnostics (release-info.ts), Task 2: Allowlisted Production Archive (release-lib.ts, prepare-release.ts), Task 3: Independent Clean-Install and Negative Checks (+6 more)
 
-### Community 46 - "Design Workflow Plan"
+### Community 50 - "Design Workflow Plan"
 Cohesion: 0.20
 Nodes (14): Architecture: Agent Judgment Outside the Deterministic CLI, File responsibilities, Global constraints, Goal: Private Use-Case Retrieval with Provenance-Backed Context, Project design workflow implementation plan, Review focus, Review Focus: Retrieval and Safety Risks, Task 1: Establish the failing CLI contract (+6 more)
 
-### Community 47 - "Catalogue Tooling"
+### Community 51 - "Catalogue Tooling"
 Cohesion: 0.23
 Nodes (12): createFixtureRoot(), defaultDocPath(), fixtureMetadata(), FixtureRoot, fixtureRoots, FixtureTool, markdownFor(), sectionName() (+4 more)
 
-### Community 48 - "Catalogue Tooling"
+### Community 52 - "Catalogue Tooling"
 Cohesion: 0.27
 Nodes (10): inline(), bestForValue(), CARD_BUDGET, CARD_MODES, CardInput, inlineCommand(), mode(), renderResourceCard() (+2 more)
 
-### Community 49 - "Agents Mcp Resources"
+### Community 53 - "3D Resources"
 Cohesion: 0.21
-Nodes (13): Archify 3.0.1 Renderer, Design Workflow Diagram (design-workflow.svg), Hero Banner (tolongdesign-hero.png), Original README Assets Manifest, No Third-Party Asset Reuse, Three.js Doc, Anatomy Skill, anatomy-figures npm Package (+5 more)
+Nodes (13): 3D Section Index, Agent-Friendly Suitability Column, Drei, Mixamo, React Three Fiber, Agents & MCP Section Index, People worth following, bun run Index Generator (frontmatter to section tables) (+5 more)
 
-### Community 50 - "Design Galleries Resources"
+### Community 54 - "Design Galleries Resources"
 Cohesion: 0.15
 Nodes (13): mobile-ui surface, 60fps · design-galleries/60fps, Appinspo · design-galleries/appinspo, before.click · design-galleries/before-click, Great Apps · design-galleries/great-apps, loadmo.re · design-galleries/loadmo-re, Mobbin · design-galleries/mobbin, Pttrns · design-galleries/pttrns (+5 more)
 
-### Community 51 - "Private Release Pipeline"
-Cohesion: 0.23
-Nodes (12): SHA256SUMS verification of release archive, Draft-first release publish that refuses to overwrite a published release, SHA-pinned checkout and setup-bun actions, Private release workflow, Private repository guard, Build and publish private CLI job, Isolated release install smoke test, Tag equals package version check (+4 more)
+### Community 55 - "Type Resources"
+Cohesion: 0.47
+Nodes (12): Fluid Typography / clamp(), npm, OpenType, SIL Open Font License, Departure Mono, Fontshare, Fontsource, Klim (+4 more)
 
-### Community 52 - "Interface Design Resources"
+### Community 56 - "Documentation and Diagrams"
+Cohesion: 0.18
+Nodes (12): Bun install · docs/diagrams/release-workflow.json, Stop + reinstall · docs/diagrams/release-workflow.json, Hash + archive · docs/diagrams/release-workflow.json, Prepare package · docs/diagrams/release-workflow.json, Use CLI · docs/diagrams/release-workflow.json, CI gates · docs/diagrams/release-workflow.json, Run doctor · docs/diagrams/release-workflow.json, Version tag · docs/diagrams/release-workflow.json (+4 more)
+
+### Community 57 - "Interface Design Resources"
 Cohesion: 0.20
 Nodes (12): Reference, Not Implementation Source (public viewing grants no reuse of logo, code, screenshots or geometry; keep claims separate from tested behaviour), Discovery Collection, Not Source (a preview page is not the production project file; no checkout, download or collection-wide licence on the page), Framer Community Terms v1.0, Framer Remix Delivery (Use for Free or Buy on the creator site, emailed remix link copies the project into a Framer workspace), Lenis Core Library Licence does not license template projects, Lenis Templates (hand-curated third-party template directory powered by Lenis), Single-Use / Limited Licence Scope (paid limited to one project; free content allows client work only inside a broader end product; no resale or sublicensing), Purchase Preflight Checklist (budget, client scope, workspace, modify/publish rights, asset rights for images, fonts and icons) (+4 more)
 
-### Community 53 - "Retrieval Metadata"
+### Community 58 - "Retrieval Metadata"
 Cohesion: 0.24
 Nodes (12): android stack, canvas stack, dart stack, flutter stack, ios stack, webgl stack, Libraries.dev · component-libraries/libraries-dev, LocalSend · desktop/localsend (+4 more)
 
-### Community 54 - "Deploy Resources"
+### Community 59 - "Deploy Resources"
 Cohesion: 0.38
 Nodes (11): CI/CD, Docker, Edge computing, Go, Serverless, Cloudflare, Fly.io, Netlify (+3 more)
 
-### Community 55 - "Color Resources"
-Cohesion: 0.36
-Nodes (11): CIELAB / LCH, CSS Custom Properties, OKLab, OKLCH, WCAG, APCA, Color.review, Huetone (+3 more)
+### Community 60 - "3D Resources"
+Cohesion: 0.35
+Nodes (11): Draco compression, glTF Transform, HDRI, meshoptimizer, PBR materials, Poimandres (pmndrs), Three.js, Blender (+3 more)
 
-### Community 56 - "Retrieval Metadata"
+### Community 61 - "REA Reverse Engineering"
+Cohesion: 0.27
+Nodes (11): Lenis Templates Directory, Lenis (design doc entry), Automatic Frame Clock (autoRaf / manual raf), GSAP Ticker Clock Integration, Instance Lifecycle Cleanup (unsubscribe + destroy), Native Scroll Positioning over Page Transforms, Nested Scroll Opt-Out (data-lenis-prevent), React Adapter (ReactLenis / useLenis) (+3 more)
+
+### Community 62 - "Retrieval Metadata"
 Cohesion: 0.24
 Nodes (11): cli-tui surface, bash stack, fish stack, ink stack, opentui stack, zig stack, zsh stack, fx · agents-mcp/fx (+3 more)
 
-### Community 57 - "Release Architecture Spec"
+### Community 63 - "Release Architecture Spec"
 Cohesion: 0.24
 Nodes (11): buildRelease Interface and ReleaseBuildResult, CLI Compatibility Contract (search/show/context unchanged, exit codes), Deployment Choice: Authenticated Private GitHub Releases Tarball, doctor --json Diagnostic Contract (schema_version 1, root, manifest_verified), Payload Allowlist and Exclusions for the Release Tarball, Rejected Alternatives: Private Package Registry and Hosted Service, Release Manifest Schema Version 1 (path-to-SHA256 of payload), Source and Agent Handoff (doctor root, skill mirrors, no auto-install) (+3 more)
 
-### Community 58 - "Agents Mcp Resources"
+### Community 64 - "Agents Mcp Resources"
 Cohesion: 0.20
 Nodes (11): bun stack, claude-code stack, nodejs stack, pnpm stack, Anatomy · agents-mcp/anatomy, Open Design · agents-mcp/open-design, OpenCode · agents-mcp/opencode, SkillSync · agents-mcp/skillsync (+3 more)
 
-### Community 59 - "Retrieval Metadata"
+### Community 65 - "Retrieval Metadata"
 Cohesion: 0.25
 Nodes (11): c stack, cli stack, mcp stack, rest stack, rust stack, Herdr · agents-mcp/herdr, is-agentic.com · agents-mcp/is-agentic-com, Webclaw · agents-mcp/webclaw (+3 more)
 
-### Community 60 - "Private Release Pipeline"
-Cohesion: 0.33
-Nodes (10): Bun 1.4.3 pin, Bun 1.4.3 pin, Checkout mode diagnostics (mode: checkout, no verified manifest), doctor --json integrity diagnostic, Exit code contract (2 usage, 1 integrity; JSON errors to stderr), Private CLI installation guide, Read-only, local, no-network CLI boundary, Update and rollback by reinstalling a verified tag (+2 more)
-
-### Community 61 - "Design Galleries Resources"
+### Community 66 - "Design Galleries Resources"
 Cohesion: 0.22
 Nodes (10): Agent-Friendly Column (per-tool verdict on whether a coding agent can drive the tool), Design Galleries Index (79 tools: 49 free, 26 freemium, 1 paid, 3 unknown), Generated by 'bun run index' from doc frontmatter, do not edit by hand (single source of truth is each tool page's YAML), Paywall Taxonomy (Free / Freemium / Paid / Unknown as a first-class index column), Canvas / Tokens / Layout Systems taxonomy for interface design tools, Interface Design Index (12 tools: 6 free, 4 freemium, 2 paid), Generated by 'bun run index' from doc frontmatter, do not edit by hand, Motion Index (13 tools: 9 free, 3 freemium, 1 paid) (+2 more)
 
-### Community 62 - "Deploy Resources"
+### Community 67 - "Deploy Resources"
 Cohesion: 0.24
 Nodes (10): hosting surface, docker stack, go stack, postgresql stack, Capacity · agents-mcp/capacity, Fly.io · deploy/fly-io, Netlify · deploy/netlify, Railway · deploy/railway (+2 more)
 
-### Community 63 - "Agents Mcp Resources"
-Cohesion: 0.31
-Nodes (9): GPUI, GraphQL, OpenAPI, fx, Ghostex, Herdr, integrations.sh, is-agentic.com (+1 more)
+### Community 68 - "Documentation and Diagrams"
+Cohesion: 0.28
+Nodes (9): Review + CI · docs/diagrams/maintenance-workflow.json, Check evidence · docs/diagrams/maintenance-workflow.json, Write tool doc · docs/diagrams/maintenance-workflow.json, Validate docs · docs/diagrams/maintenance-workflow.json, Regenerate index · docs/diagrams/maintenance-workflow.json, Run tests · docs/diagrams/maintenance-workflow.json, Derived files · docs/diagrams/maintenance-workflow.json, Format · docs/diagrams/maintenance-workflow.json (+1 more)
 
-### Community 64 - "Design CLI Spec"
+### Community 69 - "Design CLI Spec"
 Cohesion: 0.31
 Nodes (9): CLI Command Contract: search, show, context, Context Pack with Provenance Manifest (schema_version 1, sha256), design-lib.ts Public Interface (loadResources, searchResources, resolveResource, buildContext), Jev Semantic Ranking Rejected, Approach: Read-Only Bun CLI plus Mirrored design-project Skill, Safe Markdown Fencing for Embedded Documents, search --json Result Contract and Excerpt Evidence Rule, Project Design Workflow Spec (+1 more)
 
-### Community 65 - "Interface Design Resources"
+### Community 70 - "Documentation and Diagrams"
+Cohesion: 0.22
+Nodes (9): docs/CLI.md · document, docs/METADATA.md · referenced by docs/CLI.md, Private CLI installation · docs/CLI.md, Errors and boundaries · docs/CLI.md, Install a private release · docs/CLI.md, Requirements · docs/CLI.md, Use from another project · docs/CLI.md, Update and rollback · docs/CLI.md (+1 more)
+
+### Community 71 - "REA Reverse Engineering"
+Cohesion: 0.39
+Nodes (8): Shaders (WebGPU component library), CLI and MCP Agent Interface, createShader JavaScript API, Framework Adapters (React/Vue/Svelte/Solid/JS/Framer), No WebGL Fallback / Required Fallback Path, Sampled Telemetry with disableTelemetry, Single Canvas Layer Composition, SSR Client Boundary Requirement
+
+### Community 72 - "Interface Design Resources"
 Cohesion: 0.67
 Nodes (7): Design tokens, design.dev, Figma, Framer, make.design, Penpot, Spline
 
-### Community 66 - "Component Libraries Resources"
-Cohesion: 0.29
-Nodes (7): Forme, JSX Email, MJML, React Email, Takumi, emailcn, pdfcn
+### Community 73 - "Documentation and Diagrams"
+Cohesion: 0.33
+Nodes (7): stdout · docs/diagrams/system-architecture.json, Command handler · docs/diagrams/system-architecture.json, Local source files · docs/diagrams/system-architecture.json, Human / agent · docs/diagrams/system-architecture.json, Resource loader · docs/diagrams/system-architecture.json, Context builder · docs/diagrams/system-architecture.json, Filter + rank · docs/diagrams/system-architecture.json
 
-### Community 67 - "Design Galleries Resources"
+### Community 74 - "Design Galleries Resources"
 Cohesion: 0.38
 Nodes (7): Canvas-Led Composition (warm neutral ground, dotted ICQR mark, generous central space, rounded control group near the bottom), ICQR Magic Tree (3D QR-code tree generator and interactive design reference), REA Browser Evidence Capture (REA 6.4.0, isolated Chrome session, three recorded viewport cases), Responsive Control Group (centred group on desktop, nearly full-width group on portrait mobile), Spatial Product Metaphor (a link converted into a scannable 3D tree with season and colour customisation), Unsupported-Screen-Size Fallback (explicit message at 780x493; do not assume every viewport gets the same interface, borrow the check for own acceptance tests), Unverified 3D Rendering (headless WebGL was unavailable, so captures are not proof of tree geometry, animation or QR scannability)
 
-### Community 68 - "Workflow Spec Docs"
+### Community 75 - "Workflow Spec Docs"
 Cohesion: 0.29
 Nodes (5): Agent workflow, Approach, Intent and authorization, Project design workflow, Verification and boundaries
 
-### Community 69 - "Retrieval Metadata"
+### Community 76 - "Retrieval Metadata"
 Cohesion: 0.29
 Nodes (7): cloudflare-workers stack, electron stack, vite stack, bb · agents-mcp/bb, Bolt.new · development/bolt-new, Vinext · development/vinext, Recordly · video-capture/recordly
 
-### Community 70 - "Prettier Config"
+### Community 77 - "Prettier Config"
 Cohesion: 0.29
 Nodes (6): overrides, printWidth, $schema, semi, singleQuote, trailingComma
 
-### Community 71 - "Catalogue Tooling"
+### Community 78 - "CLI Integration Tests"
+Cohesion: 0.38
+Nodes (6): decode(), designEntrypoint, findEntrypoint, runDesign(), runFind(), sourceRoot
+
+### Community 79 - "Documentation and Diagrams"
 Cohesion: 0.33
-Nodes (5): decode(), entrypoint, runCli(), sourceRoot, temporaryCwds
+Nodes (6): Agree direction · docs/diagrams/overview.json, Read full docs · docs/diagrams/overview.json, Inspect + test · docs/diagrams/overview.json, Make the work · docs/diagrams/overview.json, Find resources · docs/diagrams/overview.json, Deliver · docs/diagrams/overview.json
 
-### Community 72 - "Whiteboard Resources"
-Cohesion: 0.93
-Nodes (6): Markdown, Excalidraw, Linear, Obsidian, Whiteboard, tldraw
+### Community 80 - "Documentation and Diagrams"
+Cohesion: 0.40
+Nodes (5): Files · docs/diagrams/retrieval-sequence.json, Ranker · docs/diagrams/retrieval-sequence.json, Caller · docs/diagrams/retrieval-sequence.json, CLI · docs/diagrams/retrieval-sequence.json, Loader · docs/diagrams/retrieval-sequence.json
 
-### Community 73 - "Component Libraries Resources"
-Cohesion: 0.33
-Nodes (6): <ascii-art> custom element, ascii.rest, bas3line/ascii GitHub repo, Piece frame function (t, env) => string, mount() API, Reduced-motion first-frame hold
-
-### Community 74 - "Private Release Pipeline"
-Cohesion: 0.50
-Nodes (5): Generated files are never hand-edited, Never Invent Facts, People Worth Following (132 design engineers), The Two Rules (no invented facts, no hand-edited generated files), No Invented URLs, Prices or Counts
-
-### Community 75 - "Interface Design Resources"
+### Community 81 - "Interface Design Resources"
 Cohesion: 0.90
 Nodes (5): Interface Craft, Lab01, UI Labs, UI Playbook, UIWTF
 
-### Community 76 - "Component Libraries Resources"
+### Community 82 - "Component Libraries Resources"
 Cohesion: 0.40
 Nodes (5): unreachable status, Butter Nav · component-libraries/butter-nav, Availability recheck: Butter Nav, Butterfly · utilities/butterfly, Availability recheck: Butterfly
 
-### Community 77 - "Retrieval Metadata"
+### Community 83 - "Retrieval Metadata"
 Cohesion: 0.40
 Nodes (5): pdf surface, forme stack, takumi stack, pdfcn · component-libraries/pdfcn, Runey · desktop/runey
 
-### Community 78 - "Development Resources"
+### Community 84 - "Development Resources"
 Cohesion: 0.40
 Nodes (5): drizzle stack, hono stack, nuxt stack, Better T Stack · development/better-t-stack, evlog · development/evlog
 
-### Community 79 - "Component Libraries Resources"
-Cohesion: 0.50
-Nodes (4): Satori, Shaders, 23rd, ogimagecn
-
-### Community 80 - "Comics Resources"
+### Community 85 - "Comics Resources"
 Cohesion: 0.50
 Nodes (4): Non-destructive hand-edited shape handles stored per type, Uncompressed j= form exists so an agent can write a share link without a compressor, Fukidashi share hash: #z=base64url(raw deflate) or #j=base64url(JSON), window.FUKI runtime API (st, fromAny, defaultState, renderPNG, svgExport, layoutText, unionPoly)
 
-### Community 81 - "Retrieval Metadata"
+### Community 86 - "Retrieval Metadata"
 Cohesion: 0.50
 Nodes (4): cuda stack, gpu stack, triton stack, Learn Kernels · reading/learn-kernels
 
-### Community 82 - "Comics Resources"
+### Community 87 - "Comics Resources"
 Cohesion: 0.67
 Nodes (3): Binary search for the smallest scale at which the text box fits the outline, SVG text becomes outlines only with the bundled Antique faces, Comics typesetting: vertical writing, 縦中横 sideways numerals, kinsoku rules
 
-### Community 83 - "Catalogue Tooling"
+### Community 88 - "Catalogue Tooling"
 Cohesion: 0.67
 Nodes (3): Agent Retrieval Improvements Implementation Plan, Agent Retrieval Improvements Design Spec, Verification Gate
 
-### Community 84 - "Agents Mcp Resources"
+### Community 89 - "Agents Mcp Resources"
 Cohesion: 0.67
 Nodes (3): chrome stack, npm stack, REA · agents-mcp/rea
 
-### Community 85 - "Agents Mcp Resources"
+### Community 90 - "Agents Mcp Resources"
 Cohesion: 0.67
 Nodes (3): eve stack, mastra stack, agentcn · agents-mcp/agentcn
 
-### Community 86 - "Agents Mcp Resources"
+### Community 91 - "Agents Mcp Resources"
 Cohesion: 0.67
 Nodes (3): graphql stack, openapi stack, integrations.sh · agents-mcp/integrations-sh
 
@@ -542,9 +562,9 @@ Nodes (3): graphql stack, openapi stack, integrations.sh · agents-mcp/integrati
   docs/design/motion/lenis.md · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **335 isolated node(s):** `InstallationInfo`, `ROOT`, `description`, `prettier`, `@types/bun` (+330 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 403 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **554 isolated node(s):** `Entry`, `Catalogue`, `CreatorEvidence`, `Doc`, `CatalogueEntry` (+549 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 622 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -556,13 +576,13 @@ _Questions this graph is uniquely positioned to answer:_
 - **What is the exact relationship between `Lenis Scroll Runtime` and `Sampled Telemetry with disableTelemetry`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
 - **Why does `Paywall Taxonomy (free/freemium/paid/unknown)` connect `3D Resources` to `Agents Mcp Resources`, `Tool Doc Template`?**
-  _High betweenness centrality (0.208) - this node is a cross-community bridge._
+  _High betweenness centrality (0.157) - this node is a cross-community bridge._
+- **Why does `Tool Doc Template` connect `Design CLI Spec` to `Tool Doc Template`, `Release Architecture Spec`?**
+  _High betweenness centrality (0.147) - this node is a cross-community bridge._
 - **Why does `Tool Doc Frontmatter Key Set` connect `Tool Doc Template` to `Design CLI Spec`, `3D Resources`?**
-  _High betweenness centrality (0.194) - this node is a cross-community bridge._
-- **Why does `Tool Doc Template` connect `Design CLI Spec` to `Release Architecture Spec`, `Tool Doc Template`?**
-  _High betweenness centrality (0.194) - this node is a cross-community bridge._
-- **What connects `InstallationInfo`, `ROOT`, `description` to the rest of the system?**
-  _335 weakly-connected nodes found - possible documentation gaps or missing edges._
-## Update scope
+  _High betweenness centrality (0.146) - this node is a cross-community bridge._
+- **What connects `Entry`, `Catalogue`, `CreatorEvidence` to the rest of the system?**
+  _554 weakly-connected nodes found - possible documentation gaps or missing edges._
+## Documentation refresh scope
 
-This incremental update deterministically extracts all 441 resources' typed frontmatter and five explicit creator credits, and freshly parses changed code with AST extraction. Existing semantic evidence is retained; dated availability notes add exact current evidence. One filesystem-only River DeepSeek worker extracted the eight changed instruction/prose documents (32 nodes, 30 relationships). Its observed usage was 37,107 uncached input tokens, 33,280 cached input tokens and 12,855 output tokens; graph metadata/AST extraction uses no model calls. Qualified catalogue-record labels preserve resource identity alongside shared semantic concepts.
+Incremental structural refresh of the changed release code, authored guide headings/local links, and explicit Archify relationships. Existing graph evidence outside these sources is retained. No remote model or semantic inference pass ran. Uncommitted working-tree source based on 2e10faa; 441 resource documents remain represented.
