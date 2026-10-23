@@ -16426,6 +16426,79 @@
    "last_verified": "2026-10-14",
    "install": null,
    "doc": "docs/design/comics/rokehan.md"
+  },
+  {
+   "name": "mkdir.directory",
+   "slug": "mkdir-directory",
+   "section": "Design Galleries",
+   "section_slug": "design-galleries",
+   "source_url": "https://mkdir.directory/",
+   "designeer_url": "https://designeer.xyz/",
+   "designeer_blurb": "Ranked meta-directory of web design inspiration directories, ordered by community votes.",
+   "paywall": "free",
+   "pricing_summary": "Free to explore with no paywall and no account; no paid plan exists.",
+   "open_source": false,
+   "license": "unknown",
+   "category_tags": [
+    "directory",
+    "inspiration",
+    "web-design",
+    "curated",
+    "community-voting"
+   ],
+   "best_for": [
+    "finding inspiration directories",
+    "ranking design galleries"
+   ],
+   "stack": [],
+   "agent_friendly": false,
+   "execution_mode": "reference",
+   "surface": [
+    "reference"
+   ],
+   "status": "active",
+   "last_verified": "2026-10-23",
+   "install": null,
+   "doc": "docs/design/design-galleries/mkdir-directory.md"
+  },
+  {
+   "name": "ASCII Magic",
+   "slug": "ascii-magic",
+   "section": "Utilities",
+   "section_slug": "utilities",
+   "source_url": "https://www.ascii-magic.com/",
+   "designeer_url": "https://designeer.xyz/utilities",
+   "designeer_blurb": "Freemium studio converting images and video into ASCII, pixel, dither and 100+ art styles, with an MCP server for agent-driven 4K renders.",
+   "paywall": "freemium",
+   "pricing_summary": "Free tier with 16 base styles and unlimited local exports; Pro is $8/month (or $4/month billed yearly) for 100+ styles, 4K export and full effects. AI generative renders use credits.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "ascii-art",
+    "dithering",
+    "pixel-art",
+    "image-effects",
+    "video-effects",
+    "mcp"
+   ],
+   "best_for": [
+    "ascii art",
+    "dithering",
+    "retro aesthetic",
+    "video effects",
+    "agent-driven renders"
+   ],
+   "stack": [],
+   "agent_friendly": true,
+   "execution_mode": "mcp-skill",
+   "surface": [
+    "web-asset",
+    "video"
+   ],
+   "status": "active",
+   "last_verified": "2026-10-23",
+   "install": "claude mcp add --transport http ascii-magic https://www.ascii-magic.com/mcp\n# then run `claude`, type /mcp, pick ascii-magic → Authenticate",
+   "doc": "docs/design/utilities/ascii-magic.md"
   }
  ]
 }

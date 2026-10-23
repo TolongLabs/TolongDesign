@@ -2,15 +2,15 @@
 
 # Design catalogue
 
-441 tools across 18 sections, scraped from [Designeer](https://designeer.xyz) on
+443 tools across 18 sections, scraped from [Designeer](https://designeer.xyz) on
 2026-10-07 plus hand-picked additions, researched one by one. Each tool has its
 own doc with source URL, paywall, how to use, examples, and agent notes.
 
-**Paywall overview:** 287 free · 123 freemium · 20 paid · 11 unknown.
+**Paywall overview:** 288 free · 124 freemium · 20 paid · 11 unknown.
 
 | Section                                                | Tools | Free | Freemium | Paid | What it covers                                                                       |
 | ------------------------------------------------------ | ----- | ---- | -------- | ---- | ------------------------------------------------------------------------------------ |
-| [Design Galleries](./design-galleries/README.md)       | 79    | 49   | 26       | 1    | Design galleries, interface patterns, and web inspiration.                           |
+| [Design Galleries](./design-galleries/README.md)       | 80    | 50   | 26       | 1    | Design galleries, interface patterns, and web inspiration.                           |
 | [Component Libraries](./component-libraries/README.md) | 110   | 77   | 30       | 0    | Production UI primitives and accessible component libraries.                         |
 | [Development](./development/README.md)                 | 24    | 16   | 5        | 3    | Modern code editors, runtimes, and local tooling.                                    |
 | [Agents & MCP](./agents-mcp/README.md)                 | 38    | 19   | 17       | 2    | Coding agents, local MCP servers, and machine specs.                                 |
@@ -21,7 +21,7 @@ own doc with source URL, paywall, how to use, examples, and agent notes.
 | [3D](./3d/README.md)                                   | 9     | 9    | 0        | 0    | 3D modeling tools and WebGL rendering engines online.                                |
 | [Shaders](./shaders/README.md)                         | 8     | 6    | 2        | 0    | Interactive fragment shaders, procedural noise, and canvas effects.                  |
 | [Icons](./icons/README.md)                             | 30    | 25   | 5        | 0    | Crisp icon families and glyphs for modern interfaces.                                |
-| [Utilities](./utilities/README.md)                     | 34    | 24   | 6        | 0    | Developer utilities that accelerate frontend workflows.                              |
+| [Utilities](./utilities/README.md)                     | 35    | 24   | 7        | 0    | Developer utilities that accelerate frontend workflows.                              |
 | [Desktop](./desktop/README.md)                         | 12    | 4    | 4        | 4    | Native macOS and desktop utility apps for productivity.                              |
 | [Video & Capture](./video-capture/README.md)           | 11    | 5    | 5        | 1    | Screen recording software, timeline editors, and demo tools.                         |
 | [Whiteboard](./whiteboard/README.md)                   | 4     | 0    | 4        | 0    | Infinite canvas workspaces for wireframing and systems architecture.                 |
