@@ -106,8 +106,8 @@ verified artboard page.
 ## Alternatives in this repo
 
 - [ASCIInator](../utilities/asciinator.md) — another ASCII-focused utility.
-- [ASCII Studio](../utilities/ascii-studio.md) — convert video into sequential
-  character frames and export a React component.
+- [ASCII Motion Studio](../utilities/ascii-motion-studio.md) — convert video
+  into ASCII and export MP4 or GIF, free and client-side.
 - [Tooooools](../utilities/tooooools.md) — apply image effects such as dithering
   and halftone dots instead of character rendering.
 

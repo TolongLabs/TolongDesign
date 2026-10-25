@@ -13039,40 +13039,45 @@
    "doc": "docs/design/utilities/open-source-together.md"
   },
   {
-   "name": "ASCII Studio",
-   "slug": "ascii-studio",
+   "name": "ASCII Motion Studio",
+   "slug": "ascii-motion-studio",
    "section": "Utilities",
    "section_slug": "utilities",
-   "source_url": "https://www.asciistudio.space/",
+   "source_url": "https://devault-ascii.pages.dev/ascii-generator/app/",
    "designeer_url": "https://designeer.xyz/utilities",
-   "designeer_blurb": "Transforms images and videos into ASCII art.",
-   "paywall": "unknown",
-   "pricing_summary": "The editor is visible, but its pricing area contains placeholder content rather than usable terms.",
-   "open_source": true,
-   "license": "MIT",
+   "designeer_blurb": "Free browser studio turning images and video into ASCII, braille, halftone, dither or brick mosaics with MP4/GIF exports.",
+   "paywall": "free",
+   "pricing_summary": "Entirely free with no account: every style, video-to-ASCII, MP4/GIF export and 4K output runs client-side. Devault's separate $9/month Pro plan is for its design-inspiration library, not this generator.",
+   "open_source": false,
+   "license": "proprietary",
    "category_tags": [
-    "ascii",
-    "video",
-    "image",
-    "export"
+    "ascii-art",
+    "braille",
+    "dithering",
+    "halftone",
+    "video-effects",
+    "retro",
+    "terminal-graphics"
    ],
    "best_for": [
-    "ASCII video treatments",
-    "text-based visual experiments"
+    "ascii art",
+    "video-to-ascii",
+    "braille art",
+    "brick mosaics",
+    "crt visuals",
+    "free exports"
    ],
-   "stack": [
-    "react",
-    "nextjs"
-   ],
+   "stack": [],
    "execution_mode": "browser-app",
    "surface": [
-    "web-ui"
+    "web-ui",
+    "video"
    ],
    "status": "active",
-   "agent_friendly": true,
-   "last_verified": "2026-10-07",
+   "agent_friendly": false,
+   "last_verified": "2026-10-25",
    "install": null,
-   "doc": "docs/design/utilities/ascii-studio.md"
+   "doc": "docs/design/utilities/ascii-motion-studio.md"
   },
   {
    "name": "Tabbied",

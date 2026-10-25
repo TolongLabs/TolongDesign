@@ -109,8 +109,8 @@ Access and pricing were checked on 2026-10-07.
   effects and export.
 - [Dither Lab](../utilities/dither-lab.md) — use for a focused image dithering
   experiment.
-- [ASCII Studio](../utilities/ascii-studio.md) — use for a documented
-  image-to-ASCII workflow.
+- [ASCII Motion Studio](../utilities/ascii-motion-studio.md) — use for a
+  documented image- and video-to-ASCII workflow.
 
 ## Sources
 

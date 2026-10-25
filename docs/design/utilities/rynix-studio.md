@@ -115,8 +115,8 @@ the implementation areas or effect list in the public repository:
 
 - [Tooooools](../utilities/tooooools.md) — browser-based still-image effects
   with accessible effect pages.
-- [ASCII Studio](../utilities/ascii-studio.md) — convert images and video to
-  ASCII output with a React export path.
+- [ASCII Motion Studio](../utilities/ascii-motion-studio.md) — convert images
+  and video to ASCII output with MP4/GIF export.
 - [Dither Lab](../utilities/dither-lab.md) — use for a focused photo dithering
   workflow.
 

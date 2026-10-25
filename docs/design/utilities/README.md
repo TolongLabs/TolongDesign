@@ -4,7 +4,7 @@
 
 > Developer utilities that accelerate frontend workflows.
 
-35 tools — 24 free, 7 freemium, 0 paid, 4 unknown. Source:
+35 tools — 25 free, 7 freemium, 0 paid, 3 unknown. Source:
 [Designeer](https://designeer.xyz/utilities).
 
 | Tool                                              | Paywall  | Open source | Agent-friendly | Best for                                                                                    | What it is                                                                                                                                 |
@@ -37,7 +37,7 @@
 | [Corne](./corne.md)                               | Free     | Yes         | Yes            | smooth corners, squircle treatments, border styling                                         | Documentation for the Corne split keyboard.                                                                                                |
 | [Shiori](./shiori.md)                             | Freemium | No          | Yes            | design research, saved references, agent-accessible bookmarks                               | Bookmark manager with CLI and Raycast support.                                                                                             |
 | [Open Source Together](./open-source-together.md) | Free     | No          | No             | finding open-source projects, contributor discovery                                         | Platform matching developers with open-source projects.                                                                                    |
-| [ASCII Studio](./ascii-studio.md)                 | Unknown  | Yes         | Yes            | ASCII video treatments, text-based visual experiments                                       | Transforms images and videos into ASCII art.                                                                                               |
+| [ASCII Motion Studio](./ascii-motion-studio.md)   | Free     | No          | No             | ascii art, video-to-ascii, braille art, brick mosaics, crt visuals, free exports            | Free browser studio turning images and video into ASCII, braille, halftone, dither or brick mosaics with MP4/GIF exports.                  |
 | [Tabbied](./tabbied.md)                           | Free     | Yes         | Yes            | generative backgrounds, geometric accents, agent-assisted pattern selection                 | Generative geometric pattern creator for SVG.                                                                                              |
 | [Rynix Studio](./rynix-studio.md)                 | Unknown  | No          | No             | real-time visual effects on local media                                                     | Playground for real-time video visual effects.                                                                                             |
 | [Mascofast](./mascofast.md)                       | Freemium | No          | Yes            | product mascots, onboarding art, app icon characters                                        | AI tool generating animated transparent 3D mascots.                                                                                        |

@@ -3513,14 +3513,14 @@
       "doc": "docs/design/utilities/open-source-together.md"
     },
     {
-      "name": "ASCII Studio",
-      "url": "https://www.asciistudio.space/",
-      "description": "Transforms images and videos into ASCII art.",
+      "name": "ASCII Motion Studio",
+      "url": "https://devault-ascii.pages.dev/ascii-generator/app/",
+      "description": "Free browser studio turning images and video into ASCII, braille, halftone, dither or brick mosaics with MP4/GIF exports.",
       "section": "Utilities",
-      "slug": "ascii-studio",
+      "slug": "ascii-motion-studio",
       "section_slug": "utilities",
       "designeer_url": "https://designeer.xyz/utilities",
-      "doc": "docs/design/utilities/ascii-studio.md"
+      "doc": "docs/design/utilities/ascii-motion-studio.md"
     },
     {
       "name": "Tabbied",

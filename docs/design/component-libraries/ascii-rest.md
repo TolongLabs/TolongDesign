@@ -155,8 +155,9 @@ Checked 2026-10-08.
   Next.js or Astro apps so the pieces ship with your bundle.
 - Skip it for static image-to-ASCII conversion; use
   [ASCIInator](../utilities/asciinator.md) or
-  [ASCII Studio](../utilities/ascii-studio.md) instead. For terminal-style UI
-  widgets rather than art, use [SRCL](../component-libraries/srcl.md).
+  [ASCII Motion Studio](../utilities/ascii-motion-studio.md) instead. For
+  terminal-style UI widgets rather than art, use
+  [SRCL](../component-libraries/srcl.md).
 
 ## Agent notes
 
@@ -184,8 +185,8 @@ Checked 2026-10-08.
 
 - [ASCIInator](../utilities/asciinator.md): converts images to static ASCII text
   instead of shipping animated pieces.
-- [ASCII Studio](../utilities/ascii-studio.md): turns video into ASCII frames;
-  bring your own footage.
+- [ASCII Motion Studio](../utilities/ascii-motion-studio.md): turns video into
+  ASCII frames with free MP4/GIF export; bring your own footage.
 - [ASCII (Kracked Devs)](../utilities/ascii-kracked-devs.md): a one-off
   text-to-ASCII generator, not embeddable code.
 - [Dot Matrix](../component-libraries/dot-matrix.md): the same copy-in retro
