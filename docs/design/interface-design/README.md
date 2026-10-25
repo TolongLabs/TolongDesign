@@ -7,19 +7,19 @@
 12 tools — 6 free, 4 freemium, 2 paid, 0 unknown. Source:
 [Designeer](https://designeer.xyz/).
 
-| Tool                                    | Paywall  | Open source | Agent-friendly | Best for                                                     | What it is                                                 |
-| --------------------------------------- | -------- | ----------- | -------------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
-| [Figma](./figma.md)                     | Freemium | No          | Yes            | interface design, prototypes, developer handoff              | Collaborative interface design and prototyping platform.   |
-| [Framer](./framer.md)                   | Freemium | No          | No             | marketing sites, portfolios, visual publishing               | Visual canvas designing and publishing websites.           |
-| [make.design](./make-design.md)         | Paid     | No          | No             | prompt-generated marketing pages, design exploration         | AI generator turning prompts into polished designs.        |
-| [Penpot](./penpot.md)                   | Freemium | Yes         | Yes            | interface design, design systems, self-hosted workflows      | Open-source web design platform supporting SVG.            |
-| [Spline](./spline.md)                   | Freemium | No          | Yes            | interactive 3d scenes, web visuals, prototypes               | Browser-based 3D design software with physics.             |
-| [Interface Craft](./interface-craft.md) | Paid     | No          | No             | interface craft study, interaction references                | Articles exploring modern digital interface craftsmanship. |
-| [UI Labs](./ui-labs.md)                 | Free     | No          | No             | component behavior study, interaction inspiration            | Laboratory deconstructing animated UI components.          |
-| [UIWTF](./uiwtf.md)                     | Free     | No          | Yes            | interface inspiration, small interaction studies             | Showcase of experimental web interface patterns.           |
-| [Lab01](./lab01.md)                     | Free     | No          | No             | visual references, interface studies                         | Refined UI experiments from a studio.                      |
-| [design.dev](./design-dev.md)           | Free     | No          | Yes            | design-token drafts, design documentation, agent prompts     | AI-assisted design token and system editor.                |
-| [UI Playbook](./ui-playbook.md)         | Free     | No          | No             | component state checklists, frontend implementation guidance | Guide to common UI component states.                       |
-| [Lenis Templates](./lenis-templates.md) | Free     | No          | No             | framer template discovery, scroll-motion references          | Templates published on the Lenis website.                  |
+| Tool                                    | Paywall  | Open source | Agent-friendly | Best for                                                         | What it is                                                 |
+| --------------------------------------- | -------- | ----------- | -------------- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| [Figma](./figma.md)                     | Freemium | No          | Yes            | interface design, prototypes, developer handoff                  | Collaborative interface design and prototyping platform.   |
+| [Framer](./framer.md)                   | Freemium | No          | No             | marketing sites, portfolios, visual publishing                   | Visual canvas designing and publishing websites.           |
+| [make.design](./make-design.md)         | Paid     | No          | No             | prompt-generated marketing pages, design exploration             | AI generator turning prompts into polished designs.        |
+| [Penpot](./penpot.md)                   | Freemium | Yes         | Yes            | interface design, design systems, self-hosted workflows          | Open-source web design platform supporting SVG.            |
+| [Spline](./spline.md)                   | Freemium | No          | Yes            | interactive 3d scenes, web visuals, prototypes, ai 3d generation | Browser-based 3D design software with physics.             |
+| [Interface Craft](./interface-craft.md) | Paid     | No          | No             | interface craft study, interaction references                    | Articles exploring modern digital interface craftsmanship. |
+| [UI Labs](./ui-labs.md)                 | Free     | No          | No             | component behavior study, interaction inspiration                | Laboratory deconstructing animated UI components.          |
+| [UIWTF](./uiwtf.md)                     | Free     | No          | Yes            | interface inspiration, small interaction studies                 | Showcase of experimental web interface patterns.           |
+| [Lab01](./lab01.md)                     | Free     | No          | No             | visual references, interface studies                             | Refined UI experiments from a studio.                      |
+| [design.dev](./design-dev.md)           | Free     | No          | Yes            | design-token drafts, design documentation, agent prompts         | AI-assisted design token and system editor.                |
+| [UI Playbook](./ui-playbook.md)         | Free     | No          | No             | component state checklists, frontend implementation guidance     | Guide to common UI component states.                       |
+| [Lenis Templates](./lenis-templates.md) | Free     | No          | No             | framer template discovery, scroll-motion references              | Templates published on the Lenis website.                  |
 
 [← All sections](../README.md)
