@@ -38,7 +38,7 @@ here. Use current `main` until a release includes them.
 | Stories and media     | [Comics](docs/design/comics/README.md) · [Video and capture](docs/design/video-capture/README.md)                                                                                                                                      |
 | Research and planning | [Galleries](docs/design/design-galleries/README.md) · [Reading](docs/design/reading/README.md) · [Whiteboards](docs/design/whiteboard/README.md)                                                                                       |
 | Tools and delivery    | [Development](docs/design/development/README.md) · [Agents & MCP](docs/design/agents-mcp/README.md) · [Utilities](docs/design/utilities/README.md) · [Desktop](docs/design/desktop/README.md) · [Deploy](docs/design/deploy/README.md) |
-| Our own collections   | [Line art](collections/line-art/README.md): animated ink-on-paper SVG, built and owned by TolongLabs · [All collections](collections/README.md)                                                                                        |
+| Our own collections   | [Line art](collections/line-art/README.md): animated ink-on-paper SVG · [Agent video](collections/agent-video/README.md): Remotion launch-film kit and template teardowns · [All collections](collections/README.md)                   |
 
 ## From resource to finished work
 

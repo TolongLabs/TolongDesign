@@ -16594,6 +16594,96 @@
    "last_verified": "2026-11-12",
    "install": "   bun run line-art:demo        # http://localhost:3000\n   bun run line-art:previews    # media/*.gif and media/street-noon.svg\n   bun test collections/line-art",
    "doc": "docs/design/motion/tolong-line-art.md"
+  },
+  {
+   "name": "snapcn",
+   "slug": "snapcn",
+   "section": "Video & Capture",
+   "section_slug": "video-capture",
+   "source_url": "https://snapcn.dev/",
+   "designeer_url": "https://snapcn.dev/",
+   "designeer_blurb": "shadcn registry of Remotion components for product demo videos, with paid launch-film templates.",
+   "paywall": "freemium",
+   "pricing_summary": "61 MIT components free. Pro $179/year, Lifetime $279 one-time, Commercial $499 one-time for five seats and client work (USD list prices; checkout localises by billing country). Pro adds 81 components, 10 template films and the MCP server.",
+   "open_source": true,
+   "license": "MIT (free components); proprietary (Pro components and templates)",
+   "category_tags": [
+    "remotion",
+    "shadcn-registry",
+    "product-demo-video",
+    "launch-video",
+    "video-templates",
+    "motion-graphics",
+    "agent-skills",
+    "mcp"
+   ],
+   "best_for": [
+    "launch films",
+    "product demo videos",
+    "changelog videos",
+    "ai chat and agent ui shots",
+    "kinetic typography"
+   ],
+   "stack": [
+    "react",
+    "remotion",
+    "shadcn",
+    "typescript"
+   ],
+   "execution_mode": "registry",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
+   "agent_friendly": true,
+   "last_verified": "2026-11-12",
+   "install": "npx shadcn@latest add @snapcn/text-reveal",
+   "doc": "docs/design/video-capture/snapcn.md"
+  },
+  {
+   "name": "TolongLabs Agent Video",
+   "slug": "tolong-agent-video",
+   "section": "Video & Capture",
+   "section_slug": "video-capture",
+   "source_url": "https://github.com/TolongLabs/TolongDesign/tree/main/collections/agent-video",
+   "designeer_url": "https://designeer.xyz/utilities",
+   "designeer_blurb": "TolongLabs' own Remotion kit and five launch-film templates, plus 155 teardowns of snapcn templates and components.",
+   "paywall": "free",
+   "pricing_summary": "Internal TolongLabs collection in this private repo. No cost. Remotion is free for teams of up to three; larger companies need a Remotion company licence.",
+   "open_source": false,
+   "license": "proprietary",
+   "category_tags": [
+    "remotion",
+    "launch-video",
+    "agent-video",
+    "video-templates",
+    "kinetic-typography",
+    "product-demo",
+    "teardown",
+    "motion-blur"
+   ],
+   "best_for": [
+    "launch films",
+    "agent product announcements",
+    "release videos",
+    "app launch videos",
+    "studying video templates"
+   ],
+   "stack": [
+    "react",
+    "remotion",
+    "typescript",
+    "bun"
+   ],
+   "execution_mode": "package",
+   "surface": [
+    "video"
+   ],
+   "status": "active",
+   "agent_friendly": true,
+   "last_verified": "2026-11-13",
+   "install": "bun run agent-video:install\nbun run agent-video:studio",
+   "doc": "docs/design/video-capture/tolong-agent-video.md"
   }
  ]
 }
