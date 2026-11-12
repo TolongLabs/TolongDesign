@@ -1,0 +1,28 @@
+{
+  "name": "@tolong/agent-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TolongLabs agent video kit: Remotion primitives, scenes and five launch-film templates.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "still": "remotion still src/index.ts",
+    "previews": "bun scripts/previews.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.539",
+    "@remotion/cli": "4.0.539",
+    "@remotion/google-fonts": "4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "@types/react": "^19.2.2",
+    "typescript": "5.9.3"
+  }
+}

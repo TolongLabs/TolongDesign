@@ -2,11 +2,11 @@
 
 # Design catalogue
 
-445 tools across 18 sections, scraped from [Designeer](https://designeer.xyz) on
+447 tools across 18 sections, scraped from [Designeer](https://designeer.xyz) on
 2026-10-07 plus hand-picked additions, researched one by one. Each tool has its
 own doc with source URL, paywall, how to use, examples, and agent notes.
 
-**Paywall overview:** 291 free · 124 freemium · 20 paid · 10 unknown.
+**Paywall overview:** 292 free · 125 freemium · 20 paid · 10 unknown.
 
 | Section                                                | Tools | Free | Freemium | Paid | What it covers                                                                       |
 | ------------------------------------------------------ | ----- | ---- | -------- | ---- | ------------------------------------------------------------------------------------ |
@@ -23,7 +23,7 @@ own doc with source URL, paywall, how to use, examples, and agent notes.
 | [Icons](./icons/README.md)                             | 30    | 25   | 5        | 0    | Crisp icon families and glyphs for modern interfaces.                                |
 | [Utilities](./utilities/README.md)                     | 35    | 25   | 7        | 0    | Developer utilities that accelerate frontend workflows.                              |
 | [Desktop](./desktop/README.md)                         | 12    | 4    | 4        | 4    | Native macOS and desktop utility apps for productivity.                              |
-| [Video & Capture](./video-capture/README.md)           | 11    | 5    | 5        | 1    | Screen recording software, timeline editors, and demo tools.                         |
+| [Video & Capture](./video-capture/README.md)           | 13    | 6    | 6        | 1    | Screen recording software, timeline editors, and demo tools.                         |
 | [Whiteboard](./whiteboard/README.md)                   | 4     | 0    | 4        | 0    | Infinite canvas workspaces for wireframing and systems architecture.                 |
 | [Deploy](./deploy/README.md)                           | 5     | 0    | 4        | 1    | Hosting platforms, edge runtimes, and deployment infrastructure.                     |
 | [Reading](./reading/README.md)                         | 33    | 20   | 8        | 4    | Essential books, design engineering essays, and craft tutorials.                     |

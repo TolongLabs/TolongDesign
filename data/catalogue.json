@@ -4451,6 +4451,26 @@
       "section_slug": "motion",
       "designeer_url": "https://designeer.xyz/components",
       "doc": "docs/design/motion/tolong-line-art.md"
+    },
+    {
+      "name": "snapcn",
+      "url": "https://snapcn.dev/",
+      "description": "shadcn registry of Remotion components for product demo videos, with paid launch-film templates.",
+      "section": "Video & Capture",
+      "slug": "snapcn",
+      "section_slug": "video-capture",
+      "designeer_url": "https://snapcn.dev/",
+      "doc": "docs/design/video-capture/snapcn.md"
+    },
+    {
+      "name": "TolongLabs Agent Video",
+      "url": "https://github.com/TolongLabs/TolongDesign/tree/main/collections/agent-video",
+      "description": "TolongLabs' own Remotion kit and five launch-film templates, plus 155 teardowns of snapcn templates and components.",
+      "section": "Video & Capture",
+      "slug": "tolong-agent-video",
+      "section_slug": "video-capture",
+      "designeer_url": "https://designeer.xyz/utilities",
+      "doc": "docs/design/video-capture/tolong-agent-video.md"
     }
   ],
   "people": [

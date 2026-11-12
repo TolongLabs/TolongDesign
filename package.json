@@ -20,7 +20,13 @@
     "links": "bun scripts/check-links.ts",
     "line-art:demo": "bun collections/line-art/demo/index.html",
     "line-art:previews": "bun collections/line-art/scripts/previews.ts",
-    "line-art:typecheck": "tsc -p collections/line-art/tsconfig.json"
+    "line-art:typecheck": "tsc -p collections/line-art/tsconfig.json",
+    "agent-video:install": "bun install --cwd collections/agent-video",
+    "agent-video:studio": "cd collections/agent-video && bunx remotion studio src/index.ts",
+    "agent-video:render": "cd collections/agent-video && bunx remotion render src/index.ts",
+    "agent-video:previews": "cd collections/agent-video && bun scripts/previews.ts",
+    "agent-video:knowledge": "bun collections/agent-video/scripts/knowledge-index.ts",
+    "agent-video:typecheck": "tsc -p collections/agent-video/tsconfig.json"
   },
   "devDependencies": {
     "@types/bun": "^1.4.2",

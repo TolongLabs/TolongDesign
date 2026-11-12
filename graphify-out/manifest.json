@@ -6,22 +6,22 @@
     "semantic_hash": "1411a6b192b952e608a203c93a1d8121"
   },
   "data/catalogue.json": {
-    "mtime": 1792922616.4293568,
-    "seen": 1792923650.603881,
-    "ast_hash": "43c0e364efcf13b8c0edb0ca121c7a12",
-    "semantic_hash": "43c0e364efcf13b8c0edb0ca121c7a12"
+    "mtime": 1794500513.972466,
+    "seen": 1794503808.2535055,
+    "ast_hash": "e615e5b64786e3f2113e5199b1fb4e7f",
+    "semantic_hash": "e615e5b64786e3f2113e5199b1fb4e7f"
   },
   "data/index.json": {
-    "mtime": 1792922697.7494984,
-    "seen": 1792923650.6038852,
-    "ast_hash": "1d9dafbcf167da36a67a843f36e162c2",
-    "semantic_hash": "1d9dafbcf167da36a67a843f36e162c2"
+    "mtime": 1794501194.913754,
+    "seen": 1794503808.253508,
+    "ast_hash": "45f84d4788c4e7c37899ea55a8a6e0b8",
+    "semantic_hash": "45f84d4788c4e7c37899ea55a8a6e0b8"
   },
   "package.json": {
-    "mtime": 1791992934.0845768,
-    "seen": 1792919536.2508795,
-    "ast_hash": "912708a11020ddeda8f8525331cc780a",
-    "semantic_hash": "912708a11020ddeda8f8525331cc780a"
+    "mtime": 1794500513.974068,
+    "seen": 1794503808.2535338,
+    "ast_hash": "ad53dac4a146df21062bb602a2759bef",
+    "semantic_hash": "ad53dac4a146df21062bb602a2759bef"
   },
   "scripts/build-index.ts": {
     "mtime": 1792734629.4047763,
@@ -54,10 +54,10 @@
     "semantic_hash": "ee6264fb3fbf8a0a5652ae057752db30"
   },
   "AGENTS.md": {
-    "mtime": 1792734629.0643508,
-    "seen": 1792923650.6054292,
-    "ast_hash": "27f674c91354ca35b8e0537b62c666d7",
-    "semantic_hash": "27f674c91354ca35b8e0537b62c666d7"
+    "mtime": 1794475586.650034,
+    "seen": 1794503808.2536707,
+    "ast_hash": "801143e04129d3fc700b91662a69367d",
+    "semantic_hash": "801143e04129d3fc700b91662a69367d"
   },
   "docs/PLAYBOOK.md": {
     "mtime": 1791698675.0847585,
@@ -66,14 +66,14 @@
     "semantic_hash": "8135f98fde90225a5e715672cf74ee3f"
   },
   "docs/README.md": {
-    "mtime": 1792734629.0683093,
-    "seen": 1792923650.6054463,
-    "ast_hash": "74b9417be00031dcad5ed2c4433d0c0b",
-    "semantic_hash": "74b9417be00031dcad5ed2c4433d0c0b"
+    "mtime": 1794475586.6830254,
+    "seen": 1794503808.2541113,
+    "ast_hash": "619949258c2a1ec670ac745ce7bcb043",
+    "semantic_hash": "619949258c2a1ec670ac745ce7bcb043"
   },
   "docs/design/3d/README.md": {
-    "mtime": 1792734723.807321,
-    "seen": 1792919536.251006,
+    "mtime": 1794474822.4728174,
+    "seen": 1794496211.0176528,
     "ast_hash": "3aa67cd80631df673ca6c21091d82827",
     "semantic_hash": "3aa67cd80631df673ca6c21091d82827"
   },
@@ -108,8 +108,8 @@
     "semantic_hash": "3cbc09ad12156b8108f0f97082572b4f"
   },
   "docs/design/agents-mcp/README.md": {
-    "mtime": 1792734723.954465,
-    "seen": 1792919536.2510252,
+    "mtime": 1794474822.5754576,
+    "seen": 1794496211.0176806,
     "ast_hash": "2aec3d9e76df9edc98c16486ca2728fa",
     "semantic_hash": "2aec3d9e76df9edc98c16486ca2728fa"
   },
@@ -156,8 +156,8 @@
     "semantic_hash": "18b06dff6498ef9b95b179ec7511ed05"
   },
   "docs/design/component-libraries/README.md": {
-    "mtime": 1792734724.2797303,
-    "seen": 1792919536.2511265,
+    "mtime": 1794474822.7807379,
+    "seen": 1794496211.0178165,
     "ast_hash": "7d7def83a2cc9bab29ae681a23b252f1",
     "semantic_hash": "7d7def83a2cc9bab29ae681a23b252f1"
   },
@@ -300,8 +300,8 @@
     "semantic_hash": "1636f4fffd5d225b15f27fb9933c6faf"
   },
   "docs/design/deploy/README.md": {
-    "mtime": 1792734724.2990913,
-    "seen": 1792919536.251318,
+    "mtime": 1794474822.7990665,
+    "seen": 1794496211.0180798,
     "ast_hash": "50881e0e52d7cc0105ea9059d7528493",
     "semantic_hash": "50881e0e52d7cc0105ea9059d7528493"
   },
@@ -444,8 +444,8 @@
     "semantic_hash": "d711b1da2b110fc323dd97891c2a65b5"
   },
   "docs/design/desktop/README.md": {
-    "mtime": 1792734724.4462354,
-    "seen": 1792919536.2514915,
+    "mtime": 1794474822.9163694,
+    "seen": 1794496211.0182855,
     "ast_hash": "93970336caca361dc4baef6ad4b4fb38",
     "semantic_hash": "93970336caca361dc4baef6ad4b4fb38"
   },
@@ -522,8 +522,8 @@
     "semantic_hash": "3776d84ea0fd6ecd9dda0b6ee959fd14"
   },
   "docs/design/development/README.md": {
-    "mtime": 1792734724.4849575,
-    "seen": 1792919536.2515192,
+    "mtime": 1794474822.9603581,
+    "seen": 1794496211.018316,
     "ast_hash": "4b6b3397765d0be76e809d401961375e",
     "semantic_hash": "4b6b3397765d0be76e809d401961375e"
   },
@@ -642,10 +642,10 @@
     "semantic_hash": "003124a1b60dde108317b65395e6bb21"
   },
   "docs/design/interface-design/spline.md": {
-    "mtime": 1792734629.274148,
-    "seen": 1792919536.2516716,
-    "ast_hash": "436ed508f8d33f6f38dc8a0c81d7c131",
-    "semantic_hash": "436ed508f8d33f6f38dc8a0c81d7c131"
+    "mtime": 1792938542.7511444,
+    "seen": 1794503808.2541206,
+    "ast_hash": "75b578af353e08d92be08accae707345",
+    "semantic_hash": "75b578af353e08d92be08accae707345"
   },
   "docs/design/motion/gsap.md": {
     "mtime": 1792734629.2781065,
@@ -690,16 +690,16 @@
     "semantic_hash": "563cd9a0237c5589fe4f3e4cde531331"
   },
   "docs/design/utilities/README.md": {
-    "mtime": 1792922698.4058313,
-    "seen": 1792923650.605464,
+    "mtime": 1794474823.1986299,
+    "seen": 1794496211.0186512,
     "ast_hash": "f5a77c06087c396c4db94e0b55103a08",
     "semantic_hash": "f5a77c06087c396c4db94e0b55103a08"
   },
   "docs/design/utilities/ascii-kracked-devs.md": {
-    "mtime": 1792734629.3176908,
-    "seen": 1792919536.2518523,
-    "ast_hash": "33e042fde4a51cfe3585dadfdeb1f3cc",
-    "semantic_hash": ""
+    "mtime": 1792922690.9941454,
+    "seen": 1794503808.2541294,
+    "ast_hash": "1de294bef29252d6150ceeb777dce0f7",
+    "semantic_hash": "1de294bef29252d6150ceeb777dce0f7"
   },
   "docs/design/utilities/asciinator.md": {
     "mtime": 1792734629.3176908,
@@ -750,10 +750,10 @@
     "semantic_hash": "6d3cf3d84a02c41f622ccf1f0767e86d"
   },
   "docs/design/video-capture/README.md": {
-    "mtime": 1792734724.7327788,
-    "seen": 1792919536.2519243,
-    "ast_hash": "40bd3d5f1e67a1ff65a5bfceef44d143",
-    "semantic_hash": "40bd3d5f1e67a1ff65a5bfceef44d143"
+    "mtime": 1794501196.5784206,
+    "seen": 1794503808.254132,
+    "ast_hash": "ad3fe25bfda549ac0df38684005c8603",
+    "semantic_hash": "ad3fe25bfda549ac0df38684005c8603"
   },
   "docs/design/video-capture/cursorful.md": {
     "mtime": 1792734629.3335245,
@@ -816,8 +816,8 @@
     "semantic_hash": "e81d86f08cb6f02fc86e4e02d3162886"
   },
   "docs/design/whiteboard/README.md": {
-    "mtime": 1792734724.7482677,
-    "seen": 1792919536.2519448,
+    "mtime": 1794474823.22429,
+    "seen": 1794496211.0188327,
     "ast_hash": "0df5c67175a71e103982de7210b034da",
     "semantic_hash": "0df5c67175a71e103982de7210b034da"
   },
@@ -864,10 +864,10 @@
     "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
   },
   "README.md": {
-    "mtime": 1792734629.0643508,
-    "seen": 1792923650.6054347,
-    "ast_hash": "0c1f62f90bf187f62fe113e88b18297b",
-    "semantic_hash": "0c1f62f90bf187f62fe113e88b18297b"
+    "mtime": 1794501210.328419,
+    "seen": 1794503808.2536747,
+    "ast_hash": "bf2e22fe48b3ae3e53cff98e82026163",
+    "semantic_hash": "bf2e22fe48b3ae3e53cff98e82026163"
   },
   "docs/design/3d/poly-haven.md": {
     "mtime": 1792734629.0762262,
@@ -876,10 +876,10 @@
     "semantic_hash": "7798e8d0d5690645c554f0f0fca82e09"
   },
   "docs/design/README.md": {
-    "mtime": 1792922697.9474983,
-    "seen": 1792923650.6054523,
-    "ast_hash": "d6c7e447a85c37e3587a0adbb874efff",
-    "semantic_hash": "d6c7e447a85c37e3587a0adbb874efff"
+    "mtime": 1794501195.221754,
+    "seen": 1794503808.2541144,
+    "ast_hash": "3da8b4f2ba7b070b7abeb40cf9ece52b",
+    "semantic_hash": "3da8b4f2ba7b070b7abeb40cf9ece52b"
   },
   "docs/design/agents-mcp/agentcn.md": {
     "mtime": 1792734629.0801847,
@@ -1062,8 +1062,8 @@
     "semantic_hash": "20e7275fd9779aacf151e08ed913b5d4"
   },
   "docs/design/color/README.md": {
-    "mtime": 1792734723.9893148,
-    "seen": 1792919536.2510953,
+    "mtime": 1794474822.6011176,
+    "seen": 1794496211.0177753,
     "ast_hash": "b12111de4163d7dd52c0eaa0f7b28af8",
     "semantic_hash": "b12111de4163d7dd52c0eaa0f7b28af8"
   },
@@ -1620,8 +1620,8 @@
     "semantic_hash": "fb02085b8d151fc2cf0bddda26fe2707"
   },
   "docs/design/design-galleries/README.md": {
-    "mtime": 1792922698.237165,
-    "seen": 1792923650.6054573,
+    "mtime": 1794474822.894375,
+    "seen": 1794496211.018097,
     "ast_hash": "2ffa917a927224f9c4ea0140ad5da6d2",
     "semantic_hash": "2ffa917a927224f9c4ea0140ad5da6d2"
   },
@@ -2058,8 +2058,8 @@
     "semantic_hash": "646b15e18b3ee3753f9b2bb3ae502ea1"
   },
   "docs/design/icons/README.md": {
-    "mtime": 1792734724.5546572,
-    "seen": 1792919536.251574,
+    "mtime": 1794474823.0080125,
+    "seen": 1794496211.0183742,
     "ast_hash": "376d5792662758efe61598defd305c7f",
     "semantic_hash": "376d5792662758efe61598defd305c7f"
   },
@@ -2202,10 +2202,10 @@
     "semantic_hash": "c99eeb9508b079aa3c1220d9b5d487b5"
   },
   "docs/design/interface-design/README.md": {
-    "mtime": 1792734724.5740182,
-    "seen": 1792919536.2516499,
-    "ast_hash": "1dd0cf37d04ea23facfacdf6942a603c",
-    "semantic_hash": "1dd0cf37d04ea23facfacdf6942a603c"
+    "mtime": 1794501196.2520874,
+    "seen": 1794503808.254117,
+    "ast_hash": "9c6c9713e05781f4555ef368aecf2384",
+    "semantic_hash": "9c6c9713e05781f4555ef368aecf2384"
   },
   "docs/design/interface-design/design-dev.md": {
     "mtime": 1792734629.2701895,
@@ -2250,10 +2250,10 @@
     "semantic_hash": "985da11d492b0e21db05fc826d011972"
   },
   "docs/design/motion/README.md": {
-    "mtime": 1792734724.589507,
-    "seen": 1792919536.2516804,
-    "ast_hash": "c378b89906c26f1deb7fddf95f4cd596",
-    "semantic_hash": "c378b89906c26f1deb7fddf95f4cd596"
+    "mtime": 1794501196.288754,
+    "seen": 1794503808.2541232,
+    "ast_hash": "c2b4bde8302a9f47f535961844433aff",
+    "semantic_hash": "c2b4bde8302a9f47f535961844433aff"
   },
   "docs/design/motion/devouring-details.md": {
     "mtime": 1792734629.274148,
@@ -2298,8 +2298,8 @@
     "semantic_hash": "25d5ae5bc27dfd7ca332b9c68a40fcc0"
   },
   "docs/design/people.md": {
-    "mtime": 1792734724.848945,
-    "seen": 1792919536.2517414,
+    "mtime": 1794474823.3195987,
+    "seen": 1794496211.0185244,
     "ast_hash": "7b49ce030d3965279830e3bc082d476e",
     "semantic_hash": "7b49ce030d3965279830e3bc082d476e"
   },
@@ -2310,8 +2310,8 @@
     "semantic_hash": "24a22487f58a6b7590bd126b0451b968"
   },
   "docs/design/reading/README.md": {
-    "mtime": 1792734724.6514623,
-    "seen": 1792919536.2517455,
+    "mtime": 1794474823.1216497,
+    "seen": 1794496211.01853,
     "ast_hash": "b76dfcdb2b35cc797219fb110c4ea326",
     "semantic_hash": "b76dfcdb2b35cc797219fb110c4ea326"
   },
@@ -2490,8 +2490,8 @@
     "semantic_hash": "ab958d36dba311f7b63bf740b46d9b5c"
   },
   "docs/design/shaders/README.md": {
-    "mtime": 1792734724.6708233,
-    "seen": 1792919536.2518146,
+    "mtime": 1794474823.143644,
+    "seen": 1794496211.0186107,
     "ast_hash": "30fc520740802cb76f4e40f53a9f8ca9",
     "semantic_hash": "30fc520740802cb76f4e40f53a9f8ca9"
   },
@@ -2538,8 +2538,8 @@
     "semantic_hash": "a412c354fbedaa2033189cec189d3277"
   },
   "docs/design/type/README.md": {
-    "mtime": 1792734724.68244,
-    "seen": 1792919536.251832,
+    "mtime": 1794474823.1656384,
+    "seen": 1794496211.018633,
     "ast_hash": "b886c33b59ace5424786dae0369bde7b",
     "semantic_hash": "b886c33b59ace5424786dae0369bde7b"
   },
@@ -2916,8 +2916,8 @@
     "semantic_hash": "6554e4e14719054387fca707117187a2"
   },
   "docs/design/comics/README.md": {
-    "mtime": 1792734724.0396535,
-    "seen": 1792919536.2511055,
+    "mtime": 1794474822.6377747,
+    "seen": 1794496211.0177894,
     "ast_hash": "de9a8e883b7334d6972ea57f4039c086",
     "semantic_hash": "de9a8e883b7334d6972ea57f4039c086"
   },
@@ -3257,16 +3257,1552 @@
     "ast_hash": "d0d3418ee4378bdc48f5f8f2bc810c05",
     "semantic_hash": "d0d3418ee4378bdc48f5f8f2bc810c05"
   },
-  "docs/repomix/codebase.md": {
-    "mtime": 1792922719.0051546,
-    "seen": 1792923650.6054933,
-    "ast_hash": "7a8e29851055d864eefe85ab6dd64956",
-    "semantic_hash": "7a8e29851055d864eefe85ab6dd64956"
-  },
   "docs/design/utilities/ascii-motion-studio.md": {
     "mtime": 1792922708.5001597,
     "seen": 1792923650.6054711,
     "ast_hash": "e3238b576f4bd22a354a8b95d0f16fad",
     "semantic_hash": "e3238b576f4bd22a354a8b95d0f16fad"
+  },
+  "docs/research/spline-3d-design.md": {
+    "mtime": 1792938555.8551447,
+    "seen": 1794503808.2541428,
+    "ast_hash": "67864c4807b796d5aa38da13e89273c2",
+    "semantic_hash": "67864c4807b796d5aa38da13e89273c2"
+  },
+  "collections/line-art/demo/main.ts": {
+    "mtime": 1794475586.6591165,
+    "seen": 1794503808.253441,
+    "ast_hash": "7c671f91965eb38f0fc05406ce056d57",
+    "semantic_hash": "7c671f91965eb38f0fc05406ce056d57"
+  },
+  "collections/line-art/demo/scenes.ts": {
+    "mtime": 1794475586.6591165,
+    "seen": 1794503808.2534459,
+    "ast_hash": "79e3b4570eba5cabe92bcc9fac6e5130",
+    "semantic_hash": "79e3b4570eba5cabe92bcc9fac6e5130"
+  },
+  "collections/line-art/scripts/previews.ts": {
+    "mtime": 1794475586.6793597,
+    "seen": 1794503808.25345,
+    "ast_hash": "4aa2595ee45901b9fec21df727a642a5",
+    "semantic_hash": "4aa2595ee45901b9fec21df727a642a5"
+  },
+  "collections/line-art/src/animal.ts": {
+    "mtime": 1794475586.6793597,
+    "seen": 1794503808.2534537,
+    "ast_hash": "fa5f9254a367e6aecbf100afdc819068",
+    "semantic_hash": "fa5f9254a367e6aecbf100afdc819068"
+  },
+  "collections/line-art/src/cast.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534568,
+    "ast_hash": "f2504e182d508ae21323c12ff741cc36",
+    "semantic_hash": "f2504e182d508ae21323c12ff741cc36"
+  },
+  "collections/line-art/src/clock.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534602,
+    "ast_hash": "894f836cf1c267ba3110fc9bc7bf4664",
+    "semantic_hash": "894f836cf1c267ba3110fc9bc7bf4664"
+  },
+  "collections/line-art/src/export.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534633,
+    "ast_hash": "d78a6ea5d8b822021c3b91af8800e9f4",
+    "semantic_hash": "d78a6ea5d8b822021c3b91af8800e9f4"
+  },
+  "collections/line-art/src/figure.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534666,
+    "ast_hash": "d4ebe92cad092413d96c13e233d168f3",
+    "semantic_hash": "d4ebe92cad092413d96c13e233d168f3"
+  },
+  "collections/line-art/src/gait.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534702,
+    "ast_hash": "e3480833fcb58c3d7245022ad804f61b",
+    "semantic_hash": "e3480833fcb58c3d7245022ad804f61b"
+  },
+  "collections/line-art/src/geometry.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534735,
+    "ast_hash": "42cd759d6007e9865322aae6c602d447",
+    "semantic_hash": "42cd759d6007e9865322aae6c602d447"
+  },
+  "collections/line-art/src/index.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.253477,
+    "ast_hash": "c6f3290c509a7125100477dd3cef2780",
+    "semantic_hash": "c6f3290c509a7125100477dd3cef2780"
+  },
+  "collections/line-art/src/ink.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.25348,
+    "ast_hash": "ee60e8f25fa37ef32df1b86a1cffe20e",
+    "semantic_hash": "ee60e8f25fa37ef32df1b86a1cffe20e"
+  },
+  "collections/line-art/src/motion.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534833,
+    "ast_hash": "5325cedba46202ae6f3e14f547c51b58",
+    "semantic_hash": "5325cedba46202ae6f3e14f547c51b58"
+  },
+  "collections/line-art/src/palette.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534864,
+    "ast_hash": "e6d544d601cea5195b22854e2b34653b",
+    "semantic_hash": "e6d544d601cea5195b22854e2b34653b"
+  },
+  "collections/line-art/src/parts.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.25349,
+    "ast_hash": "9f265cf9760662d97c04eef40803b4d7",
+    "semantic_hash": "9f265cf9760662d97c04eef40803b4d7"
+  },
+  "collections/line-art/src/quadruped.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534928,
+    "ast_hash": "cca77f1938b8f70bd226526117cdad3a",
+    "semantic_hash": "cca77f1938b8f70bd226526117cdad3a"
+  },
+  "collections/line-art/src/surface.ts": {
+    "mtime": 1794475586.6821923,
+    "seen": 1794503808.2534962,
+    "ast_hash": "432e8952411cc5a424af9acece93614f",
+    "semantic_hash": "432e8952411cc5a424af9acece93614f"
+  },
+  "collections/line-art/test/line-art.test.ts": {
+    "mtime": 1794475586.6830254,
+    "seen": 1794503808.2534995,
+    "ast_hash": "87c65e430e2d379f4b6b684ed86cfcd2",
+    "semantic_hash": "87c65e430e2d379f4b6b684ed86cfcd2"
+  },
+  "collections/line-art/tsconfig.json": {
+    "mtime": 1794475586.6830254,
+    "seen": 1794503808.2535026,
+    "ast_hash": "e41f5cb2c61515e4996904057952737d",
+    "semantic_hash": "e41f5cb2c61515e4996904057952737d"
+  },
+  "collections/README.md": {
+    "mtime": 1794501210.3064191,
+    "seen": 1794503808.2536774,
+    "ast_hash": "59c9c59adcbbbe18c26c4154ad71d246",
+    "semantic_hash": "59c9c59adcbbbe18c26c4154ad71d246"
+  },
+  "collections/line-art/README.md": {
+    "mtime": 1794475586.6576624,
+    "seen": 1794503808.2541032,
+    "ast_hash": "e3b5143a9719f080d6370fec7c5a21bf",
+    "semantic_hash": "e3b5143a9719f080d6370fec7c5a21bf"
+  },
+  "collections/line-art/demo/index.html": {
+    "mtime": 1794475586.6588888,
+    "seen": 1794503808.254107,
+    "ast_hash": "b4149d05a9aaf04fec6d7511b9bb41bf",
+    "semantic_hash": "b4149d05a9aaf04fec6d7511b9bb41bf"
+  },
+  "docs/design/motion/line-art-animation.md": {
+    "mtime": 1794475586.6830254,
+    "seen": 1794503808.254125,
+    "ast_hash": "7731d63721bbf910b8f2c678b6838a88",
+    "semantic_hash": "7731d63721bbf910b8f2c678b6838a88"
+  },
+  "docs/design/motion/tolong-line-art.md": {
+    "mtime": 1794475586.6830254,
+    "seen": 1794503808.254127,
+    "ast_hash": "0ee2a420b2b6596f0c68af5b60cd3c26",
+    "semantic_hash": "0ee2a420b2b6596f0c68af5b60cd3c26"
+  },
+  "docs/research/line-art-animation.md": {
+    "mtime": 1794475586.6830254,
+    "seen": 1794503808.2541387,
+    "ast_hash": "210c898ae1801509ede0558c50ca4880",
+    "semantic_hash": "210c898ae1801509ede0558c50ca4880"
+  },
+  "collections/agent-video/knowledge/index.json": {
+    "mtime": 1794502540.6323261,
+    "seen": 1794503808.2532544,
+    "ast_hash": "9dda0e70fa4669e25e16312d7d73a876",
+    "semantic_hash": "9dda0e70fa4669e25e16312d7d73a876"
+  },
+  "collections/agent-video/package.json": {
+    "mtime": 1794499632.3364842,
+    "seen": 1794503808.2532609,
+    "ast_hash": "898ff3b406fb31f32c08f49d69c39d0d",
+    "semantic_hash": "898ff3b406fb31f32c08f49d69c39d0d"
+  },
+  "collections/agent-video/scripts/knowledge-index.ts": {
+    "mtime": 1794502540.498264,
+    "seen": 1794503808.253264,
+    "ast_hash": "532969cdc89eb43786f4db9838c45fe4",
+    "semantic_hash": "532969cdc89eb43786f4db9838c45fe4"
+  },
+  "collections/agent-video/scripts/previews.ts": {
+    "mtime": 1794502544.5153255,
+    "seen": 1794503808.2532666,
+    "ast_hash": "8b8dfe14d4b9176c42560e56e44e95e4",
+    "semantic_hash": "8b8dfe14d4b9176c42560e56e44e95e4"
+  },
+  "collections/agent-video/src/Root.tsx": {
+    "mtime": 1794499616.0528195,
+    "seen": 1794503808.253269,
+    "ast_hash": "085689fc6f669c4b9997e9634f59219a",
+    "semantic_hash": "085689fc6f669c4b9997e9634f59219a"
+  },
+  "collections/agent-video/src/core/motion.ts": {
+    "mtime": 1794501209.6757524,
+    "seen": 1794503808.2532725,
+    "ast_hash": "cd4706307c6630e4b02bf3e8236a0ee6",
+    "semantic_hash": "cd4706307c6630e4b02bf3e8236a0ee6"
+  },
+  "collections/agent-video/src/core/spec.ts": {
+    "mtime": 1794501209.7160857,
+    "seen": 1794503808.253276,
+    "ast_hash": "ae4f64831f4398864db37e8590b463f6",
+    "semantic_hash": "ae4f64831f4398864db37e8590b463f6"
+  },
+  "collections/agent-video/src/core/tokens.ts": {
+    "mtime": 1794501209.745419,
+    "seen": 1794503808.253279,
+    "ast_hash": "cbac0da0211f857722c083050eef4ada",
+    "semantic_hash": "cbac0da0211f857722c083050eef4ada"
+  },
+  "collections/agent-video/src/index.ts": {
+    "mtime": 1794501209.767419,
+    "seen": 1794503808.2532818,
+    "ast_hash": "85d163c6bb0c61cc119057d7e1d7b44d",
+    "semantic_hash": "85d163c6bb0c61cc119057d7e1d7b44d"
+  },
+  "collections/agent-video/src/kit/device.tsx": {
+    "mtime": 1794499447.9519742,
+    "seen": 1794503808.2532852,
+    "ast_hash": "7b38899530ee41f0293bb9370d9b4349",
+    "semantic_hash": "7b38899530ee41f0293bb9370d9b4349"
+  },
+  "collections/agent-video/src/kit/fields.tsx": {
+    "mtime": 1794499553.4032648,
+    "seen": 1794503808.2532873,
+    "ast_hash": "0d91e1a1a74e8e7538602d184bb8d922",
+    "semantic_hash": "0d91e1a1a74e8e7538602d184bb8d922"
+  },
+  "collections/agent-video/src/kit/icons.tsx": {
+    "mtime": 1794499379.387635,
+    "seen": 1794503808.2532897,
+    "ast_hash": "5b768b7726445b767518e66b67b03d09",
+    "semantic_hash": "5b768b7726445b767518e66b67b03d09"
+  },
+  "collections/agent-video/src/kit/motion.tsx": {
+    "mtime": 1794499318.2403286,
+    "seen": 1794503808.2532926,
+    "ast_hash": "f038a2ee05509a2f7db5e65e6a9b0ecc",
+    "semantic_hash": "f038a2ee05509a2f7db5e65e6a9b0ecc"
+  },
+  "collections/agent-video/src/kit/text.tsx": {
+    "mtime": 1794499351.161548,
+    "seen": 1794503808.2532952,
+    "ast_hash": "71278674e64e8e23f55bcfe6e258acad",
+    "semantic_hash": "71278674e64e8e23f55bcfe6e258acad"
+  },
+  "collections/agent-video/src/kit/theme.tsx": {
+    "mtime": 1794499299.4413307,
+    "seen": 1794503808.2532978,
+    "ast_hash": "b0239e62b3aacb4a9dc7fd084524b598",
+    "semantic_hash": "b0239e62b3aacb4a9dc7fd084524b598"
+  },
+  "collections/agent-video/src/kit/ui.tsx": {
+    "mtime": 1794499553.4007103,
+    "seen": 1794503808.2533007,
+    "ast_hash": "ca53ffad04a24a2929bbbc0e1be3e3a1",
+    "semantic_hash": "ca53ffad04a24a2929bbbc0e1be3e3a1"
+  },
+  "collections/agent-video/src/render/Template.tsx": {
+    "mtime": 1794499600.2569203,
+    "seen": 1794503808.2533033,
+    "ast_hash": "e409f57d42bfe5296d013ba14b6b65cc",
+    "semantic_hash": "e409f57d42bfe5296d013ba14b6b65cc"
+  },
+  "collections/agent-video/src/scenes/beat.tsx": {
+    "mtime": 1794499495.7896945,
+    "seen": 1794503808.2533057,
+    "ast_hash": "3693fd99a129ea1621438c019a05f9f4",
+    "semantic_hash": "3693fd99a129ea1621438c019a05f9f4"
+  },
+  "collections/agent-video/src/scenes/bench.tsx": {
+    "mtime": 1794499730.2228317,
+    "seen": 1794503808.2533088,
+    "ast_hash": "f5b63804f48dac18ea22b76906c5596c",
+    "semantic_hash": "f5b63804f48dac18ea22b76906c5596c"
+  },
+  "collections/agent-video/src/scenes/bin-promise.tsx": {
+    "mtime": 1794500863.2260096,
+    "seen": 1794503808.2533112,
+    "ast_hash": "425d6005103e68acbef4ced36c60ed12",
+    "semantic_hash": "425d6005103e68acbef4ced36c60ed12"
+  },
+  "collections/agent-video/src/scenes/burst.tsx": {
+    "mtime": 1794499542.90222,
+    "seen": 1794503808.2533143,
+    "ast_hash": "29315032357b565c17797d06cef1ab42",
+    "semantic_hash": "29315032357b565c17797d06cef1ab42"
+  },
+  "collections/agent-video/src/scenes/button-pile.tsx": {
+    "mtime": 1794500863.2262104,
+    "seen": 1794503808.2533169,
+    "ast_hash": "9c46d670c913ab7c8818470189e373c8",
+    "semantic_hash": "9c46d670c913ab7c8818470189e373c8"
+  },
+  "collections/agent-video/src/scenes/caret-lockup.tsx": {
+    "mtime": 1794500621.2724664,
+    "seen": 1794503808.2533195,
+    "ast_hash": "c8fe649989b2b8fde3288a6615789226",
+    "semantic_hash": "c8fe649989b2b8fde3288a6615789226"
+  },
+  "collections/agent-video/src/scenes/chat-send.tsx": {
+    "mtime": 1794500863.202988,
+    "seen": 1794503808.2533226,
+    "ast_hash": "e07e9eabf479e3b6f7e4cccaa2d0b855",
+    "semantic_hash": "e07e9eabf479e3b6f7e4cccaa2d0b855"
+  },
+  "collections/agent-video/src/scenes/checklist.tsx": {
+    "mtime": 1794500863.2085295,
+    "seen": 1794503808.2533245,
+    "ast_hash": "c666cb22981f8ecb89dfccfa0d8281be",
+    "semantic_hash": "c666cb22981f8ecb89dfccfa0d8281be"
+  },
+  "collections/agent-video/src/scenes/chip-rail.tsx": {
+    "mtime": 1794499736.2520952,
+    "seen": 1794503808.2533267,
+    "ast_hash": "5461a94cd4afd27b8da7f6d403f5bee6",
+    "semantic_hash": "5461a94cd4afd27b8da7f6d403f5bee6"
+  },
+  "collections/agent-video/src/scenes/claim-drum.tsx": {
+    "mtime": 1794501001.8323746,
+    "seen": 1794503808.253329,
+    "ast_hash": "37d963c53aff2cb49e615881b098d2d0",
+    "semantic_hash": "37d963c53aff2cb49e615881b098d2d0"
+  },
+  "collections/agent-video/src/scenes/composer-build.tsx": {
+    "mtime": 1794500863.20319,
+    "seen": 1794503808.2533314,
+    "ast_hash": "5d8078e8c436240924df8f66a810324a",
+    "semantic_hash": "5d8078e8c436240924df8f66a810324a"
+  },
+  "collections/agent-video/src/scenes/composer-icon.tsx": {
+    "mtime": 1794500863.2033236,
+    "seen": 1794503808.2533343,
+    "ast_hash": "13c33bc522ea1bde472c77ef7cfa13e8",
+    "semantic_hash": "13c33bc522ea1bde472c77ef7cfa13e8"
+  },
+  "collections/agent-video/src/scenes/corner-icon.tsx": {
+    "mtime": 1794500863.214249,
+    "seen": 1794503808.253337,
+    "ast_hash": "86ef7c4add37ad656703f14b66fb9da0",
+    "semantic_hash": "86ef7c4add37ad656703f14b66fb9da0"
+  },
+  "collections/agent-video/src/scenes/error-stack.tsx": {
+    "mtime": 1794500863.2087216,
+    "seen": 1794503808.2533393,
+    "ast_hash": "d1bc31eb41f01afc7a559fe3796af88d",
+    "semantic_hash": "d1bc31eb41f01afc7a559fe3796af88d"
+  },
+  "collections/agent-video/src/scenes/fanout.tsx": {
+    "mtime": 1794499730.222341,
+    "seen": 1794503808.2533417,
+    "ast_hash": "7b3298d9d2ca13377cec17d372f59119",
+    "semantic_hash": "7b3298d9d2ca13377cec17d372f59119"
+  },
+  "collections/agent-video/src/scenes/feature-dive.tsx": {
+    "mtime": 1794500863.2034876,
+    "seen": 1794503808.2533445,
+    "ast_hash": "b06dd8472d218d11136ae3308dabf069",
+    "semantic_hash": "b06dd8472d218d11136ae3308dabf069"
+  },
+  "collections/agent-video/src/scenes/glow-intro.tsx": {
+    "mtime": 1794500863.2277544,
+    "seen": 1794503808.253347,
+    "ast_hash": "ebef81a4eb7a799a678c42d2259e0c5c",
+    "semantic_hash": "ebef81a4eb7a799a678c42d2259e0c5c"
+  },
+  "collections/agent-video/src/scenes/glow-reply.tsx": {
+    "mtime": 1794500863.2036202,
+    "seen": 1794503808.2533493,
+    "ast_hash": "2872d7b1695e02a2b8f6467711d63a32",
+    "semantic_hash": "2872d7b1695e02a2b8f6467711d63a32"
+  },
+  "collections/agent-video/src/scenes/glow-swap.tsx": {
+    "mtime": 1794500863.2088966,
+    "seen": 1794503808.2533517,
+    "ast_hash": "1a991244a443ecdc8b81d7492799cf6d",
+    "semantic_hash": "1a991244a443ecdc8b81d7492799cf6d"
+  },
+  "collections/agent-video/src/scenes/halftone-search.tsx": {
+    "mtime": 1794500863.2037528,
+    "seen": 1794503808.2533545,
+    "ast_hash": "32dfd25decb9c98314fcf6fa7e925133",
+    "semantic_hash": "32dfd25decb9c98314fcf6fa7e925133"
+  },
+  "collections/agent-video/src/scenes/idea-list.tsx": {
+    "mtime": 1794501001.8286502,
+    "seen": 1794503808.2533572,
+    "ast_hash": "a9d3782f604fd716e61967ddf431d274",
+    "semantic_hash": "a9d3782f604fd716e61967ddf431d274"
+  },
+  "collections/agent-video/src/scenes/index.tsx": {
+    "mtime": 1794500863.2313647,
+    "seen": 1794503808.2533596,
+    "ast_hash": "a49b71618f151602e65803398efa4a54",
+    "semantic_hash": "a49b71618f151602e65803398efa4a54"
+  },
+  "collections/agent-video/src/scenes/inline-cycle.tsx": {
+    "mtime": 1794500863.2281873,
+    "seen": 1794503808.2533617,
+    "ast_hash": "10be9593b57b11f75e2e96e4aa4a8fe5",
+    "semantic_hash": "10be9593b57b11f75e2e96e4aa4a8fe5"
+  },
+  "collections/agent-video/src/scenes/kinds.ts": {
+    "mtime": 1794501209.7930858,
+    "seen": 1794503808.253364,
+    "ast_hash": "e035ab566c94e52fb55e870e08de1833",
+    "semantic_hash": "e035ab566c94e52fb55e870e08de1833"
+  },
+  "collections/agent-video/src/scenes/kinetic-line.tsx": {
+    "mtime": 1794499820.5760887,
+    "seen": 1794503808.2533662,
+    "ast_hash": "868d58b3eb148c79af97d60675e22f54",
+    "semantic_hash": "868d58b3eb148c79af97d60675e22f54"
+  },
+  "collections/agent-video/src/scenes/library-phone.tsx": {
+    "mtime": 1794500991.196564,
+    "seen": 1794503808.2533689,
+    "ast_hash": "0ddbcaf3aee57886a17ae06f669738a2",
+    "semantic_hash": "0ddbcaf3aee57886a17ae06f669738a2"
+  },
+  "collections/agent-video/src/scenes/live-link.tsx": {
+    "mtime": 1794500863.2293258,
+    "seen": 1794503808.2533717,
+    "ast_hash": "88c66bc122728f6708130e8cb030e472",
+    "semantic_hash": "88c66bc122728f6708130e8cb030e472"
+  },
+  "collections/agent-video/src/scenes/lockup-reveal.tsx": {
+    "mtime": 1794500863.2170365,
+    "seen": 1794503808.2533746,
+    "ast_hash": "ea7e0ded631e7a3d16925bab0d390063",
+    "semantic_hash": "ea7e0ded631e7a3d16925bab0d390063"
+  },
+  "collections/agent-video/src/scenes/phone-offer.tsx": {
+    "mtime": 1794499574.4362564,
+    "seen": 1794503808.2533767,
+    "ast_hash": "a8278727106a00a887d3a4714fb50201",
+    "semantic_hash": "a8278727106a00a887d3a4714fb50201"
+  },
+  "collections/agent-video/src/scenes/phone-screen.tsx": {
+    "mtime": 1794499809.2900229,
+    "seen": 1794503808.2533793,
+    "ast_hash": "d697faf0cafc2e2594b77a4d072c57fe",
+    "semantic_hash": "d697faf0cafc2e2594b77a4d072c57fe"
+  },
+  "collections/agent-video/src/scenes/phone-tabs.tsx": {
+    "mtime": 1794500863.209099,
+    "seen": 1794503808.253382,
+    "ast_hash": "5629a097c15f0512ec00f4138860e148",
+    "semantic_hash": "5629a097c15f0512ec00f4138860e148"
+  },
+  "collections/agent-video/src/scenes/publish-modal.tsx": {
+    "mtime": 1794500863.2092779,
+    "seen": 1794503808.2533846,
+    "ast_hash": "fdf3f2cf8477790681dbb750da299f68",
+    "semantic_hash": "fdf3f2cf8477790681dbb750da299f68"
+  },
+  "collections/agent-video/src/scenes/react-bubble.tsx": {
+    "mtime": 1794500863.2038841,
+    "seen": 1794503808.253387,
+    "ast_hash": "9ff19b17633893027fd5f46cf64cb4da",
+    "semantic_hash": "9ff19b17633893027fd5f46cf64cb4da"
+  },
+  "collections/agent-video/src/scenes/rich-reply.tsx": {
+    "mtime": 1794500863.2040079,
+    "seen": 1794503808.2533891,
+    "ast_hash": "c149e6af59bec93cb4c3ad3185d36241",
+    "semantic_hash": "c149e6af59bec93cb4c3ad3185d36241"
+  },
+  "collections/agent-video/src/scenes/screens-fold.tsx": {
+    "mtime": 1794500863.2175868,
+    "seen": 1794503808.253391,
+    "ast_hash": "65b778d7cd681a2bd201b20ac26e95a5",
+    "semantic_hash": "65b778d7cd681a2bd201b20ac26e95a5"
+  },
+  "collections/agent-video/src/scenes/search-morph.tsx": {
+    "mtime": 1794500863.2096407,
+    "seen": 1794503808.2533937,
+    "ast_hash": "b7109fbbdcf17e5611dc140d7a7dd568",
+    "semantic_hash": "b7109fbbdcf17e5611dc140d7a7dd568"
+  },
+  "collections/agent-video/src/scenes/secret-field.tsx": {
+    "mtime": 1794500863.2297857,
+    "seen": 1794503808.2533963,
+    "ast_hash": "338b97b9f2ad1fb48182aed80d87daab",
+    "semantic_hash": "338b97b9f2ad1fb48182aed80d87daab"
+  },
+  "collections/agent-video/src/scenes/side-lockup.tsx": {
+    "mtime": 1794500863.230008,
+    "seen": 1794503808.253399,
+    "ast_hash": "e356f8ad02451144b0c32fd36373071c",
+    "semantic_hash": "e356f8ad02451144b0c32fd36373071c"
+  },
+  "collections/agent-video/src/scenes/source-line.tsx": {
+    "mtime": 1794500863.2303913,
+    "seen": 1794503808.2534013,
+    "ast_hash": "d7690e711816a10f6a98bf3e282c02d2",
+    "semantic_hash": "d7690e711816a10f6a98bf3e282c02d2"
+  },
+  "collections/agent-video/src/scenes/step-result.tsx": {
+    "mtime": 1794500863.2098289,
+    "seen": 1794503808.2534037,
+    "ast_hash": "4a1140e67122160144b356337f85e9d2",
+    "semantic_hash": "4a1140e67122160144b356337f85e9d2"
+  },
+  "collections/agent-video/src/scenes/thread-pull.tsx": {
+    "mtime": 1794500863.204121,
+    "seen": 1794503808.253406,
+    "ast_hash": "0666f724efd4e89ba99a7ddaeb04fa10",
+    "semantic_hash": "0666f724efd4e89ba99a7ddaeb04fa10"
+  },
+  "collections/agent-video/src/scenes/url-outro.tsx": {
+    "mtime": 1794500863.2100112,
+    "seen": 1794503808.2534082,
+    "ast_hash": "81c6f4f15e05bdb533dde31b343ee875",
+    "semantic_hash": "81c6f4f15e05bdb533dde31b343ee875"
+  },
+  "collections/agent-video/src/scenes/window-preview.tsx": {
+    "mtime": 1794500863.2102447,
+    "seen": 1794503808.2534108,
+    "ast_hash": "74daf5a0544fa562b81b2a7bf34ef3bd",
+    "semantic_hash": "74daf5a0544fa562b81b2a7bf34ef3bd"
+  },
+  "collections/agent-video/src/scenes/word-cycle.tsx": {
+    "mtime": 1794499512.9283001,
+    "seen": 1794503808.2534137,
+    "ast_hash": "98120ff2937cadbc7b34c5d5a1d8e40c",
+    "semantic_hash": "98120ff2937cadbc7b34c5d5a1d8e40c"
+  },
+  "collections/agent-video/src/scenes/word-stack.tsx": {
+    "mtime": 1794500863.2179155,
+    "seen": 1794503808.2534163,
+    "ast_hash": "f6e6dfe2e7527c95321539a3bd310dfd",
+    "semantic_hash": "f6e6dfe2e7527c95321539a3bd310dfd"
+  },
+  "collections/agent-video/src/templates/app-launch.ts": {
+    "mtime": 1794501209.8370857,
+    "seen": 1794503808.253419,
+    "ast_hash": "6fe20cd927fce074f2ca4c590697457f",
+    "semantic_hash": "6fe20cd927fce074f2ca4c590697457f"
+  },
+  "collections/agent-video/src/templates/ask-agent.ts": {
+    "mtime": 1794501209.9413009,
+    "seen": 1794503808.2534215,
+    "ast_hash": "cffc3e31652a5bfba0f478f5e61e26d6",
+    "semantic_hash": "cffc3e31652a5bfba0f478f5e61e26d6"
+  },
+  "collections/agent-video/src/templates/index.ts": {
+    "mtime": 1794501209.943419,
+    "seen": 1794503808.2534242,
+    "ast_hash": "04416d804da4ba3d9d6f4d5a4f2d8a3b",
+    "semantic_hash": "04416d804da4ba3d9d6f4d5a4f2d8a3b"
+  },
+  "collections/agent-video/src/templates/launch-film.ts": {
+    "mtime": 1794501209.9580858,
+    "seen": 1794503808.2534263,
+    "ast_hash": "194b8ba4c0459b75d6ff12ec36b3799d",
+    "semantic_hash": "194b8ba4c0459b75d6ff12ec36b3799d"
+  },
+  "collections/agent-video/src/templates/whats-new.ts": {
+    "mtime": 1794501209.9874191,
+    "seen": 1794503808.2534285,
+    "ast_hash": "4b87e35fea2935c21b1f944feeea2457",
+    "semantic_hash": "4b87e35fea2935c21b1f944feeea2457"
+  },
+  "collections/agent-video/src/templates/why-switch.ts": {
+    "mtime": 1794501210.042419,
+    "seen": 1794503808.2534308,
+    "ast_hash": "b01ea51766db38341fab75ac1e41ad23",
+    "semantic_hash": "b01ea51766db38341fab75ac1e41ad23"
+  },
+  "collections/agent-video/test/agent-video.test.ts": {
+    "mtime": 1794501210.075419,
+    "seen": 1794503808.2534328,
+    "ast_hash": "02d493baea8e3f2a5500e3d68f9d303c",
+    "semantic_hash": "02d493baea8e3f2a5500e3d68f9d303c"
+  },
+  "collections/agent-video/tsconfig.json": {
+    "mtime": 1794499618.6744857,
+    "seen": 1794503808.2534351,
+    "ast_hash": "b4f43bacd66e366ef0ed5bd0124f7264",
+    "semantic_hash": "b4f43bacd66e366ef0ed5bd0124f7264"
+  },
+  "collections/agent-video/README.md": {
+    "mtime": 1794502543.7709923,
+    "seen": 1794503808.2536805,
+    "ast_hash": "c4fdef24aa2a4b3841a106de337c8483",
+    "semantic_hash": "c4fdef24aa2a4b3841a106de337c8483"
+  },
+  "collections/agent-video/knowledge/README.md": {
+    "mtime": 1794502545.0029922,
+    "seen": 1794503808.253683,
+    "ast_hash": "6567d37034897eab551c783b1bd12559",
+    "semantic_hash": "6567d37034897eab551c783b1bd12559"
+  },
+  "collections/agent-video/knowledge/free/agent-steps.md": {
+    "mtime": 1794501199.9994202,
+    "seen": 1794503808.253686,
+    "ast_hash": "22ecfa5dd84ddb893e99a4f8d8ce88c3",
+    "semantic_hash": "22ecfa5dd84ddb893e99a4f8d8ce88c3"
+  },
+  "collections/agent-video/knowledge/free/announce-title.md": {
+    "mtime": 1794501200.245087,
+    "seen": 1794503808.2536888,
+    "ast_hash": "2a086d86858762c99ac7542e2f12243a",
+    "semantic_hash": "2a086d86858762c99ac7542e2f12243a"
+  },
+  "collections/agent-video/knowledge/free/answer-highlight.md": {
+    "mtime": 1794501200.52742,
+    "seen": 1794503808.2536912,
+    "ast_hash": "b2671144d1a9540398c5cb8d8ff1a9c9",
+    "semantic_hash": "b2671144d1a9540398c5cb8d8ff1a9c9"
+  },
+  "collections/agent-video/knowledge/free/answer-stream.md": {
+    "mtime": 1794501200.71442,
+    "seen": 1794503808.2536933,
+    "ast_hash": "4b8c9d700d85aa98c060c3650b27d51d",
+    "semantic_hash": "4b8c9d700d85aa98c060c3650b27d51d"
+  },
+  "collections/agent-video/knowledge/free/block-wordmark.md": {
+    "mtime": 1794501200.8574202,
+    "seen": 1794503808.2536957,
+    "ast_hash": "f8f03bb5c000d917832ad277d0785acb",
+    "semantic_hash": "f8f03bb5c000d917832ad277d0785acb"
+  },
+  "collections/agent-video/knowledge/free/bloom-lockup.md": {
+    "mtime": 1794501200.9857533,
+    "seen": 1794503808.2536983,
+    "ast_hash": "f4b33d7776d1b40f30f453f056a8091b",
+    "semantic_hash": "f4b33d7776d1b40f30f453f056a8091b"
+  },
+  "collections/agent-video/knowledge/free/brand-wheel.md": {
+    "mtime": 1794501201.1177535,
+    "seen": 1794503808.253701,
+    "ast_hash": "2fac9fc109f551b53a80f46107053454",
+    "semantic_hash": "2fac9fc109f551b53a80f46107053454"
+  },
+  "collections/agent-video/knowledge/free/button-press.md": {
+    "mtime": 1794501201.1690867,
+    "seen": 1794503808.253703,
+    "ast_hash": "ea59df7101a154fdc90d12d6e3bc779c",
+    "semantic_hash": "ea59df7101a154fdc90d12d6e3bc779c"
+  },
+  "collections/agent-video/knowledge/free/capture-reveal.md": {
+    "mtime": 1794501201.2460868,
+    "seen": 1794503808.2537055,
+    "ast_hash": "595e983b9c2cafe7da48a9e9bee732fe",
+    "semantic_hash": "595e983b9c2cafe7da48a9e9bee732fe"
+  },
+  "collections/agent-video/knowledge/free/card-rail.md": {
+    "mtime": 1794501201.4734201,
+    "seen": 1794503808.2537072,
+    "ast_hash": "26a603cf22f7333b641ef1672b826de0",
+    "semantic_hash": "26a603cf22f7333b641ef1672b826de0"
+  },
+  "collections/agent-video/knowledge/free/channel-thread.md": {
+    "mtime": 1794501201.62742,
+    "seen": 1794503808.2537096,
+    "ast_hash": "8b643f8360dbc6a259c9545d20cf2bfe",
+    "semantic_hash": "8b643f8360dbc6a259c9545d20cf2bfe"
+  },
+  "collections/agent-video/knowledge/free/check-cycle.md": {
+    "mtime": 1794501201.7447534,
+    "seen": 1794503808.253712,
+    "ast_hash": "6c51d6d5cbd85b211e17b94a1c4602fc",
+    "semantic_hash": "6c51d6d5cbd85b211e17b94a1c4602fc"
+  },
+  "collections/agent-video/knowledge/free/click-type.md": {
+    "mtime": 1794501201.9097533,
+    "seen": 1794503808.253715,
+    "ast_hash": "1dc2b7f15a8ad0bc992dde553bbb31e3",
+    "semantic_hash": "1dc2b7f15a8ad0bc992dde553bbb31e3"
+  },
+  "collections/agent-video/knowledge/free/count-grid.md": {
+    "mtime": 1794501202.03442,
+    "seen": 1794503808.2537172,
+    "ast_hash": "1ba46431873ede6b8ca89f94cb7ea10d",
+    "semantic_hash": "1ba46431873ede6b8ca89f94cb7ea10d"
+  },
+  "collections/agent-video/knowledge/free/cursor-track.md": {
+    "mtime": 1794501202.14442,
+    "seen": 1794503808.25372,
+    "ast_hash": "97d45efeab104f519e81be20aa6563ed",
+    "semantic_hash": "97d45efeab104f519e81be20aa6563ed"
+  },
+  "collections/agent-video/knowledge/free/cut-lockup.md": {
+    "mtime": 1794501202.26542,
+    "seen": 1794503808.2537234,
+    "ast_hash": "9d076ffc8cbcdc944cbbbe19583ff29b",
+    "semantic_hash": "9d076ffc8cbcdc944cbbbe19583ff29b"
+  },
+  "collections/agent-video/knowledge/free/dot-bloom.md": {
+    "mtime": 1794501202.7090867,
+    "seen": 1794503808.2537265,
+    "ast_hash": "20b5675f976ea3b04c27a5ab1ebb1194",
+    "semantic_hash": "20b5675f976ea3b04c27a5ab1ebb1194"
+  },
+  "collections/agent-video/knowledge/free/drop-line.md": {
+    "mtime": 1794501202.7530866,
+    "seen": 1794503808.2537289,
+    "ast_hash": "283ce525c42dfc1803387e3da097881c",
+    "semantic_hash": "283ce525c42dfc1803387e3da097881c"
+  },
+  "collections/agent-video/knowledge/free/follower-rush.md": {
+    "mtime": 1794501202.833753,
+    "seen": 1794503808.253731,
+    "ast_hash": "922750bd02febf7a21e4d310f389a0fa",
+    "semantic_hash": "922750bd02febf7a21e4d310f389a0fa"
+  },
+  "collections/agent-video/knowledge/free/font-shuffle.md": {
+    "mtime": 1794501202.8924198,
+    "seen": 1794503808.2537334,
+    "ast_hash": "2968535b34c45e97485d6191a14b792e",
+    "semantic_hash": "2968535b34c45e97485d6191a14b792e"
+  },
+  "collections/agent-video/knowledge/free/gather-lockup.md": {
+    "mtime": 1794501202.932753,
+    "seen": 1794503808.253736,
+    "ast_hash": "880ee4c2ed2fe3ab0f4bd5ebed2886ad",
+    "semantic_hash": "880ee4c2ed2fe3ab0f4bd5ebed2886ad"
+  },
+  "collections/agent-video/knowledge/free/hello-zoom.md": {
+    "mtime": 1794501202.9877532,
+    "seen": 1794503808.2537384,
+    "ast_hash": "186b12dee9ee50cc7b623442b22e37ea",
+    "semantic_hash": "186b12dee9ee50cc7b623442b22e37ea"
+  },
+  "collections/agent-video/knowledge/free/hero-launch.md": {
+    "mtime": 1794501203.0427532,
+    "seen": 1794503808.2537408,
+    "ast_hash": "0fd1c43a8e09b9dc0fb3a7a7f4d77649",
+    "semantic_hash": "0fd1c43a8e09b9dc0fb3a7a7f4d77649"
+  },
+  "collections/agent-video/knowledge/free/karaoke-captions.md": {
+    "mtime": 1794501203.13442,
+    "seen": 1794503808.2537432,
+    "ast_hash": "9b8d7d997feac5c18e18fcefc1c5ad58",
+    "semantic_hash": "9b8d7d997feac5c18e18fcefc1c5ad58"
+  },
+  "collections/agent-video/knowledge/free/laptop-frame.md": {
+    "mtime": 1794501203.2150865,
+    "seen": 1794503808.253745,
+    "ast_hash": "c95abc84b03d823dad1187c3d7dba461",
+    "semantic_hash": "c95abc84b03d823dad1187c3d7dba461"
+  },
+  "collections/agent-video/knowledge/free/logo-assemble.md": {
+    "mtime": 1794501203.4680865,
+    "seen": 1794503808.2537477,
+    "ast_hash": "87f8afabbf5eaed26b1711b8f8ab2028",
+    "semantic_hash": "87f8afabbf5eaed26b1711b8f8ab2028"
+  },
+  "collections/agent-video/knowledge/free/logo-collapse.md": {
+    "mtime": 1794501203.5597532,
+    "seen": 1794503808.2537503,
+    "ast_hash": "2528e46cc26a850b6b04ac83a385354c",
+    "semantic_hash": "2528e46cc26a850b6b04ac83a385354c"
+  },
+  "collections/agent-video/knowledge/free/logo-drift.md": {
+    "mtime": 1794501203.6954198,
+    "seen": 1794503808.2537525,
+    "ast_hash": "de3b144fc7a9950da846efcaa17fe7f0",
+    "semantic_hash": "de3b144fc7a9950da846efcaa17fe7f0"
+  },
+  "collections/agent-video/knowledge/free/logo-flicker.md": {
+    "mtime": 1794501203.7284198,
+    "seen": 1794503808.253755,
+    "ast_hash": "56fe17cfe091dabc7d845f36b8516af3",
+    "semantic_hash": "56fe17cfe091dabc7d845f36b8516af3"
+  },
+  "collections/agent-video/knowledge/free/moodboard-reveal.md": {
+    "mtime": 1794501203.7760863,
+    "seen": 1794503808.2537582,
+    "ast_hash": "4285fed187cfcccb9351ceb56b96181a",
+    "semantic_hash": "4285fed187cfcccb9351ceb56b96181a"
+  },
+  "collections/agent-video/knowledge/free/orb-swarm.md": {
+    "mtime": 1794501203.8200865,
+    "seen": 1794503808.2537606,
+    "ast_hash": "9701fb72e7d17e18f02e26dcc4003b42",
+    "semantic_hash": "9701fb72e7d17e18f02e26dcc4003b42"
+  },
+  "collections/agent-video/knowledge/free/orbit-gallery.md": {
+    "mtime": 1794501203.8604198,
+    "seen": 1794503808.253763,
+    "ast_hash": "7c4518d31b0a916b15321e1ef0dc8193",
+    "semantic_hash": "7c4518d31b0a916b15321e1ef0dc8193"
+  },
+  "collections/agent-video/knowledge/free/phone-frame.md": {
+    "mtime": 1794501203.900753,
+    "seen": 1794503808.253766,
+    "ast_hash": "6dc446195da3b36dd72fdb4be118f912",
+    "semantic_hash": "6dc446195da3b36dd72fdb4be118f912"
+  },
+  "collections/agent-video/knowledge/free/phone-stack.md": {
+    "mtime": 1794501203.9300864,
+    "seen": 1794503808.2537687,
+    "ast_hash": "774a5fba2f4b45cec2c8a18091156492",
+    "semantic_hash": "774a5fba2f4b45cec2c8a18091156492"
+  },
+  "collections/agent-video/knowledge/free/portal-intro.md": {
+    "mtime": 1794501203.988753,
+    "seen": 1794503808.2537708,
+    "ast_hash": "2ff25d489cecf9b1899838c0b9702e19",
+    "semantic_hash": "2ff25d489cecf9b1899838c0b9702e19"
+  },
+  "collections/agent-video/knowledge/free/prompt-send.md": {
+    "mtime": 1794501204.0510864,
+    "seen": 1794503808.2537735,
+    "ast_hash": "37a1b5efab7ad5117e154d01c638f0de",
+    "semantic_hash": "37a1b5efab7ad5117e154d01c638f0de"
+  },
+  "collections/agent-video/knowledge/free/prompt-zoom.md": {
+    "mtime": 1794501204.0840864,
+    "seen": 1794503808.2537768,
+    "ast_hash": "026339e8fa3d27292ea05c379edc0600",
+    "semantic_hash": "026339e8fa3d27292ea05c379edc0600"
+  },
+  "collections/agent-video/knowledge/free/pulsing-border.md": {
+    "mtime": 1794501204.1097531,
+    "seen": 1794503808.2537792,
+    "ast_hash": "75afb370c6a78bd848385666d68d6d13",
+    "semantic_hash": "75afb370c6a78bd848385666d68d6d13"
+  },
+  "collections/agent-video/knowledge/free/punch-lines.md": {
+    "mtime": 1794501204.153753,
+    "seen": 1794503808.2537816,
+    "ast_hash": "78f677cdcd7015b2d0eb29e4846f3eb4",
+    "semantic_hash": "78f677cdcd7015b2d0eb29e4846f3eb4"
+  },
+  "collections/agent-video/knowledge/free/reel-collage.md": {
+    "mtime": 1794501204.1904197,
+    "seen": 1794503808.2537842,
+    "ast_hash": "8e2ccc817bfaa58504d332fc7d598c7f",
+    "semantic_hash": "8e2ccc817bfaa58504d332fc7d598c7f"
+  },
+  "collections/agent-video/knowledge/free/reel-wall.md": {
+    "mtime": 1794501204.2124197,
+    "seen": 1794503808.2537866,
+    "ast_hash": "0b7ca5a4de605b2f2ba9c42b1067acff",
+    "semantic_hash": "0b7ca5a4de605b2f2ba9c42b1067acff"
+  },
+  "collections/agent-video/knowledge/free/roster-grant.md": {
+    "mtime": 1794501204.2454197,
+    "seen": 1794503808.2538476,
+    "ast_hash": "387d57f02feb2913e2b066f579e54f79",
+    "semantic_hash": "387d57f02feb2913e2b066f579e54f79"
+  },
+  "collections/agent-video/knowledge/free/screen-recording.md": {
+    "mtime": 1794501204.2674198,
+    "seen": 1794503808.253852,
+    "ast_hash": "2c605968732d0c8bc064c845c7f27c5a",
+    "semantic_hash": "2c605968732d0c8bc064c845c7f27c5a"
+  },
+  "collections/agent-video/knowledge/free/search-typing.md": {
+    "mtime": 1794501204.2930863,
+    "seen": 1794503808.2538543,
+    "ast_hash": "b0803d03aafe32ff6dd452d4e6208063",
+    "semantic_hash": "b0803d03aafe32ff6dd452d4e6208063"
+  },
+  "collections/agent-video/knowledge/free/sky-lockup.md": {
+    "mtime": 1794501204.3114197,
+    "seen": 1794503808.2538567,
+    "ast_hash": "348d0152f450f63bf666cba6f0547cdb",
+    "semantic_hash": "348d0152f450f63bf666cba6f0547cdb"
+  },
+  "collections/agent-video/knowledge/free/snap-cn-ui.md": {
+    "mtime": 1794501204.3590863,
+    "seen": 1794503808.2538588,
+    "ast_hash": "a7efa8ffd1c41b1a640bee86d53880fc",
+    "semantic_hash": "a7efa8ffd1c41b1a640bee86d53880fc"
+  },
+  "collections/agent-video/knowledge/free/spec-sweep.md": {
+    "mtime": 1794501204.3957531,
+    "seen": 1794503808.253861,
+    "ast_hash": "240838d9d93f3b986e6ac2b47ca4087f",
+    "semantic_hash": "240838d9d93f3b986e6ac2b47ca4087f"
+  },
+  "collections/agent-video/knowledge/free/status-cycle.md": {
+    "mtime": 1794501204.4360864,
+    "seen": 1794503808.2538629,
+    "ast_hash": "03069b1db67aa86cf4d1fdcc907075e6",
+    "semantic_hash": "03069b1db67aa86cf4d1fdcc907075e6"
+  },
+  "collections/agent-video/knowledge/free/terminal-simulator.md": {
+    "mtime": 1794501204.472753,
+    "seen": 1794503808.253865,
+    "ast_hash": "c9e2a06342c639cc80c62e5a808b7850",
+    "semantic_hash": "c9e2a06342c639cc80c62e5a808b7850"
+  },
+  "collections/agent-video/knowledge/free/text-build.md": {
+    "mtime": 1794501204.4984198,
+    "seen": 1794503808.2538676,
+    "ast_hash": "e39aef2a603973a27b07957ae69b41da",
+    "semantic_hash": "e39aef2a603973a27b07957ae69b41da"
+  },
+  "collections/agent-video/knowledge/free/text-highlight.md": {
+    "mtime": 1794501204.5460863,
+    "seen": 1794503808.2538695,
+    "ast_hash": "761f9c58570c2c7f25ec08cf3b8cb51d",
+    "semantic_hash": "761f9c58570c2c7f25ec08cf3b8cb51d"
+  },
+  "collections/agent-video/knowledge/free/text-reveal.md": {
+    "mtime": 1794501204.5974197,
+    "seen": 1794503808.2538717,
+    "ast_hash": "9b992f41976216c90bef3f3148bb67ac",
+    "semantic_hash": "9b992f41976216c90bef3f3148bb67ac"
+  },
+  "collections/agent-video/knowledge/free/text-rewrite.md": {
+    "mtime": 1794501204.6340864,
+    "seen": 1794503808.2538736,
+    "ast_hash": "eab05bf93641037a4eaaf210bc5575d7",
+    "semantic_hash": "eab05bf93641037a4eaaf210bc5575d7"
+  },
+  "collections/agent-video/knowledge/free/text-select.md": {
+    "mtime": 1794501204.6634197,
+    "seen": 1794503808.2538757,
+    "ast_hash": "d6422ad66df7e63031d2ec39d6c53b39",
+    "semantic_hash": "d6422ad66df7e63031d2ec39d6c53b39"
+  },
+  "collections/agent-video/knowledge/free/text-swap.md": {
+    "mtime": 1794501204.6964197,
+    "seen": 1794503808.2538774,
+    "ast_hash": "87035bf57f193e9204870a260c11efa0",
+    "semantic_hash": "87035bf57f193e9204870a260c11efa0"
+  },
+  "collections/agent-video/knowledge/free/text-swell.md": {
+    "mtime": 1794501204.7220864,
+    "seen": 1794503808.2538795,
+    "ast_hash": "bbde50ea81a5dd1fcd875cda5d21af9d",
+    "semantic_hash": "bbde50ea81a5dd1fcd875cda5d21af9d"
+  },
+  "collections/agent-video/knowledge/free/title-sweep.md": {
+    "mtime": 1794501204.7440863,
+    "seen": 1794503808.2538817,
+    "ast_hash": "59bd081d80059f39f5cee2161d854742",
+    "semantic_hash": "59bd081d80059f39f5cee2161d854742"
+  },
+  "collections/agent-video/knowledge/free/type-morph.md": {
+    "mtime": 1794501204.780753,
+    "seen": 1794503808.253884,
+    "ast_hash": "cafbe8bdd7b1e9c418f757aec4272d38",
+    "semantic_hash": "cafbe8bdd7b1e9c418f757aec4272d38"
+  },
+  "collections/agent-video/knowledge/free/word-captions.md": {
+    "mtime": 1794501204.824753,
+    "seen": 1794503808.2538862,
+    "ast_hash": "3fcf0fed1297b12602ff035e8fc436ff",
+    "semantic_hash": "3fcf0fed1297b12602ff035e8fc436ff"
+  },
+  "collections/agent-video/knowledge/free/word-flip.md": {
+    "mtime": 1794501204.8614197,
+    "seen": 1794503808.2538886,
+    "ast_hash": "aec8c5c95bdd61e939d3e0f9057c8ae4",
+    "semantic_hash": "aec8c5c95bdd61e939d3e0f9057c8ae4"
+  },
+  "collections/agent-video/knowledge/free/word-gather.md": {
+    "mtime": 1794501204.9127529,
+    "seen": 1794503808.2538903,
+    "ast_hash": "bebe11f6ba5963848d3fa78962b64a6f",
+    "semantic_hash": "bebe11f6ba5963848d3fa78962b64a6f"
+  },
+  "collections/agent-video/knowledge/free/word-wheel.md": {
+    "mtime": 1794501204.9494197,
+    "seen": 1794503808.2538924,
+    "ast_hash": "60c4536fe1455526872cfaa66f97dbf4",
+    "semantic_hash": "60c4536fe1455526872cfaa66f97dbf4"
+  },
+  "collections/agent-video/knowledge/free/wordmark-cut.md": {
+    "mtime": 1794501204.9860864,
+    "seen": 1794503808.253894,
+    "ast_hash": "8a28533e1ab84c76c56d1fbfd5c5e9ef",
+    "semantic_hash": "8a28533e1ab84c76c56d1fbfd5c5e9ef"
+  },
+  "collections/agent-video/knowledge/pro/agent-chat.md": {
+    "mtime": 1794501205.1584196,
+    "seen": 1794503808.253896,
+    "ast_hash": "92c9b8fd0478713b6bf03590b0175344",
+    "semantic_hash": "92c9b8fd0478713b6bf03590b0175344"
+  },
+  "collections/agent-video/knowledge/pro/agent-compose.md": {
+    "mtime": 1794501205.209753,
+    "seen": 1794503808.2538977,
+    "ast_hash": "afca034fab02b4a408ba4280a31d316c",
+    "semantic_hash": "afca034fab02b4a408ba4280a31d316c"
+  },
+  "collections/agent-video/knowledge/pro/agent-open.md": {
+    "mtime": 1794501205.2647529,
+    "seen": 1794503808.2538993,
+    "ast_hash": "044a8a78715b3faae01206e2e2cfd054",
+    "semantic_hash": "044a8a78715b3faae01206e2e2cfd054"
+  },
+  "collections/agent-video/knowledge/pro/agent-result.md": {
+    "mtime": 1794501205.3344195,
+    "seen": 1794503808.2539015,
+    "ast_hash": "beb4f2da47941884309bb05a896f85ff",
+    "semantic_hash": "beb4f2da47941884309bb05a896f85ff"
+  },
+  "collections/agent-video/knowledge/pro/agent-run.md": {
+    "mtime": 1794501205.3674195,
+    "seen": 1794503808.2539034,
+    "ast_hash": "7c18caeae541546cebd81be90889482e",
+    "semantic_hash": "7c18caeae541546cebd81be90889482e"
+  },
+  "collections/agent-video/knowledge/pro/agent-tools.md": {
+    "mtime": 1794501205.4150863,
+    "seen": 1794503808.253905,
+    "ast_hash": "8387c69cab17d4d3400471270dbcdc43",
+    "semantic_hash": "8387c69cab17d4d3400471270dbcdc43"
+  },
+  "collections/agent-video/knowledge/pro/app-reveal.md": {
+    "mtime": 1794501205.4664197,
+    "seen": 1794503808.253907,
+    "ast_hash": "32841482f01ecaffad9a1e407bd9b16b",
+    "semantic_hash": "32841482f01ecaffad9a1e407bd9b16b"
+  },
+  "collections/agent-video/knowledge/pro/blueprint-collage.md": {
+    "mtime": 1794501205.5104196,
+    "seen": 1794503808.253909,
+    "ast_hash": "3ce8db523c14b678bda18f14fdf17f16",
+    "semantic_hash": "3ce8db523c14b678bda18f14fdf17f16"
+  },
+  "collections/agent-video/knowledge/pro/brief-send.md": {
+    "mtime": 1794501205.5910861,
+    "seen": 1794503808.253911,
+    "ast_hash": "e8068286fa32e1a80cd385f668a1a561",
+    "semantic_hash": "e8068286fa32e1a80cd385f668a1a561"
+  },
+  "collections/agent-video/knowledge/pro/build-out.md": {
+    "mtime": 1794501205.6570861,
+    "seen": 1794503808.253913,
+    "ast_hash": "fcb443f46e30ceffc0333a835a010ecd",
+    "semantic_hash": "fcb443f46e30ceffc0333a835a010ecd"
+  },
+  "collections/agent-video/knowledge/pro/chat-thread.md": {
+    "mtime": 1794501205.7340863,
+    "seen": 1794503808.253915,
+    "ast_hash": "bc1a427afa840acc839cf7d5a8289824",
+    "semantic_hash": "bc1a427afa840acc839cf7d5a8289824"
+  },
+  "collections/agent-video/knowledge/pro/checkout-push.md": {
+    "mtime": 1794501205.7524195,
+    "seen": 1794503808.2539167,
+    "ast_hash": "0c9a5114072cc2ca1249fccc1c47f384",
+    "semantic_hash": "0c9a5114072cc2ca1249fccc1c47f384"
+  },
+  "collections/agent-video/knowledge/pro/column-cut.md": {
+    "mtime": 1794501205.8000863,
+    "seen": 1794503808.2539184,
+    "ast_hash": "a91bbd9283c37bd7be4d515e804ec5dc",
+    "semantic_hash": "a91bbd9283c37bd7be4d515e804ec5dc"
+  },
+  "collections/agent-video/knowledge/pro/comment-storm.md": {
+    "mtime": 1794501205.825753,
+    "seen": 1794503808.2539206,
+    "ast_hash": "b7056dc687873a45f2c5a9e9254346fd",
+    "semantic_hash": "b7056dc687873a45f2c5a9e9254346fd"
+  },
+  "collections/agent-video/knowledge/pro/count-portal.md": {
+    "mtime": 1794501205.869753,
+    "seen": 1794503808.2539227,
+    "ast_hash": "37063b4a8cb44cf21117e3772209a3c1",
+    "semantic_hash": "37063b4a8cb44cf21117e3772209a3c1"
+  },
+  "collections/agent-video/knowledge/pro/cross-out.md": {
+    "mtime": 1794501205.8954196,
+    "seen": 1794503808.2539248,
+    "ast_hash": "92db1716fbbd10ff655af30b75dc824b",
+    "semantic_hash": "92db1716fbbd10ff655af30b75dc824b"
+  },
+  "collections/agent-video/knowledge/pro/depth-swap.md": {
+    "mtime": 1794501205.9210863,
+    "seen": 1794503808.253927,
+    "ast_hash": "8d7d221c998d1c08614ee56bbf5115b2",
+    "semantic_hash": "8d7d221c998d1c08614ee56bbf5115b2"
+  },
+  "collections/agent-video/knowledge/pro/dot-dissolve.md": {
+    "mtime": 1794501205.9614196,
+    "seen": 1794503808.2539291,
+    "ast_hash": "eadbfdc4a41ffa865004ac32a961dad8",
+    "semantic_hash": "eadbfdc4a41ffa865004ac32a961dad8"
+  },
+  "collections/agent-video/knowledge/pro/echo-stack.md": {
+    "mtime": 1794501206.0054195,
+    "seen": 1794503808.253931,
+    "ast_hash": "0345a24319f0aaee3bf27adf4bc62b3e",
+    "semantic_hash": "0345a24319f0aaee3bf27adf4bc62b3e"
+  },
+  "collections/agent-video/knowledge/pro/ember-reveal.md": {
+    "mtime": 1794501206.0530863,
+    "seen": 1794503808.253933,
+    "ast_hash": "ea6036ad44d88a55f92463f5418d8bf6",
+    "semantic_hash": "ea6036ad44d88a55f92463f5418d8bf6"
+  },
+  "collections/agent-video/knowledge/pro/files-drop.md": {
+    "mtime": 1794501206.0860863,
+    "seen": 1794503808.253935,
+    "ast_hash": "baf1ae26d4c324c8405ba2264e924d7e",
+    "semantic_hash": "baf1ae26d4c324c8405ba2264e924d7e"
+  },
+  "collections/agent-video/knowledge/pro/find-yours.md": {
+    "mtime": 1794501206.1117527,
+    "seen": 1794503808.2539372,
+    "ast_hash": "33fe39e1f98bd6198aa882073fe8a819",
+    "semantic_hash": "33fe39e1f98bd6198aa882073fe8a819"
+  },
+  "collections/agent-video/knowledge/pro/flood-outro.md": {
+    "mtime": 1794501206.1374195,
+    "seen": 1794503808.253939,
+    "ast_hash": "0736a8e0816fe49518aa05740239a54e",
+    "semantic_hash": "0736a8e0816fe49518aa05740239a54e"
+  },
+  "collections/agent-video/knowledge/pro/focus-pull.md": {
+    "mtime": 1794501206.1777527,
+    "seen": 1794503808.253941,
+    "ast_hash": "2fcd2bd1578aa71b3f79686f92b62201",
+    "semantic_hash": "2fcd2bd1578aa71b3f79686f92b62201"
+  },
+  "collections/agent-video/knowledge/pro/gallery-push.md": {
+    "mtime": 1794501206.221753,
+    "seen": 1794503808.2539434,
+    "ast_hash": "c2b1f81b18ca71d5d16fc7b08d50e7f2",
+    "semantic_hash": "c2b1f81b18ca71d5d16fc7b08d50e7f2"
+  },
+  "collections/agent-video/knowledge/pro/glass-prompt.md": {
+    "mtime": 1794501206.2474196,
+    "seen": 1794503808.2539454,
+    "ast_hash": "ab5c121c1b4142d1cef7f41d9ac73c11",
+    "semantic_hash": "ab5c121c1b4142d1cef7f41d9ac73c11"
+  },
+  "collections/agent-video/knowledge/pro/glow-frame.md": {
+    "mtime": 1794501206.2987528,
+    "seen": 1794503808.253948,
+    "ast_hash": "fcc2a5b7bbdcb972cf8adcd00e7335e3",
+    "semantic_hash": "fcc2a5b7bbdcb972cf8adcd00e7335e3"
+  },
+  "collections/agent-video/knowledge/pro/glow-map.md": {
+    "mtime": 1794501206.3647528,
+    "seen": 1794503808.2539499,
+    "ast_hash": "01991774b22e3c7cee4fa817dc4bc59c",
+    "semantic_hash": "01991774b22e3c7cee4fa817dc4bc59c"
+  },
+  "collections/agent-video/knowledge/pro/glow-pullback.md": {
+    "mtime": 1794501206.438086,
+    "seen": 1794503808.2539518,
+    "ast_hash": "e865d069d88f9abe2214d61eeb911bb5",
+    "semantic_hash": "e865d069d88f9abe2214d61eeb911bb5"
+  },
+  "collections/agent-video/knowledge/pro/glow-type.md": {
+    "mtime": 1794501206.5334194,
+    "seen": 1794503808.2539544,
+    "ast_hash": "8b3191e3a270f63843a7ab58642b729c",
+    "semantic_hash": "8b3191e3a270f63843a7ab58642b729c"
+  },
+  "collections/agent-video/knowledge/pro/guide-reel.md": {
+    "mtime": 1794501206.5847528,
+    "seen": 1794503808.253956,
+    "ast_hash": "7ba33360359e4a309844de1b250fb52b",
+    "semantic_hash": "7ba33360359e4a309844de1b250fb52b"
+  },
+  "collections/agent-video/knowledge/pro/hex-tally.md": {
+    "mtime": 1794501206.6397529,
+    "seen": 1794503808.2539582,
+    "ast_hash": "ecb86b627af97355d0e7f88add0ed18d",
+    "semantic_hash": "ecb86b627af97355d0e7f88add0ed18d"
+  },
+  "collections/agent-video/knowledge/pro/hype-reel.md": {
+    "mtime": 1794501206.6690862,
+    "seen": 1794503808.2539601,
+    "ast_hash": "5d1a9b40d41a13f3e84229bc05c99128",
+    "semantic_hash": "5d1a9b40d41a13f3e84229bc05c99128"
+  },
+  "collections/agent-video/knowledge/pro/laptop-open.md": {
+    "mtime": 1794501206.6984193,
+    "seen": 1794503808.2539625,
+    "ast_hash": "35505354e05e2d4cbcf193f3d9f42375",
+    "semantic_hash": "35505354e05e2d4cbcf193f3d9f42375"
+  },
+  "collections/agent-video/knowledge/pro/lcd-type.md": {
+    "mtime": 1794501206.7167528,
+    "seen": 1794503808.2539642,
+    "ast_hash": "3331055f77a6d0228a065908612bb60a",
+    "semantic_hash": "3331055f77a6d0228a065908612bb60a"
+  },
+  "collections/agent-video/knowledge/pro/lens-wall.md": {
+    "mtime": 1794501206.7424195,
+    "seen": 1794503808.2539663,
+    "ast_hash": "020ecdd5d840737168a3e7bacae75d46",
+    "semantic_hash": "020ecdd5d840737168a3e7bacae75d46"
+  },
+  "collections/agent-video/knowledge/pro/library-flight.md": {
+    "mtime": 1794501206.7680862,
+    "seen": 1794503808.2539685,
+    "ast_hash": "72f079cdf4896c8e5cd465f2afcf542d",
+    "semantic_hash": "72f079cdf4896c8e5cd465f2afcf542d"
+  },
+  "collections/agent-video/knowledge/pro/lockup-reveal.md": {
+    "mtime": 1794501206.8084195,
+    "seen": 1794503808.2539701,
+    "ast_hash": "ca91f7d66f0f009663f6f8bc8fadea6a",
+    "semantic_hash": "ca91f7d66f0f009663f6f8bc8fadea6a"
+  },
+  "collections/agent-video/knowledge/pro/manifesto.md": {
+    "mtime": 1794501206.8634195,
+    "seen": 1794503808.2539723,
+    "ast_hash": "30fa11021dcee9feff63fe509402fa1c",
+    "semantic_hash": "30fa11021dcee9feff63fe509402fa1c"
+  },
+  "collections/agent-video/knowledge/pro/mark-grid.md": {
+    "mtime": 1794501206.889086,
+    "seen": 1794503808.2539742,
+    "ast_hash": "3195c7b67195338b9eb3297d9158a2a1",
+    "semantic_hash": "3195c7b67195338b9eb3297d9158a2a1"
+  },
+  "collections/agent-video/knowledge/pro/metal-chip.md": {
+    "mtime": 1794501206.9074194,
+    "seen": 1794503808.2539763,
+    "ast_hash": "a9836ce621317e43e144c8c8d49a4f21",
+    "semantic_hash": "a9836ce621317e43e144c8c8d49a4f21"
+  },
+  "collections/agent-video/knowledge/pro/metric-morph.md": {
+    "mtime": 1794501206.9330862,
+    "seen": 1794503808.2539787,
+    "ast_hash": "3153d4a51ccbb824cd60000ea6d38e5d",
+    "semantic_hash": "3153d4a51ccbb824cd60000ea6d38e5d"
+  },
+  "collections/agent-video/knowledge/pro/mood-board.md": {
+    "mtime": 1794501206.9514194,
+    "seen": 1794503808.253981,
+    "ast_hash": "78599d998b46a58651902318385ba670",
+    "semantic_hash": "78599d998b46a58651902318385ba670"
+  },
+  "collections/agent-video/knowledge/pro/orbit-flow.md": {
+    "mtime": 1794501206.9734194,
+    "seen": 1794503808.2539835,
+    "ast_hash": "bb676d218261dd829f058329127aece2",
+    "semantic_hash": "bb676d218261dd829f058329127aece2"
+  },
+  "collections/agent-video/knowledge/pro/pack-up.md": {
+    "mtime": 1794501206.9990861,
+    "seen": 1794503808.2539861,
+    "ast_hash": "beaf4366254dc718811d77ed5f1667bf",
+    "semantic_hash": "beaf4366254dc718811d77ed5f1667bf"
+  },
+  "collections/agent-video/knowledge/pro/pain-point.md": {
+    "mtime": 1794501207.021086,
+    "seen": 1794503808.2539883,
+    "ast_hash": "f8c2b6771a3ff84e8550aaeba17e8939",
+    "semantic_hash": "f8c2b6771a3ff84e8550aaeba17e8939"
+  },
+  "collections/agent-video/knowledge/pro/phone-burst.md": {
+    "mtime": 1794501207.0577528,
+    "seen": 1794503808.2539902,
+    "ast_hash": "59d4f3ea60be261db26b0524bb1f25a6",
+    "semantic_hash": "59d4f3ea60be261db26b0524bb1f25a6"
+  },
+  "collections/agent-video/knowledge/pro/phone-pitch.md": {
+    "mtime": 1794501207.109086,
+    "seen": 1794503808.253992,
+    "ast_hash": "6d50d71a9acfc8c2f4db06dd537f2bfe",
+    "semantic_hash": "6d50d71a9acfc8c2f4db06dd537f2bfe"
+  },
+  "collections/agent-video/knowledge/pro/phrase-swarm.md": {
+    "mtime": 1794501207.1274195,
+    "seen": 1794503808.2539942,
+    "ast_hash": "6c48dc7a307c919c359bf8ddd2f3e7ea",
+    "semantic_hash": "6c48dc7a307c919c359bf8ddd2f3e7ea"
+  },
+  "collections/agent-video/knowledge/pro/picker-commit.md": {
+    "mtime": 1794501207.1567528,
+    "seen": 1794503808.2539966,
+    "ast_hash": "b4cbf12cab442d875a2807825ea3733d",
+    "semantic_hash": "b4cbf12cab442d875a2807825ea3733d"
+  },
+  "collections/agent-video/knowledge/pro/pixel-peak.md": {
+    "mtime": 1794501207.186086,
+    "seen": 1794503808.2539985,
+    "ast_hash": "68f5ab00a7b72653a1fea4dd1967c66e",
+    "semantic_hash": "68f5ab00a7b72653a1fea4dd1967c66e"
+  },
+  "collections/agent-video/knowledge/pro/prompt-dive.md": {
+    "mtime": 1794501207.2337527,
+    "seen": 1794503808.2540007,
+    "ast_hash": "48d6d16096fedfcb8244a249797b5868",
+    "semantic_hash": "48d6d16096fedfcb8244a249797b5868"
+  },
+  "collections/agent-video/knowledge/pro/prompt-poster.md": {
+    "mtime": 1794501207.2850862,
+    "seen": 1794503808.2540026,
+    "ast_hash": "a48b3180646b2f2724d9bef302888456",
+    "semantic_hash": "a48b3180646b2f2724d9bef302888456"
+  },
+  "collections/agent-video/knowledge/pro/prompt-roll.md": {
+    "mtime": 1794501207.3144193,
+    "seen": 1794503808.254005,
+    "ast_hash": "03b1988316123df82df21845af6c211f",
+    "semantic_hash": "03b1988316123df82df21845af6c211f"
+  },
+  "collections/agent-video/knowledge/pro/proof-line.md": {
+    "mtime": 1794501207.329086,
+    "seen": 1794503808.254007,
+    "ast_hash": "5f7c6a26c2c28f25ee98792fb7c00cfe",
+    "semantic_hash": "5f7c6a26c2c28f25ee98792fb7c00cfe"
+  },
+  "collections/agent-video/knowledge/pro/read-through.md": {
+    "mtime": 1794501207.3474193,
+    "seen": 1794503808.254009,
+    "ast_hash": "ee238dc69ce878383872eed705906914",
+    "semantic_hash": "ee238dc69ce878383872eed705906914"
+  },
+  "collections/agent-video/knowledge/pro/render-wall.md": {
+    "mtime": 1794501207.3804193,
+    "seen": 1794503808.254011,
+    "ast_hash": "98f646f43c34f830ad62663af6a9e167",
+    "semantic_hash": "98f646f43c34f830ad62663af6a9e167"
+  },
+  "collections/agent-video/knowledge/pro/say-it.md": {
+    "mtime": 1794501207.428086,
+    "seen": 1794503808.2540128,
+    "ast_hash": "e91a1a619fdb94aa6ff99d8473beca78",
+    "semantic_hash": "e91a1a619fdb94aa6ff99d8473beca78"
+  },
+  "collections/agent-video/knowledge/pro/scatter-bloom.md": {
+    "mtime": 1794501207.4647527,
+    "seen": 1794503808.2540152,
+    "ast_hash": "8ad555e9e54b3ec469b2a2f9875a93ee",
+    "semantic_hash": "8ad555e9e54b3ec469b2a2f9875a93ee"
+  },
+  "collections/agent-video/knowledge/pro/screen-wall.md": {
+    "mtime": 1794501207.4977527,
+    "seen": 1794503808.2540176,
+    "ast_hash": "b498cc09294327df75e5f723606ef67d",
+    "semantic_hash": "b498cc09294327df75e5f723606ef67d"
+  },
+  "collections/agent-video/knowledge/pro/search-retype.md": {
+    "mtime": 1794501207.5234194,
+    "seen": 1794503808.2540195,
+    "ast_hash": "f15e3f2117c40d500cf2c3f41c314c27",
+    "semantic_hash": "f15e3f2117c40d500cf2c3f41c314c27"
+  },
+  "collections/agent-video/knowledge/pro/sentence-set.md": {
+    "mtime": 1794501207.5454195,
+    "seen": 1794503808.2540216,
+    "ast_hash": "41565e466febde5e011b0ebc6e3a47f7",
+    "semantic_hash": "41565e466febde5e011b0ebc6e3a47f7"
+  },
+  "collections/agent-video/knowledge/pro/showcase-drift.md": {
+    "mtime": 1794501207.560086,
+    "seen": 1794503808.2540238,
+    "ast_hash": "b47a374a65bae82bb589bfdc78b00ab3",
+    "semantic_hash": "b47a374a65bae82bb589bfdc78b00ab3"
+  },
+  "collections/agent-video/knowledge/pro/slam-type.md": {
+    "mtime": 1794501207.582086,
+    "seen": 1794503808.254026,
+    "ast_hash": "0f1fef601bfc868f84310589ccac4f29",
+    "semantic_hash": "0f1fef601bfc868f84310589ccac4f29"
+  },
+  "collections/agent-video/knowledge/pro/spark-question.md": {
+    "mtime": 1794501207.615086,
+    "seen": 1794503808.2540283,
+    "ast_hash": "024d746fa4280ac6cf4bcb5cd25e89f6",
+    "semantic_hash": "024d746fa4280ac6cf4bcb5cd25e89f6"
+  },
+  "collections/agent-video/knowledge/pro/spec-wall.md": {
+    "mtime": 1794501207.6994193,
+    "seen": 1794503808.25403,
+    "ast_hash": "6dada5122c6b450cee62cda27113c878",
+    "semantic_hash": "6dada5122c6b450cee62cda27113c878"
+  },
+  "collections/agent-video/knowledge/pro/stretch-word.md": {
+    "mtime": 1794501207.758086,
+    "seen": 1794503808.2540317,
+    "ast_hash": "820987171330e0261285f5473f4024ff",
+    "semantic_hash": "820987171330e0261285f5473f4024ff"
+  },
+  "collections/agent-video/knowledge/pro/string-hero.md": {
+    "mtime": 1794501207.7837527,
+    "seen": 1794503808.2540333,
+    "ast_hash": "064aeffcfb3dddee3e2269fe26a8bde6",
+    "semantic_hash": "064aeffcfb3dddee3e2269fe26a8bde6"
+  },
+  "collections/agent-video/knowledge/pro/tally-rise.md": {
+    "mtime": 1794501207.8020859,
+    "seen": 1794503808.2540352,
+    "ast_hash": "a5d1abd2a6c183bc2c8d99fec8adc2f0",
+    "semantic_hash": "a5d1abd2a6c183bc2c8d99fec8adc2f0"
+  },
+  "collections/agent-video/knowledge/pro/tap-through.md": {
+    "mtime": 1794501207.8277526,
+    "seen": 1794503808.2540371,
+    "ast_hash": "ece9b23cee2f828ca6aa1fec4ba03c04",
+    "semantic_hash": "ece9b23cee2f828ca6aa1fec4ba03c04"
+  },
+  "collections/agent-video/knowledge/pro/task-stream.md": {
+    "mtime": 1794501207.8534193,
+    "seen": 1794503808.2540393,
+    "ast_hash": "dfa6da22c0e72f2597f0025403cfd808",
+    "semantic_hash": "dfa6da22c0e72f2597f0025403cfd808"
+  },
+  "collections/agent-video/knowledge/pro/thank-you-swarm.md": {
+    "mtime": 1794501207.8717527,
+    "seen": 1794503808.2540414,
+    "ast_hash": "ce5dd73755718a8ae4e906ec9d5fcc27",
+    "semantic_hash": "ce5dd73755718a8ae4e906ec9d5fcc27"
+  },
+  "collections/agent-video/knowledge/pro/ticker-climb.md": {
+    "mtime": 1794501207.8937526,
+    "seen": 1794503808.2540433,
+    "ast_hash": "5d701d3b1e4d91ccd6e3cdb02405187b",
+    "semantic_hash": "5d701d3b1e4d91ccd6e3cdb02405187b"
+  },
+  "collections/agent-video/knowledge/pro/trend-type.md": {
+    "mtime": 1794501207.912086,
+    "seen": 1794503808.2540452,
+    "ast_hash": "48608ef22dd183f0b38c7cd0500cd373",
+    "semantic_hash": "48608ef22dd183f0b38c7cd0500cd373"
+  },
+  "collections/agent-video/knowledge/pro/vault-count.md": {
+    "mtime": 1794501207.9377527,
+    "seen": 1794503808.2540472,
+    "ast_hash": "cecc1da61a505e943436ab877d5e9eb4",
+    "semantic_hash": "cecc1da61a505e943436ab877d5e9eb4"
+  },
+  "collections/agent-video/knowledge/pro/version-drop.md": {
+    "mtime": 1794501207.967086,
+    "seen": 1794503808.2540622,
+    "ast_hash": "bf85c7d2f98894d47ceaf40b11d08c5d",
+    "semantic_hash": "bf85c7d2f98894d47ceaf40b11d08c5d"
+  },
+  "collections/agent-video/knowledge/pro/wall-cut.md": {
+    "mtime": 1794501207.989086,
+    "seen": 1794503808.254064,
+    "ast_hash": "acfdf324e17ef2e16b638fb91a836542",
+    "semantic_hash": "acfdf324e17ef2e16b638fb91a836542"
+  },
+  "collections/agent-video/knowledge/pro/wire-feed.md": {
+    "mtime": 1794501208.0074193,
+    "seen": 1794503808.2540662,
+    "ast_hash": "1409f1e95e406c13f6e763188bbd57bf",
+    "semantic_hash": "1409f1e95e406c13f6e763188bbd57bf"
+  },
+  "collections/agent-video/knowledge/pro/word-insert.md": {
+    "mtime": 1794501208.0294192,
+    "seen": 1794503808.2540681,
+    "ast_hash": "e76aa19a5185108f92e333f0de24ed41",
+    "semantic_hash": "e76aa19a5185108f92e333f0de24ed41"
+  },
+  "collections/agent-video/knowledge/pro/word-montage.md": {
+    "mtime": 1794501208.066086,
+    "seen": 1794503808.25407,
+    "ast_hash": "8e4869d7295831b82dfb9d8ed1327837",
+    "semantic_hash": "8e4869d7295831b82dfb9d8ed1327837"
+  },
+  "collections/agent-video/knowledge/pro/word-rush.md": {
+    "mtime": 1794501208.121086,
+    "seen": 1794503808.2540727,
+    "ast_hash": "e5660ae82f68025ceaf630ef22f6661e",
+    "semantic_hash": "e5660ae82f68025ceaf630ef22f6661e"
+  },
+  "collections/agent-video/knowledge/pro/word-settle.md": {
+    "mtime": 1794501208.143086,
+    "seen": 1794503808.2540748,
+    "ast_hash": "7b2c9ab55da0123011067548ca7623df",
+    "semantic_hash": "7b2c9ab55da0123011067548ca7623df"
+  },
+  "collections/agent-video/knowledge/system.md": {
+    "mtime": 1794501208.6124191,
+    "seen": 1794503808.2540774,
+    "ast_hash": "3fe398692b288b5852dedcd1f53aab52",
+    "semantic_hash": "3fe398692b288b5852dedcd1f53aab52"
+  },
+  "collections/agent-video/knowledge/templates/template-01.md": {
+    "mtime": 1794501208.7077525,
+    "seen": 1794503808.25408,
+    "ast_hash": "a2bc023d62b51ec31c0d3bf1e6e6e0c5",
+    "semantic_hash": "a2bc023d62b51ec31c0d3bf1e6e6e0c5"
+  },
+  "collections/agent-video/knowledge/templates/template-02.md": {
+    "mtime": 1794501208.7957525,
+    "seen": 1794503808.2540817,
+    "ast_hash": "a81a1501be9fc67113dea837e7f8110d",
+    "semantic_hash": "a81a1501be9fc67113dea837e7f8110d"
+  },
+  "collections/agent-video/knowledge/templates/template-03.md": {
+    "mtime": 1794501208.9167526,
+    "seen": 1794503808.2540839,
+    "ast_hash": "921cd5e9ada51028bbef34329a0c598a",
+    "semantic_hash": "921cd5e9ada51028bbef34329a0c598a"
+  },
+  "collections/agent-video/knowledge/templates/template-04.md": {
+    "mtime": 1794501209.0230858,
+    "seen": 1794503808.2540855,
+    "ast_hash": "746f7bf2531dbbd5d8dfcb4bd995ea6a",
+    "semantic_hash": "746f7bf2531dbbd5d8dfcb4bd995ea6a"
+  },
+  "collections/agent-video/knowledge/templates/template-05.md": {
+    "mtime": 1794501209.111086,
+    "seen": 1794503808.2540877,
+    "ast_hash": "f13f0a02cd8c70fe0c3530a777ebef1d",
+    "semantic_hash": "f13f0a02cd8c70fe0c3530a777ebef1d"
+  },
+  "collections/agent-video/knowledge/templates/template-06.md": {
+    "mtime": 1794501209.1477525,
+    "seen": 1794503808.2540898,
+    "ast_hash": "4993804bb94954aab498a68a68a83ebb",
+    "semantic_hash": "4993804bb94954aab498a68a68a83ebb"
+  },
+  "collections/agent-video/knowledge/templates/template-07.md": {
+    "mtime": 1794501209.228419,
+    "seen": 1794503808.254092,
+    "ast_hash": "23b2e29f44896864efaf82a5edf79539",
+    "semantic_hash": "23b2e29f44896864efaf82a5edf79539"
+  },
+  "collections/agent-video/knowledge/templates/template-08.md": {
+    "mtime": 1794501209.298086,
+    "seen": 1794503808.2540944,
+    "ast_hash": "d776ac9f61fbde65abb7dfbf511782f2",
+    "semantic_hash": "d776ac9f61fbde65abb7dfbf511782f2"
+  },
+  "collections/agent-video/knowledge/templates/template-09.md": {
+    "mtime": 1794501209.3750858,
+    "seen": 1794503808.2540963,
+    "ast_hash": "d7b57049941631450022ece511b64c2b",
+    "semantic_hash": "d7b57049941631450022ece511b64c2b"
+  },
+  "collections/agent-video/knowledge/templates/template-10.md": {
+    "mtime": 1794501209.4520857,
+    "seen": 1794503808.2540982,
+    "ast_hash": "c6add53b4a844b2657cf94346620cd6c",
+    "semantic_hash": "c6add53b4a844b2657cf94346620cd6c"
+  },
+  "docs/design/video-capture/snapcn.md": {
+    "mtime": 1794501210.218419,
+    "seen": 1794503808.254134,
+    "ast_hash": "1eb83ecbbf8bbb1c3978a9ec237403fc",
+    "semantic_hash": "1eb83ecbbf8bbb1c3978a9ec237403fc"
+  },
+  "docs/design/video-capture/tolong-agent-video.md": {
+    "mtime": 1794501210.251419,
+    "seen": 1794503808.254136,
+    "ast_hash": "15bf00b2e94518187c9833077181b359",
+    "semantic_hash": "15bf00b2e94518187c9833077181b359"
+  },
+  "docs/research/snapcn-agent-video.md": {
+    "mtime": 1794501210.2880857,
+    "seen": 1794503808.2541401,
+    "ast_hash": "0fd3f95dbeaf734246789e9bd54d6b73",
+    "semantic_hash": "0fd3f95dbeaf734246789e9bd54d6b73"
   }
 }

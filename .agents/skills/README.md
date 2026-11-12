@@ -10,3 +10,5 @@ read `.agents/skills/`. Keep both copies identical.
 - `add-tool-doc` — add, refresh or fix a tool doc.
 - `line-art` — build animated ink-on-paper SVG scenes with
   `collections/line-art`, then verify and export them.
+- `agent-video` — make launch films with `collections/agent-video`, build a
+  scene from the snapcn teardowns, render and check contact sheets.
