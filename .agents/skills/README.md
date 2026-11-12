@@ -8,3 +8,5 @@ read `.agents/skills/`. Keep both copies identical.
 - `design-project` — route a project brief through references, full source
   context, implementation, and rendered verification.
 - `add-tool-doc` — add, refresh or fix a tool doc.
+- `line-art` — build animated ink-on-paper SVG scenes with
+  `collections/line-art`, then verify and export them.

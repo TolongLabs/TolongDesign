@@ -27,6 +27,8 @@ what they cost, and get them producing real output.
 | [design/people.md](./design/people.md)             | 132 design engineers worth following                                          |
 | [`../data/index.json`](../data/index.json)         | Every doc's frontmatter as JSON, for scripts and agents                       |
 | [`../data/catalogue.json`](../data/catalogue.json) | Designeer scrape plus hand-added tools (what exists)                          |
+| [`../collections/`](../collections/README.md)      | TolongLabs-owned design code (line art), each with a catalogue doc            |
+| [research/](./research/)                           | Teardowns and assessments behind catalogue decisions                          |
 
 ## Sections
 
