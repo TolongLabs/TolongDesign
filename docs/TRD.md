@@ -340,8 +340,8 @@ archive.
 
 ### Snapshot boundary
 
-The source baseline has `package.json` version `0.1.2`, but published `v0.1.2`
-was released on 2026-10-11, before the newer retrieval changes. A working-tree
+The source baseline has `package.json` version `0.2.0`, published as `v0.2.0` on
+2026-11-13 with the retrieval changes and the collections. A working-tree
 version string alone is not release provenance. Check tag, source revision,
 asset bytes and manifest; use the checkout for unreleased source behavior. This
 documentation change does not publish a new release.
