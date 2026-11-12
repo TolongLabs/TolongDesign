@@ -2,11 +2,11 @@
 
 # Design catalogue
 
-443 tools across 18 sections, scraped from [Designeer](https://designeer.xyz) on
+445 tools across 18 sections, scraped from [Designeer](https://designeer.xyz) on
 2026-10-07 plus hand-picked additions, researched one by one. Each tool has its
 own doc with source URL, paywall, how to use, examples, and agent notes.
 
-**Paywall overview:** 289 free · 124 freemium · 20 paid · 10 unknown.
+**Paywall overview:** 291 free · 124 freemium · 20 paid · 10 unknown.
 
 | Section                                                | Tools | Free | Freemium | Paid | What it covers                                                                       |
 | ------------------------------------------------------ | ----- | ---- | -------- | ---- | ------------------------------------------------------------------------------------ |
@@ -14,7 +14,7 @@ own doc with source URL, paywall, how to use, examples, and agent notes.
 | [Component Libraries](./component-libraries/README.md) | 110   | 77   | 30       | 0    | Production UI primitives and accessible component libraries.                         |
 | [Development](./development/README.md)                 | 24    | 16   | 5        | 3    | Modern code editors, runtimes, and local tooling.                                    |
 | [Agents & MCP](./agents-mcp/README.md)                 | 38    | 19   | 17       | 2    | Coding agents, local MCP servers, and machine specs.                                 |
-| [Motion](./motion/README.md)                           | 13    | 9    | 3        | 1    | Animation timing, spring physics, and motion libraries.                              |
+| [Motion](./motion/README.md)                           | 15    | 11   | 3        | 1    | Animation timing, spring physics, and motion libraries.                              |
 | [Interface Design](./interface-design/README.md)       | 12    | 6    | 4        | 2    | Interface design canvases, tokens, and layout systems.                               |
 | [Type](./type/README.md)                               | 7     | 6    | 0        | 1    | Curated web typefaces, pairings, and font optimization.                              |
 | [Color](./color/README.md)                             | 5     | 5    | 0        | 0    | Color palette generators, contrast checkers, and color math.                         |

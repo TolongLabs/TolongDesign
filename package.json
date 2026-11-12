@@ -17,11 +17,15 @@
     "test": "bun test",
     "format": "prettier --write \"**/*.{md,json,ts}\"",
     "format:check": "prettier --check \"**/*.{md,json,ts}\"",
-    "links": "bun scripts/check-links.ts"
+    "links": "bun scripts/check-links.ts",
+    "line-art:demo": "bun collections/line-art/demo/index.html",
+    "line-art:previews": "bun collections/line-art/scripts/previews.ts",
+    "line-art:typecheck": "tsc -p collections/line-art/tsconfig.json"
   },
   "devDependencies": {
     "@types/bun": "^1.4.2",
     "prettier": "^3.9.9",
+    "typescript": "5.9.3",
     "yaml": "^2.9.1"
   }
 }

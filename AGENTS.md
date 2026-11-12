@@ -42,6 +42,7 @@ docs/design/<section>/<slug>.md One doc per tool (hand-written / researched)
 docs/design/people.md          Generated: design engineers worth following
 data/catalogue.json            Designeer scrape plus hand-added tools (tools + people); source of truth for what exists
 data/index.json                Generated: every doc's frontmatter, flat
+collections/<name>/            TolongLabs-owned design code: src, tests, demo, previews (see collections/README.md)
 templates/tool-doc.md          The contract every tool doc follows
 templates/worker-brief.md      Work order used to fan out doc research to agents
 scripts/                       check-docs.ts, build-index.ts, find.ts, check-links.ts (Bun + TypeScript)
@@ -107,6 +108,7 @@ bun run format              # prettier
 | Browsing every section with counts                         | [Design catalogue](docs/design/README.md)         |
 | Writing or refreshing a tool doc                           | [Tool doc template](templates/tool-doc.md)        |
 | Fanning research out to worker agents                      | [Worker brief](templates/worker-brief.md)         |
+| Building or changing a collection (our own design code)    | [Collections](collections/README.md)              |
 | Branching, committing, or opening a pull request           | [Contributing](.github/CONTRIBUTING.md)           |
 | Answering "which tools relate to X" across the repo        | `graphify-out/GRAPH_REPORT.md`, `/graphify query` |
 | Refreshing the knowledge graph after doc changes           | `/graphify . --update`                            |
