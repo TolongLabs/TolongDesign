@@ -1,8 +1,8 @@
-# Private CLI installation
+# CLI installation
 
 Use the installed CLI from a target project when you need design-resource
-search, complete usage guidance, or an agent context pack. The tool is private
-and read-only; the target agent still designs, builds, and reviews the work.
+search, complete usage guidance, or an agent context pack. The tool is local and
+read-only; the target agent still designs, builds, and reviews the work.
 
 > **Snapshot note:** this guide describes current source. Published `v0.2.0`
 > includes ranked-search filters and cards. Anything merged after the tag needs
@@ -11,12 +11,13 @@ and read-only; the target agent still designs, builds, and reviews the work.
 
 ## Requirements
 
-Use Bun 1.4 or newer and an authenticated `gh` account with read access to
-`TolongLabs/TolongDesign`. Keep credentials in the existing gh login; the
-package contains no tokens or agent-provider keys. Linux/Bun is the initial
-verified installation path. Other platforms require their own verification.
+Use Bun 1.4 or newer and an authenticated `gh` account (the repository is
+public; `gh release download` still uses your login). Keep credentials in the
+existing gh login; the package contains no tokens or agent-provider keys.
+Linux/Bun is the initial verified installation path. Other platforms require
+their own verification.
 
-## Install a private release
+## Install a release
 
 Download into a new temporary directory and verify the actual archive before
 installing. No public npm registry publication is involved.
@@ -97,7 +98,7 @@ compatible.
 
 ## Update and rollback
 
-Download an explicitly chosen newer private tag, verify its checksum, and
+Download an explicitly chosen newer release tag, verify its checksum, and
 install its local tarball with the same command. Reinstall a known earlier
 verified release to roll back. Confirm the version and doctor output after
 either action. Resource facts remain a snapshot; an update does not replace live
@@ -107,7 +108,7 @@ API/licence verification for the target project.
 
 Usage errors exit 2; missing/invalid data or release integrity errors exit 1.
 JSON errors go to stderr, not partial stdout. If doctor reports tampering,
-reinstall a verified private release instead of editing its manifest to match.
+reinstall a verified release instead of editing its manifest to match.
 
 The CLI performs no network retrieval, project writes, audio recording, model
 calls or paid-resource installation. It does not guarantee beautiful designs,

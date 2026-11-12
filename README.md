@@ -10,7 +10,7 @@ local search, complete context packs and an evidence-led project workflow.
 
 ## Start here
 
-**Requires:** Bun 1.4+ and GitHub access to this private repository.
+**Requires:** Bun 1.4+ and a clone of this repository.
 
 ```bash
 gh repo clone TolongLabs/TolongDesign
@@ -25,9 +25,9 @@ bun run design -- context motion/gsap --brief "Product landing page" --json
 2. **Read** complete selected docs with `show` or `context`.
 3. **Make and verify** the work in your target project—not in this collection.
 
-Prefer an installed CLI? Follow [private installation](docs/CLI.md). Releases
-are snapshots of `main` at their tag; `v0.2.0` includes ranked search, cards and
-the collections. Use current `main` for anything merged after it.
+Prefer an installed CLI? Follow [CLI installation](docs/CLI.md). Releases are
+snapshots of `main` at their tag; `v0.2.0` includes ranked search, cards and the
+collections. Use current `main` for anything merged after it.
 
 ## Choose your starting point
 
@@ -52,13 +52,13 @@ website-specific stack choices.
 
 ## Need to know
 
-| Question                   | Answer                                                                                                                                                         |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| What does search do?       | Local, field-weighted keyword ranking over registered docs. It is not vector search, an AI recommendation engine or a design generator.                        |
-| How do I narrow results?   | Use `--mode`, `--surface`, `--stack` and `--paywall`. Unreachable resources are hidden by default. [Metadata definitions](docs/METADATA.md).                   |
-| What does context include? | Complete selected Markdown, source URLs, verification dates and SHA-256 hashes. Search cards are only a shortlist.                                             |
-| What still needs checking? | Current APIs, prices, access, asset rights and actual output quality. Metadata and green tests are not guarantees.                                             |
-| Is it private?             | Yes. Retrieval is local and read-only. Installation uses authenticated private GitHub assets; resource tools and external agent services have their own terms. |
+| Question                   | Answer                                                                                                                                                                                       |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| What does search do?       | Local, field-weighted keyword ranking over registered docs. It is not vector search, an AI recommendation engine or a design generator.                                                      |
+| How do I narrow results?   | Use `--mode`, `--surface`, `--stack` and `--paywall`. Unreachable resources are hidden by default. [Metadata definitions](docs/METADATA.md).                                                 |
+| What does context include? | Complete selected Markdown, source URLs, verification dates and SHA-256 hashes. Search cards are only a shortlist.                                                                           |
+| What still needs checking? | Current APIs, prices, access, asset rights and actual output quality. Metadata and green tests are not guarantees.                                                                           |
+| Is it private?             | The repository is public; the code and docs are TolongLabs' own (no open-source licence). Retrieval is local and read-only. Resource tools and external agent services have their own terms. |
 
 ## Keep the collection useful
 

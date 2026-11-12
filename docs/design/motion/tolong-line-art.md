@@ -8,8 +8,7 @@ designeer_url: 'https://designeer.xyz/components'
 designeer_blurb: Not on Designeer; TolongLabs' own collection in this repo.
 paywall: free
 pricing_summary:
-  'Internal TolongLabs library in this private repo. No cost and no external
-  dependencies.'
+  'TolongLabs library in this repo. No cost and no external dependencies.'
 open_source: false
 license: proprietary
 category_tags:
@@ -86,7 +85,7 @@ night. It adds four things the original does not have:
 
 - **Free:** internal code; no cost.
 - **Paid:** none.
-- **Sign-up required?** Access to this private repo.
+- **Sign-up required?** No; clone this repo.
 - **Licence for client work:** TolongLabs-owned; use in TolongLabs and client
   projects. It contains no third-party assets.
 
