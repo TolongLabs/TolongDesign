@@ -16559,7 +16559,7 @@
    "designeer_url": "https://designeer.xyz/components",
    "designeer_blurb": "TolongLabs' own ink-on-paper SVG animation library: rig and costume parts, line boil, dog and cat gaits, headless SVG/GIF export.",
    "paywall": "free",
-   "pricing_summary": "Internal TolongLabs library in this private repo. No cost and no external dependencies.",
+   "pricing_summary": "TolongLabs library in this repo. No cost and no external dependencies.",
    "open_source": false,
    "license": "proprietary",
    "category_tags": [
@@ -16649,7 +16649,7 @@
    "designeer_url": "https://designeer.xyz/utilities",
    "designeer_blurb": "TolongLabs' own Remotion kit and five launch-film templates, plus 155 teardowns of snapcn templates and components.",
    "paywall": "free",
-   "pricing_summary": "Internal TolongLabs collection in this private repo. No cost. Remotion is free for teams of up to three; larger companies need a Remotion company licence.",
+   "pricing_summary": "TolongLabs collection in this repo. No cost. Remotion is free for teams of up to three; larger companies need a Remotion company licence.",
    "open_source": false,
    "license": "proprietary",
    "category_tags": [

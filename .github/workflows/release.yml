@@ -1,4 +1,4 @@
-name: Private release
+name: Release
 
 on:
   push:
@@ -13,8 +13,8 @@ concurrency:
 
 jobs:
   release:
-    name: Build and publish private CLI
-    if: github.repository == 'TolongLabs/TolongDesign' && github.event.repository.private == true
+    name: Build and publish CLI
+    if: github.repository == 'TolongLabs/TolongDesign'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -32,9 +32,8 @@ jobs:
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
         with:
           bun-version: 1.4.3
-      - name: Verify private repository and matching version
+      - name: Verify package metadata and matching version
         run: |
-          test "$(gh repo view --json isPrivate --jq .isPrivate)" = true
           version=$(bun -e 'const p=require("./package.json"); if(p.private!==true) process.exit(1); process.stdout.write(p.version)')
           test "$RELEASE_TAG" = "v${version}"
       - name: Install locked dependencies
@@ -52,7 +51,7 @@ jobs:
           (cd release && sha256sum --check SHA256SUMS)
           version=$(bun -e 'process.stdout.write(require("./package.json").version)')
           bun run smoke:release "release/tolong-design-${version}.tgz"
-      - name: Publish only the verified private artifacts
+      - name: Publish only the verified artifacts
         run: |
           version=$(bun -e 'process.stdout.write(require("./package.json").version)')
           if gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft > release/existing-draft.txt 2>/dev/null; then
@@ -60,7 +59,7 @@ jobs:
           else
             gh release create "$RELEASE_TAG" --verify-tag --draft \
               --title "TolongDesign ${RELEASE_TAG}" \
-              --notes "Private TolongLabs CLI release. Requires Bun 1.4+. Verify SHA256SUMS before installing the local tarball, then run tolongdesign doctor --json. Full source docs and mirrored design-project instructions are included. This tool does not guarantee design quality or replace current API/licence checks."
+              --notes "TolongLabs CLI release (GitHub release assets; not published to npm). Requires Bun 1.4+. Verify SHA256SUMS before installing the local tarball, then run tolongdesign doctor --json. Full source docs and mirrored design-project instructions are included. This tool does not guarantee design quality or replace current API/licence checks."
           fi
           gh release upload "$RELEASE_TAG" \
             "release/tolong-design-${version}.tgz" release/SHA256SUMS --clobber

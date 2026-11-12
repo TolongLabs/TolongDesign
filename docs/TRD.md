@@ -367,12 +367,14 @@ itself.
 
 ### Publication gates
 
-The release workflow runs only for a `v*` tag in the named private repository.
-It requires private package metadata and an exact tag/version match, then runs
-locked dependency installation, tests, doc checks, mirror comparison, release
-build, checksum verification and isolated installation smoke. Only then are
-verified assets uploaded to a draft and the private release published. Existing
-published releases are not overwritten by that workflow.
+The release workflow runs only for a `v*` tag in `TolongLabs/TolongDesign`. The
+repository became public in November 2026; the workflow no longer requires a
+private repository. It requires `"private": true` package metadata (no npm
+publish) and an exact tag/version match, then runs locked dependency
+installation, tests, doc checks, mirror comparison, release build, checksum
+verification and isolated installation smoke. Only then are verified assets
+uploaded to a draft and the release published. Existing published releases are
+not overwritten by that workflow.
 
 A release tag is an explicit maintainer action. Editing docs, merging a PR or
 building an archive locally does not publish one.
@@ -404,7 +406,7 @@ code is safe.
 | Catalogue → filesystem | Registered-path and realpath containment; release inspection rejects symlinked payload paths.         | Not an adversarial OS sandbox or a guarantee against concurrent hostile filesystem mutation. |
 | Documents → agent      | Full docs remain reference data; no embedded command execution; fenced context output.                | The receiving agent must enforce its own instruction hierarchy and approvals.                |
 | Target project         | Retrieval does not write project files, record audio, invoke models or install resource dependencies. | A user redirecting stdout or independently operating a resource is a separate action.        |
-| Private distribution   | Private repository guards, authenticated assets, allowlisted files, hashes and isolated smoke tests.  | No public-registry publication or signed supply-chain attestation.                           |
+| Distribution           | Repository and tag guards, GitHub release assets, allowlisted files, hashes and isolated smoke tests. | No public-registry publication or signed supply-chain attestation.                           |
 | External sources       | Explicit link checks and human verification of current facts/rights.                                  | Remote sites can change, block bots or serve a different product.                            |
 
 Keep credentials in existing authenticated tooling, not in catalogue entries,
@@ -423,7 +425,7 @@ providers have their own data and cost boundaries.
 | `bun run build:release` + `smoke:release <archive>` | Buildable, allowlisted package and isolated installation/diagnostic behavior.        | Visual quality or universal platform support.            |
 
 The Verify workflow runs tests, doc checks, skill-mirror comparison, build and
-installed smoke on pushes/PRs. The tag-release workflow adds private/version
+installed smoke on pushes/PRs. The tag-release workflow adds package/version
 checks and archive-checksum verification before publication. Neither current
 workflow contains a general `tsc` typecheck or `format:check` step; run
 formatting locally and do not imply those gates ran in CI.

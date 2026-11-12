@@ -8,9 +8,8 @@ designeer_url: 'https://designeer.xyz/utilities'
 designeer_blurb: Not on Designeer; TolongLabs' own collection in this repo.
 paywall: free
 pricing_summary:
-  'Internal TolongLabs collection in this private repo. No cost. Remotion is
-  free for teams of up to three; larger companies need a Remotion company
-  licence.'
+  'TolongLabs collection in this repo. No cost. Remotion is free for teams of up
+  to three; larger companies need a Remotion company licence.'
 open_source: false
 license: proprietary
 category_tags:
@@ -52,7 +51,7 @@ last_verified: 2026-11-13
 | -------------- | ------------------------------------------------------------------------- |
 | Source         | [collections/agent-video](../../../collections/agent-video/README.md)     |
 | Paywall        | **Free**: internal collection                                             |
-| Open source    | No: proprietary, private repo                                             |
+| Open source    | No: proprietary; source visible in this public repo                       |
 | Type           | Remotion kit, template films and a teardown knowledge base                |
 | Works with     | Remotion 4.0.539, React 19, Bun                                           |
 | Best for       | Launch films, release videos, app launches, agent and chat UI shots       |
