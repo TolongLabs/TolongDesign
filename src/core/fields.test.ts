@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test'
-import { extractInstall, renderPeopleRows } from './index-fields'
-import type { CatalogueTool, Person } from './lib'
+import { extractInstall, renderPeopleRows } from './fields'
+import type { CatalogueTool, Person } from './schema'
 
 const doc = (howToUse: string) =>
   `---\nname: Example\n---\n\n# Example\n\n## What it is\n\nA thing.\n\n## How to use\n\n${howToUse}\n\n## Examples\n\n- [One](https://example.com)\n`
@@ -205,5 +205,27 @@ describe('renderPeopleRows', () => {
     expect(rows).toHaveLength(2)
     expect(rows[0]).toContain('| A |')
     expect(rows[1]).toContain('| B |')
+  })
+})
+
+describe('literal command extraction regressions', () => {
+  test('shell comments that look like headings do not cut a command block', () => {
+    expect(
+      extractInstall(
+        '## How to use\n\n```bash\nbun add example\n## setup note\nbunx example init\n```\n\n## Examples\n'
+      )
+    ).toBe('bun add example\n## setup note\nbunx example init')
+  })
+
+  test('a How-to-use heading inside another fence is not a real section', () => {
+    expect(
+      extractInstall(
+        '```markdown\n## How to use\n```bash\nbun add pretend\n```\n```\n\n## How to use\nRead the guide.\n## Examples\n'
+      )
+    ).toBeNull()
+  })
+
+  test('unclosed shell blocks are not complete installation commands', () => {
+    expect(extractInstall('## How to use\n```bash\nbun add truncated')).toBeNull()
   })
 })

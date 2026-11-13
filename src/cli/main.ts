@@ -1,22 +1,16 @@
 #!/usr/bin/env bun
+import { existsSync } from 'node:fs'
 import { join } from 'node:path'
-import { inspectInstallation, readVersion } from './release-info'
-import {
-  buildContext,
-  DataError,
-  loadResources,
-  renderContext,
-  resolveResource,
-  searchResources,
-  UsageError,
-  type Resource,
-  type SearchOptions
-} from './design-lib'
+import { hasFlag, parseFlags, readValue } from './args'
+import { inspectInstallation, readVersion } from './doctor'
+import { buildContext, renderContext, resolveResource } from '../core/context'
+import { loadResources } from '../core/loader'
+import { DataError, PAYWALLS, UsageError, type Resource, type SearchOptions } from '../core/schema'
+import { searchResources } from '../core/search'
 
-const ROOT = join(import.meta.dir, '..')
-const PAYWALLS = ['free', 'freemium', 'paid', 'unknown'] as const
-
-import { hasFlag, parseFlags, readValue } from './cli-lib'
+const ROOT = existsSync(join(import.meta.dir, '..', 'package.json'))
+  ? join(import.meta.dir, '..')
+  : join(import.meta.dir, '..', '..')
 
 type Command =
   | { kind: 'help' }
@@ -153,7 +147,7 @@ async function writeSearch(
     return
   }
   if (format === 'card') {
-    const { renderResourceCard } = await import('./resource-card')
+    const { renderResourceCard } = await import('../core/card')
     const resourceMap = new Map(resources.map((r) => [r.id, r]))
     const cards = result.results.map((r) => {
       const full = resourceMap.get(r.id)!

@@ -2,7 +2,8 @@ import { createHash } from 'node:crypto'
 import { existsSync, lstatSync, readFileSync, readdirSync, realpathSync } from 'node:fs'
 import { isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { parse as parseYaml } from 'yaml'
-import { DataError, loadResources } from './design-lib'
+import { loadResources } from '../core/loader'
+import { DataError } from '../core/schema'
 
 export type InstallationInfo = {
   schema_version: 1

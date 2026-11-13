@@ -3,27 +3,20 @@
 //        bun run check -- --quiet (errors only)
 import { existsSync, readFileSync } from 'node:fs'
 import { dirname, join, normalize } from 'node:path'
-import {
-  FRONTMATTER_KEYS,
-  HEADINGS,
-  PAYWALLS,
-  ROOT,
-  loadCatalogue,
-  readDoc,
-  validatePeople,
-  validateResourceMeta
-} from './lib'
+import { loadCatalogue, readDoc } from '../src/core/loader'
+import { FRONTMATTER_KEYS, HEADINGS, PAYWALLS, validatePeople, validateResourceMeta } from '../src/core/schema'
 import { findBrokenRelativeMarkdownLinks } from './relative-markdown-links'
 
+const ROOT = join(import.meta.dir, '..')
 const quiet = process.argv.includes('--quiet')
-const { tools, people } = loadCatalogue()
+const { tools, people } = loadCatalogue(ROOT)
 const errors: string[] = []
 const warnings: string[] = []
 
 errors.push(...validatePeople(people, tools))
 
 for (const tool of tools) {
-  const doc = readDoc(tool.doc)
+  const doc = readDoc(ROOT, tool.doc)
   if (!doc) {
     errors.push(`${tool.doc}: missing`)
     continue

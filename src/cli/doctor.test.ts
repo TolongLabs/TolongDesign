@@ -4,7 +4,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, 
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
-const source = join(import.meta.dir, '..')
+const source = join(import.meta.dir, '..', '..')
 const fixtures: string[] = []
 const doc = 'catalogue/tools/fonts/fixture.md'
 const sha = (value: string) => createHash('sha256').update(value).digest('hex')
@@ -41,18 +41,13 @@ function fixture(released = false) {
       `---\nname: ${name}\nmetadata:\n  audience: consumer\n---\n# Fixture skill\n`
     )
   }
-  for (const file of [
-    'design.ts',
-    'design-lib.ts',
-    'release-info.ts',
-    'cli-lib.ts',
-    'catalogue-schema.ts',
-    'index-fields.ts',
-    'search-lib.ts',
-    'resource-card.ts'
-  ]) {
-    const path = join(source, 'scripts', file)
-    if (existsSync(path)) write(root, `scripts/${file}`, readFileSync(path, 'utf8'))
+  for (const file of ['schema.ts', 'fields.ts', 'card.ts', 'loader.ts', 'search.ts', 'context.ts']) {
+    const path = join(source, 'src', 'core', file)
+    if (existsSync(path)) write(root, `src/core/${file}`, readFileSync(path, 'utf8'))
+  }
+  for (const file of ['main.ts', 'args.ts', 'doctor.ts']) {
+    const path = join(source, 'src', 'cli', file)
+    if (existsSync(path)) write(root, `src/cli/${file}`, readFileSync(path, 'utf8'))
   }
   symlinkSync(join(source, 'node_modules'), join(root, 'node_modules'), 'dir')
   if (released) manifest(root)
@@ -78,7 +73,7 @@ function manifest(root: string, change: (value: Record<string, unknown>) => void
 }
 function run(root: string) {
   const result = Bun.spawnSync({
-    cmd: [process.execPath, join(root, 'scripts/design.ts'), 'doctor', '--json'],
+    cmd: [process.execPath, join(root, 'src/cli/main.ts'), 'doctor', '--json'],
     cwd: source,
     stdout: 'pipe',
     stderr: 'pipe'

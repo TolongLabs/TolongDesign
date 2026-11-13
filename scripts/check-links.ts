@@ -1,10 +1,12 @@
 // HTTP-check external doc links; --status reports lifecycle suggestions for primary resource URLs only.
 // Suggestions require content review and never edit source docs.
 import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { Glob } from 'bun'
-import { ROOT, loadCatalogue, readDoc } from './lib'
+import { loadCatalogue, readDoc } from '../src/core/loader'
 import { buildResourceStatusReport, checkLinksBatch, parseLinkOptions } from './link-check-lib'
 
+const ROOT = join(import.meta.dir, '..')
 let options: ReturnType<typeof parseLinkOptions>
 try {
   options = parseLinkOptions(process.argv.slice(2))
@@ -13,7 +15,7 @@ try {
   process.exit(2)
 }
 const { section, status: showStatus, json: jsonOutput } = options
-const { tools } = loadCatalogue()
+const { tools } = loadCatalogue(ROOT)
 const selected = tools.filter((tool) => section === undefined || tool.section_slug === section)
 const files = [...new Glob(`catalogue/tools/${section ?? '*'}/*.md`).scanSync(ROOT)].filter(
   (file) => !file.endsWith('README.md')
@@ -25,7 +27,7 @@ const record = (url: string, doc: string) => {
 }
 
 const resources = selected.map((tool) => {
-  const meta = readDoc(tool.doc)?.meta ?? {}
+  const meta = readDoc(ROOT, tool.doc)?.meta ?? {}
   const source_url = typeof meta.source_url === 'string' ? meta.source_url : tool.url
   record(source_url, tool.doc)
   return {
@@ -36,7 +38,7 @@ const resources = selected.map((tool) => {
   }
 })
 for (const file of files) {
-  const body = readDoc(file)?.body ?? readFileSync(`${ROOT}/${file}`, 'utf8')
+  const body = readDoc(ROOT, file)?.body ?? readFileSync(`${ROOT}/${file}`, 'utf8')
   for (const match of body.matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)) record(match[1], file)
 }
 

@@ -48,12 +48,6 @@ catalogue merely because the caller changed into another project.
 | `graphify-out/`                                     | Derived relationship/discovery aid. It is neither a runtime dependency nor proof of compatibility or factual correctness.                              |
 | `release-manifest.json`                             | Build-generated payload hashes and version/resource-count record for an installed snapshot.                                                            |
 
-The generator and runtime loader resolve a few fields differently: generation
-uses catalogue identity/source fields to construct index rows, while runtime
-resources can prefer nonempty frontmatter `name` and `source_url`. The
-maintenance validator requires matching registration where specified. Do not
-rely on intentional divergence between the sources.
-
 ## Resource and creator schema
 
 Stable resource identity is `section_slug/slug`; `doc` is a registered path

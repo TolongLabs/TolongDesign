@@ -2,9 +2,11 @@
 // Query the catalogue from the terminal. Uses loadResources/searchResources.
 // Usage: bun run find -- [text] [--section <slug>] [--paywall <value>] [--tag <name>] [--stack <name>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
 import { join } from 'node:path'
-import { DataError, loadResources, searchResources, UsageError, type Resource, type SearchOptions } from './design-lib'
-import { hasFlag, parseFlags, readValue } from './cli-lib'
-import { renderResourceCard } from './resource-card'
+import { hasFlag, parseFlags, readValue } from '../src/cli/args'
+import { renderResourceCard } from '../src/core/card'
+import { loadResources } from '../src/core/loader'
+import { DataError, UsageError, type Resource, type SearchOptions } from '../src/core/schema'
+import { searchResources } from '../src/core/search'
 
 const ROOT = join(import.meta.dir, '..')
 

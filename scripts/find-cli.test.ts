@@ -3,7 +3,7 @@ import { join } from 'node:path'
 
 const sourceRoot = join(import.meta.dir, '..')
 const findEntrypoint = join(import.meta.dir, 'find.ts')
-const designEntrypoint = join(import.meta.dir, 'design.ts')
+const designEntrypoint = join(sourceRoot, 'src', 'cli', 'main.ts')
 
 function decode(bytes: Uint8Array) {
   return new TextDecoder().decode(bytes)
