@@ -77,7 +77,8 @@ night. It adds four things the original does not have:
   path as the biped, with hip and shoulder heights solved separately.
 - **Surfaces and export.** The same scene code renders live into the DOM or
   headless in Bun. `toSVG()` bakes ink and paper colours, and
-  `bun run line-art:previews` encodes GIFs through ffmpeg with no browser.
+  `bun run --cwd collections/line-art previews` encodes GIFs through ffmpeg with
+  no browser.
 
 ![Day to night on the demo street](../../../collections/line-art/media/street.gif)
 
@@ -96,9 +97,9 @@ Checked 2026-11-12.
 1. Run the live demo and render the previews:
 
    ```bash
-   bun run line-art:demo        # http://localhost:3000
-   bun run line-art:previews    # media/*.gif and media/street-noon.svg
-   bun test collections/line-art
+   bun run --cwd collections/line-art demo      # http://localhost:3000
+   bun run --cwd collections/line-art previews  # media/*.gif and media/street-noon.svg
+   bun run --cwd collections/line-art test
    ```
 
 2. Copy `collections/line-art/src/` into the target project (no dependencies),

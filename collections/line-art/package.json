@@ -1,0 +1,13 @@
+{
+  "name": "@tolong/line-art",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TolongLabs animated line-art library: ink-on-paper SVG characters, gaits and scenes.",
+  "scripts": {
+    "demo": "bun demo/index.html",
+    "previews": "bun scripts/previews.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "bun test"
+  }
+}

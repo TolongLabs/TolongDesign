@@ -16592,7 +16592,7 @@
    "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-11-12",
-   "install": "   bun run line-art:demo        # http://localhost:3000\n   bun run line-art:previews    # media/*.gif and media/street-noon.svg\n   bun test collections/line-art",
+   "install": "   bun run --cwd collections/line-art demo      # http://localhost:3000\n   bun run --cwd collections/line-art previews  # media/*.gif and media/street-noon.svg\n   bun run --cwd collections/line-art test",
    "doc": "catalogue/tools/motion/tolong-line-art.md"
   },
   {
@@ -16682,7 +16682,7 @@
    "status": "active",
    "agent_friendly": true,
    "last_verified": "2026-11-13",
-   "install": "bun run agent-video:install\nbun run agent-video:studio",
+   "install": "bun install --cwd collections/agent-video\nbun run --cwd collections/agent-video demo",
    "doc": "catalogue/tools/video-capture/tolong-agent-video.md"
   }
  ]

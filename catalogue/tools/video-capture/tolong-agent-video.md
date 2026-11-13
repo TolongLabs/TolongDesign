@@ -86,20 +86,20 @@ films: acts, cut grammar, accents and motion rules.
 1. Install the kit once, then open the studio:
 
 ```bash
-bun run agent-video:install
-bun run agent-video:studio
+bun install --cwd collections/agent-video
+bun run --cwd collections/agent-video demo
 ```
 
 2. Copy `collections/agent-video/src/templates/launch-film.ts`, change `id`,
    `accent`, `brand` and the copy in each beat's `props`, and add it to
    `src/templates/index.ts`.
-3. Run `bun test collections/agent-video`; it validates beat ids, frame counts,
-   scene kinds, copy length and film length.
+3. Run `bun run --cwd collections/agent-video test`; it validates beat ids,
+   frame counts, scene kinds, copy length and film length.
 4. Render a contact sheet, check it, then render the film:
 
 ```bash
-bun run agent-video:previews -- --only launch-film
-bun run agent-video:render -- launch-film out/launch-film.mp4
+bun run --cwd collections/agent-video previews -- --only launch-film
+bun run --cwd collections/agent-video render -- launch-film out/launch-film.mp4
 ```
 
 5. For a beat the kit lacks, read the matching teardown in `knowledge/` and
@@ -131,7 +131,7 @@ bun run agent-video:render -- launch-film out/launch-film.mp4
 - Scenes must be pure functions of the frame: no state, no effects, no
   `Math.random` (use `seeded`).
 - The root `bun test` runs the collection's pure tests without its install;
-  rendering needs `bun run agent-video:install`.
+  rendering needs `bun install --cwd collections/agent-video`.
 - Canvas 1920x1080 at 30 fps; body text 40 px or more.
 
 ## Alternatives in this repo
