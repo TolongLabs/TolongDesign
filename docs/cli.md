@@ -92,6 +92,44 @@ packaged skills or `tolongdesign skill show <name>` (for example,
 reference files from an installed release. Skills are not silently installed
 into a target repo or a global harness.
 
+## MCP server
+
+`tolongdesign mcp` starts a local, read-only MCP stdio server from the same
+bundled binary. It exposes:
+
+- **Tools** (`readOnlyHint: true`): `search` (query text plus all CLI filters
+  including `kind`), `show` (one resource ID), and `context` (ordered IDs and an
+  optional `brief`), each returning the same JSON as `--json`.
+- **Prompts**: one prompt per consumer skill (`build-3d-model`,
+  `design-project`, `pick-design-stack`).
+- **Resources**: `tolongdesign://tools/<section>/<slug>` and
+  `tolongdesign://research/<slug>` returning raw Markdown.
+
+**Claude Code:**
+
+```bash
+claude mcp add tolongdesign -- tolongdesign mcp
+```
+
+Or in a project's `.mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "tolongdesign": {
+      "command": "tolongdesign",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+**Codex:**
+
+```bash
+codex mcp add tolongdesign -- tolongdesign mcp
+```
+
 ## Checkout mode
 
 Maintainers can continue to use the authenticated source checkout:

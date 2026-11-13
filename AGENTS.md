@@ -81,6 +81,7 @@ bun run design -- show <id> [--json] # tool, research/<slug> or skill/<name>
 bun run design -- context <id...> --brief "<text>" [--json]
 bun run design -- skill list [--json]
 bun run design -- skill show <name> [--json]
+bun run design -- mcp # start the read-only MCP stdio server
 bun run links [-- <section>] # HTTP-check external links in docs (403/429 = bot-blocked, ignore)
 bun run links -- --status --json # suggest resource status from primary URLs; never edits docs
 bun run format              # prettier
