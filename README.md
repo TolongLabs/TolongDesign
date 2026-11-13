@@ -26,8 +26,9 @@ bun run design -- context motion/gsap --brief "Product landing page" --json
 3. **Make and verify** the work in your target project—not in this collection.
 
 Prefer an installed CLI? Follow [CLI installation](docs/cli.md). Releases are
-snapshots of `main` at their tag; `v0.2.0` includes ranked search, cards and the
-collections. Use current `main` for anything merged after it.
+snapshots of `main` at their tag; `v0.3.0` is the role-based layout (catalogue,
+skills, collections, engine) with one search command. Use current `main` for
+anything merged after it.
 
 ## Choose your starting point
 
