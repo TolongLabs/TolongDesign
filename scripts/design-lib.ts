@@ -116,11 +116,11 @@ function isWithin(parent: string, child: string): boolean {
 
 function parseCatalogue(value: unknown): CatalogueEntry[] {
   if (!isRecord(value) || !Array.isArray(value.tools)) {
-    throw new DataError('data/catalogue.json: expected an object with a tools array')
+    throw new DataError('catalogue/catalogue.json: expected an object with a tools array')
   }
 
   return value.tools.map((tool, index) => {
-    const location = `data/catalogue.json tools[${index}]`
+    const location = `catalogue/catalogue.json tools[${index}]`
     if (!isRecord(tool)) throw new DataError(`${location}: expected an object`)
 
     return {
@@ -138,24 +138,24 @@ function parseCatalogue(value: unknown): CatalogueEntry[] {
 
 function safeDocPath(root: string, doc: string): string {
   if (doc.includes('\\') || /[\u0000-\u001f\u007f]/.test(doc) || isAbsolute(doc) || /^[A-Za-z]:/.test(doc)) {
-    throw new DataError('catalogue document path must be relative to docs/design')
+    throw new DataError('catalogue document path must be relative to catalogue/tools')
   }
 
   const parts = doc.split('/')
   if (
     parts.length < 3 ||
-    parts[0] !== 'docs' ||
-    parts[1] !== 'design' ||
+    parts[0] !== 'catalogue' ||
+    parts[1] !== 'tools' ||
     parts.slice(2).some((part) => part === '' || part === '.' || part === '..')
   ) {
-    throw new DataError('catalogue document path must be below docs/design')
+    throw new DataError('catalogue document path must be below catalogue/tools')
   }
 
   const label = JSON.stringify(doc)
-  const designRoot = resolve(root, 'docs', 'design')
+  const designRoot = resolve(root, 'catalogue', 'tools')
   const candidate = resolve(root, doc)
   if (!isWithin(designRoot, candidate)) {
-    throw new DataError(`${label}: catalogue document path must be below docs/design`)
+    throw new DataError(`${label}: catalogue document path must be below catalogue/tools`)
   }
 
   let realDesignRoot: string
@@ -168,7 +168,7 @@ function safeDocPath(root: string, doc: string): string {
   }
 
   if (realDesignRoot !== designRoot || !isWithin(realDesignRoot, realDocument)) {
-    throw new DataError(`${label}: registered document resolves outside docs/design`)
+    throw new DataError(`${label}: registered document resolves outside catalogue/tools`)
   }
 
   return realDocument
@@ -242,31 +242,31 @@ export function loadResources(root: string): Resource[] {
   let catalogueBytes: Uint8Array
   try {
     realRoot = realpathSync(resolve(root))
-    const cataloguePath = realpathSync(resolve(realRoot, 'data', 'catalogue.json'))
+    const cataloguePath = realpathSync(resolve(realRoot, 'catalogue', 'catalogue.json'))
     if (!isWithin(realRoot, cataloguePath))
-      throw new DataError('data/catalogue.json resolves outside the catalogue root')
+      throw new DataError('catalogue/catalogue.json resolves outside the catalogue root')
     catalogueBytes = readFileSync(cataloguePath)
   } catch (error) {
     if (error instanceof DataError) throw error
-    throw new DataError('data/catalogue.json is missing or cannot be read')
+    throw new DataError('catalogue/catalogue.json is missing or cannot be read')
   }
 
   let parsedCatalogue: unknown
   try {
     parsedCatalogue = JSON.parse(new TextDecoder().decode(catalogueBytes))
   } catch {
-    throw new DataError('data/catalogue.json is not valid JSON')
+    throw new DataError('catalogue/catalogue.json is not valid JSON')
   }
 
   const entries = parseCatalogue(parsedCatalogue)
-  const designRoot = resolve(realRoot, 'docs', 'design')
+  const designRoot = resolve(realRoot, 'catalogue', 'tools')
   try {
     if (realpathSync(designRoot) !== designRoot) {
-      throw new DataError('docs/design must resolve within the catalogue root')
+      throw new DataError('catalogue/tools must resolve within the catalogue root')
     }
   } catch (error) {
     if (error instanceof DataError) throw error
-    throw new DataError('docs/design is missing or cannot be resolved')
+    throw new DataError('catalogue/tools is missing or cannot be resolved')
   }
 
   return entries.map((entry) => {

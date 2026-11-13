@@ -17,41 +17,41 @@ what they cost, and get them producing real output.
 
 ## What is here
 
-| Path                                               | What it is                                                                    |
-| -------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [PLAYBOOK.md](./PLAYBOOK.md)                       | How to go from a brief to a design stack and a first page                     |
-| [METADATA.md](./METADATA.md)                       | Execution modes, output surfaces, availability and creator evidence           |
-| [design/README.md](./design/README.md)             | The catalogue: 18 sections, counts, paywall breakdown                         |
-| `design/<section>/README.md`                       | One table per section: every tool with paywall, open source, best for         |
-| `design/<section>/<tool>.md`                       | One doc per tool: source, paywall, pricing, how to use, examples, agent notes |
-| [design/people.md](./design/people.md)             | 132 design engineers worth following                                          |
-| [`../data/index.json`](../data/index.json)         | Every doc's frontmatter as JSON, for scripts and agents                       |
-| [`../data/catalogue.json`](../data/catalogue.json) | Designeer scrape plus hand-added tools (what exists)                          |
-| [`../collections/`](../collections/README.md)      | TolongLabs-owned design code (line art), each with a catalogue doc            |
-| [research/](./research/)                           | Teardowns and assessments behind catalogue decisions                          |
+| Path                                                         | What it is                                                                    |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| [PLAYBOOK.md](./PLAYBOOK.md)                                 | How to go from a brief to a design stack and a first page                     |
+| [SCHEMA.md](../catalogue/SCHEMA.md)                          | Execution modes, output surfaces, availability and creator evidence           |
+| [catalogue/README.md](../catalogue/README.md)                | The catalogue: 18 sections, counts, paywall breakdown                         |
+| `catalogue/tools/<section>/README.md`                        | One table per section: every tool with paywall, open source, best for         |
+| `catalogue/tools/<section>/<tool>.md`                        | One doc per tool: source, paywall, pricing, how to use, examples, agent notes |
+| [catalogue/people.md](../catalogue/people.md)                | 132 design engineers worth following                                          |
+| [`../catalogue/index.json`](../catalogue/index.json)         | Every doc's frontmatter as JSON, for scripts and agents                       |
+| [`../catalogue/catalogue.json`](../catalogue/catalogue.json) | Designeer scrape plus hand-added tools (what exists)                          |
+| [`../collections/`](../collections/README.md)                | TolongLabs-owned design code (line art), each with a catalogue doc            |
+| [research/](../catalogue/research/)                          | Teardowns and assessments behind catalogue decisions                          |
 
 ## Sections
 
-| Section                                                       | Use it for                                              |
-| ------------------------------------------------------------- | ------------------------------------------------------- |
-| [Design Galleries](./design/design-galleries/README.md)       | Inspiration: real sites, landing pages, flows, sections |
-| [Component Libraries](./design/component-libraries/README.md) | Production UI primitives, blocks and kits               |
-| [Motion](./design/motion/README.md)                           | Animation libraries, springs, timing                    |
-| [Interface Design](./design/interface-design/README.md)       | Design canvases, tokens, layout systems                 |
-| [Type](./design/type/README.md)                               | Typefaces, pairings, font tooling                       |
-| [Color](./design/color/README.md)                             | Palettes, contrast, color math                          |
-| [Icons](./design/icons/README.md)                             | Icon families                                           |
-| [3D](./design/3d/README.md)                                   | 3D modeling and WebGL engines                           |
-| [Shaders](./design/shaders/README.md)                         | Fragment shaders, noise, canvas effects                 |
-| [Comics](./design/comics/README.md)                           | Manga panels, balloons, tones, poses, backgrounds       |
-| [Development](./design/development/README.md)                 | Editors, runtimes, local tooling                        |
-| [Agents & MCP](./design/agents-mcp/README.md)                 | Coding agents, MCP servers, agent specs                 |
-| [Utilities](./design/utilities/README.md)                     | Frontend developer utilities                            |
-| [Desktop](./design/desktop/README.md)                         | Desktop productivity apps                               |
-| [Video & Capture](./design/video-capture/README.md)           | Screen recording and demo tools                         |
-| [Whiteboard](./design/whiteboard/README.md)                   | Infinite canvases for wireframes and architecture       |
-| [Deploy](./design/deploy/README.md)                           | Hosting and edge platforms                              |
-| [Reading](./design/reading/README.md)                         | Books, essays and tutorials on design engineering       |
+| Section                                                                 | Use it for                                              |
+| ----------------------------------------------------------------------- | ------------------------------------------------------- |
+| [Design Galleries](../catalogue/tools/design-galleries/README.md)       | Inspiration: real sites, landing pages, flows, sections |
+| [Component Libraries](../catalogue/tools/component-libraries/README.md) | Production UI primitives, blocks and kits               |
+| [Motion](../catalogue/tools/motion/README.md)                           | Animation libraries, springs, timing                    |
+| [Interface Design](../catalogue/tools/interface-design/README.md)       | Design canvases, tokens, layout systems                 |
+| [Type](../catalogue/tools/type/README.md)                               | Typefaces, pairings, font tooling                       |
+| [Color](../catalogue/tools/color/README.md)                             | Palettes, contrast, color math                          |
+| [Icons](../catalogue/tools/icons/README.md)                             | Icon families                                           |
+| [3D](../catalogue/tools/3d/README.md)                                   | 3D modeling and WebGL engines                           |
+| [Shaders](../catalogue/tools/shaders/README.md)                         | Fragment shaders, noise, canvas effects                 |
+| [Comics](../catalogue/tools/comics/README.md)                           | Manga panels, balloons, tones, poses, backgrounds       |
+| [Development](../catalogue/tools/development/README.md)                 | Editors, runtimes, local tooling                        |
+| [Agents & MCP](../catalogue/tools/agents-mcp/README.md)                 | Coding agents, MCP servers, agent specs                 |
+| [Utilities](../catalogue/tools/utilities/README.md)                     | Frontend developer utilities                            |
+| [Desktop](../catalogue/tools/desktop/README.md)                         | Desktop productivity apps                               |
+| [Video & Capture](../catalogue/tools/video-capture/README.md)           | Screen recording and demo tools                         |
+| [Whiteboard](../catalogue/tools/whiteboard/README.md)                   | Infinite canvases for wireframes and architecture       |
+| [Deploy](../catalogue/tools/deploy/README.md)                           | Hosting and edge platforms                              |
+| [Reading](../catalogue/tools/reading/README.md)                         | Books, essays and tutorials on design engineering       |
 
 ## Designing a project
 
@@ -87,13 +87,12 @@ bun run find -- --agent --oss            # usable directly by a coding agent, op
 bun run find -- --paywall paid --json    # everything that costs money, as JSON
 ```
 
-Agents can also read `data/index.json` directly or query the knowledge graph in
-`graphify-out/` (`/graphify query "<question>"`).
+Agents can also read `catalogue/index.json` directly or query the knowledge
+graph in `graphify-out/` (`/graphify query "<question>"`).
 
 ## Reading a tool doc
 
-Every tool doc follows
-[the template](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/templates/tool-doc.md):
+Every tool doc follows [the template](../catalogue/TEMPLATE.md):
 
 - **Frontmatter** — `paywall` (`free` | `freemium` | `paid` | `unknown`),
   `pricing_summary`, `open_source`, `license`, `stack`, `best_for`,

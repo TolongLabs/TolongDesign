@@ -6,7 +6,7 @@ import { join } from 'node:path'
 
 const source = join(import.meta.dir, '..')
 const fixtures: string[] = []
-const doc = 'docs/design/fonts/fixture.md'
+const doc = 'catalogue/tools/fonts/fixture.md'
 const sha = (value: string) => createHash('sha256').update(value).digest('hex')
 const write = (root: string, path: string, text: string) => {
   mkdirSync(join(root, path, '..'), { recursive: true })
@@ -18,7 +18,7 @@ function fixture(released = false) {
   write(root, 'package.json', JSON.stringify({ name: 'tolong-design', version: '0.1.0', private: true }))
   write(
     root,
-    'data/catalogue.json',
+    'catalogue/catalogue.json',
     JSON.stringify({
       tools: [
         {
@@ -56,7 +56,7 @@ function fixture(released = false) {
 function manifest(root: string, change: (value: Record<string, unknown>) => void = () => {}) {
   const paths = [
     'package.json',
-    'data/catalogue.json',
+    'catalogue/catalogue.json',
     doc,
     '.agents/skills/design-project/SKILL.md',
     '.claude/skills/design-project/SKILL.md'

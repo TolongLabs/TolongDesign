@@ -82,7 +82,7 @@
       "dot": "cyan",
       "title": "Source authority",
       "items": [
-        "Catalogue registration selects Markdown files; data/index.json is not the runtime search index.",
+        "Catalogue registration selects Markdown files; catalogue/index.json is not the runtime search index.",
         "Filters run before scoring, and the ranker performs no filesystem I/O."
       ]
     },

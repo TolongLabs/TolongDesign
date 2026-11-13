@@ -63,8 +63,8 @@ tolongdesign search components --mode registry,package --surface web-ui --stack 
 `--mode` and `--surface` accept comma-separated OR values; different filters
 combine with AND. `--stack framer-motion` accepts the canonical `motion` alias.
 Unreachable resources are hidden by default; add `--include-unreachable` for a
-repair sweep. [Resource metadata](./METADATA.md) defines the allowed values and
-their limits.
+repair sweep. [Resource metadata](../catalogue/SCHEMA.md) defines the allowed
+values and their limits.
 
 `--format card` returns a short name/ID, execution mode, install command or URL,
 one intended use and doc path. Long setup blocks point to the full doc instead

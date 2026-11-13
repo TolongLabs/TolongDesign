@@ -71,7 +71,7 @@ export const HEADINGS = [
 ] as const
 
 export function loadCatalogue(): Catalogue {
-  return JSON.parse(readFileSync(join(ROOT, 'data/catalogue.json'), 'utf8'))
+  return JSON.parse(readFileSync(join(ROOT, 'catalogue/catalogue.json'), 'utf8'))
 }
 
 export type Doc = { path: string; meta: Record<string, unknown>; body: string }

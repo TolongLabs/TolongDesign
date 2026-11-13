@@ -53,17 +53,11 @@ function runRequired(cmd: string[], cwd?: string, env?: Record<string, string>) 
 
 function isAllowedFile(path: string): boolean {
   if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
-  if (['data/catalogue.json', 'data/index.json'].includes(path)) return true
+  if (['catalogue/catalogue.json', 'catalogue/index.json'].includes(path)) return true
   if (
-    [
-      'docs/README.md',
-      'docs/PLAYBOOK.md',
-      'docs/WORKFLOW.md',
-      'docs/CLI.md',
-      'docs/METADATA.md',
-      'docs/PRD.md',
-      'docs/TRD.md'
-    ].includes(path)
+    ['docs/README.md', 'docs/PLAYBOOK.md', 'docs/WORKFLOW.md', 'docs/CLI.md', 'docs/PRD.md', 'docs/TRD.md'].includes(
+      path
+    )
   )
     return true
   if (['docs/diagrams/README.md', 'docs/diagrams/verification.json'].includes(path)) return true
@@ -73,9 +67,8 @@ function isAllowedFile(path: string): boolean {
     )
   )
     return true
-  if (path.startsWith('docs/design/') && path.endsWith('.md')) return true
+  if (path.startsWith('catalogue/') && path.endsWith('.md')) return true
   if (path.startsWith('docs/scenarios/') && path.endsWith('.md')) return true
-  if (path.startsWith('docs/research/') && path.endsWith('.md')) return true
   if (['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'].includes(path)) return true
   return path.startsWith('licenses/')
 }
@@ -130,7 +123,15 @@ function inspectArchive(archivePath: string): ArchiveEntry[] {
   const files = entries.filter((entry) => entry.kind === 'file').map((entry) => entry.filePath)
   if (!files.includes('release-manifest.json')) fail('archive has no release-manifest.json')
   if (!files.includes('package.json')) fail('archive has no package.json')
-  if (!files.includes('data/catalogue.json')) fail('archive has no data/catalogue.json')
+  if (!files.includes('catalogue/catalogue.json')) fail('archive has no catalogue/catalogue.json')
+  for (const required of [
+    'catalogue/README.md',
+    'catalogue/people.md',
+    'catalogue/SCHEMA.md',
+    'catalogue/TEMPLATE.md'
+  ]) {
+    if (!files.includes(required)) fail(`archive has no ${required}`)
+  }
   if (!files.some((path) => path.startsWith('licenses/'))) fail('archive has no bundled dependency licence')
 
   for (const entry of entries) {
@@ -166,7 +167,7 @@ function assertWithin(parent: string, child: string, label: string): void {
 function verifyExtractedPackage(packageRoot: string, entries: ArchiveEntry[]) {
   const packageMetadataPath = join(packageRoot, 'package.json')
   const manifestPath = join(packageRoot, 'release-manifest.json')
-  const cataloguePath = join(packageRoot, 'data', 'catalogue.json')
+  const cataloguePath = join(packageRoot, 'catalogue', 'catalogue.json')
 
   const packageMetadata = JSON.parse(readFileSync(packageMetadataPath, 'utf8')) as RecordValue
   const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as RecordValue
@@ -388,8 +389,8 @@ function runSmoke(archivePath: string) {
     }
 
     const expectedDocs = [
-      { slug: 'gsap', path: 'docs/design/motion/gsap.md' },
-      { slug: 'saaspo', path: 'docs/design/design-galleries/saaspo.md' }
+      { slug: 'gsap', path: 'catalogue/tools/motion/gsap.md' },
+      { slug: 'saaspo', path: 'catalogue/tools/design-galleries/saaspo.md' }
     ]
     if (contextJson.resources.length !== expectedDocs.length)
       fail('context did not return both complete requested documents')

@@ -96,7 +96,7 @@ const tools: CatalogueTool[] = [
     section_slug: 'utilities',
     slug: 'sonner',
     designeer_url: 'https://designeer.xyz/utilities',
-    doc: 'docs/design/utilities/sonner.md'
+    doc: 'catalogue/tools/utilities/sonner.md'
   },
   {
     name: 'Vaul',
@@ -106,7 +106,7 @@ const tools: CatalogueTool[] = [
     section_slug: 'component-libraries',
     slug: 'vaul',
     designeer_url: 'https://designeer.xyz/components',
-    doc: 'docs/design/component-libraries/vaul.md'
+    doc: 'catalogue/tools/component-libraries/vaul.md'
   }
 ]
 
@@ -147,8 +147,8 @@ describe('renderPeopleRows', () => {
       ],
       tools
     )
-    expect(row).toContain('[Sonner](./utilities/sonner.md)')
-    expect(row).toContain('[Vaul](./component-libraries/vaul.md)')
+    expect(row).toContain('[Sonner](./tools/utilities/sonner.md)')
+    expect(row).toContain('[Vaul](./tools/component-libraries/vaul.md)')
     expect(row).toContain('[github.com](https://github.com/emilkowalski/sonner)')
     expect(columns(row)).toHaveLength(5)
   })
@@ -168,7 +168,7 @@ describe('renderPeopleRows', () => {
 
   test('links a created tool even when its evidence entry is missing', () => {
     const [row] = renderPeopleRows([person({ created_tools: ['utilities/sonner'] })], tools)
-    expect(columns(row)[4]).toBe('[Sonner](./utilities/sonner.md)')
+    expect(columns(row)[4]).toBe('[Sonner](./tools/utilities/sonner.md)')
   })
 
   test('never turns a hostile credit URL into a link', () => {
@@ -183,7 +183,7 @@ describe('renderPeopleRows', () => {
       ],
       tools
     )
-    expect(row).toContain('[Sonner](./utilities/sonner.md)')
+    expect(row).toContain('[Sonner](./tools/utilities/sonner.md)')
     expect(row).not.toContain('javascript:')
     expect(row).not.toContain('alert(1)')
   })

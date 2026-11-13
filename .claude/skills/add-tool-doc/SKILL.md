@@ -9,12 +9,12 @@ description:
 
 ## Add
 
-1. Append an entry to `data/catalogue.json` `tools[]`: `name`, `url`,
+1. Append an entry to `catalogue/catalogue.json` `tools[]`: `name`, `url`,
    `description` (one line), `section` (an existing section name),
    `section_slug`, `slug` (lowercase-hyphen, unique in the section),
    `designeer_url` (or the official URL if not on Designeer), and `doc` =
-   `docs/design/<section_slug>/<slug>.md`.
-2. Copy [templates/tool-doc.md](../../../templates/tool-doc.md) to the `doc`
+   `catalogue/tools/<section_slug>/<slug>.md`.
+2. Copy [catalogue/TEMPLATE.md](../../../catalogue/TEMPLATE.md) to the `doc`
    path and fill every section from the **official site** — pricing page, docs,
    GitHub, showcase. Never invent URLs, prices or install commands. "How to use"
    and "Agent notes" must let an agent produce what the tool advertises: for
@@ -31,9 +31,9 @@ description:
 
 ## Common check failures
 
-| Error                      | Fix                                                        |
-| -------------------------- | ---------------------------------------------------------- |
-| `frontmatter missing "x"`  | Add the key; order must match the template                 |
-| `paywall "..." not in ...` | Use exactly `free`, `freemium`, `paid` or `unknown`        |
-| `missing "## Heading"`     | Restore the heading text exactly as in the template        |
-| `broken link ../x/y.md`    | Link only paths that appear in `data/catalogue.json` `doc` |
+| Error                      | Fix                                                             |
+| -------------------------- | --------------------------------------------------------------- |
+| `frontmatter missing "x"`  | Add the key; order must match the template                      |
+| `paywall "..." not in ...` | Use exactly `free`, `freemium`, `paid` or `unknown`             |
+| `missing "## Heading"`     | Restore the heading text exactly as in the template             |
+| `broken link ../x/y.md`    | Link only paths that appear in `catalogue/catalogue.json` `doc` |

@@ -68,7 +68,8 @@ inspection. If access is blocked, ask for supplied references or mark that stage
 incomplete; do not invent observations. For a 3D reference, check that its scene
 actually rendered: a successful screenshot can contain controls around a blank
 canvas when graphics support is unavailable. See the
-[REA/ICQR study](./research/tree-icqr-study.md) for an observed example.
+[REA/ICQR study](../catalogue/research/tree-icqr-study.md) for an observed
+example.
 
 For each selected reference, record URL, observed layout/type/color/motion
 principles, evidence, and what to avoid. Combine principles into original work.
@@ -84,7 +85,7 @@ Record type, palette, spacing, composition, and the role of each showpiece. Use
 the project's approval process for the direction and mockups.
 
 When image generation is available and approved, optionally pair the task with
-[Image-to-code skill](./design/agents-mcp/image-to-code-skill.md). Its
+[Image-to-code skill](../catalogue/tools/agents-mcp/image-to-code-skill.md). Its
 image-first pipeline creates references, analyzes them, and translates them into
 frontend code. It does not retrieve gallery screenshots or replace production
 checks. When generation is unavailable, use approved supplied references or an

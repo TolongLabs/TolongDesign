@@ -36,7 +36,6 @@ const TOP_LEVEL_DOCS = [
   'docs/PLAYBOOK.md',
   'docs/WORKFLOW.md',
   'docs/CLI.md',
-  'docs/METADATA.md',
   'docs/PRD.md',
   'docs/TRD.md'
 ] as const
@@ -48,7 +47,7 @@ const DIAGRAM_FILES = [
   )
 ]
 const SKILL_FILES = ['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'] as const
-const MARKDOWN_ROOTS = ['docs/design', 'docs/scenarios', 'docs/research'] as const
+const MARKDOWN_ROOTS = ['catalogue', 'docs/scenarios'] as const
 
 type SourceFile = {
   relativePath: string
@@ -284,7 +283,7 @@ function assertOutputPathIsSeparate(root: string, outputPath: string): void {
   }
 
   const protectedPaths = [
-    'data',
+    'catalogue',
     'docs',
     'scripts',
     'node_modules',
@@ -505,7 +504,12 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
   const sourceRoot = sourceRootPath(root)
   const releaseMetadata = readReleaseMetadata(sourceRoot)
 
-  for (const path of ['scripts/design.ts', 'scripts/design-lib.ts', 'data/catalogue.json', 'data/index.json']) {
+  for (const path of [
+    'scripts/design.ts',
+    'scripts/design-lib.ts',
+    'catalogue/catalogue.json',
+    'catalogue/index.json'
+  ]) {
     inspectSourcePath(sourceRoot, path, 'file')
   }
   for (const path of [...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) inspectSourcePath(sourceRoot, path, 'file')
@@ -541,7 +545,7 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
     packageDir = mkdtempSync(join(outputDirectory, `.tolong-design-${releaseMetadata.version}-stage-`))
     writeStagedPackageJson(packageDir, releaseMetadata.version)
     copySourceFile(sourceRoot, packageDir, 'docs/CLI.md', 'README.md')
-    for (const file of ['data/catalogue.json', 'data/index.json', ...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) {
+    for (const file of ['catalogue/catalogue.json', 'catalogue/index.json', ...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) {
       copySourceFile(sourceRoot, packageDir, file)
     }
     copyMarkdownTree(sourceRoot, packageDir, markdownFiles)

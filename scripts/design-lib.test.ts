@@ -53,7 +53,7 @@ function sectionName(sectionSlug: string) {
 }
 
 function defaultDocPath(tool: FixtureTool) {
-  return `docs/design/${tool.sectionSlug}/${tool.slug}.md`
+  return `catalogue/tools/${tool.sectionSlug}/${tool.slug}.md`
 }
 
 function fixtureMetadata(tool: FixtureTool) {
@@ -99,7 +99,7 @@ function markdownFor(tool: FixtureTool) {
 
 function createFixtureRoot(tools: FixtureTool[], staleIndex?: unknown): FixtureRoot {
   const root = tempRoot('tolong-design-lib-')
-  mkdirSync(join(root, 'data'), { recursive: true })
+  mkdirSync(join(root, 'catalogue'), { recursive: true })
 
   const catalogueTools = tools.map((tool) => {
     const doc = tool.docPath ?? defaultDocPath(tool)
@@ -123,13 +123,13 @@ function createFixtureRoot(tools: FixtureTool[], staleIndex?: unknown): FixtureR
   })
 
   writeFileSync(
-    join(root, 'data/catalogue.json'),
+    join(root, 'catalogue/catalogue.json'),
     JSON.stringify({ source: 'https://designeer.xyz', scraped: '2026-10-10', tools: catalogueTools }),
     'utf8'
   )
 
   if (staleIndex !== undefined) {
-    writeFileSync(join(root, 'data/index.json'), JSON.stringify(staleIndex), 'utf8')
+    writeFileSync(join(root, 'catalogue/index.json'), JSON.stringify(staleIndex), 'utf8')
   }
 
   return {
@@ -307,7 +307,7 @@ describe('design resource loading and search', () => {
             name: 'Old cached entry',
             slug: 'current-entry',
             section_slug: 'motion',
-            doc: 'docs/design/motion/current-entry.md',
+            doc: 'catalogue/tools/motion/current-entry.md',
             cached_text: 'retired_cached_term'
           }
         ]
@@ -521,12 +521,12 @@ describe('context verification and licensing warnings', () => {
 })
 
 describe('registered document path safety', () => {
-  test('rejects catalogue paths that traverse outside docs/design', () => {
+  test('rejects catalogue paths that traverse outside catalogue/tools', () => {
     const tool: FixtureTool = {
       name: 'Traversal Entry',
       slug: 'traversal-entry',
       sectionSlug: 'motion',
-      docPath: 'docs/design/../../outside.md',
+      docPath: 'catalogue/tools/../../outside.md',
       writeDoc: false
     }
     const fixture = createFixtureRoot([tool])

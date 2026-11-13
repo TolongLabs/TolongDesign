@@ -78,102 +78,102 @@ describe('validateResourceMeta', () => {
   }
 
   test('passes for valid metadata', () => {
-    const errors = validateResourceMeta(baseValidMeta, 'docs/design/test.md')
+    const errors = validateResourceMeta(baseValidMeta, 'catalogue/tools/test.md')
     expect(errors).toEqual([])
   })
 
   test('fails for missing required metadata keys', () => {
-    const errors = validateResourceMeta({}, 'docs/design/test.md')
+    const errors = validateResourceMeta({}, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('missing required "execution_mode"'))).toBe(true)
     expect(errors.some((e) => e.includes('missing required "surface"'))).toBe(true)
     expect(errors.some((e) => e.includes('missing required "status"'))).toBe(true)
   })
 
   test('fails for invalid execution mode', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, execution_mode: 'invalid-mode' }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, execution_mode: 'invalid-mode' }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('invalid execution_mode "invalid-mode"'))).toBe(true)
   })
 
   test('fails for non-string execution mode', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, execution_mode: 123 }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, execution_mode: 123 }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('execution_mode must be a string'))).toBe(true)
   })
 
   test('fails for invalid status', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, status: 'offline' }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, status: 'offline' }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('invalid status "offline"'))).toBe(true)
   })
 
   test('fails for empty or non-array surface', () => {
-    const emptyErrors = validateResourceMeta({ ...baseValidMeta, surface: [] }, 'docs/design/test.md')
+    const emptyErrors = validateResourceMeta({ ...baseValidMeta, surface: [] }, 'catalogue/tools/test.md')
     expect(emptyErrors.some((e) => e.includes('"surface" must be a non-empty list'))).toBe(true)
 
-    const nonArrayErrors = validateResourceMeta({ ...baseValidMeta, surface: 'web-ui' }, 'docs/design/test.md')
+    const nonArrayErrors = validateResourceMeta({ ...baseValidMeta, surface: 'web-ui' }, 'catalogue/tools/test.md')
     expect(nonArrayErrors.some((e) => e.includes('"surface" must be a non-empty list'))).toBe(true)
   })
 
   test('fails for non-string or invalid surface members', () => {
-    const nonStringErrors = validateResourceMeta({ ...baseValidMeta, surface: [123] }, 'docs/design/test.md')
+    const nonStringErrors = validateResourceMeta({ ...baseValidMeta, surface: [123] }, 'catalogue/tools/test.md')
     expect(nonStringErrors.some((e) => e.includes('"surface" elements must be strings'))).toBe(true)
 
     const invalidErrors = validateResourceMeta(
       { ...baseValidMeta, surface: ['unknown-surface'] },
-      'docs/design/test.md'
+      'catalogue/tools/test.md'
     )
     expect(invalidErrors.some((e) => e.includes('invalid surface "unknown-surface"'))).toBe(true)
   })
 
   test('fails for duplicate surface values', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, surface: ['web-ui', 'web-ui'] }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, surface: ['web-ui', 'web-ui'] }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('duplicate surface "web-ui"'))).toBe(true)
   })
 
   test('fails for duplicate stack values', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, stack: ['react', 'react'] }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, stack: ['react', 'react'] }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('duplicate stack "react"'))).toBe(true)
   })
 
   test('fails for unknown stack', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, stack: ['invented-stack-name'] }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, stack: ['invented-stack-name'] }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('unknown stack "invented-stack-name"'))).toBe(true)
   })
 
   test('fails for non-array stack', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, stack: 'react' }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, stack: 'react' }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('"stack" must be a list'))).toBe(true)
   })
 
   test('fails for non-string elements in stack', () => {
-    const errors = validateResourceMeta({ ...baseValidMeta, stack: [123] }, 'docs/design/test.md')
+    const errors = validateResourceMeta({ ...baseValidMeta, stack: [123] }, 'catalogue/tools/test.md')
     expect(errors.some((e) => e.includes('"stack" elements must be strings'))).toBe(true)
   })
 
   test('fails for duplicate category_tags or best_for', () => {
     const tagErrors = validateResourceMeta(
       { ...baseValidMeta, category_tags: ['icons', 'icons'] },
-      'docs/design/test.md'
+      'catalogue/tools/test.md'
     )
     expect(tagErrors.some((e) => e.includes('duplicate category_tag "icons"'))).toBe(true)
 
     const bestErrors = validateResourceMeta(
       { ...baseValidMeta, best_for: ['dashboards', 'dashboards'] },
-      'docs/design/test.md'
+      'catalogue/tools/test.md'
     )
     expect(bestErrors.some((e) => e.includes('duplicate best_for "dashboards"'))).toBe(true)
   })
 
   test('fails for non-string category_tags or best_for', () => {
-    const tagErrors = validateResourceMeta({ ...baseValidMeta, category_tags: [123] }, 'docs/design/test.md')
+    const tagErrors = validateResourceMeta({ ...baseValidMeta, category_tags: [123] }, 'catalogue/tools/test.md')
     expect(tagErrors.some((e) => e.includes('"category_tags" elements must be strings'))).toBe(true)
 
-    const bestErrors = validateResourceMeta({ ...baseValidMeta, best_for: [456] }, 'docs/design/test.md')
+    const bestErrors = validateResourceMeta({ ...baseValidMeta, best_for: [456] }, 'catalogue/tools/test.md')
     expect(bestErrors.some((e) => e.includes('"best_for" elements must be strings'))).toBe(true)
   })
 
   test('fails for old alias in stack (maintenance validation requires canonical spelling)', () => {
     const aliases = ['framer-motion', 'radix-ui', 'node', 'workers', 'postgres', 'web']
     for (const alias of aliases) {
-      const errors = validateResourceMeta({ ...baseValidMeta, stack: [alias] }, 'docs/design/test.md')
+      const errors = validateResourceMeta({ ...baseValidMeta, stack: [alias] }, 'catalogue/tools/test.md')
       expect(
         errors.some(
           (e) =>

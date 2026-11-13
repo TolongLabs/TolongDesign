@@ -15,7 +15,7 @@ type Fixtures = {
 }
 
 function loadCatalogueDocs(rootDir: string): SearchDocument[] {
-  const indexPath = join(rootDir, 'data/index.json')
+  const indexPath = join(rootDir, 'catalogue/index.json')
   const index = JSON.parse(readFileSync(indexPath, 'utf8')) as {
     tools: Array<{
       name: string
