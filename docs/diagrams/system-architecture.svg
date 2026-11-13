@@ -457,12 +457,20 @@ rect.c-bg-rect { fill: var(--bg); }
           <path data-edge-from="cli" data-edge-to="context" data-edge-label="show / context" data-edge-key="4" data-edge-id="full-context" data-composition-points="510,345;580,345;580,598;650,598" data-composition-crossover="halo" data-composition-independent="true" d="M 510 345 L 572 345 Q 580 345 580 353 L 580 590 Q 580 598 588 598 L 650 598" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         </g>
         <g data-graph-role="automatic-crossover" style="--step:5">
-          <path data-graph-role="automatic-crossover-underlay" d="M 830 338 L 892 338 Q 900 338 900 346 L 900 451.95 Q 900 459.95 908 459.95 L 970 459.95" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
-          <path data-edge-from="ranker" data-edge-to="output" data-edge-label="matches" data-edge-key="5" data-edge-id="results" data-composition-points="830,338;900,338;900,459.95;970,459.95" data-composition-crossover="halo" data-composition-independent="true" d="M 830 338 L 892 338 Q 900 338 900 346 L 900 451.95 Q 900 459.95 908 459.95 L 970 459.95" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+          <path data-graph-role="automatic-crossover-underlay" d="M 830 338 L 892 338 Q 900 338 900 346 L 900 446 Q 900 454 908 454 L 970 454" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="ranker" data-edge-to="output" data-edge-label="matches" data-edge-key="5" data-edge-id="results" data-composition-points="830,338;900,338;900,454;970,454" data-composition-crossover="halo" data-composition-independent="true" d="M 830 338 L 892 338 Q 900 338 900 346 L 900 446 Q 900 454 908 454 L 970 454" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         </g>
         <g data-graph-role="automatic-crossover" style="--step:6">
-          <path data-graph-role="automatic-crossover-underlay" d="M 830 598 L 892 598 Q 900 598 900 590 L 900 483 Q 900 475 908 475 L 970 475" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
-          <path data-edge-from="context" data-edge-to="output" data-edge-label="full docs" data-edge-key="6" data-edge-id="pack" data-composition-points="830,598;900,598;900,475;970,475" data-composition-crossover="halo" data-composition-independent="true" d="M 830 598 L 892 598 Q 900 598 900 590 L 900 483 Q 900 475 908 475 L 970 475" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+          <path data-graph-role="automatic-crossover-underlay" d="M 830 598 L 1052 598 Q 1060 598 1060 590 L 1060 506" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="context" data-edge-to="output" data-edge-label="full docs" data-edge-key="6" data-edge-id="pack" data-composition-points="830,598;1060,598;1060,506" data-composition-crossover="halo" data-composition-independent="true" d="M 830 598 L 1052 598 Q 1060 598 1060 590 L 1060 506" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:7">
+          <path data-graph-role="automatic-crossover-underlay" d="M 420 376 L 420 560" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="cli" data-edge-to="mcp" data-edge-label="mcp" data-edge-key="7" data-edge-id="mcp-start" data-composition-points="420,376;420,560" data-composition-crossover="halo" data-composition-independent="true" d="M 420 376 L 420 560" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:8">
+          <path data-graph-role="automatic-crossover-underlay" d="M 406 560 L 406 541 Q 406 533 414 533 L 1036.95 533 Q 1044.95 533 1044.95 525 L 1044.95 506" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="mcp" data-edge-to="output" data-edge-label="same JSON" data-edge-key="8" data-edge-id="mcp-results" data-composition-points="406,560;406,533;1044.95,533;1044.95,506" data-composition-crossover="halo" data-composition-independent="true" d="M 406 560 L 406 541 Q 406 533 414 533 L 1036.95 533 Q 1044.95 533 1044.95 525 L 1044.95 506" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         </g>
 
         <!-- Components -->
@@ -478,15 +486,15 @@ rect.c-bg-rect { fill: var(--bg); }
         <text x="120" y="352" class="t-muted" font-size="9" text-anchor="middle">Target project</text>
         </g>
 
-        <g id="node-cli" data-node-id="cli" data-node-label="Command handler" tabindex="0" role="button" aria-label="Focus Command handler, design.ts / find.ts, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="design.ts / find.ts" data-node-context="Architecture component">
-          <title>Command handler · design.ts / find.ts · Architecture component</title>
+        <g id="node-cli" data-node-id="cli" data-node-label="Command handler" tabindex="0" role="button" aria-label="Focus Command handler, src/cli/main.ts, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="src/cli/main.ts" data-node-context="Architecture component">
+          <title>Command handler · src/cli/main.ts · Architecture component</title>
           <rect x="330" y="300" width="180" height="76" rx="6" class="c-mask"/>
           <rect x="330" y="300" width="180" height="76" rx="6" class="c-backend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(336 306) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
           <text data-node-label="" x="420" y="336" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Command handler</text>
-        <text x="420" y="352" class="t-muted" font-size="9" text-anchor="middle">design.ts / find.ts</text>
+        <text x="420" y="352" class="t-muted" font-size="9" text-anchor="middle">src/cli/main.ts</text>
         </g>
 
         <g id="node-loader" data-node-id="loader" data-node-label="Resource loader" tabindex="0" role="button" aria-label="Focus Resource loader, Read + SHA-256, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Read + SHA-256" data-node-context="Architecture component">
@@ -548,6 +556,17 @@ rect.c-bg-rect { fill: var(--bg); }
         <text x="1060" y="482" class="t-muted" font-size="9" text-anchor="middle">Text / cards / JSON</text>
         </g>
 
+        <g id="node-mcp" data-node-id="mcp" data-node-label="MCP server" tabindex="0" role="button" aria-label="Focus MCP server, stdio, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="stdio" data-node-context="Architecture component">
+          <title>MCP server · stdio · Architecture component</title>
+          <rect x="330" y="560" width="180" height="76" rx="6" class="c-mask"/>
+          <rect x="330" y="560" width="180" height="76" rx="6" class="c-backend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(336 566) scale(0.6875)">
+            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
+          </g>
+          <text data-node-label="" x="420" y="596" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">MCP server</text>
+        <text x="420" y="612" class="t-muted" font-size="9" text-anchor="middle">stdio</text>
+        </g>
+
         <!-- Connection labels -->
         <g data-edge-from="caller" data-edge-to="cli" data-edge-label="command" data-edge-key="0" data-edge-id="request">
           <rect x="243.2" y="318" width="43.6" height="14" rx="3" class="c-mask"/>
@@ -570,12 +589,20 @@ rect.c-bg-rect { fill: var(--bg); }
           <text x="580" y="461.5" class="t-edge-default" font-size="8" text-anchor="middle">show / context</text>
         </g>
         <g data-edge-from="ranker" data-edge-to="output" data-edge-label="matches" data-edge-key="5" data-edge-id="results">
-          <rect x="878.2" y="378.975" width="43.6" height="14" rx="3" class="c-mask"/>
-          <text x="900" y="388.975" class="t-edge-default" font-size="8" text-anchor="middle">matches</text>
+          <rect x="878.2" y="376" width="43.6" height="14" rx="3" class="c-mask"/>
+          <text x="900" y="386" class="t-edge-default" font-size="8" text-anchor="middle">matches</text>
         </g>
         <g data-edge-from="context" data-edge-to="output" data-edge-label="full docs" data-edge-key="6" data-edge-id="pack">
-          <rect x="873.4" y="516.5" width="53.199999999999996" height="14" rx="3" class="c-mask"/>
-          <text x="900" y="526.5" class="t-edge-emphasis" font-size="8" text-anchor="middle">full docs</text>
+          <rect x="918.4" y="578" width="53.199999999999996" height="14" rx="3" class="c-mask"/>
+          <text x="945" y="588" class="t-edge-emphasis" font-size="8" text-anchor="middle">full docs</text>
+        </g>
+        <g data-edge-from="cli" data-edge-to="mcp" data-edge-label="mcp" data-edge-key="7" data-edge-id="mcp-start">
+          <rect x="384" y="461" width="30" height="14" rx="3" class="c-mask"/>
+          <text x="399" y="471" class="t-edge-default" font-size="8" text-anchor="middle">mcp</text>
+        </g>
+        <g data-edge-from="mcp" data-edge-to="output" data-edge-label="same JSON" data-edge-key="8" data-edge-id="mcp-results">
+          <rect x="698.875" y="513" width="53.199999999999996" height="14" rx="3" class="c-mask"/>
+          <text x="725.475" y="523" class="t-edge-default" font-size="8" text-anchor="middle">same JSON</text>
         </g>
 
         <!-- Boundary labels (foreground masks keep routes out of titles) -->
