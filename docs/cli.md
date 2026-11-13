@@ -4,8 +4,9 @@ Use the installed CLI from a target project when you need design-resource
 search, complete usage guidance, or an agent context pack. The tool is local and
 read-only; the target agent still designs, builds, and reviews the work.
 
-> **Snapshot note:** this guide describes current source. Published `v0.2.0`
-> includes ranked-search filters and cards. Anything merged after the tag needs
+> **Snapshot note:** this guide describes current source. Published `v0.3.0`
+> ships the catalogue under `catalogue/`, consumer skills under `skills/`, and
+> one `search` command (`find` is an alias). Anything merged after the tag needs
 > checkout mode; a version string alone does not prove that a working checkout
 > matches the published archive.
 
@@ -23,7 +24,7 @@ Download into a new temporary directory and verify the actual archive before
 installing. No public npm registry publication is involved.
 
 ```bash
-version=v0.2.0
+version=v0.3.0
 install_dir=$(mktemp -d)
 gh release download "$version" --repo TolongLabs/TolongDesign \
   --pattern 'tolong-design-*.tgz' --pattern SHA256SUMS --dir "$install_dir"

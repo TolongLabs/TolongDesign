@@ -328,11 +328,12 @@ archive.
 
 ### Snapshot boundary
 
-The source baseline has `package.json` version `0.2.0`, published as `v0.2.0`
-with the retrieval changes and the collections. A working-tree version string
-alone is not release provenance. Check tag, source revision, asset bytes and
-manifest; use the checkout for unreleased source behavior. A documentation
-change does not publish a new release.
+The source baseline has `package.json` version `0.3.0`, published as `v0.3.0`
+with the role-based layout, the single search command and the directory-based
+release payload. A working-tree version string alone is not release provenance.
+Check tag, source revision, asset bytes and manifest; use the checkout for
+unreleased source behavior. A documentation change does not publish a new
+release.
 
 ### Build and payload
 
