@@ -13,6 +13,7 @@ import {
   validatePeople,
   validateResourceMeta
 } from './lib'
+import { findBrokenRelativeMarkdownLinks } from './relative-markdown-links'
 
 const quiet = process.argv.includes('--quiet')
 const { tools, people } = loadCatalogue()
@@ -52,17 +53,14 @@ for (const tool of tools) {
     else last = at
   }
 
-  // Relative links must resolve inside the repo.
-  for (const m of body.matchAll(/\]\((\.{1,2}\/[^)#\s]+)/g)) {
-    const target = normalize(join(dirname(join(ROOT, tool.doc)), m[1]))
-    if (!existsSync(target)) errors.push(`${tool.doc}: broken link ${m[1]}`)
-  }
-
   const lines = body.split('\n').length
   if (lines < 60) warnings.push(`${tool.doc}: only ${lines} lines`)
   const examples = body.split(/^## Examples$/m)[1]?.split(/^## /m)[0] ?? ''
   if ((examples.match(/\]\(https?:\/\//g) ?? []).length < 3) warnings.push(`${tool.doc}: fewer than 3 example links`)
 }
+
+// Every relative Markdown link in the catalogue must resolve to a file.
+errors.push(...findBrokenRelativeMarkdownLinks(ROOT))
 
 // Hand-written guides must not link to docs that do not exist.
 for (const guide of ['README.md', 'AGENTS.md', 'docs/README.md', 'docs/PLAYBOOK.md']) {

@@ -1,6 +1,6 @@
 graphify-out/
-data/catalogue.json
-data/index.json
+catalogue/catalogue.json
+catalogue/index.json
 bun.lock
 release/
 .archify/

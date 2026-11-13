@@ -7,10 +7,10 @@ import { loadResources, searchResources } from './design-lib'
 const root = join(import.meta.dir, '..')
 const fixture = mkdtempSync(join(tmpdir(), 'tolong-retrieval-fixture-'))
 afterAll(() => rmSync(fixture, { recursive: true, force: true }))
-mkdirSync(join(fixture, 'data'), { recursive: true })
-mkdirSync(join(fixture, 'docs/design/test'), { recursive: true })
+mkdirSync(join(fixture, 'catalogue'), { recursive: true })
+mkdirSync(join(fixture, 'catalogue/tools/test'), { recursive: true })
 writeFileSync(
-  join(fixture, 'data/catalogue.json'),
+  join(fixture, 'catalogue/catalogue.json'),
   JSON.stringify({
     tools: [
       {
@@ -20,13 +20,13 @@ writeFileSync(
         section: 'Test',
         section_slug: 'test',
         slug: 'example',
-        doc: 'docs/design/test/example.md'
+        doc: 'catalogue/tools/test/example.md'
       }
     ]
   })
 )
 writeFileSync(
-  join(fixture, 'docs/design/test/example.md'),
+  join(fixture, 'catalogue/tools/test/example.md'),
   '---\nname: Example\nmode: package\ninstall: bun add undocumented-command\n---\n# Example\n\n## How to use\nRead the reference.\n'
 )
 

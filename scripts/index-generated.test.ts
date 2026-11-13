@@ -15,11 +15,11 @@ const tool = {
   section_slug: 'component-libraries',
   slug: 'example-ui',
   designeer_url: 'https://example.test/',
-  doc: 'docs/design/component-libraries/example-ui.md'
+  doc: 'catalogue/tools/component-libraries/example-ui.md'
 }
 mkdirSync(join(fixture, 'scripts'), { recursive: true })
-mkdirSync(join(fixture, 'data'), { recursive: true })
-mkdirSync(join(fixture, 'docs/design/component-libraries'), { recursive: true })
+mkdirSync(join(fixture, 'catalogue'), { recursive: true })
+mkdirSync(join(fixture, 'catalogue/tools/component-libraries'), { recursive: true })
 for (const file of ['build-index.ts', 'lib.ts', 'catalogue-schema.ts', 'index-fields.ts'])
   cpSync(join(root, 'scripts', file), join(fixture, 'scripts', file))
 symlinkSync(join(root, 'node_modules'), join(fixture, 'node_modules'), 'dir')
@@ -28,7 +28,7 @@ writeFileSync(
   `---\nname: Example UI\nslug: example-ui\nsection: Component Libraries\nsection_slug: component-libraries\nsource_url: https://example.test/\npaywall: free\nexecution_mode: registry\nsurface: [web-ui]\nstatus: active\nagent_friendly: true\nstack: [react]\n---\n# Example UI\n\n## How to use\n\n\`\`\`bash\nbunx example add button\n\`\`\`\n\n## Examples\n`
 )
 writeFileSync(
-  join(fixture, 'data/catalogue.json'),
+  join(fixture, 'catalogue/catalogue.json'),
   JSON.stringify({
     scraped: '2026-10-15',
     source: 'fixture',
@@ -59,22 +59,22 @@ const build = () => {
 describe('generated index contract', () => {
   test('index derives the documented shell block instead of storing hand-written install metadata', () => {
     build()
-    const index = JSON.parse(readFileSync(join(fixture, 'data/index.json'), 'utf8'))
+    const index = JSON.parse(readFileSync(join(fixture, 'catalogue/index.json'), 'utf8'))
     expect(index.tools[0].install).toBe('bunx example add button')
     expect(index.tools[0].execution_mode).toBe('registry')
   })
 
   test('people index includes tool and attribution-source links', () => {
     build()
-    const people = readFileSync(join(fixture, 'docs/design/people.md'), 'utf8')
-    expect(people).toContain('[Example UI](./component-libraries/example-ui.md)')
+    const people = readFileSync(join(fixture, 'catalogue/people.md'), 'utf8')
+    expect(people).toContain('[Example UI](./tools/component-libraries/example-ui.md)')
     expect(people).toContain('https://example.test/credits')
   })
 
   test('regenerating the same source is byte-for-byte idempotent', () => {
     build()
-    const before = readFileSync(join(fixture, 'data/index.json'), 'utf8')
+    const before = readFileSync(join(fixture, 'catalogue/index.json'), 'utf8')
     build()
-    expect(readFileSync(join(fixture, 'data/index.json'), 'utf8')).toBe(before)
+    expect(readFileSync(join(fixture, 'catalogue/index.json'), 'utf8')).toBe(before)
   })
 })

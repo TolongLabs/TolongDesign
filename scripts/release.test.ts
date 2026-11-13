@@ -62,14 +62,14 @@ function isRecord(value: unknown): value is RecordValue {
 
 function isAllowedFile(path: string): boolean {
   if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
-  if (['data/catalogue.json', 'data/index.json'].includes(path)) return true
+  if (['catalogue/catalogue.json', 'catalogue/index.json'].includes(path)) return true
   if (
     [
       'docs/README.md',
       'docs/PLAYBOOK.md',
       'docs/WORKFLOW.md',
       'docs/CLI.md',
-      'docs/METADATA.md',
+      'catalogue/SCHEMA.md',
       'docs/PRD.md',
       'docs/TRD.md'
     ].includes(path)
@@ -82,9 +82,8 @@ function isAllowedFile(path: string): boolean {
     )
   )
     return true
-  if (path.startsWith('docs/design/') && path.endsWith('.md')) return true
+  if (path.startsWith('catalogue/') && path.endsWith('.md')) return true
   if (path.startsWith('docs/scenarios/') && path.endsWith('.md')) return true
-  if (path.startsWith('docs/research/') && path.endsWith('.md')) return true
   if (['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'].includes(path)) return true
   return path.startsWith('licenses/')
 }
@@ -129,8 +128,11 @@ function inspectArchive(archivePath: string): ArchiveEntry[] {
   const files = entries.filter((entry) => entry.kind === 'file').map((entry) => entry.filePath)
   expect(files).toContain('package.json')
   expect(files).toContain('release-manifest.json')
-  expect(files).toContain('data/catalogue.json')
-  expect(files).toContain('docs/METADATA.md')
+  expect(files).toContain('catalogue/catalogue.json')
+  expect(files).toContain('catalogue/SCHEMA.md')
+  expect(files).toContain('catalogue/README.md')
+  expect(files).toContain('catalogue/people.md')
+  expect(files).toContain('catalogue/TEMPLATE.md')
   expect(files.some((path) => path.startsWith('licenses/'))).toBe(true)
   for (const entry of entries) {
     if (entry.kind === 'directory' && entry.filePath !== '') {
@@ -258,7 +260,7 @@ describe('checkout release diagnostics', () => {
     const doctor = JSON.parse(result.stdout) as RecordValue
     const packageRoot = assertDoctorSkills(doctor, 'checkout', false)
     expect(realpathSync(root)).toBe(packageRoot)
-    const catalogue = JSON.parse(readFileSync(join(root, 'data', 'catalogue.json'), 'utf8')) as RecordValue
+    const catalogue = JSON.parse(readFileSync(join(root, 'catalogue', 'catalogue.json'), 'utf8')) as RecordValue
     expect(Array.isArray(catalogue.tools)).toBe(true)
     expect(doctor.resources).toBe((catalogue.tools as unknown[]).length)
   })
@@ -323,7 +325,7 @@ releaseDescribe('independent private release verification', () => {
     const packageMetadata = JSON.parse(readFileSync(join(packageRoot, 'package.json'), 'utf8')) as RecordValue
     const manifest = JSON.parse(readFileSync(join(packageRoot, 'release-manifest.json'), 'utf8')) as RecordValue
     const sourceCatalogue = JSON.parse(
-      readFileSync(join(fixture.root, 'data', 'catalogue.json'), 'utf8')
+      readFileSync(join(fixture.root, 'catalogue', 'catalogue.json'), 'utf8')
     ) as RecordValue
     expect(packageMetadata.name).toBe('tolong-design')
     expect(packageMetadata.private).toBe(true)
@@ -354,7 +356,9 @@ releaseDescribe('independent private release verification', () => {
     expect(actualFiles.some((path) => /(^|\/)(settings\.json|\.env(?:\.|$))/i.test(path))).toBe(false)
     expect(actualFiles).not.toContain('CLAUDE.md')
     expect(actualFiles).not.toContain('GEMINI.md')
-    expect(actualFiles).not.toContain('templates/tool-doc.md')
+    expect(actualFiles).toContain('catalogue/TEMPLATE.md')
+    expect(actualFiles).toContain('catalogue/README.md')
+    expect(actualFiles).toContain('catalogue/people.md')
     expect(actualFiles).not.toContain('fixture-only-working-file.txt')
     expect(actualFiles).not.toContain('node_modules/yaml/LICENSE')
 
@@ -369,7 +373,7 @@ releaseDescribe('independent private release verification', () => {
       expect(sha256(bytes)).toBe(manifestFiles[path])
 
       if (
-        path.startsWith('data/') ||
+        path.startsWith('catalogue/') ||
         path.startsWith('docs/') ||
         path === '.agents/skills/design-project/SKILL.md' ||
         path === '.claude/skills/design-project/SKILL.md'
@@ -451,8 +455,8 @@ releaseDescribe('independent private release verification', () => {
     const resources = context.resources as RecordValue[]
     expect(resources.map((resource) => resource.slug)).toEqual(['gsap', 'saaspo'])
     const originals = [
-      { slug: 'gsap', doc: 'docs/design/motion/gsap.md' },
-      { slug: 'saaspo', doc: 'docs/design/design-galleries/saaspo.md' }
+      { slug: 'gsap', doc: 'catalogue/tools/motion/gsap.md' },
+      { slug: 'saaspo', doc: 'catalogue/tools/design-galleries/saaspo.md' }
     ]
     for (const [index, original] of originals.entries()) {
       const sourceBytes = readFileSync(join(root, ...original.doc.split('/')))
@@ -546,7 +550,7 @@ releaseDescribe('independent private release verification', () => {
       expect(rejected.stderr.length).toBeGreaterThan(0)
     }
 
-    const installedDoc = join(installedRoot, 'docs', 'design', 'motion', 'gsap.md')
+    const installedDoc = join(installedRoot, 'catalogue', 'tools', 'motion', 'gsap.md')
     const originalDocBytes = readFileSync(installedDoc)
     const manifestPath = join(installedRoot, 'release-manifest.json')
     const originalManifestBytes = readFileSync(manifestPath)
@@ -568,7 +572,7 @@ releaseDescribe('independent private release verification', () => {
     expect(restoredDoctor.stderr).toBe('')
     expect(assertDoctorSkills(JSON.parse(restoredDoctor.stdout) as RecordValue, 'release', true)).toBe(installedRoot)
 
-    const missingDoc = join(installedRoot, 'docs', 'design', 'design-galleries', 'saaspo.md')
+    const missingDoc = join(installedRoot, 'catalogue', 'tools', 'design-galleries', 'saaspo.md')
     const missingDocBytes = readFileSync(missingDoc)
     try {
       unlinkSync(missingDoc)
@@ -584,7 +588,7 @@ releaseDescribe('independent private release verification', () => {
       '../outside.md',
       '/outside.md',
       'docs\\design\\outside.md',
-      'docs/design/./outside.md'
+      'catalogue/tools/./outside.md'
     ]) {
       const sortedFiles = Object.fromEntries(
         [...Object.entries(originalFiles), [invalidPath, '0'.repeat(64)] as [string, unknown]].sort(
@@ -598,7 +602,7 @@ releaseDescribe('independent private release verification', () => {
       expect(invalidManifest.stderr.length).toBeGreaterThan(0)
     }
 
-    const symlinkManifestPath = 'docs/design/motion/manifest-link.md'
+    const symlinkManifestPath = 'catalogue/tools/motion/manifest-link.md'
     const symlinkPath = join(installedRoot, ...symlinkManifestPath.split('/'))
     try {
       symlinkSync(installedDoc, symlinkPath)

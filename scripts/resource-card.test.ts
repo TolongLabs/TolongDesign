@@ -4,7 +4,7 @@ import { renderResourceCard, type CardInput } from './resource-card'
 const resource = (over: Partial<CardInput> = {}): CardInput => ({
   id: 'icons/lucide',
   name: 'Lucide',
-  doc: 'docs/design/icons/lucide.md',
+  doc: 'catalogue/tools/icons/lucide.md',
   source_url: 'https://lucide.dev/',
   meta: { execution_mode: 'package', best_for: ['icon sets for React interfaces'], paywall: 'free' },
   ...over
@@ -20,7 +20,7 @@ describe('renderResourceCard', () => {
         'mode: package',
         'install: bun add lucide-react',
         'best for: icon sets for React interfaces',
-        'doc: docs/design/icons/lucide.md'
+        'doc: catalogue/tools/icons/lucide.md'
       ].join('\n')
     )
   })
@@ -44,16 +44,16 @@ describe('renderResourceCard', () => {
     const command = `bunx --package ${'x'.repeat(300)} --yes install-everything --flag`
     const card = renderResourceCard(resource({ meta: { execution_mode: 'package', install: command } }))
     expect(card).not.toContain('install-everything')
-    expect(card).toContain('install: see docs/design/icons/lucide.md')
+    expect(card).toContain('install: see catalogue/tools/icons/lucide.md')
     expect(card.length).toBeLessThanOrEqual(320)
-    expect(card.trimEnd().endsWith('doc: docs/design/icons/lucide.md')).toBe(true)
+    expect(card.trimEnd().endsWith('doc: catalogue/tools/icons/lucide.md')).toBe(true)
   })
 
   test('never inlines a multiline command as a fragment', () => {
     const command = 'brew install --cask figma\nfigma --export ./out'
     const card = renderResourceCard(resource({ meta: { execution_mode: 'registry', install: command } }))
     expect(card).not.toContain('brew install --cask figma')
-    expect(card).toContain('install: see docs/design/icons/lucide.md')
+    expect(card).toContain('install: see catalogue/tools/icons/lucide.md')
     expect(card.split('\n')).toHaveLength(6)
   })
 
@@ -62,7 +62,7 @@ describe('renderResourceCard', () => {
       resource({
         id: `section/${'i'.repeat(400)}`,
         name: `N${'a'.repeat(400)}me`,
-        doc: `docs/design/section/${'d'.repeat(400)}.md`,
+        doc: `catalogue/tools/section/${'d'.repeat(400)}.md`,
         meta: {
           execution_mode: `m${'o'.repeat(400)}`,
           install: `bun add ${'p'.repeat(400)}`,
@@ -84,7 +84,7 @@ describe('renderResourceCard', () => {
         'mode: unknown',
         'source: not published',
         'best for: not published',
-        'doc: docs/design/icons/lucide.md'
+        'doc: catalogue/tools/icons/lucide.md'
       ].join('\n')
     )
   })

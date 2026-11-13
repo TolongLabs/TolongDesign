@@ -15,7 +15,7 @@ try {
 const { section, status: showStatus, json: jsonOutput } = options
 const { tools } = loadCatalogue()
 const selected = tools.filter((tool) => section === undefined || tool.section_slug === section)
-const files = [...new Glob(`docs/design/${section ?? '*'}/*.md`).scanSync(ROOT)].filter(
+const files = [...new Glob(`catalogue/tools/${section ?? '*'}/*.md`).scanSync(ROOT)].filter(
   (file) => !file.endsWith('README.md')
 )
 const where = new Map<string, Set<string>>()

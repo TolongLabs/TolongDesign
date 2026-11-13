@@ -119,7 +119,7 @@ export function renderMadeCell(createdTools: unknown, evidence: unknown, tools: 
     seen.add(id)
     const tool = known.get(id)
     if (!tool) continue
-    const link = `[${cell(tool.name)}](./${tool.section_slug}/${tool.slug}.md)`
+    const link = `[${cell(tool.name)}](./tools/${tool.section_slug}/${tool.slug}.md)`
     const entry = credits[id]
     const source =
       entry !== null && typeof entry === 'object' ? hostLink((entry as Record<string, unknown>).source_url) : null

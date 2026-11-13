@@ -158,7 +158,7 @@ describe('design search cards and query behavior', () => {
     expect(result.stdout).toContain('name:')
     expect(result.stdout).toContain('id: icons/lucide')
     expect(result.stdout).toContain('mode:')
-    expect(result.stdout).toContain('doc: docs/design/icons/lucide.md')
+    expect(result.stdout).toContain('doc: catalogue/tools/icons/lucide.md')
 
     const cards = result.stdout.trim().split('\n\n')
     for (const card of cards) {

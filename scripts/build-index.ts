@@ -1,8 +1,8 @@
 // Regenerates every index from the tool docs' frontmatter. Never edit the outputs by hand:
-//   docs/design/README.md            catalogue overview, one row per section
-//   docs/design/<section>/README.md  one row per tool in the section
-//   docs/design/people.md            design engineers worth following
-//   data/index.json                  flat, machine-readable index of every doc
+//   catalogue/README.md            catalogue overview, one row per section
+//   catalogue/tools/<section>/README.md  one row per tool in the section
+//   catalogue/people.md            design engineers worth following
+//   catalogue/index.json                  flat, machine-readable index of every doc
 // Usage: bun run index
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
@@ -85,11 +85,11 @@ for (const [slug, name] of sections) {
         `| [${cell(e.name)}](./${e.slug}.md) | ${PAYWALL_LABEL[String(e.paywall)] ?? cell(e.paywall)} | ${e.open_source === true ? 'Yes' : e.open_source === false ? 'No' : '—'} | ${e.agent_friendly === true ? 'Yes' : e.agent_friendly === false ? 'No' : '—'} | ${cell(list(e.best_for))} | ${cell(e.designeer_blurb)} |`
     ),
     '',
-    '[← All sections](../README.md)',
+    '[← All sections](../../README.md)',
     ''
   ].join('\n')
-  mkdirSync(join(ROOT, 'docs/design', slug), { recursive: true })
-  writeFileSync(join(ROOT, 'docs/design', slug, 'README.md'), md)
+  mkdirSync(join(ROOT, 'catalogue/tools', slug), { recursive: true })
+  writeFileSync(join(ROOT, 'catalogue/tools', slug, 'README.md'), md)
 }
 
 // Catalogue overview
@@ -106,15 +106,15 @@ const overview = [
   '| ------- | ----- | ---- | -------- | ---- | -------------- |',
   ...sections.map(([slug, name]) => {
     const rows = entries.filter((e) => e.section_slug === slug)
-    return `| [${name}](./${slug}/README.md) | ${rows.length} | ${count(rows, 'free')} | ${count(rows, 'freemium')} | ${count(rows, 'paid')} | ${sectionBlurb.get(slug)} |`
+    return `| [${name}](./tools/${slug}/README.md) | ${rows.length} | ${count(rows, 'free')} | ${count(rows, 'freemium')} | ${count(rows, 'paid')} | ${sectionBlurb.get(slug)} |`
   }),
   '',
   `Also: [People worth following](./people.md) — ${people.length} design engineers.`,
   '',
-  'Machine-readable: [`data/index.json`](../../data/index.json) (every doc’s frontmatter) and [`data/catalogue.json`](../../data/catalogue.json) (raw scrape).',
+  'Machine-readable: [`catalogue/index.json`](./index.json) (every doc’s frontmatter) and [`catalogue/catalogue.json`](./catalogue.json) (raw scrape).',
   ''
 ].join('\n')
-writeFileSync(join(ROOT, 'docs/design/README.md'), overview)
+writeFileSync(join(ROOT, 'catalogue/README.md'), overview)
 
 // People
 const peopleMd = [
@@ -131,10 +131,10 @@ const peopleMd = [
   '[← All sections](./README.md)',
   ''
 ].join('\n')
-writeFileSync(join(ROOT, 'docs/design/people.md'), peopleMd)
+writeFileSync(join(ROOT, 'catalogue/people.md'), peopleMd)
 
 writeFileSync(
-  join(ROOT, 'data/index.json'),
-  JSON.stringify({ generated_from: 'docs/design/**/*.md frontmatter', tools: entries }, null, 1) + '\n'
+  join(ROOT, 'catalogue/index.json'),
+  JSON.stringify({ generated_from: 'catalogue/tools/**/*.md frontmatter', tools: entries }, null, 1) + '\n'
 )
 console.log(`indexed ${entries.length} tools, ${sections.length} sections, ${people.length} people`)

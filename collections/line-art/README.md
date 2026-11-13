@@ -132,6 +132,6 @@ reads the `Skeleton` (`hip`, `neck`, `head`, `shoulder`, `elbow`, `hand`,
 Engineered after a teardown of
 [JDhruv14/line-art-animation](https://github.com/JDhruv14/line-art-animation)
 (MIT). The research is in
-[docs/research/line-art-animation.md](../../docs/research/line-art-animation.md).
+[catalogue/research/line-art-animation.md](../../catalogue/research/line-art-animation.md).
 The code here is written fresh: figure space, presets, palette stops, scenes and
 characters are our own, and no files or assets were copied.

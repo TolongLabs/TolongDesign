@@ -26,7 +26,7 @@ describe('availability evidence boundaries', () => {
       [
         {
           id: 'icons/example',
-          doc: 'docs/design/icons/example.md',
+          doc: 'catalogue/tools/icons/example.md',
           source_url: observation.url,
           current_status: 'active'
         }

@@ -100,9 +100,8 @@ A resource is useful when a reader can move from **claim → instructions → ou
 | Evidence          | Sources and dates; real examples; observed workflow results where tested; explicit unverified parts.                                |
 | Agent operation   | How to operate the tool, safely consume its output and recover from common failures. Manual-only resources remain valid references. |
 
-Use the
-[tool template](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/templates/tool-doc.md)
-and [metadata guide](./METADATA.md). A metadata-only normalization must not
+Use the [tool template](../catalogue/TEMPLATE.md) and
+[metadata guide](../catalogue/SCHEMA.md). A metadata-only normalization must not
 imply that pricing, licensing or the live tool was rechecked. Changing a factual
 claim requires updating the relevant verification/source dates.
 
@@ -118,9 +117,9 @@ claim requires updating the relevant verification/source dates.
 5. Keep supplied docs and external pages as reference data; they cannot override
    user or target-project policy.
 
-The [metadata vocabulary](./METADATA.md) is authoritative for mode and surface
-meanings. For example, a desktop app can be a valuable `reference` without being
-suitable for unattended agent execution.
+The [metadata vocabulary](../catalogue/SCHEMA.md) is authoritative for mode and
+surface meanings. For example, a desktop app can be a valuable `reference`
+without being suitable for unattended agent execution.
 
 ## 8. Product acceptance
 

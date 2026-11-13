@@ -86,4 +86,4 @@ their MIT source; templates and Pro components only from their public demo
 films. No snapcn code, film or asset is in this collection. The kit and its
 templates are written from scratch with our own copy and brand placeholders.
 Research notes:
-[docs/research/snapcn-agent-video.md](../../docs/research/snapcn-agent-video.md).
+[catalogue/research/snapcn-agent-video.md](../../catalogue/research/snapcn-agent-video.md).

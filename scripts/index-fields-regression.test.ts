@@ -27,11 +27,11 @@ describe('literal command extraction and compact cards', () => {
     const card = renderResourceCard({
       id: 'icons/example',
       name: 'Example',
-      doc: 'docs/design/icons/example.md',
+      doc: 'catalogue/tools/icons/example.md',
       source_url: `https://example.test/${'x'.repeat(1000)}`,
       meta: { execution_mode: 'reference', best_for: ['icons'] }
     })
     expect(card.length).toBeLessThanOrEqual(320)
-    expect(card).toContain('doc: docs/design/icons/example.md')
+    expect(card).toContain('doc: catalogue/tools/icons/example.md')
   })
 })

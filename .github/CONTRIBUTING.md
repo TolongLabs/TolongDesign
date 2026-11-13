@@ -10,9 +10,9 @@ passes.
 counts come from the official site. If it is not published, write "Not
 published". Update `last_verified` whenever you re-check a doc.
 
-**Never hand-edit generated files.** `docs/design/README.md`, every
-`docs/design/<section>/README.md`, `docs/design/people.md` and `data/index.json`
-come from `bun run index`.
+**Never hand-edit generated files.** `catalogue/README.md`, every
+`catalogue/tools/<section>/README.md`, `catalogue/people.md` and
+`catalogue/index.json` come from `bun run index`.
 
 ## Workflow
 
@@ -37,7 +37,7 @@ pricing page. A quarterly sweep re-runs the research fan-out with
 ## Working With AI Coding Agents
 
 Agents read [AGENTS.md](../AGENTS.md) (Claude Code and Gemini via `CLAUDE.md` /
-`GEMINI.md` imports). For bulk research, split `data/catalogue.json` into
+`GEMINI.md` imports). For bulk research, split `catalogue/catalogue.json` into
 batches and give each worker the worker brief plus its batch file; workers write
 only the doc paths in their batch. Review with `bun run check` before
 committing.

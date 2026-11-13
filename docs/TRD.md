@@ -38,15 +38,15 @@ catalogue merely because the caller changed into another project.
 
 ## Source authority
 
-| Path                                                  | Authority / lifecycle                                                                                                                                  |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `data/catalogue.json`                                 | Hand-maintained registration and scraped/curated provenance. `tools[]` identifies resources; `people[]` records creators and optional credit evidence. |
-| `docs/design/<section>/<slug>.md`                     | Authored resource facts, frontmatter, procedure, examples, rights, gotchas and sources.                                                                |
-| `templates/tool-doc.md` + `catalogue-schema.ts`       | Document and metadata contract. The template is the authoring interface; the schema is executable validation.                                          |
-| `data/index.json`                                     | Generated metadata plus derived `install`; useful for consumers, but **not the authority used by runtime search**.                                     |
-| `docs/design/README.md`, section READMEs, `people.md` | Generated human-readable views. Regenerate instead of editing.                                                                                         |
-| `graphify-out/`                                       | Derived relationship/discovery aid. It is neither a runtime dependency nor proof of compatibility or factual correctness.                              |
-| `release-manifest.json`                               | Build-generated payload hashes and version/resource-count record for an installed snapshot.                                                            |
+| Path                                                | Authority / lifecycle                                                                                                                                  |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `catalogue/catalogue.json`                          | Hand-maintained registration and scraped/curated provenance. `tools[]` identifies resources; `people[]` records creators and optional credit evidence. |
+| `catalogue/tools/<section>/<slug>.md`               | Authored resource facts, frontmatter, procedure, examples, rights, gotchas and sources.                                                                |
+| `catalogue/TEMPLATE.md` + `catalogue-schema.ts`     | Document and metadata contract. The template is the authoring interface; the schema is executable validation.                                          |
+| `catalogue/index.json`                              | Generated metadata plus derived `install`; useful for consumers, but **not the authority used by runtime search**.                                     |
+| `catalogue/README.md`, section READMEs, `people.md` | Generated human-readable views. Regenerate instead of editing.                                                                                         |
+| `graphify-out/`                                     | Derived relationship/discovery aid. It is neither a runtime dependency nor proof of compatibility or factual correctness.                              |
+| `release-manifest.json`                             | Build-generated payload hashes and version/resource-count record for an installed snapshot.                                                            |
 
 The generator and runtime loader resolve a few fields differently: generation
 uses catalogue identity/source fields to construct index rows, while runtime
@@ -57,12 +57,11 @@ rely on intentional divergence between the sources.
 ## Resource and creator schema
 
 Stable resource identity is `section_slug/slug`; `doc` is a registered path
-under `docs/design/`. Required frontmatter keys and the nine ordered H2 sections
-are defined in
+under `catalogue/tools/`. Required frontmatter keys and the nine ordered H2
+sections are defined in
 [`lib.ts`](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/lib.ts),
 [`catalogue-schema.ts`](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/catalogue-schema.ts)
-and the
-[template](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/templates/tool-doc.md).
+and the [template](../catalogue/TEMPLATE.md).
 
 | Field                                   | Shape / meaning                                                                                             |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -80,8 +79,8 @@ and the
 Execution modes are `registry`, `package`, `snippet`, `mcp-skill`,
 `browser-app`, `reference`. Surface values include interfaces, 3D, media,
 comics, assets and supporting development/hosting/reference domains. Use
-[METADATA.md](./METADATA.md) and exported `SURFACES`/`STACKS` for the complete
-current vocabulary; do not create a parallel unofficial list.
+[SCHEMA.md](../catalogue/SCHEMA.md) and exported `SURFACES`/`STACKS` for the
+complete current vocabulary; do not create a parallel unofficial list.
 
 Creator links are optional `created_tools` IDs with matching
 `created_tools_evidence[id] = { source_url, checked, quote }`. Validation checks
@@ -93,9 +92,9 @@ Missing links mean unresearched, not “this person made nothing.”
 
 The loader performs these steps for each CLI operation that needs resources:
 
-1. Resolve the root and `data/catalogue.json`; require nonempty registration
-   fields and a valid `tools[]` array.
-2. Restrict doc paths to `docs/design/`: reject absolute/drive paths,
+1. Resolve the root and `catalogue/catalogue.json`; require nonempty
+   registration fields and a valid `tools[]` array.
+2. Restrict doc paths to `catalogue/tools/`: reject absolute/drive paths,
    backslashes, controls, empty/dot/traversal segments and resolved escapes.
 3. Read each **registered** document, decode UTF-8, parse YAML frontmatter and
    compute SHA-256 over the original bytes.
@@ -115,7 +114,7 @@ as compliant. Unregistered Markdown is not automatically included in search.
 
 `searchResources` validates options, filters resources, then calls the pure
 `rankDocuments` helper. The body supplied to that helper is complete Markdown
-plus searchable metadata. No cached `data/index.json`, knowledge graph,
+plus searchable metadata. No cached `catalogue/index.json`, knowledge graph,
 embedding store or network service participates.
 
 | Filter                   | Behavior                                                                                                                                  |
@@ -266,12 +265,12 @@ package installation. It is never executed by retrieval or generation.
 READMEs/people output. It derives `install`, emits one metadata row per tool and
 renders optional creator credits with links to their sources.
 
-| Output             | Inputs                                                                  |
-| ------------------ | ----------------------------------------------------------------------- |
-| `data/index.json`  | Tool frontmatter + catalogue identity/provenance + derived shell block. |
-| Section READMEs    | Section registrations and resource metadata.                            |
-| Catalogue overview | All section rows, counts and paywall breakdown.                         |
-| People listing     | `people[]`, known tool IDs and source-backed credit entries.            |
+| Output                 | Inputs                                                                  |
+| ---------------------- | ----------------------------------------------------------------------- |
+| `catalogue/index.json` | Tool frontmatter + catalogue identity/provenance + derived shell block. |
+| Section READMEs        | Section registrations and resource metadata.                            |
+| Catalogue overview     | All section rows, counts and paywall breakdown.                         |
+| People listing         | `people[]`, known tool IDs and source-backed credit entries.            |
 
 Generated table helpers escape unsafe markup where implemented; they are not a
 replacement for validating and reviewing imported data. Source docs remain
@@ -444,9 +443,9 @@ formatting locally and do not imply those gates ran in CI.
 
 For resource additions/refreshes, follow
 [contributing](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/.github/CONTRIBUTING.md)
-and the [metadata guide](./METADATA.md). Keep facts, inferred judgments and
-unverified claims separate. No background freshness monitor, automatic repair or
-arbitrary agent execution loop is part of this system.
+and the [metadata guide](../catalogue/SCHEMA.md). Keep facts, inferred judgments
+and unverified claims separate. No background freshness monitor, automatic
+repair or arbitrary agent execution loop is part of this system.
 
 ## Source map
 

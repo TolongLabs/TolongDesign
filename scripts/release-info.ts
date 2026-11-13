@@ -125,7 +125,7 @@ export function inspectInstallation(root: string): InstallationInfo {
     }
     for (const required of [
       'package.json',
-      'data/catalogue.json',
+      'catalogue/catalogue.json',
       SKILLS.agents,
       SKILLS.claude,
       ...(bundledRelease ? ['dist/design.js'] : [])

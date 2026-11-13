@@ -18,7 +18,7 @@ individually.
 Every tool doc records the **source URL**, **paywall** (`free`, `freemium`,
 `paid`, `unknown`), pricing, licence, **how to use** it (install commands and
 snippets for code libraries, the tested workflow for apps), **examples**, when
-to use it, agent notes, and alternatives. Indexes and `data/index.json` are
+to use it, agent notes, and alternatives. Indexes and `catalogue/index.json` are
 generated from the docs' frontmatter.
 
 Use it two ways:
@@ -36,15 +36,17 @@ Use it two ways:
 ```
 docs/README.md                 Start here: what is in the repo and how to use it
 docs/PLAYBOOK.md               How to pick a stack and start a new website
-docs/design/README.md          Generated: every section with counts
-docs/design/<section>/README.md Generated: one row per tool in the section
-docs/design/<section>/<slug>.md One doc per tool (hand-written / researched)
-docs/design/people.md          Generated: design engineers worth following
-data/catalogue.json            Designeer scrape plus hand-added tools (tools + people); source of truth for what exists
-data/index.json                Generated: every doc's frontmatter, flat
+catalogue/README.md                 Generated: every section with counts
+catalogue/tools/<section>/README.md Generated: one row per tool in the section
+catalogue/tools/<section>/<slug>.md One doc per tool (hand-written / researched)
+catalogue/research/<slug>.md        Research that supports catalogue choices
+catalogue/people.md                 Generated: design engineers worth following
+catalogue/catalogue.json            Designeer scrape plus hand-added tools (tools + people); source of truth for what exists
+catalogue/index.json                Generated: every doc's frontmatter, flat
+catalogue/SCHEMA.md                 Execution modes, surfaces, status and creator metadata
 collections/<name>/            TolongLabs-owned design code: src, tests, demo, previews (see collections/README.md)
-templates/tool-doc.md          The contract every tool doc follows
-templates/worker-brief.md      Work order used to fan out doc research to agents
+catalogue/TEMPLATE.md                 The contract every tool doc follows
+templates/worker-brief.md             Work order used to fan out doc research to agents
 scripts/                       check-docs.ts, build-index.ts, find.ts, check-links.ts (Bun + TypeScript)
 graphify-out/                  Knowledge graph of this repo (graph.json, GRAPH_REPORT.md)
 ```
@@ -56,7 +58,7 @@ Bun is the package manager and runtime.
 ```bash
 bun install                 # once
 bun run check               # validate every doc against the catalogue + template (must pass)
-bun run index               # regenerate all indexes and data/index.json from frontmatter
+bun run index               # regenerate all indexes and catalogue/index.json from frontmatter
 bun run find -- <text> [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--mode registry,package] [--surface web-ui] [--include-unreachable] [--format card] [--agent] [--oss] [--json]
 bun run links [-- <section>] # HTTP-check external links in docs (403/429 = bot-blocked, ignore)
 bun run links -- --status --json # suggest resource status from primary URLs; never edits docs
@@ -69,9 +71,10 @@ bun run format              # prettier
   claiming done: run `bun run check` and `bun run index` after touching any doc,
   then `bun run format`.
 - **The template is the contract.** Every tool doc has the frontmatter keys and
-  the nine H2 headings of [templates/tool-doc.md](templates/tool-doc.md), in
-  order. `bun run check` enforces it. Read [resource metadata](docs/METADATA.md)
-  before assigning execution modes, surfaces, status, stack or creator links.
+  the nine H2 headings of [catalogue/TEMPLATE.md](catalogue/TEMPLATE.md), in
+  order. `bun run check` enforces it. Read
+  [resource metadata](catalogue/SCHEMA.md) before assigning execution modes,
+  surfaces, status, stack or creator links.
 - **Every doc must let an agent produce what the tool advertises.** "How to use"
   and "Agent notes" carry the concrete steps, inputs, formats, export hand-off
   and gotchas. For apps, run the core workflow yourself (a headless browser for
@@ -80,12 +83,13 @@ bun run format              # prettier
   counts come from the official site, checked on the date in `last_verified`. If
   something is not published, write "Not published". When you update a fact,
   update `last_verified` and the "checked" date in Sources.
-- **Generated files are never hand-edited**: `docs/design/README.md`,
-  `docs/design/<section>/README.md`, `docs/design/people.md`, `data/index.json`.
-  Change the doc frontmatter (or `data/catalogue.json`) and run `bun run index`.
-- **Adding a tool:** add an entry to `data/catalogue.json` `tools[]` (with `doc`
-  = `docs/design/<section_slug>/<slug>.md`), write the doc from the template,
-  then `bun run index && bun run check`.
+- **Generated files are never hand-edited**: `catalogue/README.md`,
+  `catalogue/tools/<section>/README.md`, `catalogue/people.md`,
+  `catalogue/index.json`. Change the doc frontmatter (or
+  `catalogue/catalogue.json`) and run `bun run index`.
+- **Adding a tool:** add an entry to `catalogue/catalogue.json` `tools[]` (with
+  `doc` = `catalogue/tools/<section_slug>/<slug>.md`), write the doc from the
+  template, then `bun run index && bun run check`.
 - **Paywall is about the tool, not the licence.** Open-source with a paid pro
   tier is `freemium`. Trial-only is `paid`. Check commercial / client-work
   licensing for paid assets (fonts, icon sets, templates) and note it.
@@ -107,8 +111,8 @@ bun run format              # prettier
 | Changing product scope, requirements or acceptance         | [Product requirements](docs/PRD.md)               |
 | Changing retrieval, schemas, trust boundaries or packaging | [Technical reference](docs/TRD.md)                |
 | Starting a new website design / choosing a stack           | [Design playbook](docs/PLAYBOOK.md)               |
-| Browsing every section with counts                         | [Design catalogue](docs/design/README.md)         |
-| Writing or refreshing a tool doc                           | [Tool doc template](templates/tool-doc.md)        |
+| Browsing every section with counts                         | [Design catalogue](catalogue/README.md)           |
+| Writing or refreshing a tool doc                           | [Tool doc template](catalogue/TEMPLATE.md)        |
 | Fanning research out to worker agents                      | [Worker brief](templates/worker-brief.md)         |
 | Building or changing a collection (our own design code)    | [Collections](collections/README.md)              |
 | Branching, committing, or opening a pull request           | [Contributing](.github/CONTRIBUTING.md)           |

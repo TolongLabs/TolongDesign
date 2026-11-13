@@ -63,9 +63,10 @@ Frontmatter rules:
   (`[react, tailwind]`). `stack` is `[]` when not code; use canonical values
   from `scripts/catalogue-schema.ts`.
 - `execution_mode`, `surface`, `status` — choose from the documented workflow
-  and source evidence using [resource metadata](../docs/METADATA.md). A browser
-  gallery is `reference`; a browser editor or generator is `browser-app`. Record
-  a dated explanation for degraded or unavailable resources.
+  and source evidence using [resource metadata](../catalogue/SCHEMA.md). A
+  browser gallery is `reference`; a browser editor or generator is
+  `browser-app`. Record a dated explanation for degraded or unavailable
+  resources.
 - `agent_friendly` — `true` if a coding agent can use it directly (copy-paste
   code, CLI, npm package, MCP server, llms.txt, public API); else `false`.
 - `last_verified` — the date you actually checked the official sources.
@@ -82,8 +83,8 @@ Body rules:
 - "Alternatives in this repo": link 1–3 sibling tools using relative paths of
   the form `../<section_slug>/<slug>.md`. Pick siblings from the full catalogue
   at `CATALOGUE_FILE` (its `tools[].doc` field gives every valid path; strip the
-  leading `docs/design/` and prefix `../`). Only link paths that exist in the
-  catalogue.
+  leading `catalogue/tools/` and prefix `../`). Only link paths that exist in
+  the catalogue.
 - "Sources": every page you actually used, each with the date you checked it,
   plus the Designeer listing.
 - Plain, precise English. No marketing fluff, no emoji. Wrap prose at ~80

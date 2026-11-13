@@ -23,7 +23,7 @@ rendered-design verification.
    Tailwind), budget (default: **free or freemium only**), audience, tone.
 2. Read [docs/PLAYBOOK.md](../../../docs/PLAYBOOK.md) for the decision order.
 3. Shortlist per layer with `bun run find` (run `bun run index` first if
-   `data/index.json` is stale), for example:
+   `catalogue/index.json` is stale), for example:
 
    ```sh
    bun run find -- --section component-libraries --surface web-ui --stack react --paywall free
@@ -31,7 +31,7 @@ rendered-design verification.
    bun run find -- --section design-galleries landing
    ```
 
-4. Open each shortlisted doc in `docs/design/<section>/<slug>.md`. Check
+4. Open each shortlisted doc in `catalogue/tools/<section>/<slug>.md`. Check
    "Paywall and pricing" (licence for client work!), "How to use" and "Agent
    notes" (framework requirements, gotchas).
 5. Output a stack table: layer, tool, paywall, why, doc link. One pick per layer

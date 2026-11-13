@@ -14,7 +14,7 @@ collection of effects to install. Keep judgment in the existing coding agent.
 ## Resolve the source and target
 
 If the user supplied a source path or `TOLONG_DESIGN`, use that explicit source.
-A checkout has `data/catalogue.json` and `scripts/design.ts`; an installed
+A checkout has `catalogue/catalogue.json` and `scripts/design.ts`; an installed
 release has the catalogue and `dist/design.js`.
 
 Otherwise, when `tolongdesign` is available, run `tolongdesign doctor --json`.
