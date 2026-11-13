@@ -18,8 +18,8 @@ import {
   writeFileSync
 } from 'node:fs'
 import { dirname, isAbsolute, join, parse as parsePath, relative, resolve, sep } from 'node:path'
-import { parse as parseYaml } from 'yaml'
 import { loadResources } from '../../src/core/loader'
+import { SKILLS_DIRECTORY, consumerSkillNames } from '../../src/core/skill'
 
 export type ReleaseBuildResult = {
   version: string
@@ -36,9 +36,6 @@ const CHECKSUM_FILE = 'SHA256SUMS'
 /** Release payload, by directory. Adding a doc or a consumer skill needs no edit here. */
 const SOURCE_DIRECTORIES = ['catalogue'] as const
 const PACKAGE_README_SOURCE = 'docs/cli.md'
-const SKILLS_DIRECTORY = 'skills'
-const SKILL_ENTRY = 'SKILL.md'
-const SKILL_AUDIENCES = ['consumer', 'checkout', 'maintainer'] as const
 
 type SourceStat = {
   absolutePath: string
@@ -220,54 +217,9 @@ function copySourceTree(root: string, packageDir: string, directory: string): vo
   visit(directory)
 }
 
-function skillNames(root: string): string[] {
-  const skills = inspectSourcePath(root, SKILLS_DIRECTORY, 'directory')
-  let entries
-  try {
-    entries = readdirSync(skills.absolutePath, { withFileTypes: true })
-  } catch (error) {
-    throw new Error(`skills directory cannot be read: ${describeError(error)}`)
-  }
-
-  const names: string[] = []
-  for (const entry of entries) {
-    const relativePath = `${SKILLS_DIRECTORY}/${entry.name}`
-    const inspected = inspectSourceEntry(root, relativePath)
-    if (inspected.kind !== 'directory') throw new Error(`skill input must be a directory: ${relativePath}`)
-    names.push(entry.name)
-  }
-  return names.sort()
-}
-
-function readSkillAudience(root: string, name: string): string {
-  const relativePath = `${SKILLS_DIRECTORY}/${name}/${SKILL_ENTRY}`
-  const raw = readSourceFile(root, relativePath).toString('utf8')
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n/)
-  if (!match) throw new Error(`skill is missing YAML frontmatter: ${relativePath}`)
-
-  let metadata: unknown
-  try {
-    metadata = parseYaml(match[1])
-  } catch (error) {
-    throw new Error(`skill frontmatter is not valid YAML: ${relativePath}: ${describeError(error)}`)
-  }
-  if (typeof metadata !== 'object' || metadata === null || Array.isArray(metadata)) {
-    throw new Error(`skill frontmatter must be a mapping: ${relativePath}`)
-  }
-  const nested = (metadata as Record<string, unknown>).metadata
-  const audience =
-    typeof nested === 'object' && nested !== null && !Array.isArray(nested)
-      ? (nested as Record<string, unknown>).audience
-      : undefined
-  if (typeof audience !== 'string' || !(SKILL_AUDIENCES as readonly string[]).includes(audience)) {
-    throw new Error(`skill ${name} has unknown metadata.audience: ${relativePath}`)
-  }
-  return audience
-}
-
 /** Consumer skills ship in the release; checkout and maintainer skills stay in the source checkout. */
 function consumerSkills(root: string): string[] {
-  return skillNames(root).filter((name) => readSkillAudience(root, name) === 'consumer')
+  return consumerSkillNames(root)
 }
 
 function assertSkillMirrors(root: string): void {

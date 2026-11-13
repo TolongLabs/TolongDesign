@@ -76,7 +76,11 @@ Bun is the package manager and runtime.
 bun install                 # once
 bun run check               # validate every doc against the catalogue + template (must pass)
 bun run index               # regenerate all indexes and catalogue/index.json from frontmatter
-bun run design -- search [<text>] [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--mode registry,package] [--surface web-ui] [--include-unreachable] [--format card] [--agent] [--oss] [--json]
+bun run design -- search [<text>] [--kind tool|research|skill] [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--mode registry,package] [--surface web-ui] [--include-unreachable] [--format card] [--agent] [--oss] [--json]
+bun run design -- show <id> [--json] # tool, research/<slug> or skill/<name>
+bun run design -- context <id...> --brief "<text>" [--json]
+bun run design -- skill list [--json]
+bun run design -- skill show <name> [--json]
 bun run links [-- <section>] # HTTP-check external links in docs (403/429 = bot-blocked, ignore)
 bun run links -- --status --json # suggest resource status from primary URLs; never edits docs
 bun run format              # prettier

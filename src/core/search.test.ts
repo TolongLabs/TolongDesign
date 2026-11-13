@@ -2,7 +2,7 @@ import { afterEach, describe, expect, test } from 'bun:test'
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
-import { loadResources } from './loader'
+import { loadAllResources, loadResources } from './loader'
 import { UsageError } from './schema'
 import { rankDocuments, searchResources, type SearchDocument } from './search'
 
@@ -690,5 +690,72 @@ describe('extended SearchOptions validation and filtering (#6, #8-#11)', () => {
 
     const noMatch = searchResources(resources, 'tag token', { tag: 'missing-tag' })
     expect(noMatch.results).toEqual([])
+  })
+
+  test('filters by kind defaulting to tool, supports comma-separated kinds, and ignores non-tools when paywall is set', () => {
+    const fixture = createSearchFixtureRoot([
+      {
+        name: 'Mesh Tool',
+        slug: 'mesh-tool',
+        sectionSlug: '3d-assets',
+        body: '3d model tool body'
+      }
+    ])
+    const researchDir = join(fixture.root, 'catalogue/research')
+    mkdirSync(researchDir, { recursive: true })
+    writeFileSync(
+      join(researchDir, 'spline-study.md'),
+      [
+        '---',
+        'title: "Spline 3D Model Study"',
+        'summary: "Research for 3d model workflows."',
+        'last_verified: "2026-10-15"',
+        '---',
+        '',
+        '# Spline 3D Model Study',
+        '',
+        'Research for 3d model workflows.'
+      ].join('\n'),
+      'utf8'
+    )
+    const skillDir = join(fixture.root, 'skills/build-3d-model')
+    mkdirSync(skillDir, { recursive: true })
+    writeFileSync(
+      join(skillDir, 'SKILL.md'),
+      [
+        '---',
+        'name: build-3d-model',
+        'audience: consumer',
+        'description: Create or produce a 3D model from text or image.',
+        '---',
+        '',
+        '# build-3d-model',
+        '',
+        'Use when generating a 3d model.'
+      ].join('\n'),
+      'utf8'
+    )
+
+    const all = loadAllResources(fixture.root)
+
+    const defaultSearch = searchResources(all, '3d model')
+    expect(defaultSearch.results.map((r) => r.kind)).toEqual(['tool'])
+    expect(defaultSearch.results.map((r) => r.id)).toEqual(['3d-assets/mesh-tool'])
+
+    const skillSearch = searchResources(all, '3d model', { kind: 'skill' })
+    expect(skillSearch.results.map((r) => [r.kind, r.id])).toEqual([['skill', 'skill/build-3d-model']])
+
+    const researchSearch = searchResources(all, '3d model', { kind: 'research' })
+    expect(researchSearch.results.map((r) => [r.kind, r.id])).toEqual([['research', 'research/spline-study']])
+
+    const combined = searchResources(all, '3d model', { kind: 'skill,research' })
+    expect(combined.results.map((r) => r.id).sort()).toEqual(['research/spline-study', 'skill/build-3d-model'])
+
+    const paywallMulti = searchResources(all, '3d model', { kind: 'tool,skill', paywall: 'free' })
+    expect(paywallMulti.results.map((r) => r.id)).toEqual(['3d-assets/mesh-tool'])
+
+    expect(() => searchResources(all, '3d model', { kind: '' })).toThrow(UsageError)
+    expect(() => searchResources(all, '3d model', { kind: 'bogus' })).toThrow(UsageError)
+    expect(() => searchResources(all, '3d model', { kind: 'tool,tool' })).toThrow(UsageError)
   })
 })

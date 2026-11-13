@@ -1,11 +1,13 @@
 import { describe, expect, test } from 'bun:test'
 import {
   EXECUTION_MODES,
+  RESOURCE_KINDS,
   STATUSES,
   SURFACES,
   STACKS,
   normalizeStack,
   validatePeople,
+  validateResearchMeta,
   validateResourceMeta
 } from './schema'
 
@@ -472,5 +474,30 @@ describe('schema boundary regressions', () => {
       expect(validatePeople([{ ...person, created_tools_evidence: invalid }], []).length).toBeGreaterThan(0)
     }
     expect(validatePeople([{ ...person, created_tools_evidence: {} }], [])).toEqual([])
+  })
+})
+
+describe('entry kinds and research metadata', () => {
+  test('defines supported resource kinds', () => {
+    expect(RESOURCE_KINDS).toEqual(['tool', 'research', 'skill'])
+  })
+
+  test('accepts valid research metadata and rejects missing or malformed fields', () => {
+    const path = 'catalogue/research/sample.md'
+    expect(
+      validateResearchMeta(
+        {
+          title: 'Sample Research Study',
+          summary: 'Summary of the findings.',
+          last_verified: '2026-10-15'
+        },
+        path
+      )
+    ).toEqual([])
+
+    const errors = validateResearchMeta({ title: '', last_verified: '10/15/2026' }, path)
+    expect(errors.some((e) => e.includes('title'))).toBe(true)
+    expect(errors.some((e) => e.includes('summary'))).toBe(true)
+    expect(errors.some((e) => e.includes('last_verified'))).toBe(true)
   })
 })

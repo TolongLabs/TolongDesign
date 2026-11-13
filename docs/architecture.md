@@ -80,23 +80,38 @@ shape, dates, IDs and evidence coverage. It does not fetch the attribution
 source or judge the quote's truth. A maintainer must verify that evidence.
 Missing links mean unresearched, not “this person made nothing.”
 
+Research documents under `catalogue/research/<slug>.md` (`kind: 'research'`, ID
+`research/<slug>`) carry minimal frontmatter (`title`, `summary`,
+`last_verified`). Skill guides under `skills/<name>/SKILL.md` (`kind: 'skill'`,
+ID `skill/<name>`) expose `name`, `description` and `audience` from skill
+frontmatter.
+
 ## Resource loading
 
 The loader performs these steps for each CLI operation that needs resources:
 
 1. Resolve the root and `catalogue/catalogue.json`; require nonempty
-   registration fields and a valid `tools[]` array.
-2. Restrict doc paths to `catalogue/tools/`: reject absolute/drive paths,
-   backslashes, controls, empty/dot/traversal segments and resolved escapes.
-3. Read each **registered** document, decode UTF-8, parse YAML frontmatter and
-   compute SHA-256 over the original bytes.
-4. Build resource records and derive the first supported shell block under How
-   to use as `meta.install`.
+   registration fields and a valid `tools[]` array when `tool` entries are
+   requested.
+2. Restrict registered tool doc paths to `catalogue/tools/` and research paths
+   to `catalogue/research/`: reject absolute/drive paths, backslashes, controls,
+   empty/dot/traversal segments and resolved escapes (including symlinks).
+3. Read each document, decode UTF-8, parse YAML frontmatter and compute SHA-256
+   over the original bytes.
+4. Build resource records with explicit `kind` (`tool`, `research` or `skill`)
+   and derive the first supported shell block under How to use as `meta.install`
+   for tools.
+
+`loadResources(root, { kinds })` defaults to `['tool']` for index generation and
+manifest checks; `loadAllResources(root)` loads `tool`, `research` and `skill`
+entries for runtime CLI commands. `collections/knowledge/` stays out of the
+index.
 
 The runtime loader is defensive, but it is not the full maintenance validator.
 Some missing legacy metadata has fallbacks; malformed YAML or a non-mapping
 frontmatter is a data error. Run `bun run check` before treating authored data
-as compliant. Unregistered Markdown is not automatically included in search.
+as compliant. Unregistered tool Markdown is not automatically included in
+search.
 
 ## Search and ranking
 
@@ -112,9 +127,10 @@ embedding store or network service participates.
 | Filter                   | Behavior                                                                                                                                  |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Availability             | `unreachable` excluded unless `--include-unreachable`; `degraded` stays visible.                                                          |
+| `--kind`                 | Comma-separated OR over `tool`, `research`, `skill`. Defaults to `tool`. Empty, repeated or unknown values are usage errors.              |
 | `--mode`, `--surface`    | Comma-separated OR values within a flag; different flags combine with AND. Empty, repeated or unknown vocabulary values are usage errors. |
 | `--stack`                | Canonicalize documented aliases before matching, e.g. `framer-motion` → `motion`, `radix-ui` → `radix`.                                   |
-| `--section`, `--paywall` | Section slug/name and normalized paywall matching.                                                                                        |
+| `--section`, `--paywall` | Section slug/name and normalized paywall matching (`--paywall` matches `tool` entries only).                                              |
 | `--agent`, `--oss`       | Require explicit `true`; absent/unknown is not accepted as true.                                                                          |
 | `--tag`                  | Exact tag/category-tag matching.                                                                                                          |
 
@@ -168,14 +184,16 @@ latency, memory or maximum-catalogue-size SLA is established.
 
 ## CLI contracts
 
-| Command                | Input / output contract                                                                                                 |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `design search <text>` | Default 10 results; JSON object or human-readable excerpts/cards. `total` is the number matched before limiting.        |
-| `find [text]`          | Alias for `search`, so it keeps the old name and empty-query behaviour; same JSON shape as `search`.                    |
-| `show <id>`            | Exact qualified ID, or unique unqualified slug. Plain mode returns full Markdown; JSON returns the loaded resource.     |
-| `context <id>...`      | Exact resolution; preserve first request order; deduplicate repeated resources; full Markdown plus provenance/warnings. |
-| `doctor [--json]`      | Version/root/resource count, skill paths and explicit checkout/release integrity state.                                 |
-| `--version`            | Package version. This alone does not prove a checkout matches a published release with the same version.                |
+| Command                | Input / output contract                                                                                                      |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `design search <text>` | Default 10 results (`--kind tool` default); JSON object or human-readable excerpts/cards. `total` is matched before limit.   |
+| `find [text]`          | Alias for `search`, so it keeps the old name and empty-query behaviour; same JSON shape as `search`.                         |
+| `show <id>`            | Exact qualified ID (`<section>/<slug>`, `research/<slug>`, `skill/<name>`), or unique slug. Plain Markdown or JSON resource. |
+| `context <id>...`      | Exact resolution; preserve first request order; deduplicate repeated resources; full Markdown plus provenance/warnings.      |
+| `skill list [--json]`  | Lists skills under `skills/<name>/SKILL.md` with audience, description, `doc` and sorted reference file paths.               |
+| `skill show <name>`    | Prints `SKILL.md` and reference file list (plain) or `SkillDetail` JSON (`--json`). Works from installed releases too.       |
+| `doctor [--json]`      | Version/root/resource count, skill paths and explicit checkout/release integrity state.                                      |
+| `--version`            | Package version. This alone does not prove a checkout matches a published release with the same version.                     |
 
 `search` is the only search command; `find` is an alias for it. `--json` and
 `--format card` are mutually exclusive. `--limit` must be a positive safe
@@ -207,14 +225,22 @@ Resource
 context --json
 { schema_version: 1, brief: string | null,
   resources: ContextResource[], warnings: string[] }
+
+skill list --json
+{ skills: SkillSummary[] }
+
+skill show <name> --json
+SkillDetail
 ```
 
-| Record             | Fields                                                                                                                                                                       |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `SearchResource`   | `id`, `name`, `section_slug`, `slug`, `paywall`, `agent_friendly`, `source_url`, `last_verified`, `doc`, `matched_terms`, `excerpt`. Excerpts are bounded to 240 characters. |
-| `Resource`         | Identity/source fields plus `sha256`, complete `markdown`, `paywall`, `agent_friendly`, `open_source`, extensible `meta`.                                                    |
-| `ContextResource`  | `id`, `name`, `section_slug`, `slug`, `doc`, `source_url`, `last_verified`, `sha256`, complete `markdown`.                                                                   |
-| `InstallationInfo` | `schema_version: 1`, `version`, `runtime: bun`, `mode`, `root`, `resources`, `manifest_verified`, `skill_paths`, `warnings`.                                                 |
+| Record             | Fields                                                                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `SearchResource`   | `kind`, `id`, `name`, `section_slug`, `slug`, `paywall`, `agent_friendly`, `source_url`, `last_verified`, `doc`, `matched_terms`, `excerpt`. Excerpts are bounded to 240 characters. |
+| `Resource`         | `kind`, identity/source fields plus `sha256`, complete `markdown`, `paywall`, `agent_friendly`, `open_source`, extensible `meta`.                                                    |
+| `ContextResource`  | `kind`, `id`, `name`, `section_slug`, `slug`, `doc`, `source_url`, `last_verified`, `sha256`, complete `markdown`.                                                                   |
+| `SkillSummary`     | `kind: 'skill'`, `id`, `name`, `slug`, `audience`, `description`, `doc`, `references`.                                                                                               |
+| `SkillDetail`      | `SkillSummary` plus `sha256`, complete `markdown`.                                                                                                                                   |
+| `InstallationInfo` | `schema_version: 1`, `version`, `runtime: bun`, `mode`, `root`, `resources`, `manifest_verified`, `skill_paths`, `warnings`.                                                         |
 
 Source URLs/dates can be null in runtime records when unknown. Read the exported
 TypeScript types in [`src/core/schema.ts`](../src/core/schema.ts) and
@@ -436,16 +462,16 @@ arbitrary agent execution loop is part of this system.
 
 ## Source map
 
-| Responsibility               | Implementation                                                                                                                                                                                                              |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CLI grammar and errors       | [`src/cli/main.ts`](../src/cli/main.ts) · [`src/cli/args.ts`](../src/cli/args.ts)                                                                                                                                           |
-| Loading, filters and context | [`src/core/loader.ts`](../src/core/loader.ts) · [`src/core/search.ts`](../src/core/search.ts) · [`src/core/context.ts`](../src/core/context.ts) · [`src/core/card.ts`](../src/core/card.ts)                                 |
-| Field derivation and schema  | [`src/core/fields.ts`](../src/core/fields.ts) · [`src/core/schema.ts`](../src/core/schema.ts) · [`scripts/check-docs.ts`](../scripts/check-docs.ts)                                                                         |
-| Index and cards              | [`scripts/build-index.ts`](../scripts/build-index.ts) · [`src/core/fields.ts`](../src/core/fields.ts)                                                                                                                       |
-| Availability                 | [`scripts/check-links.ts`](../scripts/check-links.ts) · [`scripts/link-check-lib.ts`](../scripts/link-check-lib.ts) · [`scripts/relative-markdown-links.ts`](../scripts/relative-markdown-links.ts)                         |
-| Package and diagnostics      | [`scripts/release/lib.ts`](../scripts/release/lib.ts) · [`scripts/release/build.ts`](../scripts/release/build.ts) · [`scripts/release/smoke.ts`](../scripts/release/smoke.ts) · [`src/cli/doctor.ts`](../src/cli/doctor.ts) |
-| Fixtures and evaluation      | [`src/core/search-eval.test.ts`](../src/core/search-eval.test.ts) · [`src/core/fixtures/search-queries.json`](../src/core/fixtures/search-queries.json)                                                                     |
-| CI                           | [Verify](../.github/workflows/verify.yml) · [Release](../.github/workflows/release.yml)                                                                                                                                     |
+| Responsibility               | Implementation                                                                                                                                                                                                                            |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CLI grammar and errors       | [`src/cli/main.ts`](../src/cli/main.ts) · [`src/cli/args.ts`](../src/cli/args.ts)                                                                                                                                                         |
+| Loading, filters and context | [`src/core/loader.ts`](../src/core/loader.ts) · [`src/core/skill.ts`](../src/core/skill.ts) · [`src/core/search.ts`](../src/core/search.ts) · [`src/core/context.ts`](../src/core/context.ts) · [`src/core/card.ts`](../src/core/card.ts) |
+| Field derivation and schema  | [`src/core/fields.ts`](../src/core/fields.ts) · [`src/core/schema.ts`](../src/core/schema.ts) · [`scripts/check-docs.ts`](../scripts/check-docs.ts)                                                                                       |
+| Index and cards              | [`scripts/build-index.ts`](../scripts/build-index.ts) · [`src/core/fields.ts`](../src/core/fields.ts)                                                                                                                                     |
+| Availability                 | [`scripts/check-links.ts`](../scripts/check-links.ts) · [`scripts/link-check-lib.ts`](../scripts/link-check-lib.ts) · [`scripts/relative-markdown-links.ts`](../scripts/relative-markdown-links.ts)                                       |
+| Package and diagnostics      | [`scripts/release/lib.ts`](../scripts/release/lib.ts) · [`scripts/release/build.ts`](../scripts/release/build.ts) · [`scripts/release/smoke.ts`](../scripts/release/smoke.ts) · [`src/cli/doctor.ts`](../src/cli/doctor.ts)               |
+| Fixtures and evaluation      | [`src/core/search-eval.test.ts`](../src/core/search-eval.test.ts) · [`src/core/fixtures/search-queries.json`](../src/core/fixtures/search-queries.json)                                                                                   |
+| CI                           | [Verify](../.github/workflows/verify.yml) · [Release](../.github/workflows/release.yml)                                                                                                                                                   |
 
 Diagrams are Archify-generated snapshots; each source JSON records its evidence
 revision. [Diagram sources](./diagrams/README.md) explain how to inspect them.

@@ -4,7 +4,7 @@ import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import { buildContext, renderContext, resolveResource } from './context'
-import { loadResources } from './loader'
+import { loadAllResources, loadResources } from './loader'
 import { DataError, UsageError } from './schema'
 
 type FixtureTool = {
@@ -191,7 +191,7 @@ describe('design resource resolution and context', () => {
     expect(resource?.sha256).toBe(createHash('sha256').update(markdown, 'utf8').digest('hex'))
     expect(resource?.source_url).toBe('https://example.test/motion/hash-fixture')
     expect(Object.keys(resource ?? {}).sort()).toEqual(
-      ['id', 'name', 'section_slug', 'slug', 'doc', 'source_url', 'last_verified', 'sha256', 'markdown'].sort()
+      ['kind', 'id', 'name', 'section_slug', 'slug', 'doc', 'source_url', 'last_verified', 'sha256', 'markdown'].sort()
     )
     expect(Object.keys(pack).sort()).toEqual(['schema_version', 'brief', 'resources', 'warnings'].sort())
   })
@@ -324,4 +324,50 @@ describe('context verification and licensing warnings', () => {
       expect(warnings).not.toEqual(currentFree)
     })
   }
+
+  test('resolves research and skill resources in context without tool paywall warnings', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Fresh Tool',
+        slug: 'fresh-tool',
+        sectionSlug: 'motion',
+        frontmatter: { last_verified: '2026-10-11', paywall: 'free' }
+      }
+    ])
+    const researchDir = join(fixture.root, 'catalogue/research')
+    mkdirSync(researchDir, { recursive: true })
+    writeFileSync(
+      join(researchDir, 'motion-study.md'),
+      [
+        '---',
+        'title: "Motion Study"',
+        'summary: "Findings summary."',
+        'last_verified: "2026-10-11"',
+        '---',
+        '',
+        '# Motion Study',
+        '',
+        'Study prose.'
+      ].join('\n'),
+      'utf8'
+    )
+    const skillDir = join(fixture.root, 'skills/design-project')
+    mkdirSync(skillDir, { recursive: true })
+    writeFileSync(
+      join(skillDir, 'SKILL.md'),
+      ['---', 'name: design-project', 'audience: consumer', 'description: Design workflow.', '---', '', '# Guide'].join(
+        '\n'
+      ),
+      'utf8'
+    )
+
+    const all = loadAllResources(fixture.root)
+    const pack = buildContext(all, ['research/motion-study', 'skill/design-project'], 'Test brief', warningDate)
+
+    expect(pack.warnings).toEqual([])
+    expect(pack.resources.map((r) => [r.kind, r.id])).toEqual([
+      ['research', 'research/motion-study'],
+      ['skill', 'skill/design-project']
+    ])
+  })
 })

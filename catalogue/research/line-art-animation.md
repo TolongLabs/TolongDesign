@@ -1,3 +1,12 @@
+---
+title: 'line-art-animation: teardown and the TolongLabs rebuild'
+summary:
+  'Research note for JDhruv14/line-art-animation, commit c43d698 (2026-11-10),
+  MIT, read 2026-11-12. It records how the original works, which ideas carry the
+  style, and what TolongLabs built in collections/line-art.'
+last_verified: 2026-11-12
+---
+
 # line-art-animation: teardown and the TolongLabs rebuild
 
 Research note for

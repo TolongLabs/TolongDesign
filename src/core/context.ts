@@ -47,22 +47,27 @@ function verificationDate(value: unknown): { state: 'missing' | 'invalid' | 'val
 
 function warningsFor(resource: Resource, now: Date): string[] {
   const warnings: string[] = []
-  if (resource.paywall === 'unknown') warnings.push(`${resource.id}: paywall is unknown; verify access and pricing.`)
-  if (resource.paywall === 'paid' || resource.paywall === 'freemium') {
-    warnings.push(`${resource.id}: check current licensing terms before paid or freemium use.`)
+  const kind = resource.kind ?? 'tool'
+  if (kind === 'tool') {
+    if (resource.paywall === 'unknown') warnings.push(`${resource.id}: paywall is unknown; verify access and pricing.`)
+    if (resource.paywall === 'paid' || resource.paywall === 'freemium') {
+      warnings.push(`${resource.id}: check current licensing terms before paid or freemium use.`)
+    }
   }
 
-  const checked = verificationDate(resource.meta.last_verified)
-  if (checked.state === 'missing') {
-    warnings.push(`${resource.id}: last_verified date is missing.`)
-  } else if (checked.state === 'invalid') {
-    warnings.push(`${resource.id}: last_verified date is invalid.`)
-  } else if (checked.time !== undefined) {
-    const today = Date.parse(`${now.toISOString().slice(0, 10)}T00:00:00.000Z`)
-    if (checked.time > today) {
-      warnings.push(`${resource.id}: last_verified date is in the future.`)
-    } else if (today - checked.time > 90 * DAY_MS) {
-      warnings.push(`${resource.id}: last_verified date is older than 90 days.`)
+  if (kind === 'tool' || kind === 'research') {
+    const checked = verificationDate(resource.meta.last_verified ?? resource.last_verified)
+    if (checked.state === 'missing') {
+      warnings.push(`${resource.id}: last_verified date is missing.`)
+    } else if (checked.state === 'invalid') {
+      warnings.push(`${resource.id}: last_verified date is invalid.`)
+    } else if (checked.time !== undefined) {
+      const today = Date.parse(`${now.toISOString().slice(0, 10)}T00:00:00.000Z`)
+      if (checked.time > today) {
+        warnings.push(`${resource.id}: last_verified date is in the future.`)
+      } else if (today - checked.time > 90 * DAY_MS) {
+        warnings.push(`${resource.id}: last_verified date is older than 90 days.`)
+      }
     }
   }
   return warnings
@@ -94,6 +99,7 @@ export function buildContext(
     schema_version: 1,
     brief: brief ?? null,
     resources: selected.map((resource) => ({
+      kind: resource.kind ?? 'tool',
       id: resource.id,
       name: resource.name,
       section_slug: resource.section_slug,
@@ -119,6 +125,7 @@ function safeFence(content: string, language = ''): string {
 /** Render a complete, provenance-backed context pack without truncating its source documents. */
 export function renderContext(pack: ContextPack): string {
   const manifest = pack.resources.map((resource) => ({
+    kind: resource.kind,
     id: resource.id,
     name: resource.name,
     doc: resource.doc,

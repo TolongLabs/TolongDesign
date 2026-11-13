@@ -1,3 +1,12 @@
+---
+title: 'ICQR Magic Tree study'
+summary:
+  'Checked 2026-10-11. This study uses REA to distinguish published
+  descriptions, actual browser evidence, and unverified behavior at
+  tree.icqr.com.'
+last_verified: 2026-10-11
+---
+
 # ICQR Magic Tree study
 
 Checked 2026-10-11. This study uses REA to distinguish published descriptions,

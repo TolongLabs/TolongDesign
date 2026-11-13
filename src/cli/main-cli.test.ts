@@ -338,4 +338,68 @@ describe('unified search command (find alias)', () => {
       )
     ).toBe(true)
   })
+
+  test('supports --kind in search with tool default and carries kind in every JSON output', () => {
+    const skillRes = runCli(['search', '3d model', '--kind', 'skill', '--json'])
+    expect(skillRes.code).toBe(0)
+    const skillJson = JSON.parse(skillRes.stdout)
+    expect(
+      skillJson.results.some((r: { kind: string; id: string }) => r.kind === 'skill' && r.id === 'skill/build-3d-model')
+    ).toBe(true)
+
+    const researchRes = runCli(['search', 'spline', '--kind', 'research', '--json'])
+    expect(researchRes.code).toBe(0)
+    const researchJson = JSON.parse(researchRes.stdout)
+    expect(
+      researchJson.results.some(
+        (r: { kind: string; id: string }) => r.kind === 'research' && r.id === 'research/spline-3d-design'
+      )
+    ).toBe(true)
+
+    const badKind = runCli(['search', 'scroll', '--kind', 'invalid'])
+    expect(badKind.code).toBe(2)
+    expect(badKind.stdout).toBe('')
+    expect(badKind.stderr).toContain('--kind')
+  })
+
+  test('supports skill list, skill show, and research/skill IDs in show and context', () => {
+    const listRes = runCli(['skill', 'list', '--json'])
+    expect(listRes.code).toBe(0)
+    const listJson = JSON.parse(listRes.stdout)
+    expect(
+      listJson.skills.some((s: { kind: string; slug: string }) => s.kind === 'skill' && s.slug === 'design-project')
+    ).toBe(true)
+
+    const showSkillRes = runCli(['skill', 'show', 'design-project'])
+    expect(showSkillRes.code).toBe(0)
+    expect(showSkillRes.stdout).toContain('design-project')
+    expect(showSkillRes.stdout).toContain('skills/design-project/workflow.md')
+
+    const showSkillJsonRes = runCli(['skill', 'show', 'design-project', '--json'])
+    expect(showSkillJsonRes.code).toBe(0)
+    const showSkillJson = JSON.parse(showSkillJsonRes.stdout)
+    expect(showSkillJson.kind).toBe('skill')
+    expect(showSkillJson.references).toContain('skills/design-project/workflow.md')
+
+    const showResearch = runCli(['show', 'research/spline-3d-design', '--json'])
+    expect(showResearch.code).toBe(0)
+    expect(JSON.parse(showResearch.stdout).kind).toBe('research')
+
+    const ctxRes = runCli(['context', 'research/spline-3d-design', 'skill/design-project', '--json'])
+    expect(ctxRes.code).toBe(0)
+    const ctxJson = JSON.parse(ctxRes.stdout)
+    expect(ctxJson.resources.map((r: { kind: string; id: string }) => [r.kind, r.id])).toEqual([
+      ['research', 'research/spline-3d-design'],
+      ['skill', 'skill/design-project']
+    ])
+
+    const ambiguous = runCli(['show', 'line-art-animation'])
+    expect(ambiguous.code).toBe(2)
+    expect(ambiguous.stdout).toBe('')
+    expect(ambiguous.stderr).toContain('ambiguous')
+
+    const badSkillCmd = runCli(['skill', 'bogus'])
+    expect(badSkillCmd.code).toBe(2)
+    expect(badSkillCmd.stdout).toBe('')
+  })
 })

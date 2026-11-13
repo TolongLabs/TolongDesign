@@ -1,3 +1,11 @@
+---
+title: 'Spline (spline.design) 3D design + AI generation — research notes'
+summary:
+  'Research date: 2026-10-25. Groundwork for building a similar web-based 3D
+  editor with 3D model generation.'
+last_verified: 2026-10-25
+---
+
 # Spline (spline.design) 3D design + AI generation — research notes
 
 Research date: 2026-10-25. Groundwork for building a similar web-based 3D editor

@@ -12,13 +12,14 @@ import {
 } from 'node:fs'
 import { delimiter, dirname, isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { tmpdir } from 'node:os'
+import { consumerSkillNames } from '../../src/core/skill'
 
 type RecordValue = Record<string, unknown>
 type ArchiveEntry = { name: string; filePath: string; kind: 'file' | 'directory' }
 
 const decode = (bytes: Uint8Array) => new TextDecoder().decode(bytes)
 const hash = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex')
-const CONSUMER_SKILLS = ['design-project', 'pick-design-stack', 'build-3d-model'] as const
+const CONSUMER_SKILLS = consumerSkillNames(resolve(import.meta.dir, '..', '..'))
 
 function fail(message: string): never {
   throw new Error(message)
@@ -398,6 +399,55 @@ function runSmoke(archivePath: string) {
       if (resource.markdown !== decode(bytes) || resource.sha256 !== hash(bytes)) {
         fail(`context ${expected.slug} Markdown or SHA256 does not match installed source bytes`)
       }
+      if (resource.kind !== 'tool') {
+        fail(`context ${expected.slug} did not report kind=tool`)
+      }
+    }
+
+    const skillShow = runInstalled(install.binary, ['skill', 'show', 'design-project'], install.foreignCwd, install.env)
+    if (
+      skillShow.code !== 0 ||
+      skillShow.stderr !== '' ||
+      !skillShow.stdout.includes('# Design a project') ||
+      !skillShow.stdout.includes('skills/design-project/workflow.md')
+    ) {
+      fail('installed skill show design-project failed')
+    }
+
+    const skillShowJson = runInstalled(
+      install.binary,
+      ['skill', 'show', 'design-project', '--json'],
+      install.foreignCwd,
+      install.env
+    )
+    if (skillShowJson.code !== 0 || skillShowJson.stderr !== '') fail('installed skill show --json failed')
+    const skillJson = JSON.parse(skillShowJson.stdout) as RecordValue
+    if (skillJson.kind !== 'skill' || skillJson.slug !== 'design-project') {
+      fail('installed skill show --json did not return kind=skill')
+    }
+
+    const skillSearch = runInstalled(
+      install.binary,
+      ['search', '3d model', '--kind', 'skill', '--json'],
+      install.foreignCwd,
+      install.env
+    )
+    if (skillSearch.code !== 0 || skillSearch.stderr !== '') fail('installed skill search failed')
+    const skillSearchJson = JSON.parse(skillSearch.stdout) as { results?: Array<RecordValue> }
+    if (!Array.isArray(skillSearchJson.results) || !skillSearchJson.results.some((r) => r.slug === 'build-3d-model' && r.kind === 'skill')) {
+      fail('installed skill search did not return build-3d-model with kind=skill')
+    }
+
+    const researchShow = runInstalled(
+      install.binary,
+      ['show', 'research/spline-3d-design', '--json'],
+      install.foreignCwd,
+      install.env
+    )
+    if (researchShow.code !== 0 || researchShow.stderr !== '') fail('installed research show failed')
+    const researchJson = JSON.parse(researchShow.stdout) as RecordValue
+    if (researchJson.kind !== 'research' || researchJson.id !== 'research/spline-3d-design') {
+      fail('installed research show --json did not return kind=research')
     }
 
     for (const args of [

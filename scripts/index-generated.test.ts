@@ -22,7 +22,7 @@ mkdirSync(join(fixture, 'src', 'core'), { recursive: true })
 mkdirSync(join(fixture, 'catalogue'), { recursive: true })
 mkdirSync(join(fixture, 'catalogue/tools/component-libraries'), { recursive: true })
 cpSync(join(root, 'scripts', 'build-index.ts'), join(fixture, 'scripts', 'build-index.ts'))
-for (const file of ['schema.ts', 'fields.ts', 'loader.ts'])
+for (const file of ['schema.ts', 'fields.ts', 'loader.ts', 'skill.ts'])
   cpSync(join(root, 'src', 'core', file), join(fixture, 'src', 'core', file))
 symlinkSync(join(root, 'node_modules'), join(fixture, 'node_modules'), 'dir')
 writeFileSync(
