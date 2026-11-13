@@ -25,11 +25,11 @@ a checkout, the `.claude/skills` and `.agents/skills` mirrors are symlinks to
 the same source. This feature does not silently install skills into another
 project or change global agent settings.
 
-For checkout mode, install locked dependencies and set `TOLONG_DESIGN` to the
-private checkout. Replace `tolongdesign` in the examples with
-`bun "$TOLONG_DESIGN/scripts/design.ts"`. Checkout diagnostics identify that
-mode and do not claim release integrity. Preserve an explicit source/version
-instead of mixing a checkout with a different globally installed binary.
+For checkout mode, install locked dependencies and run the examples from the
+private checkout with `bun run design -- …` in place of `tolongdesign`. Checkout
+diagnostics identify that mode and do not claim release integrity. Preserve an
+explicit source/version instead of mixing a checkout with a different globally
+installed binary.
 
 ## 1. Brief and constraints
 

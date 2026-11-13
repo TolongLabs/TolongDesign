@@ -185,3 +185,157 @@ describe('design search cards and query behavior', () => {
     expect(repeatedResults.map((r: { id: string }) => r.id)).toEqual(singleResults.map((r: { id: string }) => r.id))
   })
 })
+
+function runFindAlias(args: string[]) {
+  const result = Bun.spawnSync({
+    cmd: [process.execPath, 'run', 'find', '--', ...args],
+    cwd: sourceRoot,
+    stdout: 'pipe',
+    stderr: 'pipe'
+  })
+
+  return {
+    code: result.exitCode,
+    stdout: decode(result.stdout),
+    stderr: decode(result.stderr)
+  }
+}
+
+// Ported from scripts/find-cli.test.ts when find.ts retired into `search`.
+describe('unified search command (find alias)', () => {
+  test('returns the search JSON object without full markdown', () => {
+    const result = runCli(['search', 'scroll', '--section', 'motion', '--json'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    const parsed = JSON.parse(result.stdout)
+    expect(parsed.query).toBe('scroll')
+    expect(parsed.total).toBeGreaterThan(0)
+    expect(Array.isArray(parsed.results)).toBe(true)
+    const first = parsed.results[0]
+    expect(first).toHaveProperty('name')
+    expect(first).toHaveProperty('slug')
+    expect(first).toHaveProperty('section_slug')
+    expect(first).toHaveProperty('doc')
+    expect(first).not.toHaveProperty('markdown')
+  })
+
+  test('allows empty query text and returns all matching tools', () => {
+    const result = runCli(['search', '--section', 'motion', '--json'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    const parsed = JSON.parse(result.stdout)
+    expect(parsed.query).toBe('')
+    expect(parsed.total).toBeGreaterThan(0)
+    expect(parsed.results.length).toBeGreaterThan(0)
+  })
+
+  test('respects --limit when specified', () => {
+    const result = runCli(['search', '--section', 'motion', '--limit', '2', '--json'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    const parsed = JSON.parse(result.stdout)
+    expect(parsed.results.length).toBe(2)
+  })
+
+  test('renders cards bounded to 320 chars with --format card', () => {
+    const result = runCli(['search', 'lucide', '--section', 'icons', '--format', 'card'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toContain('name:')
+    expect(result.stdout).toContain('id: icons/lucide')
+
+    const cards = result.stdout.trim().split('\n\n')
+    for (const card of cards) {
+      expect(card.length).toBeLessThanOrEqual(320)
+    }
+  })
+
+  test('rejects combining --json with --format card', () => {
+    const result = runCli(['search', 'scroll', '--format', 'card', '--json'])
+
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('--json')
+  })
+
+  test('rejects invalid --format value', () => {
+    const result = runCli(['search', 'scroll', '--format', 'invalid'])
+
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('format')
+  })
+
+  test('rejects unknown flags', () => {
+    const result = runCli(['search', 'scroll', '--unknown-flag'])
+
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('unknown')
+  })
+
+  test('rejects duplicate flags', () => {
+    const result = runCli(['search', 'scroll', '--paywall', 'free', '--paywall', 'paid'])
+
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('more than once')
+  })
+
+  test('outputs default human line format with match count footer', () => {
+    const result = runCli(['search', 'scroll', '--section', 'motion'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toMatch(/\n\d+ match\(es\)\n/)
+  })
+
+  test('returns the same IDs in the same order through the find alias', () => {
+    const findResult = runFindAlias(['scroll', '--section', 'motion', '--limit', '5', '--json'])
+    const designResult = runCli(['search', 'scroll', '--section', 'motion', '--limit', '5', '--json'])
+
+    expect(findResult.code).toBe(0)
+    expect(designResult.code).toBe(0)
+    const findIds = JSON.parse(findResult.stdout).results.map((h: { id: string }) => h.id)
+    const designIds = JSON.parse(designResult.stdout).results.map((h: { id: string }) => h.id)
+
+    expect(findIds).toEqual(designIds)
+  })
+
+  test('filters by tag', () => {
+    const result = runCli(['search', '--tag', 'react', '--section', 'component-libraries', '--json'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    const parsed = JSON.parse(result.stdout)
+    expect(parsed.total).toBeGreaterThan(0)
+    expect(parsed.results.length).toBeGreaterThan(0)
+  })
+
+  test('rejects a search with no text and no filter', () => {
+    const result = runCli(['search'])
+
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('search requires text')
+  })
+
+  test('returns results for section and paywall filters without text', () => {
+    const result = runCli(['search', '--section', 'icons', '--paywall', 'free', '--json'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    const parsed = JSON.parse(result.stdout)
+    expect(parsed.total).toBeGreaterThan(0)
+    expect(
+      parsed.results.every(
+        (resource: { section_slug: string; paywall: string }) =>
+          resource.section_slug === 'icons' && resource.paywall === 'free'
+      )
+    ).toBe(true)
+  })
+})

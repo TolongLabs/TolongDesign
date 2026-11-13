@@ -19,8 +19,9 @@ Unless the brief says otherwise:
 | Motion     | [Motion](../../catalogue/tools/motion/motion.md)                                                                                                                                                      |
 | Deploy     | [Vercel](../../catalogue/tools/deploy/vercel.md) or [Cloudflare](../../catalogue/tools/deploy/cloudflare.md)                                                                                          |
 
-Shortlist anything else with `bun run find` (see the generated
-`catalogue/README.md` for every section).
+Shortlist anything else with `tolongdesign search` (checkout:
+`bun run design -- search …`; see the generated `catalogue/README.md` for every
+section).
 
 ## 1. Collect references (30–60 minutes)
 

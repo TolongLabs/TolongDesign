@@ -24,13 +24,14 @@ table alone is not rendered-design verification.
 1. Read the brief: product type, framework (default: Next.js + React +
    Tailwind), budget (default: **free or freemium only**), audience, tone.
 2. Read [playbook](./playbook.md) for the decision order.
-3. Shortlist per layer with `bun run find` (run `bun run index` first if
+3. Shortlist per layer with `tolongdesign search` (checkout:
+   `bun run design -- search …`; run `bun run index` first if
    `catalogue/index.json` is stale), for example:
 
    ```sh
-   bun run find -- --section component-libraries --surface web-ui --stack react --paywall free
-   bun run find -- --section icons --paywall free
-   bun run find -- --section design-galleries landing
+   tolongdesign search --section component-libraries --surface web-ui --stack react --paywall free
+   tolongdesign search --section icons --paywall free
+   tolongdesign search landing --section design-galleries
    ```
 
 4. Open each shortlisted doc in `catalogue/tools/<section>/<slug>.md`. Check

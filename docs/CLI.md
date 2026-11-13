@@ -52,25 +52,27 @@ tolongdesign context gsap saaspo --brief "Project brief" --json
 Search ranks partial matches across names, tags, intended use and full document
 bodies. Names and structured fields carry more weight than incidental body
 mentions. Exact resource names rank first; no-match queries return no results.
-Both checkout search commands use the same scorer.
 
 ```bash
 tolongdesign search "smooth hero animation" --limit 5 --format card
 tolongdesign search manga --mode browser-app --surface comics --json
 tolongdesign search components --mode registry,package --surface web-ui --stack react
+tolongdesign search --tag react --section component-libraries --json
 ```
 
 `--mode` and `--surface` accept comma-separated OR values; different filters
 combine with AND. `--stack framer-motion` accepts the canonical `motion` alias.
-Unreachable resources are hidden by default; add `--include-unreachable` for a
-repair sweep. [Resource metadata](../catalogue/SCHEMA.md) defines the allowed
-values and their limits.
+The text may be omitted when at least one filter is given
+(`search --section icons --paywall free`). Unreachable resources are hidden by
+default; add `--include-unreachable` for a repair sweep.
+[Resource metadata](../catalogue/SCHEMA.md) defines the allowed values and their
+limits.
 
 `--format card` returns a short name/ID, execution mode, install command or URL,
 one intended use and doc path. Long setup blocks point to the full doc instead
 of becoming truncated commands. `--json --format card` is a usage error. The
-find command retains its JSON array; design search retains its
-`{ query, total, results }` JSON object.
+search JSON output is one `{ query, total, results }` object; `bun run find` is
+an alias for the search command.
 
 Context retains entire selected documents, source URLs, dates, and byte hashes.
 Pricing dates do not certify API compatibility or asset licensing. Check

@@ -26,9 +26,10 @@ Use it two ways:
 1. **As a reference** for any TolongLabs design work: start at
    [docs/README.md](docs/README.md), pick tools with the
    [design playbook](skills/pick-design-stack/playbook.md), filter with
-   `bun run find`. For a use-case-aware design task, invoke `design-project` and
-   follow [the project design workflow](skills/design-project/workflow.md);
-   retrieve complete source context with `bun run design`.
+   `tolongdesign search` (checkout: `bun run design -- search …`). For a
+   use-case-aware design task, invoke `design-project` and follow
+   [the project design workflow](skills/design-project/workflow.md); retrieve
+   complete source context with `bun run design`.
 2. **As a repo to maintain**: add, refresh, or correct tool docs.
 
 ## Layout
@@ -48,7 +49,7 @@ catalogue/SCHEMA.md                 Execution modes, surfaces, status and creato
 collections/<name>/            TolongLabs-owned design code: src, tests, demo, previews (see collections/README.md)
 catalogue/TEMPLATE.md                 The contract every tool doc follows
 skills/add-tool-doc/worker-brief.md   Work order used to fan out doc research to agents
-scripts/                       check-docs.ts, build-index.ts, find.ts, check-links.ts (Bun + TypeScript)
+scripts/                       check-docs.ts, build-index.ts, check-links.ts (Bun + TypeScript)
 graphify-out/                  Knowledge graph of this repo (graph.json, GRAPH_REPORT.md)
 ```
 
@@ -60,7 +61,7 @@ Bun is the package manager and runtime.
 bun install                 # once
 bun run check               # validate every doc against the catalogue + template (must pass)
 bun run index               # regenerate all indexes and catalogue/index.json from frontmatter
-bun run find -- <text> [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--mode registry,package] [--surface web-ui] [--include-unreachable] [--format card] [--agent] [--oss] [--json]
+bun run design -- search [<text>] [--section <slug>] [--paywall free|freemium|paid] [--tag x] [--stack react] [--mode registry,package] [--surface web-ui] [--include-unreachable] [--format card] [--agent] [--oss] [--json]
 bun run links [-- <section>] # HTTP-check external links in docs (403/429 = bot-blocked, ignore)
 bun run links -- --status --json # suggest resource status from primary URLs; never edits docs
 bun run format              # prettier

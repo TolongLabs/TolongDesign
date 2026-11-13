@@ -3,7 +3,7 @@
 TolongLabs' own design code. The rest of this repo documents other people's
 tools in `catalogue/tools/`. A collection is something we built and own. It
 ships with its source, tests, previews and an agent skill, and has a catalogue
-doc so `bun run find` returns it next to third-party options.
+doc so `tolongdesign search` returns it next to third-party options.
 
 | Collection                             | What it is                                                                                                 | Catalogue doc                                                                |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |

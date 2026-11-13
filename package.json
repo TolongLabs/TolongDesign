@@ -10,7 +10,7 @@
   "scripts": {
     "check": "bun scripts/check-docs.ts",
     "index": "bun scripts/build-index.ts && prettier --log-level warn --write catalogue/README.md 'catalogue/tools/*/README.md' catalogue/people.md",
-    "find": "bun scripts/find.ts",
+    "find": "bun src/cli/main.ts search",
     "design": "bun src/cli/main.ts",
     "build:release": "bun scripts/release/build.ts",
     "smoke:release": "bun scripts/release/smoke.ts",

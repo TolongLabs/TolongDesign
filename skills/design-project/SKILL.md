@@ -16,7 +16,7 @@ collection of effects to install. Keep judgment in the existing coding agent.
 ## Resolve the source and target
 
 If the user supplied a source path or `TOLONG_DESIGN`, use that explicit source.
-A checkout has `catalogue/catalogue.json` and `scripts/design.ts`; an installed
+A checkout has `catalogue/catalogue.json` and `src/cli/main.ts`; an installed
 release has the catalogue and `dist/design.js`.
 
 Otherwise, when `tolongdesign` is available, run `tolongdesign doctor --json`.
@@ -52,7 +52,7 @@ tolongdesign show gsap
 tolongdesign context gsap saaspo --brief "Project brief" --json
 ```
 
-For an explicit checkout, use `bun "$TOLONG_DESIGN/scripts/design.ts"` with
+For an explicit checkout, run `bun run design -- …` from that checkout with
 those same arguments. For an explicit release root, use
 `bun "$TOLONG_DESIGN/dist/design.js"`. Keep all commands tied to the selected
 source version. Neither path installs skills or changes the target.
