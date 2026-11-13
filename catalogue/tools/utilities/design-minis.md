@@ -123,7 +123,7 @@ Verified on the official Design Minis platform on 2026-10-07.
 - Use it to discover emerging, independent developer tools not listed on major
   software directories.
 - Skip it if you need an end-to-end component library; use
-  [docs/README.md](../../README.md) or the TolongDesign catalogue instead.
+  [the catalogue](../../README.md) instead.
 - Skip it if you need vector asset conversion; use
   [Transform](../utilities/transform.md) or [SVGOMG](../utilities/svgomg.md)
   directly.

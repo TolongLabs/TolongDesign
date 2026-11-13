@@ -24,7 +24,7 @@ Read its `root`, version, mode, manifest status, and skill paths. If diagnostics
 fail, resolve the reported integrity/data issue rather than silently substitute
 another installation. Checkout mode explicitly warns that it is not a verified
 release. If neither source nor executable is available, ask for private
-installation or checkout access; see `docs/CLI.md` in the source.
+installation or checkout access; see `docs/cli.md` in the source.
 
 Identify the actual target project separately. Read its agent rules, design
 system, stack, and current UI. Keep website implementation in that target. Read

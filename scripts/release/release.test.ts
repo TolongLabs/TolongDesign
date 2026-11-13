@@ -62,20 +62,16 @@ function isRecord(value: unknown): value is RecordValue {
 
 const CONSUMER_SKILLS = ['design-project', 'pick-design-stack', 'build-3d-model'] as const
 
+/** Release payload, by directory. Adding a doc or a consumer skill needs no edit here. */
+const PAYLOAD_DIRECTORIES = ['catalogue', 'dist', 'licenses'] as const
+
 function isAllowedFile(path: string): boolean {
-  if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
-  if (['catalogue/catalogue.json', 'catalogue/index.json'].includes(path)) return true
-  if (['docs/README.md', 'docs/CLI.md', 'catalogue/SCHEMA.md', 'docs/PRD.md', 'docs/TRD.md'].includes(path)) return true
-  if (['docs/diagrams/README.md', 'docs/diagrams/verification.json'].includes(path)) return true
-  if (
-    /^docs\/diagrams\/(overview|system-architecture|retrieval-sequence|maintenance-workflow|release-workflow)\.(json|svg|html)$/.test(
-      path
-    )
-  )
+  if (['package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
+  if (PAYLOAD_DIRECTORIES.some((directory) => path === directory || path.startsWith(`${directory}/`)))
     return true
-  if (path.startsWith('catalogue/') && path.endsWith('.md')) return true
-  if (CONSUMER_SKILLS.some((name) => path.startsWith(`skills/${name}/`))) return true
-  return path.startsWith('licenses/')
+  if (CONSUMER_SKILLS.some((name) => path === `skills/${name}` || path.startsWith(`skills/${name}/`)))
+    return true
+  return false
 }
 
 function inspectArchive(archivePath: string): ArchiveEntry[] {
@@ -264,29 +260,32 @@ describe('checkout release diagnostics', () => {
 releaseDescribe('independent private release verification', () => {
   const fixture = buildState.fixture!
 
-  test('ships the linked product and technical guides with every diagram asset', () => {
+  test('ships a directory-based payload with no docs directory', () => {
     const listing = runCommand(['tar', '-tzf', fixture.result.tarball])
     expect(listing.code).toBe(0)
     const files = listing.stdout.split(/\r?\n/)
-    const required = ['docs/PRD.md', 'docs/TRD.md', 'docs/diagrams/README.md', 'docs/diagrams/verification.json']
-    for (const name of [
-      'overview',
-      'system-architecture',
-      'retrieval-sequence',
-      'maintenance-workflow',
-      'release-workflow'
-    ]) {
-      for (const extension of ['json', 'svg', 'html']) required.push(`docs/diagrams/${name}.${extension}`)
-    }
+    expect(files.some((name) => name === 'package/docs/' || name.startsWith('package/docs/'))).toBe(false)
     const manifest = JSON.parse(readFileSync(join(fixture.result.packageDir, 'release-manifest.json'), 'utf8')) as {
       files: Record<string, string>
     }
+    const required = [
+      'catalogue/catalogue.json',
+      'catalogue/index.json',
+      'catalogue/SCHEMA.md',
+      'catalogue/TEMPLATE.md',
+      'catalogue/tools/motion/gsap.md',
+      ...CONSUMER_SKILLS.map((name) => `skills/${name}/SKILL.md`)
+    ]
     for (const path of required) {
       expect(files).toContain(`package/${path}`)
       const bytes = readFileSync(join(fixture.result.packageDir, path))
       expect(bytes.equals(readFileSync(join(fixture.root, path)))).toBe(true)
       expect(manifest.files[path]).toBe(sha256(bytes))
     }
+    expect(files).toContain('package/README.md')
+    const readmeBytes = readFileSync(join(fixture.result.packageDir, 'README.md'))
+    expect(readmeBytes.equals(readFileSync(join(fixture.root, 'docs', 'cli.md')))).toBe(true)
+    expect(manifest.files['README.md']).toBe(sha256(readmeBytes))
   })
 
   test('validates the actual tarball, installs the actual binary, and rejects integrity failures', async () => {
@@ -367,13 +366,13 @@ releaseDescribe('independent private release verification', () => {
       expect(manifestFiles[path]).toMatch(/^[a-f0-9]{64}$/)
       expect(sha256(bytes)).toBe(manifestFiles[path] as string)
 
-      if (path.startsWith('catalogue/') || path.startsWith('docs/') || path.startsWith('skills/')) {
+      if (path.startsWith('catalogue/') || path.startsWith('skills/')) {
         expect(bytes.equals(readFileSync(join(fixture.root, ...path.split('/'))))).toBe(true)
       }
     }
 
     expect(
-      readFileSync(join(packageRoot, 'README.md')).equals(readFileSync(join(fixture.root, 'docs', 'CLI.md')))
+      readFileSync(join(packageRoot, 'README.md')).equals(readFileSync(join(fixture.root, 'docs', 'cli.md')))
     ).toBe(true)
     const bundledLicenses = actualFiles.filter((path) => path.startsWith('licenses/'))
     expect(bundledLicenses).toHaveLength(1)

@@ -1,8 +1,8 @@
 // Validates every tool doc against the catalogue and the template contract.
 // Usage: bun run check            (all docs)
 //        bun run check -- --quiet (errors only)
-import { existsSync, readFileSync } from 'node:fs'
-import { dirname, join, normalize } from 'node:path'
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { loadCatalogue, readDoc } from '../src/core/loader'
 import { FRONTMATTER_KEYS, HEADINGS, PAYWALLS, validatePeople, validateResourceMeta } from '../src/core/schema'
 import { findBrokenRelativeMarkdownLinks } from './relative-markdown-links'
@@ -52,17 +52,9 @@ for (const tool of tools) {
   if ((examples.match(/\]\(https?:\/\//g) ?? []).length < 3) warnings.push(`${tool.doc}: fewer than 3 example links`)
 }
 
-// Every relative Markdown link in the catalogue must resolve to a file.
+// Every relative Markdown link in catalogue/, docs/, skills/ and the repo root
+// must resolve to a file.
 errors.push(...findBrokenRelativeMarkdownLinks(ROOT))
-
-// Hand-written guides must not link to docs that do not exist.
-for (const guide of ['README.md', 'AGENTS.md', 'docs/README.md', 'skills/pick-design-stack/playbook.md']) {
-  const body = readFileSync(join(ROOT, guide), 'utf8')
-  for (const m of body.matchAll(/\]\((\.{0,2}\/?[^)#\s:]+\.md)\)/g)) {
-    const target = normalize(join(dirname(join(ROOT, guide)), m[1]))
-    if (!existsSync(target)) errors.push(`${guide}: broken link ${m[1]}`)
-  }
-}
 
 if (!quiet) for (const w of warnings) console.log(`warn  ${w}`)
 for (const e of errors) console.log(`error ${e}`)

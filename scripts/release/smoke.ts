@@ -52,20 +52,18 @@ function runRequired(cmd: string[], cwd?: string, env?: Record<string, string>) 
   return result
 }
 
+/** Release payload, by directory. Adding a doc or a consumer skill needs no edit here. */
+const PAYLOAD_DIRECTORIES = ['catalogue', 'dist', 'licenses'] as const
+
 function isAllowedFile(path: string): boolean {
-  if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
-  if (['catalogue/catalogue.json', 'catalogue/index.json'].includes(path)) return true
-  if (['docs/README.md', 'docs/CLI.md', 'docs/PRD.md', 'docs/TRD.md'].includes(path)) return true
-  if (['docs/diagrams/README.md', 'docs/diagrams/verification.json'].includes(path)) return true
+  if (['package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
+  if (PAYLOAD_DIRECTORIES.some((directory) => path === directory || path.startsWith(`${directory}/`)))
+    return true
   if (
-    /^docs\/diagrams\/(overview|system-architecture|retrieval-sequence|maintenance-workflow|release-workflow)\.(json|svg|html)$/.test(
-      path
-    )
+    CONSUMER_SKILLS.some((name) => path === `skills/${name}` || path.startsWith(`skills/${name}/`))
   )
     return true
-  if (path.startsWith('catalogue/') && path.endsWith('.md')) return true
-  if (CONSUMER_SKILLS.some((name) => path.startsWith(`skills/${name}/`))) return true
-  return path.startsWith('licenses/')
+  return false
 }
 
 function safeArchiveName(name: string): { filePath: string; directory: boolean } {

@@ -1,40 +1,40 @@
 # Technical reference
 
-**As-built reference, checked against source baseline `2e10faa` (2026-10-15).**
-This document explains implementation and operating boundaries, not a proposed
-hosted architecture. Documentation assets added with this guide do not change
-retrieval behavior. [Product requirements](./PRD.md) describe the product's
-purpose and quality bar; [CLI.md](./CLI.md) is the installation/runbook guide.
+**As-built reference for the current source tree.** This document explains
+implementation and operating boundaries, not a proposed hosted architecture.
+[Product requirements](./product.md) describe the product's purpose and quality
+bar; [cli.md](./cli.md) is the installation/runbook guide.
 
 ## Contents
 
-| System                   | Reference                                                                                                                                           |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Architecture and data    | [Runtime](#runtime-architecture) · [Authority](#source-authority) · [Schema](#resource-and-creator-schema)                                          |
-| Retrieval and interfaces | [Loading](#resource-loading) · [Ranking](#search-and-ranking) · [CLI](#cli-contracts) · [JSON](#machine-readable-contracts)                         |
-| Maintenance              | [Generation](#index-generation) · [Availability](#availability-review) · [Skills](#agent-handoff) · [Graph](#knowledge-graph)                       |
-| Delivery and assurance   | [Release](#release-and-installation) · [Trust](#security-and-privacy) · [Tests](#verification-and-ci) · [Recovery](#operations-and-troubleshooting) |
+| System                   | Reference                                                                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Architecture and data    | [Runtime](#runtime-architecture) · [Authority](#source-authority) · [Schema](#resource-and-creator-schema)                                               |
+| Retrieval and interfaces | [Loading](#resource-loading) · [Ranking](#search-and-ranking) · [CLI](#cli-contracts) · [JSON](#machine-readable-contracts)                              |
+| Maintenance              | [Generation](#index-generation) · [Availability](#availability-review) · [Skills](#agent-handoff) · [Graph](#knowledge-graph)                            |
+| Delivery and assurance   | [Release](#release-and-installation) · [Trust](#doctor-and-consumer-trust) · [Tests](#verification-and-ci) · [Recovery](#operations-and-troubleshooting) |
 
 ## Runtime architecture
 
-TolongDesign is a **documentation repository plus a local Bun/TypeScript CLI**.
-There is no application server, remote search index, database service or model
-call on the retrieval path.
+TolongDesign is a **knowledge base plus a local Bun/TypeScript retrieval
+engine**. There is no application server, remote search index, database service
+or model call on the retrieval path.
 
-[![The CLI calls a source-file loader, an in-memory ranker or a context builder, and writes results to stdout. Only the loader reads catalogue documents.](./diagrams/system-architecture.svg)](./diagrams/system-architecture.html)
+![The CLI calls a source-file loader, an in-memory ranker or a context builder, and writes results to stdout. Only the loader reads catalogue documents.](./diagrams/system-architecture.svg)
 
-| Layer             | Owner                                                   | Responsibility                                                                                             |
-| ----------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Command handling  | `design.ts`, `find.ts`, `cli-lib.ts`                    | Parse arguments, select operations, write stdout/stderr and exit status.                                   |
-| Resource loading  | `design-lib.ts`                                         | Resolve the selected root, read registration and document bytes, parse metadata and hash source bytes.     |
-| Retrieval         | `design-lib.ts`, `search-lib.ts`                        | Apply filters and score in-memory resources. No direct file/network I/O in the scorer.                     |
-| Context and cards | `design-lib.ts`, `resource-card.ts`                     | Full source hand-off or bounded navigation output.                                                         |
-| Maintenance       | `build-index.ts`, `check-docs.ts`, `check-links.ts`     | Generate views, validate content and report external-link observations. These are separate from retrieval. |
-| Distribution      | `release-lib.ts`, `release-info.ts`, `smoke-release.ts` | Build an allowlisted private package, inspect installation integrity and test isolated installation.       |
+| Layer             | Owner                                                                       | Responsibility                                                                                             |
+| ----------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Command handling  | `src/cli/main.ts`, `src/cli/args.ts`                                        | Parse arguments, select operations, write stdout/stderr and exit status.                                   |
+| Resource loading  | `src/core/loader.ts`                                                        | Resolve the selected root, read registration and document bytes, parse metadata and hash source bytes.     |
+| Retrieval         | `src/core/search.ts`, `src/core/context.ts`                                 | Apply filters and score in-memory resources. No direct file/network I/O in the scorer.                     |
+| Context and cards | `src/core/context.ts`, `src/core/card.ts`                                   | Full source hand-off or bounded navigation output.                                                         |
+| Maintenance       | `scripts/build-index.ts`, `scripts/check-docs.ts`, `scripts/check-links.ts` | Generate views, validate content and report external-link observations. These are separate from retrieval. |
+| Distribution      | `scripts/release/lib.ts`, `scripts/release/smoke.ts`                        | Build a directory-based release package, inspect installation integrity and test isolated installation.    |
 
 A request uses the root relative to the executing entrypoint: checkout
-`scripts/design.ts` or installed `dist/design.js`. It does not select a new
-catalogue merely because the caller changed into another project.
+`src/cli/main.ts` (via `bun run design`, or the alias `bun run find`) or
+installed `dist/design.js`. It does not select a new catalogue merely because
+the caller changed into another project.
 
 ## Source authority
 
@@ -42,7 +42,7 @@ catalogue merely because the caller changed into another project.
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `catalogue/catalogue.json`                          | Hand-maintained registration and scraped/curated provenance. `tools[]` identifies resources; `people[]` records creators and optional credit evidence. |
 | `catalogue/tools/<section>/<slug>.md`               | Authored resource facts, frontmatter, procedure, examples, rights, gotchas and sources.                                                                |
-| `catalogue/TEMPLATE.md` + `catalogue-schema.ts`     | Document and metadata contract. The template is the authoring interface; the schema is executable validation.                                          |
+| `catalogue/TEMPLATE.md` + `src/core/schema.ts`      | Document and metadata contract. The template is the authoring interface; the schema is executable validation.                                          |
 | `catalogue/index.json`                              | Generated metadata plus derived `install`; useful for consumers, but **not the authority used by runtime search**.                                     |
 | `catalogue/README.md`, section READMEs, `people.md` | Generated human-readable views. Regenerate instead of editing.                                                                                         |
 | `graphify-out/`                                     | Derived relationship/discovery aid. It is neither a runtime dependency nor proof of compatibility or factual correctness.                              |
@@ -52,10 +52,8 @@ catalogue merely because the caller changed into another project.
 
 Stable resource identity is `section_slug/slug`; `doc` is a registered path
 under `catalogue/tools/`. Required frontmatter keys and the nine ordered H2
-sections are defined in
-[`lib.ts`](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/lib.ts),
-[`catalogue-schema.ts`](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/catalogue-schema.ts)
-and the [template](../catalogue/TEMPLATE.md).
+sections are defined in [`src/core/schema.ts`](../src/core/schema.ts) and the
+[template](../catalogue/TEMPLATE.md).
 
 | Field                                   | Shape / meaning                                                                                             |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -73,8 +71,8 @@ and the [template](../catalogue/TEMPLATE.md).
 Execution modes are `registry`, `package`, `snippet`, `mcp-skill`,
 `browser-app`, `reference`. Surface values include interfaces, 3D, media,
 comics, assets and supporting development/hosting/reference domains. Use
-[SCHEMA.md](../catalogue/SCHEMA.md) and exported `SURFACES`/`STACKS` for the
-complete current vocabulary; do not create a parallel unofficial list.
+[SCHEMA.md](../catalogue/SCHEMA.md) for the complete current vocabulary; do not
+create a parallel unofficial list.
 
 Creator links are optional `created_tools` IDs with matching
 `created_tools_evidence[id] = { source_url, checked, quote }`. Validation checks
@@ -102,7 +100,7 @@ as compliant. Unregistered Markdown is not automatically included in search.
 
 ## Search and ranking
 
-[![A search request validates arguments, loads registered source documents and hashes, filters resources, ranks matches, and returns results.](./diagrams/retrieval-sequence.svg)](./diagrams/retrieval-sequence.html)
+![A search request validates arguments, loads registered source documents and hashes, filters resources, ranks matches, and returns results.](./diagrams/retrieval-sequence.svg)
 
 ### Pipeline
 
@@ -118,7 +116,7 @@ embedding store or network service participates.
 | `--stack`                | Canonicalize documented aliases before matching, e.g. `framer-motion` → `motion`, `radix-ui` → `radix`.                                   |
 | `--section`, `--paywall` | Section slug/name and normalized paywall matching.                                                                                        |
 | `--agent`, `--oss`       | Require explicit `true`; absent/unknown is not accepted as true.                                                                          |
-| `--tag`                  | Exact tag/category-tag matching, exposed by `find` rather than `design search`.                                                           |
+| `--tag`                  | Exact tag/category-tag matching.                                                                                                          |
 
 ### Scoring behavior
 
@@ -158,8 +156,8 @@ sorts by name/ID; the `design search` command itself requires query text.
 
 Scores are relative to the filtered corpus and are not public result fields. Do
 not compare them across changed filters or claim benchmark-wide relevance. The
-24-query fixture in `search-eval.test.ts` is a bounded regression check; its
-measured recall is not a general product-quality guarantee.
+24-query fixture in `src/core/search-eval.test.ts` is a bounded regression
+check; its measured recall is not a general product-quality guarantee.
 
 ### Cost and limits
 
@@ -173,16 +171,17 @@ latency, memory or maximum-catalogue-size SLA is established.
 | Command                | Input / output contract                                                                                                 |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `design search <text>` | Default 10 results; JSON object or human-readable excerpts/cards. `total` is the number matched before limiting.        |
-| `find [text]`          | Query optional; default effectively unlimited results. JSON remains an array of metadata rows.                          |
+| `find [text]`          | Alias for `search`, so it keeps the old name and empty-query behaviour; same JSON shape as `search`.                    |
 | `show <id>`            | Exact qualified ID, or unique unqualified slug. Plain mode returns full Markdown; JSON returns the loaded resource.     |
 | `context <id>...`      | Exact resolution; preserve first request order; deduplicate repeated resources; full Markdown plus provenance/warnings. |
 | `doctor [--json]`      | Version/root/resource count, skill paths and explicit checkout/release integrity state.                                 |
 | `--version`            | Package version. This alone does not prove a checkout matches a published release with the same version.                |
 
-Both search frontends share filters and ranking. `--json` and `--format card`
-are mutually exclusive. `--limit` must be a positive safe integer. Unknown
-flags, ambiguous slugs and unknown IDs are usage errors; IDs are exact and
-case-sensitive. Use qualified IDs such as `motion/gsap` for stable references.
+`search` is the only search command; `find` is an alias for it. `--json` and
+`--format card` are mutually exclusive. `--limit` must be a positive safe
+integer. Unknown flags, ambiguous slugs and unknown IDs are usage errors; IDs
+are exact and case-sensitive. Use qualified IDs such as `motion/gsap` for stable
+references.
 
 | Exit | Meaning                                                           | Channel                         |
 | ---- | ----------------------------------------------------------------- | ------------------------------- |
@@ -201,8 +200,6 @@ These are shapes, not an exhaustive fake resource response:
 design search --json
 { query: string, total: number, results: SearchResource[] }
 
-find --json
-ResourceMetadata[]
 
 show --json
 Resource
@@ -220,12 +217,9 @@ context --json
 | `InstallationInfo` | `schema_version: 1`, `version`, `runtime: bun`, `mode`, `root`, `resources`, `manifest_verified`, `skill_paths`, `warnings`.                                                 |
 
 Source URLs/dates can be null in runtime records when unknown. Read the exported
-TypeScript types in
-[design-lib.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/design-lib.ts)
-and
-[release-info.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/release-info.ts)
-before implementing a consumer. Preserve existing top-level result shapes when
-extending metadata.
+TypeScript types in [`src/core/schema.ts`](../src/core/schema.ts) and
+[`src/cli/doctor.ts`](../src/cli/doctor.ts) before implementing a consumer.
+Preserve existing top-level result shapes when extending metadata.
 
 Context warnings cover unknown paywall, paid/freemium licence checks and
 missing, invalid, future or older-than-90-day verification dates. They do not
@@ -253,9 +247,9 @@ package installation. It is never executed by retrieval or generation.
 
 ## Index generation
 
-[![Official evidence feeds authored docs and catalogue registration; indexing writes generated views; validation, formatting and tests precede review. Validation errors return to the doc.](./diagrams/maintenance-workflow.svg)](./diagrams/maintenance-workflow.html)
+![Official evidence feeds authored docs and catalogue registration; indexing writes generated views; validation, formatting and tests precede review. Validation errors return to the doc.](./diagrams/maintenance-workflow.svg)
 
-`bun run index` runs `build-index.ts`, then formats generated catalogue
+`bun run index` runs `scripts/build-index.ts`, then formats generated catalogue
 READMEs/people output. It derives `install`, emits one metadata row per tool and
 renders optional creator credits with links to their sources.
 
@@ -272,9 +266,10 @@ human-maintained. Idempotence matters: a second generation with unchanged inputs
 must not produce a new diff.
 
 The maintenance checker validates required frontmatter, canonical vocabularies,
-matching registration, ordered headings, creator evidence and selected relative
-links. Short docs or too few example links are warnings. It does not test every
-command, traverse every Markdown anchor, check pricing or operate every app.
+matching registration, ordered headings, creator evidence and relative links in
+`catalogue/`, `docs/`, `skills/` and the repo root. Short docs or too few
+example links are warnings. It does not test every command, traverse every
+Markdown anchor, check pricing or operate every app.
 
 ## Availability review
 
@@ -324,62 +319,60 @@ merge resource metadata merely because labels resemble each other.
 Refresh the graph after notable source changes with `/graphify . --update` in a
 configured authoring environment. Inspect coverage, dangling edges and source
 attribution before committing outputs. Keep caches, cost logs and dated local
-snapshots out of unrelated changes. The graph is not required in a private CLI
+snapshots out of unrelated changes. The graph is not required in the release
 archive.
 
 ## Release and installation
 
-[![A matching version tag triggers private CI checks, an allowlisted bundle, hashes and isolated installation smoke before private release publication. Consumers verify the archive, install it and run doctor.](./diagrams/release-workflow.svg)](./diagrams/release-workflow.html)
+![A matching version tag triggers CI checks, an allowlisted bundle, hashes and isolated installation smoke before release publication. Consumers verify the archive, install it and run doctor.](./diagrams/release-workflow.svg)
 
 ### Snapshot boundary
 
-The source baseline has `package.json` version `0.2.0`, published as `v0.2.0` on
-2026-11-13 with the retrieval changes and the collections. A working-tree
-version string alone is not release provenance. Check tag, source revision,
-asset bytes and manifest; use the checkout for unreleased source behavior. This
-documentation change does not publish a new release.
+The source baseline has `package.json` version `0.2.0`, published as `v0.2.0`
+with the retrieval changes and the collections. A working-tree version string
+alone is not release provenance. Check tag, source revision, asset bytes and
+manifest; use the checkout for unreleased source behavior. A documentation
+change does not publish a new release.
 
 ### Build and payload
 
-`bun run build:release` validates private package metadata and source paths,
-stages an explicit allowlist, bundles the Bun CLI, writes a payload manifest,
-packs with lifecycle scripts disabled and writes the compressed archive's
-`SHA256SUMS`. Existing published output names are rejected rather than replaced.
+`bun run build:release` validates package metadata and source paths, stages the
+payload by directory, bundles the Bun CLI, writes a payload manifest, packs with
+lifecycle scripts disabled and writes the compressed archive's `SHA256SUMS`.
+Existing published output names are rejected rather than replaced.
 
-| Included                                                                 | Excluded                                                          |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| Private `package.json`, `dist/design.js`, data catalogue/index.          | Git history, credentials, customer data and worker output.        |
-| Registered design Markdown, research, guides and selected scenario docs. | Dependency trees, caches, graphify artifacts and local snapshots. |
-| Mirrored `design-project` instructions and required dependency licence.  | Automatic global skill registration or post-install execution.    |
-| Explicitly allowlisted documentation/diagram files.                      | Arbitrary assets, source packs and copied third-party artwork.    |
+| Included                                                                          | Excluded                                                          |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Release `package.json` (`private: true`), `dist/design.js`, catalogue data/index. | Git history, credentials, customer data and worker output.        |
+| The whole `catalogue/` tree and packaged consumer skills.                         | Dependency trees, caches, graphify artifacts and local snapshots. |
+| Required dependency licence.                                                      | Automatic global skill registration or post-install execution.    |
+| The package README, generated from `docs/cli.md`.                                 | Repo docs, diagrams and arbitrary source packs.                   |
 
-The package root README is based on the CLI installation guide, not the
-repository's illustrated overview. The generated manifest has `schema_version`,
-`version`, `resource_count` and a path-to-SHA-256 `files` map; it does not hash
-itself.
+The package root README is the CLI installation guide, not the repository's
+illustrated overview. The generated manifest has `schema_version`, `version`,
+`resource_count` and a path-to-SHA-256 `files` map; it does not hash itself.
 
 ### Publication gates
 
-The release workflow runs only for a `v*` tag in `TolongLabs/TolongDesign`. The
-repository became public in November 2026; the workflow no longer requires a
-private repository. It requires `"private": true` package metadata (no npm
-publish) and an exact tag/version match, then runs locked dependency
-installation, tests, doc checks, mirror comparison, release build, checksum
-verification and isolated installation smoke. Only then are verified assets
-uploaded to a draft and the release published. Existing published releases are
-not overwritten by that workflow.
+The release workflow runs only for a `v*` tag in `TolongLabs/TolongDesign`. It
+requires `"private": true` package metadata (no npm publish) and an exact
+tag/version match, then runs locked dependency installation, tests, doc checks,
+mirror comparison, release build, checksum verification and isolated
+installation smoke. Only then are verified assets uploaded to a draft and the
+release published. Existing published releases are not overwritten by that
+workflow.
 
 A release tag is an explicit maintainer action. Editing docs, merging a PR or
 building an archive locally does not publish one.
 
-### Doctor and consumer trust
+## Doctor and consumer trust
 
-| Mode / condition                                                       | Behavior                                                                                           |
-| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Checkout without a manifest                                            | Return checkout mode and a warning; do not claim verified package integrity.                       |
-| Bundled CLI without a manifest                                         | Data error.                                                                                        |
-| Release manifest                                                       | Validate schema/version/count, listed file hashes, required coverage and registered resource docs. |
-| Skill mirrors differ, files are missing, unsafe paths or hashes differ | Data error; reinstall a verified release rather than rewriting the manifest.                       |
+| Mode / condition                                        | Behavior                                                                                           |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Checkout without a manifest                             | Return checkout mode and a warning; do not claim verified package integrity.                       |
+| Bundled CLI without a manifest                          | Data error.                                                                                        |
+| Release manifest                                        | Validate schema/version/count, listed file hashes, required coverage and registered resource docs. |
+| Skill files are missing, unsafe paths, or hashes differ | Data error; reinstall a verified release rather than rewriting the manifest.                       |
 
 Doctor checks manifest-listed files and required coverage; it is not a host
 security scanner or proof against arbitrary extra local files. Search does not
@@ -399,7 +392,7 @@ code is safe.
 | Catalogue → filesystem | Registered-path and realpath containment; release inspection rejects symlinked payload paths.         | Not an adversarial OS sandbox or a guarantee against concurrent hostile filesystem mutation. |
 | Documents → agent      | Full docs remain reference data; no embedded command execution; fenced context output.                | The receiving agent must enforce its own instruction hierarchy and approvals.                |
 | Target project         | Retrieval does not write project files, record audio, invoke models or install resource dependencies. | A user redirecting stdout or independently operating a resource is a separate action.        |
-| Distribution           | Repository and tag guards, GitHub release assets, allowlisted files, hashes and isolated smoke tests. | No public-registry publication or signed supply-chain attestation.                           |
+| Distribution           | Repository and tag guards, GitHub release assets, directory payload, hashes and isolated smoke tests. | No public-registry publication or signed supply-chain attestation.                           |
 | External sources       | Explicit link checks and human verification of current facts/rights.                                  | Remote sites can change, block bots or serve a different product.                            |
 
 Keep credentials in existing authenticated tooling, not in catalogue entries,
@@ -412,49 +405,47 @@ providers have their own data and cost boundaries.
 | Check                                               | Proves                                                                               | Does not prove                                           |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------- |
 | `bun test`                                          | Library/CLI/schema/ranking/context/release regressions covered by the current suite. | Every live resource, operating system or untested input. |
-| `bun run check`                                     | The implemented catalogue/template validation rules.                                 | End-to-end tool behavior or source truth.                |
+| `bun run check`                                     | The implemented catalogue/template/relative-link validation rules.                   | End-to-end tool behavior or source truth.                |
 | `bun run index` + diff                              | Reproducible generated views when run twice on unchanged inputs.                     | Live freshness or search relevance.                      |
 | `bun run format:check`                              | Formatting of configured Markdown/JSON/TypeScript files.                             | Type safety or runtime correctness.                      |
-| `bun run build:release` + `smoke:release <archive>` | Buildable, allowlisted package and isolated installation/diagnostic behavior.        | Visual quality or universal platform support.            |
+| `bun run build:release` + `smoke:release <archive>` | Buildable directory-based package and isolated installation/diagnostic behavior.     | Visual quality or universal platform support.            |
 
-The Verify workflow runs tests, doc checks, skill-mirror comparison, build and
-installed smoke on pushes/PRs. The tag-release workflow adds package/version
-checks and archive-checksum verification before publication. Neither current
-workflow contains a general `tsc` typecheck or `format:check` step; run
-formatting locally and do not imply those gates ran in CI.
+The Verify workflow runs tests, typecheck, doc checks, skill-mirror comparison,
+build and installed smoke on pushes/PRs. The tag-release workflow adds
+package/version checks and archive-checksum verification before publication. Run
+formatting locally; the release gates above are the merge requirement.
 
 ## Operations and troubleshooting
 
-| Symptom                            | Location / cause                                                                   | Action                                                                                |
-| ---------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| No expected search hit             | Wrong surface/mode, unreachable exclusion, broad keywords or dated classification. | Try a shorter query or `find` without text, inspect metadata, then exact `show <id>`. |
-| Ambiguous ID                       | Same unqualified slug in more than one section.                                    | Use the exact `section/slug` suggested by the error.                                  |
-| Usage error                        | Parser/filter validation.                                                          | Check `--help`, vocabulary and mutually exclusive output flags; expect exit 2.        |
-| Missing/invalid doc or unsafe path | Catalogue registration, YAML or root containment.                                  | Repair source data in a checkout; never suppress the failure.                         |
-| Installed integrity error          | Missing/tampered payload or manifest mismatch.                                     | Download and verify an explicit trusted release again.                                |
-| Generated views drift              | Source edited without index regeneration.                                          | Run index, inspect diff, regenerate again and require stability.                      |
-| Live site appears changed          | Dated source facts or product replacement.                                         | Confirm identity and core workflow, add dated evidence, then revise status/facts.     |
+| Symptom                            | Location / cause                                                                   | Action                                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| No expected search hit             | Wrong surface/mode, unreachable exclusion, broad keywords or dated classification. | Try a shorter query, or filters with no text, inspect metadata, then exact `show <id>`. |
+| Ambiguous ID                       | Same unqualified slug in more than one section.                                    | Use the exact `section/slug` suggested by the error.                                    |
+| Usage error                        | Parser/filter validation.                                                          | Check `--help`, vocabulary and mutually exclusive output flags; expect exit 2.          |
+| Missing/invalid doc or unsafe path | Catalogue registration, YAML or root containment.                                  | Repair source data in a checkout; never suppress the failure.                           |
+| Installed integrity error          | Missing/tampered payload or manifest mismatch.                                     | Download and verify an explicit trusted release again.                                  |
+| Generated views drift              | Source edited without index regeneration.                                          | Run index, inspect diff, regenerate again and require stability.                        |
+| Live site appears changed          | Dated source facts or product replacement.                                         | Confirm identity and core workflow, add dated evidence, then revise status/facts.       |
 
 For resource additions/refreshes, follow
-[contributing](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/.github/CONTRIBUTING.md)
-and the [metadata guide](../catalogue/SCHEMA.md). Keep facts, inferred judgments
-and unverified claims separate. No background freshness monitor, automatic
-repair or arbitrary agent execution loop is part of this system.
+[contributing](../.github/CONTRIBUTING.md) and the
+[metadata guide](../catalogue/SCHEMA.md). Keep facts, inferred judgments and
+unverified claims separate. No background freshness monitor, automatic repair or
+arbitrary agent execution loop is part of this system.
 
 ## Source map
 
-| Responsibility               | Implementation                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CLI grammar and errors       | [design.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/design.ts) · [find.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/find.ts) · [cli-lib.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/cli-lib.ts)                                                       |
-| Loading, filters and context | [design-lib.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/design-lib.ts)                                                                                                                                                                                                                                                                                                 |
-| Scorer and evaluation        | [search-lib.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/search-lib.ts) · [search-eval.test.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/search-eval.test.ts) · [query fixtures](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/fixtures/search-queries.json) |
-| Schema and editorial checks  | [catalogue-schema.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/catalogue-schema.ts) · [lib.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/lib.ts) · [check-docs.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/check-docs.ts)                               |
-| Index, credits and cards     | [build-index.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/build-index.ts) · [index-fields.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/index-fields.ts) · [resource-card.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/resource-card.ts)                 |
-| Availability                 | [check-links.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/check-links.ts) · [link-check-lib.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/link-check-lib.ts)                                                                                                                                                     |
-| Package and diagnostics      | [release-lib.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/release-lib.ts) · [release-info.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/release-info.ts) · [smoke-release.ts](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/scripts/smoke-release.ts)                 |
-| CI                           | [Verify](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/.github/workflows/verify.yml) · [Private release](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/.github/workflows/release.yml)                                                                                                                                                     |
+| Responsibility               | Implementation                                                                                                                                                                                                              |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CLI grammar and errors       | [`src/cli/main.ts`](../src/cli/main.ts) · [`src/cli/args.ts`](../src/cli/args.ts)                                                                                                                                           |
+| Loading, filters and context | [`src/core/loader.ts`](../src/core/loader.ts) · [`src/core/search.ts`](../src/core/search.ts) · [`src/core/context.ts`](../src/core/context.ts) · [`src/core/card.ts`](../src/core/card.ts)                                 |
+| Field derivation and schema  | [`src/core/fields.ts`](../src/core/fields.ts) · [`src/core/schema.ts`](../src/core/schema.ts) · [`scripts/check-docs.ts`](../scripts/check-docs.ts)                                                                         |
+| Index and cards              | [`scripts/build-index.ts`](../scripts/build-index.ts) · [`src/core/fields.ts`](../src/core/fields.ts)                                                                                                                       |
+| Availability                 | [`scripts/check-links.ts`](../scripts/check-links.ts) · [`scripts/link-check-lib.ts`](../scripts/link-check-lib.ts) · [`scripts/relative-markdown-links.ts`](../scripts/relative-markdown-links.ts)                         |
+| Package and diagnostics      | [`scripts/release/lib.ts`](../scripts/release/lib.ts) · [`scripts/release/build.ts`](../scripts/release/build.ts) · [`scripts/release/smoke.ts`](../scripts/release/smoke.ts) · [`src/cli/doctor.ts`](../src/cli/doctor.ts) |
+| Fixtures and evaluation      | [`src/core/search-eval.test.ts`](../src/core/search-eval.test.ts) · [`src/core/fixtures/search-queries.json`](../src/core/fixtures/search-queries.json)                                                                     |
+| CI                           | [Verify](../.github/workflows/verify.yml) · [Release](../.github/workflows/release.yml)                                                                                                                                     |
 
-Diagrams are Archify-generated, source-linked snapshots pinned to `2e10faa`.
-[Diagram sources, validation and local viewing](./diagrams/README.md) explain
-how to inspect and regenerate them. Static exports are documentation aids; the
-interactive viewer is not a runtime component of TolongDesign.
+Diagrams are Archify-generated snapshots; each source JSON records its evidence
+revision. [Diagram sources](./diagrams/README.md) explain how to inspect them.
+Static exports are documentation aids, not runtime components of TolongDesign.

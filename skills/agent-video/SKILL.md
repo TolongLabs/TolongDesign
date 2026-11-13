@@ -11,11 +11,11 @@ metadata:
 # Agent Video
 
 Make 20 to 40 second launch films with
-[collections/agent-video](../../../collections/agent-video/README.md). A film is
-a `TemplateSpec`: an ordered list of beats, each one scene kind at a frame
-count, with its copy in `props`. The README is the API and command reference;
-[knowledge/system.md](../../../collections/agent-video/knowledge/system.md) is
-the house style (acts, cuts, accent, motion rules). Read both before writing.
+[collections/agent-video](../../collections/agent-video/README.md). A film is a
+`TemplateSpec`: an ordered list of beats, each one scene kind at a frame count,
+with its copy in `props`. The README is the API and command reference;
+[knowledge/system.md](../../collections/agent-video/knowledge/system.md) is the
+house style (acts, cuts, accent, motion rules). Read both before writing.
 
 ## Steps
 
