@@ -63,7 +63,7 @@ Frontmatter rules:
   (`[react, tailwind]`). `stack` is `[]` when not code; use canonical values
   from `scripts/catalogue-schema.ts`.
 - `execution_mode`, `surface`, `status` — choose from the documented workflow
-  and source evidence using [resource metadata](../catalogue/SCHEMA.md). A
+  and source evidence using [resource metadata](../../catalogue/SCHEMA.md). A
   browser gallery is `reference`; a browser editor or generator is
   `browser-app`. Record a dated explanation for degraded or unavailable
   resources.

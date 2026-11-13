@@ -19,7 +19,6 @@ what they cost, and get them producing real output.
 
 | Path                                                         | What it is                                                                    |
 | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| [PLAYBOOK.md](./PLAYBOOK.md)                                 | How to go from a brief to a design stack and a first page                     |
 | [SCHEMA.md](../catalogue/SCHEMA.md)                          | Execution modes, output surfaces, availability and creator evidence           |
 | [catalogue/README.md](../catalogue/README.md)                | The catalogue: 18 sections, counts, paywall breakdown                         |
 | `catalogue/tools/<section>/README.md`                        | One table per section: every tool with paywall, open source, best for         |
@@ -60,11 +59,12 @@ release with `tolongdesign doctor --json`; its output identifies the version,
 resource root, integrity status, and agent skill paths. The checkout commands
 below remain available to maintainers.
 
-For a use-case-aware brief, use [the project design workflow](./WORKFLOW.md) and
-the `design-project` skill. It connects visual references, source-backed tool
+For a use-case-aware brief, use
+[the project design workflow](../skills/design-project/workflow.md) and the
+`design-project` skill. It connects visual references, source-backed tool
 choices, complete context, and rendered verification in the target project.
-[Dictation landing page](./scenarios/dictation-landing.md) is the first
-acceptance scenario, not a built example website.
+[Dictation landing page](../skills/design-project/scenarios/dictation-landing.md)
+is the first acceptance scenario, not a built example website.
 
 ```bash
 bun run design -- search scroll --section motion --json

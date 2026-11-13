@@ -305,13 +305,13 @@ editing status and adding a dated reason.
 
 ## Agent handoff
 
-| Location                                 | Role                                                                                                      |
-| ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `.agents/skills/design-project/SKILL.md` | Tool-agnostic project-design instructions.                                                                |
-| `.claude/skills/design-project/SKILL.md` | Byte-identical Claude mirror.                                                                             |
-| `docs/WORKFLOW.md`                       | Brief, references, direction approval, full context, implementation and actual output review.             |
-| `pick-design-stack` skill mirrors        | Website-specific choices; web-ui filtering prevents unrelated surfaces from dominating component choices. |
-| `docs/scenarios/dictation-landing.md`    | A documented acceptance scenario, not proof a sample site was built.                                      |
+| Location                                               | Role                                                                                                      |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `skills/design-project/SKILL.md`                       | Tool-agnostic project-design instructions.                                                                |
+| `.claude/skills`, `.agents/skills`                     | Symlinks to `../skills`, one mirror per agent harness.                                                    |
+| `skills/design-project/workflow.md`                    | Brief, references, direction approval, full context, implementation and actual output review.             |
+| `pick-design-stack` skill                              | Website-specific choices; web-ui filtering prevents unrelated surfaces from dominating component choices. |
+| `skills/design-project/scenarios/dictation-landing.md` | A documented acceptance scenario, not proof a sample site was built.                                      |
 
 Doctor reports skill paths. Installation does not write global harness
 configuration or register those skills automatically. The target agent must read

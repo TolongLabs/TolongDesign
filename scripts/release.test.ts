@@ -60,21 +60,12 @@ function isRecord(value: unknown): value is RecordValue {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
 }
 
+const CONSUMER_SKILLS = ['design-project', 'pick-design-stack', 'build-3d-model'] as const
+
 function isAllowedFile(path: string): boolean {
   if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
   if (['catalogue/catalogue.json', 'catalogue/index.json'].includes(path)) return true
-  if (
-    [
-      'docs/README.md',
-      'docs/PLAYBOOK.md',
-      'docs/WORKFLOW.md',
-      'docs/CLI.md',
-      'catalogue/SCHEMA.md',
-      'docs/PRD.md',
-      'docs/TRD.md'
-    ].includes(path)
-  )
-    return true
+  if (['docs/README.md', 'docs/CLI.md', 'catalogue/SCHEMA.md', 'docs/PRD.md', 'docs/TRD.md'].includes(path)) return true
   if (['docs/diagrams/README.md', 'docs/diagrams/verification.json'].includes(path)) return true
   if (
     /^docs\/diagrams\/(overview|system-architecture|retrieval-sequence|maintenance-workflow|release-workflow)\.(json|svg|html)$/.test(
@@ -83,8 +74,7 @@ function isAllowedFile(path: string): boolean {
   )
     return true
   if (path.startsWith('catalogue/') && path.endsWith('.md')) return true
-  if (path.startsWith('docs/scenarios/') && path.endsWith('.md')) return true
-  if (['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'].includes(path)) return true
+  if (CONSUMER_SKILLS.some((name) => path.startsWith(`skills/${name}/`))) return true
   return path.startsWith('licenses/')
 }
 
@@ -185,6 +175,11 @@ function fixtureCopy(): string {
   mkdirSync(join(fixtureRoot, '.claude'), { recursive: true })
   writeFileSync(join(fixtureRoot, '.claude', 'settings.json'), '{"fixture_only":true}\n')
   cpSync(join(root, 'node_modules', 'yaml'), join(fixtureRoot, 'node_modules', 'yaml'), { recursive: true })
+  // cpSync absolutizes copied symlinks, so recreate the harness mirrors as relative links.
+  for (const mirror of [join('.claude', 'skills'), join('.agents', 'skills')]) {
+    rmSync(join(fixtureRoot, mirror), { recursive: true, force: true })
+    symlinkSync(join('..', 'skills'), join(fixtureRoot, mirror), 'dir')
+  }
   return fixtureRoot
 }
 
@@ -229,7 +224,7 @@ function assertDoctorSkills(doctor: RecordValue, expectedMode: string, expectedM
   const skillPaths = Array.isArray(rawPaths) ? rawPaths : Object.values(rawPaths as RecordValue)
   const paths = skillPaths.filter((value): value is string => typeof value === 'string')
 
-  for (const suffix of ['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md']) {
+  for (const suffix of CONSUMER_SKILLS.map((name) => `skills/${name}/SKILL.md`)) {
     const reported = paths.find((path) => path.replaceAll('\\', '/').endsWith(suffix))
     expect(reported).toBeDefined()
     const resolvedPath = isAbsolute(reported as string)
@@ -372,12 +367,7 @@ releaseDescribe('independent private release verification', () => {
       expect(manifestFiles[path]).toMatch(/^[a-f0-9]{64}$/)
       expect(sha256(bytes)).toBe(manifestFiles[path])
 
-      if (
-        path.startsWith('catalogue/') ||
-        path.startsWith('docs/') ||
-        path === '.agents/skills/design-project/SKILL.md' ||
-        path === '.claude/skills/design-project/SKILL.md'
-      ) {
+      if (path.startsWith('catalogue/') || path.startsWith('docs/') || path.startsWith('skills/')) {
         expect(bytes.equals(readFileSync(join(fixture.root, ...path.split('/'))))).toBe(true)
       }
     }
@@ -439,11 +429,10 @@ releaseDescribe('independent private release verification', () => {
     expect(doctor.version).toBe(packageVersion)
     expect(doctor.resources).toBe((sourceCatalogue.tools as unknown[]).length)
 
-    const agentSkill = readFileSync(join(installedRoot, '.agents', 'skills', 'design-project', 'SKILL.md'))
-    const claudeSkill = readFileSync(join(installedRoot, '.claude', 'skills', 'design-project', 'SKILL.md'))
-    expect(agentSkill.equals(claudeSkill)).toBe(true)
-    expect(agentSkill.equals(readFileSync(join(root, '.agents', 'skills', 'design-project', 'SKILL.md')))).toBe(true)
-    expect(claudeSkill.equals(readFileSync(join(root, '.claude', 'skills', 'design-project', 'SKILL.md')))).toBe(true)
+    for (const name of CONSUMER_SKILLS) {
+      const installedSkill = readFileSync(join(installedRoot, 'skills', name, 'SKILL.md'))
+      expect(installedSkill.equals(readFileSync(join(root, 'skills', name, 'SKILL.md')))).toBe(true)
+    }
 
     const contextCommand = runInstalled(['context', 'gsap', 'saaspo', '--brief', 'Project brief', '--json'])
     expect(contextCommand.code).toBe(0)

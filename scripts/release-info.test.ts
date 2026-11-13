@@ -34,8 +34,13 @@ function fixture(released = false) {
     })
   )
   write(root, doc, '---\nname: Fixture\npaywall: free\n---\n# Fixture\n\nComplete original documentation.\n')
-  write(root, '.agents/skills/design-project/SKILL.md', '# Fixture skill\n')
-  write(root, '.claude/skills/design-project/SKILL.md', '# Fixture skill\n')
+  for (const name of ['design-project', 'pick-design-stack', 'build-3d-model']) {
+    write(
+      root,
+      `skills/${name}/SKILL.md`,
+      `---\nname: ${name}\nmetadata:\n  audience: consumer\n---\n# Fixture skill\n`
+    )
+  }
   for (const file of [
     'design.ts',
     'design-lib.ts',
@@ -58,8 +63,9 @@ function manifest(root: string, change: (value: Record<string, unknown>) => void
     'package.json',
     'catalogue/catalogue.json',
     doc,
-    '.agents/skills/design-project/SKILL.md',
-    '.claude/skills/design-project/SKILL.md'
+    'skills/design-project/SKILL.md',
+    'skills/pick-design-stack/SKILL.md',
+    'skills/build-3d-model/SKILL.md'
   ]
   const value: Record<string, unknown> = {
     schema_version: 1,

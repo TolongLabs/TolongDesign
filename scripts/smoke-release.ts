@@ -18,6 +18,7 @@ type ArchiveEntry = { name: string; filePath: string; kind: 'file' | 'directory'
 
 const decode = (bytes: Uint8Array) => new TextDecoder().decode(bytes)
 const hash = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex')
+const CONSUMER_SKILLS = ['design-project', 'pick-design-stack', 'build-3d-model'] as const
 
 function fail(message: string): never {
   throw new Error(message)
@@ -54,12 +55,7 @@ function runRequired(cmd: string[], cwd?: string, env?: Record<string, string>) 
 function isAllowedFile(path: string): boolean {
   if (['dist/design.js', 'package.json', 'release-manifest.json', 'README.md'].includes(path)) return true
   if (['catalogue/catalogue.json', 'catalogue/index.json'].includes(path)) return true
-  if (
-    ['docs/README.md', 'docs/PLAYBOOK.md', 'docs/WORKFLOW.md', 'docs/CLI.md', 'docs/PRD.md', 'docs/TRD.md'].includes(
-      path
-    )
-  )
-    return true
+  if (['docs/README.md', 'docs/CLI.md', 'docs/PRD.md', 'docs/TRD.md'].includes(path)) return true
   if (['docs/diagrams/README.md', 'docs/diagrams/verification.json'].includes(path)) return true
   if (
     /^docs\/diagrams\/(overview|system-architecture|retrieval-sequence|maintenance-workflow|release-workflow)\.(json|svg|html)$/.test(
@@ -68,8 +64,7 @@ function isAllowedFile(path: string): boolean {
   )
     return true
   if (path.startsWith('catalogue/') && path.endsWith('.md')) return true
-  if (path.startsWith('docs/scenarios/') && path.endsWith('.md')) return true
-  if (['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'].includes(path)) return true
+  if (CONSUMER_SKILLS.some((name) => path.startsWith(`skills/${name}/`))) return true
   return path.startsWith('licenses/')
 }
 
@@ -319,7 +314,7 @@ function verifyDoctorSkills(doctor: RecordValue): string {
 
   const values = Array.isArray(doctor.skill_paths) ? doctor.skill_paths : Object.values(doctor.skill_paths)
   const skillPaths = values.filter((value): value is string => typeof value === 'string')
-  const requiredSuffixes = ['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md']
+  const requiredSuffixes = CONSUMER_SKILLS.map((name) => `skills/${name}/SKILL.md`)
   for (const suffix of requiredSuffixes) {
     const reported = skillPaths.find((path) => path.replaceAll('\\', '/').endsWith(suffix))
     if (!reported) fail(`doctor did not report ${suffix}`)
@@ -363,13 +358,12 @@ function runSmoke(archivePath: string) {
     }
     assertWithin(install.globalDir, diagnosedRoot, 'doctor root')
 
-    const agentSkillPath = join(diagnosedRoot, '.agents', 'skills', 'design-project', 'SKILL.md')
-    const claudeSkillPath = join(diagnosedRoot, '.claude', 'skills', 'design-project', 'SKILL.md')
-    const agentSkill = readFileSync(agentSkillPath)
-    const claudeSkill = readFileSync(claudeSkillPath)
-    if (!agentSkill.equals(claudeSkill)) fail('installed agent skill mirrors are not byte-identical')
-    if (!agentSkill.equals(readFileSync(join(packageRoot, '.agents', 'skills', 'design-project', 'SKILL.md')))) {
-      fail('installed agent skill differs from the validated archive')
+    for (const name of CONSUMER_SKILLS) {
+      const installedSkill = readFileSync(join(diagnosedRoot, 'skills', name, 'SKILL.md'))
+      const packagedSkill = readFileSync(join(packageRoot, 'skills', name, 'SKILL.md'))
+      if (!installedSkill.equals(packagedSkill)) {
+        fail(`installed skill differs from the validated archive: skills/${name}/SKILL.md`)
+      }
     }
 
     const context = runInstalled(

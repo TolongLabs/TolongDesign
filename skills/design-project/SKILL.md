@@ -4,6 +4,8 @@ description:
   Use when a TolongLabs website or redesign needs use-case-aware tool selection,
   visual references, complete implementation context, or verified
   3D/parallax/storytelling design through TolongDesign.
+metadata:
+  audience: consumer
 ---
 
 # Design a project
@@ -26,8 +28,8 @@ installation or checkout access; see `docs/CLI.md` in the source.
 
 Identify the actual target project separately. Read its agent rules, design
 system, stack, and current UI. Keep website implementation in that target. Read
-`docs/WORKFLOW.md` under the diagnosed/explicit source root and follow its
-completion gates:
+`skills/design-project/workflow.md` under the diagnosed/explicit source root and
+follow its completion gates:
 
 1. Brief and constraints: map requested features to acceptance checks; separate
    facts from assumptions.
@@ -80,5 +82,6 @@ criteria verified, failed, or unverified with observed evidence; stop rather
 than conceal a remaining gap. Human aesthetic acceptance remains separate from a
 passing build or automated score.
 
-Use `docs/scenarios/dictation-landing.md` for the first acceptance brief, not as
-proof that a website already exists or that the tool caused superior design.
+Use `skills/design-project/scenarios/dictation-landing.md` for the first
+acceptance brief, not as proof that a website already exists or that the tool
+caused superior design.

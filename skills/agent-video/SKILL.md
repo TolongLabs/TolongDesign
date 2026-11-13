@@ -4,6 +4,8 @@ description:
   Use when making a launch film, release video, app launch or product video in
   Remotion, when rebuilding or studying a snapcn template or component, or when
   adding a scene to TolongLabs' collections/agent-video kit.
+metadata:
+  audience: checkout
 ---
 
 # Agent Video

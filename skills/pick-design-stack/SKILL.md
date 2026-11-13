@@ -5,6 +5,8 @@ description:
   choose component libraries, icons, type, color, motion and inspiration sources
   from the TolongDesign catalogue, respecting the project's budget (free vs
   paid).
+metadata:
+  audience: consumer
 ---
 
 # Pick A Design Stack
@@ -14,14 +16,14 @@ project brief into a short, justified stack.
 
 When the task also includes visual references, 3D/parallax/storytelling, full
 source context, or implementation review, use `design-project` and follow
-`docs/WORKFLOW.md` in the source checkout. This skill's stack table alone is not
-rendered-design verification.
+`skills/design-project/workflow.md` in the source checkout. This skill's stack
+table alone is not rendered-design verification.
 
 ## Steps
 
 1. Read the brief: product type, framework (default: Next.js + React +
    Tailwind), budget (default: **free or freemium only**), audience, tone.
-2. Read [docs/PLAYBOOK.md](../../../docs/PLAYBOOK.md) for the decision order.
+2. Read [playbook](./playbook.md) for the decision order.
 3. Shortlist per layer with `bun run find` (run `bun run index` first if
    `catalogue/index.json` is stale), for example:
 

@@ -17,7 +17,7 @@ published". Update `last_verified` whenever you re-check a doc.
 ## Workflow
 
 1. `bun install`
-2. Edit or add docs (see `.claude/skills/add-tool-doc/SKILL.md`).
+2. Edit or add docs (see `skills/add-tool-doc/SKILL.md`).
 3. `bun run index && bun run check && bun run format` (and
    `bun run links -- <section>` for the sections you touched)
 4. Commit with a conventional message, scoped by section:
@@ -31,7 +31,7 @@ published". Update `last_verified` whenever you re-check a doc.
 
 Pricing drifts. Before relying on a paid tool for a client project, re-check its
 pricing page. A quarterly sweep re-runs the research fan-out with
-[templates/worker-brief.md](../templates/worker-brief.md) over docs whose
+[worker-brief.md](../skills/add-tool-doc/worker-brief.md) over docs whose
 `last_verified` is oldest.
 
 ## Working With AI Coding Agents
@@ -47,3 +47,10 @@ committing.
 - Commit downloaded fonts, icons, screenshots or template files.
 - Commit API keys or tokens.
 - Quote a price without a source link and date.
+
+## Skill Mirrors
+
+`skills/` is the single source for agent skills. `.claude/skills` and
+`.agents/skills` are directory symlinks to `../skills`, one per agent harness.
+On Git for Windows, enable `core.symlinks=true` so the mirrors resolve instead
+of checking out as plain files.

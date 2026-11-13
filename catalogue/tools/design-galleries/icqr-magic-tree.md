@@ -88,8 +88,8 @@ release was verified, not that an unpublished source licence was disproved.
 3. Record composition, hierarchy, control placement, and observed behavior in
    your brief. Keep product claims separate from tested behavior.
 4. Use [REA](../agents-mcp/rea.md) for bounded browser evidence and the
-   [project design workflow](../../../docs/WORKFLOW.md) for translating
-   reference principles into an original design.
+   [project design workflow](../../../skills/design-project/workflow.md) for
+   translating reference principles into an original design.
 5. Choose actual implementation libraries separately. Do not treat this site as
    a licensed template, downloadable scene, or documented API.
 

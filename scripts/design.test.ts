@@ -34,7 +34,12 @@ describe('private design CLI contract', () => {
     expect(output.mode).toBe('checkout')
     expect(output.resources).toBe(JSON.parse(readFileSync(join(root, 'catalogue/catalogue.json'), 'utf8')).tools.length)
     expect(output.manifest_verified).toBe(false)
-    expect(readFileSync(output.skill_paths.agents, 'utf8')).toBe(readFileSync(output.skill_paths.claude, 'utf8'))
+    expect(Object.keys(output.skill_paths).sort()).toEqual(['build-3d-model', 'design-project', 'pick-design-stack'])
+    for (const name of ['build-3d-model', 'design-project', 'pick-design-stack']) {
+      expect(readFileSync(output.skill_paths[name], 'utf8')).toBe(
+        readFileSync(join(root, 'skills', name, 'SKILL.md'), 'utf8')
+      )
+    }
     expect(output.warnings.length).toBeGreaterThan(0)
     expect(result.stderr).toBe('')
   })
@@ -107,5 +112,10 @@ describe('private design CLI contract', () => {
     expect(result.code).toBe(2)
     expect(result.stdout).toBe('')
     expect(result.stderr.length).toBeGreaterThan(0)
+  })
+  test('prints the installed skill names in the human doctor report', () => {
+    const result = run(['doctor'], target)
+    expect(result.code).toBe(0)
+    expect(result.stdout).toContain('Agent skills: build-3d-model, design-project, pick-design-stack')
   })
 })

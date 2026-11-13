@@ -11,12 +11,14 @@ import {
   openSync,
   readFileSync,
   readdirSync,
+  readlinkSync,
   realpathSync,
   rmSync,
   unlinkSync,
   writeFileSync
 } from 'node:fs'
 import { dirname, isAbsolute, join, parse as parsePath, relative, resolve, sep } from 'node:path'
+import { parse as parseYaml } from 'yaml'
 import { loadResources } from './design-lib'
 
 export type ReleaseBuildResult = {
@@ -31,14 +33,7 @@ const PACKAGE_NAME = 'tolong-design'
 const BINARY_NAME = 'tolongdesign'
 const RUNTIME_REQUIREMENT = '>=1.4.0'
 const CHECKSUM_FILE = 'SHA256SUMS'
-const TOP_LEVEL_DOCS = [
-  'docs/README.md',
-  'docs/PLAYBOOK.md',
-  'docs/WORKFLOW.md',
-  'docs/CLI.md',
-  'docs/PRD.md',
-  'docs/TRD.md'
-] as const
+const TOP_LEVEL_DOCS = ['docs/README.md', 'docs/CLI.md', 'docs/PRD.md', 'docs/TRD.md'] as const
 const DIAGRAM_FILES = [
   'docs/diagrams/README.md',
   'docs/diagrams/verification.json',
@@ -46,8 +41,10 @@ const DIAGRAM_FILES = [
     (name) => ['json', 'svg', 'html'].map((extension) => `docs/diagrams/${name}.${extension}`)
   )
 ]
-const SKILL_FILES = ['.agents/skills/design-project/SKILL.md', '.claude/skills/design-project/SKILL.md'] as const
-const MARKDOWN_ROOTS = ['catalogue', 'docs/scenarios'] as const
+const SKILLS_DIRECTORY = 'skills'
+const SKILL_ENTRY = 'SKILL.md'
+const SKILL_AUDIENCES = ['consumer', 'checkout', 'maintainer'] as const
+const MARKDOWN_ROOTS = ['catalogue'] as const
 
 type SourceFile = {
   relativePath: string
@@ -240,6 +237,88 @@ function collectMarkdown(root: string, directory: string): SourceFile[] {
   return files
 }
 
+function skillNames(root: string): string[] {
+  const skills = inspectSourcePath(root, SKILLS_DIRECTORY, 'directory')
+  let entries
+  try {
+    entries = readdirSync(skills.absolutePath, { withFileTypes: true })
+  } catch (error) {
+    throw new Error(`skills directory cannot be read: ${describeError(error)}`)
+  }
+
+  const names: string[] = []
+  for (const entry of entries) {
+    const relativePath = `${SKILLS_DIRECTORY}/${entry.name}`
+    const inspected = inspectSourceEntry(root, relativePath)
+    if (inspected.kind !== 'directory') throw new Error(`skill input must be a directory: ${relativePath}`)
+    names.push(entry.name)
+  }
+  return names.sort()
+}
+
+function readSkillAudience(root: string, name: string): string {
+  const relativePath = `${SKILLS_DIRECTORY}/${name}/${SKILL_ENTRY}`
+  const raw = readSourceFile(root, relativePath).toString('utf8')
+  const match = raw.match(/^---\n([\s\S]*?)\n---\n/)
+  if (!match) throw new Error(`skill is missing YAML frontmatter: ${relativePath}`)
+
+  let metadata: unknown
+  try {
+    metadata = parseYaml(match[1])
+  } catch (error) {
+    throw new Error(`skill frontmatter is not valid YAML: ${relativePath}: ${describeError(error)}`)
+  }
+  if (typeof metadata !== 'object' || metadata === null || Array.isArray(metadata)) {
+    throw new Error(`skill frontmatter must be a mapping: ${relativePath}`)
+  }
+  const nested = (metadata as Record<string, unknown>).metadata
+  const audience =
+    typeof nested === 'object' && nested !== null && !Array.isArray(nested)
+      ? (nested as Record<string, unknown>).audience
+      : undefined
+  if (typeof audience !== 'string' || !(SKILL_AUDIENCES as readonly string[]).includes(audience)) {
+    throw new Error(`skill ${name} has unknown metadata.audience: ${relativePath}`)
+  }
+  return audience
+}
+
+/** Consumer skills ship in the release; checkout and maintainer skills stay in the source checkout. */
+function consumerSkills(root: string): string[] {
+  return skillNames(root).filter((name) => readSkillAudience(root, name) === 'consumer')
+}
+
+function assertSkillMirrors(root: string): void {
+  for (const mirror of ['.claude/skills', '.agents/skills']) {
+    let target: string
+    try {
+      target = readlinkSync(join(root, mirror))
+    } catch (error) {
+      throw new Error(`skill mirror is missing or unreadable: ${mirror}: ${describeError(error)}`)
+    }
+    if (target !== '../skills') throw new Error(`skill mirror must be a symlink to ../skills: ${mirror}`)
+  }
+}
+
+function copySkillTree(root: string, packageDir: string, name: string): void {
+  function visit(relativePath: string): void {
+    const inspected = inspectSourceEntry(root, relativePath)
+    if (inspected.kind === 'directory') {
+      let entries
+      try {
+        entries = readdirSync(inspected.absolutePath, { withFileTypes: true })
+      } catch (error) {
+        throw new Error(`skill directory cannot be read: ${relativePath}: ${describeError(error)}`)
+      }
+      entries.sort((left, right) => (left.name < right.name ? -1 : left.name > right.name ? 1 : 0))
+      for (const entry of entries) visit(`${relativePath}/${entry.name}`)
+    } else {
+      copySourceFile(root, packageDir, relativePath)
+    }
+  }
+
+  visit(`${SKILLS_DIRECTORY}/${name}`)
+}
+
 function inspectSourceEntry(root: string, relativePath: string): SourceStat & { kind: 'file' | 'directory' } {
   const parts = assertPortablePath(relativePath)
   let current = root
@@ -282,15 +361,9 @@ function assertOutputPathIsSeparate(root: string, outputPath: string): void {
     throw new Error(`output directory must not be the source root or an ancestor of it: ${outputPath}`)
   }
 
-  const protectedPaths = [
-    'catalogue',
-    'docs',
-    'scripts',
-    'node_modules',
-    '.git',
-    '.agents/skills/design-project',
-    '.claude/skills/design-project'
-  ].map((path) => resolve(root, path))
+  const protectedPaths = ['catalogue', 'docs', 'scripts', 'skills', 'node_modules', '.git'].map((path) =>
+    resolve(root, path)
+  )
 
   if (protectedPaths.some((protectedPath) => isWithinOrSame(protectedPath, outputPath))) {
     throw new Error(`output directory must be outside source payload directories: ${outputPath}`)
@@ -514,13 +587,13 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
   }
   for (const path of [...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) inspectSourcePath(sourceRoot, path, 'file')
   for (const path of MARKDOWN_ROOTS) inspectSourcePath(sourceRoot, path, 'directory')
-  for (const path of SKILL_FILES) inspectSourcePath(sourceRoot, path, 'file')
+  inspectSourcePath(sourceRoot, SKILLS_DIRECTORY, 'directory')
+  assertSkillMirrors(sourceRoot)
   validateYamlLicense(sourceRoot)
 
   const markdownFiles = MARKDOWN_ROOTS.flatMap((directory) => collectMarkdown(sourceRoot, directory))
-  const agentSkill = readSourceFile(sourceRoot, SKILL_FILES[0])
-  const claudeSkill = readSourceFile(sourceRoot, SKILL_FILES[1])
-  if (!agentSkill.equals(claudeSkill)) throw new Error('design-project skill mirrors must be byte-identical')
+  const consumers = consumerSkills(sourceRoot)
+  if (consumers.length === 0) throw new Error('release must ship at least one consumer skill')
   const resourceCount = loadResources(sourceRoot).length
 
   if (typeof outDir !== 'string' || outDir.trim() === '') throw new Error('outDir must be a non-empty path')
@@ -549,7 +622,7 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
       copySourceFile(sourceRoot, packageDir, file)
     }
     copyMarkdownTree(sourceRoot, packageDir, markdownFiles)
-    for (const skillFile of SKILL_FILES) copySourceFile(sourceRoot, packageDir, skillFile)
+    for (const name of consumers) copySkillTree(sourceRoot, packageDir, name)
     copySourceFile(sourceRoot, packageDir, 'node_modules/yaml/LICENSE', 'licenses/yaml-LICENSE')
 
     await bundleCli(sourceRoot, packageDir)

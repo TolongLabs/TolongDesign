@@ -46,9 +46,9 @@ collections. Use current `main` for anything merged after it.
 
 TolongDesign supplies knowledge. Your human or agent supplies judgment,
 implementation and rendered verification. Start with the
-[project workflow](docs/WORKFLOW.md); use the [playbook](docs/PLAYBOOK.md) for
-website-specific stack choices.
-[Diagram files and local viewing](docs/diagrams/README.md).
+[project workflow](skills/design-project/workflow.md); use the
+[playbook](skills/pick-design-stack/playbook.md) for website-specific stack
+choices. [Diagram files and local viewing](docs/diagrams/README.md).
 
 ## Need to know
 

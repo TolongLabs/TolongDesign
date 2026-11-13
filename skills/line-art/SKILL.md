@@ -4,6 +4,8 @@ description:
   Use when building an animated line-art (ink, pen, hand-drawn) illustration,
   character, walk cycle, street or day-night scene, or exporting one to SVG, GIF
   or video, with TolongLabs' collections/line-art library.
+metadata:
+  audience: checkout
 ---
 
 # Line Art
