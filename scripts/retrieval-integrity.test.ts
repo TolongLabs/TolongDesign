@@ -31,11 +31,13 @@ writeFileSync(
 )
 
 describe('retrieval source integrity', () => {
-  test('website stack selection explicitly filters the output surface in both skill copies', () => {
+  test('website stack selection explicitly filters the output surface in every skill mirror', () => {
+    const canonical = readFileSync(join(root, 'skills/pick-design-stack/SKILL.md'), 'utf8')
     const first = readFileSync(join(root, '.agents/skills/pick-design-stack/SKILL.md'), 'utf8')
     const second = readFileSync(join(root, '.claude/skills/pick-design-stack/SKILL.md'), 'utf8')
-    expect(first).toBe(second)
-    expect(first).toContain('--section component-libraries --surface web-ui')
+    expect(first).toBe(canonical)
+    expect(second).toBe(canonical)
+    expect(canonical).toContain('--section component-libraries --surface web-ui')
   })
 
   test('shadcn category tags are consistent with the canonical stack classification', () => {

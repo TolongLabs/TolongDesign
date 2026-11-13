@@ -1,9 +1,11 @@
 ---
 name: build-3d-model
-description:
-  Use when an agent must create, generate, or produce a 3D model (GLB/glTF)
-  from text or an image — the open pipeline Spline fronts: candidates, mesh
-  backend, PBR bake, decimation, editor-ready output.
+description: >-
+  Use when an agent must create, generate, or produce a 3D model (GLB/glTF) from
+  text or an image — the open pipeline Spline fronts: candidates, mesh backend,
+  PBR bake, decimation, editor-ready output.
+metadata:
+  audience: consumer
 ---
 
 # Build A 3D Model

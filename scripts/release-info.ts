@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto'
-import { existsSync, lstatSync, readFileSync, realpathSync } from 'node:fs'
+import { existsSync, lstatSync, readFileSync, readdirSync, realpathSync } from 'node:fs'
 import { isAbsolute, join, relative, resolve, sep } from 'node:path'
+import { parse as parseYaml } from 'yaml'
 import { DataError, loadResources } from './design-lib'
 
 export type InstallationInfo = {
@@ -11,14 +12,13 @@ export type InstallationInfo = {
   root: string
   resources: number
   manifest_verified: boolean
-  skill_paths: { agents: string; claude: string }
+  skill_paths: Record<string, string>
   warnings: string[]
 }
 
-const SKILLS = {
-  agents: '.agents/skills/design-project/SKILL.md',
-  claude: '.claude/skills/design-project/SKILL.md'
-} as const
+const SKILLS_DIRECTORY = 'skills'
+const SKILL_ENTRY = 'SKILL.md'
+const SKILL_AUDIENCES = ['consumer', 'checkout', 'maintainer'] as const
 const VERSION =
   /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$/
 function validVersion(value: string): boolean {
@@ -87,13 +87,59 @@ export function readVersion(root: string): string {
   return value.version
 }
 
+function readSkillAudience(root: string, name: string): string {
+  const relativePath = `${SKILLS_DIRECTORY}/${name}/${SKILL_ENTRY}`
+  let text: string
+  try {
+    text = readFileSync(regularPath(root, relativePath), 'utf8')
+  } catch (error) {
+    if (error instanceof DataError) throw error
+    throw new DataError(`skill is missing or unreadable: ${relativePath}`)
+  }
+  const match = text.match(/^---\n([\s\S]*?)\n---\n/)
+  if (!match) throw new DataError(`skill is missing YAML frontmatter: ${relativePath}`)
+  let metadata: unknown
+  try {
+    metadata = parseYaml(match[1])
+  } catch {
+    throw new DataError(`skill frontmatter is not valid YAML: ${relativePath}`)
+  }
+  if (typeof metadata !== 'object' || metadata === null || Array.isArray(metadata)) {
+    throw new DataError(`skill frontmatter must be a mapping: ${relativePath}`)
+  }
+  const nested = (metadata as Record<string, unknown>).metadata
+  const audience =
+    typeof nested === 'object' && nested !== null && !Array.isArray(nested)
+      ? (nested as Record<string, unknown>).audience
+      : undefined
+  if (typeof audience !== 'string' || !(SKILL_AUDIENCES as readonly string[]).includes(audience)) {
+    throw new DataError(`skill ${name} has unknown metadata.audience: ${relativePath}`)
+  }
+  return audience
+}
+
+/** Consumer skills are the installed procedures; checkout and maintainer skills stay in a source checkout. */
+function consumerSkillPaths(root: string): Record<string, string> {
+  let entries
+  try {
+    entries = readdirSync(join(root, SKILLS_DIRECTORY), { withFileTypes: true })
+  } catch {
+    throw new DataError('skills directory is missing or unreadable')
+  }
+  const paths: Record<string, string> = {}
+  for (const entry of [...entries].sort((left, right) => (left.name < right.name ? -1 : 1))) {
+    if (!entry.isDirectory()) throw new DataError(`skill input must be a directory: ${SKILLS_DIRECTORY}/${entry.name}`)
+    if (readSkillAudience(root, entry.name) === 'consumer') {
+      paths[entry.name] = regularPath(root, `${SKILLS_DIRECTORY}/${entry.name}/${SKILL_ENTRY}`)
+    }
+  }
+  return paths
+}
+
 export function inspectInstallation(root: string): InstallationInfo {
   const realRoot = realpathSync(root)
   const version = readVersion(realRoot)
-  const skillPaths = { agents: regularPath(realRoot, SKILLS.agents), claude: regularPath(realRoot, SKILLS.claude) }
-  if (!readFileSync(skillPaths.agents).equals(readFileSync(skillPaths.claude))) {
-    throw new DataError('design-project skill mirrors do not match')
-  }
+  const skillPaths = consumerSkillPaths(realRoot)
   const manifestExists = existsSync(join(realRoot, 'release-manifest.json'))
   const bundledRelease = existsSync(join(realRoot, 'dist', 'design.js'))
   if (bundledRelease && !manifestExists) throw new DataError('release integrity manifest is missing')
@@ -126,8 +172,7 @@ export function inspectInstallation(root: string): InstallationInfo {
     for (const required of [
       'package.json',
       'catalogue/catalogue.json',
-      SKILLS.agents,
-      SKILLS.claude,
+      ...Object.keys(skillPaths).map((name) => `${SKILLS_DIRECTORY}/${name}/${SKILL_ENTRY}`),
       ...(bundledRelease ? ['dist/design.js'] : [])
     ]) {
       if (!Object.hasOwn(files, required)) throw new DataError(`release integrity coverage missing: ${required}`)

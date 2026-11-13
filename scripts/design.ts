@@ -216,7 +216,7 @@ async function run(args: string[]): Promise<number> {
       if (command.json) writeJson(info)
       else {
         process.stdout.write(
-          `tolongdesign ${info.version}\n${info.resources} registered resources\nRoot: ${info.root}\nMode: ${info.mode}\nManifest verified: ${info.manifest_verified}\nAgent skill: ${info.skill_paths.agents}\n`
+          `tolongdesign ${info.version}\n${info.resources} registered resources\nRoot: ${info.root}\nMode: ${info.mode}\nManifest verified: ${info.manifest_verified}\nAgent skills: ${Object.keys(info.skill_paths).sort().join(', ') || 'none'}\n`
         )
         for (const warning of info.warnings) process.stdout.write(`Warning: ${warning}\n`)
       }

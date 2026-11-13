@@ -63,7 +63,7 @@ for (const tool of tools) {
 errors.push(...findBrokenRelativeMarkdownLinks(ROOT))
 
 // Hand-written guides must not link to docs that do not exist.
-for (const guide of ['README.md', 'AGENTS.md', 'docs/README.md', 'docs/PLAYBOOK.md']) {
+for (const guide of ['README.md', 'AGENTS.md', 'docs/README.md', 'skills/pick-design-stack/playbook.md']) {
   const body = readFileSync(join(ROOT, guide), 'utf8')
   for (const m of body.matchAll(/\]\((\.{0,2}\/?[^)#\s:]+\.md)\)/g)) {
     const target = normalize(join(dirname(join(ROOT, guide)), m[1]))

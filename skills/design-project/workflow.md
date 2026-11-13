@@ -7,8 +7,9 @@ The CLI does not generate a website or judge whether it looks good.
 
 ## Start from the target project
 
-Install an authenticated private release with [CLI installation](./CLI.md). From
-the target project, verify the selected source before retrieving context:
+Install an authenticated private release with the CLI's `install` command,
+documented in the package README. From the target project, verify the selected
+source before retrieving context:
 
 ```bash
 tolongdesign --version
@@ -19,10 +20,10 @@ tolongdesign context gsap react-three-fiber saaspo --brief "Dictation landing pa
 ```
 
 Use the diagnostic root and skill paths to point the coding agent at
-`.agents/skills/design-project/SKILL.md` and this workflow in the installed
-package. The `.claude/skills/` mirror contains identical instructions. This
-feature does not silently install skills into another project or change global
-agent settings.
+`skills/design-project/SKILL.md` and this workflow in the installed package. In
+a checkout, the `.claude/skills` and `.agents/skills` mirrors are symlinks to
+the same source. This feature does not silently install skills into another
+project or change global agent settings.
 
 For checkout mode, install locked dependencies and set `TOLONG_DESIGN` to the
 private checkout. Replace `tolongdesign` in the examples with
@@ -34,8 +35,9 @@ instead of mixing a checkout with a different globally installed binary.
 
 Read the target project's agent instructions, `DESIGN.md`, package manifest,
 existing UI, and applicable tests. Preserve its stack and design system unless
-replacement is part of the request. Use [PLAYBOOK](./PLAYBOOK.md) defaults only
-for unspecified new projects.
+replacement is part of the request. Use
+[playbook](../pick-design-stack/playbook.md) defaults only for unspecified new
+projects.
 
 Write a short brief with audience, product truth, desired feeling, narrative,
 page sections, visual requirements, budget, and measurable acceptance criteria.
@@ -51,8 +53,8 @@ Decompose the brief into targeted searches. Search uses local, field-weighted
 keyword ranking over registered docs and metadata. Partial multiword matches are
 eligible; it is not vector or LLM-based semantic search. Narrow a shortlist with
 execution mode, output surface, stack and paywall filters. Keep references
-separate from implementation tools. The [TRD](./TRD.md#search-and-ranking)
-defines the exact scoring and filter behavior.
+separate from implementation tools. The `search` and `context` commands define
+the exact scoring and filter behavior; `--json` shows every field they use.
 
 ```bash
 tolongdesign search landing --section design-galleries
@@ -68,7 +70,7 @@ inspection. If access is blocked, ask for supplied references or mark that stage
 incomplete; do not invent observations. For a 3D reference, check that its scene
 actually rendered: a successful screenshot can contain controls around a blank
 canvas when graphics support is unavailable. See the
-[REA/ICQR study](../catalogue/research/tree-icqr-study.md) for an observed
+[REA/ICQR study](../../catalogue/research/tree-icqr-study.md) for an observed
 example.
 
 For each selected reference, record URL, observed layout/type/color/motion
@@ -85,12 +87,12 @@ Record type, palette, spacing, composition, and the role of each showpiece. Use
 the project's approval process for the direction and mockups.
 
 When image generation is available and approved, optionally pair the task with
-[Image-to-code skill](../catalogue/tools/agents-mcp/image-to-code-skill.md). Its
-image-first pipeline creates references, analyzes them, and translates them into
-frontend code. It does not retrieve gallery screenshots or replace production
-checks. When generation is unavailable, use approved supplied references or an
-explicit text-first direction; do not claim that generated mockups were
-inspected.
+[Image-to-code skill](../../catalogue/tools/agents-mcp/image-to-code-skill.md).
+Its image-first pipeline creates references, analyzes them, and translates them
+into frontend code. It does not retrieve gallery screenshots or replace
+production checks. When generation is unavailable, use approved supplied
+references or an explicit text-first direction; do not claim that generated
+mockups were inspected.
 
 For 3D/parallax work, specify camera or object behavior, scroll states, pacing,
 interaction boundaries, mobile behavior, and a reduced-motion fallback. Static

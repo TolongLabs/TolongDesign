@@ -137,8 +137,8 @@ Checked 2026-11-12.
 4. Export any frame: `toSVG(stage.svg)` headless, or
    `toSVG(fromDOM(svgElement, window))` live. Both return standalone SVG.
 5. For a new scene or character, follow the `line-art` skill
-   (`.claude/skills/line-art/SKILL.md`). It covers the workflow, the rules and
-   the verification bar.
+   (`skills/line-art/SKILL.md`). It covers the workflow, the rules and the
+   verification bar.
 
 ## Examples
 

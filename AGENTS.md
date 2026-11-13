@@ -25,17 +25,18 @@ Use it two ways:
 
 1. **As a reference** for any TolongLabs design work: start at
    [docs/README.md](docs/README.md), pick tools with the
-   [design playbook](docs/PLAYBOOK.md), filter with `bun run find`. For a
-   use-case-aware design task, invoke `design-project` and follow
-   [the project design workflow](docs/WORKFLOW.md); retrieve complete source
-   context with `bun run design`.
+   [design playbook](skills/pick-design-stack/playbook.md), filter with
+   `bun run find`. For a use-case-aware design task, invoke `design-project` and
+   follow [the project design workflow](skills/design-project/workflow.md);
+   retrieve complete source context with `bun run design`.
 2. **As a repo to maintain**: add, refresh, or correct tool docs.
 
 ## Layout
 
 ```
 docs/README.md                 Start here: what is in the repo and how to use it
-docs/PLAYBOOK.md               How to pick a stack and start a new website
+skills/<name>/SKILL.md            Procedure an agent follows; consumer skills ship in the release
+.claude/skills, .agents/skills  Symlinks to ../skills, one per agent harness
 catalogue/README.md                 Generated: every section with counts
 catalogue/tools/<section>/README.md Generated: one row per tool in the section
 catalogue/tools/<section>/<slug>.md One doc per tool (hand-written / researched)
@@ -46,7 +47,7 @@ catalogue/index.json                Generated: every doc's frontmatter, flat
 catalogue/SCHEMA.md                 Execution modes, surfaces, status and creator metadata
 collections/<name>/            TolongLabs-owned design code: src, tests, demo, previews (see collections/README.md)
 catalogue/TEMPLATE.md                 The contract every tool doc follows
-templates/worker-brief.md             Work order used to fan out doc research to agents
+skills/add-tool-doc/worker-brief.md   Work order used to fan out doc research to agents
 scripts/                       check-docs.ts, build-index.ts, find.ts, check-links.ts (Bun + TypeScript)
 graphify-out/                  Knowledge graph of this repo (graph.json, GRAPH_REPORT.md)
 ```
@@ -105,16 +106,16 @@ bun run format              # prettier
 
 ## Documents
 
-| Read When                                                  | Document                                          |
-| ---------------------------------------------------------- | ------------------------------------------------- |
-| Orienting in the repo, or using it on a project            | [docs/README.md](docs/README.md)                  |
-| Changing product scope, requirements or acceptance         | [Product requirements](docs/PRD.md)               |
-| Changing retrieval, schemas, trust boundaries or packaging | [Technical reference](docs/TRD.md)                |
-| Starting a new website design / choosing a stack           | [Design playbook](docs/PLAYBOOK.md)               |
-| Browsing every section with counts                         | [Design catalogue](catalogue/README.md)           |
-| Writing or refreshing a tool doc                           | [Tool doc template](catalogue/TEMPLATE.md)        |
-| Fanning research out to worker agents                      | [Worker brief](templates/worker-brief.md)         |
-| Building or changing a collection (our own design code)    | [Collections](collections/README.md)              |
-| Branching, committing, or opening a pull request           | [Contributing](.github/CONTRIBUTING.md)           |
-| Answering "which tools relate to X" across the repo        | `graphify-out/GRAPH_REPORT.md`, `/graphify query` |
-| Refreshing the knowledge graph after doc changes           | `/graphify . --update`                            |
+| Read When                                                  | Document                                                |
+| ---------------------------------------------------------- | ------------------------------------------------------- |
+| Orienting in the repo, or using it on a project            | [docs/README.md](docs/README.md)                        |
+| Changing product scope, requirements or acceptance         | [Product requirements](docs/PRD.md)                     |
+| Changing retrieval, schemas, trust boundaries or packaging | [Technical reference](docs/TRD.md)                      |
+| Starting a new website design / choosing a stack           | [Design playbook](skills/pick-design-stack/playbook.md) |
+| Browsing every section with counts                         | [Design catalogue](catalogue/README.md)                 |
+| Writing or refreshing a tool doc                           | [Tool doc template](catalogue/TEMPLATE.md)              |
+| Fanning research out to worker agents                      | [Worker brief](skills/add-tool-doc/worker-brief.md)     |
+| Building or changing a collection (our own design code)    | [Collections](collections/README.md)                    |
+| Branching, committing, or opening a pull request           | [Contributing](.github/CONTRIBUTING.md)                 |
+| Answering "which tools relate to X" across the repo        | `graphify-out/GRAPH_REPORT.md`, `/graphify query`       |
+| Refreshing the knowledge graph after doc changes           | `/graphify . --update`                                  |

@@ -77,9 +77,10 @@ Pricing dates do not certify API compatibility or asset licensing. Check
 relevant current official guidance before using a resource.
 
 `doctor --json` reports the installed root, version, registered resource count,
-manifest integrity, and the paths of both mirrored `design-project` skill files.
-Point your coding agent at that skill and the packaged `docs/WORKFLOW.md`.
-Skills are not silently installed into a target repo or a global harness.
+manifest integrity, and the paths of the three consumer skills
+(`skills/<name>/SKILL.md`). Point your coding agent at the reported skill path
+and the packaged `skills/design-project/workflow.md`. Skills are not silently
+installed into a target repo or a global harness.
 
 ## Checkout mode
 

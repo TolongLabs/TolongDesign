@@ -43,7 +43,7 @@ jobs:
       - name: Validate documentation
         run: bun run check
       - name: Verify agent skill mirrors
-        run: cmp .agents/skills/design-project/SKILL.md .claude/skills/design-project/SKILL.md
+        run: test "$(readlink .claude/skills)" = ../skills && test "$(readlink .agents/skills)" = ../skills
       - name: Build release artifacts
         run: bun run build:release
       - name: Verify checksum and isolated installation

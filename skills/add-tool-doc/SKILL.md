@@ -3,6 +3,8 @@ name: add-tool-doc
 description:
   Use when adding a new design tool to TolongDesign, refreshing an existing tool
   doc (pricing changed, site moved), or fixing a doc that fails `bun run check`.
+metadata:
+  audience: maintainer
 ---
 
 # Add Or Refresh A Tool Doc

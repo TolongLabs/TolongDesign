@@ -1,6 +1,6 @@
 # Dictation landing page
 
-Acceptance scenario for [the project design workflow](../WORKFLOW.md). This is a
+Acceptance scenario for [the project design workflow](../workflow.md). This is a
 test brief and review rubric, not a built website or a claim of visual quality.
 
 ## Brief

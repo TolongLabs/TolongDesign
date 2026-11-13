@@ -105,9 +105,9 @@ roles separate in a project brief.
 Apply observed principles, such as a product-focused visual region and
 viewport-aware control grouping, to an original design. For a dictation page,
 choose its own truthful product metaphor rather than copying a QR tree. Follow
-[the project workflow](../../docs/WORKFLOW.md), read complete chosen
-implementation docs, check licences, and inspect actual target-project renders
-before calling a 3D/parallax design verified. Metadata and a successful
+[the project workflow](../../skills/design-project/workflow.md), read complete
+chosen implementation docs, check licences, and inspect actual target-project
+renders before calling a 3D/parallax design verified. Metadata and a successful
 screenshot command alone cannot satisfy that visual gate.
 
 ## Sources

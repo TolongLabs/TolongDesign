@@ -125,7 +125,8 @@ bun run agent-video:render -- launch-film out/launch-film.mp4
 
 ## Agent notes
 
-- Skill: `.claude/skills/agent-video/SKILL.md` (mirrored in `.agents/skills`).
+- Skill: `skills/agent-video/SKILL.md` (mirrored for each harness through
+  `.claude/skills` and `.agents/skills`).
 - Templates are pure data; never put React in `src/templates/`.
 - Scenes must be pure functions of the frame: no state, no effects, no
   `Math.random` (use `seeded`).
