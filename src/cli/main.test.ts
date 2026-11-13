@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
+import { loadResources } from '../core/loader'
 
 const root = join(import.meta.dir, '..', '..')
 const packageVersion = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version
@@ -32,7 +33,7 @@ describe('private design CLI contract', () => {
     expect(output.version).toBe(packageVersion)
     expect(output.runtime).toBe('bun')
     expect(output.mode).toBe('checkout')
-    expect(output.resources).toBe(JSON.parse(readFileSync(join(root, 'catalogue/catalogue.json'), 'utf8')).tools.length)
+    expect(output.resources).toBe(loadResources(root).length)
     expect(output.manifest_verified).toBe(false)
     expect(Object.keys(output.skill_paths).sort()).toEqual(['build-3d-model', 'design-project', 'pick-design-stack'])
     for (const name of ['build-3d-model', 'design-project', 'pick-design-stack']) {

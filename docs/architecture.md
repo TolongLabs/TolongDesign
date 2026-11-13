@@ -26,7 +26,7 @@ or model call on the retrieval path.
 | ----------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Command handling  | `src/cli/main.ts`, `src/cli/args.ts`                                        | Parse arguments, select operations, write stdout/stderr and exit status.                                   |
 | MCP server        | `src/mcp/server.ts`                                                         | Expose read-only tools, consumer-skill prompts and URI resources over stdio via `src/core` only.           |
-| Resource loading  | `src/core/loader.ts`                                                        | Resolve the selected root, read registration and document bytes, parse metadata and hash source bytes.     |
+| Resource loading  | `src/core/loader.ts`                                                        | Resolve the selected root, discover tool docs by path, parse metadata and hash source bytes.               |
 | Retrieval         | `src/core/search.ts`, `src/core/context.ts`                                 | Apply filters and score in-memory resources. No direct file/network I/O in the scorer.                     |
 | Context and cards | `src/core/context.ts`, `src/core/card.ts`                                   | Full source hand-off or bounded navigation output.                                                         |
 | Maintenance       | `scripts/build-index.ts`, `scripts/check-docs.ts`, `scripts/check-links.ts` | Generate views, validate content and report external-link observations. These are separate from retrieval. |
@@ -39,26 +39,27 @@ the caller changed into another project.
 
 ## Source authority
 
-| Path                                                | Authority / lifecycle                                                                                                                                  |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `catalogue/catalogue.json`                          | Hand-maintained registration and scraped/curated provenance. `tools[]` identifies resources; `people[]` records creators and optional credit evidence. |
-| `catalogue/tools/<section>/<slug>.md`               | Authored resource facts, frontmatter, procedure, examples, rights, gotchas and sources.                                                                |
-| `catalogue/TEMPLATE.md` + `src/core/schema.ts`      | Document and metadata contract. The template is the authoring interface; the schema is executable validation.                                          |
-| `catalogue/index.json`                              | Generated metadata plus derived `install`; useful for consumers, but **not the authority used by runtime search**.                                     |
-| `catalogue/README.md`, section READMEs, `people.md` | Generated human-readable views. Regenerate instead of editing.                                                                                         |
-| `graphify-out/`                                     | Derived relationship/discovery aid. It is neither a runtime dependency nor proof of compatibility or factual correctness.                              |
-| `release-manifest.json`                             | Build-generated payload hashes and version/resource-count record for an installed snapshot.                                                            |
+| Path                                                | Authority / lifecycle                                                                                                     |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `catalogue/tools/<section>/<slug>.md`               | Authored resource facts, frontmatter, procedure, examples, rights, gotchas and sources; path sets tool identity.          |
+| `catalogue/people.json`                             | Hand-maintained people and creator-credit data.                                                                           |
+| `catalogue/designeer-scrape.json`                   | Frozen scrape snapshot retained for provenance; not read by the runtime loader.                                           |
+| `catalogue/TEMPLATE.md` + `src/core/schema.ts`      | Document and metadata contract. The template is the authoring interface; the schema is executable validation.             |
+| `catalogue/index.json`                              | Generated metadata plus derived `install`; useful for consumers, but **not the authority used by runtime search**.        |
+| `catalogue/README.md`, section READMEs, `people.md` | Generated human-readable views. Regenerate instead of editing.                                                            |
+| `graphify-out/`                                     | Derived relationship/discovery aid. It is neither a runtime dependency nor proof of compatibility or factual correctness. |
+| `release-manifest.json`                             | Build-generated payload hashes and version/resource-count record for an installed snapshot.                               |
 
 ## Resource and creator schema
 
-Stable resource identity is `section_slug/slug`; `doc` is a registered path
-under `catalogue/tools/`. Required frontmatter keys and the nine ordered H2
-sections are defined in [`src/core/schema.ts`](../src/core/schema.ts) and the
-[template](../catalogue/TEMPLATE.md).
+Stable resource identity is `section_slug/slug`; the doc path under
+`catalogue/tools/` supplies both values. Required frontmatter keys and the nine
+ordered H2 sections are defined in [`src/core/schema.ts`](../src/core/schema.ts)
+and the [template](../catalogue/TEMPLATE.md).
 
 | Field                                   | Shape / meaning                                                                                             |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `name`, `slug`, `section`, `source_url` | Resource identity and primary source. Registration consistency is checked during maintenance.               |
+| `name`, `slug`, `section`, `source_url` | Resource identity and primary source. Slug and section consistency is checked against the doc path.         |
 | `category_tags`, `best_for`, `stack`    | Lists. Stack uses a finite canonical vocabulary; tags are search terms, not compatibility evidence.         |
 | `paywall`                               | `free`, `freemium`, `paid`, `unknown`. Paywall is access/pricing, not licence permission.                   |
 | `pricing_summary`, `license`            | Authored statements with source evidence; unpublished details stay explicit.                                |
@@ -91,12 +92,13 @@ frontmatter.
 
 The loader performs these steps for each CLI operation that needs resources:
 
-1. Resolve the root and `catalogue/catalogue.json`; require nonempty
-   registration fields and a valid `tools[]` array when `tool` entries are
-   requested.
-2. Restrict registered tool doc paths to `catalogue/tools/` and research paths
-   to `catalogue/research/`: reject absolute/drive paths, backslashes, controls,
-   empty/dot/traversal segments and resolved escapes (including symlinks).
+1. Resolve the root and discover Markdown files directly under each mapped
+   section directory in `catalogue/tools/`, then read tool identity from the
+   path.
+2. Restrict tool doc paths to `catalogue/tools/` and research paths to
+   `catalogue/research/`: reject absolute/drive paths, backslashes, controls,
+   empty/dot/traversal segments, unknown sections, `README.md`, symbolic links
+   and resolved escapes.
 3. Read each document, decode UTF-8, parse YAML frontmatter and compute SHA-256
    over the original bytes.
 4. Build resource records with explicit `kind` (`tool`, `research` or `skill`)
@@ -109,10 +111,9 @@ entries for runtime CLI commands. `collections/knowledge/` stays out of the
 index.
 
 The runtime loader is defensive, but it is not the full maintenance validator.
-Some missing legacy metadata has fallbacks; malformed YAML or a non-mapping
-frontmatter is a data error. Run `bun run check` before treating authored data
-as compliant. Unregistered tool Markdown is not automatically included in
-search.
+Malformed YAML or a non-mapping frontmatter is a data error. Run `bun run check`
+before treating authored data as compliant. New tool docs under a mapped section
+path are included in search automatically.
 
 ## Search and ranking
 

@@ -5,7 +5,7 @@ import { dirname, join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import { buildContext, renderContext, resolveResource } from './context'
 import { loadAllResources, loadResources } from './loader'
-import { DataError, UsageError } from './schema'
+import { UsageError } from './schema'
 
 type FixtureTool = {
   name: string
@@ -90,32 +90,14 @@ function createFixtureRoot(tools: FixtureTool[]) {
   const root = tempRoot('tolong-context-')
   mkdirSync(join(root, 'catalogue'), { recursive: true })
 
-  const catalogueTools = tools.map((tool) => {
+  for (const tool of tools) {
     const doc = tool.docPath ?? defaultDocPath(tool)
-    const metadata = fixtureMetadata(tool)
     if (tool.writeDoc !== false) {
       const fullPath = resolve(root, doc)
       mkdirSync(dirname(fullPath), { recursive: true })
       writeFileSync(fullPath, markdownFor(tool), 'utf8')
     }
-
-    return {
-      name: tool.name,
-      url: metadata.source_url,
-      description: tool.catalogueDescription ?? `Catalogue entry for ${tool.slug}.`,
-      section: metadata.section,
-      slug: tool.slug,
-      section_slug: tool.sectionSlug,
-      designeer_url: metadata.designeer_url,
-      doc
-    }
-  })
-
-  writeFileSync(
-    join(root, 'catalogue/catalogue.json'),
-    JSON.stringify({ source: 'https://designeer.xyz', scraped: '2026-10-10', tools: catalogueTools }),
-    'utf8'
-  )
+  }
 
   return {
     root,
@@ -131,13 +113,13 @@ describe('design resource resolution and context', () => {
   test('requires a section-qualified ID when slugs are ambiguous', () => {
     const fixture = createFixtureRoot([
       { name: 'Motion Shared', slug: 'shared', sectionSlug: 'motion', body: 'motion resource' },
-      { name: 'Color Shared', slug: 'shared', sectionSlug: 'colors', body: 'color resource' }
+      { name: 'Color Shared', slug: 'shared', sectionSlug: 'color', body: 'color resource' }
     ])
     const resources = loadResources(fixture.root)
 
     expect(() => resolveResource(resources, 'shared')).toThrow(UsageError)
     expect(resolveResource(resources, 'motion/shared').name).toBe('Motion Shared')
-    expect(resolveResource(resources, 'colors/shared').name).toBe('Color Shared')
+    expect(resolveResource(resources, 'color/shared').name).toBe('Color Shared')
   })
 
   test('rejects unknown resource IDs as usage errors', () => {
@@ -214,20 +196,20 @@ describe('design resource resolution and context', () => {
   test('preserves request order while deduplicating repeated context IDs', () => {
     const fixture = createFixtureRoot([
       { name: 'First', slug: 'first', sectionSlug: 'motion', body: 'first document' },
-      { name: 'Second', slug: 'second', sectionSlug: 'colors', body: 'second document' }
+      { name: 'Second', slug: 'second', sectionSlug: 'color', body: 'second document' }
     ])
 
     const pack = buildContext(
       loadResources(fixture.root),
-      ['colors/second', 'motion/first', 'colors/second'],
+      ['color/second', 'motion/first', 'color/second'],
       undefined,
       warningDate
     )
 
-    expect(pack.resources.map(qualifiedId)).toEqual(['colors/second', 'motion/first'])
+    expect(pack.resources.map(qualifiedId)).toEqual(['color/second', 'motion/first'])
   })
 
-  test('fails closed when a registered source document is missing', () => {
+  test('does not discover a missing document and treats its ID as unknown', () => {
     const fixture = createFixtureRoot([
       { name: 'Available', slug: 'available', sectionSlug: 'motion', body: 'available source' },
       {
@@ -238,11 +220,10 @@ describe('design resource resolution and context', () => {
         writeDoc: false
       }
     ])
+    const resources = loadResources(fixture.root)
 
-    expect(() => {
-      const resources = loadResources(fixture.root)
-      return buildContext(resources, ['available', 'missing-source'], undefined, warningDate)
-    }).toThrow(DataError)
+    expect(resources.map(qualifiedId)).toEqual(['motion/available'])
+    expect(() => buildContext(resources, ['available', 'missing-source'], undefined, warningDate)).toThrow(UsageError)
   })
 
   test('wraps nested backtick runs with a longer fence and keeps the whole document intact', () => {

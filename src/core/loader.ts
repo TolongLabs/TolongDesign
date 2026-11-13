@@ -4,18 +4,18 @@ import { isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { parse } from 'yaml'
 
 import { extractInstall } from './fields'
-import { loadSkillResources } from './skill'
+import { SECTION_NAMES, sectionName } from './sections'
 import {
   DataError,
   PAYWALLS,
   RESOURCE_KINDS,
   UsageError,
-  type Catalogue,
   type CatalogueTool,
   type Person,
   type Resource,
   type ResourceKind
 } from './schema'
+import { loadSkillResources } from './skill'
 
 export type Doc = {
   path: string
@@ -25,14 +25,6 @@ export type Doc = {
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
-}
-
-function requiredString(record: Record<string, unknown>, key: string, location: string): string {
-  const value = record[key]
-  if (typeof value !== 'string' || value.trim() === '') {
-    throw new DataError(`${location}: expected a non-empty string for ${key}`)
-  }
-  return value
 }
 
 function isWithin(parent: string, child: string): boolean {
@@ -45,62 +37,6 @@ function isWithin(parent: string, child: string): boolean {
   )
 }
 
-function parseCatalogue(value: unknown): Catalogue {
-  if (!isRecord(value) || !Array.isArray(value.tools)) {
-    throw new DataError('catalogue/catalogue.json: expected an object with a tools array')
-  }
-
-  const tools: CatalogueTool[] = value.tools.map((tool, index) => {
-    const location = `catalogue/catalogue.json tools[${index}]`
-    if (!isRecord(tool)) throw new DataError(`${location}: expected an object`)
-
-    return {
-      name: requiredString(tool, 'name', location),
-      url: requiredString(tool, 'url', location),
-      description: requiredString(tool, 'description', location),
-      section: requiredString(tool, 'section', location),
-      section_slug: requiredString(tool, 'section_slug', location),
-      slug: requiredString(tool, 'slug', location),
-      doc: requiredString(tool, 'doc', location),
-      designeer_url: typeof tool.designeer_url === 'string' ? tool.designeer_url : undefined
-    }
-  })
-
-  return {
-    source: typeof value.source === 'string' ? value.source : '',
-    scraped: typeof value.scraped === 'string' ? value.scraped : '',
-    tools,
-    people: 'people' in value ? (value.people as Person[]) : []
-  }
-}
-
-function readCatalogue(root: string): { realRoot: string; catalogue: Catalogue } {
-  if (typeof root !== 'string' || root.trim() === '') throw new UsageError('root must be a non-empty path')
-
-  let realRoot: string
-  let catalogueBytes: Uint8Array
-  try {
-    realRoot = realpathSync(resolve(root))
-    const cataloguePath = realpathSync(resolve(realRoot, 'catalogue', 'catalogue.json'))
-    if (!isWithin(realRoot, cataloguePath)) {
-      throw new DataError('catalogue/catalogue.json resolves outside the catalogue root')
-    }
-    catalogueBytes = readFileSync(cataloguePath)
-  } catch (error) {
-    if (error instanceof DataError) throw error
-    throw new DataError('catalogue/catalogue.json is missing or cannot be read')
-  }
-
-  let parsedCatalogue: unknown
-  try {
-    parsedCatalogue = JSON.parse(new TextDecoder().decode(catalogueBytes))
-  } catch {
-    throw new DataError('catalogue/catalogue.json is not valid JSON')
-  }
-
-  return { realRoot, catalogue: parseCatalogue(parsedCatalogue) }
-}
-
 function safeDocPath(root: string, doc: string): string {
   if (doc.includes('\\') || /[\u0000-\u001f\u007f]/.test(doc) || isAbsolute(doc) || /^[A-Za-z]:/.test(doc)) {
     throw new DataError('catalogue document path must be relative to catalogue/tools')
@@ -108,10 +44,12 @@ function safeDocPath(root: string, doc: string): string {
 
   const parts = doc.split('/')
   if (
-    parts.length < 3 ||
+    parts.length !== 4 ||
     parts[0] !== 'catalogue' ||
     parts[1] !== 'tools' ||
-    parts.slice(2).some((part) => part === '' || part === '.' || part === '..')
+    parts.slice(2).some((part) => part === '' || part === '.' || part === '..') ||
+    !parts[3].endsWith('.md') ||
+    parts[3] === 'README.md'
   ) {
     throw new DataError('catalogue document path must be below catalogue/tools')
   }
@@ -129,7 +67,7 @@ function safeDocPath(root: string, doc: string): string {
     realDesignRoot = realpathSync(designRoot)
     realDocument = realpathSync(candidate)
   } catch {
-    throw new DataError(`${label}: registered document is missing or cannot be resolved`)
+    throw new DataError(`${label}: document is missing or cannot be resolved`)
   }
 
   if (realDesignRoot !== designRoot || !isWithin(realDesignRoot, realDocument)) {
@@ -168,25 +106,29 @@ function getPaywall(value: unknown): string {
 }
 
 function makeResource(
-  entry: CatalogueTool,
+  doc: string,
+  sectionSlug: string,
+  slug: string,
   markdown: string,
   bytes: Uint8Array,
   meta: Record<string, unknown>
 ): Resource {
-  const name = typeof meta.name === 'string' && meta.name.trim() !== '' ? meta.name : entry.name
-  const sourceUrl = typeof meta.source_url === 'string' && meta.source_url.trim() !== '' ? meta.source_url : entry.url
+  const name = typeof meta.name === 'string' && meta.name.trim() !== '' ? meta.name : slug
+  const sourceUrl = typeof meta.source_url === 'string' && meta.source_url.trim() !== '' ? meta.source_url : null
   const lastVerified = stringValue(meta.last_verified)
   const agentFriendly = typeof meta.agent_friendly === 'boolean' ? meta.agent_friendly : null
   const openSource = typeof meta.open_source === 'boolean' ? meta.open_source : null
   const install = extractInstall(markdown)
+  const section = sectionName(sectionSlug)
+  if (!section) throw new DataError(`catalogue/tools/${sectionSlug}: unknown section`)
 
   return {
     kind: 'tool',
-    id: `${entry.section_slug}/${entry.slug}`,
+    id: `${sectionSlug}/${slug}`,
     name,
-    section_slug: entry.section_slug,
-    slug: entry.slug,
-    doc: entry.doc,
+    section_slug: sectionSlug,
+    slug,
+    doc,
     source_url: sourceUrl,
     last_verified: lastVerified,
     sha256: createHash('sha256').update(bytes).digest('hex'),
@@ -197,14 +139,14 @@ function makeResource(
     meta: {
       ...meta,
       install,
-      section: typeof meta.section === 'string' ? meta.section : entry.section,
-      designeer_url: meta.designeer_url ?? entry.designeer_url,
-      designeer_blurb: meta.designeer_blurb ?? entry.description
+      section
     }
   }
 }
 
-function loadToolResources(realRoot: string, catalogue: Catalogue): Resource[] {
+type ToolDocument = { doc: string; sectionSlug: string; slug: string }
+
+function discoverToolDocs(realRoot: string): ToolDocument[] {
   const designRoot = resolve(realRoot, 'catalogue', 'tools')
   try {
     if (realpathSync(designRoot) !== designRoot) {
@@ -215,17 +157,48 @@ function loadToolResources(realRoot: string, catalogue: Catalogue): Resource[] {
     throw new DataError('catalogue/tools is missing or cannot be resolved')
   }
 
-  return catalogue.tools.map((entry) => {
-    const documentPath = safeDocPath(realRoot, entry.doc)
+  const documents: ToolDocument[] = []
+  for (const section of readdirSync(designRoot, { withFileTypes: true })) {
+    if (section.isSymbolicLink()) throw new DataError(`catalogue/tools/${section.name}: symbolic links are not allowed`)
+    if (!section.isDirectory()) continue
+    if (!sectionName(section.name)) throw new DataError(`catalogue/tools/${section.name}: unknown section`)
+
+    const sectionPath = resolve(designRoot, section.name)
+    if (realpathSync(sectionPath) !== sectionPath) {
+      throw new DataError(`catalogue/tools/${section.name}: section resolves outside catalogue/tools`)
+    }
+    for (const file of readdirSync(sectionPath, { withFileTypes: true })) {
+      if (file.isSymbolicLink())
+        throw new DataError(`catalogue/tools/${section.name}/${file.name}: symbolic links are not allowed`)
+      if (!file.isFile() || !file.name.endsWith('.md') || file.name === 'README.md') continue
+
+      documents.push({
+        doc: `catalogue/tools/${section.name}/${file.name}`,
+        sectionSlug: section.name,
+        slug: file.name.slice(0, -3)
+      })
+    }
+  }
+
+  const sectionOrder = new Map(Object.keys(SECTION_NAMES).map((slug, index) => [slug, index]))
+  return documents.sort(
+    (left, right) =>
+      sectionOrder.get(left.sectionSlug)! - sectionOrder.get(right.sectionSlug)! || left.slug.localeCompare(right.slug)
+  )
+}
+
+function loadToolResources(realRoot: string): Resource[] {
+  return discoverToolDocs(realRoot).map(({ doc, sectionSlug, slug }) => {
+    const documentPath = safeDocPath(realRoot, doc)
     let bytes: Uint8Array
     try {
       bytes = readFileSync(documentPath)
     } catch {
-      throw new DataError(`${JSON.stringify(entry.doc)}: registered document cannot be read`)
+      throw new DataError(`${JSON.stringify(doc)}: document cannot be read`)
     }
     const markdown = new TextDecoder('utf-8', { ignoreBOM: true }).decode(bytes)
-    const { meta } = splitFrontmatter(markdown, entry.doc)
-    return makeResource(entry, markdown, bytes, meta)
+    const { meta } = splitFrontmatter(markdown, doc)
+    return makeResource(doc, sectionSlug, slug, markdown, bytes, meta)
   })
 }
 
@@ -294,9 +267,45 @@ function loadResearchResources(realRoot: string): Resource[] {
   return resources
 }
 
-/** Load the validated catalogue registry from `catalogue/catalogue.json`. */
-export function loadCatalogue(root: string): Catalogue {
-  return readCatalogue(root).catalogue
+/** Load tool metadata from document paths and people data from `catalogue/people.json`. */
+export function loadCatalogue(root: string): {
+  tools: CatalogueTool[]
+  people: Person[]
+  resources: Resource[]
+} {
+  const resources = loadToolResources(realpathSync(resolve(root)))
+  const tools: CatalogueTool[] = resources.map((resource) => ({
+    name: resource.name,
+    url: resource.source_url ?? '',
+    description: typeof resource.meta.designeer_blurb === 'string' ? resource.meta.designeer_blurb : '',
+    section: sectionName(resource.section_slug) ?? resource.section_slug,
+    section_slug: resource.section_slug,
+    slug: resource.slug,
+    designeer_url: typeof resource.meta.designeer_url === 'string' ? resource.meta.designeer_url : undefined,
+    doc: resource.doc
+  }))
+  return { tools, people: loadPeople(root), resources }
+}
+
+/** Load creator metadata from `catalogue/people.json`; tool identity comes from document paths. */
+export function loadPeople(root: string): Person[] {
+  if (typeof root !== 'string' || root.trim() === '') throw new UsageError('root must be a non-empty path')
+
+  let value: unknown
+  try {
+    const realRoot = realpathSync(resolve(root))
+    const peoplePath = realpathSync(resolve(realRoot, 'catalogue', 'people.json'))
+    if (!isWithin(realRoot, peoplePath))
+      throw new DataError('catalogue/people.json resolves outside the catalogue root')
+    value = JSON.parse(new TextDecoder().decode(readFileSync(peoplePath)))
+  } catch (error) {
+    if (error instanceof DataError) throw error
+    throw new DataError('catalogue/people.json is missing, invalid or cannot be read')
+  }
+  if (!isRecord(value) || !Array.isArray(value.people)) {
+    throw new DataError('catalogue/people.json: expected an object with a people array')
+  }
+  return value.people as Person[]
 }
 
 /** Read a document under root and split YAML frontmatter from the Markdown body. Returns null if the file is missing. */
@@ -311,7 +320,7 @@ export function readDoc(root: string, relPath: string): Doc | null {
   return { path: relPath, meta, body }
 }
 
-/** Load registered design documents (and optionally research and skill entries) from root. */
+/** Load tool documents (and optionally research and skill entries) from root. */
 export function loadResources(root: string, options: { kinds?: readonly ResourceKind[] } = {}): Resource[] {
   if (typeof root !== 'string' || root.trim() === '') throw new UsageError('root must be a non-empty path')
   const kinds = options.kinds ?? ['tool']
@@ -328,8 +337,7 @@ export function loadResources(root: string, options: { kinds?: readonly Resource
 
   const results: Resource[] = []
   if (kinds.includes('tool')) {
-    const { catalogue } = readCatalogue(realRoot)
-    results.push(...loadToolResources(realRoot, catalogue))
+    results.push(...loadToolResources(realRoot))
   }
   if (kinds.includes('research')) {
     results.push(...loadResearchResources(realRoot))

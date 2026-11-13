@@ -5,7 +5,9 @@ section: Design Galleries
 section_slug: design-galleries
 source_url: https://mkdir.directory/
 designeer_url: https://designeer.xyz/
-designeer_blurb: Not on Designeer; official URL used.
+designeer_blurb:
+  'Ranked meta-directory of web design inspiration directories, ordered by
+  community votes.'
 paywall: free
 pricing_summary:
   'Free to explore with no paywall and no account; no paid plan exists.'

@@ -3,7 +3,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { Glob } from 'bun'
-import { loadCatalogue, readDoc } from '../src/core/loader'
+import { loadResources, readDoc } from '../src/core/loader'
 import { buildResourceStatusReport, checkLinksBatch, parseLinkOptions } from './link-check-lib'
 
 const ROOT = join(import.meta.dir, '..')
@@ -15,8 +15,7 @@ try {
   process.exit(2)
 }
 const { section, status: showStatus, json: jsonOutput } = options
-const { tools } = loadCatalogue(ROOT)
-const selected = tools.filter((tool) => section === undefined || tool.section_slug === section)
+const selected = loadResources(ROOT).filter((resource) => section === undefined || resource.section_slug === section)
 const files = [...new Glob(`catalogue/tools/${section ?? '*'}/*.md`).scanSync(ROOT)].filter(
   (file) => !file.endsWith('README.md')
 )
@@ -26,15 +25,15 @@ const record = (url: string, doc: string) => {
   where.get(url)!.add(doc)
 }
 
-const resources = selected.map((tool) => {
-  const meta = readDoc(ROOT, tool.doc)?.meta ?? {}
-  const source_url = typeof meta.source_url === 'string' ? meta.source_url : tool.url
-  record(source_url, tool.doc)
+const resources = selected.flatMap((resource) => {
+  const source_url = resource.source_url
+  if (!source_url) return []
+  record(source_url, resource.doc)
   return {
-    id: `${tool.section_slug}/${tool.slug}`,
-    doc: tool.doc,
+    id: resource.id,
+    doc: resource.doc,
     source_url,
-    current_status: typeof meta.status === 'string' ? meta.status : null
+    current_status: typeof resource.meta.status === 'string' ? resource.meta.status : null
   }
 })
 for (const file of files) {

@@ -97,13 +97,6 @@ export type Person = {
   created_tools_evidence?: Record<string, CreatorEvidence>
 }
 
-export type Catalogue = {
-  source: string
-  scraped: string
-  tools: CatalogueTool[]
-  people: Person[]
-}
-
 export type SearchOptions = {
   kind?: string
   section?: string

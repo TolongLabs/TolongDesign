@@ -115,7 +115,8 @@ function inspectArchive(archivePath: string): ArchiveEntry[] {
   const files = entries.filter((entry) => entry.kind === 'file').map((entry) => entry.filePath)
   expect(files).toContain('package.json')
   expect(files).toContain('release-manifest.json')
-  expect(files).toContain('catalogue/catalogue.json')
+  expect(files).toContain('catalogue/people.json')
+  expect(files).toContain('catalogue/designeer-scrape.json')
   expect(files).toContain('catalogue/SCHEMA.md')
   expect(files).toContain('catalogue/README.md')
   expect(files).toContain('catalogue/people.md')
@@ -260,9 +261,9 @@ describe('checkout release diagnostics', () => {
     const doctor = JSON.parse(result.stdout) as RecordValue
     const packageRoot = assertDoctorSkills(doctor, 'checkout', false)
     expect(realpathSync(root)).toBe(packageRoot)
-    const catalogue = JSON.parse(readFileSync(join(root, 'catalogue', 'catalogue.json'), 'utf8')) as RecordValue
-    expect(Array.isArray(catalogue.tools)).toBe(true)
-    expect(doctor.resources).toBe((catalogue.tools as unknown[]).length)
+    const index = JSON.parse(readFileSync(join(root, 'catalogue', 'index.json'), 'utf8')) as RecordValue
+    expect(Array.isArray(index.tools)).toBe(true)
+    expect(doctor.resources).toBe((index.tools as unknown[]).length)
   })
 })
 
@@ -278,7 +279,8 @@ releaseDescribe('independent private release verification', () => {
       files: Record<string, string>
     }
     const required = [
-      'catalogue/catalogue.json',
+      'catalogue/people.json',
+      'catalogue/designeer-scrape.json',
       'catalogue/index.json',
       'catalogue/SCHEMA.md',
       'catalogue/TEMPLATE.md',
@@ -327,9 +329,7 @@ releaseDescribe('independent private release verification', () => {
 
     const packageMetadata = JSON.parse(readFileSync(join(packageRoot, 'package.json'), 'utf8')) as RecordValue
     const manifest = JSON.parse(readFileSync(join(packageRoot, 'release-manifest.json'), 'utf8')) as RecordValue
-    const sourceCatalogue = JSON.parse(
-      readFileSync(join(fixture.root, 'catalogue', 'catalogue.json'), 'utf8')
-    ) as RecordValue
+    const sourceIndex = JSON.parse(readFileSync(join(fixture.root, 'catalogue', 'index.json'), 'utf8')) as RecordValue
     expect(packageMetadata.name).toBe('tolong-design')
     expect(packageMetadata.private).toBe(true)
     expect(packageMetadata.version).toBe(packageVersion)
@@ -344,8 +344,9 @@ releaseDescribe('independent private release verification', () => {
     expect(Object.keys(manifest).sort()).toEqual(['files', 'resource_count', 'schema_version', 'version'])
     expect(manifest.schema_version).toBe(1)
     expect(manifest.version).toBe(packageMetadata.version)
-    expect(manifest.resource_count).toBe((sourceCatalogue.tools as unknown[]).length)
-    expect(fixture.result.resourceCount).toBe((sourceCatalogue.tools as unknown[]).length)
+    expect(Array.isArray(sourceIndex.tools)).toBe(true)
+    expect(manifest.resource_count).toBe((sourceIndex.tools as unknown[]).length)
+    expect(fixture.result.resourceCount).toBe((sourceIndex.tools as unknown[]).length)
     expect(manifest.resource_count).toBe(fixture.result.resourceCount)
     expect(isRecord(manifest.files)).toBe(true)
 
@@ -439,7 +440,7 @@ releaseDescribe('independent private release verification', () => {
     assertWithin(globalDir, installedRoot)
     expect(installedRoot).toBe(realpathSync(join(binaryTarget, '..', '..')))
     expect(doctor.version).toBe(packageVersion)
-    expect(doctor.resources).toBe((sourceCatalogue.tools as unknown[]).length)
+    expect(doctor.resources).toBe((sourceIndex.tools as unknown[]).length)
 
     for (const name of CONSUMER_SKILLS) {
       const installedSkill = readFileSync(join(installedRoot, 'skills', name, 'SKILL.md'))
@@ -490,7 +491,7 @@ releaseDescribe('independent private release verification', () => {
     const smokeSummary = JSON.parse(smoke.stdout) as RecordValue
     expect(smokeSummary.ok).toBe(true)
     expect(smokeSummary.version).toBe(packageVersion)
-    expect(smokeSummary.resources).toBe((sourceCatalogue.tools as unknown[]).length)
+    expect(smokeSummary.resources).toBe((sourceIndex.tools as unknown[]).length)
     expect(smokeSummary.context).toEqual(['gsap', 'saaspo'])
 
     const missingArchive = runCommand(

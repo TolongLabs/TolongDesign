@@ -5,7 +5,9 @@ section: Motion
 section_slug: motion
 source_url: 'https://github.com/JDhruv14/line-art-animation'
 designeer_url: 'https://designeer.xyz/components'
-designeer_blurb: Not on Designeer; official URL used.
+designeer_blurb:
+  'Claude skill and dependency-free TypeScript library for animated line-art SVG
+  scenes with solved walk cycles and a day/night cycle.'
 paywall: free
 pricing_summary:
   'Free MIT-licensed repo: a Claude skill plus four dependency-free TypeScript

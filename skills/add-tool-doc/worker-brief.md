@@ -54,7 +54,9 @@ Frontmatter rules:
 
 - `name`, `slug`, `section`, `section_slug`, `source_url`, `designeer_url`,
   `designeer_blurb` — copy from the batch entry verbatim (`source_url` = `url`,
-  `designeer_blurb` = `description`). Quote any value containing `:` or `#`.
+  `designeer_blurb` = `description`). The path supplies `section_slug` and
+  `slug`; use the section display name from `src/core/sections.ts`. Quote any
+  value containing `:` or `#`.
 - `paywall` — one of `free | freemium | paid | unknown`.
 - `pricing_summary` — one sentence, quoted, with real prices if published.
 - `open_source` — `true` / `false`; `license` — SPDX id, `proprietary`, or
@@ -81,10 +83,8 @@ Body rules:
   apps: the core workflow you ran yourself, inputs, export formats and how an
   agent drives it.
 - "Alternatives in this repo": link 1–3 sibling tools using relative paths of
-  the form `../<section_slug>/<slug>.md`. Pick siblings from the full catalogue
-  at `CATALOGUE_FILE` (its `tools[].doc` field gives every valid path; strip the
-  leading `catalogue/tools/` and prefix `../`). Only link paths that exist in
-  the catalogue.
+  the form `../<section_slug>/<slug>.md`. Pick siblings from existing docs under
+  `catalogue/tools/`. Only link paths that exist in the checkout.
 - "Sources": every page you actually used, each with the date you checked it,
   plus the Designeer listing.
 - Plain, precise English. No marketing fluff, no emoji. Wrap prose at ~80
@@ -93,7 +93,10 @@ Body rules:
 
 ## Finish
 
-When all files are written, print a short report: one line per entry with
-`slug | paywall | lines`, then any entries you could not verify and why.
+Write only the assigned Markdown docs by hand. Then run
+`bun run index && bun run check` from `REPO_ROOT` so generated files stay
+current and every tool doc is validated. Print a short report: one line per
+entry with `slug | paywall | lines`, then any entries you could not verify and
+why.
 
 ---

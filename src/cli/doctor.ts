@@ -129,7 +129,6 @@ export function inspectInstallation(root: string): InstallationInfo {
     }
     for (const required of [
       'package.json',
-      'catalogue/catalogue.json',
       ...Object.keys(skillPaths).map((name) => `${SKILLS_DIRECTORY}/${name}/${SKILL_ENTRY}`),
       ...(bundledRelease ? ['dist/design.js'] : [])
     ]) {

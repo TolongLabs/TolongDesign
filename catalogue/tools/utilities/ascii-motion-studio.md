@@ -5,7 +5,9 @@ section: Utilities
 section_slug: utilities
 source_url: 'https://devault-ascii.pages.dev/ascii-generator/app/'
 designeer_url: 'https://designeer.xyz/utilities'
-designeer_blurb: Not on Designeer; official URL used.
+designeer_blurb:
+  'Free browser studio turning images and video into ASCII, braille, halftone,
+  dither or brick mosaics with MP4/GIF exports.'
 paywall: free
 pricing_summary:
   "Entirely free with no account: every style, video-to-ASCII, MP4/GIF export

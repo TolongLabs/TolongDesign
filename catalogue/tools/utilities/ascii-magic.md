@@ -5,7 +5,9 @@ section: Utilities
 section_slug: utilities
 source_url: https://www.ascii-magic.com/
 designeer_url: https://designeer.xyz/utilities
-designeer_blurb: Not on Designeer; official URL used.
+designeer_blurb:
+  'Freemium studio converting images and video into ASCII, pixel, dither and
+  100+ art styles, with an MCP server for agent-driven 4K renders.'
 paywall: freemium
 pricing_summary:
   'Free tier with 16 base styles and unlimited local exports; Pro is $8/month

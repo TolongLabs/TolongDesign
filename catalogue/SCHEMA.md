@@ -5,6 +5,19 @@ result: these fields do not certify licensing, compatibility, unattended
 automation or current pricing. The source schema lives in
 [`src/core/schema.ts`](../src/core/schema.ts).
 
+## Document identity and Designeer fields
+
+Each resource is a Markdown file at `catalogue/tools/<section_slug>/<slug>.md`.
+The path is authoritative for `section_slug` and `slug`; the display name for
+each section lives in [`src/core/sections.ts`](../src/core/sections.ts).
+`bun run check` rejects frontmatter that disagrees with the path or section map.
+
+The document frontmatter is the source for tool metadata, including
+`designeer_url` and `designeer_blurb`. Creator data lives in
+[`people.json`](./people.json).
+[`designeer-scrape.json`](./designeer-scrape.json) is a frozen historical scrape
+and is not read by the runtime loader.
+
 ## Execution mode
 
 Set one `execution_mode` from the resource's primary documented workflow, not
