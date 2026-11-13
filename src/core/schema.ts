@@ -1,3 +1,9 @@
+export const RESOURCE_KINDS = ['tool', 'research', 'skill'] as const
+
+export type ResourceKind = (typeof RESOURCE_KINDS)[number]
+
+export const RESEARCH_FRONTMATTER_KEYS = ['title', 'summary', 'last_verified'] as const
+
 export const EXECUTION_MODES = ['registry', 'package', 'snippet', 'mcp-skill', 'browser-app', 'reference'] as const
 
 export type ExecutionMode = (typeof EXECUTION_MODES)[number]
@@ -99,6 +105,7 @@ export type Catalogue = {
 }
 
 export type SearchOptions = {
+  kind?: string
   section?: string
   stack?: string
   paywall?: string
@@ -112,6 +119,7 @@ export type SearchOptions = {
 }
 
 export type Resource = {
+  kind: ResourceKind
   id: string
   name: string
   section_slug: string
@@ -121,7 +129,7 @@ export type Resource = {
   last_verified: string | null
   sha256: string
   markdown: string
-  paywall: string
+  paywall: string | null
   agent_friendly: boolean | null
   open_source: boolean | null
   meta: Record<string, unknown>
@@ -129,7 +137,16 @@ export type Resource = {
 
 export type SearchResource = Pick<
   Resource,
-  'id' | 'name' | 'section_slug' | 'slug' | 'paywall' | 'agent_friendly' | 'source_url' | 'last_verified' | 'doc'
+  | 'kind'
+  | 'id'
+  | 'name'
+  | 'section_slug'
+  | 'slug'
+  | 'paywall'
+  | 'agent_friendly'
+  | 'source_url'
+  | 'last_verified'
+  | 'doc'
 > & {
   matched_terms: string[]
   excerpt: string
@@ -143,7 +160,7 @@ export type SearchResult = {
 
 export type ContextResource = Pick<
   Resource,
-  'id' | 'name' | 'section_slug' | 'slug' | 'doc' | 'source_url' | 'last_verified' | 'sha256' | 'markdown'
+  'kind' | 'id' | 'name' | 'section_slug' | 'slug' | 'doc' | 'source_url' | 'last_verified' | 'sha256' | 'markdown'
 >
 
 export type ContextPack = {
@@ -402,6 +419,31 @@ export function validateResourceMeta(meta: Record<string, unknown>, path: string
         break
       }
     }
+  }
+
+  return errors
+}
+
+export function validateResearchMeta(meta: Record<string, unknown>, path: string): string[] {
+  const errors: string[] = []
+
+  if (typeof meta.title !== 'string' || meta.title.trim() === '') {
+    errors.push(`${path}: missing or empty "title"`)
+  }
+
+  if (typeof meta.summary !== 'string' || meta.summary.trim() === '') {
+    errors.push(`${path}: missing or empty "summary"`)
+  }
+
+  const rawDate = meta.last_verified
+  const dateText =
+    typeof rawDate === 'string'
+      ? rawDate
+      : rawDate instanceof Date && Number.isFinite(rawDate.getTime())
+        ? rawDate.toISOString().slice(0, 10)
+        : null
+  if (dateText === null || !isValidDate(dateText)) {
+    errors.push(`${path}: missing or invalid "last_verified" date "${String(rawDate ?? '')}"`)
   }
 
   return errors

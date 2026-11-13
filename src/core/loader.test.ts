@@ -2,7 +2,7 @@ import { afterEach, describe, expect, test } from 'bun:test'
 import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
-import { loadCatalogue, loadResources, readDoc } from './loader'
+import { loadAllResources, loadCatalogue, loadResources, readDoc } from './loader'
 import { DataError } from './schema'
 
 type FixtureTool = {
@@ -243,5 +243,66 @@ describe('loader metadata and unified doc reading', () => {
     expect(doc?.meta.name).toBe('Unified Tool')
     expect(doc?.body).toContain('Unified body content.')
     expect(readDoc(fixture.root, 'catalogue/tools/motion/missing.md')).toBeNull()
+  })
+
+  test('loads tool, research, and skill entries via kinds and loadAllResources', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Sample Tool',
+        slug: 'sample-tool',
+        sectionSlug: 'motion',
+        body: 'Tool content.'
+      }
+    ])
+    const researchDir = join(fixture.root, 'catalogue/research')
+    mkdirSync(researchDir, { recursive: true })
+    writeFileSync(
+      join(researchDir, 'motion-study.md'),
+      [
+        '---',
+        'title: "Motion Study"',
+        'summary: "Key findings for motion."',
+        'last_verified: "2026-10-10"',
+        '---',
+        '',
+        '# Motion Study',
+        '',
+        'Key findings for motion.'
+      ].join('\n'),
+      'utf8'
+    )
+    const skillDir = join(fixture.root, 'skills/sample-skill')
+    mkdirSync(skillDir, { recursive: true })
+    writeFileSync(
+      join(skillDir, 'SKILL.md'),
+      [
+        '---',
+        'name: sample-skill',
+        'audience: consumer',
+        'description: Sample skill guide.',
+        '---',
+        '',
+        '# Skill'
+      ].join('\n'),
+      'utf8'
+    )
+
+    expect(loadResources(fixture.root).map((r) => r.kind)).toEqual(['tool'])
+    expect(loadResources(fixture.root, { kinds: ['research'] }).map((r) => [r.kind, r.id])).toEqual([
+      ['research', 'research/motion-study']
+    ])
+
+    const all = loadAllResources(fixture.root)
+    expect(all.map((r) => [r.kind, r.id])).toEqual([
+      ['tool', 'motion/sample-tool'],
+      ['research', 'research/motion-study'],
+      ['skill', 'skill/sample-skill']
+    ])
+
+    const outside = mkdtempSync(join(tmpdir(), 'tolongdesign-research-outside-'))
+    fixtureRoots.push(outside)
+    writeFileSync(join(outside, 'leak.md'), '# Outside\n', 'utf8')
+    symlinkSync(join(outside, 'leak.md'), join(researchDir, 'leak.md'))
+    expect(() => loadResources(fixture.root, { kinds: ['research'] })).toThrow(DataError)
   })
 })

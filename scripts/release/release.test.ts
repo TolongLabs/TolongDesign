@@ -17,6 +17,7 @@ import {
 import { tmpdir } from 'node:os'
 import { delimiter, dirname, isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { pathToFileURL } from 'node:url'
+import { consumerSkillNames } from '../../src/core/skill'
 
 type RecordValue = Record<string, unknown>
 type ArchiveEntry = { name: string; filePath: string; kind: 'file' | 'directory' }
@@ -60,7 +61,7 @@ function isRecord(value: unknown): value is RecordValue {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
 }
 
-const CONSUMER_SKILLS = ['design-project', 'pick-design-stack', 'build-3d-model'] as const
+const CONSUMER_SKILLS = consumerSkillNames(root)
 
 /** Release payload, by directory. Adding a doc or a consumer skill needs no edit here. */
 const PAYLOAD_DIRECTORIES = ['catalogue', 'dist', 'licenses'] as const

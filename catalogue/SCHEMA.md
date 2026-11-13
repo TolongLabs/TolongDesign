@@ -89,4 +89,21 @@ checks IDs and evidence coverage; the generated people table links to both the
 tool doc and its credit source. Missing links mean unresearched, not that the
 person has created nothing. Name/host similarity is not attribution evidence.
 
+## Entry kinds (`kind`)
+
+Retrieval entries carry a `kind`:
+
+- `tool` — curated tool and resource docs under
+  `catalogue/tools/<section>/<slug>.md`. Uses the full frontmatter and nine H2
+  sections of [TEMPLATE.md](TEMPLATE.md).
+- `research` — supporting studies under `catalogue/research/<slug>.md` (`id` =
+  `research/<slug>`). Minimal frontmatter only:
+  - `title`: string, matching the doc's H1 heading.
+  - `summary`: string, concise summary (copied from the opening line).
+  - `last_verified`: `YYYY-MM-DD` date checked.
+- `skill` — procedural guides under `skills/<name>/SKILL.md` (`id` =
+  `skill/<name>`). Uses skill frontmatter (`name`, `description`, `audience`)
+  loaded dynamically by the engine; `catalogue/index.json` itself holds tools
+  only.
+
 After source edits, run `bun run index`, `bun run check` and `bun run format`.

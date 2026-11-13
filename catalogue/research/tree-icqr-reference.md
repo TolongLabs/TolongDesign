@@ -1,3 +1,11 @@
+---
+title: 'ICQR Magic Tree reference notes'
+summary:
+  'Checked 2026-10-11. The full study is the canonical method, evidence
+  manifest, worker outcome, and limitations record.'
+last_verified: 2026-10-11
+---
+
 # ICQR Magic Tree reference notes
 
 Checked 2026-10-11. [The full study](./tree-icqr-study.md) is the canonical

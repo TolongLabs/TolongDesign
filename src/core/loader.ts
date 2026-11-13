@@ -1,17 +1,20 @@
 import { createHash } from 'node:crypto'
-import { existsSync, readFileSync, realpathSync } from 'node:fs'
-import { isAbsolute, relative, resolve, sep } from 'node:path'
+import { existsSync, lstatSync, readFileSync, readdirSync, realpathSync } from 'node:fs'
+import { isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { parse } from 'yaml'
 
 import { extractInstall } from './fields'
+import { loadSkillResources } from './skill'
 import {
   DataError,
   PAYWALLS,
+  RESOURCE_KINDS,
   UsageError,
   type Catalogue,
   type CatalogueTool,
   type Person,
-  type Resource
+  type Resource,
+  type ResourceKind
 } from './schema'
 
 export type Doc = {
@@ -178,6 +181,7 @@ function makeResource(
   const install = extractInstall(markdown)
 
   return {
+    kind: 'tool',
     id: `${entry.section_slug}/${entry.slug}`,
     name,
     section_slug: entry.section_slug,
@@ -200,26 +204,7 @@ function makeResource(
   }
 }
 
-/** Load the validated catalogue registry from `catalogue/catalogue.json`. */
-export function loadCatalogue(root: string): Catalogue {
-  return readCatalogue(root).catalogue
-}
-
-/** Read a document under root and split YAML frontmatter from the Markdown body. Returns null if the file is missing. */
-export function readDoc(root: string, relPath: string): Doc | null {
-  if (typeof root !== 'string' || root.trim() === '') throw new UsageError('root must be a non-empty path')
-  const realRoot = realpathSync(resolve(root))
-  const path = resolve(realRoot, relPath)
-  if (!isWithin(realRoot, path) || !existsSync(path)) return null
-  const bytes = readFileSync(path)
-  const text = new TextDecoder('utf-8', { ignoreBOM: true }).decode(bytes)
-  const { meta, body } = splitFrontmatter(text, relPath)
-  return { path: relPath, meta, body }
-}
-
-/** Load registered design documents directly from the catalogue and Markdown files. */
-export function loadResources(root: string): Resource[] {
-  const { realRoot, catalogue } = readCatalogue(root)
+function loadToolResources(realRoot: string, catalogue: Catalogue): Resource[] {
   const designRoot = resolve(realRoot, 'catalogue', 'tools')
   try {
     if (realpathSync(designRoot) !== designRoot) {
@@ -242,4 +227,120 @@ export function loadResources(root: string): Resource[] {
     const { meta } = splitFrontmatter(markdown, entry.doc)
     return makeResource(entry, markdown, bytes, meta)
   })
+}
+
+function loadResearchResources(realRoot: string): Resource[] {
+  const researchRoot = resolve(realRoot, 'catalogue', 'research')
+  if (!existsSync(researchRoot)) return []
+
+  let rootStat
+  try {
+    rootStat = lstatSync(researchRoot)
+  } catch {
+    throw new DataError('catalogue/research cannot be inspected')
+  }
+  if (rootStat.isSymbolicLink() || !rootStat.isDirectory() || realpathSync(researchRoot) !== researchRoot) {
+    throw new DataError('catalogue/research must be a regular directory within the catalogue root')
+  }
+
+  const entries = readdirSync(researchRoot, { withFileTypes: true }).sort((left, right) =>
+    left.name < right.name ? -1 : left.name > right.name ? 1 : 0
+  )
+
+  const resources: Resource[] = []
+  for (const entry of entries) {
+    const relPath = `catalogue/research/${entry.name}`
+    const candidate = join(researchRoot, entry.name)
+    const entryStat = lstatSync(candidate)
+    if (entryStat.isSymbolicLink()) {
+      throw new DataError(`${JSON.stringify(relPath)}: research document must not be a symlink`)
+    }
+    if (!entryStat.isFile() || !entry.name.endsWith('.md')) continue
+
+    const realDoc = realpathSync(candidate)
+    if (!isWithin(researchRoot, realDoc)) {
+      throw new DataError(`${JSON.stringify(relPath)}: research document resolves outside catalogue/research`)
+    }
+
+    const bytes = readFileSync(realDoc)
+    const markdown = new TextDecoder('utf-8', { ignoreBOM: true }).decode(bytes)
+    const { meta } = splitFrontmatter(markdown, relPath)
+    const slug = entry.name.slice(0, -3)
+    const title = typeof meta.title === 'string' && meta.title.trim() !== '' ? meta.title.trim() : slug
+    const summary = typeof meta.summary === 'string' ? meta.summary.trim() : ''
+    const sourceUrl = typeof meta.source_url === 'string' && meta.source_url.trim() !== '' ? meta.source_url : null
+    const lastVerified = stringValue(meta.last_verified)
+
+    resources.push({
+      kind: 'research',
+      id: `research/${slug}`,
+      name: title,
+      section_slug: 'research',
+      slug,
+      doc: relPath,
+      source_url: sourceUrl,
+      last_verified: lastVerified,
+      sha256: createHash('sha256').update(bytes).digest('hex'),
+      markdown,
+      paywall: null,
+      agent_friendly: null,
+      open_source: null,
+      meta: {
+        ...meta,
+        ...(summary !== '' ? { summary } : {})
+      }
+    })
+  }
+  return resources
+}
+
+/** Load the validated catalogue registry from `catalogue/catalogue.json`. */
+export function loadCatalogue(root: string): Catalogue {
+  return readCatalogue(root).catalogue
+}
+
+/** Read a document under root and split YAML frontmatter from the Markdown body. Returns null if the file is missing. */
+export function readDoc(root: string, relPath: string): Doc | null {
+  if (typeof root !== 'string' || root.trim() === '') throw new UsageError('root must be a non-empty path')
+  const realRoot = realpathSync(resolve(root))
+  const path = resolve(realRoot, relPath)
+  if (!isWithin(realRoot, path) || !existsSync(path)) return null
+  const bytes = readFileSync(path)
+  const text = new TextDecoder('utf-8', { ignoreBOM: true }).decode(bytes)
+  const { meta, body } = splitFrontmatter(text, relPath)
+  return { path: relPath, meta, body }
+}
+
+/** Load registered design documents (and optionally research and skill entries) from root. */
+export function loadResources(root: string, options: { kinds?: readonly ResourceKind[] } = {}): Resource[] {
+  if (typeof root !== 'string' || root.trim() === '') throw new UsageError('root must be a non-empty path')
+  const kinds = options.kinds ?? ['tool']
+  for (const kind of kinds) {
+    if (!RESOURCE_KINDS.includes(kind)) throw new UsageError(`unknown resource kind: ${kind}`)
+  }
+
+  let realRoot: string
+  try {
+    realRoot = realpathSync(resolve(root))
+  } catch {
+    throw new DataError('root directory is missing or cannot be resolved')
+  }
+
+  const results: Resource[] = []
+  if (kinds.includes('tool')) {
+    const { catalogue } = readCatalogue(realRoot)
+    results.push(...loadToolResources(realRoot, catalogue))
+  }
+  if (kinds.includes('research')) {
+    results.push(...loadResearchResources(realRoot))
+  }
+  if (kinds.includes('skill')) {
+    results.push(...loadSkillResources(realRoot))
+  }
+  return results
+}
+
+/** Load all tool, research, and skill entries from root. */
+export function loadAllResources(root: string): Resource[] {
+  return loadResources(root, { kinds: RESOURCE_KINDS })
 }

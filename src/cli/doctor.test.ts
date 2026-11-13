@@ -41,7 +41,7 @@ function fixture(released = false) {
       `---\nname: ${name}\nmetadata:\n  audience: consumer\n---\n# Fixture skill\n`
     )
   }
-  for (const file of ['schema.ts', 'fields.ts', 'card.ts', 'loader.ts', 'search.ts', 'context.ts']) {
+  for (const file of ['schema.ts', 'fields.ts', 'card.ts', 'loader.ts', 'search.ts', 'context.ts', 'skill.ts']) {
     const path = join(source, 'src', 'core', file)
     if (existsSync(path)) write(root, `src/core/${file}`, readFileSync(path, 'utf8'))
   }

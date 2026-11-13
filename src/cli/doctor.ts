@@ -1,9 +1,9 @@
 import { createHash } from 'node:crypto'
-import { existsSync, lstatSync, readFileSync, readdirSync, realpathSync } from 'node:fs'
+import { existsSync, lstatSync, readFileSync, realpathSync } from 'node:fs'
 import { isAbsolute, join, relative, resolve, sep } from 'node:path'
-import { parse as parseYaml } from 'yaml'
 import { loadResources } from '../core/loader'
 import { DataError } from '../core/schema'
+import { SKILLS_DIRECTORY, SKILL_ENTRY, consumerSkillNames } from '../core/skill'
 
 export type InstallationInfo = {
   schema_version: 1
@@ -17,9 +17,6 @@ export type InstallationInfo = {
   warnings: string[]
 }
 
-const SKILLS_DIRECTORY = 'skills'
-const SKILL_ENTRY = 'SKILL.md'
-const SKILL_AUDIENCES = ['consumer', 'checkout', 'maintainer'] as const
 const VERSION =
   /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$/
 function validVersion(value: string): boolean {
@@ -88,51 +85,11 @@ export function readVersion(root: string): string {
   return value.version
 }
 
-function readSkillAudience(root: string, name: string): string {
-  const relativePath = `${SKILLS_DIRECTORY}/${name}/${SKILL_ENTRY}`
-  let text: string
-  try {
-    text = readFileSync(regularPath(root, relativePath), 'utf8')
-  } catch (error) {
-    if (error instanceof DataError) throw error
-    throw new DataError(`skill is missing or unreadable: ${relativePath}`)
-  }
-  const match = text.match(/^---\n([\s\S]*?)\n---\n/)
-  if (!match) throw new DataError(`skill is missing YAML frontmatter: ${relativePath}`)
-  let metadata: unknown
-  try {
-    metadata = parseYaml(match[1])
-  } catch {
-    throw new DataError(`skill frontmatter is not valid YAML: ${relativePath}`)
-  }
-  if (typeof metadata !== 'object' || metadata === null || Array.isArray(metadata)) {
-    throw new DataError(`skill frontmatter must be a mapping: ${relativePath}`)
-  }
-  const nested = (metadata as Record<string, unknown>).metadata
-  const audience =
-    typeof nested === 'object' && nested !== null && !Array.isArray(nested)
-      ? (nested as Record<string, unknown>).audience
-      : undefined
-  if (typeof audience !== 'string' || !(SKILL_AUDIENCES as readonly string[]).includes(audience)) {
-    throw new DataError(`skill ${name} has unknown metadata.audience: ${relativePath}`)
-  }
-  return audience
-}
-
 /** Consumer skills are the installed procedures; checkout and maintainer skills stay in a source checkout. */
 function consumerSkillPaths(root: string): Record<string, string> {
-  let entries
-  try {
-    entries = readdirSync(join(root, SKILLS_DIRECTORY), { withFileTypes: true })
-  } catch {
-    throw new DataError('skills directory is missing or unreadable')
-  }
   const paths: Record<string, string> = {}
-  for (const entry of [...entries].sort((left, right) => (left.name < right.name ? -1 : 1))) {
-    if (!entry.isDirectory()) throw new DataError(`skill input must be a directory: ${SKILLS_DIRECTORY}/${entry.name}`)
-    if (readSkillAudience(root, entry.name) === 'consumer') {
-      paths[entry.name] = regularPath(root, `${SKILLS_DIRECTORY}/${entry.name}/${SKILL_ENTRY}`)
-    }
+  for (const name of consumerSkillNames(root)) {
+    paths[name] = regularPath(root, `${SKILLS_DIRECTORY}/${name}/${SKILL_ENTRY}`)
   }
   return paths
 }

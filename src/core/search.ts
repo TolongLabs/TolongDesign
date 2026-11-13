@@ -1,14 +1,14 @@
 import {
   EXECUTION_MODES,
   PAYWALLS,
+  RESOURCE_KINDS,
   SURFACES,
   UsageError,
   normalizeStack,
-  type ExecutionMode,
   type Resource,
+  type ResourceKind,
   type SearchOptions,
-  type SearchResult,
-  type Surface
+  type SearchResult
 } from './schema'
 
 export type SearchDocument = {
@@ -168,7 +168,7 @@ export function rankDocuments<T extends SearchDocument>(documents: T[], query: s
       `${extractStrings(doc.meta?.category_tags)} ${extractStrings(doc.meta?.tags)} ${extractStrings(doc.meta?.stack)}`.toLowerCase()
     const best_for = `${extractStrings(doc.meta?.best_for)}`.toLowerCase()
     const blurb =
-      `${extractStrings(doc.meta?.designeer_blurb)} ${extractStrings(doc.meta?.blurb)} ${extractStrings(doc.meta?.description)} ${extractStrings(doc.meta?.pricing_summary)}`.toLowerCase()
+      `${extractStrings(doc.meta?.designeer_blurb)} ${extractStrings(doc.meta?.blurb)} ${extractStrings(doc.meta?.description)} ${extractStrings(doc.meta?.summary)} ${extractStrings(doc.meta?.pricing_summary)}`.toLowerCase()
     const body = (doc.body || '').toLowerCase()
 
     const lengths: Record<FieldKey, number> = {
@@ -305,8 +305,33 @@ function searchableText(value: unknown, seen: WeakSet<object>): string {
     .join(' ')
 }
 
+function validateCsvEnum<T extends string>(
+  rawValue: unknown,
+  flagName: string,
+  allowed: readonly T[]
+): string | undefined {
+  if (rawValue === undefined) return undefined
+  if (typeof rawValue !== 'string') throw new UsageError(`--${flagName} requires a non-empty value`)
+  const parts = rawValue.split(',')
+  const seen = new Set<string>()
+  for (const raw of parts) {
+    const trimmed = raw.trim().toLowerCase()
+    if (trimmed === '') throw new UsageError(`--${flagName} contains an empty entry`)
+    if (!allowed.includes(trimmed as T)) {
+      throw new UsageError(`--${flagName} must be one of: ${allowed.join(', ')}`)
+    }
+    if (seen.has(trimmed)) {
+      throw new UsageError(`--${flagName} contains duplicate value: "${trimmed}"`)
+    }
+    seen.add(trimmed)
+  }
+  return Array.from(seen).join(',')
+}
+
 function validateSearchOptions(options: SearchOptions): Required<Pick<SearchOptions, 'limit'>> & SearchOptions {
   if (!isRecord(options)) throw new UsageError('search options must be an object')
+
+  const kind = validateCsvEnum(options.kind, 'kind', RESOURCE_KINDS)
 
   for (const key of ['section', 'stack', 'tag'] as const) {
     const value = options[key]
@@ -345,45 +370,10 @@ function validateSearchOptions(options: SearchOptions): Required<Pick<SearchOpti
     throw new UsageError('--limit must be a positive integer')
   }
 
-  let mode = options.mode
-  if (mode !== undefined) {
-    if (typeof mode !== 'string') throw new UsageError('--mode requires a non-empty value')
-    const rawModes = mode.split(',')
-    const seen = new Set<string>()
-    for (const raw of rawModes) {
-      const trimmed = raw.trim()
-      if (trimmed === '') throw new UsageError('--mode contains an empty entry')
-      if (!EXECUTION_MODES.includes(trimmed as ExecutionMode)) {
-        throw new UsageError(`--mode must be one of: ${EXECUTION_MODES.join(', ')}`)
-      }
-      if (seen.has(trimmed)) {
-        throw new UsageError(`--mode contains duplicate value: "${trimmed}"`)
-      }
-      seen.add(trimmed)
-    }
-    mode = Array.from(seen).join(',')
-  }
+  const mode = validateCsvEnum(options.mode, 'mode', EXECUTION_MODES)
+  const surface = validateCsvEnum(options.surface, 'surface', SURFACES)
 
-  let surface = options.surface
-  if (surface !== undefined) {
-    if (typeof surface !== 'string') throw new UsageError('--surface requires a non-empty value')
-    const rawSurfaces = surface.split(',')
-    const seen = new Set<string>()
-    for (const raw of rawSurfaces) {
-      const trimmed = raw.trim()
-      if (trimmed === '') throw new UsageError('--surface contains an empty entry')
-      if (!SURFACES.includes(trimmed as Surface)) {
-        throw new UsageError(`--surface must be one of: ${SURFACES.join(', ')}`)
-      }
-      if (seen.has(trimmed)) {
-        throw new UsageError(`--surface contains duplicate value: "${trimmed}"`)
-      }
-      seen.add(trimmed)
-    }
-    surface = Array.from(seen).join(',')
-  }
-
-  return { ...options, paywall, limit, mode, surface }
+  return { ...options, kind, paywall, limit, mode, surface }
 }
 
 function excerptFor(resource: Resource, terms: string[]): string {
@@ -407,6 +397,7 @@ export function searchResources(resources: Resource[], query: string, options: S
   if (typeof query !== 'string') throw new UsageError('search query must be text')
   const validated = validateSearchOptions(options)
 
+  const selectedKinds = new Set(validated.kind !== undefined ? validated.kind.split(',') : ['tool'])
   const selectedModes = validated.mode !== undefined ? new Set(validated.mode.split(',')) : undefined
   const selectedSurfaces = validated.surface !== undefined ? validated.surface.split(',') : undefined
   const canonicalStack = validated.stack !== undefined ? normalizeStack(validated.stack) : undefined
@@ -414,6 +405,11 @@ export function searchResources(resources: Resource[], query: string, options: S
 
   // 1. Filter BEFORE ranking
   const filtered = resources.filter((resource) => {
+    const resourceKind: ResourceKind = resource.kind ?? 'tool'
+    if (!selectedKinds.has(resourceKind)) {
+      return false
+    }
+
     const meta = resource.meta ?? {}
 
     // Unreachable filter
@@ -476,8 +472,8 @@ export function searchResources(resources: Resource[], query: string, options: S
       }
     }
 
-    // Paywall filter
-    if (validated.paywall !== undefined && resource.paywall !== validated.paywall) {
+    // Paywall filter (tools only)
+    if (validated.paywall !== undefined && (resourceKind !== 'tool' || resource.paywall !== validated.paywall)) {
       return false
     }
 
@@ -521,6 +517,7 @@ export function searchResources(resources: Resource[], query: string, options: S
       const resource = r.document
       const matchedTerms = r.matched_terms.length > 0 ? r.matched_terms : query.trim() === '' ? [] : terms
       return {
+        kind: resource.kind ?? 'tool',
         id: resource.id,
         name: resource.name,
         section_slug: resource.section_slug,

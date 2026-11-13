@@ -3,7 +3,7 @@
 // results stays inside an agent's context. The complete document is never replaced —
 // long commands are pointed at the doc rather than clipped into a misleading fragment.
 import { inline } from './fields'
-import { EXECUTION_MODES } from './schema'
+import { EXECUTION_MODES, type ResourceKind } from './schema'
 
 /** Per-result character bound (~80 tokens) for `--format card`. */
 export const CARD_BUDGET = 320
@@ -22,6 +22,7 @@ const DEGRADED_ID_MAX = 24
 const DEGRADED_DOC_MAX = 30
 
 export type CardInput = {
+  kind?: ResourceKind
   id: string
   name: string
   doc: string
@@ -75,6 +76,37 @@ export function renderResourceCard(resource: CardInput): string {
   const name = text(resource.name) ?? text(resource.id) ?? 'unknown'
   const id = text(resource.id) ?? 'unknown'
   const doc = text(resource.doc) ?? 'unknown'
+  const summaryText = text(meta.summary) ?? text(meta.description) ?? NOT_PUBLISHED
+
+  if (resource.kind === 'research' || resource.kind === 'skill') {
+    const buildNonTool = (limits: { summary: number; name: number; id: number; doc: number }) =>
+      [
+        `name: ${shorten(name, limits.name)}`,
+        `id: ${shorten(id, limits.id)}`,
+        `kind: ${resource.kind}`,
+        `summary: ${shorten(summaryText, limits.summary)}`,
+        `doc: ${shorten(doc, limits.doc)}`
+      ].join('\n')
+
+    let card = buildNonTool({
+      summary: Number.MAX_SAFE_INTEGER,
+      name: Number.MAX_SAFE_INTEGER,
+      id: Number.MAX_SAFE_INTEGER,
+      doc: Number.MAX_SAFE_INTEGER
+    })
+    if (card.length <= CARD_BUDGET) return card
+    for (const step of [
+      { summary: 120, name: Number.MAX_SAFE_INTEGER, id: Number.MAX_SAFE_INTEGER, doc: Number.MAX_SAFE_INTEGER },
+      { summary: 80, name: DEGRADED_NAME_MAX, id: DEGRADED_ID_MAX, doc: Number.MAX_SAFE_INTEGER },
+      { summary: DEGRADED_BEST_FOR_MAX, name: DEGRADED_NAME_MAX, id: DEGRADED_ID_MAX, doc: DEGRADED_DOC_MAX }
+    ]) {
+      const candidate = buildNonTool(step)
+      if (candidate.length <= CARD_BUDGET) return candidate
+      card = candidate
+    }
+    return card
+  }
+
   const bestFor = bestForValue(meta) ?? NOT_PUBLISHED
   const hasInstall = text(meta.install) !== null
   const command = inlineCommand(meta)

@@ -4,9 +4,10 @@ import { join } from 'node:path'
 import { hasFlag, parseFlags, readValue } from './args'
 import { inspectInstallation, readVersion } from './doctor'
 import { buildContext, renderContext, resolveResource } from '../core/context'
-import { loadResources } from '../core/loader'
-import { DataError, PAYWALLS, UsageError, type Resource, type SearchOptions } from '../core/schema'
+import { loadAllResources } from '../core/loader'
+import { DataError, PAYWALLS, RESOURCE_KINDS, UsageError, type Resource, type SearchOptions } from '../core/schema'
 import { searchResources } from '../core/search'
+import { getSkill, listSkills } from '../core/skill'
 
 const ROOT = existsSync(join(import.meta.dir, '..', 'package.json'))
   ? join(import.meta.dir, '..')
@@ -19,32 +20,40 @@ type Command =
   | { kind: 'search'; query: string; options: SearchOptions; json: boolean; format?: 'card' }
   | { kind: 'show'; id: string; json: boolean }
   | { kind: 'context'; ids: string[]; brief?: string; json: boolean }
+  | { kind: 'skill-list'; json: boolean }
+  | { kind: 'skill-show'; name: string; json: boolean }
 
 const HELP = `Usage:
   tolongdesign --version
   tolongdesign doctor [--json]
-  tolongdesign search [<text>] [--section <slug>] [--tag <name>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
-  tolongdesign show <slug-or-section/slug> [--json]
+  tolongdesign search [<text>] [--kind <value>] [--section <slug>] [--tag <name>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
+  tolongdesign show <id> [--json]
   tolongdesign context <id>... [--brief <text>] [--json]
+  tolongdesign skill list [--json]
+  tolongdesign skill show <name> [--json]
 
   <text> may be omitted when at least one filter is given.
+  <id> is slug, section/slug, research/<slug>, or skill/<name>.
 
 Checkout equivalents:
-  bun run design -- search [<text>] [--section <slug>] [--tag <name>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
-  bun run design -- show <slug-or-section/slug> [--json]
+  bun run design -- search [<text>] [--kind <value>] [--section <slug>] [--tag <name>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
+  bun run design -- show <id> [--json]
   bun run design -- context <id>... [--brief <text>] [--json]
+  bun run design -- skill list [--json]
+  bun run design -- skill show <name> [--json]
 
 Commands:
-  search   Search registered design documents and their metadata.
-  show     Print one complete registered design document.
+  search   Search registered design documents, research notes, and skills.
+  show     Print one complete registered document, research note, or skill.
   context  Assemble complete documents with provenance and freshness warnings.
+  skill    List available skills or print a skill and its reference files.
 `
 
 function parseSearch(args: string[]): Command {
   const flags = parseFlags(
     args,
     ['agent', 'oss', 'json', 'include-unreachable'],
-    ['section', 'tag', 'stack', 'paywall', 'limit', 'mode', 'surface', 'format']
+    ['kind', 'section', 'tag', 'stack', 'paywall', 'limit', 'mode', 'surface', 'format']
   )
   const query = flags.positionals.join(' ').trim()
 
@@ -56,6 +65,7 @@ function parseSearch(args: string[]): Command {
   }
 
   const options: SearchOptions = {}
+  const kind = readValue(flags, 'kind')
   const section = readValue(flags, 'section')
   const tag = readValue(flags, 'tag')
   const stack = readValue(flags, 'stack')
@@ -64,6 +74,16 @@ function parseSearch(args: string[]): Command {
   const mode = readValue(flags, 'mode')
   const surface = readValue(flags, 'surface')
 
+  if (kind !== undefined) {
+    for (const part of kind.split(',')) {
+      const trimmed = part.trim().toLowerCase()
+      if (trimmed === '') throw new UsageError('--kind contains an empty entry')
+      if (!RESOURCE_KINDS.includes(trimmed as (typeof RESOURCE_KINDS)[number])) {
+        throw new UsageError(`--kind must be one of: ${RESOURCE_KINDS.join(', ')}`)
+      }
+    }
+    options.kind = kind
+  }
   if (section !== undefined) options.section = section
   if (tag !== undefined) options.tag = tag
   if (stack !== undefined) options.stack = stack
@@ -122,6 +142,24 @@ function parseContext(args: string[]): Command {
   }
 }
 
+function parseSkill(args: string[]): Command {
+  if (args.length === 0) throw new UsageError('skill requires a subcommand: list or show')
+  const [subcommand, ...rest] = args
+  if (subcommand === 'list') {
+    const flags = parseFlags(rest, ['json'], [])
+    if (flags.positionals.length > 0) throw new UsageError('skill list does not take positional arguments')
+    return { kind: 'skill-list', json: hasFlag(flags, 'json') }
+  }
+  if (subcommand === 'show') {
+    const flags = parseFlags(rest, ['json'], [])
+    if (flags.positionals.length !== 1 || flags.positionals[0].trim() === '') {
+      throw new UsageError('skill show requires exactly one skill name')
+    }
+    return { kind: 'skill-show', name: flags.positionals[0], json: hasFlag(flags, 'json') }
+  }
+  throw new UsageError(`unknown skill subcommand: ${subcommand}`)
+}
+
 function parseCommand(args: string[]): Command {
   if (args.length === 1 && args[0] === '--version') return { kind: 'version' }
   if (args.length === 1 && args[0] === '--help') return { kind: 'help' }
@@ -136,6 +174,7 @@ function parseCommand(args: string[]): Command {
   if (command === 'search') return parseSearch(rest)
   if (command === 'show') return parseShow(rest)
   if (command === 'context') return parseContext(rest)
+  if (command === 'skill') return parseSkill(rest)
   throw new UsageError(`unknown command: ${command}`)
 }
 
@@ -159,6 +198,7 @@ async function writeSearch(
     const cards = result.results.map((r) => {
       const full = resourceMap.get(r.id)!
       return renderResourceCard({
+        kind: full.kind,
         id: full.id,
         name: full.name,
         doc: full.doc,
@@ -173,8 +213,8 @@ async function writeSearch(
   }
 
   for (const resource of result.results) {
-    const paywall = resource.paywall.padEnd(9)
-    process.stdout.write(`${paywall} ${resource.name} (${resource.id})\n  ${resource.excerpt}\n`)
+    const label = (resource.kind === 'tool' ? (resource.paywall ?? 'unknown') : resource.kind).padEnd(9)
+    process.stdout.write(`${label} ${resource.name} (${resource.id})\n  ${resource.excerpt}\n`)
   }
   if (result.total === 0) process.stdout.write('No matching resources.\n')
   else process.stdout.write(`\n${result.total} match(es)\n`)
@@ -223,7 +263,40 @@ async function run(args: string[]): Promise<number> {
       }
       return 0
     }
-    const resources = loadResources(ROOT)
+    if (command.kind === 'skill-list') {
+      const skills = listSkills(ROOT)
+      if (command.json) {
+        writeJson({ total: skills.length, skills })
+      } else if (skills.length === 0) {
+        process.stdout.write('No skills.\n')
+      } else {
+        for (const skill of skills) {
+          const badge = skill.audience ? ` [${skill.audience}]` : ''
+          process.stdout.write(`${skill.slug} (${skill.id})${badge}\n  ${skill.description}\n`)
+        }
+        process.stdout.write(`\n${skills.length} skill(s)\n`)
+      }
+      return 0
+    }
+    if (command.kind === 'skill-show') {
+      const skill = getSkill(ROOT, command.name)
+      if (command.json) {
+        writeJson(skill)
+      } else {
+        const body = skill.markdown.endsWith('\n') ? skill.markdown : `${skill.markdown}\n`
+        process.stdout.write(body)
+        process.stdout.write('\n## Reference files\n\n')
+        if (skill.references.length === 0) {
+          process.stdout.write('None.\n')
+        } else {
+          for (const ref of skill.references) {
+            process.stdout.write(`- ${ref}\n`)
+          }
+        }
+      }
+      return 0
+    }
+    const resources = loadAllResources(ROOT)
     if (command.kind === 'search') {
       await writeSearch(
         resources,

@@ -46,8 +46,13 @@ care as any internal release; verify the tag/version and access controls.
 
 ```bash
 tolongdesign search scroll --section motion --json
+tolongdesign search "3d model" --kind skill --json
+tolongdesign search spline --kind tool,research --json
 tolongdesign show gsap
-tolongdesign context gsap saaspo --brief "Project brief" --json
+tolongdesign show research/spline-3d-design
+tolongdesign context gsap saaspo research/spline-3d-design --brief "Project brief" --json
+tolongdesign skill list --json
+tolongdesign skill show design-project
 ```
 
 Search ranks partial matches across names, tags, intended use and full document
@@ -81,9 +86,11 @@ relevant current official guidance before using a resource.
 
 `doctor --json` reports the installed root, version, registered resource count,
 manifest integrity, and the paths of the three consumer skills
-(`skills/<name>/SKILL.md`). Point your coding agent at the reported skill path
-and the packaged `skills/design-project/workflow.md`. Skills are not silently
-installed into a target repo or a global harness.
+(`skills/<name>/SKILL.md`). Use `tolongdesign skill list` to inspect all
+packaged skills or `tolongdesign skill show <name>` (for example,
+`tolongdesign skill show design-project`) to read `SKILL.md` and list its
+reference files from an installed release. Skills are not silently installed
+into a target repo or a global harness.
 
 ## Checkout mode
 

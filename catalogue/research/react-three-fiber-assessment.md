@@ -1,3 +1,11 @@
+---
+title: 'React Three Fiber assessment'
+summary:
+  'Verdict: keep and improve the existing guide. R3F is useful for React-based
+  interactive 3D, not a universal recipe for a good-looking frontend.'
+last_verified: 2026-10-11
+---
+
 # React Three Fiber assessment
 
 **Verdict:** keep and improve the existing guide. R3F is useful for React-based

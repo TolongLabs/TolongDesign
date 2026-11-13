@@ -1,3 +1,12 @@
+---
+title: 'snapcn agent video templates: teardown and rebuild'
+summary:
+  'Research behind collections/agent-video. Started from Shadcn Labs'' X post of
+  2026-11-10 announcing five new snapcn templates ("Swap the copy, render,
+  post."). Done 2026-11-12 to 2026-11-13.'
+last_verified: 2026-11-13
+---
+
 # snapcn agent video templates: teardown and rebuild
 
 Research behind
