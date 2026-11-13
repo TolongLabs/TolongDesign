@@ -6,8 +6,8 @@ section_slug: motion
 source_url: 'https://prompt-motion.com/'
 designeer_url: 'https://prompt-motion.com/'
 designeer_blurb:
-  A collection of motion videos made with Claude Opus 5.5, with the prompts and
-  skills behind them.
+  'Gallery of motion videos made with Claude Opus 5.5, each with the prompt or
+  skill behind it.'
 paywall: free
 pricing_summary:
   Free to browse, copy prompts and customize them; no paid plan is published.

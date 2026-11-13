@@ -32,4 +32,5 @@ own doc with source URL, paywall, how to use, examples, and agent notes.
 Also: [People worth following](./people.md) — 132 design engineers.
 
 Machine-readable: [`catalogue/index.json`](./index.json) (every doc’s
-frontmatter) and [`catalogue/catalogue.json`](./catalogue.json) (raw scrape).
+frontmatter), [`catalogue/people.json`](./people.json) (people data), and
+[`catalogue/designeer-scrape.json`](./designeer-scrape.json) (frozen scrape).

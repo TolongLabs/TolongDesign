@@ -119,7 +119,9 @@ function inspectArchive(archivePath: string): ArchiveEntry[] {
   const files = entries.filter((entry) => entry.kind === 'file').map((entry) => entry.filePath)
   if (!files.includes('release-manifest.json')) fail('archive has no release-manifest.json')
   if (!files.includes('package.json')) fail('archive has no package.json')
-  if (!files.includes('catalogue/catalogue.json')) fail('archive has no catalogue/catalogue.json')
+  for (const required of ['catalogue/people.json', 'catalogue/designeer-scrape.json']) {
+    if (!files.includes(required)) fail(`archive has no ${required}`)
+  }
   for (const required of [
     'catalogue/README.md',
     'catalogue/people.md',
@@ -163,11 +165,9 @@ function assertWithin(parent: string, child: string, label: string): void {
 function verifyExtractedPackage(packageRoot: string, entries: ArchiveEntry[]) {
   const packageMetadataPath = join(packageRoot, 'package.json')
   const manifestPath = join(packageRoot, 'release-manifest.json')
-  const cataloguePath = join(packageRoot, 'catalogue', 'catalogue.json')
 
   const packageMetadata = JSON.parse(readFileSync(packageMetadataPath, 'utf8')) as RecordValue
   const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as RecordValue
-  const catalogue = JSON.parse(readFileSync(cataloguePath, 'utf8')) as RecordValue
 
   if (packageMetadata.name !== 'tolong-design') fail('package name is not tolong-design')
   if (typeof packageMetadata.version !== 'string' || packageMetadata.version.trim() === '')
@@ -198,9 +198,9 @@ function verifyExtractedPackage(packageRoot: string, entries: ArchiveEntry[]) {
     fail('release manifest schema or version does not match package metadata')
   }
   if (!isRecord(manifest.files)) fail('release manifest files is not a path-to-hash map')
-  if (!Array.isArray(catalogue.tools)) fail('catalogue tools is not an array')
-  if (manifest.resource_count !== catalogue.tools.length)
-    fail('release manifest resource count does not match the catalogue')
+  if (!Number.isSafeInteger(manifest.resource_count) || (manifest.resource_count as number) < 0) {
+    fail('release manifest resource count is invalid')
+  }
 
   const manifestPaths = Object.keys(manifest.files)
   if (manifestPaths.join('\0') !== [...manifestPaths].sort().join('\0'))
@@ -256,10 +256,9 @@ function verifyExtractedPackage(packageRoot: string, entries: ArchiveEntry[]) {
 
   return {
     version: packageMetadata.version,
-    resourceCount: catalogue.tools.length,
+    resourceCount: manifest.resource_count as number,
     packageMetadata,
-    manifest,
-    catalogue
+    manifest
   }
 }
 

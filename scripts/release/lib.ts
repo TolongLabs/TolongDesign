@@ -501,7 +501,13 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
   const sourceRoot = sourceRootPath(root)
   const releaseMetadata = readReleaseMetadata(sourceRoot)
 
-  for (const path of ['src/cli/main.ts', 'src/core/loader.ts', 'catalogue/catalogue.json', 'catalogue/index.json']) {
+  for (const path of [
+    'src/cli/main.ts',
+    'src/core/loader.ts',
+    'catalogue/people.json',
+    'catalogue/designeer-scrape.json',
+    'catalogue/index.json'
+  ]) {
     inspectSourcePath(sourceRoot, path, 'file')
   }
   inspectSourcePath(sourceRoot, PACKAGE_README_SOURCE, 'file')

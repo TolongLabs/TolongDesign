@@ -6,7 +6,7 @@ import { join } from 'node:path'
 
 const source = join(import.meta.dir, '..', '..')
 const fixtures: string[] = []
-const doc = 'catalogue/tools/fonts/fixture.md'
+const doc = 'catalogue/tools/type/fixture.md'
 const sha = (value: string) => createHash('sha256').update(value).digest('hex')
 const write = (root: string, path: string, text: string) => {
   mkdirSync(join(root, path, '..'), { recursive: true })
@@ -18,22 +18,9 @@ function fixture(released = false) {
   write(root, 'package.json', JSON.stringify({ name: 'tolong-design', version: '0.1.0', private: true }))
   write(
     root,
-    'catalogue/catalogue.json',
-    JSON.stringify({
-      tools: [
-        {
-          name: 'Fixture',
-          url: 'https://example.com',
-          description: 'Fixture',
-          section: 'Fonts',
-          section_slug: 'fonts',
-          slug: 'fixture',
-          doc
-        }
-      ]
-    })
+    doc,
+    '---\nname: Fixture\nslug: fixture\nsection: Type\nsection_slug: type\nsource_url: https://example.com\npaywall: free\n---\n# Fixture\n\nComplete original documentation.\n'
   )
-  write(root, doc, '---\nname: Fixture\npaywall: free\n---\n# Fixture\n\nComplete original documentation.\n')
   for (const name of ['design-project', 'pick-design-stack', 'build-3d-model']) {
     write(
       root,
@@ -41,7 +28,16 @@ function fixture(released = false) {
       `---\nname: ${name}\nmetadata:\n  audience: consumer\n---\n# Fixture skill\n`
     )
   }
-  for (const file of ['schema.ts', 'fields.ts', 'card.ts', 'loader.ts', 'search.ts', 'context.ts', 'skill.ts']) {
+  for (const file of [
+    'schema.ts',
+    'fields.ts',
+    'card.ts',
+    'loader.ts',
+    'sections.ts',
+    'search.ts',
+    'context.ts',
+    'skill.ts'
+  ]) {
     const path = join(source, 'src', 'core', file)
     if (existsSync(path)) write(root, `src/core/${file}`, readFileSync(path, 'utf8'))
   }
@@ -56,7 +52,6 @@ function fixture(released = false) {
 function manifest(root: string, change: (value: Record<string, unknown>) => void = () => {}) {
   const paths = [
     'package.json',
-    'catalogue/catalogue.json',
     doc,
     'skills/design-project/SKILL.md',
     'skills/pick-design-stack/SKILL.md',
@@ -112,7 +107,7 @@ describe('installation integrity diagnostics', () => {
     expect(result.stdout).toBe('')
     expect(result.stderr).toContain('integrity')
   })
-  test('rejects a missing registered document', () => {
+  test('rejects a release manifest that refers to an undiscovered document', () => {
     const root = fixture(true)
     rmSync(join(root, doc))
     const result = run(root)

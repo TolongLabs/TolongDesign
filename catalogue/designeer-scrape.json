@@ -4479,9 +4479,7 @@
       "url": "https://emilkowal.ski/",
       "description": "Creator of Sonner, Vaul, and animations.",
       "sameAs": [],
-      "created_tools": [
-        "reading/animations-dev"
-      ],
+      "created_tools": ["reading/animations-dev"],
       "created_tools_evidence": {
         "reading/animations-dev": {
           "source_url": "https://www.animations.dev/",
@@ -4506,9 +4504,7 @@
       "name": "Gavin Nelson",
       "url": "https://nelson.co/",
       "description": "Designer at OpenAI crafting tactile interfaces.",
-      "sameAs": [
-        "https://x.com/gavmn"
-      ]
+      "sameAs": ["https://x.com/gavmn"]
     },
     {
       "name": "Adam Argyle",
@@ -4545,10 +4541,7 @@
       "url": "https://shadcn.com/",
       "description": "Creator of shadcn/ui and component registries.",
       "sameAs": [],
-      "created_tools": [
-        "component-libraries/shadcn-ui",
-        "development/v0"
-      ],
+      "created_tools": ["component-libraries/shadcn-ui", "development/v0"],
       "created_tools_evidence": {
         "component-libraries/shadcn-ui": {
           "source_url": "https://shadcn.com/",
@@ -4699,9 +4692,7 @@
       "url": "https://benji.org/",
       "description": "Creator of Agentation and Honk.",
       "sameAs": [],
-      "created_tools": [
-        "agents-mcp/agentation"
-      ],
+      "created_tools": ["agents-mcp/agentation"],
       "created_tools_evidence": {
         "agents-mcp/agentation": {
           "source_url": "https://www.agentation.com/",
@@ -4816,9 +4807,7 @@
       "name": "Preet Suthar",
       "url": "https://preetsuthar.me/",
       "description": "Design engineer building open-source tools.",
-      "sameAs": [
-        "https://x.com/preetsuthar17"
-      ]
+      "sameAs": ["https://x.com/preetsuthar17"]
     },
     {
       "name": "Maze",
@@ -4830,121 +4819,91 @@
       "name": "Siddharth",
       "url": "https://siddz.com/",
       "description": "Full-stack engineer crafting interactive UI.",
-      "sameAs": [
-        "https://x.com/buildwithsid"
-      ]
+      "sameAs": ["https://x.com/buildwithsid"]
     },
     {
       "name": "Sam",
       "url": "https://samworks.vercel.app/",
       "description": "Design engineer building motion-driven web apps.",
-      "sameAs": [
-        "https://x.com/samirande_"
-      ]
+      "sameAs": ["https://x.com/samirande_"]
     },
     {
       "name": "Dhruv Suthar",
       "url": "https://dhrv.pw/",
       "description": "Community Engineer at Raycast.",
-      "sameAs": [
-        "https://x.com/0xdhrv"
-      ]
+      "sameAs": ["https://x.com/0xdhrv"]
     },
     {
       "name": "Rahul Singh Bhadoriya",
       "url": "https://rahulbhadoriya.com/",
       "description": "Visual designer and founder of Dacoit Design.",
-      "sameAs": [
-        "https://x.com/rahulbhadoriiya"
-      ]
+      "sameAs": ["https://x.com/rahulbhadoriiya"]
     },
     {
       "name": "Manu Arora",
       "url": "https://manuarora.in/",
       "description": "Creator of Aceternity UI and TailwindMasterKit.",
-      "sameAs": [
-        "https://x.com/mannupaaji"
-      ]
+      "sameAs": ["https://x.com/mannupaaji"]
     },
     {
       "name": "Swami Malode",
       "url": "https://swamii.me/",
       "description": "Design engineer building VidStudio and Rare UI.",
-      "sameAs": [
-        "https://x.com/SwamiMalode"
-      ]
+      "sameAs": ["https://x.com/SwamiMalode"]
     },
     {
       "name": "Shawn Dsilva",
       "url": "https://www.shwn.design/",
       "description": "Creator of Dot Matrix and Orbkit.",
-      "sameAs": [
-        "https://x.com/zzzzshawn"
-      ]
+      "sameAs": ["https://x.com/zzzzshawn"]
     },
     {
       "name": "Shivam",
       "url": "https://www.10xshivam.dev/",
       "description": "Full-stack developer building scalable web interfaces.",
-      "sameAs": [
-        "https://x.com/10xshivam"
-      ]
+      "sameAs": ["https://x.com/10xshivam"]
     },
     {
       "name": "Rohit Mehta",
       "url": "https://portfolio.negativ.in/",
       "description": "Developer building Negativ UI.",
-      "sameAs": [
-        "https://x.com/rohitmehta_twt"
-      ]
+      "sameAs": ["https://x.com/rohitmehta_twt"]
     },
     {
       "name": "Ratnesh Chipre",
       "url": "https://ratneshc.com/",
       "description": "Design engineer building Draftlogo.",
-      "sameAs": [
-        "https://x.com/ratneshchipre"
-      ]
+      "sameAs": ["https://x.com/ratneshchipre"]
     },
     {
       "name": "Shivraj Roy",
       "url": "https://www.shivrajroy.in/",
       "description": "Frontend engineer focused on micro-animations.",
-      "sameAs": [
-        "https://x.com/shivraj_roy10"
-      ]
+      "sameAs": ["https://x.com/shivraj_roy10"]
     },
     {
       "name": "Vansh Nagar",
       "url": "https://www.vanshnagar.com/",
       "description": "Creator of ASCII Studio and web tools.",
-      "sameAs": [
-        "https://x.com/vansh1029"
-      ]
+      "sameAs": ["https://x.com/vansh1029"]
     },
     {
       "name": "Harsh Jadhav",
       "url": "https://harshjdhv.com/",
       "description": "Design engineer and creator of Componentry.",
-      "sameAs": [
-        "https://x.com/harshjdhv"
-      ]
+      "sameAs": ["https://x.com/harshjdhv"]
     },
     {
       "name": "Aaryan",
       "url": "https://aaryan.design/",
       "description": "Creator of Sileo physics-based toast components.",
-      "sameAs": [
-        "https://x.com/hiaaryan"
-      ]
+      "sameAs": ["https://x.com/hiaaryan"]
     },
     {
       "name": "Atharvsinh Jadav",
       "url": "https://athrix.me/",
       "description": "Full-stack developer building ObsidianUI.",
-      "sameAs": [
-        "https://x.com/athrix_codes"
-      ]
+      "sameAs": ["https://x.com/athrix_codes"]
     },
     {
       "name": "Divyansh Swarnkar",
@@ -4956,9 +4915,7 @@
       "name": "Gurbinder",
       "url": "https://gurbinder.dev/",
       "description": "Design engineer building Skiper UI and EvilCharts.",
-      "sameAs": [
-        "https://x.com/Gur__vi"
-      ]
+      "sameAs": ["https://x.com/Gur__vi"]
     },
     {
       "name": "Ashutosh Singh",
@@ -4976,9 +4933,7 @@
       "name": "Aman Shakya",
       "url": "https://amanshakya.in/",
       "description": "Design engineer building Forge UI and Statsio.",
-      "sameAs": [
-        "https://x.com/amanshakya0018"
-      ]
+      "sameAs": ["https://x.com/amanshakya0018"]
     },
     {
       "name": "Mihir Aman Raj",
@@ -5002,57 +4957,43 @@
       "name": "Sophie Manalo",
       "url": "https://www.sophiamanalo.com/",
       "description": "Creative developer building expressive web interfaces.",
-      "sameAs": [
-        "https://x.com/sloppopp"
-      ]
+      "sameAs": ["https://x.com/sloppopp"]
     },
     {
       "name": "Abhinav Kale",
       "url": "https://abhi.at/",
       "description": "Design engineer crafting minimal web experiments.",
-      "sameAs": [
-        "https://x.com/Abhinavstwt"
-      ]
+      "sameAs": ["https://x.com/Abhinavstwt"]
     },
     {
       "name": "Karaan",
       "url": "https://www.karaan.me/",
       "description": "Frontend engineer focusing on UI craft.",
-      "sameAs": [
-        "https://x.com/karaan_dev"
-      ]
+      "sameAs": ["https://x.com/karaan_dev"]
     },
     {
       "name": "Ram",
       "url": "https://ramx.in/",
       "description": "Frontend developer building interactive web products.",
-      "sameAs": [
-        "https://x.com/ramxcodes"
-      ]
+      "sameAs": ["https://x.com/ramxcodes"]
     },
     {
       "name": "Victor Williams",
       "url": "https://www.victorwilliams.me/",
       "description": "Design engineer crafting modern digital experiences.",
-      "sameAs": [
-        "https://x.com/victorwill__"
-      ]
+      "sameAs": ["https://x.com/victorwill__"]
     },
     {
       "name": "Umesh Nagare",
       "url": "https://umeshnagare.com/",
       "description": "Full-stack engineer building clean user interfaces.",
-      "sameAs": [
-        "https://x.com/umeshn22"
-      ]
+      "sameAs": ["https://x.com/umeshn22"]
     },
     {
       "name": "Gautam",
       "url": "https://www.heygautam.com/",
       "description": "Full-stack developer building open-source tools.",
-      "sameAs": [
-        "https://github.com/gautamkumar1"
-      ]
+      "sameAs": ["https://github.com/gautamkumar1"]
     },
     {
       "name": "Atharva Mhaske",
@@ -5064,65 +5005,49 @@
       "name": "Janina",
       "url": "https://janina.works/",
       "description": "Product designer crafting interactive interfaces.",
-      "sameAs": [
-        "https://x.com/janinaparker_"
-      ]
+      "sameAs": ["https://x.com/janinaparker_"]
     },
     {
       "name": "Unlimited Studio",
       "url": "https://unlimited.studio",
       "description": "Independent studio crafting bespoke digital identities.",
-      "sameAs": [
-        "https://x.com/nolimitsforus"
-      ]
+      "sameAs": ["https://x.com/nolimitsforus"]
     },
     {
       "name": "Manish Kumar",
       "url": "https://www.manixh.dev/",
       "description": "Frontend developer building sleek web interfaces.",
-      "sameAs": [
-        "https://x.com/Manixh02"
-      ]
+      "sameAs": ["https://x.com/Manixh02"]
     },
     {
       "name": "Dhruv",
       "url": "https://jdhruv.dev/",
       "description": "Design engineer crafting interactive tactile software.",
-      "sameAs": [
-        "https://x.com/dhruvtwt_"
-      ]
+      "sameAs": ["https://x.com/dhruvtwt_"]
     },
     {
       "name": "Sahil Singh",
       "url": "https://sahilcodex.vercel.app/",
       "description": "Frontend developer crafting interactive React components.",
-      "sameAs": [
-        "https://x.com/sahilcodex"
-      ]
+      "sameAs": ["https://x.com/sahilcodex"]
     },
     {
       "name": "Nexvyn",
       "url": "https://nexvyn.dev/",
       "description": "Design engineer building nexvyn/ui components.",
-      "sameAs": [
-        "https://x.com/nexvyn"
-      ]
+      "sameAs": ["https://x.com/nexvyn"]
     },
     {
       "name": "Syed Subhan",
       "url": "https://www.syedsubhan.in/",
       "description": "Creative developer crafting 3D shader experiments.",
-      "sameAs": [
-        "https://x.com/syedsubhan_"
-      ]
+      "sameAs": ["https://x.com/syedsubhan_"]
     },
     {
       "name": "Jay",
       "url": "https://www.radiumcoders.com/",
       "description": "Design engineer building Evil Buttons and Mascot.",
-      "sameAs": [
-        "https://x.com/thejaykhatri"
-      ]
+      "sameAs": ["https://x.com/thejaykhatri"]
     },
     {
       "name": "Chidu",
@@ -5134,100 +5059,74 @@
       "name": "Connor Hepburn",
       "url": "https://hpbrn.cc/",
       "description": "Engineer developing Creed and web agents.",
-      "sameAs": [
-        "https://github.com/hpbrn"
-      ]
+      "sameAs": ["https://github.com/hpbrn"]
     },
     {
       "name": "Pratham",
       "url": "https://www.pratham.me/",
       "description": "Product designer crafting high-craft landing pages.",
-      "sameAs": [
-        "https://x.com/prathamdesigns"
-      ]
+      "sameAs": ["https://x.com/prathamdesigns"]
     },
     {
       "name": "Offgrid",
       "url": "https://offgrid.inc/",
       "description": "Branding studio crafting identities for tech companies.",
-      "sameAs": [
-        "https://x.com/FonsMans"
-      ]
+      "sameAs": ["https://x.com/FonsMans"]
     },
     {
       "name": "Daniel White",
       "url": "https://www.danielwhite.uk/",
       "description": "Design engineer and founder of textmotion.",
-      "sameAs": [
-        "https://x.com/dwhitedesign"
-      ]
+      "sameAs": ["https://x.com/dwhitedesign"]
     },
     {
       "name": "Sasha Balandina",
       "url": "https://sashabalandina.com/",
       "description": "Product designer crafting typography-focused interfaces.",
-      "sameAs": [
-        "https://x.com/aleksksaa"
-      ]
+      "sameAs": ["https://x.com/aleksksaa"]
     },
     {
       "name": "Timothy Maarv",
       "url": "https://www.timothymaarv.me/",
       "description": "Product designer crafting 0-to-1 software experiences.",
-      "sameAs": [
-        "https://x.com/timothymaarv"
-      ]
+      "sameAs": ["https://x.com/timothymaarv"]
     },
     {
       "name": "Soren Blank",
       "url": "https://sorenblank.com/",
       "description": "Design engineer crafting fluid micro-interactions.",
-      "sameAs": [
-        "https://x.com/sorenblank"
-      ]
+      "sameAs": ["https://x.com/sorenblank"]
     },
     {
       "name": "Ozzy",
       "url": "https://www.ozzyx.xyz/",
       "description": "Design engineer building interior.dev micro-interactions.",
-      "sameAs": [
-        "https://x.com/ozzyxs1a"
-      ]
+      "sameAs": ["https://x.com/ozzyxs1a"]
     },
     {
       "name": "Utsav Gupta",
       "url": "https://www.utsavworks.in/",
       "description": "Full-stack engineer building AI agents.",
-      "sameAs": [
-        "https://x.com/0xdevug"
-      ]
+      "sameAs": ["https://x.com/0xdevug"]
     },
     {
       "name": "Saurabh Sharma",
       "url": "https://www.srbh.site/",
       "description": "Design engineer building Great UI components.",
-      "sameAs": [
-        "https://x.com/srbh_here"
-      ]
+      "sameAs": ["https://x.com/srbh_here"]
     },
     {
       "name": "Iteration",
       "url": "https://iteration.design/",
       "description": "Design studio founded by Josh Puckett.",
-      "sameAs": [
-        "https://x.com/joshpuckett"
-      ]
+      "sameAs": ["https://x.com/joshpuckett"]
     },
     {
       "name": "Josh Puckett",
       "url": "https://joshpuckett.me/",
       "description": "Founder of Iteration and DialKit.",
-      "sameAs": [
-        "https://x.com/joshpuckett"
-      ],
-      "created_tools": [
-        "development/dialkit"
-      ],
+      "sameAs": ["https://x.com/joshpuckett"],
+      "created_tools": ["development/dialkit"],
       "created_tools_evidence": {
         "development/dialkit": {
           "source_url": "https://www.dialkit.dev/",
@@ -5240,225 +5139,169 @@
       "name": "Mery Kaftar",
       "url": "https://merycodes.com/",
       "description": "Design engineer at Vercel crafting AI interfaces.",
-      "sameAs": [
-        "https://x.com/merycodes"
-      ]
+      "sameAs": ["https://x.com/merycodes"]
     },
     {
       "name": "Lele Zhang",
       "url": "https://lelezhang.design/",
       "description": "Product designer exploring thoughtful AI interfaces.",
-      "sameAs": [
-        "https://x.com/CherrilynnZ"
-      ]
+      "sameAs": ["https://x.com/CherrilynnZ"]
     },
     {
       "name": "Pranathi Peri",
       "url": "https://pranathiperi.com/",
       "description": "Designer at Anthropic on Claude Code.",
-      "sameAs": [
-        "https://x.com/pranathiperii"
-      ]
+      "sameAs": ["https://x.com/pranathiperii"]
     },
     {
       "name": "Airla Fan",
       "url": "https://airladesigns.com/",
       "description": "Digital designer at YouTube crafting visual systems.",
-      "sameAs": [
-        "https://x.com/airlasart"
-      ]
+      "sameAs": ["https://x.com/airlasart"]
     },
     {
       "name": "Mariana Castilho",
       "url": "https://www.mrncst.computer/",
       "description": "Product designer and engineer at Profound.",
-      "sameAs": [
-        "https://x.com/mrncst"
-      ]
+      "sameAs": ["https://x.com/mrncst"]
     },
     {
       "name": "Evil Rabbit",
       "url": "https://www.evilrabbit.com/",
       "description": "Head of Design at Vercel.",
-      "sameAs": [
-        "https://x.com/evilrabbit_"
-      ]
+      "sameAs": ["https://x.com/evilrabbit_"]
     },
     {
       "name": "Dominik Martin",
       "url": "https://dominikmart.in/",
       "description": "Product designer building modern digital products.",
-      "sameAs": [
-        "https://x.com/dominikmartn"
-      ]
+      "sameAs": ["https://x.com/dominikmartn"]
     },
     {
       "name": "Tom",
       "url": "https://tomm.page/",
       "description": "Creator of Spell UI crafting component kits.",
-      "sameAs": [
-        "https://x.com/tomm_ui"
-      ]
+      "sameAs": ["https://x.com/tomm_ui"]
     },
     {
       "name": "Dan Hollick",
       "url": "https://old.alcohollick.com/",
       "description": "Design engineer at Cursor.",
-      "sameAs": [
-        "https://x.com/DanHollick"
-      ]
+      "sameAs": ["https://x.com/DanHollick"]
     },
     {
       "name": "Anthony Fu",
       "url": "https://antfu.me/",
       "description": "Open-source creator and Vue core team member.",
-      "sameAs": [
-        "https://x.com/antfu7"
-      ]
+      "sameAs": ["https://x.com/antfu7"]
     },
     {
       "name": "Paul Bakaus",
       "url": "https://paulbakaus.com/",
       "description": "Creator of jQuery UI building AI tools.",
-      "sameAs": [
-        "https://x.com/pbakaus"
-      ]
+      "sameAs": ["https://x.com/pbakaus"]
     },
     {
       "name": "Aditya Sur",
       "url": "https://ample.studio/",
       "description": "Designer and developer crafting digital experiences.",
-      "sameAs": [
-        "https://x.com/AdityaSur11"
-      ]
+      "sameAs": ["https://x.com/AdityaSur11"]
     },
     {
       "name": "Raphael Salaja",
       "url": "https://www.raphaelsalaja.com/",
       "description": "Design engineer pushing boundaries in interface craft.",
-      "sameAs": [
-        "https://x.com/raphaelsalaja"
-      ]
+      "sameAs": ["https://x.com/raphaelsalaja"]
     },
     {
       "name": "Ana Howard",
       "url": "https://ana.sh/",
       "description": "Design engineer in London crafting thoughtful interfaces.",
-      "sameAs": [
-        "https://x.com/anaarsonist"
-      ]
+      "sameAs": ["https://x.com/anaarsonist"]
     },
     {
       "name": "Jakub Antalík",
       "url": "https://jakubantalik.com/",
       "description": "Product designer and Design Lead at Fun.xyz.",
-      "sameAs": [
-        "https://x.com/Jakubantalik"
-      ]
+      "sameAs": ["https://x.com/Jakubantalik"]
     },
     {
       "name": "Henry Heffernan",
       "url": "https://henryheffernan.com/",
       "description": "Creative developer known for the OS portfolio.",
-      "sameAs": [
-        "https://x.com/henryheffernan"
-      ]
+      "sameAs": ["https://x.com/henryheffernan"]
     },
     {
       "name": "Wojtek Witkowski",
       "url": "https://wojtek.im/",
       "description": "Staff UI engineer at Coinbase.",
-      "sameAs": [
-        "https://x.com/pugson"
-      ]
+      "sameAs": ["https://x.com/pugson"]
     },
     {
       "name": "Akash Bhadange",
       "url": "https://designerdada.com/",
       "description": "Product designer and founder of Peerlist.",
-      "sameAs": [
-        "https://x.com/designerdada"
-      ]
+      "sameAs": ["https://x.com/designerdada"]
     },
     {
       "name": "Aiden Bai",
       "url": "https://aidenybai.com/",
       "description": "Founder of Million.js and React Scan.",
-      "sameAs": [
-        "https://x.com/aidenybai"
-      ]
+      "sameAs": ["https://x.com/aidenybai"]
     },
     {
       "name": "Shu Ding",
       "url": "https://shud.in/",
       "description": "Designer and engineer at Vercel.",
-      "sameAs": [
-        "https://x.com/shuding_"
-      ]
+      "sameAs": ["https://x.com/shuding_"]
     },
     {
       "name": "Danilo Woznica",
       "url": "https://danilowoz.com/",
       "description": "Creator of react-content-loader component library.",
-      "sameAs": [
-        "https://x.com/danilowoz"
-      ]
+      "sameAs": ["https://x.com/danilowoz"]
     },
     {
       "name": "Daryl Ginn",
       "url": "https://system.studio/",
       "description": "Founder of System Studio and Minimal Gallery.",
-      "sameAs": [
-        "https://x.com/darylginn"
-      ]
+      "sameAs": ["https://x.com/darylginn"]
     },
     {
       "name": "Gunnar Gray",
       "url": "https://gunnargray.com/",
       "description": "Product Design Lead at Perplexity AI.",
-      "sameAs": [
-        "https://x.com/gunnargray"
-      ]
+      "sameAs": ["https://x.com/gunnargray"]
     },
     {
       "name": "Todd Hamilton",
       "url": "https://toddham.com/",
       "description": "Product designer and developer building AIProxy.",
-      "sameAs": [
-        "https://x.com/toddham"
-      ]
+      "sameAs": ["https://x.com/toddham"]
     },
     {
       "name": "Zaid Mukaddam",
       "url": "https://zaidmukaddam.com/",
       "description": "Creator of Scira AI conversational search.",
-      "sameAs": [
-        "https://x.com/zaidmukaddam"
-      ]
+      "sameAs": ["https://x.com/zaidmukaddam"]
     },
     {
       "name": "Kartik Labhshetwar",
       "url": "https://kartiklabhshetwar.com/",
       "description": "Software engineer building AI memory at Mem0.",
-      "sameAs": [
-        "https://x.com/code_kartik"
-      ]
+      "sameAs": ["https://x.com/code_kartik"]
     },
     {
       "name": "Saurabh",
       "url": "https://saura3h.xyz/",
       "description": "Design engineer building beUI, a motion component library.",
-      "sameAs": [
-        "https://x.com/saurra3h"
-      ]
+      "sameAs": ["https://x.com/saurra3h"]
     },
     {
       "name": "Daryl Patigas",
       "url": "https://imdaryl.com/",
       "description": "Founding designer at Lottielab.",
-      "sameAs": [
-        "https://x.com/darel023"
-      ]
+      "sameAs": ["https://x.com/darel023"]
     }
   ]
 }

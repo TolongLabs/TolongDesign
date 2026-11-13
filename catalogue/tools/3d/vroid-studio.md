@@ -5,7 +5,7 @@ section: 3D
 section_slug: 3d
 source_url: 'https://vroid.com/en/studio'
 designeer_url: 'https://vroid.com/en/studio'
-designeer_blurb: 3D character creation software.
+designeer_blurb: 'Free anime-style 3D character maker that exports VRM models.'
 paywall: free
 pricing_summary: Free to download and use on Windows, macOS and iPad.
 open_source: false

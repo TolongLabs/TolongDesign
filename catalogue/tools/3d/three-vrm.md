@@ -5,7 +5,9 @@ section: 3D
 section_slug: 3d
 source_url: 'https://github.com/pixiv/three-vrm'
 designeer_url: 'https://github.com/pixiv/three-vrm'
-designeer_blurb: Use VRM on three.js.
+designeer_blurb:
+  'Loads VRM avatar models into three.js, with expressions, spring-bone hair and
+  humanoid animation.'
 paywall: free
 pricing_summary: Free and open source under the MIT licence.
 open_source: true

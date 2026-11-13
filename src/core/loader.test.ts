@@ -92,32 +92,16 @@ function createFixtureRoot(tools: FixtureTool[]): FixtureRoot {
   const root = tempRoot('tolong-loader-')
   mkdirSync(join(root, 'catalogue'), { recursive: true })
 
-  const catalogueTools = tools.map((tool) => {
+  for (const tool of tools) {
     const doc = tool.docPath ?? defaultDocPath(tool)
-    const metadata = fixtureMetadata(tool)
     if (tool.writeDoc !== false) {
       const fullPath = resolve(root, doc)
       mkdirSync(dirname(fullPath), { recursive: true })
       writeFileSync(fullPath, markdownFor(tool), 'utf8')
     }
+  }
 
-    return {
-      name: tool.name,
-      url: metadata.source_url,
-      description: tool.catalogueDescription ?? `Catalogue entry for ${tool.slug}.`,
-      section: metadata.section,
-      slug: tool.slug,
-      section_slug: tool.sectionSlug,
-      designeer_url: metadata.designeer_url,
-      doc
-    }
-  })
-
-  writeFileSync(
-    join(root, 'catalogue/catalogue.json'),
-    JSON.stringify({ source: 'https://designeer.xyz', scraped: '2026-10-10', tools: catalogueTools }),
-    'utf8'
-  )
+  writeFileSync(join(root, 'catalogue/people.json'), JSON.stringify({ people: [] }), 'utf8')
 
   return {
     root,
@@ -125,34 +109,16 @@ function createFixtureRoot(tools: FixtureTool[]): FixtureRoot {
   }
 }
 
-describe('registered document path safety', () => {
-  test('rejects catalogue paths that traverse outside catalogue/tools', () => {
-    const tool: FixtureTool = {
-      name: 'Traversal Entry',
-      slug: 'traversal-entry',
-      sectionSlug: 'motion',
-      docPath: 'catalogue/tools/../../outside.md',
-      writeDoc: false
-    }
-    const fixture = createFixtureRoot([tool])
+describe('document discovery and path safety', () => {
+  test('does not load Markdown files outside catalogue/tools', () => {
+    const fixture = createFixtureRoot([{ name: 'Inside Tool', slug: 'inside-tool', sectionSlug: 'motion' }])
     writeFileSync(join(fixture.root, 'outside.md'), 'private outside source', 'utf8')
 
-    expect(() => loadResources(fixture.root)).toThrow(DataError)
+    expect(loadResources(fixture.root).map((resource) => resource.id)).toEqual(['motion/inside-tool'])
   })
 
-  test('rejects absolute catalogue paths even when the external document exists', () => {
-    const outside = tempRoot('tolong-design-outside-')
-    const externalDoc = join(outside, 'external.md')
-    writeFileSync(externalDoc, 'external registered source', 'utf8')
-    const fixture = createFixtureRoot([
-      {
-        name: 'Absolute Entry',
-        slug: 'absolute-entry',
-        sectionSlug: 'motion',
-        docPath: externalDoc,
-        writeDoc: false
-      }
-    ])
+  test('rejects a tool section that has no display-name mapping', () => {
+    const fixture = createFixtureRoot([{ name: 'Unknown Section Tool', slug: 'unknown', sectionSlug: 'unknown' }])
 
     expect(() => loadResources(fixture.root)).toThrow(DataError)
   })
@@ -168,15 +134,51 @@ describe('registered document path safety', () => {
       writeDoc: false
     }
     const fixture = createFixtureRoot([tool])
-    const registeredPath = fixture.sourcePath(tool)
-    mkdirSync(dirname(registeredPath), { recursive: true })
-    symlinkSync(externalDoc, registeredPath)
+    const documentPath = fixture.sourcePath(tool)
+    mkdirSync(dirname(documentPath), { recursive: true })
+    symlinkSync(externalDoc, documentPath)
 
     expect(() => loadResources(fixture.root)).toThrow(DataError)
   })
 })
 
 describe('loader metadata and unified doc reading', () => {
+  test('loads tool identity from Markdown paths without a catalogue registry', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Path Tool',
+        slug: 'path-tool',
+        sectionSlug: 'motion'
+      }
+    ])
+
+    const resources = loadResources(fixture.root)
+
+    expect(resources).toHaveLength(1)
+    expect(resources[0]).toMatchObject({
+      id: 'motion/path-tool',
+      name: 'Path Tool',
+      section_slug: 'motion',
+      slug: 'path-tool',
+      doc: 'catalogue/tools/motion/path-tool.md',
+      source_url: 'https://example.test/motion/path-tool',
+      meta: { designeer_blurb: 'Fixture entry for path-tool.' }
+    })
+  })
+
+  test('uses the section display name from the core section map', () => {
+    const fixture = createFixtureRoot([
+      {
+        name: 'Mapped Section Tool',
+        slug: 'mapped-section-tool',
+        sectionSlug: 'motion',
+        frontmatter: { section: 'Wrong Label' }
+      }
+    ])
+
+    expect(loadResources(fixture.root)[0]?.meta.section).toBe('Motion')
+  })
+
   test('derives meta.install via extractInstall in makeResource', () => {
     const markdown = [
       '---',

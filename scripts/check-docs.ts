@@ -12,6 +12,7 @@ import {
   validateResearchMeta,
   validateResourceMeta
 } from '../src/core/schema'
+import { sectionName } from '../src/core/sections'
 import { findBrokenRelativeMarkdownLinks } from './relative-markdown-links'
 
 export type CheckResult = {
@@ -38,9 +39,13 @@ export function checkDocs(root: string): CheckResult {
     const { meta, body } = doc
 
     for (const key of FRONTMATTER_KEYS) if (!(key in meta)) errors.push(`${tool.doc}: frontmatter missing "${key}"`)
-    if (meta.slug !== tool.slug) errors.push(`${tool.doc}: slug "${meta.slug}" != catalogue "${tool.slug}"`)
-    if (meta.section !== tool.section) errors.push(`${tool.doc}: section "${meta.section}" != "${tool.section}"`)
-    if (meta.source_url !== tool.url) errors.push(`${tool.doc}: source_url "${meta.source_url}" != "${tool.url}"`)
+    // Identity comes from the path: catalogue/tools/<section_slug>/<slug>.md
+    if (meta.slug !== tool.slug) errors.push(`${tool.doc}: slug "${meta.slug}" != path "${tool.slug}"`)
+    if (meta.section_slug !== tool.section_slug)
+      errors.push(`${tool.doc}: section_slug "${meta.section_slug}" != path "${tool.section_slug}"`)
+    const expectedSection = sectionName(tool.section_slug)
+    if (meta.section !== expectedSection)
+      errors.push(`${tool.doc}: section "${meta.section}" != section map "${expectedSection}"`)
     if (!PAYWALLS.includes(meta.paywall as (typeof PAYWALLS)[number]))
       errors.push(`${tool.doc}: paywall "${meta.paywall}" not in ${PAYWALLS.join('|')}`)
     for (const key of ['category_tags', 'best_for', 'stack'])

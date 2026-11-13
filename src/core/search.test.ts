@@ -210,7 +210,7 @@ function createSearchFixtureRoot(tools: SearchFixtureTool[], staleIndex?: unknow
   searchFixtureRoots.push(root)
   mkdirSync(join(root, 'catalogue'), { recursive: true })
 
-  const catalogueTools = tools.map((tool) => {
+  for (const tool of tools) {
     const doc = `catalogue/tools/${tool.sectionSlug}/${tool.slug}.md`
     const metadata = {
       name: tool.name,
@@ -238,24 +238,7 @@ function createSearchFixtureRoot(tools: SearchFixtureTool[], staleIndex?: unknow
     const fullPath = resolve(root, doc)
     mkdirSync(dirname(fullPath), { recursive: true })
     writeFileSync(fullPath, markdown, 'utf8')
-
-    return {
-      name: tool.name,
-      url: metadata.source_url,
-      description: tool.catalogueDescription ?? `Catalogue entry for ${tool.slug}.`,
-      section: metadata.section,
-      slug: tool.slug,
-      section_slug: tool.sectionSlug,
-      designeer_url: metadata.designeer_url,
-      doc
-    }
-  })
-
-  writeFileSync(
-    join(root, 'catalogue/catalogue.json'),
-    JSON.stringify({ source: 'https://designeer.xyz', scraped: '2026-10-10', tools: catalogueTools }),
-    'utf8'
-  )
+  }
 
   if (staleIndex !== undefined) {
     writeFileSync(join(root, 'catalogue/index.json'), JSON.stringify(staleIndex), 'utf8')
@@ -317,7 +300,7 @@ describe('design resource loading and search', () => {
       { name: 'Alpha', slug: 'alpha', sectionSlug: 'motion', body: 'shared token' },
       { name: 'Mica', slug: 'mica', sectionSlug: 'motion', body: 'shared token' },
       { name: 'Twin', slug: 'same', sectionSlug: 'motion', body: 'shared token' },
-      { name: 'Twin', slug: 'same', sectionSlug: 'colors', body: 'shared token' }
+      { name: 'Twin', slug: 'same', sectionSlug: 'color', body: 'shared token' }
     ])
     const resources = loadResources(fixture.root)
 
@@ -325,7 +308,7 @@ describe('design resource loading and search', () => {
     const limited = searchResources(resources, 'shared token', { limit: 2 })
 
     expect(all.results.map(searchQualifiedId)).toEqual([
-      'colors/same',
+      'color/same',
       'motion/alpha',
       'motion/mica',
       'motion/same',
@@ -354,7 +337,7 @@ describe('design resource loading and search', () => {
       {
         name: 'React Color',
         slug: 'react-color',
-        sectionSlug: 'colors',
+        sectionSlug: 'color',
         body: 'filter token',
         frontmatter: { stack: ['react'], paywall: 'freemium' }
       }
@@ -697,7 +680,7 @@ describe('extended SearchOptions validation and filtering (#6, #8-#11)', () => {
       {
         name: 'Mesh Tool',
         slug: 'mesh-tool',
-        sectionSlug: '3d-assets',
+        sectionSlug: '3d',
         body: '3d model tool body'
       }
     ])
@@ -740,7 +723,7 @@ describe('extended SearchOptions validation and filtering (#6, #8-#11)', () => {
 
     const defaultSearch = searchResources(all, '3d model')
     expect(defaultSearch.results.map((r) => r.kind)).toEqual(['tool'])
-    expect(defaultSearch.results.map((r) => r.id)).toEqual(['3d-assets/mesh-tool'])
+    expect(defaultSearch.results.map((r) => r.id)).toEqual(['3d/mesh-tool'])
 
     const skillSearch = searchResources(all, '3d model', { kind: 'skill' })
     expect(skillSearch.results.map((r) => [r.kind, r.id])).toEqual([['skill', 'skill/build-3d-model']])
@@ -752,7 +735,7 @@ describe('extended SearchOptions validation and filtering (#6, #8-#11)', () => {
     expect(combined.results.map((r) => r.id).sort()).toEqual(['research/spline-study', 'skill/build-3d-model'])
 
     const paywallMulti = searchResources(all, '3d model', { kind: 'tool,skill', paywall: 'free' })
-    expect(paywallMulti.results.map((r) => r.id)).toEqual(['3d-assets/mesh-tool'])
+    expect(paywallMulti.results.map((r) => r.id)).toEqual(['3d/mesh-tool'])
 
     expect(() => searchResources(all, '3d model', { kind: '' })).toThrow(UsageError)
     expect(() => searchResources(all, '3d model', { kind: 'bogus' })).toThrow(UsageError)

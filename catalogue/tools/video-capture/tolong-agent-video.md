@@ -5,7 +5,9 @@ section: Video & Capture
 section_slug: video-capture
 source_url: 'https://github.com/TolongLabs/TolongDesign/tree/main/collections/agent-video'
 designeer_url: 'https://designeer.xyz/utilities'
-designeer_blurb: Not on Designeer; TolongLabs' own collection in this repo.
+designeer_blurb:
+  "TolongLabs' own Remotion kit and five launch-film templates, plus 155
+  teardowns of snapcn templates and components."
 paywall: free
 pricing_summary:
   'TolongLabs collection in this repo. No cost. Remotion is free for teams of up

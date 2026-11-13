@@ -51,7 +51,8 @@ search return it.
 ```
 catalogue/tools/<section>/<slug>.md One doc per tool (hand-written / researched)
 catalogue/research/<slug>.md        Research that supports catalogue choices
-catalogue/catalogue.json            Designeer scrape plus hand-added tools (tools + people); source of truth for what exists
+catalogue/people.json               Hand-maintained people and creator-credit data
+catalogue/designeer-scrape.json     Frozen Designeer scrape; archival, never read at runtime
 catalogue/SCHEMA.md                 Field meanings: execution modes, surfaces, status and creator metadata
 catalogue/TEMPLATE.md               The contract every tool doc follows
 catalogue/README.md                 Generated: every section with counts
@@ -107,11 +108,12 @@ bun run format              # prettier
   update `last_verified` and the "checked" date in Sources.
 - **Generated files are never hand-edited**: `catalogue/README.md`,
   `catalogue/tools/<section>/README.md`, `catalogue/people.md`,
-  `catalogue/index.json`. Change the doc frontmatter (or
-  `catalogue/catalogue.json`) and run `bun run index`.
-- **Adding a tool:** add an entry to `catalogue/catalogue.json` `tools[]` (with
-  `doc` = `catalogue/tools/<section_slug>/<slug>.md`), write the doc from the
-  template, then `bun run index && bun run check`.
+  `catalogue/index.json`. Change the doc frontmatter (or `catalogue/people.json`
+  for people data) and run `bun run index`.
+- **Adding a tool:** write one doc at
+  `catalogue/tools/<section_slug>/<slug>.md`. The path sets its section and
+  slug; display names come from `src/core/sections.ts`. Then run
+  `bun run index && bun run check`.
 - **Paywall is about the tool, not the licence.** Open-source with a paid pro
   tier is `freemium`. Trial-only is `paid`. Check commercial / client-work
   licensing for paid assets (fonts, icon sets, templates) and note it.

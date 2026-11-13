@@ -5,7 +5,9 @@ section: Motion
 section_slug: motion
 source_url: 'https://github.com/TolongLabs/TolongDesign/tree/main/collections/line-art'
 designeer_url: 'https://designeer.xyz/components'
-designeer_blurb: Not on Designeer; TolongLabs' own collection in this repo.
+designeer_blurb:
+  "TolongLabs' own ink-on-paper SVG animation library: rig and costume parts,
+  line boil, dog and cat gaits, headless SVG/GIF export."
 paywall: free
 pricing_summary:
   'TolongLabs library in this repo. No cost and no external dependencies.'

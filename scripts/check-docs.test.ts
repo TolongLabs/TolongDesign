@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, test } from 'bun:test'
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { checkDocs } from './check-docs'
@@ -25,11 +25,8 @@ describe('checkDocs research validation', () => {
     tempRoots.push(fixture)
 
     mkdirSync(join(fixture, 'catalogue/research'), { recursive: true })
-    cpSync(join(ROOT, 'catalogue/catalogue.json'), join(fixture, 'catalogue/catalogue.json'))
-    const parsed = JSON.parse(readFileSync(join(ROOT, 'catalogue/catalogue.json'), 'utf8'))
-    parsed.tools = []
-    parsed.people = []
-    writeFileSync(join(fixture, 'catalogue/catalogue.json'), JSON.stringify(parsed, null, 2), 'utf8')
+    mkdirSync(join(fixture, 'catalogue/tools'), { recursive: true })
+    writeFileSync(join(fixture, 'catalogue/people.json'), JSON.stringify({ people: [] }, null, 2), 'utf8')
 
     writeFileSync(
       join(fixture, 'catalogue/research/bad-research.md'),

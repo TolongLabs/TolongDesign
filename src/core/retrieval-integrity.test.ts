@@ -9,25 +9,9 @@ const root = join(import.meta.dir, '..', '..')
 const fixture = mkdtempSync(join(tmpdir(), 'tolong-retrieval-fixture-'))
 afterAll(() => rmSync(fixture, { recursive: true, force: true }))
 mkdirSync(join(fixture, 'catalogue'), { recursive: true })
-mkdirSync(join(fixture, 'catalogue/tools/test'), { recursive: true })
+mkdirSync(join(fixture, 'catalogue/tools/motion'), { recursive: true })
 writeFileSync(
-  join(fixture, 'catalogue/catalogue.json'),
-  JSON.stringify({
-    tools: [
-      {
-        name: 'Example',
-        url: 'https://example.test/',
-        description: 'Example',
-        section: 'Test',
-        section_slug: 'test',
-        slug: 'example',
-        doc: 'catalogue/tools/test/example.md'
-      }
-    ]
-  })
-)
-writeFileSync(
-  join(fixture, 'catalogue/tools/test/example.md'),
+  join(fixture, 'catalogue/tools/motion/example.md'),
   '---\nname: Example\nmode: package\ninstall: bun add undocumented-command\n---\n# Example\n\n## How to use\nRead the reference.\n'
 )
 

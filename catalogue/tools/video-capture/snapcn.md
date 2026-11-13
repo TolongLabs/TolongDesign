@@ -6,8 +6,8 @@ section_slug: video-capture
 source_url: 'https://snapcn.dev/'
 designeer_url: 'https://snapcn.dev/'
 designeer_blurb:
-  Not on Designeer; a shadcn registry of Remotion components for product demo
-  videos.
+  'shadcn registry of Remotion components for product demo videos, with paid
+  launch-film templates.'
 paywall: freemium
 pricing_summary:
   '61 MIT components free. Pro $179/year, Lifetime $279 one-time, Commercial

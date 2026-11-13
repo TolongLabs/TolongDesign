@@ -22,19 +22,16 @@ mkdirSync(join(fixture, 'src', 'core'), { recursive: true })
 mkdirSync(join(fixture, 'catalogue'), { recursive: true })
 mkdirSync(join(fixture, 'catalogue/tools/component-libraries'), { recursive: true })
 cpSync(join(root, 'scripts', 'build-index.ts'), join(fixture, 'scripts', 'build-index.ts'))
-for (const file of ['schema.ts', 'fields.ts', 'loader.ts', 'skill.ts'])
+for (const file of ['schema.ts', 'fields.ts', 'loader.ts', 'skill.ts', 'sections.ts'])
   cpSync(join(root, 'src', 'core', file), join(fixture, 'src', 'core', file))
 symlinkSync(join(root, 'node_modules'), join(fixture, 'node_modules'), 'dir')
 writeFileSync(
   join(fixture, tool.doc),
-  `---\nname: Example UI\nslug: example-ui\nsection: Component Libraries\nsection_slug: component-libraries\nsource_url: https://example.test/\npaywall: free\nexecution_mode: registry\nsurface: [web-ui]\nstatus: active\nagent_friendly: true\nstack: [react]\n---\n# Example UI\n\n## How to use\n\n\`\`\`bash\nbunx example add button\n\`\`\`\n\n## Examples\n`
+  `---\nname: Example UI\nslug: example-ui\nsection: Component Libraries\nsection_slug: component-libraries\nsource_url: https://example.test/\ndesigneer_url: https://example.test/\ndesigneer_blurb: Example components\npaywall: free\nexecution_mode: registry\nsurface: [web-ui]\nstatus: active\nagent_friendly: true\nstack: [react]\n---\n# Example UI\n\n## How to use\n\n\`\`\`bash\nbunx example add button\n\`\`\`\n\n## Examples\n`
 )
 writeFileSync(
-  join(fixture, 'catalogue/catalogue.json'),
+  join(fixture, 'catalogue/people.json'),
   JSON.stringify({
-    scraped: '2026-10-15',
-    source: 'fixture',
-    tools: [tool],
     people: [
       {
         name: 'Example Creator',
@@ -52,6 +49,10 @@ writeFileSync(
       }
     ]
   })
+)
+writeFileSync(
+  join(fixture, 'catalogue/designeer-scrape.json'),
+  JSON.stringify({ scraped: '2026-10-15', tools: [tool] })
 )
 const build = () => {
   const result = Bun.spawnSync([process.execPath, 'scripts/build-index.ts'], { cwd: fixture })

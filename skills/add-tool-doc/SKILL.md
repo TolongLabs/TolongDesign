@@ -11,18 +11,19 @@ metadata:
 
 ## Add
 
-1. Append an entry to `catalogue/catalogue.json` `tools[]`: `name`, `url`,
-   `description` (one line), `section` (an existing section name),
-   `section_slug`, `slug` (lowercase-hyphen, unique in the section),
-   `designeer_url` (or the official URL if not on Designeer), and `doc` =
-   `catalogue/tools/<section_slug>/<slug>.md`.
-2. Copy [catalogue/TEMPLATE.md](../../catalogue/TEMPLATE.md) to the `doc` path
-   and fill every section from the **official site** — pricing page, docs,
-   GitHub, showcase. Never invent URLs, prices or install commands. "How to use"
-   and "Agent notes" must let an agent produce what the tool advertises: for
-   apps, run the core workflow yourself (a headless browser for web apps) and
-   document the steps, inputs and exports that worked.
-3. `bun run index && bun run check && bun run format`.
+1. Choose an existing section and a unique lowercase-hyphen slug. The path
+   `catalogue/tools/<section_slug>/<slug>.md` sets the tool identity. Use the
+   display name for that section from `src/core/sections.ts`.
+2. Copy [catalogue/TEMPLATE.md](../../catalogue/TEMPLATE.md) to that path and
+   fill every section from the **official site** — pricing page, docs, GitHub,
+   showcase. Never invent URLs, prices or install commands. "How to use" and
+   "Agent notes" must let an agent produce what the tool advertises: for apps,
+   run the core workflow yourself (a headless browser for web apps) and document
+   the steps, inputs and exports that worked.
+3. Copy `designeer_url` and `designeer_blurb` from the Designeer listing. For a
+   tool without a listing, use its official URL and a concise description
+   supported by the official source.
+4. Run `bun run index && bun run check`.
 
 ## Refresh
 
@@ -33,9 +34,9 @@ metadata:
 
 ## Common check failures
 
-| Error                      | Fix                                                             |
-| -------------------------- | --------------------------------------------------------------- |
-| `frontmatter missing "x"`  | Add the key; order must match the template                      |
-| `paywall "..." not in ...` | Use exactly `free`, `freemium`, `paid` or `unknown`             |
-| `missing "## Heading"`     | Restore the heading text exactly as in the template             |
-| `broken link ../x/y.md`    | Link only paths that appear in `catalogue/catalogue.json` `doc` |
+| Error                      | Fix                                                 |
+| -------------------------- | --------------------------------------------------- |
+| `frontmatter missing "x"`  | Add the key; order must match the template          |
+| `paywall "..." not in ...` | Use exactly `free`, `freemium`, `paid` or `unknown` |
+| `missing "## Heading"`     | Restore the heading text exactly as in the template |
+| `broken link ../x/y.md`    | Link only docs that exist under `catalogue/tools/`  |
