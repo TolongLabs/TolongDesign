@@ -34,3 +34,25 @@ test('finds broken catalogue Markdown links and ignores code and external links'
     rmSync(root, { recursive: true, force: true })
   }
 })
+
+test('checks docs, skills and repo-root Markdown links and tolerates missing trees', () => {
+  const root = mkdtempSync(join(tmpdir(), 'repo-link-check-'))
+  const docs = join(root, 'docs')
+  const skill = join(root, 'skills', 'example')
+  mkdirSync(docs, { recursive: true })
+  mkdirSync(skill, { recursive: true })
+  writeFileSync(join(root, 'README.md'), '[guide](docs/guide.md)\n[absent](nope.md)\n')
+  writeFileSync(join(docs, 'guide.md'), '# Guide\n')
+  writeFileSync(join(docs, 'broken.md'), '[nowhere](nowhere.md)\n')
+  writeFileSync(join(skill, 'SKILL.md'), '[template](../../catalogue/TEMPLATE.md)\n')
+
+  try {
+    expect(findBrokenRelativeMarkdownLinks(root)).toEqual([
+      'docs/broken.md: broken link nowhere.md',
+      'skills/example/SKILL.md: broken link ../../catalogue/TEMPLATE.md',
+      'README.md: broken link nope.md'
+    ])
+  } finally {
+    rmSync(root, { recursive: true, force: true })
+  }
+})

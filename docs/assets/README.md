@@ -18,8 +18,9 @@ or a renderer benchmark.
 
 - **File:** `design-workflow.svg` — original, transparent, host-theme-adaptive
   SVG.
-- **Source:** [project design workflow](../WORKFLOW.md) at repository commit
-  `a588cf5b9224f334a7bf2b1b956a4b8692041e2f`; each node has source evidence.
+- **Source:** [project design workflow](../../skills/design-project/workflow.md)
+  at repository commit `a588cf5b9224f334a7bf2b1b956a4b8692041e2f`; each node has
+  source evidence.
 - **Renderer:** Archify 3.0.1. The final candidate passed validation, delivery,
   strict artifact checks, and real-browser checks with no diagnostics.
 - **Export changes:** used SVG Auto; removed embedded font faces and the full

@@ -1,32 +1,29 @@
 # Architecture diagrams
 
 Generated with **Archify 3.0.1** from inspected repository code and policy. Each
-diagram pins its source evidence to
-[`2e10faa`](https://github.com/TolongLabs/TolongDesign/tree/2e10faa846d775c0e1abdcb518c4931d79f1d288).
-Later source changes need a fresh evidence review; these are snapshots, not live
+diagram's source JSON records the source revision it was generated from. Later
+source changes need a fresh evidence review; these are snapshots, not live
 runtime telemetry.
 
 ## Open a diagram
 
-| Diagram                   | Static image                      | Interactive HTML                      | Source                              |
-| ------------------------- | --------------------------------- | ------------------------------------- | ----------------------------------- |
-| Resource to finished work | [SVG](./overview.svg)             | [Viewer](./overview.html)             | [JSON](./overview.json)             |
-| Local CLI architecture    | [SVG](./system-architecture.svg)  | [Viewer](./system-architecture.html)  | [JSON](./system-architecture.json)  |
-| Search request sequence   | [SVG](./retrieval-sequence.svg)   | [Viewer](./retrieval-sequence.html)   | [JSON](./retrieval-sequence.json)   |
-| Collection maintenance    | [SVG](./maintenance-workflow.svg) | [Viewer](./maintenance-workflow.html) | [JSON](./maintenance-workflow.json) |
-| Private release and trust | [SVG](./release-workflow.svg)     | [Viewer](./release-workflow.html)     | [JSON](./release-workflow.json)     |
+| Diagram                   | Static image                      | Source                              |
+| ------------------------- | --------------------------------- | ----------------------------------- |
+| Resource to finished work | [SVG](./overview.svg)             | [JSON](./overview.json)             |
+| Local CLI architecture    | [SVG](./system-architecture.svg)  | [JSON](./system-architecture.json)  |
+| Search request sequence   | [SVG](./retrieval-sequence.svg)   | [JSON](./retrieval-sequence.json)   |
+| Collection maintenance    | [SVG](./maintenance-workflow.svg) | [JSON](./maintenance-workflow.json) |
+| Private release and trust | [SVG](./release-workflow.svg)     | [JSON](./release-workflow.json)     |
 
-GitHub renders the static SVGs, not the interactive HTML. Open an HTML file from
-a local checkout in a browser, or download it first. The viewer is
-self-contained; it does not start a TolongDesign server or require a hosted
-diagram service. SVG exports follow the host's light/dark preference.
+GitHub renders the static SVGs. SVG exports follow the host's light/dark
+preference. Static exports are documentation aids; there is no interactive
+viewer in this repo.
 
 ## Evidence
 
-[`verification.json`](./verification.json) records each source JSON, HTML and
-SVG hash, source revision and generator. The four Archify gates are separate:
-validation, deterministic delivery, strict artifact check and real-browser
-check. Native export produces the static dual-theme SVG without viewer overlays.
+Each source JSON records its evidence: source revision, generator version and
+content hashes. The four Archify gates are separate: validation, deterministic
+delivery, strict artifact check and real-browser check.
 
 Hashes identify delivered bytes. They do not make a stale architectural claim
 current or certify semantic correctness without source review. Perceptual review
@@ -55,11 +52,11 @@ candidate which already has browser evidence.
 2. Finalize the complete candidate; require all four gates to pass.
 3. Inspect light/dark rendering. Follow Archify's measured repair guidance
    rather than dropping relationships to pass layout checks.
-4. Export **SVG · Auto** from the native viewer menu. Copy the exact finalized
-   HTML and formatted source JSON into this directory.
-5. Update hashes/review status in `verification.json`; verify embedded links and
-   the documentation payload. Formatting must leave the frozen JSON unchanged.
+4. Export **SVG · Auto** from the native viewer. Copy the formatted source JSON
+   into this directory.
+5. Verify embedded links and the documentation payload. Formatting must leave
+   the frozen JSON unchanged.
 
 Full local receipts and screenshots live in ignored `.archify/` request folders.
-They are not private-release payloads. The compact verification file is a
-portable project record, not a replacement for rerunning Archify after edits.
+They are not release payloads. Rerun Archify after source edits; do not claim a
+regenerated diagram without its gates.

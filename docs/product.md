@@ -1,10 +1,10 @@
 # Product requirements
 
-> **TolongDesign:** a private, agent-usable starting point for designing
-> anything beautifully and professionally—not a design generator.
+> **TolongDesign:** an agent-usable starting point for designing anything
+> beautifully and professionally—not a design generator.
 
 [Overview](https://github.com/TolongLabs/TolongDesign) ·
-[Technical reference](./TRD.md) · [Documentation map](./README.md)
+[Technical reference](./architecture.md) · [Repository README](../README.md)
 
 ## 1. Purpose
 
@@ -33,7 +33,7 @@ the whole product.
 | Designer or design engineer | Find references and select an appropriate tool.       | Art direction, suitability and output quality.                                     |
 | Coding/design agent         | Retrieve instructions and implement within a project. | Follow project policy; inspect current APIs; execute and verify the work.          |
 | Collection maintainer       | Add, refresh, classify and retire resources.          | Validate claims, rights, dates, workflow evidence and metadata.                    |
-| Private CLI consumer        | Use a known source snapshot across projects.          | Authenticate, check the archive and installation, and choose updates deliberately. |
+| Release consumer            | Use a known source snapshot across projects.          | Authenticate, check the archive and installation, and choose updates deliberately. |
 
 **Ownership:** TolongLabs maintains this collection. Resource creators retain
 their own software, asset and brand rights. A creator listing is a credit or
@@ -72,7 +72,7 @@ not a claim that every historical resource has a fresh end-to-end test.
 | ID  | Requirement                                                                   | Evidence / acceptance                                                                                                                            |
 | --- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | R01 | Register each resource with a stable `section/slug` and a source doc.         | **Code:** catalogue/doc consistency and path checks pass.                                                                                        |
-| R02 | Rank relevant keyword matches and apply typed filters before ranking.         | **Code:** both CLIs share a scorer; regression and query-evaluation tests pass.                                                                  |
+| R02 | Rank relevant keyword matches and apply typed filters before ranking.         | **Code:** `search` is the single scorer and filter path; regression and query-evaluation tests pass.                                             |
 | R03 | Preserve complete selected documents in context.                              | **Code:** no silent truncation; repeated IDs deduplicate in request order.                                                                       |
 | R04 | Expose source URL, doc path, verification date and original-byte hash.        | **Code:** context schema and provenance tests; freshness warnings remain visible.                                                                |
 | R05 | Classify operating method, output surface, availability and stack separately. | **Code:** canonical schema validation; **Editorial:** values supported by documented use.                                                        |
@@ -85,7 +85,7 @@ not a claim that every historical resource has a fresh end-to-end test.
 | R12 | Distribute privately with an inspectable installation.                        | **Code/process:** explicit payload allowlist, manifest hashes, archive checksum, isolated install smoke and authenticated release access.        |
 
 Implementation details and exact machine contracts belong in the
-[TRD](./TRD.md), not duplicated here.
+[architecture](./architecture.md), not duplicated here.
 
 ## 6. Resource quality bar
 
@@ -141,7 +141,7 @@ advertise fixture scores as a general design-quality result.
 | Decision         | Rule                                                                                                                                                 |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Source authority | The catalogue registers resources; their Markdown carries content. Generated indexes and graph views do not replace those sources.                   |
-| Publication      | Keep the collection and release assets private. Do not publish customer material, credentials or copied third-party assets.                          |
+| Publication      | Keep release assets access-controlled. Do not publish customer material, credentials or copied third-party assets.                                   |
 | Resource use     | Recheck access, APIs and rights in the target project; paid access is never implied by a catalogue entry.                                            |
 | Availability     | Link-check observations need human review. Authentication, rate limiting and product replacement need different treatment.                           |
 | Change review    | Update source docs, regenerate derived outputs and run the relevant checks. Product behavior changes require their own design and acceptance review. |
@@ -163,12 +163,11 @@ New capabilities need a scoped requirement and evidence. There is no approved
 promise here to add vector search, automatic resource execution, global agent
 configuration or a hosted product.
 
-## Source of truth for this PRD
+## Source of truth for this document
 
-This document describes the product implemented at source baseline `2e10faa`,
-plus the content standard in
-[AGENTS.md](https://github.com/TolongLabs/TolongDesign/blob/2e10faa846d775c0e1abdcb518c4931d79f1d288/AGENTS.md).
-Current `main` and published private releases can differ. See
-[release boundaries](./TRD.md#release-and-installation) and the
-[technical source map](./TRD.md#source-map) before treating a requirement as a
-capability of an older installed snapshot.
+This document describes the intended product.
+[Technical reference](./architecture.md) describes the implementation, and
+[AGENTS.md](../AGENTS.md) states the repo rules. Current `main` and published
+releases can differ. See
+[release boundaries](./architecture.md#release-and-installation) before treating
+a requirement as a capability of an older installed snapshot.

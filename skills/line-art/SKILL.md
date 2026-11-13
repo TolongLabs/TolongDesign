@@ -11,8 +11,8 @@ metadata:
 # Line Art
 
 Build ink-on-paper SVG animation with
-[collections/line-art](../../../collections/line-art/README.md). The README is
-the API reference: read it, and the scene in `demo/scenes.ts`, before writing
+[collections/line-art](../../collections/line-art/README.md). The README is the
+API reference: read it, and the scene in `demo/scenes.ts`, before writing
 anything.
 
 ## Steps

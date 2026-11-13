@@ -33,22 +33,12 @@ const PACKAGE_NAME = 'tolong-design'
 const BINARY_NAME = 'tolongdesign'
 const RUNTIME_REQUIREMENT = '>=1.4.0'
 const CHECKSUM_FILE = 'SHA256SUMS'
-const TOP_LEVEL_DOCS = ['docs/README.md', 'docs/CLI.md', 'docs/PRD.md', 'docs/TRD.md'] as const
-const DIAGRAM_FILES = [
-  'docs/diagrams/README.md',
-  'docs/diagrams/verification.json',
-  ...['overview', 'system-architecture', 'retrieval-sequence', 'maintenance-workflow', 'release-workflow'].flatMap(
-    (name) => ['json', 'svg', 'html'].map((extension) => `docs/diagrams/${name}.${extension}`)
-  )
-]
+/** Release payload, by directory. Adding a doc or a consumer skill needs no edit here. */
+const SOURCE_DIRECTORIES = ['catalogue'] as const
+const PACKAGE_README_SOURCE = 'docs/cli.md'
 const SKILLS_DIRECTORY = 'skills'
 const SKILL_ENTRY = 'SKILL.md'
 const SKILL_AUDIENCES = ['consumer', 'checkout', 'maintainer'] as const
-const MARKDOWN_ROOTS = ['catalogue'] as const
-
-type SourceFile = {
-  relativePath: string
-}
 
 type SourceStat = {
   absolutePath: string
@@ -209,33 +199,25 @@ function readReleaseMetadata(root: string): { version: string } {
   return { version: metadata.version }
 }
 
-function collectMarkdown(root: string, directory: string): SourceFile[] {
-  const rootStat = inspectSourcePath(root, directory, 'directory')
-  const files: SourceFile[] = []
-
-  function visit(sourceRelativePath: string, sourceAbsolutePath: string): void {
-    let entries
-    try {
-      entries = readdirSync(sourceAbsolutePath, { withFileTypes: true })
-    } catch (error) {
-      throw new Error(`input directory cannot be read: ${sourceRelativePath}: ${describeError(error)}`)
-    }
-
-    entries.sort((left, right) => (left.name < right.name ? -1 : left.name > right.name ? 1 : 0))
-    for (const entry of entries) {
-      const childRelativePath = `${sourceRelativePath}/${entry.name}`
-      const child = inspectSourceEntry(root, childRelativePath)
-      if (child.kind === 'directory') {
-        if (/\.md$/i.test(entry.name)) throw new Error(`Markdown input must be a regular file: ${childRelativePath}`)
-        visit(childRelativePath, child.absolutePath)
-      } else if (/\.md$/i.test(entry.name)) {
-        files.push({ relativePath: childRelativePath })
+function copySourceTree(root: string, packageDir: string, directory: string): void {
+  function visit(sourceRelativePath: string): void {
+    const inspected = inspectSourceEntry(root, sourceRelativePath)
+    if (inspected.kind === 'directory') {
+      let entries
+      try {
+        entries = readdirSync(inspected.absolutePath, { withFileTypes: true })
+      } catch (error) {
+        throw new Error(`input directory cannot be read: ${sourceRelativePath}: ${describeError(error)}`)
       }
+
+      entries.sort((left, right) => (left.name < right.name ? -1 : left.name > right.name ? 1 : 0))
+      for (const entry of entries) visit(`${sourceRelativePath}/${entry.name}`)
+    } else {
+      copySourceFile(root, packageDir, sourceRelativePath)
     }
   }
 
-  visit(directory, rootStat.absolutePath)
-  return files
+  visit(directory)
 }
 
 function skillNames(root: string): string[] {
@@ -301,23 +283,7 @@ function assertSkillMirrors(root: string): void {
 }
 
 function copySkillTree(root: string, packageDir: string, name: string): void {
-  function visit(relativePath: string): void {
-    const inspected = inspectSourceEntry(root, relativePath)
-    if (inspected.kind === 'directory') {
-      let entries
-      try {
-        entries = readdirSync(inspected.absolutePath, { withFileTypes: true })
-      } catch (error) {
-        throw new Error(`skill directory cannot be read: ${relativePath}: ${describeError(error)}`)
-      }
-      entries.sort((left, right) => (left.name < right.name ? -1 : left.name > right.name ? 1 : 0))
-      for (const entry of entries) visit(`${relativePath}/${entry.name}`)
-    } else {
-      copySourceFile(root, packageDir, relativePath)
-    }
-  }
-
-  visit(`${SKILLS_DIRECTORY}/${name}`)
+  copySourceTree(root, packageDir, `${SKILLS_DIRECTORY}/${name}`)
 }
 
 function inspectSourceEntry(root: string, relativePath: string): SourceStat & { kind: 'file' | 'directory' } {
@@ -426,10 +392,6 @@ function writePayloadFile(packageDir: string, relativePath: string, bytes: Uint8
 function copySourceFile(root: string, packageDir: string, sourcePath: string, destinationPath = sourcePath): void {
   const source = inspectSourcePath(root, sourcePath, 'file')
   writePayloadFile(packageDir, destinationPath, readSourceFile(root, sourcePath), source.mode)
-}
-
-function copyMarkdownTree(root: string, packageDir: string, files: SourceFile[]): void {
-  for (const file of files) copySourceFile(root, packageDir, file.relativePath)
 }
 
 function validateYamlLicense(root: string): void {
@@ -579,21 +541,16 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
   const sourceRoot = sourceRootPath(root)
   const releaseMetadata = readReleaseMetadata(sourceRoot)
 
-  for (const path of [
-    'src/cli/main.ts',
-    'src/core/loader.ts',
-    'catalogue/catalogue.json',
-    'catalogue/index.json'
-  ]) {
+  for (const path of ['src/cli/main.ts', 'src/core/loader.ts', 'catalogue/catalogue.json', 'catalogue/index.json']) {
     inspectSourcePath(sourceRoot, path, 'file')
   }
-  for (const path of [...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) inspectSourcePath(sourceRoot, path, 'file')
-  for (const path of MARKDOWN_ROOTS) inspectSourcePath(sourceRoot, path, 'directory')
-  inspectSourcePath(sourceRoot, SKILLS_DIRECTORY, 'directory')
+  inspectSourcePath(sourceRoot, PACKAGE_README_SOURCE, 'file')
+  for (const directory of [...SOURCE_DIRECTORIES, SKILLS_DIRECTORY]) {
+    inspectSourcePath(sourceRoot, directory, 'directory')
+  }
   assertSkillMirrors(sourceRoot)
   validateYamlLicense(sourceRoot)
 
-  const markdownFiles = MARKDOWN_ROOTS.flatMap((directory) => collectMarkdown(sourceRoot, directory))
   const consumers = consumerSkills(sourceRoot)
   if (consumers.length === 0) throw new Error('release must ship at least one consumer skill')
   const resourceCount = loadResources(sourceRoot).length
@@ -619,11 +576,8 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
   try {
     packageDir = mkdtempSync(join(outputDirectory, `.tolong-design-${releaseMetadata.version}-stage-`))
     writeStagedPackageJson(packageDir, releaseMetadata.version)
-    copySourceFile(sourceRoot, packageDir, 'docs/CLI.md', 'README.md')
-    for (const file of ['catalogue/catalogue.json', 'catalogue/index.json', ...TOP_LEVEL_DOCS, ...DIAGRAM_FILES]) {
-      copySourceFile(sourceRoot, packageDir, file)
-    }
-    copyMarkdownTree(sourceRoot, packageDir, markdownFiles)
+    copySourceFile(sourceRoot, packageDir, PACKAGE_README_SOURCE, 'README.md')
+    for (const directory of SOURCE_DIRECTORIES) copySourceTree(sourceRoot, packageDir, directory)
     for (const name of consumers) copySkillTree(sourceRoot, packageDir, name)
     copySourceFile(sourceRoot, packageDir, 'node_modules/yaml/LICENSE', 'licenses/yaml-LICENSE')
 

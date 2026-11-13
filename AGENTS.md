@@ -6,14 +6,12 @@ detail and are read when the task calls for them.
 
 ## Project
 
-TolongDesign is TolongLabs' private **design starting point**: tools and
-resources for designing anything beautifully and professionally — websites and
-product UI, 3D, motion, type, comics and more. It is a documentation repository,
-not an app: one Markdown doc per curated design tool or resource (component
+TolongDesign is TolongLabs' knowledge base plus a retrieval engine: one
+researched Markdown doc per curated design tool or resource (component
 libraries, galleries, icons, type, color, motion, shaders, 3D, comics, agents &
-MCP, deploy, reading, and more), mostly scraped from
-[Designeer](https://designeer.xyz), plus hand-picked additions, each researched
-individually.
+MCP, deploy, reading, and more), served by a local CLI today and MCP next. It is
+not a design generator: the catalogue supplies evidence, the target project's
+human or agent supplies judgment, implementation and rendered verification.
 
 Every tool doc records the **source URL**, **paywall** (`free`, `freemium`,
 `paid`, `unknown`), pricing, licence, **how to use** it (install commands and
@@ -21,10 +19,14 @@ snippets for code libraries, the tested workflow for apps), **examples**, when
 to use it, agent notes, and alternatives. Indexes and `catalogue/index.json` are
 generated from the docs' frontmatter.
 
+**Glossary.** A **catalogue** entry describes someone else's tool. A
+**collection** is our own design code. A **skill** is a procedure an agent
+follows.
+
 Use it two ways:
 
-1. **As a reference** for any TolongLabs design work: start at
-   [docs/README.md](docs/README.md), pick tools with the
+1. **As a reference** for any TolongLabs design work: start at the
+   [repository README](README.md), pick tools with the
    [design playbook](skills/pick-design-stack/playbook.md), filter with
    `tolongdesign search` (checkout: `bun run design -- search …`). For a
    use-case-aware design task, invoke `design-project` and follow
@@ -34,23 +36,36 @@ Use it two ways:
 
 ## Layout
 
+A file's directory answers three questions: who writes it, does it ship, can
+search return it.
+
+| Directory      | Holds                                                                                                  | Ships in the release                 | Search returns it         |
+| -------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------- |
+| `catalogue/`   | Knowledge: tool docs, research, registry, generated indexes                                            | Yes, all of it                       | Yes                       |
+| `skills/`      | Procedures an agent follows, one folder each                                                           | Consumer skills                      | Yes, after #33            |
+| `collections/` | Our own design code, one self-contained package each                                                   | No                                   | Through its catalogue doc |
+| `src/`         | The engine: `core/`, `cli/`, later `mcp/`                                                              | Bundled                              | —                         |
+| `scripts/`     | Maintenance: index, check, links, release                                                              | No                                   | —                         |
+| `docs/`        | Three pages about this repo: `product.md`, `architecture.md`, `cli.md`, plus `assets/` and `diagrams/` | Only `cli.md`, as the package README | —                         |
+
 ```
-docs/README.md                 Start here: what is in the repo and how to use it
-skills/<name>/SKILL.md            Procedure an agent follows; consumer skills ship in the release
-.claude/skills, .agents/skills  Symlinks to ../skills, one per agent harness
-catalogue/README.md                 Generated: every section with counts
-catalogue/tools/<section>/README.md Generated: one row per tool in the section
 catalogue/tools/<section>/<slug>.md One doc per tool (hand-written / researched)
 catalogue/research/<slug>.md        Research that supports catalogue choices
-catalogue/people.md                 Generated: design engineers worth following
 catalogue/catalogue.json            Designeer scrape plus hand-added tools (tools + people); source of truth for what exists
+catalogue/SCHEMA.md                 Field meanings: execution modes, surfaces, status and creator metadata
+catalogue/TEMPLATE.md               The contract every tool doc follows
+catalogue/README.md                 Generated: every section with counts
+catalogue/tools/<section>/README.md Generated: one row per tool in the section
+catalogue/people.md                 Generated: design engineers worth following
 catalogue/index.json                Generated: every doc's frontmatter, flat
-catalogue/SCHEMA.md                 Execution modes, surfaces, status and creator metadata
-collections/<name>/            TolongLabs-owned design code: src, tests, demo, previews (see collections/README.md)
-catalogue/TEMPLATE.md                 The contract every tool doc follows
-skills/add-tool-doc/worker-brief.md   Work order used to fan out doc research to agents
-scripts/                       check-docs.ts, build-index.ts, check-links.ts (Bun + TypeScript)
-graphify-out/                  Knowledge graph of this repo (graph.json, GRAPH_REPORT.md)
+skills/<name>/SKILL.md              Procedure an agent follows; consumer skills ship in the release
+.claude/skills, .agents/skills      Symlinks to ../skills, one per agent harness
+collections/<name>/                 TolongLabs-owned design code (see collections/README.md)
+skills/add-tool-doc/worker-brief.md Work order used to fan out doc research to agents
+src/core/, src/cli/                 The retrieval engine and its CLI
+scripts/                            check-docs.ts, build-index.ts, check-links.ts, release/ (Bun + TypeScript)
+docs/                               product.md, architecture.md, cli.md, assets/, diagrams/
+graphify-out/                       Knowledge graph of this repo (graph.json, GRAPH_REPORT.md)
 ```
 
 ## Commands
@@ -75,8 +90,8 @@ bun run format              # prettier
 - **The template is the contract.** Every tool doc has the frontmatter keys and
   the nine H2 headings of [catalogue/TEMPLATE.md](catalogue/TEMPLATE.md), in
   order. `bun run check` enforces it. Read
-  [resource metadata](catalogue/SCHEMA.md) before assigning execution modes,
-  surfaces, status, stack or creator links.
+  [resource metadata](catalogue/SCHEMA.md) for field meanings before assigning
+  execution modes, surfaces, status, stack or creator links.
 - **Every doc must let an agent produce what the tool advertises.** "How to use"
   and "Agent notes" carry the concrete steps, inputs, formats, export hand-off
   and gotchas. For apps, run the core workflow yourself (a headless browser for
@@ -96,7 +111,8 @@ bun run format              # prettier
   tier is `freemium`. Trial-only is `paid`. Check commercial / client-work
   licensing for paid assets (fonts, icon sets, templates) and note it.
 - **No third-party assets in this repo.** Link to fonts, icons, screenshots and
-  templates; never download or commit them. A private repo is still a copy.
+  templates; never download or commit them. The repo is public, so a copy here
+  is still a copy.
 - **No secrets.** Never commit API keys or tokens.
 - Relative links between docs use `../<section_slug>/<slug>.md`.
 - Plans and specs go in issues and pull request bodies; scratch output goes in
@@ -109,9 +125,10 @@ bun run format              # prettier
 
 | Read When                                                  | Document                                                |
 | ---------------------------------------------------------- | ------------------------------------------------------- |
-| Orienting in the repo, or using it on a project            | [docs/README.md](docs/README.md)                        |
-| Changing product scope, requirements or acceptance         | [Product requirements](docs/PRD.md)                     |
-| Changing retrieval, schemas, trust boundaries or packaging | [Technical reference](docs/TRD.md)                      |
+| Orienting in the repo, or using it on a project            | [Repository README](README.md)                          |
+| Changing product scope, requirements or acceptance         | [Product requirements](docs/product.md)                 |
+| Changing retrieval, schemas, trust boundaries or packaging | [Technical reference](docs/architecture.md)             |
+| Installing, updating or diagnosing the CLI                 | [CLI guide](docs/cli.md)                                |
 | Starting a new website design / choosing a stack           | [Design playbook](skills/pick-design-stack/playbook.md) |
 | Browsing every section with counts                         | [Design catalogue](catalogue/README.md)                 |
 | Writing or refreshing a tool doc                           | [Tool doc template](catalogue/TEMPLATE.md)              |

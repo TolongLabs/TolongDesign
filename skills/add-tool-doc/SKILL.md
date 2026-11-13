@@ -16,8 +16,8 @@ metadata:
    `section_slug`, `slug` (lowercase-hyphen, unique in the section),
    `designeer_url` (or the official URL if not on Designeer), and `doc` =
    `catalogue/tools/<section_slug>/<slug>.md`.
-2. Copy [catalogue/TEMPLATE.md](../../../catalogue/TEMPLATE.md) to the `doc`
-   path and fill every section from the **official site** — pricing page, docs,
+2. Copy [catalogue/TEMPLATE.md](../../catalogue/TEMPLATE.md) to the `doc` path
+   and fill every section from the **official site** — pricing page, docs,
    GitHub, showcase. Never invent URLs, prices or install commands. "How to use"
    and "Agent notes" must let an agent produce what the tool advertises: for
    apps, run the core workflow yourself (a headless browser for web apps) and
