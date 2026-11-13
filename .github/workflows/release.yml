@@ -40,6 +40,8 @@ jobs:
         run: bun install --frozen-lockfile
       - name: Run all tests
         run: bun test
+      - name: Typecheck TypeScript
+        run: bun run typecheck
       - name: Validate documentation
         run: bun run check
       - name: Verify agent skill mirrors

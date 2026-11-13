@@ -2,8 +2,8 @@
 // loaded resource and returns at most CARD_BUDGET characters, so a search with several
 // results stays inside an agent's context. The complete document is never replaced —
 // long commands are pointed at the doc rather than clipped into a misleading fragment.
-import { inline } from './index-fields'
-import { EXECUTION_MODES } from './catalogue-schema'
+import { inline } from './fields'
+import { EXECUTION_MODES } from './schema'
 
 /** Per-result character bound (~80 tokens) for `--format card`. */
 export const CARD_BUDGET = 320

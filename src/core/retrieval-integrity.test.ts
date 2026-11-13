@@ -2,9 +2,10 @@ import { afterAll, describe, expect, test } from 'bun:test'
 import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
-import { loadResources, searchResources } from './design-lib'
+import { loadResources } from './loader'
+import { searchResources } from './search'
 
-const root = join(import.meta.dir, '..')
+const root = join(import.meta.dir, '..', '..')
 const fixture = mkdtempSync(join(tmpdir(), 'tolong-retrieval-fixture-'))
 afterAll(() => rmSync(fixture, { recursive: true, force: true }))
 mkdirSync(join(fixture, 'catalogue'), { recursive: true })
@@ -61,8 +62,8 @@ describe('retrieval source integrity', () => {
   test('missing required helper modules fail at import instead of silently disabling capabilities', async () => {
     const isolated = join(fixture, 'isolated')
     mkdirSync(isolated)
-    cpSync(join(root, 'scripts/design-lib.ts'), join(isolated, 'design-lib.ts'))
+    cpSync(join(root, 'src/core/search.ts'), join(isolated, 'search.ts'))
     symlinkSync(join(root, 'node_modules'), join(fixture, 'node_modules'), 'dir')
-    await expect(import(join(isolated, 'design-lib.ts'))).rejects.toThrow()
+    await expect(import(join(isolated, 'search.ts'))).rejects.toThrow()
   })
 })

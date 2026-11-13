@@ -18,10 +18,12 @@ const tool = {
   doc: 'catalogue/tools/component-libraries/example-ui.md'
 }
 mkdirSync(join(fixture, 'scripts'), { recursive: true })
+mkdirSync(join(fixture, 'src', 'core'), { recursive: true })
 mkdirSync(join(fixture, 'catalogue'), { recursive: true })
 mkdirSync(join(fixture, 'catalogue/tools/component-libraries'), { recursive: true })
-for (const file of ['build-index.ts', 'lib.ts', 'catalogue-schema.ts', 'index-fields.ts'])
-  cpSync(join(root, 'scripts', file), join(fixture, 'scripts', file))
+cpSync(join(root, 'scripts', 'build-index.ts'), join(fixture, 'scripts', 'build-index.ts'))
+for (const file of ['schema.ts', 'fields.ts', 'loader.ts'])
+  cpSync(join(root, 'src', 'core', file), join(fixture, 'src', 'core', file))
 symlinkSync(join(root, 'node_modules'), join(fixture, 'node_modules'), 'dir')
 writeFileSync(
   join(fixture, tool.doc),

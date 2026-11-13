@@ -425,7 +425,7 @@ function runSmoke(archivePath: string) {
 }
 
 export function smokeRelease(args: string[]): RecordValue {
-  if (args.length !== 1 || args[0] === '') fail('usage: bun scripts/smoke-release.ts <archive.tgz>')
+  if (args.length !== 1 || args[0] === '') fail('usage: bun scripts/release/smoke.ts <archive.tgz>')
   return runSmoke(args[0])
 }
 

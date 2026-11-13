@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'bun:test'
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { rankDocuments, type SearchDocument } from './search-lib'
+import { rankDocuments, type SearchDocument } from './search'
 
 type QueryFixture = {
   domain: string
@@ -74,8 +74,8 @@ function computeRecallAt5(results: string[], relevant: string[]): number {
 }
 
 describe('search-eval evaluation benchmark', () => {
-  const rootDir = join(import.meta.dir, '..')
-  const fixtures = JSON.parse(readFileSync(join(rootDir, 'scripts/fixtures/search-queries.json'), 'utf8')) as Fixtures
+  const rootDir = join(import.meta.dir, '..', '..')
+  const fixtures = JSON.parse(readFileSync(join(rootDir, 'src/core/fixtures/search-queries.json'), 'utf8')) as Fixtures
   const documents = loadCatalogueDocs(rootDir)
 
   test('new ranker outperforms old AND/alphabetic search on held-out evaluation partition', () => {

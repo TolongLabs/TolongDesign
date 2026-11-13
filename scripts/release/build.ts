@@ -1,8 +1,8 @@
 import { resolve } from 'node:path'
-import { buildRelease } from './release-lib'
+import { buildRelease } from './lib'
 
-const ROOT = resolve(import.meta.dir, '..')
-const USAGE = 'Usage: bun scripts/prepare-release.ts [--out <path>]'
+const ROOT = resolve(import.meta.dir, '..', '..')
+const USAGE = 'Usage: bun scripts/release/build.ts [--out <path>]'
 
 class UsageError extends Error {
   constructor(message: string) {

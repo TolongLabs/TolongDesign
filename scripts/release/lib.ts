@@ -19,7 +19,7 @@ import {
 } from 'node:fs'
 import { dirname, isAbsolute, join, parse as parsePath, relative, resolve, sep } from 'node:path'
 import { parse as parseYaml } from 'yaml'
-import { loadResources } from './design-lib'
+import { loadResources } from '../../src/core/loader'
 
 export type ReleaseBuildResult = {
   version: string
@@ -146,6 +146,7 @@ function inspectSourcePath(root: string, relativePath: string, kind: 'file' | 'd
     }
   }
 
+  if (!stats) throw new Error(`required input is missing or unreadable: ${relativePath}`)
   if (kind === 'file' && !stats.isFile()) throw new Error(`input must be a regular file: ${relativePath}`)
   if (kind === 'directory' && !stats.isDirectory()) throw new Error(`input must be a directory: ${relativePath}`)
 
@@ -337,7 +338,7 @@ function inspectSourceEntry(root: string, relativePath: string): SourceStat & { 
     }
   }
 
-  if (!stats.isFile() && !stats.isDirectory()) {
+  if (!stats || (!stats.isFile() && !stats.isDirectory())) {
     throw new Error(`input must be a regular file or directory: ${relativePath}`)
   }
 
@@ -361,7 +362,7 @@ function assertOutputPathIsSeparate(root: string, outputPath: string): void {
     throw new Error(`output directory must not be the source root or an ancestor of it: ${outputPath}`)
   }
 
-  const protectedPaths = ['catalogue', 'docs', 'scripts', 'skills', 'node_modules', '.git'].map((path) =>
+  const protectedPaths = ['catalogue', 'docs', 'scripts', 'skills', 'src', 'node_modules', '.git'].map((path) =>
     resolve(root, path)
   )
 
@@ -492,8 +493,9 @@ function packageManifest(packageDir: string, version: string, resourceCount: num
 
 async function bundleCli(root: string, packageDir: string): Promise<void> {
   const result = await Bun.build({
-    entrypoints: [join(root, 'scripts', 'design.ts')],
+    entrypoints: [join(root, 'src', 'cli', 'main.ts')],
     outdir: join(packageDir, 'dist'),
+    naming: 'design.js',
     target: 'bun',
     format: 'esm',
     packages: 'bundle',
@@ -578,8 +580,8 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
   const releaseMetadata = readReleaseMetadata(sourceRoot)
 
   for (const path of [
-    'scripts/design.ts',
-    'scripts/design-lib.ts',
+    'src/cli/main.ts',
+    'src/core/loader.ts',
     'catalogue/catalogue.json',
     'catalogue/index.json'
   ]) {

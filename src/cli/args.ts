@@ -1,4 +1,4 @@
-import { UsageError } from './design-lib'
+import { UsageError } from '../core/schema'
 
 export type ParsedFlags = {
   positionals: string[]

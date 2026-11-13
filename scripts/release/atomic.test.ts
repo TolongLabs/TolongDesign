@@ -3,9 +3,9 @@ import { createHash } from 'node:crypto'
 import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { buildRelease } from './release-lib'
+import { buildRelease } from './lib'
 
-const root = join(import.meta.dir, '..')
+const root = join(import.meta.dir, '..', '..')
 const packageVersion = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version
 const out = mkdtempSync(join(tmpdir(), 'td-release-race-'))
 afterAll(() => rmSync(out, { recursive: true, force: true }))

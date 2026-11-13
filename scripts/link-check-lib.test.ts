@@ -1,6 +1,13 @@
 import { afterAll, beforeAll, describe, expect, test } from 'bun:test'
 import type { Server } from 'bun'
-import { type LinkObservation, type StatusSuggestion, observeLink, suggestStatus } from './link-check-lib'
+import {
+  buildResourceStatusReport,
+  isKnownPausedResponse,
+  type LinkObservation,
+  observeLink,
+  parseLinkOptions,
+  suggestStatus
+} from './link-check-lib'
 
 describe('suggestStatus pure classifier', () => {
   const today = '2026-10-15'
@@ -156,7 +163,7 @@ describe('suggestStatus pure classifier', () => {
 })
 
 describe('observeLink with local HTTP fixtures (no external network)', () => {
-  let server: Server
+  let server: Server<unknown>
   let baseUrl: string
 
   beforeAll(() => {
@@ -332,5 +339,72 @@ describe('check-links.ts CLI entry point', () => {
     expect(proc.exitCode).toBe(0)
     const stdout = proc.stdout.toString()
     expect(stdout).toMatch(/Status suggestions:/)
+  })
+})
+
+describe('availability evidence boundaries', () => {
+  const observation = {
+    url: 'https://example.test/',
+    final_url: null,
+    http_status: null,
+    error: null,
+    checked: '2026-10-15'
+  }
+
+  test('resource status comes only from its primary URL, not a broken example link', () => {
+    expect(typeof buildResourceStatusReport).toBe('function')
+    const primary = suggestStatus({ ...observation, final_url: observation.url, http_status: 200 })
+    const example = suggestStatus({ ...observation, url: 'https://example.test/old-demo', http_status: 404 })
+    const report = buildResourceStatusReport(
+      [
+        {
+          id: 'icons/example',
+          doc: 'catalogue/tools/icons/example.md',
+          source_url: observation.url,
+          current_status: 'active'
+        }
+      ],
+      new Map([
+        [primary.url, primary],
+        [example.url, example]
+      ])
+    )
+    expect(report).toHaveLength(1)
+    expect(report[0].url).toBe('https://example.test/')
+    expect(report[0].suggested_status).toBe('active')
+  })
+
+  test('temporary DNS errors are not evidence of permanent removal', () => {
+    expect(suggestStatus({ ...observation, error: 'getaddrinfo EAI_AGAIN example.test' }).suggested_status).toBe(
+      'degraded'
+    )
+    expect(suggestStatus({ ...observation, error: 'DNS request timed out' }).suggested_status).toBe('degraded')
+    expect(suggestStatus({ ...observation, error: 'getaddrinfo ENOTFOUND example.test' }).suggested_status).toBe(
+      'unreachable'
+    )
+  })
+
+  test('generic paused wording is not a known provider signature', () => {
+    expect(isKnownPausedResponse(402, new Headers(), 'This deployment is temporarily paused')).toBe(false)
+    expect(isKnownPausedResponse(402, new Headers({ server: 'Vercel' }), 'This deployment is temporarily paused')).toBe(
+      true
+    )
+    expect(isKnownPausedResponse(402, new Headers({ 'x-vercel-error': 'DEPLOYMENT_DISABLED' }), '')).toBe(true)
+  })
+
+  test('invalid link flags fail before any network request', () => {
+    expect(typeof parseLinkOptions).toBe('function')
+    for (const args of [
+      ['--section'],
+      ['--section', '--status'],
+      ['--unknown'],
+      ['--section='],
+      ['../secrets'],
+      ['*'],
+      ['icons', 'comics']
+    ]) {
+      expect(() => parseLinkOptions(args)).toThrow()
+    }
+    expect(parseLinkOptions(['icons', '--status', '--json'])).toEqual({ section: 'icons', status: true, json: true })
   })
 })

@@ -27,6 +27,146 @@ export const STATUSES = ['active', 'degraded', 'unreachable'] as const
 
 export type Status = (typeof STATUSES)[number]
 
+export const PAYWALLS = ['free', 'freemium', 'paid', 'unknown'] as const
+
+export type Paywall = (typeof PAYWALLS)[number]
+
+export const FRONTMATTER_KEYS = [
+  'name',
+  'slug',
+  'section',
+  'section_slug',
+  'source_url',
+  'designeer_url',
+  'designeer_blurb',
+  'paywall',
+  'pricing_summary',
+  'open_source',
+  'license',
+  'category_tags',
+  'best_for',
+  'stack',
+  'execution_mode',
+  'surface',
+  'status',
+  'agent_friendly',
+  'last_verified'
+] as const
+
+export const HEADINGS = [
+  'At a glance',
+  'What it is',
+  'Paywall and pricing',
+  'How to use',
+  'Examples',
+  'When to use it',
+  'Agent notes',
+  'Alternatives in this repo',
+  'Sources'
+] as const
+
+export type CatalogueTool = {
+  name: string
+  url: string
+  description: string
+  section: string
+  section_slug: string
+  slug: string
+  designeer_url?: string
+  doc: string
+}
+
+export type CreatorEvidence = {
+  source_url: string
+  checked: string
+  quote: string
+}
+
+export type Person = {
+  name: string
+  url: string
+  description: string
+  sameAs: string[]
+  created_tools?: string[]
+  created_tools_evidence?: Record<string, CreatorEvidence>
+}
+
+export type Catalogue = {
+  source: string
+  scraped: string
+  tools: CatalogueTool[]
+  people: Person[]
+}
+
+export type SearchOptions = {
+  section?: string
+  stack?: string
+  paywall?: string
+  agent?: boolean
+  oss?: boolean
+  limit?: number
+  mode?: string
+  surface?: string
+  includeUnreachable?: boolean
+  tag?: string
+}
+
+export type Resource = {
+  id: string
+  name: string
+  section_slug: string
+  slug: string
+  doc: string
+  source_url: string | null
+  last_verified: string | null
+  sha256: string
+  markdown: string
+  paywall: string
+  agent_friendly: boolean | null
+  open_source: boolean | null
+  meta: Record<string, unknown>
+}
+
+export type SearchResource = Pick<
+  Resource,
+  'id' | 'name' | 'section_slug' | 'slug' | 'paywall' | 'agent_friendly' | 'source_url' | 'last_verified' | 'doc'
+> & {
+  matched_terms: string[]
+  excerpt: string
+}
+
+export type SearchResult = {
+  query: string
+  total: number
+  results: SearchResource[]
+}
+
+export type ContextResource = Pick<
+  Resource,
+  'id' | 'name' | 'section_slug' | 'slug' | 'doc' | 'source_url' | 'last_verified' | 'sha256' | 'markdown'
+>
+
+export type ContextPack = {
+  schema_version: 1
+  brief: string | null
+  resources: ContextResource[]
+  warnings: string[]
+}
+
+export class UsageError extends Error {
+  constructor(message: string) {
+    super(message)
+    this.name = 'UsageError'
+  }
+}
+
+export class DataError extends Error {
+  constructor(message: string) {
+    super(message)
+    this.name = 'DataError'
+  }
+}
+
 export const STACK_ALIASES: Record<string, string> = {
   'framer-motion': 'motion',
   'radix-ui': 'radix',

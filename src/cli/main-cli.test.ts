@@ -3,8 +3,8 @@ import { mkdtempSync, rmSync } from 'node:fs'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 
-const sourceRoot = join(import.meta.dir, '..')
-const entrypoint = join(import.meta.dir, 'design.ts')
+const sourceRoot = join(import.meta.dir, '..', '..')
+const entrypoint = join(import.meta.dir, 'main.ts')
 const temporaryCwds: string[] = []
 
 afterEach(() => {

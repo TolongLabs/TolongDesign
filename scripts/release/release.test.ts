@@ -35,10 +35,10 @@ type ReleaseFixture = {
   result: ReleaseBuildResult
 }
 
-const root = resolve(import.meta.dir, '..')
+const root = resolve(import.meta.dir, '..', '..')
 const packageVersion = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version
-const entrypoint = join(root, 'scripts', 'design.ts')
-const smokeEntrypoint = join(root, 'scripts', 'smoke-release.ts')
+const entrypoint = join(root, 'src', 'cli', 'main.ts')
+const smokeEntrypoint = join(root, 'scripts', 'release', 'smoke.ts')
 const scratchParent = tmpdir()
 mkdirSync(scratchParent, { recursive: true })
 const scratch = mkdtempSync(join(scratchParent, 'private-release-test-'))
@@ -185,9 +185,9 @@ function fixtureCopy(): string {
 
 async function buildFixture(): Promise<{ fixture?: ReleaseFixture; error?: string }> {
   try {
-    const releaseModuleUrl = pathToFileURL(join(root, 'scripts', 'release-lib.ts')).href
+    const releaseModuleUrl = pathToFileURL(join(root, 'scripts', 'release', 'lib.ts')).href
     const module = (await import(releaseModuleUrl)) as { buildRelease?: ReleaseBuilder }
-    if (typeof module.buildRelease !== 'function') throw new Error('release-lib.ts does not export buildRelease')
+    if (typeof module.buildRelease !== 'function') throw new Error('scripts/release/lib.ts does not export buildRelease')
 
     const fixtureRoot = fixtureCopy()
     const outDir = join(scratch, 'release-output')
@@ -365,7 +365,7 @@ releaseDescribe('independent private release verification', () => {
       const bytes = readFileSync(join(packageRoot, ...path.split('/')))
       expect(typeof manifestFiles[path]).toBe('string')
       expect(manifestFiles[path]).toMatch(/^[a-f0-9]{64}$/)
-      expect(sha256(bytes)).toBe(manifestFiles[path])
+      expect(sha256(bytes)).toBe(manifestFiles[path] as string)
 
       if (path.startsWith('catalogue/') || path.startsWith('docs/') || path.startsWith('skills/')) {
         expect(bytes.equals(readFileSync(join(fixture.root, ...path.split('/'))))).toBe(true)

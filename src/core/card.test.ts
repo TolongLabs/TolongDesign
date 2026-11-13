@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { renderResourceCard, type CardInput } from './resource-card'
+import { renderResourceCard, type CardInput } from './card'
 
 const resource = (over: Partial<CardInput> = {}): CardInput => ({
   id: 'icons/lucide',
@@ -115,5 +115,17 @@ describe('renderResourceCard', () => {
     expect(card).not.toContain('illustrations')
     expect(card).not.toContain('agent')
     expect(card).not.toContain('open source')
+  })
+
+  test('long source URLs do not break the card budget or the document pointer', () => {
+    const card = renderResourceCard({
+      id: 'icons/example',
+      name: 'Example',
+      doc: 'catalogue/tools/icons/example.md',
+      source_url: `https://example.test/${'x'.repeat(1000)}`,
+      meta: { execution_mode: 'reference', best_for: ['icons'] }
+    })
+    expect(card.length).toBeLessThanOrEqual(320)
+    expect(card).toContain('doc: catalogue/tools/icons/example.md')
   })
 })

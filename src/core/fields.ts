@@ -1,6 +1,6 @@
 // Pure derivation helpers for `bun run index`. No file or network I/O lives here, so
 // every generated field and people row can be unit-tested from Markdown strings alone.
-import type { CatalogueTool, Person } from './lib'
+import type { CatalogueTool, Person } from './schema'
 
 const SHELL_LANGUAGES = new Set(['bash', 'sh', 'shell'])
 const HOW_TO_USE_HEADING = /^##(?!#)[ \t]+How to use[ \t]*$/i

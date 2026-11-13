@@ -4,9 +4,9 @@ import { mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
-const root = join(import.meta.dir, '..')
+const root = join(import.meta.dir, '..', '..')
 const packageVersion = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version
-const entrypoint = join(root, 'scripts/design.ts')
+const entrypoint = join(root, 'src/cli/main.ts')
 const target = mkdtempSync(join(tmpdir(), 'tolong-design-target-'))
 const decode = (bytes: Uint8Array) => new TextDecoder().decode(bytes)
 const run = (args: string[], cwd = root) => {
