@@ -31,19 +31,22 @@ the house style (acts, cuts, accent, motion rules). Read both before writing.
 3. **Copy and fill it.** New file, new `id`, every string in `props` rewritten
    from the brief (`copySlots(spec)` lists them). Keep paper and ink alternating
    and beats near their reference length. Done when
-   `bun test collections/agent-video` passes.
+   `bun run --cwd collections/agent-video test` passes.
 4. **Build missing beats.** Find the beat's role in `knowledge/system.md`, read
    the closest teardown in `knowledge/templates/`, `knowledge/free/` or
    `knowledge/pro/`, and write a scene from `src/kit/` primitives following the
    scene contract in the README. Register it in `src/scenes/kinds.ts` and
-   `src/scenes/index.tsx`. Done when `bun run agent-video:typecheck` is clean.
-5. **Render and look.** `bun run agent-video:previews -- --only <id>`, then open
+   `src/scenes/index.tsx`. Done when
+   `bun run --cwd collections/agent-video typecheck` is clean.
+5. **Render and look.**
+   `bun run --cwd collections/agent-video previews -- --only <id>`, then open
    `media/<id>.sheet.png`. Done when every beat reads at phone size, nothing
    clips or overlaps, and the accent appears only on the emphasised word, the
    active control and the number.
-6. **Ship.** `bun run agent-video:render -- <id> out/<id>.mp4`, one composition
-   per aspect ratio. Done when the mp4 plays through and its last frame is the
-   lockup.
+6. **Ship.**
+   `bun run --cwd collections/agent-video render -- <id> out/<id>.mp4`, one
+   composition per aspect ratio. Done when the mp4 plays through and its last
+   frame is the lockup.
 
 ## Gotchas
 

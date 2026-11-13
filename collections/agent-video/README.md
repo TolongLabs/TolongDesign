@@ -21,20 +21,21 @@ to each GIF in `media/`.
 | `app-launch`: app icon, someday list, phone, lockup                       | [template-09](./knowledge/templates/template-09.md) | ![App launch](./media/app-launch.gif)   |
 | `why-switch`: against keyframes, repo, privacy, link                      | [template-10](./knowledge/templates/template-10.md) | ![Why switch](./media/why-switch.gif)   |
 
-Regenerate with `bun run agent-video:previews -- --gif` (sheets always, GIFs
-with `--gif`, 960x540 MP4s with `--video`).
+Regenerate with `bun run --cwd collections/agent-video previews -- --gif`
+(sheets always, GIFs with `--gif`, 960x540 MP4s with `--video`).
 
 ## Commands
 
-The kit has its own install so the repo root stays light.
+The kit has its own install so the repo root stays light. Each collection is its
+own package, so scripts run through `--cwd`.
 
 ```bash
-bun run agent-video:install      # once: Remotion, React, renderer
-bun run agent-video:studio       # Remotion Studio: scrub every template
-bun run agent-video:render -- launch-film out/launch-film.mp4
-bun run agent-video:previews     # contact sheets in media/ (add -- --video for mp4s)
-bun run agent-video:typecheck
-bun test collections/agent-video # pure tests; run by the root bun test too
+bun install --cwd collections/agent-video             # once: Remotion, React, renderer
+bun run --cwd collections/agent-video demo            # Remotion Studio: scrub every template
+bun run --cwd collections/agent-video render -- launch-film out/launch-film.mp4
+bun run --cwd collections/agent-video previews        # contact sheets in media/ (add -- --video for mp4s)
+bun run --cwd collections/agent-video typecheck
+bun run --cwd collections/agent-video test            # pure tests; run by the root bun test too
 ```
 
 Rendering downloads Remotion's Chrome Headless Shell once, and Inter and

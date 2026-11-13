@@ -18,13 +18,13 @@ Still export (no filters, no CSS, opens anywhere):
 
 ## Commands
 
-Run from the repo root.
+Each collection is its own package, so scripts run through `--cwd`.
 
 ```bash
-bun run line-art:demo         # live demo at http://localhost:3000
-bun run line-art:previews     # regenerate media/ (needs ffmpeg built with librsvg)
-bun run line-art:typecheck    # strict tsc for src, test, demo, scripts
-bun test collections/line-art # gait, boil, export and palette tests
+bun run --cwd collections/line-art demo       # live demo at http://localhost:3000
+bun run --cwd collections/line-art previews   # regenerate media/ (needs ffmpeg built with librsvg)
+bun run --cwd collections/line-art typecheck  # strict tsc for src, test, demo, scripts
+bun run --cwd collections/line-art test       # gait, boil, export and palette tests
 ```
 
 Demo URL flags: `?tau=0.5` start time (0 midnight, 0.5 noon), `?day=60` seconds

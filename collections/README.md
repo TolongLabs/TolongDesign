@@ -15,6 +15,7 @@ doc so `tolongdesign search` returns it next to third-party options.
 ```
 collections/<name>/
   README.md        what it is, previews, API, commands
+  package.json     private, no version pinning at the root: demo, previews, typecheck, test
   src/             the library (dependency-free where possible)
   test/            bun tests, run by the root `bun test`
   demo/            a live page and the scenes it shows
@@ -24,9 +25,14 @@ collections/<name>/
   tsconfig.json    strict typecheck for the collection
 ```
 
-A collection that needs runtime dependencies (agent-video needs Remotion) has
-its own `package.json` and an `<name>:install` script at the root; its tests
-that run under the root `bun test` must import only dependency-free modules.
+Every collection is its own package and uses the same script names: `demo`,
+`previews`, `typecheck` and `test`. Extras are allowed (`render`, `knowledge`).
+Run one with `bun run --cwd collections/<name> <script>`; the root
+`package.json` names no collection.
+
+A collection that needs runtime dependencies (agent-video needs Remotion)
+installs them with `bun install --cwd collections/<name>`; its tests that run
+under the root `bun test` must import only dependency-free modules.
 
 Rules: no third-party assets, generated media only from our own code, and a
 catalogue doc in `catalogue/tools/<section>/` registered in

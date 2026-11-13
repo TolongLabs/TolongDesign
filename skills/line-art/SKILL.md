@@ -61,4 +61,5 @@ crops at full size:
 - every interaction, stepped at start, middle and end, returns to idle
 - τ = 0.3, 0.5, 0.72, 0.76, 0.85, 0.95: contrast holds except at the brief ink
   flip, and lights come on one by one
-- `bun test collections/line-art` and `bun run line-art:typecheck` pass
+- `bun run --cwd collections/line-art test` and
+  `bun run --cwd collections/line-art typecheck` pass

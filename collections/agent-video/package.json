@@ -5,11 +5,13 @@
   "type": "module",
   "description": "TolongLabs agent video kit: Remotion primitives, scenes and five launch-film templates.",
   "scripts": {
-    "studio": "remotion studio src/index.ts",
+    "demo": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts",
     "still": "remotion still src/index.ts",
     "previews": "bun scripts/previews.ts",
-    "typecheck": "tsc -p tsconfig.json"
+    "knowledge": "bun scripts/knowledge-index.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "bun test"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.539",
