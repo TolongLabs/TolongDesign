@@ -23,12 +23,14 @@ type Command =
 const HELP = `Usage:
   tolongdesign --version
   tolongdesign doctor [--json]
-  tolongdesign search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
+  tolongdesign search [<text>] [--section <slug>] [--tag <name>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
   tolongdesign show <slug-or-section/slug> [--json]
   tolongdesign context <id>... [--brief <text>] [--json]
 
+  <text> may be omitted when at least one filter is given.
+
 Checkout equivalents:
-  bun run design -- search <text> [--section <slug>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
+  bun run design -- search [<text>] [--section <slug>] [--tag <name>] [--stack <name>] [--paywall <value>] [--agent] [--oss] [--limit <number>] [--mode <value>] [--surface <value>] [--include-unreachable] [--format card] [--json]
   bun run design -- show <slug-or-section/slug> [--json]
   bun run design -- context <id>... [--brief <text>] [--json]
 
@@ -42,10 +44,9 @@ function parseSearch(args: string[]): Command {
   const flags = parseFlags(
     args,
     ['agent', 'oss', 'json', 'include-unreachable'],
-    ['section', 'stack', 'paywall', 'limit', 'mode', 'surface', 'format']
+    ['section', 'tag', 'stack', 'paywall', 'limit', 'mode', 'surface', 'format']
   )
   const query = flags.positionals.join(' ').trim()
-  if (query === '') throw new UsageError('search requires text to search for')
 
   const format = readValue(flags, 'format')
   const json = hasFlag(flags, 'json')
@@ -56,6 +57,7 @@ function parseSearch(args: string[]): Command {
 
   const options: SearchOptions = {}
   const section = readValue(flags, 'section')
+  const tag = readValue(flags, 'tag')
   const stack = readValue(flags, 'stack')
   const paywall = readValue(flags, 'paywall')
   const limit = readValue(flags, 'limit')
@@ -63,6 +65,7 @@ function parseSearch(args: string[]): Command {
   const surface = readValue(flags, 'surface')
 
   if (section !== undefined) options.section = section
+  if (tag !== undefined) options.tag = tag
   if (stack !== undefined) options.stack = stack
   if (paywall !== undefined) {
     const normalized = paywall.trim().toLowerCase()
@@ -83,6 +86,10 @@ function parseSearch(args: string[]): Command {
   if (hasFlag(flags, 'include-unreachable')) options.includeUnreachable = true
   if (hasFlag(flags, 'agent')) options.agent = true
   if (hasFlag(flags, 'oss')) options.oss = true
+
+  if (query === '' && Object.keys(options).length === 0) {
+    throw new UsageError('search requires text to search for or at least one filter')
+  }
 
   return {
     kind: 'search',

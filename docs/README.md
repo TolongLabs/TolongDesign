@@ -81,10 +81,10 @@ using the source entrypoint from another project's directory.
 
 ```bash
 bun install
-bun run find -- --section component-libraries --stack react --paywall free
-bun run find -- hero --section design-galleries
-bun run find -- --agent --oss            # usable directly by a coding agent, open source
-bun run find -- --paywall paid --json    # everything that costs money, as JSON
+bun run design -- search --section component-libraries --stack react --paywall free
+bun run design -- search hero --section design-galleries
+bun run design -- search --agent --oss            # usable directly by a coding agent, open source
+bun run design -- search --paywall paid --json    # everything that costs money, as JSON
 ```
 
 Agents can also read `catalogue/index.json` directly or query the knowledge

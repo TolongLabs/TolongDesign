@@ -16,8 +16,7 @@ story and visual system through the target project's approval process.
 
 ## Retrieval and handoff check
 
-Run from the private source checkout, or use its absolute `scripts/design.ts`
-entrypoint from the target project:
+Run from the private source checkout with `bun run design -- …`:
 
 ```bash
 bun run design -- search scroll --section motion --json
