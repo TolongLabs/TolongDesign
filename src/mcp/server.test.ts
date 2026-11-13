@@ -180,6 +180,8 @@ describe('tolongdesign mcp stdio server', () => {
     })
   })
 
+  // Spawns one CLI process per evaluation query: 12 cold Bun starts, so the
+  // default 5 s budget is not enough on a slower CI runner.
   test('CLI and MCP search return identical results for all eval queries', async () => {
     const fixtures = JSON.parse(
       readFileSync(join(sourceRoot, 'src', 'core', 'fixtures', 'search-queries.json'), 'utf8')
@@ -197,5 +199,5 @@ describe('tolongdesign mcp stdio server', () => {
         expect(mcpResult).toEqual(cliResult)
       }
     })
-  })
+  }, 30000)
 })
