@@ -11,11 +11,7 @@ export const CARD_BUDGET = 320
 /** A command longer than this is not safe to inline as an executable fragment. */
 const INLINE_INSTALL_MAX = 110
 
-/**
- * Primary documented workflow. Mirrors the vocabulary in
- * `docs/superpowers/specs/2026-10-15-agent-retrieval-issues-design.md`; the coordinator
- * reconciles this with the shared schema module at integration (see REPORT.md).
- */
+/** Primary documented workflow, using execution modes from the shared catalogue schema. */
 export const CARD_MODES = EXECUTION_MODES
 
 const NOT_PUBLISHED = 'not published'

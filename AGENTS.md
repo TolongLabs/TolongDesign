@@ -93,6 +93,8 @@ bun run format              # prettier
   templates; never download or commit them. A private repo is still a copy.
 - **No secrets.** Never commit API keys or tokens.
 - Relative links between docs use `../<section_slug>/<slug>.md`.
+- Plans and specs go in issues and pull request bodies; scratch output goes in
+  `.cache/`; no external tool writes under `docs/` or the catalogue.
 - If `rtk` is installed, prefix every shell command with it (`rtk git status`);
   otherwise run commands as they are.
 - Commit with conventional messages (`docs(icons): refresh lucide pricing`).
