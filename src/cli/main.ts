@@ -111,7 +111,18 @@ function parseSearch(args: string[]): Command {
   if (hasFlag(flags, 'agent')) options.agent = true
   if (hasFlag(flags, 'oss')) options.oss = true
 
-  if (query === '' && Object.keys(options).length === 0) {
+  const hasFilter =
+    options.kind !== undefined ||
+    options.section !== undefined ||
+    options.tag !== undefined ||
+    options.stack !== undefined ||
+    options.paywall !== undefined ||
+    options.mode !== undefined ||
+    options.surface !== undefined ||
+    options.agent !== undefined ||
+    options.oss !== undefined
+
+  if (query === '' && !hasFilter) {
     throw new UsageError('search requires text to search for or at least one filter')
   }
 

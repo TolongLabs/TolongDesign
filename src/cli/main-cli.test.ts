@@ -151,6 +151,54 @@ describe('design CLI argument errors', () => {
   })
 })
 
+describe('filter-only searches', () => {
+  test('rejects a limit without query text or a filter', () => {
+    const result = runCli(['search', '--limit', '2'])
+
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('search requires text to search for or at least one filter')
+  })
+
+  test('rejects include-unreachable without query text or a filter', () => {
+    const result = runCli(['search', '--include-unreachable'])
+
+    expect(result.code).toBe(2)
+    expect(result.stdout).toBe('')
+    expect(result.stderr).toContain('search requires text to search for or at least one filter')
+  })
+
+  test('returns results when section is the only filter', () => {
+    const result = runCli(['search', '--section', 'component-libraries', '--json'])
+
+    expect(result.code).toBe(0)
+    expect(result.stderr).toBe('')
+    expect(JSON.parse(result.stdout).total).toBeGreaterThan(0)
+  })
+
+  test('accepts every filter without query text', () => {
+    const filterInvocations: string[][] = [
+      ['--kind', 'tool'],
+      ['--section', 'component-libraries'],
+      ['--tag', 'motion'],
+      ['--stack', 'react'],
+      ['--paywall', 'free'],
+      ['--mode', 'registry'],
+      ['--surface', 'web-ui'],
+      ['--agent'],
+      ['--oss']
+    ]
+
+    for (const args of filterInvocations) {
+      const result = runCli(['search', ...args, '--json'])
+
+      expect(result.code).toBe(0)
+      expect(result.stderr).toBe('')
+      expect(JSON.parse(result.stdout).total).toBeGreaterThan(0)
+    }
+  })
+})
+
 describe('design search cards and query behavior', () => {
   test('renders cards bounded to 320 characters per result', () => {
     const result = runCli(['search', 'lucide', '--section', 'icons', '--format', 'card'])
