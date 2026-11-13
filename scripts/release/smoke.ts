@@ -12,6 +12,8 @@ import {
 } from 'node:fs'
 import { delimiter, dirname, isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { tmpdir } from 'node:os'
+import { Client } from '@modelcontextprotocol/sdk/client/index.js'
+import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js'
 import { consumerSkillNames } from '../../src/core/skill'
 
 type RecordValue = Record<string, unknown>
@@ -232,10 +234,21 @@ function verifyExtractedPackage(packageRoot: string, entries: ArchiveEntry[]) {
   if (archiveFilePaths.join('\0') !== actualPaths.join('\0'))
     fail('archive files do not match the extracted package files')
 
-  const licensePaths = actualPaths.filter((path) => path.startsWith('licenses/'))
-  if (licensePaths.length !== 1) fail('release package must contain only the bundled YAML dependency licence')
-  if (!readFileSync(join(packageRoot, ...licensePaths[0].split('/')), 'utf8').includes('Copyright Eemeli Aro')) {
+  const licensePaths = actualPaths.filter((path) => path.startsWith('licenses/')).sort()
+  if (
+    licensePaths.length !== 2 ||
+    licensePaths[0] !== 'licenses/modelcontextprotocol-sdk-LICENSE' ||
+    licensePaths[1] !== 'licenses/yaml-LICENSE'
+  ) {
+    fail('release package must contain only the bundled YAML and MCP SDK dependency licences')
+  }
+  if (!readFileSync(join(packageRoot, 'licenses', 'yaml-LICENSE'), 'utf8').includes('Copyright Eemeli Aro')) {
     fail('bundled YAML dependency licence was not found')
+  }
+  if (
+    !readFileSync(join(packageRoot, 'licenses', 'modelcontextprotocol-sdk-LICENSE'), 'utf8').includes('Anthropic, PBC')
+  ) {
+    fail('bundled MCP SDK dependency licence was not found')
   }
 
   const bundle = readFileSync(join(packageRoot, 'dist', 'design.js'))
@@ -325,7 +338,62 @@ function verifyDoctorSkills(doctor: RecordValue): string {
   return packageRoot
 }
 
-function runSmoke(archivePath: string) {
+async function verifyInstalledMcp(binary: string, cwd: string, env: Record<string, string>) {
+  const transport = new StdioClientTransport({
+    command: binary,
+    args: ['mcp'],
+    cwd,
+    env,
+    stderr: 'pipe'
+  })
+  const stderrChunks: string[] = []
+  transport.stderr?.on('data', (chunk: Buffer | string) => {
+    stderrChunks.push(typeof chunk === 'string' ? chunk : decode(chunk))
+  })
+  const client = new Client({ name: 'tolong-design-smoke', version: '1.0.0' })
+
+  try {
+    await client.connect(transport)
+    const listedTools = await client.listTools()
+    const toolNames = listedTools.tools.map((tool) => tool.name).sort()
+    if (toolNames.join(',') !== 'context,search,show') {
+      fail(`installed MCP tools/list returned unexpected tools: ${toolNames.join(', ')}`)
+    }
+
+    const searchCall = await client.callTool({
+      name: 'search',
+      arguments: { query: 'scroll', section: 'motion' }
+    })
+    if (searchCall.isError) fail('installed MCP search tool returned an error')
+    const firstContent = Array.isArray(searchCall.content) ? searchCall.content[0] : undefined
+    if (!firstContent || firstContent.type !== 'text') fail('installed MCP search did not return text content')
+    const searchJson = JSON.parse(firstContent.text) as { query?: string; total?: number; results?: Array<RecordValue> }
+    if (
+      searchJson.query !== 'scroll' ||
+      typeof searchJson.total !== 'number' ||
+      searchJson.total <= 0 ||
+      !Array.isArray(searchJson.results) ||
+      !searchJson.results.some((resource) => resource.id === 'motion/gsap')
+    ) {
+      fail('installed MCP search did not return expected motion/gsap results')
+    }
+
+    const listedPrompts = await client.listPrompts()
+    const promptNames = listedPrompts.prompts.map((prompt) => prompt.name).sort()
+    if (promptNames.join(',') !== [...CONSUMER_SKILLS].sort().join(',')) {
+      fail(`installed MCP prompts/list mismatch: ${promptNames.join(', ')}`)
+    }
+  } finally {
+    await client.close()
+  }
+
+  const stderrText = stderrChunks.join('')
+  if (stderrText.trim() !== '') {
+    fail(`installed MCP server wrote unexpected stderr: ${stderrText.trim()}`)
+  }
+}
+
+async function runSmoke(archivePath: string) {
   const inputPath = resolve(archivePath)
   const inputStat = lstatSync(inputPath)
   if (!inputStat.isFile() || inputStat.isSymbolicLink()) fail('archive path must be a regular file')
@@ -453,13 +521,16 @@ function runSmoke(archivePath: string) {
     for (const args of [
       ['show', 'release-smoke-unknown-tool', '--json'],
       ['search', 'scroll', '--invalid-release-smoke-flag'],
-      ['doctor', '--json', 'unexpected-position']
+      ['doctor', '--json', 'unexpected-position'],
+      ['mcp', 'unexpected-position']
     ]) {
       const invalid = runInstalled(install.binary, args, install.foreignCwd, install.env)
       if (invalid.code !== 2 || invalid.stdout !== '' || invalid.stderr.trim() === '') {
         fail(`invalid command did not return code 2 with empty stdout: ${args.join(' ')}`)
       }
     }
+
+    await verifyInstalledMcp(install.binary, install.foreignCwd, install.env)
 
     return {
       ok: true,
@@ -472,14 +543,14 @@ function runSmoke(archivePath: string) {
   }
 }
 
-export function smokeRelease(args: string[]): RecordValue {
+export async function smokeRelease(args: string[]): Promise<RecordValue> {
   if (args.length !== 1 || args[0] === '') fail('usage: bun scripts/release/smoke.ts <archive.tgz>')
-  return runSmoke(args[0])
+  return await runSmoke(args[0])
 }
 
 if (import.meta.main) {
   try {
-    process.stdout.write(`${JSON.stringify(smokeRelease(process.argv.slice(2)))}\n`)
+    process.stdout.write(`${JSON.stringify(await smokeRelease(process.argv.slice(2)))}\n`)
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error)
     process.stderr.write(`Release smoke failed: ${message}\n`)

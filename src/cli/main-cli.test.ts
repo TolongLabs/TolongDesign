@@ -127,7 +127,9 @@ describe('design CLI argument errors', () => {
     ['empty mode entry', ['search', 'scroll', '--mode', 'registry,']],
     ['duplicate surface flag', ['search', 'scroll', '--surface', 'web-ui', '--surface', 'comics']],
     ['invalid surface enum', ['search', 'scroll', '--surface', 'unknown-surface']],
-    ['boolean flag with value', ['search', 'scroll', '--include-unreachable=true']]
+    ['boolean flag with value', ['search', 'scroll', '--include-unreachable=true']],
+    ['unexpected mcp argument', ['mcp', 'extra']],
+    ['unknown mcp flag', ['mcp', '--unknown']]
   ]
 
   for (const [label, args] of invalidInvocations) {
@@ -401,5 +403,9 @@ describe('unified search command (find alias)', () => {
     const badSkillCmd = runCli(['skill', 'bogus'])
     expect(badSkillCmd.code).toBe(2)
     expect(badSkillCmd.stdout).toBe('')
+
+    const help = runCli(['--help'])
+    expect(help.code).toBe(0)
+    expect(help.stdout).toContain('tolongdesign mcp')
   })
 })

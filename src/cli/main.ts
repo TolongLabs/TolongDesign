@@ -22,6 +22,7 @@ type Command =
   | { kind: 'context'; ids: string[]; brief?: string; json: boolean }
   | { kind: 'skill-list'; json: boolean }
   | { kind: 'skill-show'; name: string; json: boolean }
+  | { kind: 'mcp' }
 
 const HELP = `Usage:
   tolongdesign --version
@@ -31,6 +32,7 @@ const HELP = `Usage:
   tolongdesign context <id>... [--brief <text>] [--json]
   tolongdesign skill list [--json]
   tolongdesign skill show <name> [--json]
+  tolongdesign mcp
 
   <text> may be omitted when at least one filter is given.
   <id> is slug, section/slug, research/<slug>, or skill/<name>.
@@ -41,12 +43,14 @@ Checkout equivalents:
   bun run design -- context <id>... [--brief <text>] [--json]
   bun run design -- skill list [--json]
   bun run design -- skill show <name> [--json]
+  bun run design -- mcp
 
 Commands:
   search   Search registered design documents, research notes, and skills.
   show     Print one complete registered document, research note, or skill.
   context  Assemble complete documents with provenance and freshness warnings.
   skill    List available skills or print a skill and its reference files.
+  mcp      Start the read-only MCP stdio server.
 `
 
 function parseSearch(args: string[]): Command {
@@ -175,6 +179,11 @@ function parseCommand(args: string[]): Command {
   if (command === 'show') return parseShow(rest)
   if (command === 'context') return parseContext(rest)
   if (command === 'skill') return parseSkill(rest)
+  if (command === 'mcp') {
+    const flags = parseFlags(rest, [], [])
+    if (flags.positionals.length > 0) throw new UsageError('mcp does not take positional arguments')
+    return { kind: 'mcp' }
+  }
   throw new UsageError(`unknown command: ${command}`)
 }
 
@@ -294,6 +303,12 @@ async function run(args: string[]): Promise<number> {
           }
         }
       }
+      return 0
+    }
+    if (command.kind === 'mcp') {
+      const version = readVersion(ROOT)
+      const { startMcpServer } = await import('../mcp/server')
+      await startMcpServer(ROOT, { version })
       return 0
     }
     const resources = loadAllResources(ROOT)

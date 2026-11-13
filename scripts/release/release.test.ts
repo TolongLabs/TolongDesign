@@ -171,7 +171,15 @@ function fixtureCopy(): string {
   writeFileSync(join(fixtureRoot, '.env'), 'FAKE_RELEASE_FIXTURE_MARKER=not-a-secret\n')
   mkdirSync(join(fixtureRoot, '.claude'), { recursive: true })
   writeFileSync(join(fixtureRoot, '.claude', 'settings.json'), '{"fixture_only":true}\n')
-  cpSync(join(root, 'node_modules', 'yaml'), join(fixtureRoot, 'node_modules', 'yaml'), { recursive: true })
+  cpSync(join(root, 'node_modules'), join(fixtureRoot, 'node_modules'), {
+    recursive: true,
+    filter(source) {
+      const rel = relative(join(root, 'node_modules'), source)
+      if (rel === '') return true
+      const top = rel.split(sep)[0]
+      return !['.bin', '.bun', '@types', 'bun-types', 'prettier', 'typescript', 'undici-types'].includes(top)
+    }
+  })
   // cpSync absolutizes copied symlinks, so recreate the harness mirrors as relative links.
   for (const mirror of [join('.claude', 'skills'), join('.agents', 'skills')]) {
     rmSync(join(fixtureRoot, mirror), { recursive: true, force: true })
@@ -356,6 +364,7 @@ releaseDescribe('independent private release verification', () => {
     expect(actualFiles).toContain('catalogue/people.md')
     expect(actualFiles).not.toContain('fixture-only-working-file.txt')
     expect(actualFiles).not.toContain('node_modules/yaml/LICENSE')
+    expect(actualFiles).not.toContain('node_modules/@modelcontextprotocol/sdk/LICENSE')
 
     for (const path of manifestPaths) {
       expect(isAllowedFile(path)).toBe(true)
@@ -375,10 +384,13 @@ releaseDescribe('independent private release verification', () => {
     expect(
       readFileSync(join(packageRoot, 'README.md')).equals(readFileSync(join(fixture.root, 'docs', 'cli.md')))
     ).toBe(true)
-    const bundledLicenses = actualFiles.filter((path) => path.startsWith('licenses/'))
-    expect(bundledLicenses).toHaveLength(1)
+    const bundledLicenses = actualFiles.filter((path) => path.startsWith('licenses/')).sort()
+    expect(bundledLicenses).toEqual(['licenses/modelcontextprotocol-sdk-LICENSE', 'licenses/yaml-LICENSE'])
     expect(
-      readFileSync(join(packageRoot, ...bundledLicenses[0].split('/')), 'utf8').includes('Copyright Eemeli Aro')
+      readFileSync(join(packageRoot, 'licenses', 'yaml-LICENSE'), 'utf8').includes('Copyright Eemeli Aro')
+    ).toBe(true)
+    expect(
+      readFileSync(join(packageRoot, 'licenses', 'modelcontextprotocol-sdk-LICENSE'), 'utf8').includes('Anthropic, PBC')
     ).toBe(true)
     expect(decode(readFileSync(join(packageRoot, 'dist', 'design.js'))).startsWith('#!/usr/bin/env bun\n')).toBe(true)
 

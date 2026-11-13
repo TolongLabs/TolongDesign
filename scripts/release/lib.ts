@@ -346,10 +346,18 @@ function copySourceFile(root: string, packageDir: string, sourcePath: string, de
   writePayloadFile(packageDir, destinationPath, readSourceFile(root, sourcePath), source.mode)
 }
 
-function validateYamlLicense(root: string): void {
-  const metadata = parseJsonFile<Record<string, unknown>>(root, 'node_modules/yaml/package.json')
-  if (metadata.name !== 'yaml') throw new Error('node_modules/yaml/package.json must describe the yaml dependency')
+function validateBundledLicenses(root: string): void {
+  const yamlMetadata = parseJsonFile<Record<string, unknown>>(root, 'node_modules/yaml/package.json')
+  if (yamlMetadata.name !== 'yaml') throw new Error('node_modules/yaml/package.json must describe the yaml dependency')
   inspectSourcePath(root, 'node_modules/yaml/LICENSE', 'file')
+
+  const sdkMetadata = parseJsonFile<Record<string, unknown>>(root, 'node_modules/@modelcontextprotocol/sdk/package.json')
+  if (sdkMetadata.name !== '@modelcontextprotocol/sdk') {
+    throw new Error(
+      'node_modules/@modelcontextprotocol/sdk/package.json must describe the @modelcontextprotocol/sdk dependency'
+    )
+  }
+  inspectSourcePath(root, 'node_modules/@modelcontextprotocol/sdk/LICENSE', 'file')
 }
 
 function stagedFiles(packageDir: string): string[] {
@@ -501,7 +509,7 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
     inspectSourcePath(sourceRoot, directory, 'directory')
   }
   assertSkillMirrors(sourceRoot)
-  validateYamlLicense(sourceRoot)
+  validateBundledLicenses(sourceRoot)
 
   const consumers = consumerSkills(sourceRoot)
   if (consumers.length === 0) throw new Error('release must ship at least one consumer skill')
@@ -532,6 +540,12 @@ export async function buildRelease(root: string, outDir: string): Promise<Releas
     for (const directory of SOURCE_DIRECTORIES) copySourceTree(sourceRoot, packageDir, directory)
     for (const name of consumers) copySkillTree(sourceRoot, packageDir, name)
     copySourceFile(sourceRoot, packageDir, 'node_modules/yaml/LICENSE', 'licenses/yaml-LICENSE')
+    copySourceFile(
+      sourceRoot,
+      packageDir,
+      'node_modules/@modelcontextprotocol/sdk/LICENSE',
+      'licenses/modelcontextprotocol-sdk-LICENSE'
+    )
 
     await bundleCli(sourceRoot, packageDir)
     packageManifest(packageDir, releaseMetadata.version, resourceCount)

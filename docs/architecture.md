@@ -25,6 +25,7 @@ or model call on the retrieval path.
 | Layer             | Owner                                                                       | Responsibility                                                                                             |
 | ----------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Command handling  | `src/cli/main.ts`, `src/cli/args.ts`                                        | Parse arguments, select operations, write stdout/stderr and exit status.                                   |
+| MCP server        | `src/mcp/server.ts`                                                         | Expose read-only tools, consumer-skill prompts and URI resources over stdio via `src/core` only.           |
 | Resource loading  | `src/core/loader.ts`                                                        | Resolve the selected root, read registration and document bytes, parse metadata and hash source bytes.     |
 | Retrieval         | `src/core/search.ts`, `src/core/context.ts`                                 | Apply filters and score in-memory resources. No direct file/network I/O in the scorer.                     |
 | Context and cards | `src/core/context.ts`, `src/core/card.ts`                                   | Full source hand-off or bounded navigation output.                                                         |
@@ -192,6 +193,7 @@ latency, memory or maximum-catalogue-size SLA is established.
 | `context <id>...`      | Exact resolution; preserve first request order; deduplicate repeated resources; full Markdown plus provenance/warnings.      |
 | `skill list [--json]`  | Lists skills under `skills/<name>/SKILL.md` with audience, description, `doc` and sorted reference file paths.               |
 | `skill show <name>`    | Prints `SKILL.md` and reference file list (plain) or `SkillDetail` JSON (`--json`). Works from installed releases too.       |
+| `mcp`                  | Starts the local read-only MCP stdio server over the same core (`src/mcp/server.ts`).                                        |
 | `doctor [--json]`      | Version/root/resource count, skill paths and explicit checkout/release integrity state.                                      |
 | `--version`            | Package version. This alone does not prove a checkout matches a published release with the same version.                     |
 
@@ -256,6 +258,28 @@ small. It must not silently truncate and claim a complete read.
 Markdown context uses a fence longer than any backtick sequence in its payload,
 so embedded content cannot close the wrapper's fence. Reference text is still
 untrusted data, not permission or executable instructions.
+
+## MCP contracts
+
+`tolongdesign mcp` starts a stdio MCP server implemented in
+[`src/mcp/server.ts`](../src/mcp/server.ts) on top of `src/core` without
+importing `src/cli`.
+
+- **Tools** (`readOnlyHint: true`, `destructiveHint: false`,
+  `idempotentHint: true`, `openWorldHint: false`):
+  - `search`: accepts `query` plus all CLI filters (`kind`, `section`, `tag`,
+    `stack`, `paywall`, `agent`, `oss`, `limit`, `mode`, `surface`,
+    `include_unreachable`) and returns the same JSON shape as
+    `tolongdesign search --json`.
+  - `show`: accepts `id` and returns the same `Resource` JSON as
+    `tolongdesign show --json`.
+  - `context`: accepts `ids` and optional `brief` and returns the same
+    `ContextPack` JSON as `tolongdesign context --json`.
+- **Prompts**: one prompt per `audience: consumer` skill (`build-3d-model`,
+  `design-project`, `pick-design-stack`), with an optional `brief` argument.
+- **Resources**: exposes `tolongdesign://tools/<section>/<slug>` and
+  `tolongdesign://research/<slug>` (plus matching URI templates) returning raw
+  `text/markdown`.
 
 ## Cards and derived commands
 
@@ -372,7 +396,7 @@ Existing published output names are rejected rather than replaced.
 | --------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | Release `package.json` (`private: true`), `dist/design.js`, catalogue data/index. | Git history, credentials, customer data and worker output.        |
 | The whole `catalogue/` tree and packaged consumer skills.                         | Dependency trees, caches, graphify artifacts and local snapshots. |
-| Required dependency licence.                                                      | Automatic global skill registration or post-install execution.    |
+| Required dependency licences (`yaml`, `@modelcontextprotocol/sdk`).               | Automatic global skill registration or post-install execution.    |
 | The package README, generated from `docs/cli.md`.                                 | Repo docs, diagrams and arbitrary source packs.                   |
 
 The package root README is the CLI installation guide, not the repository's
@@ -465,6 +489,7 @@ arbitrary agent execution loop is part of this system.
 | Responsibility               | Implementation                                                                                                                                                                                                                            |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CLI grammar and errors       | [`src/cli/main.ts`](../src/cli/main.ts) · [`src/cli/args.ts`](../src/cli/args.ts)                                                                                                                                                         |
+| MCP server                   | [`src/mcp/server.ts`](../src/mcp/server.ts)                                                                                                                                                                                               |
 | Loading, filters and context | [`src/core/loader.ts`](../src/core/loader.ts) · [`src/core/skill.ts`](../src/core/skill.ts) · [`src/core/search.ts`](../src/core/search.ts) · [`src/core/context.ts`](../src/core/context.ts) · [`src/core/card.ts`](../src/core/card.ts) |
 | Field derivation and schema  | [`src/core/fields.ts`](../src/core/fields.ts) · [`src/core/schema.ts`](../src/core/schema.ts) · [`scripts/check-docs.ts`](../scripts/check-docs.ts)                                                                                       |
 | Index and cards              | [`scripts/build-index.ts`](../scripts/build-index.ts) · [`src/core/fields.ts`](../src/core/fields.ts)                                                                                                                                     |
